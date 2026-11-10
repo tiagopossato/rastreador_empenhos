@@ -1,0 +1,7 @@
+PNCP_BASE_URL = "https://pncp.gov.br"
+PNCP_API_CONSULTA = f"{PNCP_BASE_URL}/api/consulta/v1/orgaos"
+PNCP_API_PNCP = f"{PNCP_BASE_URL}/pncp-api/v1/orgaos"
+PNCP_API_CONTRATOS = f"{PNCP_BASE_URL}/api/pncp/v1/orgaos"
+
+DEFAULT_TIMEOUT = 30
+DEFAULT_PAGE_SIZE = 50
