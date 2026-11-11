@@ -128,3 +128,4 @@ python -m unittest discover -s tests -v
 - [Portal da Transparência](https://portaldatransparencia.gov.br) — detalhes dos documentos e itens das notas de empenho; requer chave de API.
 
 O script atende compras federais vinculadas ao SIASG/Compras.gov.br. A busca dos documentos no Portal da Transparência usa o CNPJ do fornecedor, o ano do empenho e a unidade gestora; não depende da data de assinatura/publicação do PNCP. Se faltar algum dado necessário, o registro é identificado como não consultado ou não localizado; falhas da API são reportadas como erros.
+
