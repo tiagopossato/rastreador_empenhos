@@ -1,5 +1,7 @@
 # Rastreador de Empenhos por Item — Compras Públicas Federais (PNCP)
 
+**Acesse os relatórios publicados:** [https://tiagopossato.github.io/rastreador_empenhos/](https://tiagopossato.github.io/rastreador_empenhos/)
+
 Aplicação Python de linha de comando que coleta dados de uma compra no Portal Nacional de Contratações Públicas (PNCP), relaciona empenhos aos itens homologados e gera um relatório HTML autônomo.
 
 ## Como funciona
@@ -106,7 +108,7 @@ O relatório é salvo em `relatorios/relatorio_compra_{numero_compra}_{ano}.html
 
 ## Publicação no GitHub Pages
 
-O workflow `.github/workflows/pages.yml` gera `relatorios/index.html` com cards para os relatórios presentes e publica o conteúdo de `relatorios/` no GitHub Pages em cada push para `main`. Também é possível iniciar a publicação manualmente pela aba **Actions**.
+O workflow `.github/workflows/pages.yml` gera `relatorios/index.html` com cards para os relatórios presentes — cada card mostra o número/ano do edital e o objeto completo da compra — e publica o conteúdo de `relatorios/` no GitHub Pages em cada push para `main`. Também é possível iniciar a publicação manualmente pela aba **Actions**.
 
 Para publicar, configure a fonte do GitHub Pages como **GitHub Actions** em **Settings → Pages**. O workflow publica os relatórios HTML que estão versionados; a coleta de novas compras continua sendo feita localmente. Para incluir um novo relatório no site, gere-o e envie o arquivo para o repositório.
 
@@ -128,4 +130,3 @@ python -m unittest discover -s tests -v
 - [Portal da Transparência](https://portaldatransparencia.gov.br) — detalhes dos documentos e itens das notas de empenho; requer chave de API.
 
 O script atende compras federais vinculadas ao SIASG/Compras.gov.br. A busca dos documentos no Portal da Transparência usa o CNPJ do fornecedor, o ano do empenho e a unidade gestora; não depende da data de assinatura/publicação do PNCP. Se faltar algum dado necessário, o registro é identificado como não consultado ou não localizado; falhas da API são reportadas como erros.
-

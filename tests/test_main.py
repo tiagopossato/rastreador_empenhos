@@ -1,5 +1,6 @@
 import contextlib
 import io
+import json
 import tempfile
 import unittest
 from pathlib import Path
@@ -65,8 +66,18 @@ class MainTests(unittest.TestCase):
             "quantidade_empenhos": 0,
         }
 
-        def generate_report(_data, path):
-            Path(path).write_text("<html></html>", encoding="utf-8")
+        def generate_report(data, path):
+            report_data = {
+                "chaves": data["chaves_integracao"],
+                "objeto": "Objeto de teste",
+            }
+            embedded_data = json.dumps(report_data, ensure_ascii=False)
+            Path(path).write_text(
+                '<script id="report-data" type="application/json">'
+                + embedded_data
+                + "</script>",
+                encoding="utf-8",
+            )
             return Path(path)
 
         with contextlib.ExitStack() as stack:
