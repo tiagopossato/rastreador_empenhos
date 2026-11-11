@@ -176,7 +176,7 @@ _HTML = r"""<!doctype html>
 .cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:18px 0}.card,.panel{background:var(--white);border:1px solid var(--line);border-radius:12px;box-shadow:0 2px 8px #18345608}.card{padding:16px 18px}.card .label{font-size:12px;color:var(--muted)}.card .value{font-size:22px;font-weight:700;margin:4px 0}.card .sub{font-size:11px;color:var(--muted)}
 .panel{padding:18px;margin:16px 0}.panel h2{margin:0 0 12px;font-size:18px}.note{border-left:4px solid #e6a23c;background:#fff8e9;padding:12px 14px;border-radius:4px;color:#614819;margin:14px 0}
 .toolbar{display:flex;gap:12px;align-items:center;margin:10px 0 14px;flex-wrap:wrap}.toolbar input{flex:1;min-width:220px;padding:10px 12px;border:1px solid #c9d4e2;border-radius:8px;font:inherit}.count{color:var(--muted);font-size:12px}
-.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:9px}table{border-collapse:collapse;width:100%;min-width:1120px;background:white}th{position:sticky;top:0;background:#edf3fa;color:#314963;text-align:right;font-size:11px;text-transform:uppercase;letter-spacing:.04em;padding:11px 10px;border-bottom:1px solid var(--line);white-space:nowrap}th:first-child,td:first-child,th:nth-child(2),td:nth-child(2){text-align:left}td{padding:10px;border-bottom:1px solid #e9eef4;text-align:right;vertical-align:top}tr.item-row{cursor:pointer}tr.item-row:hover{background:#f7fbff}.item-name{font-weight:600;min-width:230px}.item-name small{display:block;color:var(--muted);font-weight:400;margin-top:3px}.num{font-variant-numeric:tabular-nums;white-space:nowrap}.detail-row{display:none;background:#f8fafc}.detail-row.open{display:table-row}.detail-cell{text-align:left!important;padding:16px 20px!important}.detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.detail-box{border:1px solid var(--line);background:white;border-radius:8px;padding:12px}.detail-box h3{margin:0 0 8px;font-size:13px}.detail-box p{margin:4px 0}.detail-table{min-width:600px;font-size:12px}.detail-table th,.detail-table td{text-align:left;padding:7px}.badge{display:inline-block;border-radius:20px;padding:2px 8px;background:#e6f4f1;color:#12695e;font-size:11px}.badge.pending{background:#fff0d6;color:var(--amber)}.badge.no{background:#fbe9e8;color:var(--red)}.bar{height:5px;background:#e7edf5;border-radius:5px;margin-top:5px;overflow:hidden}.bar span{display:block;height:100%;background:var(--teal)}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:9px}table{border-collapse:collapse;width:100%;min-width:1120px;background:white}th{position:sticky;top:0;background:#edf3fa;color:#314963;text-align:right;font-size:11px;text-transform:uppercase;letter-spacing:.04em;padding:11px 10px;border-bottom:1px solid var(--line);white-space:nowrap;cursor:pointer;user-select:none}th:first-child,td:first-child,th:nth-child(2),td:nth-child(2){text-align:left}th:focus-visible{outline:2px solid var(--blue);outline-offset:-2px}th[aria-sort="ascending"]::after{content:" ▲";color:var(--blue)}th[aria-sort="descending"]::after{content:" ▼";color:var(--blue)}td{padding:10px;border-bottom:1px solid #e9eef4;text-align:right;vertical-align:top}tr.item-row{cursor:pointer}tr.item-row:hover{background:#f7fbff}.item-name{font-weight:600;min-width:230px}.item-name small{display:block;color:var(--muted);font-weight:400;margin-top:3px}.num{font-variant-numeric:tabular-nums;white-space:nowrap}.detail-row{display:none;background:#f8fafc}.detail-row.open{display:table-row}.detail-cell{text-align:left!important;padding:16px 20px!important}.detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.detail-box{border:1px solid var(--line);background:white;border-radius:8px;padding:12px}.detail-box h3{margin:0 0 8px;font-size:13px}.detail-box p{margin:4px 0}.detail-table{min-width:600px;font-size:12px}.detail-table th,.detail-table td{text-align:left;padding:7px}.badge{display:inline-block;border-radius:20px;padding:2px 8px;background:#e6f4f1;color:#12695e;font-size:11px}.badge.pending{background:#fff0d6;color:var(--amber)}.badge.no{background:#fbe9e8;color:var(--red)}.bar{height:5px;background:#e7edf5;border-radius:5px;margin-top:5px;overflow:hidden}.bar span{display:block;height:100%;background:var(--teal)}
 .foot{color:var(--muted);font-size:11px;margin:16px 2px}.empty{text-align:center;color:var(--muted);padding:26px}.source-list{display:flex;gap:8px;flex-wrap:wrap}.source-list span{background:#edf3fa;border-radius:5px;padding:4px 8px;font-size:11px}
 @media(max-width:900px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.detail-grid{grid-template-columns:1fr}}
 @media(max-width:520px){.wrap{padding:14px 10px 30px}.hero{padding:21px 18px}.cards{grid-template-columns:1fr 1fr;gap:8px}.card{padding:12px}.card .value{font-size:17px}.panel{padding:12px}.meta{display:grid;gap:4px}}
@@ -196,7 +196,7 @@ _HTML = r"""<!doctype html>
   <section class="panel">
     <h2>Itens da contratação</h2>
     <div class="toolbar"><input id="search" type="search" placeholder="Filtrar por item, descrição, fornecedor ou empenho…" aria-label="Filtrar itens"><span class="count" id="count"></span></div>
-    <div class="table-wrap"><table><thead><tr>
+    <div class="table-wrap"><table id="items-table"><thead><tr>
       <th>Item</th><th>Descrição / unidade</th><th>Qtd. licitada</th><th>Qtd. homologada</th><th>Qtd. empenhada*</th><th>Estimado</th><th>Homologado</th><th>Empenhado mapeado</th><th>Execução</th>
     </tr></thead><tbody id="items"></tbody></table></div>
     <p class="foot">Clique em uma linha para abrir fornecedores e empenhos. Quantidades de unidades diferentes não são somadas em um único total.</p>
@@ -220,6 +220,78 @@ const fmtQty=n=>n==null?'—':new Intl.NumberFormat('pt-BR',{maximumFractionDigi
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const number=n=>Number.isFinite(Number(n))?Number(n):0;
 const pct=(a,b)=>b>0?Math.min(100,(a/b)*100):0;
+function sortableValue(text){
+ const value=text.trim().replace(/\s+/g,' ');
+ if(!value||value==='—')return {type:'empty',value:''};
+ const date=value.match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
+ if(date)return {type:'number',value:Number(`${date[3]}${date[2]}${date[1]}`)};
+ const isoDate=value.match(/^(\d{4})-(\d{2})-(\d{2})/);
+ if(isoDate)return {type:'number',value:Number(`${isoDate[1]}${isoDate[2]}${isoDate[3]}`)};
+ const numeric=value.replace(/R\$/g,'').replace(/%/g,'').replace(/\s/g,'');
+ if(/^[+-]?\d[\d.,]*$/.test(numeric)){
+  const normalized=numeric.includes(',')?numeric.replace(/\./g,'').replace(',','.'):numeric;
+  const parsed=Number(normalized);
+  if(Number.isFinite(parsed))return {type:'number',value:parsed};
+ }
+ return {type:'text',value};
+}
+function compareRows(a,b,column,direction){
+ const leftCell=a.cells[column],rightCell=b.cells[column];
+ const left=sortableValue(leftCell?.dataset.sortValue??leftCell?.innerText??'');
+ const right=sortableValue(rightCell?.dataset.sortValue??rightCell?.innerText??'');
+ let result;
+ if(left.type==='empty'||right.type==='empty')return left.type===right.type?0:left.type==='empty'?1:-1;
+ else if(left.type==='number'&&right.type==='number')result=left.value-right.value;
+ else result=String(left.value).localeCompare(String(right.value),'pt-BR',{numeric:true,sensitivity:'base'});
+ return result*direction;
+}
+function sortTable(table,column){
+ const body=table.tBodies[0];
+ if(!body)return;
+ const previous=Number(table.dataset.sortColumn);
+ const direction=previous===column&&table.dataset.sortDirection==='ascending'?-1:1;
+ table.dataset.sortColumn=String(column);
+ table.dataset.sortDirection=direction===1?'ascending':'descending';
+ Array.from(table.tHead?.rows[0]?.cells||[]).forEach((header,index)=>{
+  header.setAttribute('aria-sort',index===column?table.dataset.sortDirection:'none');
+  header.title=`Ordenar por ${header.innerText.trim()}`;
+ });
+ if(table.id==='items-table'){
+  const pairs=[];
+  for(let index=0;index<body.rows.length;index++){
+   const row=body.rows[index];
+   if(!row.classList.contains('item-row'))continue;
+   pairs.push([row,row.nextElementSibling]);
+  }
+  pairs.sort((a,b)=>compareRows(a[0],b[0],column,direction));
+  pairs.forEach(pair=>pair.forEach(row=>row&&body.appendChild(row)));
+  return;
+ }
+ Array.from(body.rows)
+  .sort((a,b)=>compareRows(a,b,column,direction))
+  .forEach(row=>body.appendChild(row));
+}
+document.addEventListener('click',event=>{
+ const header=event.target.closest('th');
+ const table=header?.closest('table');
+ if(header&&table)sortTable(table,header.cellIndex);
+});
+document.addEventListener('keydown',event=>{
+ if((event.key==='Enter'||event.key===' ')&&event.target.matches('th')){
+  event.preventDefault();
+  const header=event.target;
+  const table=header.closest('table');
+  if(table)sortTable(table,header.cellIndex);
+ }
+});
+function prepareSortableHeaders(){
+ document.querySelectorAll('thead th').forEach(header=>{
+  header.tabIndex=0;
+  header.setAttribute('role','button');
+  if(!header.hasAttribute('aria-sort'))header.setAttribute('aria-sort','none');
+  header.title=`Ordenar por ${header.innerText.trim()}`;
+ });
+}
 document.getElementById('title').textContent=`Edital nº ${D.chaves.numero_compra||''}/${D.chaves.ano_compra||''}`;
 document.getElementById('object').textContent=D.objeto||'Relatório consolidado dos itens e empenhos publicados.';
 document.getElementById('pncp').textContent=`Controle PNCP: ${D.chaves.numero_controle_pncp||'—'}`;
@@ -236,25 +308,31 @@ document.getElementById('cards').innerHTML=cards.map(c=>`<div class="card"><div 
 const tbody=document.getElementById('items');
 function detailHtml(i){
  const suppliers=(i.resultados||[]).map(r=>`<div class="detail-box"><h3>${esc(r.fornecedor||'Fornecedor não informado')}</h3><p>CNPJ: ${esc(r.cnpj||'—')}</p><p>Quantidade homologada: ${fmtQty(r.quantidade)} ${esc(i.unidade)}</p><p>Preço unitário: ${fmtMoney(r.valor_unitario)} · Total: ${fmtMoney(r.valor_total)}</p></div>`).join('')||'<div class="detail-box">Sem resultado homologado publicado.</div>';
- const emps=(i.empenhos||[]).map(e=>`<tr><td>${esc(e.numero)}</td><td>${esc(e.data||'—')}</td><td>${esc(e.fornecedor||'—')}</td><td>${fmtMoney(e.valor)}</td><td>${fmtQty(e.quantidade_estimada)} ${esc(i.unidade)}</td><td>${esc(e.descricao||'—')}</td><td>${e.codigo_documento?`<a href="https://portaldatransparencia.gov.br/despesas/empenho/${encodeURIComponent(e.codigo_documento)}" target="_blank" rel="noopener noreferrer">Abrir</a>`:'—'}</td></tr>`).join('');
+ const emps=(i.empenhos||[]).map(e=>`<tr><td>${esc(e.numero)}</td><td>${esc(e.data||'—')}</td><td>${esc(e.fornecedor||'—')}</td><td data-sort-value="${esc(e.valor)}">${fmtMoney(e.valor)}</td><td data-sort-value="${esc(e.quantidade_estimada)}">${fmtQty(e.quantidade_estimada)} ${esc(i.unidade)}</td><td>${esc(e.descricao||'—')}</td><td>${e.codigo_documento?`<a href="https://portaldatransparencia.gov.br/despesas/empenho/${encodeURIComponent(e.codigo_documento)}" target="_blank" rel="noopener noreferrer">Abrir</a>`:'—'}</td></tr>`).join('');
  const candidates=[...(i.candidatos_sem_item||[]),...(i.candidatos_fornecedor_divergente||[])];
  return `<div class="detail-grid"><div><h3>Resultado(s) homologado(s)</h3>${suppliers}</div><div><h3>Empenhos vinculados ao item</h3>${emps?`<div class="table-wrap"><table class="detail-table"><thead><tr><th>Empenho</th><th>Emissão</th><th>Fornecedor</th><th>Valor da linha</th><th>Qtd. estimada</th><th>Descrição do item no empenho</th><th>Portal</th></tr></thead><tbody>${emps}</tbody></table></div>`:'<div class="detail-box">Nenhum empenho com item e fornecedor compatíveis.</div>'}</div></div>${candidates.length?`<div class="note"><strong>Não contabilizados:</strong> ${candidates.map(x=>esc(x.numero_empenho)).join(', ')} — sem correspondência suficiente para este item.</div>`:''}`;
 }
 function render(filter=''){
+ const itemsTable=document.getElementById('items-table');
+ delete itemsTable.dataset.sortColumn;
+ delete itemsTable.dataset.sortDirection;
+ itemsTable.querySelectorAll('thead th').forEach(header=>header.setAttribute('aria-sort','none'));
  const q=filter.trim().toLocaleLowerCase('pt-BR');
  const rows=D.itens.filter(i=>!q||[i.numero,i.descricao,i.unidade,...(i.resultados||[]).flatMap(r=>[r.fornecedor,r.cnpj]),...(i.empenhos||[]).map(e=>e.numero)].join(' ').toLocaleLowerCase('pt-BR').includes(q));
  document.getElementById('count').textContent=`${rows.length} de ${D.itens.length} itens`;
  tbody.innerHTML=rows.map((i,n)=>{
   const detail=`detail-${n}`, ratio=pct(number(i.valor_empenhado),number(i.valor_total_homologado));
   const status=i.empenhos.length?'Vinculado':i.status==='empenhos_fornecedor_sem_item_identificado'?'Pendente':'Sem empenho';
-  return `<tr class="item-row" data-detail="${detail}"><td class="num">${esc(i.numero)}</td><td class="item-name">${esc(i.descricao)}<small>${esc(i.unidade||'Unidade não informada')} · ${status}</small></td><td class="num">${fmtQty(i.quantidade_licitada)}</td><td class="num">${fmtQty(i.quantidade_homologada)}</td><td class="num">${fmtQty(i.quantidade_empenhada_estimada)}</td><td class="num">${fmtMoney(i.valor_total_estimado)}</td><td class="num">${fmtMoney(i.valor_total_homologado)}</td><td class="num">${fmtMoney(i.valor_empenhado)}<div class="bar"><span style="width:${ratio}%"></span></div></td><td class="num">${i.valor_total_homologado?fmtQty(ratio)+'%':'—'}</td></tr><tr class="detail-row" id="${detail}"><td colspan="9" class="detail-cell">${detailHtml(i)}</td></tr>`;
+  return `<tr class="item-row" data-detail="${detail}"><td class="num" data-sort-value="${esc(i.numero)}">${esc(i.numero)}</td><td class="item-name" data-sort-value="${esc(i.descricao)}">${esc(i.descricao)}<small>${esc(i.unidade||'Unidade não informada')} · ${status}</small></td><td class="num" data-sort-value="${esc(i.quantidade_licitada)}">${fmtQty(i.quantidade_licitada)}</td><td class="num" data-sort-value="${esc(i.quantidade_homologada)}">${fmtQty(i.quantidade_homologada)}</td><td class="num" data-sort-value="${esc(i.quantidade_empenhada_estimada)}">${fmtQty(i.quantidade_empenhada_estimada)}</td><td class="num" data-sort-value="${esc(i.valor_total_estimado)}">${fmtMoney(i.valor_total_estimado)}</td><td class="num" data-sort-value="${esc(i.valor_total_homologado)}">${fmtMoney(i.valor_total_homologado)}</td><td class="num" data-sort-value="${esc(i.valor_empenhado)}">${fmtMoney(i.valor_empenhado)}<div class="bar"><span style="width:${ratio}%"></span></div></td><td class="num" data-sort-value="${i.valor_total_homologado?ratio:''}">${i.valor_total_homologado?fmtQty(ratio)+'%':'—'}</td></tr><tr class="detail-row" id="${detail}"><td colspan="9" class="detail-cell">${detailHtml(i)}</td></tr>`;
  }).join('')||'<tr><td colspan="9" class="empty">Nenhum item corresponde ao filtro.</td></tr>';
  tbody.querySelectorAll('.item-row').forEach(row=>row.addEventListener('click',()=>document.getElementById(row.dataset.detail).classList.toggle('open')));
+ prepareSortableHeaders();
 }
 render();
 document.getElementById('search').addEventListener('input',e=>render(e.target.value));
 const pending=document.getElementById('pending');
-pending.innerHTML=D.registros_sem_vinculo.map(r=>`<tr><td>${esc(r.numero||'—')}</td><td>${esc(r.tipo)}</td><td>${esc(r.data||'—')}</td><td>${esc(r.fornecedor||'—')}</td><td>${fmtMoney(r.valor)}</td><td><span class="badge ${r.status==='ok'?'':'pending'}">${esc(r.status)}${r.mensagem?': '+esc(r.mensagem):''}</span></td></tr>`).join('')||'<tr><td colspan="6" class="empty">Todos os registros foram vinculados a itens.</td></tr>';
+pending.innerHTML=D.registros_sem_vinculo.map(r=>`<tr><td>${esc(r.numero||'—')}</td><td>${esc(r.tipo)}</td><td>${esc(r.data||'—')}</td><td>${esc(r.fornecedor||'—')}</td><td data-sort-value="${esc(r.valor)}">${fmtMoney(r.valor)}</td><td><span class="badge ${r.status==='ok'?'':'pending'}">${esc(r.status)}${r.mensagem?': '+esc(r.mensagem):''}</span></td></tr>`).join('')||'<tr><td colspan="6" class="empty">Todos os registros foram vinculados a itens.</td></tr>';
+prepareSortableHeaders();
 </script>
 </body>
 </html>"""

@@ -10,7 +10,7 @@ Script em Python para automatizar o levantamento de dados de licitações federa
 Como o ecossistema de dados abertos do Governo Federal separa o catálogo da licitação da execução orçamentária, o projeto é dividido em duas etapas:
 
 - **Etapa 1 (Concluída):** Extração dos metadados da compra, itens licitados, vencedores e chaves de integração (UASG, número da compra e ano) via **API do PNCP**.
-- **Etapa 2 (Em desenvolvimento):** Cruzamento das chaves extraídas com as APIs do **Portal da Transparência** e **Compras.gov.br** para mapear as notas de empenho por item e fornecedor.
+- **Etapa 2:** Consulta de empenhos e itens nas APIs do **PNCP** e do **Portal da Transparência**.
 
 ## 🧩 Estrutura modular do projeto
 
@@ -21,6 +21,8 @@ relatorio_compra/
 ├── main.py
 ├── README.md
 ├── etapa1_dados_compra.json
+├── etapa2_empenhos.json
+├── relatorio_compra.html
 ├── pncp_tracker/
 │   ├── __init__.py
 │   ├── api_client.py
@@ -32,7 +34,7 @@ relatorio_compra/
 └──
 ```
 
-- `main.py`: ponto de entrada do script.
+- `main.py`: ponto de entrada que executa as duas etapas.
 - `pncp_tracker/url_parser.py`: valida e extrai parâmetros da URL do edital.
 - `pncp_tracker/api_client.py`: centraliza as chamadas HTTP ao PNCP.
 - `pncp_tracker/collector.py`: orquestra a coleta dos dados da compra e itens.
@@ -40,7 +42,6 @@ relatorio_compra/
 - `pncp_tracker/empenhos.py`: reexporta a lógica de mapeamento de empenhos por item/fornecedor.
 - `pncp_tracker/etapa2.py`: orquestra a busca e o mapeamento dos empenhos da licitação.
 - `pncp_tracker/report_html.py`: gera o relatório HTML autônomo.
-- `main_etapa2.py`: entrypoint para a etapa 2.
 
 ---
 
@@ -61,32 +62,21 @@ pip install requests
 
 ---
 
-## 🚀 Como Usar (Etapa 1)
+## 🚀 Como Executar
 
-1. Abra o arquivo principal do script: `main.py`.
-2. Na seção `__main__`, altere a variável `link_teste` para a URL de qualquer edital federal publicado no PNCP:
-
-```python
-link_teste = "https://pncp.gov.br/app/editais/10635424000186/2025/000272"
-```
-
-3. Execute o script no terminal:
+1. Configure a chave da API do Portal da Transparência no `.env`.
+2. Se necessário, altere a variável `url_pncp` no início de `main.py`.
+3. Execute:
 
 ```bash
 python main.py
 ```
 
----
+Uma única execução coleta os dados do edital, consulta os empenhos e gera `etapa1_dados_compra.json`, `etapa2_empenhos.json` e `relatorio_compra.html`. Os dados da etapa 1 são reutilizados na etapa 2. O HTML é um arquivo único, sem dependências externas; pode ser aberto localmente, filtrado por item/descrição/empenho e impresso ou salvo como PDF.
 
-## 🚀 Como Usar (Etapa 2)
+O relatório mostra valores estimados e homologados, quantidade licitada/homologada, valor empenhado por item e empenhos detalhados. A quantidade empenhada não é informada pela API; é estimada pelo valor da linha dividido pelo preço unitário homologado, com essa ressalva indicada na página.
 
-A etapa 2 consulta a API pública do PNCP utilizada pela aba **Contratos/Empenhos**. Para cada empenho listado, usa também a chave do Portal da Transparência para buscar o detalhamento e os itens do documento. Configure `PORTAL_DADOS_API_KEY` no `.env` como descrito acima e execute:
-
-```bash
-python main_etapa2.py
-```
-
-Ao executar a etapa 2, são gerados `etapa2_empenhos.json` e `relatorio_compra.html`. O HTML é um arquivo único, sem dependências externas; pode ser aberto localmente, filtrado por item/descrição/empenho e impresso ou salvo como PDF. Ele mostra valores estimados e homologados, quantidade licitada/homologada, valor empenhado por item e empenhos detalhados. Os itens do empenho vêm diretamente do documento de despesa no Portal da Transparência. Quando a descrição inclui `Item compra: N`, o código cruza esse número e o CNPJ do fornecedor com o item N do PNCP. A quantidade empenhada não é informada pela API; é estimada pelo valor empenhado dividido pelo preço unitário homologado, com essa ressalva indicada na página. Se essa referência não existir, o empenho fica separado como pendente e não é somado a um item.
+Todas as tabelas do relatório podem ser ordenadas clicando no cabeçalho; também é possível focar um cabeçalho com Tab e alternar a ordenação com Enter ou Espaço. Um segundo clique no mesmo campo inverte a ordem. Valores numéricos, monetários e datas são ordenados pelos seus valores, e campos vazios permanecem no final. Ao ordenar os itens, cada linha de detalhes acompanha o item correspondente.
 
 ---
 

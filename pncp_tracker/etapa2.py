@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional
 
 from .collector import baixar_dados_compra_pncp
 from .contratos_empenhos import consultar_contratos_empenhos
@@ -9,9 +9,13 @@ from .empenho_matcher import mapear_empenhos_por_item
 from .url_parser import extrair_parametros_url
 
 
-def processar_etapa2(url_pncp: str) -> Dict[str, Any]:
+def processar_etapa2(
+    url_pncp: str,
+    dados_compra: Optional[Dict[str, Any]] = None,
+) -> Dict[str, Any]:
     """Busca as linhas da aba Contratos/Empenhos do PNCP e cruza pelos fornecedores."""
-    dados_compra = baixar_dados_compra_pncp(url_pncp)
+    if dados_compra is None:
+        dados_compra = baixar_dados_compra_pncp(url_pncp)
     chaves = dados_compra.get("chaves_integracao", {})
     parametros_url = extrair_parametros_url(url_pncp)
 

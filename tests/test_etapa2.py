@@ -5,6 +5,7 @@ from pncp_tracker.contratos_empenhos import consultar_contratos_empenhos
 from pncp_tracker.empenho_details import enriquecer_empenhos_com_detalhes_portal
 from pncp_tracker.empenho_matcher import mapear_empenhos_por_item
 from pncp_tracker.report_html import _preparar_relatorio
+from pncp_tracker.etapa2 import processar_etapa2
 
 
 class Etapa2Tests(unittest.TestCase):
@@ -169,6 +170,31 @@ class Etapa2Tests(unittest.TestCase):
 
         self.assertEqual(report["valor_empenhado_mapeado"], 2024.5)
         self.assertEqual(report["itens"][0]["quantidade_empenhada_estimada"], 5)
+
+    @patch("pncp_tracker.etapa2.mapear_empenhos_por_item", return_value=[])
+    @patch("pncp_tracker.etapa2.enriquecer_empenhos_com_detalhes_portal", return_value=([], []))
+    @patch("pncp_tracker.etapa2.consultar_contratos_empenhos", return_value=[])
+    @patch("pncp_tracker.etapa2.baixar_dados_compra_pncp")
+    def test_stage_two_reuses_stage_one_data(self, download, get_contracts, enrich, map_items):
+        purchase = {
+            "chaves_integracao": {
+                "cnpj_orgao": "10635424000186",
+                "ano_compra": 2025,
+                "numero_compra": "90027",
+                "numero_controle_pncp": "10635424000186-1-000272/2025",
+            },
+            "itens": [],
+            "objeto": "Compra de teste",
+        }
+
+        result = processar_etapa2(
+            "https://pncp.gov.br/app/editais/10635424000186/2025/000272",
+            dados_compra=purchase,
+        )
+
+        download.assert_not_called()
+        get_contracts.assert_called_once_with("10635424000186", "2025", "000272")
+        self.assertEqual(result["objeto"], "Compra de teste")
 
 
 if __name__ == "__main__":
