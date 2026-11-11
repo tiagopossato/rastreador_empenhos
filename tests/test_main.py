@@ -74,7 +74,7 @@ class MainTests(unittest.TestCase):
             stack.enter_context(
                 patch.object(main_module, "baixar_dados_compra_pncp", return_value=purchase)
             )
-            stack.enter_context(patch.object(main_module, "processar_etapa2", return_value=result))
+            stack.enter_context(patch.object(main_module, "consultar_e_mapear_empenhos", return_value=result))
             stack.enter_context(
                 patch.object(main_module, "gerar_relatorio_html", side_effect=generate_report)
             )

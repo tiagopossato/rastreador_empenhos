@@ -9,7 +9,7 @@ from .empenho_matcher import mapear_empenhos_por_item
 from .url_parser import extrair_parametros_url
 
 
-def processar_etapa2(
+def consultar_e_mapear_empenhos(
     url_pncp: str,
     dados_compra: Optional[Dict[str, Any]] = None,
 ) -> Dict[str, Any]:

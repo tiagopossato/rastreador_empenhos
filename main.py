@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import Optional, Sequence
 
 from pncp_tracker.collector import baixar_dados_compra_pncp
-from pncp_tracker.etapa2 import processar_etapa2
+from pncp_tracker.consultar_e_mapear_empenhos import consultar_e_mapear_empenhos
 from pncp_tracker.report_html import gerar_relatorio_html
 from pncp_tracker.url_parser import extrair_parametros_url
 
@@ -90,7 +90,7 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
         print(f"Dados da etapa 1 salvos em: {caminho_etapa1}")
 
         print("\n=== ETAPA 2: EMPENHOS E RELATÓRIO ===")
-        resultado_etapa2 = processar_etapa2(url_pncp, dados_compra=dados_compra)
+        resultado_etapa2 = consultar_e_mapear_empenhos(url_pncp, dados_compra=dados_compra)
         caminho_etapa2 = pasta_projeto / "etapa2_empenhos.json"
         caminho_etapa2.write_text(
             json.dumps(resultado_etapa2, indent=2, ensure_ascii=False),

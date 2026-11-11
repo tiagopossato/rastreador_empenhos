@@ -3,15 +3,15 @@ from unittest.mock import patch
 
 import requests
 
+from pncp_tracker.consultar_e_mapear_empenhos import consultar_e_mapear_empenhos
 from pncp_tracker.contratos_empenhos import consultar_contratos_empenhos
 from pncp_tracker.empenho_details import enriquecer_empenhos_com_detalhes_portal
 from pncp_tracker.empenho_matcher import mapear_empenhos_por_item
 from pncp_tracker.portal_transparencia import consultar_documentos_despesa_favorecido
 from pncp_tracker.report_html import _preparar_relatorio
-from pncp_tracker.etapa2 import processar_etapa2
 
 
-class Etapa2Tests(unittest.TestCase):
+class ConsultarEMapearEmpenhosTests(unittest.TestCase):
     @patch("pncp_tracker.portal_transparencia._api_key", return_value="test-key")
     @patch("pncp_tracker.portal_transparencia.requests.get")
     def test_supplier_document_lookup_uses_year_and_management_unit(self, get, api_key):
@@ -301,11 +301,11 @@ class Etapa2Tests(unittest.TestCase):
             "IF CATARINENSE - CAMPUS CAMBORIU",
         )
 
-    @patch("pncp_tracker.etapa2.mapear_empenhos_por_item", return_value=[])
-    @patch("pncp_tracker.etapa2.enriquecer_empenhos_com_detalhes_portal", return_value=([], []))
-    @patch("pncp_tracker.etapa2.consultar_contratos_empenhos", return_value=[])
-    @patch("pncp_tracker.etapa2.baixar_dados_compra_pncp")
-    def test_stage_two_reuses_stage_one_data(self, download, get_contracts, enrich, map_items):
+    @patch("pncp_tracker.consultar_e_mapear_empenhos.mapear_empenhos_por_item", return_value=[])
+    @patch("pncp_tracker.consultar_e_mapear_empenhos.enriquecer_empenhos_com_detalhes_portal", return_value=([], []))
+    @patch("pncp_tracker.consultar_e_mapear_empenhos.consultar_contratos_empenhos", return_value=[])
+    @patch("pncp_tracker.consultar_e_mapear_empenhos.baixar_dados_compra_pncp")
+    def test_consultar_e_mapear_empenhos_reuses_stage_one_data(self, download, get_contracts, enrich, map_items):
         purchase = {
             "chaves_integracao": {
                 "cnpj_orgao": "10635424000186",
@@ -317,7 +317,7 @@ class Etapa2Tests(unittest.TestCase):
             "objeto": "Compra de teste",
         }
 
-        result = processar_etapa2(
+        result = consultar_e_mapear_empenhos(
             "https://pncp.gov.br/app/editais/10635424000186/2025/000272",
             dados_compra=purchase,
         )

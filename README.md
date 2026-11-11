@@ -13,7 +13,7 @@ O PNCP fornece valores de empenho, mas não necessariamente a quantidade física
 ## Estrutura do projeto
 
 ```text
-relatorio_compra/
+rastreador_empenhos/
 ├── main.py
 ├── README.md
 ├── pncp_tracker/
@@ -24,7 +24,7 @@ relatorio_compra/
 │   ├── empenho_details.py
 │   ├── empenho_matcher.py
 │   ├── empenhos.py
-│   ├── etapa2.py
+│   ├── consultar_e_mapear_empenhos.py
 │   ├── portal_transparencia.py
 │   ├── report_html.py
 │   └── url_parser.py
@@ -37,7 +37,7 @@ relatorio_compra/
 - `pncp_tracker/contratos_empenhos.py`: consulta os registros da aba Contratos/Empenhos do PNCP.
 - `pncp_tracker/portal_transparencia.py` e `empenho_details.py`: consultam e enriquecem os empenhos com detalhes do Portal da Transparência.
 - `pncp_tracker/empenho_matcher.py` e `empenhos.py`: relacionam empenhos aos itens e fornecedores homologados.
-- `pncp_tracker/etapa2.py`: coordena a consulta, o enriquecimento e o mapeamento dos empenhos.
+- `pncp_tracker/consultar_e_mapear_empenhos.py`: consulta os empenhos, enriquece com detalhes do Portal da Transparência e mapeia os registros aos itens da compra.
 - `pncp_tracker/report_html.py`: prepara os dados e gera o relatório HTML.
 - `tests/`: testes automatizados do projeto.
 
