@@ -37,12 +37,30 @@ def _obter_url_pncp(url: Optional[str], input_fn=input) -> str:
     return url
 
 
+def _finalizar_jsons(caminhos_json: Sequence[Path], manter_json: bool) -> None:
+    if manter_json:
+        for caminho in caminhos_json:
+            print(f"JSON mantido: {caminho}")
+        return
+
+    for caminho in caminhos_json:
+        caminho.unlink()
+    print("Arquivos JSON temporários removidos.")
+
+
 def main(argv: Optional[Sequence[str]] = None) -> None:
     parser = argparse.ArgumentParser(description="Gera relatório de edital e empenhos do PNCP.")
     parser.add_argument(
         "url_pncp",
         nargs="?",
         help="Link do edital no PNCP. Se omitido, será solicitado no terminal.",
+    )
+    parser.add_argument(
+        "--manter-json",
+        "--manterJSON",
+        dest="manter_json",
+        action="store_true",
+        help="Preserva os arquivos JSON da coleta após gerar o relatório.",
     )
     args = parser.parse_args(argv)
     try:
@@ -83,11 +101,11 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
             pasta_projeto
             / _nome_arquivo_relatorio(resultado_etapa2["chaves_integracao"]),
         )
+        _finalizar_jsons((caminho_etapa1, caminho_etapa2), args.manter_json)
 
         print(f"Status: {resultado_etapa2['status']}")
         print(resultado_etapa2.get("mensagem", ""))
         print(f"Empenhos encontrados: {resultado_etapa2.get('quantidade_empenhos', 0)}")
-        print(f"Dados da etapa 2 salvos em: {caminho_etapa2}")
         print(f"Relatório HTML salvo em: {caminho_relatorio}")
 
     except Exception as exc:

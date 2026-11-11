@@ -73,9 +73,19 @@ python main.py "https://pncp.gov.br/app/editais/10635424000186/2025/187"
 
 Se executar apenas `python main.py`, o programa solicitará o link no terminal. Se nenhum link for digitado, ou se o formato for inválido, a execução será encerrada sem iniciar as consultas.
 
-Uma única execução coleta os dados do edital, consulta os empenhos e gera `etapa1_dados_compra.json`, `etapa2_empenhos.json` e um relatório com o nome `relatorio_compra_{numero_compra}_{ano}.html` (por exemplo, `relatorio_compra_90026_2025.html`). Assim, relatórios de editais diferentes ficam preservados; ao executar novamente o mesmo edital, o arquivo correspondente é atualizado. Os arquivos JSON continuam sendo substituídos a cada execução. Os dados da etapa 1 são reutilizados na etapa 2. O HTML é um arquivo único, sem dependências externas; pode ser aberto localmente, filtrado por item/descrição/empenho e impresso ou salvo como PDF.
+Por padrão, depois que o HTML é gerado com sucesso, os arquivos intermediários `etapa1_dados_compra.json` e `etapa2_empenhos.json` são removidos. Use `--manter-json` (ou `--manterJSON`) para preservá-los:
 
-No topo do relatório, há contagens de itens desertos (valor homologado R$ 0,00), empenhados (execução acima de 0%) e não empenhados (execução igual a 0%, excluindo desertos). Os filtros da tabela permitem exibir cada grupo separadamente e podem ser combinados com a busca textual.
+```bash
+python main.py "https://pncp.gov.br/app/editais/10635424000186/2025/187" --manter-json
+```
+
+Se a API de Contratos/Empenhos do PNCP responder HTTP 404 com a mensagem “Não há contrato publicado no PNCP para esta contratação”, o programa interpreta a resposta como uma compra sem registros de contratos/empenhos e continua a geração do relatório. Outros erros HTTP continuam sendo reportados.
+
+Uma única execução coleta os dados do edital, consulta os empenhos e gera um relatório com o nome `relatorio_compra_{numero_compra}_{ano}.html` (por exemplo, `relatorio_compra_90026_2025.html`). Assim, relatórios de editais diferentes ficam preservados; ao executar novamente o mesmo edital, o arquivo correspondente é atualizado. Os JSONs são arquivos intermediários opcionais: são preservados somente se `--manter-json` for informado. Os dados da etapa 1 são reutilizados na etapa 2. O HTML é um arquivo único, sem dependências externas; pode ser aberto localmente, filtrado por item/descrição/empenho e impresso ou salvo como PDF.
+
+No topo do relatório, os cards de contagem seguem a mesma ordem dos filtros: todos os itens, homologados (empenhados + não empenhados), empenhados (execução acima de 0%), não empenhados (execução igual a 0%, excluindo desertos) e desertos (valor homologado R$ 0,00). Os cards financeiros aparecem em seguida. Os filtros podem ser combinados com a busca textual.
+
+O botão “Baixar CSV completo” exporta todos os itens, independentemente dos filtros ativos. Para itens com execução acima de 0%, gera uma linha para cada item de empenho, incluindo número, código e nome da Unidade Gestora emissora, data, fornecedor, valor, quantidade estimada e descrição do item no documento; para itens desertos ou sem empenho, gera uma linha por item. O arquivo inclui as colunas da tabela consolidada e os dados adicionais dos empenhos, usa ponto e vírgula como separador e é codificado em UTF-8 com BOM para compatibilidade com planilhas. A Unidade Gestora também é exibida nos detalhes expansíveis do empenho.
 
 O relatório mostra valores estimados e homologados, quantidade licitada/homologada, valor empenhado por item e empenhos detalhados. A quantidade empenhada não é informada pela API; é estimada pelo valor da linha dividido pelo preço unitário homologado, com essa ressalva indicada na página.
 

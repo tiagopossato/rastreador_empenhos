@@ -32,6 +32,14 @@ def _preparar_relatorio(dados: Dict[str, Any]) -> Dict[str, Any]:
     soma_estimada = 0.0
     soma_homologada = 0.0
     registros_vinculados = set()
+    unidades_gestoras_por_empenho = {}
+    for registro in dados.get("empenhos", []):
+        detalhes = registro.get("detalhesPortalTransparencia", {}).get("detalhamento", {})
+        unidade_pncp = registro.get("unidadeOrgao") or {}
+        unidades_gestoras_por_empenho[registro.get("numeroContratoEmpenho")] = {
+            "codigo": detalhes.get("codigoUg") or unidade_pncp.get("codigoUnidade"),
+            "nome": detalhes.get("ug") or unidade_pncp.get("nomeUnidade"),
+        }
 
     for item in dados.get("itens_mapeados", []):
         resultados = item.get("resultados", []) or []
@@ -53,6 +61,10 @@ def _preparar_relatorio(dados: Dict[str, Any]) -> Dict[str, Any]:
 
         for empenho_item in item.get("empenhos", []) or []:
             documento = empenho_item.get("item_despesa", {})
+            unidade_gestora = unidades_gestoras_por_empenho.get(
+                empenho_item.get("numero_empenho"),
+                {},
+            )
             valor_empenhado = _numero(
                 documento.get("valorAtual") or empenho_item.get("valor_empenhado")
             )
@@ -70,6 +82,10 @@ def _preparar_relatorio(dados: Dict[str, Any]) -> Dict[str, Any]:
                 {
                     "numero": empenho_item.get("numero_empenho"),
                     "data": empenho_item.get("data_emissao"),
+                    "unidade_gestora_codigo": empenho_item.get("unidade_gestora_codigo")
+                    or unidade_gestora.get("codigo"),
+                    "unidade_gestora_nome": empenho_item.get("unidade_gestora_nome")
+                    or unidade_gestora.get("nome"),
                     "fornecedor": empenho_item.get("nome_fornecedor"),
                     "valor": valor_empenhado,
                     "quantidade_estimada": quantidade,
@@ -176,7 +192,7 @@ _HTML = r"""<!doctype html>
 .cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:18px 0}.card,.panel{background:var(--white);border:1px solid var(--line);border-radius:12px;box-shadow:0 2px 8px #18345608}.card{padding:16px 18px}.card .label{font-size:12px;color:var(--muted)}.card .value{font-size:22px;font-weight:700;margin:4px 0}.card .sub{font-size:11px;color:var(--muted)}
 .panel{padding:18px;margin:16px 0}.panel h2{margin:0 0 12px;font-size:18px}.note{border-left:4px solid #e6a23c;background:#fff8e9;padding:12px 14px;border-radius:4px;color:#614819;margin:14px 0}
 .status-filters{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.status-filters button{border:1px solid var(--line);border-radius:20px;background:white;color:var(--ink);padding:7px 12px;font:inherit;font-size:12px;cursor:pointer}.status-filters button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:white}.status-filters button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
-.toolbar{display:flex;gap:12px;align-items:center;margin:10px 0 14px;flex-wrap:wrap}.toolbar input{flex:1;min-width:220px;padding:10px 12px;border:1px solid #c9d4e2;border-radius:8px;font:inherit}.count{color:var(--muted);font-size:12px}
+.toolbar{display:flex;gap:12px;align-items:center;margin:10px 0 14px;flex-wrap:wrap}.toolbar input{flex:1;min-width:220px;padding:10px 12px;border:1px solid #c9d4e2;border-radius:8px;font:inherit}.toolbar button{border:0;border-radius:8px;background:var(--blue);color:white;padding:10px 14px;font:inherit;cursor:pointer}.toolbar button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}.count{color:var(--muted);font-size:12px}
 .table-wrap{overflow:auto;border:1px solid var(--line);border-radius:9px}table{border-collapse:collapse;width:100%;min-width:1120px;background:white}th{position:sticky;top:0;background:#edf3fa;color:#314963;text-align:right;font-size:11px;text-transform:uppercase;letter-spacing:.04em;padding:11px 10px;border-bottom:1px solid var(--line);white-space:nowrap;cursor:pointer;user-select:none}th:first-child,td:first-child,th:nth-child(2),td:nth-child(2){text-align:left}th:focus-visible{outline:2px solid var(--blue);outline-offset:-2px}th[aria-sort="ascending"]::after{content:" ▲";color:var(--blue)}th[aria-sort="descending"]::after{content:" ▼";color:var(--blue)}td{padding:10px;border-bottom:1px solid #e9eef4;text-align:right;vertical-align:top}tr.item-row{cursor:pointer}tr.item-row:hover{background:#f7fbff}.item-name{font-weight:600;min-width:230px}.item-name small{display:block;color:var(--muted);font-weight:400;margin-top:3px}.num{font-variant-numeric:tabular-nums;white-space:nowrap}.detail-row{display:none;background:#f8fafc}.detail-row.open{display:table-row}.detail-cell{text-align:left!important;padding:16px 20px!important}.detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.detail-box{border:1px solid var(--line);background:white;border-radius:8px;padding:12px}.detail-box h3{margin:0 0 8px;font-size:13px}.detail-box p{margin:4px 0}.detail-table{min-width:600px;font-size:12px}.detail-table th,.detail-table td{text-align:left;padding:7px}.badge{display:inline-block;border-radius:20px;padding:2px 8px;background:#e6f4f1;color:#12695e;font-size:11px}.badge.pending{background:#fff0d6;color:var(--amber)}.badge.no{background:#fbe9e8;color:var(--red)}.bar{height:5px;background:#e7edf5;border-radius:5px;margin-top:5px;overflow:hidden}.bar span{display:block;height:100%;background:var(--teal)}
 .foot{color:var(--muted);font-size:11px;margin:16px 2px}.empty{text-align:center;color:var(--muted);padding:26px}.source-list{display:flex;gap:8px;flex-wrap:wrap}.source-list span{background:#edf3fa;border-radius:5px;padding:4px 8px;font-size:11px}
 @media(max-width:900px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.detail-grid{grid-template-columns:1fr}}
@@ -198,11 +214,12 @@ _HTML = r"""<!doctype html>
     <h2>Itens da contratação</h2>
     <div class="status-filters" role="group" aria-label="Filtrar itens por situação de empenho">
       <button type="button" data-item-filter="todos" aria-pressed="true">Todos</button>
-      <button type="button" data-item-filter="deserto" aria-pressed="false">Desertos</button>
+      <button type="button" data-item-filter="homologado" aria-pressed="false">Homologados</button>
       <button type="button" data-item-filter="empenhado" aria-pressed="false">Empenhados</button>
       <button type="button" data-item-filter="nao_empenhado" aria-pressed="false">Não empenhados</button>
+      <button type="button" data-item-filter="deserto" aria-pressed="false">Desertos</button>
     </div>
-    <div class="toolbar"><input id="search" type="search" placeholder="Filtrar por item, descrição, fornecedor ou empenho…" aria-label="Filtrar itens"><span class="count" id="count"></span></div>
+    <div class="toolbar"><input id="search" type="search" placeholder="Filtrar por item, descrição, fornecedor ou empenho…" aria-label="Filtrar itens"><span class="count" id="count"></span><button type="button" id="download-csv">Baixar CSV completo</button></div>
     <div class="table-wrap"><table id="items-table"><thead><tr>
       <th>Item</th><th>Descrição / unidade</th><th>Qtd. licitada</th><th>Qtd. homologada</th><th>Qtd. empenhada*</th><th>Estimado</th><th>Homologado</th><th>Empenhado mapeado</th><th>Execução</th>
     </tr></thead><tbody id="items"></tbody></table></div>
@@ -309,21 +326,22 @@ const committed=D.valor_empenhado_mapeado||0;
 const statusCounts=D.itens.reduce((counts,item)=>{counts[itemStatus(item)]++;return counts;},{deserto:0,empenhado:0,nao_empenhado:0});
 const cards=[
  ['Itens',''+D.quantidade_itens,'Itens publicados no edital'],
+ ['Itens homologados',fmtQty(statusCounts.empenhado+statusCounts.nao_empenhado),'Itens empenhados + não empenhados'],
+ ['Itens empenhados',fmtQty(statusCounts.empenhado),'Execução acima de 0%'],
+ ['Itens não empenhados',fmtQty(statusCounts.nao_empenhado),'Execução igual a 0%, excluídos desertos'],
+ ['Itens desertos',fmtQty(statusCounts.deserto),'Valor homologado igual a R$ 0,00'],
  ['Valor estimado',fmtMoney(D.valor_estimado),'Soma dos valores estimados por item'],
  ['Valor homologado',fmtMoney(D.valor_homologado),'Soma dos resultados homologados'],
- ['Empenhado mapeado',fmtMoney(committed),`${D.quantidade_empenhos_detalhados} de ${D.quantidade_registros} registros com detalhamento`],
- ['Itens desertos',fmtQty(statusCounts.deserto),'Valor homologado igual a R$ 0,00'],
- ['Itens empenhados',fmtQty(statusCounts.empenhado),'Execução acima de 0%'],
- ['Itens não empenhados',fmtQty(statusCounts.nao_empenhado),'Execução igual a 0%, excluídos desertos']
+ ['Empenhado mapeado',fmtMoney(committed),`${D.quantidade_empenhos_detalhados} de ${D.quantidade_registros} registros com detalhamento`]
 ];
 document.getElementById('cards').innerHTML=cards.map(c=>`<div class="card"><div class="label">${esc(c[0])}</div><div class="value">${esc(c[1])}</div><div class="sub">${esc(c[2])}</div></div>`).join('');
 const tbody=document.getElementById('items');
 let selectedItemFilter='todos';
 function detailHtml(i){
  const suppliers=(i.resultados||[]).map(r=>`<div class="detail-box"><h3>${esc(r.fornecedor||'Fornecedor não informado')}</h3><p>CNPJ: ${esc(r.cnpj||'—')}</p><p>Quantidade homologada: ${fmtQty(r.quantidade)} ${esc(i.unidade)}</p><p>Preço unitário: ${fmtMoney(r.valor_unitario)} · Total: ${fmtMoney(r.valor_total)}</p></div>`).join('')||'<div class="detail-box">Sem resultado homologado publicado.</div>';
- const emps=(i.empenhos||[]).map(e=>`<tr><td>${esc(e.numero)}</td><td>${esc(e.data||'—')}</td><td>${esc(e.fornecedor||'—')}</td><td data-sort-value="${esc(e.valor)}">${fmtMoney(e.valor)}</td><td data-sort-value="${esc(e.quantidade_estimada)}">${fmtQty(e.quantidade_estimada)} ${esc(i.unidade)}</td><td>${esc(e.descricao||'—')}</td><td>${e.codigo_documento?`<a href="https://portaldatransparencia.gov.br/despesas/empenho/${encodeURIComponent(e.codigo_documento)}" target="_blank" rel="noopener noreferrer">Abrir</a>`:'—'}</td></tr>`).join('');
+ const emps=(i.empenhos||[]).map(e=>`<tr><td>${esc(e.numero)}</td><td>${esc(e.unidade_gestora_codigo||'—')}</td><td>${esc(e.unidade_gestora_nome||'—')}</td><td>${esc(e.data||'—')}</td><td>${esc(e.fornecedor||'—')}</td><td data-sort-value="${esc(e.valor)}">${fmtMoney(e.valor)}</td><td data-sort-value="${esc(e.quantidade_estimada)}">${fmtQty(e.quantidade_estimada)} ${esc(i.unidade)}</td><td>${esc(e.descricao||'—')}</td><td>${e.codigo_documento?`<a href="https://portaldatransparencia.gov.br/despesas/empenho/${encodeURIComponent(e.codigo_documento)}" target="_blank" rel="noopener noreferrer">Abrir</a>`:'—'}</td></tr>`).join('');
  const candidates=[...(i.candidatos_sem_item||[]),...(i.candidatos_fornecedor_divergente||[])];
- return `<div class="detail-grid"><div><h3>Resultado(s) homologado(s)</h3>${suppliers}</div><div><h3>Empenhos vinculados ao item</h3>${emps?`<div class="table-wrap"><table class="detail-table"><thead><tr><th>Empenho</th><th>Emissão</th><th>Fornecedor</th><th>Valor da linha</th><th>Qtd. estimada</th><th>Descrição do item no empenho</th><th>Portal</th></tr></thead><tbody>${emps}</tbody></table></div>`:'<div class="detail-box">Nenhum empenho com item e fornecedor compatíveis.</div>'}</div></div>${candidates.length?`<div class="note"><strong>Não contabilizados:</strong> ${candidates.map(x=>esc(x.numero_empenho)).join(', ')} — sem correspondência suficiente para este item.</div>`:''}`;
+ return `<div class="detail-grid"><div><h3>Resultado(s) homologado(s)</h3>${suppliers}</div><div><h3>Empenhos vinculados ao item</h3>${emps?`<div class="table-wrap"><table class="detail-table"><thead><tr><th>Empenho</th><th>Código UG emissora</th><th>Unidade Gestora emissora</th><th>Emissão</th><th>Fornecedor</th><th>Valor da linha</th><th>Qtd. estimada</th><th>Descrição do item no empenho</th><th>Portal</th></tr></thead><tbody>${emps}</tbody></table></div>`:'<div class="detail-box">Nenhum empenho com item e fornecedor compatíveis.</div>'}</div></div>${candidates.length?`<div class="note"><strong>Não contabilizados:</strong> ${candidates.map(x=>esc(x.numero_empenho)).join(', ')} — sem correspondência suficiente para este item.</div>`:''}`;
 }
 function render(filter=document.getElementById('search').value){
  const itemsTable=document.getElementById('items-table');
@@ -331,7 +349,12 @@ function render(filter=document.getElementById('search').value){
  delete itemsTable.dataset.sortDirection;
  itemsTable.querySelectorAll('thead th').forEach(header=>header.setAttribute('aria-sort','none'));
  const q=filter.trim().toLocaleLowerCase('pt-BR');
- const rows=D.itens.filter(i=>(selectedItemFilter==='todos'||itemStatus(i)===selectedItemFilter)&&(!q||[i.numero,i.descricao,i.unidade,...(i.resultados||[]).flatMap(r=>[r.fornecedor,r.cnpj]),...(i.empenhos||[]).map(e=>e.numero)].join(' ').toLocaleLowerCase('pt-BR').includes(q)));
+ const rows=D.itens.filter(i=>{
+  const status=itemStatus(i);
+  const matchesStatus=selectedItemFilter==='todos'
+   ||(selectedItemFilter==='homologado'?status!=='deserto':status===selectedItemFilter);
+  return matchesStatus&&(!q||[i.numero,i.descricao,i.unidade,...(i.resultados||[]).flatMap(r=>[r.fornecedor,r.cnpj]),...(i.empenhos||[]).map(e=>e.numero)].join(' ').toLocaleLowerCase('pt-BR').includes(q));
+ });
  document.getElementById('count').textContent=`${rows.length} de ${D.itens.length} itens`;
  tbody.innerHTML=rows.map((i,n)=>{
   const detail=`detail-${n}`, ratio=pct(number(i.valor_empenhado),number(i.valor_total_homologado));
@@ -341,6 +364,48 @@ function render(filter=document.getElementById('search').value){
  tbody.querySelectorAll('.item-row').forEach(row=>row.addEventListener('click',()=>document.getElementById(row.dataset.detail).classList.toggle('open')));
  prepareSortableHeaders();
 }
+function csvCell(value){
+ let text=value==null?'':String(value);
+ if(typeof value==='string'&&/^[\s]*[=+\-@]/.test(value))text="'"+text;
+ return `"${text.replace(/"/g,'""').replace(/\r?\n/g,' ')}"`;
+}
+function gerarCsv(){
+ const headers=['Número do item','Descrição','Unidade','Situação','Quantidade licitada','Quantidade homologada','Quantidade empenhada estimada','Valor unitário estimado','Valor total estimado','Valor unitário homologado','Valor total homologado','Valor empenhado mapeado','Execução (%)','Número do empenho','Código da Unidade Gestora emissora','Nome da Unidade Gestora emissora','Data de emissão','Fornecedor do empenho','Valor da linha do empenho','Quantidade estimada da linha','Descrição do item no empenho','Código do documento','Link do Portal da Transparência'];
+ const linhas=[headers];
+ D.itens.forEach(item=>{
+  const homologado=number(item.valor_total_homologado);
+  const empenhado=number(item.valor_empenhado);
+  const execucao=pct(empenhado,homologado);
+  const status=itemStatus(item);
+  const base=[
+   item.numero,item.descricao,item.unidade,
+   {deserto:'Deserto',empenhado:'Empenhado',nao_empenhado:'Não empenhado'}[status],
+   item.quantidade_licitada,item.quantidade_homologada,item.quantidade_empenhada_estimada,
+   item.valor_unitario_estimado,item.valor_total_estimado,item.valor_unitario_homologado,
+   item.valor_total_homologado,item.valor_empenhado,homologado?execucao:null
+  ];
+  const empenhos=status==='empenhado'&&item.empenhos.length?item.empenhos:[null];
+  empenhos.forEach(empenho=>{
+   linhas.push([...base,
+    empenho?.numero,empenho?.unidade_gestora_codigo,empenho?.unidade_gestora_nome,
+    empenho?.data,empenho?.fornecedor,empenho?.valor,
+    empenho?.quantidade_estimada,empenho?.descricao,empenho?.codigo_documento,
+    empenho?.codigo_documento?`https://portaldatransparencia.gov.br/despesas/empenho/${encodeURIComponent(empenho.codigo_documento)}`:null
+   ]);
+  });
+ });
+ return '\uFEFF'+linhas.map(linha=>linha.map(csvCell).join(';')).join('\r\n');
+}
+document.getElementById('download-csv').addEventListener('click',()=>{
+ const blob=new Blob([gerarCsv()],{type:'text/csv;charset=utf-8'});
+ const link=document.createElement('a');
+ const numero=String(D.chaves.numero_compra||'compra').replace(/[^A-Za-z0-9_-]+/g,'-');
+ const ano=String(D.chaves.ano_compra||'').replace(/[^A-Za-z0-9_-]+/g,'-');
+ link.href=URL.createObjectURL(blob);
+ link.download=`relatorio_compra_${numero}_${ano}.csv`;
+ link.click();
+ setTimeout(()=>URL.revokeObjectURL(link.href),0);
+});
 render();
 document.getElementById('search').addEventListener('input',e=>render(e.target.value));
 document.querySelectorAll('[data-item-filter]').forEach(button=>button.addEventListener('click',()=>{

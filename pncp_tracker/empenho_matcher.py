@@ -29,6 +29,7 @@ def mapear_empenhos_por_item(dados_compra: Dict[str, Any], empenhos: List[Dict[s
     for empenho in empenhos:
         numero_empenho = empenho.get("numeroContratoEmpenho")
         detalhes = empenho.get("detalhesPortalTransparencia", {}).get("detalhamento", {})
+        unidade_pncp = empenho.get("unidadeOrgao") or {}
         itens_despesa = detalhes.get("itensEmpenho", [])
         fornecedor = _normalizar_cnpj(
             detalhes.get("codigoFavorecido") or empenho.get("niFornecedor")
@@ -45,6 +46,10 @@ def mapear_empenhos_por_item(dados_compra: Dict[str, Any], empenhos: List[Dict[s
                     "numero_empenho": numero_empenho,
                     "data_emissao": detalhes.get("data"),
                     "valor_empenhado": item_despesa.get("valorAtual"),
+                    "unidade_gestora_codigo": detalhes.get("codigoUg")
+                    or unidade_pncp.get("codigoUnidade"),
+                    "unidade_gestora_nome": detalhes.get("ug")
+                    or unidade_pncp.get("nomeUnidade"),
                     "fornecedor_cnpj": fornecedor,
                     "nome_fornecedor": detalhes.get("nomeFavorecido") or empenho.get("nomeRazaoSocialFornecedor"),
                     "item_despesa": item_despesa,

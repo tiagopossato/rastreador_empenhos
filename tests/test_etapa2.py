@@ -1,6 +1,8 @@
 import unittest
 from unittest.mock import patch
 
+import requests
+
 from pncp_tracker.contratos_empenhos import consultar_contratos_empenhos
 from pncp_tracker.empenho_details import enriquecer_empenhos_com_detalhes_portal
 from pncp_tracker.empenho_matcher import mapear_empenhos_por_item
@@ -85,6 +87,8 @@ class Etapa2Tests(unittest.TestCase):
                             "codigoFavorecido": "12345678000199",
                             "nomeFavorecido": "Fornecedor",
                             "data": "03/02/2026",
+                            "codigoUg": "158379",
+                            "ug": "IF CATARINENSE - CAMPUS CAMBORIU",
                             "itensEmpenho": [
                                 {
                                     "descricao": "Item compra: 00024 - AREIA, TIPO NORMAL BRASILEIRA",
@@ -99,6 +103,11 @@ class Etapa2Tests(unittest.TestCase):
 
         self.assertEqual(result[0]["status"], "mapeado_por_numero_item")
         self.assertEqual(result[0]["empenhos"][0]["numero_empenho"], "2026NE000043")
+        self.assertEqual(result[0]["empenhos"][0]["unidade_gestora_codigo"], "158379")
+        self.assertEqual(
+            result[0]["empenhos"][0]["unidade_gestora_nome"],
+            "IF CATARINENSE - CAMPUS CAMBORIU",
+        )
         self.assertEqual(result[1]["status"], "sem_empenho_mapeado")
 
     @patch("pncp_tracker.contratos_empenhos.requests.get")
@@ -122,6 +131,47 @@ class Etapa2Tests(unittest.TestCase):
 
         self.assertEqual([row["numeroContratoEmpenho"] for row in result], ["NE1", "NE2"])
         self.assertEqual(get.call_count, 2)
+
+    @patch("pncp_tracker.contratos_empenhos.requests.get")
+    def test_contracts_404_with_no_published_contracts_payload_returns_empty(self, get):
+        class FakeResponse:
+            status_code = 404
+
+            def raise_for_status(self):
+                raise requests.HTTPError("404 Client Error")
+
+            def json(self):
+                return {
+                    "timestamp": "2026-11-10T21:50:37.748-03:00",
+                    "status": "404",
+                    "error": "404 NOT_FOUND",
+                    "message": "Não há contrato publicado no PNCP para esta contratação.",
+                    "path": "/pncp-api/v1/orgaos/10635424000186/contratos/contratacao/2026/187",
+                }
+
+        get.return_value = FakeResponse()
+
+        self.assertEqual(
+            consultar_contratos_empenhos("10635424000186", "2026", "187"),
+            [],
+        )
+        get.assert_called_once()
+
+    @patch("pncp_tracker.contratos_empenhos.requests.get")
+    def test_unrelated_contracts_404_is_still_raised(self, get):
+        class FakeResponse:
+            status_code = 404
+
+            def raise_for_status(self):
+                raise requests.HTTPError("404 Client Error")
+
+            def json(self):
+                return {"status": "404", "message": "Unexpected endpoint failure"}
+
+        get.return_value = FakeResponse()
+
+        with self.assertRaises(requests.HTTPError):
+            consultar_contratos_empenhos("10635424000186", "2026", "187")
 
     @patch("pncp_tracker.empenho_details.consultar_detalhes_documento_despesa")
     @patch("pncp_tracker.empenho_details.consultar_documentos_despesa_favorecido")
@@ -224,6 +274,8 @@ class Etapa2Tests(unittest.TestCase):
                             {
                                 "numero_empenho": "2026NE000043",
                                 "data_emissao": "03/02/2026",
+                                "unidade_gestora_codigo": "158379",
+                                "unidade_gestora_nome": "IF CATARINENSE - CAMPUS CAMBORIU",
                                 "fornecedor_cnpj": "12345678000199",
                                 "valor_empenhado": "2.024,50",
                                 "item_despesa": {
@@ -240,6 +292,14 @@ class Etapa2Tests(unittest.TestCase):
 
         self.assertEqual(report["valor_empenhado_mapeado"], 2024.5)
         self.assertEqual(report["itens"][0]["quantidade_empenhada_estimada"], 5)
+        self.assertEqual(
+            report["itens"][0]["empenhos"][0]["unidade_gestora_codigo"],
+            "158379",
+        )
+        self.assertEqual(
+            report["itens"][0]["empenhos"][0]["unidade_gestora_nome"],
+            "IF CATARINENSE - CAMPUS CAMBORIU",
+        )
 
     @patch("pncp_tracker.etapa2.mapear_empenhos_por_item", return_value=[])
     @patch("pncp_tracker.etapa2.enriquecer_empenhos_com_detalhes_portal", return_value=([], []))
