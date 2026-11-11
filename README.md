@@ -75,6 +75,8 @@ Se executar apenas `python main.py`, o programa solicitará o link no terminal. 
 
 Uma única execução coleta os dados do edital, consulta os empenhos e gera `etapa1_dados_compra.json`, `etapa2_empenhos.json` e um relatório com o nome `relatorio_compra_{numero_compra}_{ano}.html` (por exemplo, `relatorio_compra_90026_2025.html`). Assim, relatórios de editais diferentes ficam preservados; ao executar novamente o mesmo edital, o arquivo correspondente é atualizado. Os arquivos JSON continuam sendo substituídos a cada execução. Os dados da etapa 1 são reutilizados na etapa 2. O HTML é um arquivo único, sem dependências externas; pode ser aberto localmente, filtrado por item/descrição/empenho e impresso ou salvo como PDF.
 
+No topo do relatório, há contagens de itens desertos (valor homologado R$ 0,00), empenhados (execução acima de 0%) e não empenhados (execução igual a 0%, excluindo desertos). Os filtros da tabela permitem exibir cada grupo separadamente e podem ser combinados com a busca textual.
+
 O relatório mostra valores estimados e homologados, quantidade licitada/homologada, valor empenhado por item e empenhos detalhados. A quantidade empenhada não é informada pela API; é estimada pelo valor da linha dividido pelo preço unitário homologado, com essa ressalva indicada na página.
 
 Para evitar depender da data de assinatura/publicação do PNCP (que pode divergir bastante da emissão, inclusive em reforços), a busca dos documentos usa o endpoint do Portal da Transparência filtrado pelo CNPJ do fornecedor, ano do empenho e unidade gestora. A data de assinatura não participa da busca; se faltar CNPJ ou o ano não puder ser extraído do número do empenho, o registro fica explicitamente como não consultado.
