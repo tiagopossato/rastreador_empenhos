@@ -23,6 +23,8 @@ Este repositório contém a aplicação Python `rastreador_empenhos`, que coleta
 - `pncp_tracker/empenhos.py`: models e processamento de empenhos.
 - `pncp_tracker/consultar_e_mapear_empenhos.py`: consulta os empenhos, enriquece com os detalhes do Portal da Transparência e mapeia os registros aos itens da compra.
 - `pncp_tracker/report_html.py`: gera o relatório HTML final.
+- `generate_reports_index.py`: gera o índice dos relatórios existentes em `relatorios/`.
+- `relatorios/`: saída dos relatórios HTML publicados no GitHub Pages.
 - `tests/`: testes automatizados.
 
 ## Configuração e requisitos
@@ -76,7 +78,7 @@ python -m unittest discover -s tests -v
 - Quando ajustar lógica de matching de empenhos, preserve a semântica de itens homologados, fornecedores e estimativa de quantidade empenhada.
 - Não exponha chaves de API em logs, commits ou arquivos versionados.
 - Ao alterar comportamento do HTML, valide o efeito em relação aos testes existentes e à estrutura do relatório.
-- Arquivos HTML gerados na raiz do projeto podem existir como artefatos de execução; não os trate como fonte de código.
+- Relatórios HTML gerados em `relatorios/` são artefatos da aplicação; não os trate como fonte de código.
 
 ## Observações importantes
 

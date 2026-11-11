@@ -95,14 +95,21 @@ class MainTests(unittest.TestCase):
 
         self.assertFalse((project / "etapa1_dados_compra.json").exists())
         self.assertFalse((project / "etapa2_empenhos.json").exists())
-        self.assertTrue((project / "relatorio_compra_90026_2025.html").exists())
+        self.assertTrue(
+            (project / "relatorios" / "relatorio_compra_90026_2025.html").exists()
+        )
+        index = (project / "relatorios" / "index.html").read_text(encoding="utf-8")
+        self.assertIn('href="relatorio_compra_90026_2025.html"', index)
 
     def test_keep_json_flag_preserves_json_files(self):
         project = self._run_main_in_temp_project(["--manter-json"])
 
         self.assertTrue((project / "etapa1_dados_compra.json").exists())
         self.assertTrue((project / "etapa2_empenhos.json").exists())
-        self.assertTrue((project / "relatorio_compra_90026_2025.html").exists())
+        self.assertTrue(
+            (project / "relatorios" / "relatorio_compra_90026_2025.html").exists()
+        )
+        self.assertTrue((project / "relatorios" / "index.html").exists())
 
     def test_keep_json_camel_case_alias_preserves_json_files(self):
         project = self._run_main_in_temp_project(["--manterJSON"])

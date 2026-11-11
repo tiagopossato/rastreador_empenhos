@@ -16,6 +16,7 @@ O PNCP fornece valores de empenho, mas não necessariamente a quantidade física
 rastreador_empenhos/
 ├── main.py
 ├── README.md
+├── generate_reports_index.py
 ├── pncp_tracker/
 │   ├── api_client.py
 │   ├── collector.py
@@ -28,6 +29,7 @@ rastreador_empenhos/
 │   ├── portal_transparencia.py
 │   ├── report_html.py
 │   └── url_parser.py
+├── relatorios/
 └── tests/
 ```
 
@@ -39,6 +41,7 @@ rastreador_empenhos/
 - `pncp_tracker/empenho_matcher.py` e `empenhos.py`: relacionam empenhos aos itens e fornecedores homologados.
 - `pncp_tracker/consultar_e_mapear_empenhos.py`: consulta os empenhos, enriquece com detalhes do Portal da Transparência e mapeia os registros aos itens da compra.
 - `pncp_tracker/report_html.py`: prepara os dados e gera o relatório HTML.
+- `generate_reports_index.py`: gera o índice HTML dos relatórios existentes em `relatorios/`.
 - `tests/`: testes automatizados do projeto.
 
 ## Requisitos e configuração
@@ -99,7 +102,19 @@ O botão **Baixar CSV completo** exporta todos os itens, independentemente dos f
 
 ## Arquivos gerados e testes
 
-O relatório é salvo na raiz do projeto como `relatorio_compra_{numero_compra}_{ano}.html`, por exemplo, `relatorio_compra_90026_2025.html`. Relatórios de compras diferentes são preservados; uma nova execução da mesma compra atualiza o arquivo correspondente.
+O relatório é salvo em `relatorios/relatorio_compra_{numero_compra}_{ano}.html`, por exemplo, `relatorios/relatorio_compra_90026_2025.html`. Relatórios de compras diferentes são preservados; uma nova execução da mesma compra atualiza o arquivo correspondente. Após gerar o relatório, a aplicação também atualiza `relatorios/index.html` com links para os relatórios existentes.
+
+## Publicação no GitHub Pages
+
+O workflow `.github/workflows/pages.yml` gera `relatorios/index.html` com cards para os relatórios presentes e publica o conteúdo de `relatorios/` no GitHub Pages em cada push para `main`. Também é possível iniciar a publicação manualmente pela aba **Actions**.
+
+Para publicar, configure a fonte do GitHub Pages como **GitHub Actions** em **Settings → Pages**. O workflow publica os relatórios HTML que estão versionados; a coleta de novas compras continua sendo feita localmente. Para incluir um novo relatório no site, gere-o e envie o arquivo para o repositório.
+
+Para gerar ou atualizar o índice localmente:
+
+```bash
+python generate_reports_index.py
+```
 
 Para executar os testes:
 

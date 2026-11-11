@@ -5,6 +5,7 @@ import sys
 from pathlib import Path
 from typing import Optional, Sequence
 
+from generate_reports_index import gerar_index_relatorios
 from pncp_tracker.collector import baixar_dados_compra_pncp
 from pncp_tracker.consultar_e_mapear_empenhos import consultar_e_mapear_empenhos
 from pncp_tracker.report_html import gerar_relatorio_html
@@ -96,17 +97,21 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
             json.dumps(resultado_etapa2, indent=2, ensure_ascii=False),
             encoding="utf-8",
         )
+        pasta_relatorios = pasta_projeto / "relatorios"
+        pasta_relatorios.mkdir(parents=True, exist_ok=True)
         caminho_relatorio = gerar_relatorio_html(
             resultado_etapa2,
-            pasta_projeto
+            pasta_relatorios
             / _nome_arquivo_relatorio(resultado_etapa2["chaves_integracao"]),
         )
+        caminho_index = gerar_index_relatorios(pasta_relatorios)
         _finalizar_jsons((caminho_etapa1, caminho_etapa2), args.manter_json)
 
         print(f"Status: {resultado_etapa2['status']}")
         print(resultado_etapa2.get("mensagem", ""))
         print(f"Empenhos encontrados: {resultado_etapa2.get('quantidade_empenhos', 0)}")
         print(f"Relatório HTML salvo em: {caminho_relatorio}")
+        print(f"Índice HTML atualizado em: {caminho_index}")
 
     except Exception as exc:
         print(f"Erro ao processar as etapas da compra: {exc}")
