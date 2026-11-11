@@ -1,14 +1,55 @@
+import argparse
 import json
+import re
 import sys
 from pathlib import Path
+from typing import Optional, Sequence
 
 from pncp_tracker.collector import baixar_dados_compra_pncp
 from pncp_tracker.etapa2 import processar_etapa2
 from pncp_tracker.report_html import gerar_relatorio_html
+from pncp_tracker.url_parser import extrair_parametros_url
 
 
-def main() -> None:
-    url_pncp = "https://pncp.gov.br/app/editais/10635424000186/2025/187"
+def _nome_arquivo_relatorio(chaves_integracao: dict) -> str:
+    numero_compra = re.sub(
+        r"[^A-Za-z0-9_-]+",
+        "-",
+        str(chaves_integracao["numero_compra"]).strip(),
+    ).strip("-")
+    ano_compra = re.sub(
+        r"[^A-Za-z0-9_-]+",
+        "-",
+        str(chaves_integracao["ano_compra"]).strip(),
+    ).strip("-")
+    if not numero_compra or not ano_compra:
+        raise ValueError("Número ou ano da compra inválido para nomear o relatório.")
+    return f"relatorio_compra_{numero_compra}_{ano_compra}.html"
+
+
+def _obter_url_pncp(url: Optional[str], input_fn=input) -> str:
+    if not url:
+        url = input_fn("Informe o link do edital no PNCP: ")
+    url = url.strip()
+    if not url:
+        raise ValueError("Nenhum link do PNCP foi informado; execução cancelada.")
+    extrair_parametros_url(url)
+    return url
+
+
+def main(argv: Optional[Sequence[str]] = None) -> None:
+    parser = argparse.ArgumentParser(description="Gera relatório de edital e empenhos do PNCP.")
+    parser.add_argument(
+        "url_pncp",
+        nargs="?",
+        help="Link do edital no PNCP. Se omitido, será solicitado no terminal.",
+    )
+    args = parser.parse_args(argv)
+    try:
+        url_pncp = _obter_url_pncp(args.url_pncp)
+    except (ValueError, EOFError) as exc:
+        parser.error(str(exc))
+
     pasta_projeto = Path(__file__).resolve().parent
 
     try:
@@ -39,7 +80,8 @@ def main() -> None:
         )
         caminho_relatorio = gerar_relatorio_html(
             resultado_etapa2,
-            pasta_projeto / "relatorio_compra.html",
+            pasta_projeto
+            / _nome_arquivo_relatorio(resultado_etapa2["chaves_integracao"]),
         )
 
         print(f"Status: {resultado_etapa2['status']}")

@@ -135,6 +135,53 @@ def consultar_documentos_despesa(unidade_gestora: str, data_emissao: str, fase: 
     return documentos
 
 
+def consultar_documentos_despesa_favorecido(
+    codigo_pessoa: str,
+    ano: int | str,
+    unidade_gestora: str,
+    fase: int = 1,
+) -> List[Dict[str, Any]]:
+    """Lista documentos de despesa por favorecido, ano e unidade gestora."""
+    api_key = _api_key()
+    if not api_key:
+        raise PermissionError(
+            "Chave da API do Portal da Transparência não configurada. "
+            "Defina PORTAL_DADOS_API_KEY ou PORTALTRANSPARENCIA_API_KEY."
+        )
+
+    url = "https://api.portaldatransparencia.gov.br/api-de-dados/despesas/documentos-por-favorecido"
+    documentos: List[Dict[str, Any]] = []
+    pagina = 1
+
+    while True:
+        response = requests.get(
+            url,
+            params={
+                "codigoPessoa": codigo_pessoa,
+                "fase": fase,
+                "ano": ano,
+                "ug": unidade_gestora,
+                "pagina": pagina,
+            },
+            headers=_headers(),
+            timeout=DEFAULT_TIMEOUT,
+        )
+        if response.status_code == 401:
+            raise PermissionError("API do Portal da Transparência recusou a chave de autenticação.")
+        response.raise_for_status()
+        lote = response.json()
+        if not isinstance(lote, list):
+            raise ValueError("Resposta inesperada ao consultar documentos por favorecido.")
+        if not lote:
+            break
+        documentos.extend(lote)
+        if len(lote) < 15:
+            break
+        pagina += 1
+
+    return documentos
+
+
 def consultar_detalhes_documento_despesa(codigo_documento: str) -> Dict[str, Any]:
     """Busca o detalhamento do documento de despesa no Portal da Transparência."""
     api_key = _api_key()

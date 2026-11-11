@@ -1,19 +1,17 @@
-from datetime import datetime
+import re
 from typing import Any, Dict, List, Tuple
 
-from .portal_transparencia import consultar_detalhes_documento_despesa, consultar_documentos_despesa
-
-
-def _data_portal(data: str) -> str:
-    """Converte a data ISO da API do PNCP para DD/MM/AAAA."""
-    return datetime.strptime(data[:10], "%Y-%m-%d").strftime("%d/%m/%Y")
+from .portal_transparencia import (
+    consultar_detalhes_documento_despesa,
+    consultar_documentos_despesa_favorecido,
+)
 
 
 def enriquecer_empenhos_com_detalhes_portal(
     empenhos_pncp: List[Dict[str, Any]],
 ) -> Tuple[List[Dict[str, Any]], List[Dict[str, str]]]:
     """Adiciona detalhes e itens do Portal aos registros PNCP identificados como NE."""
-    grupos: Dict[Tuple[str, str], List[Dict[str, Any]]] = {}
+    grupos: Dict[Tuple[str, str, str], List[Dict[str, Any]]] = {}
     enriquecidos = [dict(empenho) for empenho in empenhos_pncp]
     erros: List[Dict[str, str]] = []
 
@@ -21,25 +19,46 @@ def enriquecer_empenhos_com_detalhes_portal(
         numero = str(empenho.get("numeroContratoEmpenho") or "")
         unidade = str((empenho.get("unidadeOrgao") or {}).get("codigoUnidade") or "")
         data_assinatura = str(empenho.get("dataAssinatura") or "")
-        if "NE" not in numero or not unidade or not data_assinatura:
+        if "NE" not in numero or not unidade:
             empenho["detalhesPortalTransparencia"] = {
                 "status": "nao_consultado",
-                "motivo": "Registro sem identificador de empenho, unidade ou data de emissão.",
+                "motivo": "Registro sem identificador de empenho ou unidade gestora.",
             }
             continue
-        grupos.setdefault((unidade, _data_portal(data_assinatura)), []).append(empenho)
+        fornecedor = re.sub(r"\D", "", str(empenho.get("niFornecedor") or ""))
+        if not fornecedor:
+            empenho["detalhesPortalTransparencia"] = {
+                "status": "nao_consultado",
+                "motivo": "Registro sem CNPJ do fornecedor para consulta por favorecido.",
+            }
+            continue
+        ano_empenho = re.match(r"^(\d{4})NE", numero, re.IGNORECASE)
+        if not ano_empenho:
+            empenho["detalhesPortalTransparencia"] = {
+                "status": "nao_consultado",
+                "motivo": "Não foi possível extrair o ano do número do empenho.",
+            }
+            continue
+        ano = ano_empenho.group(1)
+        grupos.setdefault((unidade, fornecedor, ano), []).append(empenho)
 
-    documentos_por_grupo: Dict[Tuple[str, str], List[Dict[str, Any]]] = {}
+    documentos_por_grupo: Dict[Tuple[str, str, str], List[Dict[str, Any]]] = {}
     for grupo in grupos:
-        unidade, data_emissao = grupo
+        unidade, fornecedor, ano = grupo
         try:
-            documentos_por_grupo[grupo] = consultar_documentos_despesa(unidade, data_emissao, fase=1)
+            documentos_por_grupo[grupo] = consultar_documentos_despesa_favorecido(
+                fornecedor,
+                ano,
+                unidade,
+                fase=1,
+            )
         except Exception as exc:
             documentos_por_grupo[grupo] = []
             erros.append(
                 {
                     "unidade_gestora": unidade,
-                    "data_emissao": data_emissao,
+                    "fornecedor": fornecedor,
+                    "ano": ano,
                     "erro": f"{type(exc).__name__}: {exc}",
                 }
             )
@@ -56,7 +75,7 @@ def enriquecer_empenhos_com_detalhes_portal(
             if documento is None:
                 empenho["detalhesPortalTransparencia"] = {
                     "status": "nao_encontrado",
-                    "mensagem": "Documento não localizado para a UG e data informadas.",
+                    "mensagem": "Documento não localizado para o favorecido, ano e UG informados.",
                 }
                 continue
 
@@ -77,7 +96,7 @@ def enriquecer_empenhos_com_detalhes_portal(
                     {
                         "numero_empenho": numero,
                         "codigo_documento": codigo_documento,
-                        "erro": f"{type(exc).__name__}: {exc}",
+                        "erro":                         f"{type(exc).__name__}: {exc}",
                     }
                 )
 

@@ -22,7 +22,7 @@ relatorio_compra/
 ├── README.md
 ├── etapa1_dados_compra.json
 ├── etapa2_empenhos.json
-├── relatorio_compra.html
+├── relatorio_compra_90026_2025.html
 ├── pncp_tracker/
 │   ├── __init__.py
 │   ├── api_client.py
@@ -65,16 +65,19 @@ pip install requests
 ## 🚀 Como Executar
 
 1. Configure a chave da API do Portal da Transparência no `.env`.
-2. Se necessário, altere a variável `url_pncp` no início de `main.py`.
-3. Execute:
+2. Execute o script informando a URL do edital como argumento:
 
 ```bash
-python main.py
+python main.py "https://pncp.gov.br/app/editais/10635424000186/2025/187"
 ```
 
-Uma única execução coleta os dados do edital, consulta os empenhos e gera `etapa1_dados_compra.json`, `etapa2_empenhos.json` e `relatorio_compra.html`. Os dados da etapa 1 são reutilizados na etapa 2. O HTML é um arquivo único, sem dependências externas; pode ser aberto localmente, filtrado por item/descrição/empenho e impresso ou salvo como PDF.
+Se executar apenas `python main.py`, o programa solicitará o link no terminal. Se nenhum link for digitado, ou se o formato for inválido, a execução será encerrada sem iniciar as consultas.
+
+Uma única execução coleta os dados do edital, consulta os empenhos e gera `etapa1_dados_compra.json`, `etapa2_empenhos.json` e um relatório com o nome `relatorio_compra_{numero_compra}_{ano}.html` (por exemplo, `relatorio_compra_90026_2025.html`). Assim, relatórios de editais diferentes ficam preservados; ao executar novamente o mesmo edital, o arquivo correspondente é atualizado. Os arquivos JSON continuam sendo substituídos a cada execução. Os dados da etapa 1 são reutilizados na etapa 2. O HTML é um arquivo único, sem dependências externas; pode ser aberto localmente, filtrado por item/descrição/empenho e impresso ou salvo como PDF.
 
 O relatório mostra valores estimados e homologados, quantidade licitada/homologada, valor empenhado por item e empenhos detalhados. A quantidade empenhada não é informada pela API; é estimada pelo valor da linha dividido pelo preço unitário homologado, com essa ressalva indicada na página.
+
+Para evitar depender da data de assinatura/publicação do PNCP (que pode divergir bastante da emissão, inclusive em reforços), a busca dos documentos usa o endpoint do Portal da Transparência filtrado pelo CNPJ do fornecedor, ano do empenho e unidade gestora. A data de assinatura não participa da busca; se faltar CNPJ ou o ano não puder ser extraído do número do empenho, o registro fica explicitamente como não consultado.
 
 Todas as tabelas do relatório podem ser ordenadas clicando no cabeçalho; também é possível focar um cabeçalho com Tab e alternar a ordenação com Enter ou Espaço. Um segundo clique no mesmo campo inverte a ordem. Valores numéricos, monetários e datas são ordenados pelos seus valores, e campos vazios permanecem no final. Ao ordenar os itens, cada linha de detalhes acompanha o item correspondente.
 

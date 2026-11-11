@@ -4,11 +4,41 @@ from unittest.mock import patch
 from pncp_tracker.contratos_empenhos import consultar_contratos_empenhos
 from pncp_tracker.empenho_details import enriquecer_empenhos_com_detalhes_portal
 from pncp_tracker.empenho_matcher import mapear_empenhos_por_item
+from pncp_tracker.portal_transparencia import consultar_documentos_despesa_favorecido
 from pncp_tracker.report_html import _preparar_relatorio
 from pncp_tracker.etapa2 import processar_etapa2
 
 
 class Etapa2Tests(unittest.TestCase):
+    @patch("pncp_tracker.portal_transparencia._api_key", return_value="test-key")
+    @patch("pncp_tracker.portal_transparencia.requests.get")
+    def test_supplier_document_lookup_uses_year_and_management_unit(self, get, api_key):
+        class FakeResponse:
+            status_code = 200
+
+            def raise_for_status(self):
+                pass
+
+            def json(self):
+                return [{"documentoResumido": "2026NE000129"}]
+
+        get.return_value = FakeResponse()
+
+        result = consultar_documentos_despesa_favorecido(
+            "36091140000160",
+            2026,
+            "158460",
+        )
+
+        self.assertEqual(result, [{"documentoResumido": "2026NE000129"}])
+        self.assertEqual(get.call_args.kwargs["params"], {
+            "codigoPessoa": "36091140000160",
+            "fase": 1,
+            "ano": 2026,
+            "ug": "158460",
+            "pagina": 1,
+        })
+
     def test_empenhos_without_item_number_are_only_supplier_candidates(self):
         result = mapear_empenhos_por_item(
             {
@@ -94,7 +124,7 @@ class Etapa2Tests(unittest.TestCase):
         self.assertEqual(get.call_count, 2)
 
     @patch("pncp_tracker.empenho_details.consultar_detalhes_documento_despesa")
-    @patch("pncp_tracker.empenho_details.consultar_documentos_despesa")
+    @patch("pncp_tracker.empenho_details.consultar_documentos_despesa_favorecido")
     def test_portal_detail_is_resolved_and_attached(self, list_documents, get_detail):
         list_documents.return_value = [
             {
@@ -113,6 +143,7 @@ class Etapa2Tests(unittest.TestCase):
                     "numeroContratoEmpenho": "2026NE000043",
                     "dataAssinatura": "2026-02-03",
                     "unidadeOrgao": {"codigoUnidade": "158379"},
+                    "niFornecedor": "12345678000199",
                 }
             ]
         )
@@ -123,6 +154,45 @@ class Etapa2Tests(unittest.TestCase):
             result[0]["detalhesPortalTransparencia"]["detalhamento"]["itensEmpenho"][0]["descricao"],
             "Areia",
         )
+
+    @patch(
+        "pncp_tracker.empenho_details.consultar_detalhes_documento_despesa",
+        return_value={"documentoResumido": "2026NE000129"},
+    )
+    @patch("pncp_tracker.empenho_details.consultar_documentos_despesa_favorecido")
+    def test_portal_lookup_uses_supplier_and_year_not_signature_date(
+        self,
+        supplier_documents,
+        get_detail,
+    ):
+        supplier_documents.return_value = [
+            {
+                "documentoResumido": "2026NE000129",
+                "documento": "158460264222026NE000129",
+                "data": "14/05/2026",
+            }
+        ]
+
+        result, errors = enriquecer_empenhos_com_detalhes_portal(
+            [
+                {
+                    "numeroContratoEmpenho": "2026NE000129",
+                    "dataAssinatura": "2026-01-13",
+                    "unidadeOrgao": {"codigoUnidade": "158460"},
+                    "niFornecedor": "36.091.140/0001-60",
+                }
+            ]
+        )
+
+        self.assertEqual(errors, [])
+        self.assertEqual(result[0]["detalhesPortalTransparencia"]["status"], "ok")
+        supplier_documents.assert_called_once_with(
+            "36091140000160",
+            "2026",
+            "158460",
+            fase=1,
+        )
+        get_detail.assert_called_once_with("158460264222026NE000129")
 
     def test_report_sums_committed_value_and_estimates_quantity(self):
         report = _preparar_relatorio(
