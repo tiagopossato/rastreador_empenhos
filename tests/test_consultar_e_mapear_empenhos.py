@@ -301,6 +301,43 @@ class ConsultarEMapearEmpenhosTests(unittest.TestCase):
             "IF CATARINENSE - CAMPUS CAMBORIU",
         )
 
+    def test_report_uses_zero_empenhada_quantity_when_no_empenhos_are_mapped(self):
+        report = _preparar_relatorio(
+            {
+                "status": "ok",
+                "quantidade_empenhos": 0,
+                "chaves_integracao": {},
+                "itens_mapeados": [
+                    {
+                        "numero_item": 1,
+                        "quantidade_homologada": 15,
+                        "valor_total_homologado": 150,
+                        "resultados": [],
+                        "empenhos": [],
+                    },
+                    {
+                        "numero_item": 2,
+                        "quantidade_homologada": 8,
+                        "valor_total_homologado": 80,
+                        "resultados": [],
+                        "empenhos": [
+                            {
+                                "numero_empenho": "2026NE000001",
+                                "item_despesa": {"valorAtual": "20,00"},
+                            }
+                        ],
+                    },
+                ],
+                "empenhos": [],
+            }
+        )
+
+        self.assertEqual(
+            report["itens"][0]["quantidade_empenhada_estimada"],
+            0,
+        )
+        self.assertIsNone(report["itens"][1]["quantidade_empenhada_estimada"])
+
     @patch("pncp_tracker.consultar_e_mapear_empenhos.mapear_empenhos_por_item", return_value=[])
     @patch("pncp_tracker.consultar_e_mapear_empenhos.enriquecer_empenhos_com_detalhes_portal", return_value=([], []))
     @patch("pncp_tracker.consultar_e_mapear_empenhos.consultar_contratos_empenhos", return_value=[])

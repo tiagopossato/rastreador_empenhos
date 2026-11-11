@@ -94,7 +94,7 @@ Na seção **Itens da contratação**, a tabela apresenta quantidades licitadas,
 saldo = quantidade homologada - quantidade empenhada estimada
 ```
 
-Se uma dessas quantidades estiver indisponível, o saldo aparece como `—`. As quantidades são exibidas na unidade do item e não são somadas entre unidades diferentes.
+Quando não há empenhos vinculados ao item, a quantidade empenhada é zero e o saldo corresponde à quantidade homologada. Se houver empenho, mas não for possível estimar sua quantidade, o saldo aparece como `—`. As quantidades são exibidas na unidade do item e não são somadas entre unidades diferentes.
 
 As linhas podem ser expandidas para consultar resultados homologados e empenhos vinculados. Em telas largas, os empenhos ocupam aproximadamente 70% da área de detalhes e os resultados homologados, 30%; em telas menores, as seções ficam empilhadas. Registros que não puderam ser vinculados a um item aparecem na seção **Registros sem vínculo confirmado a item**.
 

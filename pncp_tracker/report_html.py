@@ -105,6 +105,13 @@ def _preparar_relatorio(dados: Dict[str, Any]) -> Dict[str, Any]:
         soma_homologada += valor_homologado
         soma_empenhada += total_empenhado_item
 
+        if possui_quantidade_empenhada:
+            quantidade_empenhada_estimada = quantidade_empenhada_item
+        elif not linhas_empenho:
+            quantidade_empenhada_estimada = 0
+        else:
+            quantidade_empenhada_estimada = None
+
         itens.append(
             {
                 "numero": item.get("numero_item"),
@@ -112,9 +119,7 @@ def _preparar_relatorio(dados: Dict[str, Any]) -> Dict[str, Any]:
                 "unidade": unidade,
                 "quantidade_licitada": quantidade_licitada,
                 "quantidade_homologada": quantidade_homologada,
-                "quantidade_empenhada_estimada": (
-                    quantidade_empenhada_item if possui_quantidade_empenhada else None
-                ),
+                "quantidade_empenhada_estimada": quantidade_empenhada_estimada,
                 "valor_unitario_estimado": _numero(item.get("valor_unitario_estimado")),
                 "valor_total_estimado": valor_estimado,
                 "valor_unitario_homologado": _numero(item.get("valor_unitario_homologado")),
