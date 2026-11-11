@@ -1,151 +1,115 @@
-
 # Rastreador de Empenhos por Item — Compras Públicas Federais (PNCP)
 
-Script em Python para automatizar o levantamento de dados de licitações federais a partir de uma URL pública do **Portal Nacional de Contratações Públicas (PNCP)** e rastrear os empenhos emitidos para cada item homologado.
+Aplicação Python de linha de comando que coleta dados de uma compra no Portal Nacional de Contratações Públicas (PNCP), relaciona empenhos aos itens homologados e gera um relatório HTML autônomo.
 
----
+## Como funciona
 
-## 📋 Visão Geral da Arquitetura
+1. **Coleta da compra:** consulta no PNCP os dados do edital, seus itens e resultados homologados.
+2. **Consulta de empenhos:** busca contratos/empenhos publicados para a compra no PNCP e complementa os documentos com detalhes e itens da despesa no Portal da Transparência.
+3. **Mapeamento e relatório:** relaciona as linhas de empenho aos itens por número do item e fornecedor homologado e gera o relatório HTML.
 
-Como o ecossistema de dados abertos do Governo Federal separa o catálogo da licitação da execução orçamentária, o projeto é dividido em duas etapas:
+O PNCP fornece valores de empenho, mas não necessariamente a quantidade física empenhada. Quando há preço unitário homologado, a quantidade empenhada é estimada dividindo o valor da linha pelo preço unitário. O relatório identifica essa estimativa e mantém registros sem correspondência confirmada em uma seção separada.
 
-- **Etapa 1 (Concluída):** Extração dos metadados da compra, itens licitados, vencedores e chaves de integração (UASG, número da compra e ano) via **API do PNCP**.
-- **Etapa 2:** Consulta de empenhos e itens nas APIs do **PNCP** e do **Portal da Transparência**.
-
-## 🧩 Estrutura modular do projeto
-
-A coleta foi separada em módulos para facilitar manutenção e evolução:
+## Estrutura do projeto
 
 ```text
 relatorio_compra/
 ├── main.py
 ├── README.md
-├── etapa1_dados_compra.json
-├── etapa2_empenhos.json
-├── relatorio_compra_90026_2025.html
 ├── pncp_tracker/
-│   ├── __init__.py
 │   ├── api_client.py
 │   ├── collector.py
 │   ├── constants.py
+│   ├── contratos_empenhos.py
+│   ├── empenho_details.py
+│   ├── empenho_matcher.py
+│   ├── empenhos.py
+│   ├── etapa2.py
+│   ├── portal_transparencia.py
 │   ├── report_html.py
-│   ├── url_parser.py
-│   └── ...
-└──
+│   └── url_parser.py
+└── tests/
 ```
 
-- `main.py`: ponto de entrada que executa as duas etapas.
-- `pncp_tracker/url_parser.py`: valida e extrai parâmetros da URL do edital.
-- `pncp_tracker/api_client.py`: centraliza as chamadas HTTP ao PNCP.
-- `pncp_tracker/collector.py`: orquestra a coleta dos dados da compra e itens.
-- `pncp_tracker/contratos_empenhos.py`: pagina a mesma API do PNCP usada pela aba Contratos/Empenhos.
-- `pncp_tracker/empenhos.py`: reexporta a lógica de mapeamento de empenhos por item/fornecedor.
-- `pncp_tracker/etapa2.py`: orquestra a busca e o mapeamento dos empenhos da licitação.
-- `pncp_tracker/report_html.py`: gera o relatório HTML autônomo.
+- `main.py`: ponto de entrada; executa as consultas e salva o relatório.
+- `pncp_tracker/url_parser.py`: valida e extrai os parâmetros da URL pública do edital.
+- `pncp_tracker/api_client.py` e `collector.py`: consultam e organizam os dados da compra, itens e resultados no PNCP.
+- `pncp_tracker/contratos_empenhos.py`: consulta os registros da aba Contratos/Empenhos do PNCP.
+- `pncp_tracker/portal_transparencia.py` e `empenho_details.py`: consultam e enriquecem os empenhos com detalhes do Portal da Transparência.
+- `pncp_tracker/empenho_matcher.py` e `empenhos.py`: relacionam empenhos aos itens e fornecedores homologados.
+- `pncp_tracker/etapa2.py`: coordena a consulta, o enriquecimento e o mapeamento dos empenhos.
+- `pncp_tracker/report_html.py`: prepara os dados e gera o relatório HTML.
+- `tests/`: testes automatizados do projeto.
 
----
+## Requisitos e configuração
 
-## ⚙️ Pré-requisitos
+- Python 3.8 ou superior.
+- Dependência Python `requests`.
+- Chave da API do Portal da Transparência para consultar o detalhamento dos documentos de despesa.
 
-- **Python 3.8** ou superior
-- Biblioteca `requests`
-
-### Instalação
-
-Clone o repositório e instale a dependência necessária:
+Instale a dependência:
 
 ```bash
-git clone <url-do-seu-repositorio>
-cd <nome-da-pasta>
-pip install requests
+python -m pip install requests
 ```
 
----
+Configure a chave em um arquivo `.env` na raiz do projeto:
 
-## 🚀 Como Executar
+```dotenv
+PORTAL_DADOS_API_KEY=sua_chave
+```
 
-1. Configure a chave da API do Portal da Transparência no `.env`.
-2. Execute o script informando a URL do edital como argumento:
+Também são aceitas as variáveis `PORTAL_DADOS_API_KEY` e `PORTALTRANSPARENCIA_API_KEY` definidas no ambiente do sistema. Valores do ambiente não são sobrescritos pelo `.env`; a aplicação consulta primeiro `PORTAL_DADOS_API_KEY` e, se estiver ausente ou vazio, `PORTALTRANSPARENCIA_API_KEY`. Não compartilhe nem versione sua chave.
+
+## Executar
+
+Passe a URL pública do edital como argumento:
 
 ```bash
 python main.py "https://pncp.gov.br/app/editais/10635424000186/2025/187"
 ```
 
-Se executar apenas `python main.py`, o programa solicitará o link no terminal. Se nenhum link for digitado, ou se o formato for inválido, a execução será encerrada sem iniciar as consultas.
+Se a URL for omitida, o programa a solicitará no terminal. Uma URL vazia ou fora do formato `/editais/{cnpj}/{ano}/{sequencial}` é rejeitada antes das consultas.
 
-Por padrão, depois que o HTML é gerado com sucesso, os arquivos intermediários `etapa1_dados_compra.json` e `etapa2_empenhos.json` são removidos. Use `--manter-json` (ou `--manterJSON`) para preservá-los:
+Por padrão, depois que o relatório é gerado com sucesso, os arquivos intermediários `etapa1_dados_compra.json` e `etapa2_empenhos.json` são removidos. Para mantê-los:
 
 ```bash
 python main.py "https://pncp.gov.br/app/editais/10635424000186/2025/187" --manter-json
 ```
 
-Se a API de Contratos/Empenhos do PNCP responder HTTP 404 com a mensagem “Não há contrato publicado no PNCP para esta contratação”, o programa interpreta a resposta como uma compra sem registros de contratos/empenhos e continua a geração do relatório. Outros erros HTTP continuam sendo reportados.
+O alias `--manterJSON` também é aceito. Se a API de Contratos/Empenhos do PNCP retornar HTTP 404 indicando que não há contratos publicados para a compra, a execução continua e gera o relatório sem esses registros. Outros erros HTTP são reportados.
 
-Uma única execução coleta os dados do edital, consulta os empenhos e gera um relatório com o nome `relatorio_compra_{numero_compra}_{ano}.html` (por exemplo, `relatorio_compra_90026_2025.html`). Assim, relatórios de editais diferentes ficam preservados; ao executar novamente o mesmo edital, o arquivo correspondente é atualizado. Os JSONs são arquivos intermediários opcionais: são preservados somente se `--manter-json` for informado. Os dados da etapa 1 são reutilizados na etapa 2. O HTML é um arquivo único, sem dependências externas; pode ser aberto localmente, filtrado por item/descrição/empenho e impresso ou salvo como PDF.
+## Relatório HTML
 
-No topo do relatório, os cards de contagem seguem a mesma ordem dos filtros: todos os itens, homologados (empenhados + não empenhados), empenhados (execução acima de 0%), não empenhados (execução igual a 0%, excluindo desertos) e desertos (valor homologado R$ 0,00). Os cards financeiros aparecem em seguida. Os filtros podem ser combinados com a busca textual.
+O arquivo gerado é autônomo, não depende de bibliotecas ou arquivos externos e pode ser aberto localmente, impresso ou salvo como PDF. O cabeçalho inclui um link para o edital no PNCP.
 
-O botão “Baixar CSV completo” exporta todos os itens, independentemente dos filtros ativos. Para itens com execução acima de 0%, gera uma linha para cada item de empenho, incluindo número, código e nome da Unidade Gestora emissora, data, fornecedor, valor, quantidade estimada e descrição do item no documento; para itens desertos ou sem empenho, gera uma linha por item. O arquivo inclui as colunas da tabela consolidada e os dados adicionais dos empenhos, usa ponto e vírgula como separador e é codificado em UTF-8 com BOM para compatibilidade com planilhas. A Unidade Gestora também é exibida nos detalhes expansíveis do empenho.
+Na seção **Itens da contratação**, a tabela apresenta quantidades licitadas, homologadas e empenhadas estimadas, além do saldo do item. O saldo é calculado como:
 
-O relatório mostra valores estimados e homologados, quantidade licitada/homologada, valor empenhado por item e empenhos detalhados. A quantidade empenhada não é informada pela API; é estimada pelo valor da linha dividido pelo preço unitário homologado, com essa ressalva indicada na página.
-
-Para evitar depender da data de assinatura/publicação do PNCP (que pode divergir bastante da emissão, inclusive em reforços), a busca dos documentos usa o endpoint do Portal da Transparência filtrado pelo CNPJ do fornecedor, ano do empenho e unidade gestora. A data de assinatura não participa da busca; se faltar CNPJ ou o ano não puder ser extraído do número do empenho, o registro fica explicitamente como não consultado.
-
-Todas as tabelas do relatório podem ser ordenadas clicando no cabeçalho; também é possível focar um cabeçalho com Tab e alternar a ordenação com Enter ou Espaço. Um segundo clique no mesmo campo inverte a ordem. Valores numéricos, monetários e datas são ordenados pelos seus valores, e campos vazios permanecem no final. Ao ordenar os itens, cada linha de detalhes acompanha o item correspondente.
-
----
-
-## 📦 Saída Gerada
-
-Ao finalizar a execução, o script exibirá no console as chaves de integração extraídas e salvará o arquivo **`etapa1_dados_compra.json`** na raiz do projeto com a seguinte estrutura:
-
-```json
-{
-  "chaves_integracao": {
-    "cnpj_orgao": "00394460000141",
-    "uasg_codigo": "170010",
-    "uasg_nome": "SECRETARIA ESPECIAL DA RECEITA FEDERAL DO BRASIL",
-    "numero_compra": "90001",
-    "ano_compra": 2024,
-    "modalidade_id": 6,
-    "modalidade_nome": "Pregão - Eletrônico",
-    "processo": "12345.000123/2024-00",
-    "numero_controle_pncp": "00394460000141-1-000001/2024"
-  },
-  "objeto": "Descrição resumida do objeto da licitação...",
-  "valor_total_estimado": 150000.00,
-  "valor_total_homologado": 142500.00,
-  "quantidade_itens": 10,
-  "itens": [
-    {
-      "numeroItem": 1,
-      "descricao": "Descrição detalhada do item...",
-      "quantidade": 50,
-      "valorUnitarioEstimado": 100.00,
-      "resultadosHomologados": [
-        {
-          "niFornecedor": "12345678000199",
-          "nomeRazaoSocialFornecedor": "EMPRESA VENCEDORA LTDA",
-          "valorUnitarioHomologado": 95.00,
-          "valorTotalHomologado": 4750.00
-        }
-      ]
-    }
-  ]
-}
+```text
+saldo = quantidade homologada - quantidade empenhada estimada
 ```
 
----
+Se uma dessas quantidades estiver indisponível, o saldo aparece como `—`. As quantidades são exibidas na unidade do item e não são somadas entre unidades diferentes.
 
-## 🔗 Fontes de Dados Utilizadas
+As linhas podem ser expandidas para consultar resultados homologados e empenhos vinculados. Em telas largas, os empenhos ocupam aproximadamente 70% da área de detalhes e os resultados homologados, 30%; em telas menores, as seções ficam empilhadas. Registros que não puderam ser vinculados a um item aparecem na seção **Registros sem vínculo confirmado a item**.
 
-- [Portal Nacional de Contratações Públicas (PNCP) - API de Consulta](https://pncp.gov.br)
-- [Portal da Transparência - API de Dados](https://portaldatransparencia.gov.br) *(integração opcional; requer chave)*
-- [Dados Abertos Compras.gov.br](https://compras.gov.br) *(previsto para Etapa 2)*
+Os filtros de situação podem ser combinados com a busca textual. Os cards apresentam as contagens de itens — total, homologados, empenhados, não empenhados e desertos — seguidas dos valores financeiros. As tabelas podem ser ordenadas clicando nos cabeçalhos; também é possível focar um cabeçalho com Tab e alternar a ordenação com Enter ou Espaço. Ao ordenar os itens, suas linhas de detalhes acompanham cada item.
 
----
+O botão **Baixar CSV completo** exporta todos os itens, independentemente dos filtros ativos. O arquivo inclui as colunas da tabela, inclusive o saldo, e os dados adicionais das linhas de empenho. Itens com empenhos vinculados geram uma linha por empenho; itens sem empenho vinculado geram uma linha. O CSV usa ponto e vírgula como separador e codificação UTF-8 com BOM para compatibilidade com planilhas.
 
-## ⚠️ Limitações Conhecidas
+## Arquivos gerados e testes
 
-- O script atual atende exclusivamente compras **federais** vinculadas ao SIASG/Compras.gov.br.
-- Links do PNCP devem seguir o padrão público `/editais/{cnpj}/{ano}/{sequencial}`.
+O relatório é salvo na raiz do projeto como `relatorio_compra_{numero_compra}_{ano}.html`, por exemplo, `relatorio_compra_90026_2025.html`. Relatórios de compras diferentes são preservados; uma nova execução da mesma compra atualiza o arquivo correspondente.
+
+Para executar os testes:
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+## Fontes e limitações
+
+- [Portal Nacional de Contratações Públicas (PNCP)](https://pncp.gov.br) — dados da compra, itens, resultados homologados e registros de contratos/empenhos.
+- [Portal da Transparência](https://portaldatransparencia.gov.br) — detalhes dos documentos e itens das notas de empenho; requer chave de API.
+
+O script atende compras federais vinculadas ao SIASG/Compras.gov.br. A busca dos documentos no Portal da Transparência usa o CNPJ do fornecedor, o ano do empenho e a unidade gestora; não depende da data de assinatura/publicação do PNCP. Se faltar algum dado necessário, o registro é identificado como não consultado ou não localizado; falhas da API são reportadas como erros.
