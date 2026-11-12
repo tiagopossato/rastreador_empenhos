@@ -84,17 +84,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "situacaoCompraItemResultadoNome": "Informado",
-          "porteFornecedorNome": "ME",
-          "sequencialResultado": 1,
-          "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062",
           "situacaoCompraItemResultadoId": 1,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
+          "porteFornecedorNome": "ME",
+          "situacaoCompraItemResultadoNome": "Informado",
+          "sequencialResultado": 1,
+          "naturezaJuridicaNome": "Sociedade Empresária Limitada",
+          "localidadeFornecedor": null,
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -258,7 +258,6 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
-          "indicadorSubcontratacao": false,
           "niFornecedor": "94780178000146",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T11:59:47",
@@ -284,19 +283,20 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
+          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
       ]
@@ -486,17 +486,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "naturezaJuridicaId": "2062"
+          "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         }
       ]
     },
@@ -539,14 +539,13 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
-          "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-03T12:03:51",
-          "numeroItem": 9,
           "niFornecedor": "94780178000146",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:03:51",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "AGROFORTE COMERCIAL AGROPECUARIA LTDA",
+          "dataInclusao": "2025-07-03T12:03:51",
+          "numeroItem": 9,
           "valorTotalHomologado": 1800.5,
           "reservaRemanescente": {
             "codigo": 1,
@@ -565,6 +564,7 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
+          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
@@ -689,17 +689,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "situacaoCompraItemResultadoNome": "Informado",
-          "porteFornecedorNome": "ME",
-          "sequencialResultado": 1,
-          "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062",
           "situacaoCompraItemResultadoId": 1,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
+          "porteFornecedorNome": "ME",
+          "situacaoCompraItemResultadoNome": "Informado",
+          "sequencialResultado": 1,
+          "naturezaJuridicaNome": "Sociedade Empresária Limitada",
+          "localidadeFornecedor": null,
+          "naturezaJuridicaId": "2062"
         },
         {
           "indicadorSubcontratacao": false,
@@ -731,17 +731,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-31",
           "motivoCancelamento": null,
-          "situacaoCompraItemResultadoNome": "Informado",
-          "porteFornecedorNome": "ME",
-          "sequencialResultado": 2,
-          "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062",
           "situacaoCompraItemResultadoId": 1,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
+          "porteFornecedorNome": "ME",
+          "situacaoCompraItemResultadoNome": "Informado",
+          "sequencialResultado": 2,
+          "naturezaJuridicaNome": "Sociedade Empresária Limitada",
+          "localidadeFornecedor": null,
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -784,7 +784,6 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
-          "indicadorSubcontratacao": false,
           "niFornecedor": "26290918000106",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:03:22",
@@ -810,19 +809,20 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
+          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
       ]
@@ -866,14 +866,13 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
-          "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-03T12:03:27",
-          "numeroItem": 13,
           "niFornecedor": "59890062000169",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:03:27",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "DISPRO DISTRIBUIDORA LTDA",
+          "dataInclusao": "2025-07-03T12:03:27",
+          "numeroItem": 13,
           "valorTotalHomologado": 30657.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -892,6 +891,7 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
+          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
@@ -977,17 +977,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "naturezaJuridicaId": "2062"
+          "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         }
       ]
     },
@@ -1059,17 +1059,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": "Rever ato administrativo.",
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "situacaoCompraItemResultadoId": 2,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Cancelado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "naturezaJuridicaId": "2062"
+          "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062",
+          "situacaoCompraItemResultadoId": 2,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         },
         {
           "indicadorSubcontratacao": false,
@@ -1101,17 +1101,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-31",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 2,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "naturezaJuridicaId": "2062"
+          "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         }
       ]
     },
@@ -1183,17 +1183,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "naturezaJuridicaId": "2062",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         }
       ]
     },
@@ -1237,13 +1237,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-03T12:04:02",
-          "numeroItem": 17,
           "niFornecedor": "94780178000146",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:04:02",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "AGROFORTE COMERCIAL AGROPECUARIA LTDA",
+          "dataInclusao": "2025-07-03T12:04:02",
+          "numeroItem": 17,
           "valorTotalHomologado": 1972.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -1267,14 +1267,14 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
       ]
@@ -1429,17 +1429,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "situacaoCompraItemResultadoNome": "Informado",
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
+          "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
+          "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062",
-          "situacaoCompraItemResultadoId": 1,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -1511,17 +1511,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "naturezaJuridicaId": "2062"
+          "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         }
       ]
     },
@@ -1768,13 +1768,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-03T12:04:43",
-          "numeroItem": 24,
           "niFornecedor": "94780178000146",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:04:43",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "AGROFORTE COMERCIAL AGROPECUARIA LTDA",
+          "dataInclusao": "2025-07-03T12:04:43",
+          "numeroItem": 24,
           "valorTotalHomologado": 1240.2,
           "reservaRemanescente": {
             "codigo": 1,
@@ -1798,14 +1798,14 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
       ]
@@ -1888,7 +1888,6 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
-          "indicadorSubcontratacao": false,
           "niFornecedor": "24517082000104",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:05:20",
@@ -1914,19 +1913,20 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
+          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
       ]
@@ -2081,17 +2081,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "naturezaJuridicaId": "2062"
+          "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         }
       ]
     },
@@ -2174,13 +2174,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-03T12:06:09",
-          "numeroItem": 30,
           "niFornecedor": "94780178000146",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:06:09",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "AGROFORTE COMERCIAL AGROPECUARIA LTDA",
+          "dataInclusao": "2025-07-03T12:06:09",
+          "numeroItem": 30,
           "valorTotalHomologado": 641.08,
           "reservaRemanescente": {
             "codigo": 1,
@@ -2204,14 +2204,14 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
       ]
@@ -2256,13 +2256,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-03T12:05:06",
-          "numeroItem": 31,
           "niFornecedor": "94780178000146",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:05:06",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "AGROFORTE COMERCIAL AGROPECUARIA LTDA",
+          "dataInclusao": "2025-07-03T12:05:06",
+          "numeroItem": 31,
           "valorTotalHomologado": 423.5,
           "reservaRemanescente": {
             "codigo": 1,
@@ -2286,14 +2286,14 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
       ]
@@ -2337,6 +2337,7 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
+          "indicadorSubcontratacao": false,
           "niFornecedor": "94780178000146",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:05:34",
@@ -2362,20 +2363,19 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
-          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
       ]
@@ -2419,13 +2419,14 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
+          "indicadorSubcontratacao": false,
+          "dataInclusao": "2025-07-03T12:06:27",
+          "numeroItem": 33,
           "niFornecedor": "94780178000146",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:06:27",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "AGROFORTE COMERCIAL AGROPECUARIA LTDA",
-          "dataInclusao": "2025-07-03T12:06:27",
-          "numeroItem": 33,
           "valorTotalHomologado": 2679.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -2444,7 +2445,6 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
-          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
@@ -2530,17 +2530,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "situacaoCompraItemResultadoNome": "Informado",
-          "porteFornecedorNome": "ME",
-          "sequencialResultado": 1,
-          "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062",
           "situacaoCompraItemResultadoId": 1,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
+          "porteFornecedorNome": "ME",
+          "situacaoCompraItemResultadoNome": "Informado",
+          "sequencialResultado": 1,
+          "naturezaJuridicaNome": "Sociedade Empresária Limitada",
+          "localidadeFornecedor": null,
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -2666,13 +2666,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
+          "dataInclusao": "2025-07-03T12:05:41",
+          "numeroItem": 36,
           "niFornecedor": "27176482000191",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:05:41",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "DOUGLAS CORDEIRO LTDA",
-          "dataInclusao": "2025-07-03T12:05:41",
-          "numeroItem": 36,
           "valorTotalHomologado": 3190.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -2696,13 +2696,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -2872,13 +2872,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-03T12:05:34",
-          "numeroItem": 38,
           "niFornecedor": "24517082000104",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:05:34",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "AGRO COMERCIAL AGROMANIA LTDA",
+          "dataInclusao": "2025-07-03T12:05:34",
+          "numeroItem": 38,
           "valorTotalHomologado": 4675.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -2902,13 +2902,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -2954,13 +2954,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-03T12:05:06",
-          "numeroItem": 39,
           "niFornecedor": "24517082000104",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:05:06",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "AGRO COMERCIAL AGROMANIA LTDA",
+          "dataInclusao": "2025-07-03T12:05:06",
+          "numeroItem": 39,
           "valorTotalHomologado": 2880.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -2982,17 +2982,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "naturezaJuridicaId": "2062",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         }
       ]
     },
@@ -3118,13 +3118,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-03T12:06:36",
-          "numeroItem": 41,
           "niFornecedor": "11163447000106",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:06:36",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "TECA TECNOLOGIA E COMERCIO LTDA",
+          "dataInclusao": "2025-07-03T12:06:36",
+          "numeroItem": 41,
           "valorTotalHomologado": 8964.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -3148,14 +3148,14 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
       ]
@@ -3200,13 +3200,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
+          "dataInclusao": "2025-07-03T12:05:42",
+          "numeroItem": 42,
           "niFornecedor": "85318533000179",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:05:42",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "GERPAGRO DISTRIBUIDORA DE PRODUTOS AGROPECUARIOS LTDA",
-          "dataInclusao": "2025-07-03T12:05:42",
-          "numeroItem": 42,
           "valorTotalHomologado": 25900.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -3230,25 +3230,25 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         },
         {
           "indicadorSubcontratacao": false,
+          "dataInclusao": "2025-07-31T15:30:54",
+          "numeroItem": 42,
           "niFornecedor": "47080085000129",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-31T15:30:54",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "P R A AGRONEGOCIOS LTDA",
-          "dataInclusao": "2025-07-31T15:30:54",
-          "numeroItem": 42,
           "valorTotalHomologado": 42920.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -3272,14 +3272,14 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 2,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
       ]
@@ -3323,7 +3323,6 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
-          "indicadorSubcontratacao": false,
           "niFornecedor": "85318533000179",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:05:50",
@@ -3349,23 +3348,23 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
+          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         },
         {
-          "indicadorSubcontratacao": false,
           "niFornecedor": "94780178000146",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-31T15:29:30",
@@ -3391,19 +3390,20 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
+          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-31",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 2,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
       ]
@@ -3448,13 +3448,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-03T12:06:36",
-          "numeroItem": 44,
           "niFornecedor": "22091627000138",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:06:36",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "AGRIVET DISTRIBUIDORA LTDA",
+          "dataInclusao": "2025-07-03T12:06:36",
+          "numeroItem": 44,
           "valorTotalHomologado": 13386.6,
           "reservaRemanescente": {
             "codigo": 1,
@@ -3476,17 +3476,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "naturezaJuridicaId": "2062",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         }
       ]
     },
@@ -3640,17 +3640,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "naturezaJuridicaId": "2062"
+          "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         }
       ]
     },
@@ -3732,6 +3732,7 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
+          "indicadorSubcontratacao": false,
           "niFornecedor": "59890062000169",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:07:27",
@@ -3757,20 +3758,19 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
-          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
       ]
@@ -3924,13 +3924,13 @@
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
       ]
@@ -3975,13 +3975,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-03T12:09:28",
-          "numeroItem": 52,
           "niFornecedor": "94780178000146",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:09:28",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "AGROFORTE COMERCIAL AGROPECUARIA LTDA",
+          "dataInclusao": "2025-07-03T12:09:28",
+          "numeroItem": 52,
           "valorTotalHomologado": 2896.74,
           "reservaRemanescente": {
             "codigo": 1,
@@ -4005,13 +4005,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -4057,13 +4057,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
+          "dataInclusao": "2025-07-03T12:09:02",
+          "numeroItem": 53,
           "niFornecedor": "85318533000179",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:09:02",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "GERPAGRO DISTRIBUIDORA DE PRODUTOS AGROPECUARIOS LTDA",
-          "dataInclusao": "2025-07-03T12:09:02",
-          "numeroItem": 53,
           "valorTotalHomologado": 875.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -4085,17 +4085,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "situacaoCompraItemResultadoNome": "Informado",
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
+          "aplicacaoMargemPreferencia": false,
+          "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
+          "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062",
-          "situacaoCompraItemResultadoId": 1,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -4138,7 +4138,6 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
-          "indicadorSubcontratacao": false,
           "niFornecedor": "85318533000179",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:09:02",
@@ -4164,20 +4163,21 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
+          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "situacaoCompraItemResultadoNome": "Informado",
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
+          "aplicacaoMargemPreferencia": false,
+          "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
+          "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062",
-          "situacaoCompraItemResultadoId": 1,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -4220,6 +4220,7 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
+          "indicadorSubcontratacao": false,
           "niFornecedor": "55890970000100",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:09:15",
@@ -4245,21 +4246,20 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
-          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Empresário (Individual)",
           "localidadeFornecedor": null,
+          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2135"
+          "naturezaJuridicaId": "2135",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         }
       ]
     },
@@ -4303,13 +4303,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
+          "dataInclusao": "2025-07-03T12:08:40",
+          "numeroItem": 56,
           "niFornecedor": "85318533000179",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:08:40",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "GERPAGRO DISTRIBUIDORA DE PRODUTOS AGROPECUARIOS LTDA",
-          "dataInclusao": "2025-07-03T12:08:40",
-          "numeroItem": 56,
           "valorTotalHomologado": 7360.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -4333,25 +4333,25 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         },
         {
           "indicadorSubcontratacao": false,
+          "dataInclusao": "2025-07-31T16:57:26",
+          "numeroItem": 56,
           "niFornecedor": "47080085000129",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-31T16:57:26",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "P R A AGRONEGOCIOS LTDA",
-          "dataInclusao": "2025-07-31T16:57:26",
-          "numeroItem": 56,
           "valorTotalHomologado": 9148.8,
           "reservaRemanescente": {
             "codigo": 1,
@@ -4375,13 +4375,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 2,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -4426,7 +4426,6 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
-          "indicadorSubcontratacao": false,
           "niFornecedor": "85318533000179",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:09:58",
@@ -4452,23 +4451,23 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
+          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "situacaoCompraItemResultadoNome": "Informado",
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
+          "aplicacaoMargemPreferencia": false,
+          "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
+          "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062",
-          "situacaoCompraItemResultadoId": 1,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
+          "naturezaJuridicaId": "2062"
         },
         {
-          "indicadorSubcontratacao": false,
           "niFornecedor": "23273760000178",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-31T16:57:32",
@@ -4494,20 +4493,21 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
+          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-31",
           "motivoCancelamento": null,
-          "situacaoCompraItemResultadoNome": "Informado",
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
+          "aplicacaoMargemPreferencia": false,
+          "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
+          "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 2,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062",
-          "situacaoCompraItemResultadoId": 1,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -4590,13 +4590,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
+          "dataInclusao": "2025-07-03T12:10:38",
+          "numeroItem": 59,
           "niFornecedor": "85318533000179",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:10:38",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "GERPAGRO DISTRIBUIDORA DE PRODUTOS AGROPECUARIOS LTDA",
-          "dataInclusao": "2025-07-03T12:10:38",
-          "numeroItem": 59,
           "valorTotalHomologado": 3990.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -4618,27 +4618,27 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "situacaoCompraItemResultadoNome": "Informado",
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
+          "aplicacaoMargemPreferencia": false,
+          "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
+          "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062",
-          "situacaoCompraItemResultadoId": 1,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
+          "naturezaJuridicaId": "2062"
         },
         {
           "indicadorSubcontratacao": false,
+          "dataInclusao": "2025-07-31T16:55:37",
+          "numeroItem": 59,
           "niFornecedor": "47080085000129",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-31T16:55:37",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "P R A AGRONEGOCIOS LTDA",
-          "dataInclusao": "2025-07-31T16:55:37",
-          "numeroItem": 59,
           "valorTotalHomologado": 4180.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -4660,17 +4660,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-31",
           "motivoCancelamento": null,
-          "situacaoCompraItemResultadoNome": "Informado",
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
+          "aplicacaoMargemPreferencia": false,
+          "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
+          "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 2,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062",
-          "situacaoCompraItemResultadoId": 1,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -4742,17 +4742,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "naturezaJuridicaId": "2062"
+          "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         }
       ]
     },
@@ -4827,13 +4827,13 @@
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Empresário (Individual)",
           "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2135"
         }
       ]
@@ -4878,13 +4878,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-03T12:08:48",
-          "numeroItem": 62,
           "niFornecedor": "22091627000138",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:08:48",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "AGRIVET DISTRIBUIDORA LTDA",
+          "dataInclusao": "2025-07-03T12:08:48",
+          "numeroItem": 62,
           "valorTotalHomologado": 1374.6,
           "reservaRemanescente": {
             "codigo": 1,
@@ -4908,14 +4908,14 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
       ]
@@ -5528,13 +5528,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
+          "dataInclusao": "2025-07-03T12:08:11",
+          "numeroItem": 71,
           "niFornecedor": "24517082000104",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:08:11",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "AGRO COMERCIAL AGROMANIA LTDA",
-          "dataInclusao": "2025-07-03T12:08:11",
-          "numeroItem": 71,
           "valorTotalHomologado": 3058.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -5556,17 +5556,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "situacaoCompraItemResultadoNome": "Informado",
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
+          "aplicacaoMargemPreferencia": false,
+          "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
+          "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062",
-          "situacaoCompraItemResultadoId": 1,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -5609,6 +5609,7 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
+          "indicadorSubcontratacao": false,
           "niFornecedor": "43338044000139",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-31T17:10:12",
@@ -5634,21 +5635,20 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
-          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-31",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "naturezaJuridicaId": "2062",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         }
       ]
     },
@@ -5691,14 +5691,13 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
-          "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-31T17:11:25",
-          "numeroItem": 73,
           "niFornecedor": "43338044000139",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-31T17:11:25",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "JE SUBSTRATOS E FERTILIZANTES LTDA",
+          "dataInclusao": "2025-07-31T17:11:25",
+          "numeroItem": 73,
           "valorTotalHomologado": 850.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -5717,6 +5716,7 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
+          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-31",
           "motivoCancelamento": null,
@@ -5773,14 +5773,13 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
-          "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-31T17:10:32",
-          "numeroItem": 74,
           "niFornecedor": "43338044000139",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-31T17:10:32",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "JE SUBSTRATOS E FERTILIZANTES LTDA",
+          "dataInclusao": "2025-07-31T17:10:32",
+          "numeroItem": 74,
           "valorTotalHomologado": 800.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -5799,6 +5798,7 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
+          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-31",
           "motivoCancelamento": null,
@@ -5855,13 +5855,14 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
+          "indicadorSubcontratacao": false,
+          "dataInclusao": "2025-07-31T17:10:51",
+          "numeroItem": 75,
           "niFornecedor": "43338044000139",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-31T17:10:51",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "JE SUBSTRATOS E FERTILIZANTES LTDA",
-          "dataInclusao": "2025-07-31T17:10:51",
-          "numeroItem": 75,
           "valorTotalHomologado": 544.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -5880,7 +5881,6 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
-          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-31",
           "motivoCancelamento": null,
@@ -5937,7 +5937,6 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
-          "indicadorSubcontratacao": false,
           "niFornecedor": "43338044000139",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-31T17:12:26",
@@ -5963,19 +5962,20 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
+          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-31",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
       ]
@@ -6019,6 +6019,7 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
+          "indicadorSubcontratacao": false,
           "niFornecedor": "43338044000139",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-31T17:10:46",
@@ -6044,21 +6045,20 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
-          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-31",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "naturezaJuridicaId": "2062",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         }
       ]
     },
@@ -6140,6 +6140,7 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
+          "indicadorSubcontratacao": false,
           "niFornecedor": "35236131000157",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:10:38",
@@ -6165,21 +6166,20 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
-          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "naturezaJuridicaId": "2062",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         }
       ]
     },
@@ -6222,6 +6222,7 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
+          "indicadorSubcontratacao": false,
           "niFornecedor": "26290918000106",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-31T17:12:03",
@@ -6247,21 +6248,20 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
-          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-31",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "naturezaJuridicaId": "2062",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         }
       ]
     },
@@ -6305,13 +6305,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-03T12:11:48",
-          "numeroItem": 81,
           "niFornecedor": "47080085000129",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:11:48",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "P R A AGRONEGOCIOS LTDA",
+          "dataInclusao": "2025-07-03T12:11:48",
+          "numeroItem": 81,
           "valorTotalHomologado": 19797.8,
           "reservaRemanescente": {
             "codigo": 1,
@@ -6333,17 +6333,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "naturezaJuridicaId": "2062",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         }
       ]
     },
@@ -6386,6 +6386,7 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
+          "indicadorSubcontratacao": false,
           "niFornecedor": "47080085000129",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:12:38",
@@ -6411,21 +6412,20 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
-          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "naturezaJuridicaId": "2062",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         }
       ]
     },
@@ -6469,13 +6469,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-03T12:11:53",
-          "numeroItem": 83,
           "niFornecedor": "85318533000179",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:11:53",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "GERPAGRO DISTRIBUIDORA DE PRODUTOS AGROPECUARIOS LTDA",
+          "dataInclusao": "2025-07-03T12:11:53",
+          "numeroItem": 83,
           "valorTotalHomologado": 16650.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -6499,25 +6499,25 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         },
         {
           "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-31T17:12:28",
-          "numeroItem": 83,
           "niFornecedor": "47080085000129",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-31T17:12:28",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "P R A AGRONEGOCIOS LTDA",
+          "dataInclusao": "2025-07-31T17:12:28",
+          "numeroItem": 83,
           "valorTotalHomologado": 16738.2,
           "reservaRemanescente": {
             "codigo": 1,
@@ -6541,13 +6541,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 2,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -6624,13 +6624,13 @@
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         },
         {
@@ -6666,13 +6666,13 @@
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 2,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
       ]
@@ -6841,13 +6841,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-03T12:12:21",
-          "numeroItem": 86,
           "niFornecedor": "85318533000179",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:12:21",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "GERPAGRO DISTRIBUIDORA DE PRODUTOS AGROPECUARIOS LTDA",
+          "dataInclusao": "2025-07-03T12:12:21",
+          "numeroItem": 86,
           "valorTotalHomologado": 17160.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -6869,27 +6869,27 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "naturezaJuridicaId": "2062",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         },
         {
           "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-31T17:13:25",
-          "numeroItem": 86,
           "niFornecedor": "11163447000106",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-31T17:13:25",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "TECA TECNOLOGIA E COMERCIO LTDA",
+          "dataInclusao": "2025-07-31T17:13:25",
+          "numeroItem": 86,
           "valorTotalHomologado": 18263.7,
           "reservaRemanescente": {
             "codigo": 1,
@@ -6911,17 +6911,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-31",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 2,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "naturezaJuridicaId": "2062",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         }
       ]
     },
@@ -6965,13 +6965,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-03T12:11:57",
-          "numeroItem": 87,
           "niFornecedor": "47080085000129",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:11:57",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "P R A AGRONEGOCIOS LTDA",
+          "dataInclusao": "2025-07-03T12:11:57",
+          "numeroItem": 87,
           "valorTotalHomologado": 908.6,
           "reservaRemanescente": {
             "codigo": 1,
@@ -6995,14 +6995,14 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
       ]
@@ -7046,6 +7046,7 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
+          "indicadorSubcontratacao": false,
           "niFornecedor": "50381955000104",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:12:48",
@@ -7071,21 +7072,20 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
-          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Empresário (Individual)",
           "localidadeFornecedor": null,
+          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2135"
+          "naturezaJuridicaId": "2135",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         }
       ]
     },
@@ -7128,6 +7128,7 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
+          "indicadorSubcontratacao": false,
           "niFornecedor": "50381955000104",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:12:48",
@@ -7153,21 +7154,20 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
-          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Empresário (Individual)",
           "localidadeFornecedor": null,
+          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2135"
+          "naturezaJuridicaId": "2135",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         }
       ]
     },
@@ -7210,6 +7210,7 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
+          "indicadorSubcontratacao": false,
           "niFornecedor": "47080085000129",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:12:06",
@@ -7235,21 +7236,20 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
-          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "naturezaJuridicaId": "2062",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         }
       ]
     },
@@ -7292,6 +7292,7 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
+          "indicadorSubcontratacao": false,
           "niFornecedor": "22091627000138",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:13:35",
@@ -7317,19 +7318,18 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
-          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -7481,17 +7481,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "situacaoCompraItemResultadoNome": "Informado",
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
+          "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
+          "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062",
-          "situacaoCompraItemResultadoId": 1,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -7687,17 +7687,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "naturezaJuridicaId": "2062"
+          "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         },
         {
           "indicadorSubcontratacao": false,
@@ -7729,17 +7729,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-31",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 2,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "naturezaJuridicaId": "2062"
+          "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         }
       ]
     },
@@ -7782,6 +7782,7 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
+          "indicadorSubcontratacao": false,
           "niFornecedor": "22091627000138",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:14:46",
@@ -7807,23 +7808,23 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
-          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         },
         {
+          "indicadorSubcontratacao": false,
           "niFornecedor": "43338044000139",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-31T17:11:57",
@@ -7849,19 +7850,18 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
-          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-31",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 2,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -7906,6 +7906,7 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
+          "indicadorSubcontratacao": false,
           "niFornecedor": "22091627000138",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:14:33",
@@ -7931,23 +7932,23 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
-          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         },
         {
+          "indicadorSubcontratacao": false,
           "niFornecedor": "43338044000139",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-31T17:17:37",
@@ -7973,20 +7974,19 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
-          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-31",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 2,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
       ]
@@ -8030,6 +8030,7 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
+          "indicadorSubcontratacao": false,
           "niFornecedor": "01424128000145",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:12:30",
@@ -8055,23 +8056,23 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
-          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Empresário (Individual)",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2135"
         },
         {
+          "indicadorSubcontratacao": false,
           "niFornecedor": "43338044000139",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-31T17:16:09",
@@ -8097,19 +8098,18 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
-          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-31",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 2,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -8155,13 +8155,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-03T12:13:40",
-          "numeroItem": 100,
           "niFornecedor": "22091627000138",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:13:40",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "AGRIVET DISTRIBUIDORA LTDA",
+          "dataInclusao": "2025-07-03T12:13:40",
+          "numeroItem": 100,
           "valorTotalHomologado": 916.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -8185,14 +8185,14 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
       ]
@@ -8236,14 +8236,13 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
-          "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-03T12:12:48",
-          "numeroItem": 101,
           "niFornecedor": "55890970000100",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:12:48",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "KARLA DE SOUZA E SILVA",
+          "dataInclusao": "2025-07-03T12:12:48",
+          "numeroItem": 101,
           "valorTotalHomologado": 1068.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -8262,6 +8261,7 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
+          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
@@ -8278,14 +8278,13 @@
           "naturezaJuridicaId": "2135"
         },
         {
-          "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-31T17:17:39",
-          "numeroItem": 101,
           "niFornecedor": "43338044000139",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-31T17:17:39",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "JE SUBSTRATOS E FERTILIZANTES LTDA",
+          "dataInclusao": "2025-07-31T17:17:39",
+          "numeroItem": 101,
           "valorTotalHomologado": 1068.8,
           "reservaRemanescente": {
             "codigo": 1,
@@ -8304,6 +8303,7 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
+          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-31",
           "motivoCancelamento": null,
@@ -8360,6 +8360,7 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
+          "indicadorSubcontratacao": false,
           "niFornecedor": "55890970000100",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:17:09",
@@ -8385,23 +8386,23 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
-          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Empresário (Individual)",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2135"
         },
         {
+          "indicadorSubcontratacao": false,
           "niFornecedor": "43338044000139",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-31T17:14:50",
@@ -8427,19 +8428,18 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
-          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-31",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 2,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -8609,13 +8609,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-03T12:15:26",
-          "numeroItem": 104,
           "niFornecedor": "22091627000138",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:15:26",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "AGRIVET DISTRIBUIDORA LTDA",
+          "dataInclusao": "2025-07-03T12:15:26",
+          "numeroItem": 104,
           "valorTotalHomologado": 2478.6,
           "reservaRemanescente": {
             "codigo": 1,
@@ -8637,17 +8637,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "naturezaJuridicaId": "2062",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         }
       ]
     },
@@ -8691,13 +8691,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
+          "dataInclusao": "2025-07-03T12:16:04",
+          "numeroItem": 105,
           "niFornecedor": "94780178000146",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:16:04",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "AGROFORTE COMERCIAL AGROPECUARIA LTDA",
-          "dataInclusao": "2025-07-03T12:16:04",
-          "numeroItem": 105,
           "valorTotalHomologado": 614.6,
           "reservaRemanescente": {
             "codigo": 1,
@@ -8719,27 +8719,27 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "situacaoCompraItemResultadoNome": "Informado",
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
+          "aplicacaoMargemPreferencia": false,
+          "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
+          "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062",
-          "situacaoCompraItemResultadoId": 1,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
+          "naturezaJuridicaId": "2062"
         },
         {
           "indicadorSubcontratacao": false,
+          "dataInclusao": "2025-07-31T17:18:53",
+          "numeroItem": 105,
           "niFornecedor": "43338044000139",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-31T17:18:53",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "JE SUBSTRATOS E FERTILIZANTES LTDA",
-          "dataInclusao": "2025-07-31T17:18:53",
-          "numeroItem": 105,
           "valorTotalHomologado": 602.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -8761,17 +8761,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-31",
           "motivoCancelamento": null,
-          "situacaoCompraItemResultadoNome": "Informado",
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
+          "aplicacaoMargemPreferencia": false,
+          "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
+          "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 2,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062",
-          "situacaoCompraItemResultadoId": 1,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -8846,13 +8846,13 @@
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         },
         {
@@ -8888,13 +8888,13 @@
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 2,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
       ]
@@ -8938,6 +8938,7 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
+          "indicadorSubcontratacao": false,
           "niFornecedor": "55890970000100",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:16:39",
@@ -8963,23 +8964,23 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
-          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Empresário (Individual)",
           "localidadeFornecedor": null,
+          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2135"
+          "naturezaJuridicaId": "2135",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         },
         {
+          "indicadorSubcontratacao": false,
           "niFornecedor": "43338044000139",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-31T17:18:57",
@@ -9005,21 +9006,20 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
-          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-31",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 2,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "naturezaJuridicaId": "2062",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         }
       ]
     },
@@ -9063,13 +9063,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-03T12:16:26",
-          "numeroItem": 108,
           "niFornecedor": "94780178000146",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:16:26",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "AGROFORTE COMERCIAL AGROPECUARIA LTDA",
+          "dataInclusao": "2025-07-03T12:16:26",
+          "numeroItem": 108,
           "valorTotalHomologado": 823.5,
           "reservaRemanescente": {
             "codigo": 1,
@@ -9091,27 +9091,27 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "naturezaJuridicaId": "2062",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         },
         {
           "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-31T17:19:20",
-          "numeroItem": 108,
           "niFornecedor": "43338044000139",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-31T17:19:20",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "JE SUBSTRATOS E FERTILIZANTES LTDA",
+          "dataInclusao": "2025-07-31T17:19:20",
+          "numeroItem": 108,
           "valorTotalHomologado": 750.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -9133,17 +9133,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-31",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 2,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "naturezaJuridicaId": "2062",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         }
       ]
     },
@@ -9342,13 +9342,13 @@
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Empresário (Individual)",
           "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2135"
         },
         {
@@ -9384,13 +9384,13 @@
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 2,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
       ]
@@ -9474,13 +9474,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
+          "dataInclusao": "2025-07-03T12:18:23",
+          "numeroItem": 112,
           "niFornecedor": "22091627000138",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:18:23",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "AGRIVET DISTRIBUIDORA LTDA",
-          "dataInclusao": "2025-07-03T12:18:23",
-          "numeroItem": 112,
           "valorTotalHomologado": 850.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -9504,13 +9504,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -9556,13 +9556,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
+          "dataInclusao": "2025-07-03T12:17:43",
+          "numeroItem": 113,
           "niFornecedor": "94780178000146",
           "dataCancelamento": "2025-07-08T00:00:00",
           "dataAtualizacao": "2025-07-08T10:02:46",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "AGROFORTE COMERCIAL AGROPECUARIA LTDA",
-          "dataInclusao": "2025-07-03T12:17:43",
-          "numeroItem": 113,
           "valorTotalHomologado": 915.3,
           "reservaRemanescente": {
             "codigo": 1,
@@ -9584,27 +9584,27 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": "Decisão será revista pela pregoeira.",
-          "situacaoCompraItemResultadoNome": "Cancelado",
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
+          "aplicacaoMargemPreferencia": false,
+          "situacaoCompraItemResultadoId": 2,
           "porteFornecedorNome": "ME",
+          "situacaoCompraItemResultadoNome": "Cancelado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062",
-          "situacaoCompraItemResultadoId": 2,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
+          "naturezaJuridicaId": "2062"
         },
         {
           "indicadorSubcontratacao": false,
+          "dataInclusao": "2025-07-31T17:25:20",
+          "numeroItem": 113,
           "niFornecedor": "43338044000139",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-31T17:25:20",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "JE SUBSTRATOS E FERTILIZANTES LTDA",
-          "dataInclusao": "2025-07-31T17:25:20",
-          "numeroItem": 113,
           "valorTotalHomologado": 891.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -9626,17 +9626,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-31",
           "motivoCancelamento": null,
-          "situacaoCompraItemResultadoNome": "Informado",
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
+          "aplicacaoMargemPreferencia": false,
+          "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
+          "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 2,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062",
-          "situacaoCompraItemResultadoId": 1,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -9680,13 +9680,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-03T12:18:10",
-          "numeroItem": 114,
           "niFornecedor": "22091627000138",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:18:10",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "AGRIVET DISTRIBUIDORA LTDA",
+          "dataInclusao": "2025-07-03T12:18:10",
+          "numeroItem": 114,
           "valorTotalHomologado": 1471.75,
           "reservaRemanescente": {
             "codigo": 1,
@@ -9710,13 +9710,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -9761,6 +9761,7 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
+          "indicadorSubcontratacao": false,
           "niFornecedor": "22091627000138",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:16:49",
@@ -9786,20 +9787,19 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
-          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
       ]
@@ -9843,6 +9843,7 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
+          "indicadorSubcontratacao": false,
           "niFornecedor": "94780178000146",
           "dataCancelamento": "2025-07-08T00:00:00",
           "dataAtualizacao": "2025-07-08T10:02:42",
@@ -9868,23 +9869,23 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
-          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": "Decisão será revista pela pregoeira.",
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 2,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Cancelado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         },
         {
+          "indicadorSubcontratacao": false,
           "niFornecedor": "43338044000139",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-31T17:24:27",
@@ -9910,19 +9911,18 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
-          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-31",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 2,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -9968,13 +9968,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-03T12:18:48",
-          "numeroItem": 117,
           "niFornecedor": "94780178000146",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:18:48",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "AGROFORTE COMERCIAL AGROPECUARIA LTDA",
+          "dataInclusao": "2025-07-03T12:18:48",
+          "numeroItem": 117,
           "valorTotalHomologado": 448.2,
           "reservaRemanescente": {
             "codigo": 1,
@@ -9996,27 +9996,27 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "naturezaJuridicaId": "2062",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         },
         {
           "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-31T17:24:34",
-          "numeroItem": 117,
           "niFornecedor": "43338044000139",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-31T17:24:34",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "JE SUBSTRATOS E FERTILIZANTES LTDA",
+          "dataInclusao": "2025-07-31T17:24:34",
+          "numeroItem": 117,
           "valorTotalHomologado": 432.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -10038,17 +10038,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-31",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 2,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "naturezaJuridicaId": "2062",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         }
       ]
     },
@@ -10092,13 +10092,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-03T12:18:49",
-          "numeroItem": 118,
           "niFornecedor": "55890970000100",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:18:49",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "KARLA DE SOUZA E SILVA",
+          "dataInclusao": "2025-07-03T12:18:49",
+          "numeroItem": 118,
           "valorTotalHomologado": 294.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -10122,25 +10122,25 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Empresário (Individual)",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2135"
         },
         {
           "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-31T17:20:45",
-          "numeroItem": 118,
           "niFornecedor": "43338044000139",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-31T17:20:45",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "JE SUBSTRATOS E FERTILIZANTES LTDA",
+          "dataInclusao": "2025-07-31T17:20:45",
+          "numeroItem": 118,
           "valorTotalHomologado": 294.36,
           "reservaRemanescente": {
             "codigo": 1,
@@ -10164,13 +10164,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 2,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -10244,17 +10244,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "situacaoCompraItemResultadoNome": "Informado",
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
+          "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
+          "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062",
-          "situacaoCompraItemResultadoId": 1,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
+          "naturezaJuridicaId": "2062"
         },
         {
           "indicadorSubcontratacao": false,
@@ -10286,17 +10286,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-31",
           "motivoCancelamento": null,
-          "situacaoCompraItemResultadoNome": "Informado",
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
+          "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
+          "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 2,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062",
-          "situacaoCompraItemResultadoId": 1,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -10421,6 +10421,7 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
+          "indicadorSubcontratacao": false,
           "niFornecedor": "22091627000138",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:19:10",
@@ -10446,19 +10447,18 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
-          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -10532,17 +10532,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "naturezaJuridicaId": "2062"
+          "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         },
         {
           "indicadorSubcontratacao": false,
@@ -10574,17 +10574,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-31",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 2,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "naturezaJuridicaId": "2062"
+          "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         }
       ]
     },
@@ -10627,7 +10627,6 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
-          "indicadorSubcontratacao": false,
           "niFornecedor": "50381955000104",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:18:39",
@@ -10653,20 +10652,21 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
+          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "situacaoCompraItemResultadoNome": "Informado",
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
+          "aplicacaoMargemPreferencia": false,
+          "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
+          "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Empresário (Individual)",
           "localidadeFornecedor": null,
-          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2135",
-          "situacaoCompraItemResultadoId": 1,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
+          "naturezaJuridicaId": "2135"
         }
       ]
     },
@@ -10710,13 +10710,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-03T12:21:04",
-          "numeroItem": 124,
           "niFornecedor": "24517082000104",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:21:04",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "AGRO COMERCIAL AGROMANIA LTDA",
+          "dataInclusao": "2025-07-03T12:21:04",
+          "numeroItem": 124,
           "valorTotalHomologado": 3200.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -10738,17 +10738,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "naturezaJuridicaId": "2062",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         }
       ]
     },
@@ -10898,17 +10898,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "situacaoCompraItemResultadoNome": "Informado",
-          "porteFornecedorNome": "ME",
-          "sequencialResultado": 1,
-          "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062",
           "situacaoCompraItemResultadoId": 1,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
+          "porteFornecedorNome": "ME",
+          "situacaoCompraItemResultadoNome": "Informado",
+          "sequencialResultado": 1,
+          "naturezaJuridicaNome": "Sociedade Empresária Limitada",
+          "localidadeFornecedor": null,
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -10952,13 +10952,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-03T12:19:00",
-          "numeroItem": 128,
           "niFornecedor": "24517082000104",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:19:00",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "AGRO COMERCIAL AGROMANIA LTDA",
+          "dataInclusao": "2025-07-03T12:19:00",
+          "numeroItem": 128,
           "valorTotalHomologado": 4300.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -10982,13 +10982,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -11115,14 +11115,13 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
-          "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-03T12:18:24",
-          "numeroItem": 130,
           "niFornecedor": "94780178000146",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:18:24",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "AGROFORTE COMERCIAL AGROPECUARIA LTDA",
+          "dataInclusao": "2025-07-03T12:18:24",
+          "numeroItem": 130,
           "valorTotalHomologado": 8948.7,
           "reservaRemanescente": {
             "codigo": 1,
@@ -11141,6 +11140,7 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
+          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
@@ -11197,14 +11197,13 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
-          "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-03T12:18:24",
-          "numeroItem": 131,
           "niFornecedor": "85318533000179",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:18:24",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "GERPAGRO DISTRIBUIDORA DE PRODUTOS AGROPECUARIOS LTDA",
+          "dataInclusao": "2025-07-03T12:18:24",
+          "numeroItem": 131,
           "valorTotalHomologado": 18540.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -11223,6 +11222,7 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
+          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
@@ -11239,14 +11239,13 @@
           "naturezaJuridicaId": "2062"
         },
         {
-          "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-31T17:35:21",
-          "numeroItem": 131,
           "niFornecedor": "47080085000129",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-31T17:35:21",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "P R A AGRONEGOCIOS LTDA",
+          "dataInclusao": "2025-07-31T17:35:21",
+          "numeroItem": 131,
           "valorTotalHomologado": 19140.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -11265,6 +11264,7 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
+          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-31",
           "motivoCancelamento": null,
@@ -11403,14 +11403,13 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
-          "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-03T12:20:27",
-          "numeroItem": 133,
           "niFornecedor": "85318533000179",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:20:27",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "GERPAGRO DISTRIBUIDORA DE PRODUTOS AGROPECUARIOS LTDA",
+          "dataInclusao": "2025-07-03T12:20:27",
+          "numeroItem": 133,
           "valorTotalHomologado": 2543.7,
           "reservaRemanescente": {
             "codigo": 1,
@@ -11429,6 +11428,7 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
+          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
@@ -11445,14 +11445,13 @@
           "naturezaJuridicaId": "2062"
         },
         {
-          "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-31T17:28:40",
-          "numeroItem": 133,
           "niFornecedor": "35236131000157",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-31T17:28:40",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "GGV COMERCIAL LTDA",
+          "dataInclusao": "2025-07-31T17:28:40",
+          "numeroItem": 133,
           "valorTotalHomologado": 3055.22,
           "reservaRemanescente": {
             "codigo": 1,
@@ -11471,6 +11470,7 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
+          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-31",
           "motivoCancelamento": null,
@@ -11567,13 +11567,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-03T12:20:09",
-          "numeroItem": 135,
           "niFornecedor": "14968227000130",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:20:09",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "FERGAVI COMERCIAL LTDA",
+          "dataInclusao": "2025-07-03T12:20:09",
+          "numeroItem": 135,
           "valorTotalHomologado": 2742.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -11595,17 +11595,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "naturezaJuridicaId": "2062",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         }
       ]
     },
@@ -11798,17 +11798,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-31",
           "motivoCancelamento": null,
-          "situacaoCompraItemResultadoNome": "Informado",
-          "porteFornecedorNome": "ME",
-          "sequencialResultado": 1,
-          "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062",
           "situacaoCompraItemResultadoId": 1,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
+          "porteFornecedorNome": "ME",
+          "situacaoCompraItemResultadoNome": "Informado",
+          "sequencialResultado": 1,
+          "naturezaJuridicaNome": "Sociedade Empresária Limitada",
+          "localidadeFornecedor": null,
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -11883,13 +11883,13 @@
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
       ]
@@ -11973,13 +11973,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
+          "dataInclusao": "2025-07-03T12:19:47",
+          "numeroItem": 141,
           "niFornecedor": "22091627000138",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:19:47",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "AGRIVET DISTRIBUIDORA LTDA",
-          "dataInclusao": "2025-07-03T12:19:47",
-          "numeroItem": 141,
           "valorTotalHomologado": 4784.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -12003,13 +12003,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -12136,6 +12136,7 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
+          "indicadorSubcontratacao": false,
           "niFornecedor": "94780178000146",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:21:52",
@@ -12161,21 +12162,20 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
-          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "naturezaJuridicaId": "2062",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         }
       ]
     },
@@ -12258,13 +12258,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
+          "dataInclusao": "2025-07-03T12:19:51",
+          "numeroItem": 145,
           "niFornecedor": "20983355000155",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:19:51",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "NEW PLASTIC LTDA",
-          "dataInclusao": "2025-07-03T12:19:51",
-          "numeroItem": 145,
           "valorTotalHomologado": 2059.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -12286,17 +12286,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "situacaoCompraItemResultadoNome": "Informado",
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
+          "aplicacaoMargemPreferencia": false,
+          "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
+          "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062",
-          "situacaoCompraItemResultadoId": 1,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -12582,13 +12582,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-03T12:22:25",
-          "numeroItem": 150,
           "niFornecedor": "55890970000100",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:22:25",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "KARLA DE SOUZA E SILVA",
+          "dataInclusao": "2025-07-03T12:22:25",
+          "numeroItem": 150,
           "valorTotalHomologado": 10706.96,
           "reservaRemanescente": {
             "codigo": 1,
@@ -12612,13 +12612,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Empresário (Individual)",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2135"
         }
@@ -12692,17 +12692,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "situacaoCompraItemResultadoNome": "Informado",
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
+          "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
+          "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Empresário (Individual)",
           "localidadeFornecedor": null,
-          "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2135",
-          "situacaoCompraItemResultadoId": 1,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
+          "naturezaJuridicaId": "2135"
         }
       ]
     },
@@ -12774,17 +12774,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "situacaoCompraItemResultadoNome": "Informado",
-          "porteFornecedorNome": "ME",
-          "sequencialResultado": 1,
-          "naturezaJuridicaNome": "Empresário (Individual)",
-          "localidadeFornecedor": null,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2135",
           "situacaoCompraItemResultadoId": 1,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
+          "porteFornecedorNome": "ME",
+          "situacaoCompraItemResultadoNome": "Informado",
+          "sequencialResultado": 1,
+          "naturezaJuridicaNome": "Empresário (Individual)",
+          "localidadeFornecedor": null,
+          "naturezaJuridicaId": "2135"
         }
       ]
     },
@@ -12859,13 +12859,13 @@
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Empresário (Individual)",
           "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2135"
         }
       ]
@@ -12909,14 +12909,13 @@
       "exigenciaConteudoNacional": false,
       "resultadosHomologados": [
         {
-          "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-03T12:20:52",
-          "numeroItem": 154,
           "niFornecedor": "51659136000149",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:20:52",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "SOUL DISTRIBUIDORA DE PRODUTOS E EQUIPAMENTOS INDUSTRIAIS LTDA",
+          "dataInclusao": "2025-07-03T12:20:52",
+          "numeroItem": 154,
           "valorTotalHomologado": 2030.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -12935,6 +12934,7 @@
           "amparoLegalCriterioDesempate": null,
           "paisOrigemProdutoServico": null,
           "localidadeExterior": null,
+          "indicadorSubcontratacao": false,
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
@@ -13020,17 +13020,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "situacaoCompraItemResultadoNome": "Informado",
-          "porteFornecedorNome": "ME",
-          "sequencialResultado": 1,
-          "naturezaJuridicaNome": "Empresário (Individual)",
-          "localidadeFornecedor": null,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2135",
           "situacaoCompraItemResultadoId": 1,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
+          "porteFornecedorNome": "ME",
+          "situacaoCompraItemResultadoNome": "Informado",
+          "sequencialResultado": 1,
+          "naturezaJuridicaNome": "Empresário (Individual)",
+          "localidadeFornecedor": null,
+          "naturezaJuridicaId": "2135"
         }
       ]
     },
@@ -13102,17 +13102,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "situacaoCompraItemResultadoNome": "Informado",
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
+          "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
+          "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062",
-          "situacaoCompraItemResultadoId": 1,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -13156,13 +13156,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-03T12:22:05",
-          "numeroItem": 157,
           "niFornecedor": "22091627000138",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:22:05",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "AGRIVET DISTRIBUIDORA LTDA",
+          "dataInclusao": "2025-07-03T12:22:05",
+          "numeroItem": 157,
           "valorTotalHomologado": 1548.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -13186,13 +13186,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -13277,13 +13277,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-03T12:23:25",
-          "numeroItem": 159,
           "niFornecedor": "22091627000138",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:23:25",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "AGRIVET DISTRIBUIDORA LTDA",
+          "dataInclusao": "2025-07-03T12:23:25",
+          "numeroItem": 159,
           "valorTotalHomologado": 8190.0,
           "reservaRemanescente": {
             "codigo": 1,
@@ -13305,17 +13305,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "naturezaJuridicaId": "2062",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         }
       ]
     },
@@ -13504,17 +13504,17 @@
           "ordemClassificacaoSrp": 1,
           "dataResultado": "2025-07-03",
           "motivoCancelamento": null,
-          "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
-          "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "situacaoCompraItemResultadoId": 1,
-          "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
+          "porteFornecedorNome": "ME",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "naturezaJuridicaId": "2062"
+          "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062",
+          "situacaoCompraItemResultadoId": 1,
+          "numeroControlePNCPCompra": "10635424000186-1-000102/2025"
         }
       ]
     },
@@ -13558,13 +13558,13 @@
       "resultadosHomologados": [
         {
           "indicadorSubcontratacao": false,
-          "dataInclusao": "2025-07-03T12:25:15",
-          "numeroItem": 164,
           "niFornecedor": "94780178000146",
           "dataCancelamento": null,
           "dataAtualizacao": "2025-07-03T12:25:15",
           "tipoPessoa": "PJ",
           "nomeRazaoSocialFornecedor": "AGROFORTE COMERCIAL AGROPECUARIA LTDA",
+          "dataInclusao": "2025-07-03T12:25:15",
+          "numeroItem": 164,
           "valorTotalHomologado": 1245.28,
           "reservaRemanescente": {
             "codigo": 1,
@@ -13588,13 +13588,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000102/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
