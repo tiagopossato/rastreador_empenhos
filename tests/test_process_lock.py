@@ -28,6 +28,17 @@ class ProcessLockTests(unittest.TestCase):
             thread.join(2)
             self.assertFalse(thread.is_alive())
 
+    def test_lock_is_released_when_the_critical_section_raises(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            lock_path = Path(temp_dir) / "job.lock"
+
+            with self.assertRaises(RuntimeError):
+                with interprocess_lock(lock_path):
+                    raise RuntimeError("falha simulada")
+
+            with interprocess_lock(lock_path):
+                pass
+
 
 if __name__ == "__main__":
     unittest.main()

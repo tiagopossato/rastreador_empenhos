@@ -5,6 +5,7 @@ from pathlib import Path
 
 from pncp_tracker.report_registry import (
     adicionar_registro,
+    atualizar_registro,
     chave_url_pncp,
     ler_registros,
     remover_registro,
@@ -61,6 +62,28 @@ class ReportRegistryTests(unittest.TestCase):
             chave_url_pncp("https://pncp.gov.br/app/editais/10635424000186/2025/000282"),
             chave_url_pncp("https://pncp.gov.br/app/editais/10635424000186/2025/282"),
         )
+
+    def test_updating_an_unknown_process_raises_key_error(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            index_path = Path(temp_dir) / "indice_relatorios.json"
+
+            with self.assertRaises(KeyError):
+                atualizar_registro(
+                    "https://pncp.gov.br/app/editais/10635424000186/2025/000282",
+                    {"status": "atualizando"},
+                    index_path,
+                )
+
+    def test_updating_a_registered_process_persists_the_change(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            index_path = Path(temp_dir) / "indice_relatorios.json"
+            url = "https://pncp.gov.br/app/editais/10635424000186/2025/000282"
+            adicionar_registro(url, index_path)
+
+            atualizado = atualizar_registro(url, {"status": "atualizando", "pasta": "abc"}, index_path)
+
+            self.assertEqual(atualizado["status"], "atualizando")
+            self.assertEqual(ler_registros(index_path)[0]["pasta"], "abc")
 
 
 if __name__ == "__main__":
