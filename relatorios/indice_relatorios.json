@@ -1,11 +1,12 @@
 {
-  "quantidade_relatorios": 2,
+  "schema_version": 2,
+  "quantidade_relatorios": 7,
   "relatorios": [
     {
       "pasta": "relatorio_compra_90027_2025",
       "arquivo_html": "relatorio_compra_90027_2025.html",
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000272",
-      "atualizado_em": "2026-11-12T06:12:13-03:00",
+      "atualizado_em": "2026-11-12T07:12:01-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -72,13 +73,16 @@
           "exibicao": "R$ 81.310,41",
           "descricao": "71 de 72 registros com detalhamento"
         }
-      ]
+      ],
+      "id": "10635424000186-2025-272",
+      "status": "atualizado",
+      "erro": null
     },
     {
       "pasta": "relatorio_compra_90059_2025",
       "arquivo_html": "relatorio_compra_90059_2025.html",
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000282",
-      "atualizado_em": "2026-11-12T06:09:10-03:00",
+      "atualizado_em": "2026-11-12T07:13:24-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -145,7 +149,390 @@
           "exibicao": "R$ 215.541,03",
           "descricao": "110 de 110 registros com detalhamento"
         }
-      ]
+      ],
+      "id": "10635424000186-2025-282",
+      "status": "atualizado",
+      "erro": null
+    },
+    {
+      "id": "10635424000186-2024-343",
+      "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2024/000343",
+      "pasta": "processo_10635424000186-2024-343",
+      "status": "atualizado",
+      "atualizado_em": "2026-11-12T07:14:31-03:00",
+      "chaves_integracao": {
+        "cnpj_orgao": "10635424000186",
+        "uasg_codigo": "158125",
+        "uasg_nome": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "numero_compra": "90065",
+        "ano_compra": 2024,
+        "numero_controle_pncp": "10635424000186-1-000343/2024"
+      },
+      "objeto": "Eventual aquisição de materiais e construção civil para atender às necessidades da Reitoria e Unidades do instituto Federal Catarinense.",
+      "resumo_cards": [
+        {
+          "chave": "itens",
+          "rotulo": "Itens",
+          "valor": 225,
+          "exibicao": "225",
+          "descricao": "Itens publicados no edital"
+        },
+        {
+          "chave": "itens_homologados",
+          "rotulo": "Itens homologados",
+          "valor": 154,
+          "exibicao": "154",
+          "descricao": "Itens empenhados + não empenhados"
+        },
+        {
+          "chave": "itens_empenhados",
+          "rotulo": "Itens empenhados",
+          "valor": 117,
+          "exibicao": "117",
+          "descricao": "Execução acima de 0%"
+        },
+        {
+          "chave": "itens_nao_empenhados",
+          "rotulo": "Itens não empenhados",
+          "valor": 37,
+          "exibicao": "37",
+          "descricao": "Execução igual a 0%, excluídos desertos"
+        },
+        {
+          "chave": "itens_desertos",
+          "rotulo": "Itens desertos",
+          "valor": 71,
+          "exibicao": "71",
+          "descricao": "Valor homologado igual a R$ 0,00"
+        },
+        {
+          "chave": "valor_estimado",
+          "rotulo": "Valor estimado",
+          "valor": 1738734.74,
+          "exibicao": "R$ 1.738.734,74",
+          "descricao": "Soma dos valores estimados por item"
+        },
+        {
+          "chave": "valor_homologado",
+          "rotulo": "Valor homologado",
+          "valor": 1228406.2299999997,
+          "exibicao": "R$ 1.228.406,23",
+          "descricao": "Soma dos resultados homologados"
+        },
+        {
+          "chave": "empenhado_mapeado",
+          "rotulo": "Empenhado mapeado",
+          "valor": 271838.26,
+          "exibicao": "R$ 271.838,26",
+          "descricao": "131 de 131 registros com detalhamento"
+        }
+      ],
+      "erro": null,
+      "arquivo_html": "relatorio_compra_90065_2024.html"
+    },
+    {
+      "id": "10635424000186-2025-187",
+      "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000187",
+      "pasta": "processo_10635424000186-2025-187",
+      "status": "atualizado",
+      "atualizado_em": "2026-11-12T07:15:06-03:00",
+      "chaves_integracao": {
+        "cnpj_orgao": "10635424000186",
+        "uasg_codigo": "158125",
+        "uasg_nome": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "numero_compra": "90026",
+        "ano_compra": 2025,
+        "numero_controle_pncp": "10635424000186-1-000187/2025"
+      },
+      "objeto": "Eventual aquisição de equipamentos de proteção individual e segurança do trabalho para atender às necessidades dos diversos Campi do Instituto Federal Catarinense",
+      "resumo_cards": [
+        {
+          "chave": "itens",
+          "rotulo": "Itens",
+          "valor": 147,
+          "exibicao": "147",
+          "descricao": "Itens publicados no edital"
+        },
+        {
+          "chave": "itens_homologados",
+          "rotulo": "Itens homologados",
+          "valor": 124,
+          "exibicao": "124",
+          "descricao": "Itens empenhados + não empenhados"
+        },
+        {
+          "chave": "itens_empenhados",
+          "rotulo": "Itens empenhados",
+          "valor": 51,
+          "exibicao": "51",
+          "descricao": "Execução acima de 0%"
+        },
+        {
+          "chave": "itens_nao_empenhados",
+          "rotulo": "Itens não empenhados",
+          "valor": 73,
+          "exibicao": "73",
+          "descricao": "Execução igual a 0%, excluídos desertos"
+        },
+        {
+          "chave": "itens_desertos",
+          "rotulo": "Itens desertos",
+          "valor": 23,
+          "exibicao": "23",
+          "descricao": "Valor homologado igual a R$ 0,00"
+        },
+        {
+          "chave": "valor_estimado",
+          "rotulo": "Valor estimado",
+          "valor": 865730.6699999993,
+          "exibicao": "R$ 865.730,67",
+          "descricao": "Soma dos valores estimados por item"
+        },
+        {
+          "chave": "valor_homologado",
+          "rotulo": "Valor homologado",
+          "valor": 432148.1399999998,
+          "exibicao": "R$ 432.148,14",
+          "descricao": "Soma dos resultados homologados"
+        },
+        {
+          "chave": "empenhado_mapeado",
+          "rotulo": "Empenhado mapeado",
+          "valor": 67886.68000000001,
+          "exibicao": "R$ 67.886,68",
+          "descricao": "48 de 48 registros com detalhamento"
+        }
+      ],
+      "erro": null,
+      "arquivo_html": "relatorio_compra_90026_2025.html"
+    },
+    {
+      "id": "10635424000186-2026-140",
+      "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2026/000140",
+      "pasta": "processo_10635424000186-2026-140",
+      "status": "atualizado",
+      "atualizado_em": "2026-11-12T07:15:28-03:00",
+      "chaves_integracao": {
+        "cnpj_orgao": "10635424000186",
+        "uasg_codigo": "158125",
+        "uasg_nome": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "numero_compra": "90149",
+        "ano_compra": 2026,
+        "numero_controle_pncp": "10635424000186-1-000140/2026"
+      },
+      "objeto": "Eventual aquisição de FERTILIZANTES E DEFENSIVOS AGRÍCOLAS para atender as necessidades do IFC – Campus Abelardo Luz, Campus Araquari, Campus Camboriú, Campus Concórdia, Campus Luzerna, Campus Rio do Sul, Campus Santa Rosa do Sul, Campus Videira",
+      "resumo_cards": [
+        {
+          "chave": "itens",
+          "rotulo": "Itens",
+          "valor": 121,
+          "exibicao": "121",
+          "descricao": "Itens publicados no edital"
+        },
+        {
+          "chave": "itens_homologados",
+          "rotulo": "Itens homologados",
+          "valor": 102,
+          "exibicao": "102",
+          "descricao": "Itens empenhados + não empenhados"
+        },
+        {
+          "chave": "itens_empenhados",
+          "rotulo": "Itens empenhados",
+          "valor": 18,
+          "exibicao": "18",
+          "descricao": "Execução acima de 0%"
+        },
+        {
+          "chave": "itens_nao_empenhados",
+          "rotulo": "Itens não empenhados",
+          "valor": 84,
+          "exibicao": "84",
+          "descricao": "Execução igual a 0%, excluídos desertos"
+        },
+        {
+          "chave": "itens_desertos",
+          "rotulo": "Itens desertos",
+          "valor": 19,
+          "exibicao": "19",
+          "descricao": "Valor homologado igual a R$ 0,00"
+        },
+        {
+          "chave": "valor_estimado",
+          "rotulo": "Valor estimado",
+          "valor": 974910.5799999994,
+          "exibicao": "R$ 974.910,58",
+          "descricao": "Soma dos valores estimados por item"
+        },
+        {
+          "chave": "valor_homologado",
+          "rotulo": "Valor homologado",
+          "valor": 643759.2699999999,
+          "exibicao": "R$ 643.759,27",
+          "descricao": "Soma dos resultados homologados"
+        },
+        {
+          "chave": "empenhado_mapeado",
+          "rotulo": "Empenhado mapeado",
+          "valor": 76019.59000000001,
+          "exibicao": "R$ 76.019,59",
+          "descricao": "14 de 14 registros com detalhamento"
+        }
+      ],
+      "erro": null,
+      "arquivo_html": "relatorio_compra_90149_2026.html"
+    },
+    {
+      "id": "10635424000186-2025-168",
+      "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000168",
+      "pasta": "processo_10635424000186-2025-168",
+      "status": "atualizado",
+      "atualizado_em": "2026-11-12T07:16:24-03:00",
+      "chaves_integracao": {
+        "cnpj_orgao": "10635424000186",
+        "uasg_codigo": "158125",
+        "uasg_nome": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "numero_compra": "90168",
+        "ano_compra": 2025,
+        "numero_controle_pncp": "10635424000186-1-000168/2025"
+      },
+      "objeto": "Eventual aquisição de materiais e equipamentos de automação para atender as necessidades dos diversos campi do Instituto Federal Catarinense.",
+      "resumo_cards": [
+        {
+          "chave": "itens",
+          "rotulo": "Itens",
+          "valor": 300,
+          "exibicao": "300",
+          "descricao": "Itens publicados no edital"
+        },
+        {
+          "chave": "itens_homologados",
+          "rotulo": "Itens homologados",
+          "valor": 268,
+          "exibicao": "268",
+          "descricao": "Itens empenhados + não empenhados"
+        },
+        {
+          "chave": "itens_empenhados",
+          "rotulo": "Itens empenhados",
+          "valor": 160,
+          "exibicao": "160",
+          "descricao": "Execução acima de 0%"
+        },
+        {
+          "chave": "itens_nao_empenhados",
+          "rotulo": "Itens não empenhados",
+          "valor": 108,
+          "exibicao": "108",
+          "descricao": "Execução igual a 0%, excluídos desertos"
+        },
+        {
+          "chave": "itens_desertos",
+          "rotulo": "Itens desertos",
+          "valor": 32,
+          "exibicao": "32",
+          "descricao": "Valor homologado igual a R$ 0,00"
+        },
+        {
+          "chave": "valor_estimado",
+          "rotulo": "Valor estimado",
+          "valor": 1244736.1599999997,
+          "exibicao": "R$ 1.244.736,16",
+          "descricao": "Soma dos valores estimados por item"
+        },
+        {
+          "chave": "valor_homologado",
+          "rotulo": "Valor homologado",
+          "valor": 793810.8900000002,
+          "exibicao": "R$ 793.810,89",
+          "descricao": "Soma dos resultados homologados"
+        },
+        {
+          "chave": "empenhado_mapeado",
+          "rotulo": "Empenhado mapeado",
+          "valor": 116776.61000000004,
+          "exibicao": "R$ 116.776,61",
+          "descricao": "38 de 38 registros com detalhamento"
+        }
+      ],
+      "erro": null,
+      "arquivo_html": "relatorio_compra_90168_2025.html"
+    },
+    {
+      "id": "10635424000186-2026-115",
+      "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2026/000115",
+      "pasta": "processo_10635424000186-2026-115",
+      "status": "atualizado",
+      "atualizado_em": "2026-11-12T07:20:39-03:00",
+      "chaves_integracao": {
+        "cnpj_orgao": "10635424000186",
+        "uasg_codigo": "158125",
+        "uasg_nome": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "numero_compra": "90098",
+        "ano_compra": 2026,
+        "numero_controle_pncp": "10635424000186-1-000115/2026"
+      },
+      "objeto": "Eventual aquisição de gêneros alimentícios para atender as necessidades do Instituto Federal Catarinense Campus Abelardo Luz, Campus Araquari, Campus Brusque, Campus Camboriú, Campus Concórdia, Campus Fraiburgo, Campus Luzerna, Campus Rio do Sul, Campus Santa Rosa do Sul,  Campus São Bento do Sul, São Francisco do Sul, Campus Sombrio, e Campus Videira.",
+      "resumo_cards": [
+        {
+          "chave": "itens",
+          "rotulo": "Itens",
+          "valor": 422,
+          "exibicao": "422",
+          "descricao": "Itens publicados no edital"
+        },
+        {
+          "chave": "itens_homologados",
+          "rotulo": "Itens homologados",
+          "valor": 200,
+          "exibicao": "200",
+          "descricao": "Itens empenhados + não empenhados"
+        },
+        {
+          "chave": "itens_empenhados",
+          "rotulo": "Itens empenhados",
+          "valor": 64,
+          "exibicao": "64",
+          "descricao": "Execução acima de 0%"
+        },
+        {
+          "chave": "itens_nao_empenhados",
+          "rotulo": "Itens não empenhados",
+          "valor": 136,
+          "exibicao": "136",
+          "descricao": "Execução igual a 0%, excluídos desertos"
+        },
+        {
+          "chave": "itens_desertos",
+          "rotulo": "Itens desertos",
+          "valor": 222,
+          "exibicao": "222",
+          "descricao": "Valor homologado igual a R$ 0,00"
+        },
+        {
+          "chave": "valor_estimado",
+          "rotulo": "Valor estimado",
+          "valor": 9327289.600000007,
+          "exibicao": "R$ 9.327.289,60",
+          "descricao": "Soma dos valores estimados por item"
+        },
+        {
+          "chave": "valor_homologado",
+          "rotulo": "Valor homologado",
+          "valor": 6531509.422799999,
+          "exibicao": "R$ 6.531.509,42",
+          "descricao": "Soma dos resultados homologados"
+        },
+        {
+          "chave": "empenhado_mapeado",
+          "rotulo": "Empenhado mapeado",
+          "valor": 462441.1999999999,
+          "exibicao": "R$ 462.441,20",
+          "descricao": "31 de 31 registros com detalhamento"
+        }
+      ],
+      "erro": null,
+      "arquivo_html": "relatorio_compra_90098_2026.html"
     }
   ]
 }

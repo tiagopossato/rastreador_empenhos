@@ -13,6 +13,9 @@ Este repositório contém a aplicação Python `rastreador_empenhos`, que coleta
 ## Estrutura principal
 
 - `main.py`: ponto de entrada da aplicação.
+- `atualizar_relatorios.py`: atualiza todos os processos ativos para uso pelo cron.
+- `criar_usuario_admin.py`: cria uma conta local para a interface administrativa.
+- `admin_web/`: aplicação administrativa privada Flask/Waitress.
 - `pncp_tracker/url_parser.py`: valida a URL pública do edital.
 - `pncp_tracker/api_client.py`: cliente HTTP para consultas ao PNCP.
 - `pncp_tracker/collector.py`: coleta e organiza dados da compra e itens.
@@ -23,6 +26,8 @@ Este repositório contém a aplicação Python `rastreador_empenhos`, que coleta
 - `pncp_tracker/empenhos.py`: models e processamento de empenhos.
 - `pncp_tracker/consultar_e_mapear_empenhos.py`: consulta os empenhos, enriquece com os detalhes do Portal da Transparência e mapeia os registros aos itens da compra.
 - `pncp_tracker/report_html.py`: gera o relatório HTML final.
+- `pncp_tracker/report_service.py`: atualiza e persiste processos individualmente ou em lote.
+- `pncp_tracker/report_registry.py`: mantém o índice JSON como cadastro de processos ativos.
 - `relatorios/gerar_relatorios.py`: regenera os HTMLs individuais e os índices JSON/HTML a partir dos dados persistidos.
 - `relatorios/`: índice e pastas individuais com HTML, JSONs das duas etapas e metadados.
 - `tests/`: testes automatizados.
@@ -36,7 +41,7 @@ Este repositório contém a aplicação Python `rastreador_empenhos`, que coleta
 Instalação:
 
 ```bash
-python -m pip install requests
+python -m pip install -r requirements.txt
 ```
 
 Arquivo `.env`:
@@ -62,6 +67,8 @@ python relatorios/gerar_relatorios.py
 ```
 
 O índice `relatorios/index.html` resume cada processo em uma linha; `relatorios/indice_relatorios.json` contém os mesmos dados em formato estruturado.
+
+O índice JSON é o cadastro ativo. Use `python atualizar_relatorios.py` para atualizar todos os processos via cron. A interface em `admin_web/` permite cadastrar URLs, remover processos sem apagar arquivos históricos e iniciar atualizações; usuários são criados com `python criar_usuario_admin.py`. Não versione o arquivo `.private/usuarios.json` nem `PNCP_ADMIN_SESSION_SECRET`; mantenha a interface atrás de HTTPS e acesso de rede restrito.
 
 ## Testes
 

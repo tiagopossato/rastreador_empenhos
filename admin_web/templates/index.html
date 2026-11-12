@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Administração · Rastreador de Empenhos</title>
+  <style>
+    :root { color-scheme: light; --ink: #172033; --muted: #526078; --line: #dce3ee; --blue: #1456a0; }
+    * { box-sizing: border-box; }
+    body { font: 15px/1.5 system-ui, sans-serif; background: #f3f6fa; color: var(--ink); margin: 0; }
+    main { max-width: 1200px; margin: auto; padding: 1.5rem 1rem 3rem; }
+    header { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+    h1 { font-size: 1.55rem; }
+    h2 { font-size: 1.15rem; }
+    .panel { background: white; border: 1px solid var(--line); border-radius: 10px; padding: 1rem 1.25rem; margin: 1rem 0; }
+    .flash { padding: .65rem .8rem; border-radius: 6px; background: #e8f4ec; color: #15552c; }
+    .flash.error { background: #fff0ef; color: #922b24; }
+    .inline { display: flex; gap: .6rem; align-items: end; flex-wrap: wrap; }
+    .header-actions { display: flex; align-items: center; gap: .6rem; }
+    label { display: block; font-size: .85rem; font-weight: 600; margin-bottom: .3rem; }
+    input { min-width: min(500px, 100%); padding: .65rem; border: 1px solid #bac7d8; border-radius: 6px; font: inherit; }
+    button { border: 0; border-radius: 6px; padding: .65rem .85rem; background: var(--blue); color: white; font: inherit; cursor: pointer; }
+    button.secondary { background: #526078; }
+    a.button { display: inline-block; border-radius: 6px; padding: .65rem .85rem; background: #526078; color: white; text-decoration: none; }
+    button.danger { background: #a12a26; }
+    button:hover { filter: brightness(.92); }
+    .actions { display: flex; gap: .45rem; flex-wrap: wrap; }
+    .table-wrap { overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; min-width: 760px; }
+    th, td { padding: .7rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { color: var(--muted); font-size: .8rem; }
+    .url { overflow-wrap: anywhere; max-width: 310px; }
+    .muted { color: var(--muted); font-size: .85rem; }
+    #job-status { border-left: 4px solid var(--blue); padding: .5rem .75rem; background: #edf4fd; }
+    #job-status[hidden] { display: none; }
+    @media (max-width: 600px) { main { padding: .8rem .5rem 2rem; } .panel { padding: .8rem; } header { align-items: flex-start; } }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Processos PNCP</h1>
+    <div class="header-actions">
+      <a class="button" href="{{ url_for('public_index') }}" target="_blank" rel="noopener noreferrer">Página inicial</a>
+      <form method="post" action="{{ url_for('logout') }}">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <span class="muted">{{ username }}</span>
+        <button class="secondary" type="submit">Sair</button>
+      </form>
+    </div>
+  </header>
+
+  {% for category, message in get_flashed_messages(with_categories=true) %}
+    <p class="flash {{ category }}">{{ message }}</p>
+  {% endfor %}
+
+  <section class="panel">
+    <h2>Cadastrar processo</h2>
+    <form class="inline" method="post" action="{{ url_for('add_process') }}">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+      <div>
+        <label for="url_pncp">URL pública do edital no PNCP</label>
+        <input id="url_pncp" name="url_pncp" type="url" placeholder="https://pncp.gov.br/app/editais/..." required>
+      </div>
+      <button type="submit">Adicionar à lista</button>
+    </form>
+    <p class="muted">O cadastro não inicia consultas. Use uma ação de atualização ou aguarde o cron.</p>
+  </section>
+
+  <section class="panel">
+    <div class="inline" style="justify-content:space-between">
+      <h2>Lista ativa ({{ records|length }})</h2>
+      <form method="post" action="{{ url_for('refresh_all') }}">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <button type="submit" {% if not records %}disabled{% endif %}>Atualizar todos</button>
+      </form>
+    </div>
+    {% if active_job %}
+      <div id="job-status" data-job-id="{{ active_job.id }}" data-url="{{ url_for('job_status', job_id=active_job.id) }}">
+        <strong>Atualização {{ active_job.status }}.</strong>
+        <span>{{ active_job.acao }}{% if active_job.iniciado_em %} · iniciada em {{ active_job.iniciado_em }}{% endif %}</span>
+        {% if active_job.status != 'executando' %}
+          <div>{{ active_job.atualizados or 0 }} atualizados · {{ active_job.falhas|length if active_job.falhas else 0 }} falhas</div>
+          {% for failure in active_job.falhas or [] %}
+            <div class="muted">{{ failure.url_pncp }}: {{ failure.erro }}</div>
+          {% endfor %}
+          {% if active_job.erro %}<div>{{ active_job.erro }}</div>{% endif %}
+        {% endif %}
+      </div>
+    {% endif %}
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>PNCP</th><th>Status</th><th>Última atualização</th><th>Ações</th></tr></thead>
+        <tbody>
+        {% for record in records %}
+          <tr>
+            <td class="url"><a href="{{ record.url_pncp }}" target="_blank" rel="noopener noreferrer">{{ record.url_pncp }}</a>
+              {% if record.objeto %}<div class="muted">{{ record.objeto }}</div>{% endif %}
+            </td>
+            <td>{{ record.status or 'pendente' }}{% if record.erro %}<div class="muted">{{ record.erro }}</div>{% endif %}</td>
+            <td>{{ record.atualizado_em or '—' }}</td>
+            <td><div class="actions">
+              <form method="post" action="{{ url_for('refresh_process', process_id=record.id) }}">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                <button type="submit">Atualizar</button>
+              </form>
+              <form method="post" action="{{ url_for('delete_process', process_id=record.id) }}" onsubmit="return confirm('Remover da lista ativa? Os arquivos do relatório serão preservados.')">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                <button class="danger" type="submit">Excluir</button>
+              </form>
+            </div></td>
+          </tr>
+        {% else %}
+          <tr><td colspan="4" class="muted">Nenhum processo cadastrado.</td></tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+<script>
+const jobStatus = document.getElementById('job-status');
+if (jobStatus?.dataset.url) {
+  const timer = setInterval(async () => {
+    try {
+      const response = await fetch(jobStatus.dataset.url, {credentials: 'same-origin'});
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const job = await response.json();
+      if (job.status !== 'executando') {
+        clearInterval(timer);
+        window.location.reload();
+      }
+    } catch (error) {
+      clearInterval(timer);
+      const notice = document.createElement('div');
+      notice.className = 'muted';
+      notice.textContent = `Falha ao consultar o progresso: ${String(error.message)}`;
+      jobStatus.appendChild(notice);
+    }
+  }, 2000);
+}
+</script>
+</body>
+</html>

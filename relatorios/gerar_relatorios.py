@@ -1,15 +1,16 @@
 import html
 import json
+import re
 import sys
 from pathlib import Path
 from typing import Any, Dict, List
 from urllib.parse import quote
 
-
 _PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(_PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(_PROJECT_ROOT))
 
+from pncp_tracker.report_registry import INDEX_PATH, ler_registros, salvar_registros
 from pncp_tracker.report_html import gerar_relatorio_html
 
 
@@ -99,21 +100,32 @@ def _resumo_cards(dados_relatorio: Dict[str, Any]) -> List[Dict[str, Any]]:
 def _gerar_index_html(pasta_relatorios: Path, relatorios: List[Dict[str, Any]]) -> Path:
     linhas = []
     for relatorio in relatorios:
-        href = quote(
-            "{}/{}".format(relatorio["pasta"], relatorio["arquivo_html"]),
-            safe="/",
-        )
+        arquivo_html = relatorio.get("arquivo_html")
+        pasta = relatorio.get("pasta")
+        if arquivo_html and pasta:
+            href = quote("{}/{}".format(pasta, arquivo_html), safe="/")
+            titulo = '<a class="report-link" href="{}">Edital nº {}/{}</a>'.format(
+                href,
+                html.escape(str(
+                    (relatorio.get("chaves_integracao") or {}).get("numero_compra") or "—"
+                )),
+                html.escape(str(
+                    (relatorio.get("chaves_integracao") or {}).get("ano_compra") or "—"
+                )),
+            )
+        else:
+            titulo = '<span class="report-link">Processo aguardando atualização</span>'
         cards = "".join(
             '<div class="metric"><span>{}</span><strong>{}</strong><small>{}</small></div>'.format(
-                html.escape(str(card["rotulo"])),
-                html.escape(str(card["exibicao"])),
-                html.escape(str(card["descricao"])),
+                html.escape(str(card.get("rotulo", ""))),
+                html.escape(str(card.get("exibicao", ""))),
+                html.escape(str(card.get("descricao", ""))),
             )
-            for card in relatorio["resumo_cards"]
+            for card in relatorio.get("resumo_cards", [])
+        ) or '<div class="metric"><span>Status</span><strong>{}</strong></div>'.format(
+            html.escape(str(relatorio.get("status", "pendente")))
         )
         chaves = relatorio.get("chaves_integracao") or {}
-        numero = chaves.get("numero_compra") or "—"
-        ano = chaves.get("ano_compra") or "—"
         url_pncp = relatorio.get("url_pncp")
         link_pncp = (
             '<a href="{}" target="_blank" rel="noopener noreferrer">Abrir PNCP</a>'.format(
@@ -123,16 +135,19 @@ def _gerar_index_html(pasta_relatorios: Path, relatorios: List[Dict[str, Any]]) 
             else "Link PNCP indisponível"
         )
         linhas.append(
-            '<tr><td><a class="report-link" href="{}">Edital nº {}/{}</a>'
-            '<small>{}</small></td><td>{}</td><td><div class="metrics">{}</div></td>'
-            '<td>{}</td></tr>'.format(
-                href,
-                html.escape(str(numero)),
-                html.escape(str(ano)),
+            '<tr><td>{}<small>{}</small></td><td>{}</td>'
+            '<td><div class="metrics">{}</div></td><td>{}</td></tr>'.format(
+                titulo,
                 link_pncp,
-                html.escape(str(relatorio.get("objeto") or "Objeto não informado no PNCP.")),
+                html.escape(str(
+                    relatorio.get("objeto") or "Objeto não informado no PNCP."
+                )),
                 cards,
-                html.escape(str(relatorio.get("atualizado_em") or "—")),
+                html.escape(str(
+                    relatorio.get("atualizado_em")
+                    or relatorio.get("status")
+                    or "—"
+                )),
             )
         )
 
@@ -167,13 +182,20 @@ def _gerar_index_html(pasta_relatorios: Path, relatorios: List[Dict[str, Any]]) 
     .metric span, .metric small {{ display: block; color: var(--muted); font-size: .7rem; }}
     .metric strong {{ display: block; margin: .15rem 0; }}
     .empty {{ text-align: center; color: var(--muted); padding: 2rem; }}
+    .page-header {{ display: flex; justify-content: space-between; align-items: center; gap: 1rem; }}
+    .admin-link {{ display: inline-block; padding: .55rem .85rem; border-radius: .5rem; background: var(--blue); color: white; font-weight: 600; text-decoration: none; white-space: nowrap; }}
+    .admin-link:hover, .admin-link:focus {{ filter: brightness(.9); }}
     @media (max-width: 900px) {{ .metrics {{ grid-template-columns: repeat(2, minmax(110px, 1fr)); }} }}
     @media (max-width: 600px) {{ body {{ padding: 1rem .5rem; }} th, td {{ padding: .65rem .5rem; }} }}
+    @media (max-width: 480px) {{ .page-header {{ align-items: flex-start; flex-direction: column; }} }}
   </style>
 </head>
 <body>
   <main>
-    <h1>Relatórios de empenhos</h1>
+    <header class="page-header">
+      <h1>Relatórios de empenhos</h1>
+      <!-- admin-link -->
+    </header>
     <p class="intro">Resumo das compras monitoradas. Selecione um edital para abrir o relatório completo.</p>
     <div class="table-wrap">
       <table>
@@ -192,39 +214,51 @@ def _gerar_index_html(pasta_relatorios: Path, relatorios: List[Dict[str, Any]]) 
     return caminho
 
 
-def gerar_relatorios(pasta_relatorios: Path) -> Path:
+def gerar_relatorios(
+    pasta_relatorios: Path,
+    index_path: Path = INDEX_PATH,
+) -> Path:
     pasta_relatorios = Path(pasta_relatorios)
     pasta_relatorios.mkdir(parents=True, exist_ok=True)
-    relatorios = []
+    relatorios = ler_registros(index_path)
 
-    for pasta_relatorio in sorted(pasta_relatorios.iterdir(), key=lambda item: item.name.casefold()):
-        if not pasta_relatorio.is_dir():
+    for relatorio in relatorios:
+        nome_pasta = relatorio.get("pasta")
+        if not nome_pasta:
+            relatorio["status"] = relatorio.get("status") or "pendente"
             continue
+        if not isinstance(nome_pasta, str) or not re.fullmatch(
+            r"[A-Za-z0-9_-]+", nome_pasta
+        ):
+            raise ValueError("Nome de pasta inválido no índice: {}.".format(nome_pasta))
+        pasta_relatorio = pasta_relatorios / nome_pasta
         caminho_dados_pregao = pasta_relatorio / "dados_pregao.json"
         caminho_dados = pasta_relatorio / "dados_empenhos.json"
         caminho_metadados = pasta_relatorio / "metadados.json"
-        if not any(
+        existe_arquivo_dados = any(
             caminho.exists()
             for caminho in (caminho_dados_pregao, caminho_dados, caminho_metadados)
-        ):
-            continue
+        )
         if not all(
             caminho.is_file()
             for caminho in (caminho_dados_pregao, caminho_dados, caminho_metadados)
         ):
-            raise ValueError(
-                "Pasta de relatório incompleta: {} (esperados dados_pregao.json, "
-                "dados_empenhos.json e metadados.json).".format(pasta_relatorio)
-            )
+            if existe_arquivo_dados or relatorio.get("status") != "pendente":
+                relatorio["status"] = "erro"
+                relatorio["erro"] = (
+                    "Dados incompletos; esperados dados_pregao.json, "
+                    "dados_empenhos.json e metadados.json."
+                )
+            continue
 
         _ler_json(caminho_dados_pregao)
         dados_empenhos = _ler_json(caminho_dados)
         metadados = _ler_json(caminho_metadados)
         arquivo_html = metadados.get("arquivo_html")
-        if not isinstance(arquivo_html, str) or not arquivo_html.endswith(".html"):
+        if not isinstance(arquivo_html, str) or not re.fullmatch(
+            r"[A-Za-z0-9_-]+\.html", arquivo_html
+        ):
             raise ValueError("Nome do HTML inválido nos metadados de {}.".format(pasta_relatorio))
-        if Path(arquivo_html).name != arquivo_html:
-            raise ValueError("O HTML do relatório deve ficar dentro de {}.".format(pasta_relatorio))
 
         caminho_html = pasta_relatorio / arquivo_html
         gerar_relatorio_html(dados_empenhos, caminho_html)
@@ -232,15 +266,12 @@ def gerar_relatorios(pasta_relatorios: Path) -> Path:
         report_data = _dados_embutidos(caminho_html)
         resumo_cards = _resumo_cards(report_data)
         metadados["resumo_cards"] = resumo_cards
-        _escrever_texto(
-            caminho_metadados,
-            json.dumps(metadados, ensure_ascii=False, indent=2) + "\n",
-        )
-        relatorios.append(
+        _escrever_texto(caminho_metadados, json.dumps(metadados, ensure_ascii=False, indent=2) + "\n")
+        relatorio.update(
             {
-                "pasta": pasta_relatorio.name,
+                "status": "erro" if relatorio.get("status") == "erro" else "atualizado",
                 "arquivo_html": arquivo_html,
-                "url_pncp": metadados.get("url_pncp"),
+                "url_pncp": metadados.get("url_pncp") or relatorio.get("url_pncp"),
                 "atualizado_em": metadados.get("atualizado_em"),
                 "chaves_integracao": metadados.get("chaves_integracao") or {},
                 "objeto": report_data.get("objeto"),
@@ -248,12 +279,7 @@ def gerar_relatorios(pasta_relatorios: Path) -> Path:
             }
         )
 
-    caminho_indice_json = pasta_relatorios / "indice_relatorios.json"
-    indice = {"quantidade_relatorios": len(relatorios), "relatorios": relatorios}
-    _escrever_texto(
-        caminho_indice_json,
-        json.dumps(indice, ensure_ascii=False, indent=2) + "\n",
-    )
+    salvar_registros(relatorios, index_path)
     return _gerar_index_html(pasta_relatorios, relatorios)
 
 
@@ -275,4 +301,9 @@ def gerar_index_relatorios(pasta_relatorios: Path) -> Path:
 
 
 if __name__ == "__main__":
-    gerar_relatorios(Path(__file__).resolve().parent)
+    reports_dir = Path(__file__).resolve().parent
+    lock_path = reports_dir.parent / ".private" / "report_update.lock"
+    from pncp_tracker.process_lock import interprocess_lock
+
+    with interprocess_lock(lock_path):
+        gerar_relatorios(reports_dir)

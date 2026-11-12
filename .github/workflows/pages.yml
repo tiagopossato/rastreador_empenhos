@@ -30,6 +30,9 @@ jobs:
         with:
           python-version: "3.x"
 
+      - name: Install report generation dependency
+        run: python -m pip install requests
+
       - name: Generate reports index
         run: python relatorios/gerar_relatorios.py
 

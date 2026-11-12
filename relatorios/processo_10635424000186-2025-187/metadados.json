@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000187",
+  "criado_em": "2026-11-12T07:15:06-03:00",
+  "atualizado_em": "2026-11-12T07:15:06-03:00",
+  "chaves_integracao": {
+    "cnpj_orgao": "10635424000186",
+    "uasg_codigo": "158125",
+    "uasg_nome": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+    "numero_compra": "90026",
+    "ano_compra": 2025,
+    "numero_controle_pncp": "10635424000186-1-000187/2025"
+  },
+  "arquivo_html": "relatorio_compra_90026_2025.html",
+  "resumo_cards": [
+    {
+      "chave": "itens",
+      "rotulo": "Itens",
+      "valor": 147,
+      "exibicao": "147",
+      "descricao": "Itens publicados no edital"
+    },
+    {
+      "chave": "itens_homologados",
+      "rotulo": "Itens homologados",
+      "valor": 124,
+      "exibicao": "124",
+      "descricao": "Itens empenhados + não empenhados"
+    },
+    {
+      "chave": "itens_empenhados",
+      "rotulo": "Itens empenhados",
+      "valor": 51,
+      "exibicao": "51",
+      "descricao": "Execução acima de 0%"
+    },
+    {
+      "chave": "itens_nao_empenhados",
+      "rotulo": "Itens não empenhados",
+      "valor": 73,
+      "exibicao": "73",
+      "descricao": "Execução igual a 0%, excluídos desertos"
+    },
+    {
+      "chave": "itens_desertos",
+      "rotulo": "Itens desertos",
+      "valor": 23,
+      "exibicao": "23",
+      "descricao": "Valor homologado igual a R$ 0,00"
+    },
+    {
+      "chave": "valor_estimado",
+      "rotulo": "Valor estimado",
+      "valor": 865730.6699999993,
+      "exibicao": "R$ 865.730,67",
+      "descricao": "Soma dos valores estimados por item"
+    },
+    {
+      "chave": "valor_homologado",
+      "rotulo": "Valor homologado",
+      "valor": 432148.1399999998,
+      "exibicao": "R$ 432.148,14",
+      "descricao": "Soma dos resultados homologados"
+    },
+    {
+      "chave": "empenhado_mapeado",
+      "rotulo": "Empenhado mapeado",
+      "valor": 67886.68000000001,
+      "exibicao": "R$ 67.886,68",
+      "descricao": "48 de 48 registros com detalhamento"
+    }
+  ]
+}

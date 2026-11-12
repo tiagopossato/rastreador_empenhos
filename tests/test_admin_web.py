@@ -1,0 +1,205 @@
+import json
+import re
+import tempfile
+import time
+import unittest
+from pathlib import Path
+from unittest.mock import patch
+
+from admin_web.app import _JOB_LOCK, _JOBS, _start_job, create_app
+from admin_web.auth import hash_password, save_users, verify_password
+import criar_usuario_admin
+from pncp_tracker.report_registry import ler_registros, salvar_registros
+
+
+_URL = "https://pncp.gov.br/app/editais/10635424000186/2025/000282"
+
+
+class AdminWebTests(unittest.TestCase):
+    def setUp(self):
+        self.temp_dir = tempfile.TemporaryDirectory()
+        root = Path(self.temp_dir.name)
+        self.reports_dir = root / "relatorios"
+        self.index_path = self.reports_dir / "indice_relatorios.json"
+        self.reports_dir.mkdir()
+        (self.reports_dir / "index.html").write_text(
+            '<main><!-- admin-link --></main>',
+            encoding="utf-8",
+        )
+        report_dir = self.reports_dir / "relatorio_compra_90027_2025"
+        report_dir.mkdir()
+        (report_dir / "relatorio_compra_90027_2025.html").write_text(
+            "<html>Relatório público</html>",
+            encoding="utf-8",
+        )
+        (report_dir / "metadados.json").write_text("{}", encoding="utf-8")
+        self.users_path = root / "usuarios.json"
+        save_users({"admin": hash_password("test-password")}, self.users_path)
+        self.app = create_app(
+            {
+                "TESTING": True,
+                "SECRET_KEY": "test-secret",
+                "USERS_FILE": self.users_path,
+                "REPORTS_DIR": self.reports_dir,
+                "INDEX_PATH": self.index_path,
+                "SESSION_COOKIE_SECURE": False,
+            }
+        )
+        self.client = self.app.test_client()
+
+    def tearDown(self):
+        self.temp_dir.cleanup()
+
+    def _csrf(self, response):
+        match = re.search(
+            r'name="csrf_token" value="([^"]+)"',
+            response.get_data(as_text=True),
+        )
+        self.assertIsNotNone(match)
+        return match.group(1)
+
+    def _login(self):
+        response = self.client.get("/login")
+        return self.client.post(
+            "/login",
+            data={
+                "csrf_token": self._csrf(response),
+                "username": "admin",
+                "password": "test-password",
+            },
+            follow_redirects=True,
+        )
+
+    def test_dashboard_requires_login_and_password_is_verified_from_hash(self):
+        public_index = self.client.get("/")
+        self.assertEqual(public_index.status_code, 200)
+        self.assertIn('href="/login" target="_blank"', public_index.get_data(as_text=True))
+        report = self.client.get(
+            "/relatorio_compra_90027_2025/relatorio_compra_90027_2025.html"
+        )
+        self.assertEqual(report.status_code, 200)
+        self.assertIn("Relatório público", report.get_data(as_text=True))
+        report.close()
+        self.assertEqual(
+            self.client.get("/relatorio_compra_90027_2025/metadados.json").status_code,
+            404,
+        )
+
+        response = self.client.get("/admin")
+        self.assertEqual(response.status_code, 302)
+        self.assertIn("/login", response.location)
+
+        admin_page = self._login()
+        self.assertEqual(admin_page.status_code, 200)
+        self.assertIn("Processos PNCP", admin_page.get_data(as_text=True))
+        self.assertIn(
+            'href="/" target="_blank" rel="noopener noreferrer">Página inicial</a>',
+            admin_page.get_data(as_text=True),
+        )
+        record = json.loads(self.users_path.read_text(encoding="utf-8"))["admin"]
+        self.assertNotIn("test-password", json.dumps(record))
+        self.assertTrue(verify_password("test-password", record))
+        self.assertFalse(verify_password("wrong-password", record))
+
+    def test_crud_is_csrf_protected_and_delete_preserves_archive(self):
+        response = self._login()
+        token = self._csrf(response)
+        added = self.client.post(
+            "/processes",
+            data={"csrf_token": token, "url_pncp": _URL},
+            follow_redirects=True,
+        )
+        self.assertIn("Processo cadastrado.", added.get_data(as_text=True))
+        record = ler_registros(self.index_path)[0]
+        self.assertEqual(record["status"], "pendente")
+
+        archived_dir = self.reports_dir / "historico"
+        archived_dir.mkdir()
+        archive_file = archived_dir / "dados_empenhos.json"
+        archive_file.write_text("{}", encoding="utf-8")
+        record["pasta"] = "historico"
+        salvar_registros([record], self.index_path)
+
+        denied = self.client.post("/processes/{}/delete".format(record["id"]))
+        self.assertEqual(denied.status_code, 400)
+        deleted = self.client.post(
+            "/processes/{}/delete".format(record["id"]),
+            data={"csrf_token": token},
+            follow_redirects=True,
+        )
+        self.assertIn("arquivados foram preservados", deleted.get_data(as_text=True))
+        self.assertEqual(ler_registros(self.index_path), [])
+        self.assertTrue(archive_file.exists())
+
+    def test_refresh_action_starts_a_background_update(self):
+        response = self._login()
+        token = self._csrf(response)
+        self.client.post("/processes", data={"csrf_token": token, "url_pncp": _URL})
+        record = ler_registros(self.index_path)[0]
+        with patch("admin_web.app._start_job", return_value="job-1") as start:
+            result = self.client.post(
+                "/processes/{}/refresh".format(record["id"]),
+                data={"csrf_token": token},
+            )
+        self.assertEqual(result.status_code, 302)
+        start.assert_called_once_with(self.app, "one", _URL)
+
+    def test_background_job_exposes_completion_status(self):
+        with patch(
+            "pncp_tracker.report_service.atualizar_processo",
+            side_effect=lambda *args, **kwargs: (
+                kwargs["on_progress"]("Coletando itens do PNCP.")
+                or {"registro": {"url_pncp": _URL}}
+            ),
+        ), self.assertLogs("admin_web.app", level="INFO") as captured:
+            job_id = _start_job(self.app, "one", _URL)
+            self.assertIsNotNone(job_id)
+            for _ in range(100):
+                with _JOB_LOCK:
+                    status = _JOBS[job_id]["status"]
+                if status != "executando":
+                    break
+                time.sleep(0.01)
+
+        with _JOB_LOCK:
+            self.assertEqual(_JOBS[job_id]["status"], "concluido")
+            self.assertEqual(_JOBS[job_id]["atualizados"], 1)
+        self.assertTrue(
+            any("Coletando itens do PNCP." in line for line in captured.output)
+        )
+
+    def test_hash_uses_a_unique_salt(self):
+        first = hash_password("test-password")
+        second = hash_password("test-password")
+        self.assertNotEqual(first["salt"], second["salt"])
+        self.assertTrue(verify_password("test-password", first))
+
+    def test_user_database_must_not_live_in_public_reports_directory(self):
+        with self.assertRaisesRegex(ValueError, "fora da pasta publicada"):
+            create_app(
+                {
+                    "SECRET_KEY": "test-secret",
+                    "USERS_FILE": self.reports_dir / "usuarios.json",
+                    "REPORTS_DIR": self.reports_dir,
+                    "INDEX_PATH": self.index_path,
+                }
+            )
+
+    def test_user_creation_script_stores_only_password_hash(self):
+        users_file = Path(self.temp_dir.name) / "created_users.json"
+        with patch.object(criar_usuario_admin, "_USERS_FILE", users_file), patch(
+            "builtins.input", return_value="operator"
+        ), patch(
+            "criar_usuario_admin.getpass",
+            side_effect=["long-test-password", "long-test-password"],
+        ):
+            result = criar_usuario_admin.main()
+
+        self.assertEqual(result, 0)
+        stored = users_file.read_text(encoding="utf-8")
+        self.assertNotIn("long-test-password", stored)
+        self.assertTrue(verify_password("long-test-password", json.loads(stored)["operator"]))
+
+
+if __name__ == "__main__":
+    unittest.main()

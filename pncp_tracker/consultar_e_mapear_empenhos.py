@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Any, Dict, List, Optional
+from typing import Any, Callable, Dict, List, Optional
 
 from .collector import baixar_dados_compra_pncp
 from .contratos_empenhos import consultar_contratos_empenhos
@@ -12,6 +12,7 @@ from .url_parser import extrair_parametros_url
 def consultar_e_mapear_empenhos(
     url_pncp: str,
     dados_compra: Optional[Dict[str, Any]] = None,
+    on_progress: Optional[Callable[[str], None]] = None,
 ) -> Dict[str, Any]:
     """Busca as linhas da aba Contratos/Empenhos do PNCP e cruza pelos fornecedores."""
     if dados_compra is None:
@@ -19,13 +20,23 @@ def consultar_e_mapear_empenhos(
     chaves = dados_compra.get("chaves_integracao", {})
     parametros_url = extrair_parametros_url(url_pncp)
 
+    if on_progress is not None:
+        on_progress("Consultando contratos e empenhos no PNCP.")
     empenhos = consultar_contratos_empenhos(
         chaves["cnpj_orgao"],
         parametros_url["ano"],
         parametros_url["sequencial"],
     )
+    if on_progress is not None:
+        on_progress(
+            "Registros do PNCP recebidos: {}. Consultando detalhes no Portal da Transparência.".format(
+                len(empenhos)
+            )
+        )
     empenhos_detalhados, erros_detalhamento = enriquecer_empenhos_com_detalhes_portal(empenhos)
 
+    if on_progress is not None:
+        on_progress("Relacionando empenhos aos itens e fornecedores homologados.")
     itens_mapeados = mapear_empenhos_por_item(dados_compra, empenhos_detalhados)
     quantidade_com_detalhes = sum(
         empenho.get("detalhesPortalTransparencia", {}).get("status") == "ok"
@@ -36,6 +47,14 @@ def consultar_e_mapear_empenhos(
         for empenho in empenhos_detalhados
     )
     status = "sem_registros" if not empenhos else "parcial" if erros_detalhamento or detalhes_nao_encontrados else "ok"
+    if on_progress is not None:
+        on_progress(
+            "Mapeamento concluído: {} empenhos; {} detalhes obtidos; {} itens relacionados.".format(
+                len(empenhos_detalhados),
+                quantidade_com_detalhes,
+                len(itens_mapeados),
+            )
+        )
 
     return {
         "status": status,
