@@ -418,89 +418,6 @@
       "arquivo_html": "relatorio_compra_90149_2026.html"
     },
     {
-      "id": "10635424000186-2025-168",
-      "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000168",
-      "pasta": "processo_10635424000186-2025-168",
-      "status": "atualizado",
-      "atualizado_em": "2026-11-12T08:56:11-03:00",
-      "chaves_integracao": {
-        "cnpj_orgao": "10635424000186",
-        "uasg_codigo": "158125",
-        "uasg_nome": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
-        "numero_compra": "90168",
-        "ano_compra": 2025,
-        "numero_controle_pncp": "10635424000186-1-000168/2025"
-      },
-      "objeto": "Eventual aquisição de materiais e equipamentos de automação para atender as necessidades dos diversos campi do Instituto Federal Catarinense.",
-      "resumo_cards": [
-        {
-          "chave": "itens",
-          "rotulo": "Itens",
-          "valor": 300,
-          "exibicao": "300",
-          "descricao": "Itens publicados no edital"
-        },
-        {
-          "chave": "itens_homologados",
-          "rotulo": "Itens homologados",
-          "valor": 268,
-          "exibicao": "268",
-          "descricao": "Itens empenhados + não empenhados"
-        },
-        {
-          "chave": "itens_empenhados",
-          "rotulo": "Itens empenhados",
-          "valor": 160,
-          "exibicao": "160",
-          "descricao": "Execução acima de 0%"
-        },
-        {
-          "chave": "itens_nao_empenhados",
-          "rotulo": "Itens não empenhados",
-          "valor": 108,
-          "exibicao": "108",
-          "descricao": "Execução igual a 0%, excluídos desertos"
-        },
-        {
-          "chave": "itens_desertos",
-          "rotulo": "Itens desertos",
-          "valor": 32,
-          "exibicao": "32",
-          "descricao": "Valor homologado igual a R$ 0,00"
-        },
-        {
-          "chave": "itens_resultados_pendentes",
-          "rotulo": "Resultados pendentes",
-          "valor": 0,
-          "exibicao": "0",
-          "descricao": "Falha ao consultar resultados no PNCP"
-        },
-        {
-          "chave": "valor_estimado",
-          "rotulo": "Valor estimado",
-          "valor": 1244736.1599999997,
-          "exibicao": "R$ 1.244.736,16",
-          "descricao": "Soma dos valores estimados por item"
-        },
-        {
-          "chave": "valor_homologado",
-          "rotulo": "Valor homologado",
-          "valor": 793810.8900000002,
-          "exibicao": "R$ 793.810,89",
-          "descricao": "Soma dos resultados homologados"
-        },
-        {
-          "chave": "empenhado_mapeado",
-          "rotulo": "Empenhado mapeado",
-          "valor": 116776.61000000004,
-          "exibicao": "R$ 116.776,61",
-          "descricao": "38 de 38 registros com detalhamento"
-        }
-      ],
-      "erro": null,
-      "arquivo_html": "relatorio_compra_90168_2025.html"
-    },
-    {
       "id": "10635424000186-2026-115",
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2026/000115",
       "pasta": "processo_10635424000186-2026-115",
@@ -584,54 +501,54 @@
       "arquivo_html": "relatorio_compra_90098_2026.html"
     },
     {
-      "id": "10635424000186-2025-102",
-      "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000102",
-      "pasta": "processo_10635424000186-2025-102",
+      "id": "10635424000186-2026-187",
+      "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2026/187",
+      "pasta": "processo_10635424000186-2026-187",
       "status": "atualizado",
-      "atualizado_em": "2026-11-12T08:58:22-03:00",
+      "atualizado_em": "2026-11-12T09:32:53-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
         "uasg_nome": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
-        "numero_compra": "90275",
-        "ano_compra": 2025,
-        "numero_controle_pncp": "10635424000186-1-000102/2025"
+        "numero_compra": "404",
+        "ano_compra": 2026,
+        "numero_controle_pncp": "10635424000186-1-000187/2026"
       },
-      "objeto": "O objeto da presente licitação é Registro de preço da proposta mais vantajosa para eventual aquisição de Equipamentos, Insumos Agrícolas e Sementes para atender as necessidades do Instituto Federal Catarinense – Campus Camboriú, Campus Abelardo Luz, Campus Araquari, Campus Concórdia, Campus Luzerna, Campus Rio do Sul, Campus Santa rosa do Sul e Campus Videira e demais órgãos participantes conforme condições, quantidades e exigências estabelecidas neste Edital e seus anexos.",
+      "objeto": "Eventual aquisição de materiais e equipamentos para atendimento dos projetos contemplados no Edital Interno nº 10/2025 - Revitalização de Espaços Didáticos do IFC - Videira",
       "resumo_cards": [
         {
           "chave": "itens",
           "rotulo": "Itens",
-          "valor": 164,
-          "exibicao": "164",
+          "valor": 64,
+          "exibicao": "64",
           "descricao": "Itens publicados no edital"
         },
         {
           "chave": "itens_homologados",
           "rotulo": "Itens homologados",
-          "valor": 132,
-          "exibicao": "132",
+          "valor": 44,
+          "exibicao": "44",
           "descricao": "Itens empenhados + não empenhados"
         },
         {
           "chave": "itens_empenhados",
           "rotulo": "Itens empenhados",
-          "valor": 113,
-          "exibicao": "113",
+          "valor": 0,
+          "exibicao": "0",
           "descricao": "Execução acima de 0%"
         },
         {
           "chave": "itens_nao_empenhados",
           "rotulo": "Itens não empenhados",
-          "valor": 19,
-          "exibicao": "19",
+          "valor": 44,
+          "exibicao": "44",
           "descricao": "Execução igual a 0%, excluídos desertos"
         },
         {
           "chave": "itens_desertos",
           "rotulo": "Itens desertos",
-          "valor": 32,
-          "exibicao": "32",
+          "valor": 20,
+          "exibicao": "20",
           "descricao": "Valor homologado igual a R$ 0,00"
         },
         {
@@ -644,27 +561,110 @@
         {
           "chave": "valor_estimado",
           "rotulo": "Valor estimado",
-          "valor": 1345524.1000000015,
-          "exibicao": "R$ 1.345.524,10",
+          "valor": 492956.1400000001,
+          "exibicao": "R$ 492.956,14",
           "descricao": "Soma dos valores estimados por item"
         },
         {
           "chave": "valor_homologado",
           "rotulo": "Valor homologado",
-          "valor": 1110394.0899999996,
-          "exibicao": "R$ 1.110.394,09",
+          "valor": 297387.02999999997,
+          "exibicao": "R$ 297.387,03",
           "descricao": "Soma dos resultados homologados"
         },
         {
           "chave": "empenhado_mapeado",
           "rotulo": "Empenhado mapeado",
-          "valor": 261730.41999999987,
-          "exibicao": "R$ 261.730,42",
-          "descricao": "114 de 114 registros com detalhamento"
+          "valor": 0.0,
+          "exibicao": "R$ 0,00",
+          "descricao": "0 de 0 registros com detalhamento"
         }
       ],
       "erro": null,
-      "arquivo_html": "relatorio_compra_90275_2025.html"
+      "arquivo_html": "relatorio_compra_404_2026.html"
+    },
+    {
+      "id": "10635424000186-2026-197",
+      "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2026/197",
+      "pasta": "processo_10635424000186-2026-197",
+      "status": "atualizado",
+      "atualizado_em": "2026-11-12T09:47:49-03:00",
+      "chaves_integracao": {
+        "cnpj_orgao": "10635424000186",
+        "uasg_codigo": "158125",
+        "uasg_nome": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "numero_compra": "418",
+        "ano_compra": 2026,
+        "numero_controle_pncp": "10635424000186-1-000197/2026"
+      },
+      "objeto": "Eventual aquisição de materiais e equipamentos para melhorias na infraestrutura e implantação de laboratório maker e de matemática no IFC - Campus Videira",
+      "resumo_cards": [
+        {
+          "chave": "itens",
+          "rotulo": "Itens",
+          "valor": 59,
+          "exibicao": "59",
+          "descricao": "Itens publicados no edital"
+        },
+        {
+          "chave": "itens_homologados",
+          "rotulo": "Itens homologados",
+          "valor": 42,
+          "exibicao": "42",
+          "descricao": "Itens empenhados + não empenhados"
+        },
+        {
+          "chave": "itens_empenhados",
+          "rotulo": "Itens empenhados",
+          "valor": 0,
+          "exibicao": "0",
+          "descricao": "Execução acima de 0%"
+        },
+        {
+          "chave": "itens_nao_empenhados",
+          "rotulo": "Itens não empenhados",
+          "valor": 42,
+          "exibicao": "42",
+          "descricao": "Execução igual a 0%, excluídos desertos"
+        },
+        {
+          "chave": "itens_desertos",
+          "rotulo": "Itens desertos",
+          "valor": 17,
+          "exibicao": "17",
+          "descricao": "Valor homologado igual a R$ 0,00"
+        },
+        {
+          "chave": "itens_resultados_pendentes",
+          "rotulo": "Resultados pendentes",
+          "valor": 0,
+          "exibicao": "0",
+          "descricao": "Falha ao consultar resultados no PNCP"
+        },
+        {
+          "chave": "valor_estimado",
+          "rotulo": "Valor estimado",
+          "valor": 481155.99000000005,
+          "exibicao": "R$ 481.155,99",
+          "descricao": "Soma dos valores estimados por item"
+        },
+        {
+          "chave": "valor_homologado",
+          "rotulo": "Valor homologado",
+          "valor": 241373.11000000002,
+          "exibicao": "R$ 241.373,11",
+          "descricao": "Soma dos resultados homologados"
+        },
+        {
+          "chave": "empenhado_mapeado",
+          "rotulo": "Empenhado mapeado",
+          "valor": 0.0,
+          "exibicao": "R$ 0,00",
+          "descricao": "0 de 0 registros com detalhamento"
+        }
+      ],
+      "erro": null,
+      "arquivo_html": "relatorio_compra_418_2026.html"
     }
   ]
 }

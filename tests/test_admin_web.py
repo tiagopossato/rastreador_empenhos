@@ -73,13 +73,19 @@ class AdminWebTests(unittest.TestCase):
     def test_dashboard_requires_login_and_password_is_verified_from_hash(self):
         public_index = self.client.get("/")
         self.assertEqual(public_index.status_code, 200)
-        self.assertIn("public, max-age=60", public_index.headers["Cache-Control"])
+        self.assertEqual(
+            public_index.headers["Cache-Control"],
+            "no-cache, must-revalidate",
+        )
         self.assertIn('href="/login" target="_blank"', public_index.get_data(as_text=True))
         report = self.client.get(
             "/relatorio_compra_90027_2025/relatorio_compra_90027_2025.html"
         )
         self.assertEqual(report.status_code, 200)
-        self.assertIn("public, max-age=60", report.headers["Cache-Control"])
+        self.assertEqual(
+            report.headers["Cache-Control"],
+            "no-cache, must-revalidate",
+        )
         self.assertIn("Relatório público", report.get_data(as_text=True))
         report.close()
         self.assertEqual(
@@ -109,14 +115,17 @@ class AdminWebTests(unittest.TestCase):
     def test_crud_is_csrf_protected_and_delete_preserves_archive(self):
         response = self._login()
         token = self._csrf(response)
-        added = self.client.post(
-            "/processes",
-            data={"csrf_token": token, "url_pncp": _URL},
-            follow_redirects=True,
-        )
+        with patch("admin_web.app._start_job", return_value="job-1") as start:
+            added = self.client.post(
+                "/processes",
+                data={"csrf_token": token, "url_pncp": _URL},
+                follow_redirects=True,
+            )
         self.assertIn("Processo cadastrado.", added.get_data(as_text=True))
+        self.assertNotIn("Abrir relatório gerado", added.get_data(as_text=True))
         record = ler_registros(self.index_path)[0]
         self.assertEqual(record["status"], "pendente")
+        start.assert_called_once_with(self.app, "one", _URL)
 
         archived_dir = self.reports_dir / "historico"
         archived_dir.mkdir()
@@ -136,10 +145,36 @@ class AdminWebTests(unittest.TestCase):
         self.assertEqual(ler_registros(self.index_path), [])
         self.assertTrue(archive_file.exists())
 
+    def test_admin_lists_a_link_to_an_existing_generated_report(self):
+        salvar_registros(
+            [
+                {
+                    "id": "processo-teste",
+                    "url_pncp": _URL,
+                    "pasta": "relatorio_compra_90027_2025",
+                    "arquivo_html": "relatorio_compra_90027_2025.html",
+                    "status": "atualizado",
+                }
+            ],
+            self.index_path,
+        )
+
+        page = self._login()
+
+        self.assertIn(
+            'href="/relatorio_compra_90027_2025/relatorio_compra_90027_2025.html"',
+            page.get_data(as_text=True),
+        )
+        self.assertIn("Abrir relatório gerado", page.get_data(as_text=True))
+
     def test_refresh_action_starts_a_background_update(self):
         response = self._login()
         token = self._csrf(response)
-        self.client.post("/processes", data={"csrf_token": token, "url_pncp": _URL})
+        with patch("admin_web.app._start_job", return_value="job-add"):
+            self.client.post(
+                "/processes",
+                data={"csrf_token": token, "url_pncp": _URL},
+            )
         record = ler_registros(self.index_path)[0]
         with patch("admin_web.app._start_job", return_value="job-1") as start:
             result = self.client.post(

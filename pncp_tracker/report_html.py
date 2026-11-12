@@ -3,6 +3,7 @@ import re
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional
+from urllib.parse import urlsplit
 
 
 _BRAZIL_TIMEZONE = timezone(timedelta(hours=-3))
@@ -27,6 +28,33 @@ def _quantidade_empenhada(valor: Any, valor_unitario: Optional[float]) -> Option
     if valor_numero is None or not valor_unitario:
         return None
     return valor_numero / valor_unitario
+
+
+def _data_homologacao(valor: Any) -> Optional[str]:
+    if not valor:
+        return None
+    texto = str(valor)
+    try:
+        return datetime.fromisoformat(texto.replace("Z", "+00:00")).strftime("%d/%m/%Y")
+    except ValueError:
+        return texto
+
+
+def _url_ata(resultado: Dict[str, Any]) -> Optional[str]:
+    url = resultado.get("urlAta") or resultado.get("linkAta")
+    if not isinstance(url, str):
+        return None
+    parsed = urlsplit(url)
+    if (
+        parsed.scheme != "https"
+        or not parsed.hostname
+        or not (
+            parsed.hostname == "pncp.gov.br"
+            or parsed.hostname.endswith(".pncp.gov.br")
+        )
+    ):
+        return None
+    return url
 
 
 def _preparar_relatorio(
@@ -139,6 +167,10 @@ def _preparar_relatorio(
                         "quantidade": _numero(resultado.get("quantidadeHomologada")),
                         "valor_unitario": _numero(resultado.get("valorUnitarioHomologado")),
                         "valor_total": _numero(resultado.get("valorTotalHomologado")),
+                        "data_homologacao": _data_homologacao(
+                            resultado.get("dataResultado")
+                        ),
+                        "url_ata": _url_ata(resultado),
                     }
                     for resultado in resultados
                 ],
@@ -231,7 +263,7 @@ _HTML = r"""<!doctype html>
     <div class="eyebrow">Compras públicas · Relatório de execução</div>
     <h1 id="title">Relatório da contratação</h1>
     <p id="object"></p>
-    <div class="meta"><span id="pncp"></span><span id="org"></span><span id="generated"></span></div>
+    <div class="meta"><span id="pncp"></span><span id="org"></span><span id="generated"></span><a href="../">Página inicial</a></div>
   </header>
   <section class="cards" id="cards"></section>
   <div class="note" id="collection-warning" hidden></div>
@@ -384,7 +416,7 @@ document.getElementById('cards').innerHTML=cards.map(c=>`<div class="card"><div 
 const tbody=document.getElementById('items');
 let selectedItemFilter='todos';
 function detailHtml(i){
- const suppliers=(i.resultados||[]).map(r=>`<div class="detail-box"><h3>${esc(r.fornecedor||'Fornecedor não informado')}</h3><p>CNPJ: ${esc(r.cnpj||'—')}</p><p>Quantidade homologada: ${fmtQty(r.quantidade)} ${esc(i.unidade)}</p><p>Preço unitário: ${fmtMoney(r.valor_unitario)} · Total: ${fmtMoney(r.valor_total)}</p></div>`).join('')||'<div class="detail-box">Sem resultado homologado publicado.</div>';
+ const suppliers=(i.resultados||[]).map(r=>`<div class="detail-box"><h3>${esc(r.fornecedor||'Fornecedor não informado')}</h3><p>CNPJ: ${esc(r.cnpj||'—')}</p><p>Data da homologação: ${esc(r.data_homologacao||'—')}</p><p>Quantidade homologada: ${fmtQty(r.quantidade)} ${esc(i.unidade)}</p><p>Preço unitário: ${fmtMoney(r.valor_unitario)} · Total: ${fmtMoney(r.valor_total)}</p>${r.url_ata?`<p><a href="${esc(r.url_ata)}" target="_blank" rel="noopener noreferrer">Ata de registro de preços</a></p>`:''}</div>`).join('')||'<div class="detail-box">Sem resultado homologado publicado.</div>';
  const emps=(i.empenhos||[]).map(e=>`<tr><td>${esc(e.numero)}</td><td>${esc(e.unidade_gestora_codigo||'—')}</td><td>${esc(e.unidade_gestora_nome||'—')}</td><td>${esc(e.data||'—')}</td><td>${esc(e.fornecedor||'—')}</td><td data-sort-value="${esc(e.valor)}">${fmtMoney(e.valor)}</td><td data-sort-value="${esc(e.quantidade_estimada)}">${fmtQty(e.quantidade_estimada)} ${esc(i.unidade)}</td><td>${esc(e.descricao||'—')}</td><td>${e.codigo_documento?`<a href="https://portaldatransparencia.gov.br/despesas/empenho/${encodeURIComponent(e.codigo_documento)}" target="_blank" rel="noopener noreferrer">Abrir</a>`:'—'}</td></tr>`).join('');
  const candidates=[...(i.candidatos_sem_item||[]),...(i.candidatos_fornecedor_divergente||[])];
  return `<div class="detail-grid"><div><h3>Resultado(s) homologado(s)</h3>${suppliers}</div><div><h3>Empenhos vinculados ao item</h3>${emps?`<div class="table-wrap"><table class="detail-table"><thead><tr><th>Empenho</th><th>UASG</th><th>Unidade</th><th>Emissão</th><th>Fornecedor</th><th>Valor da linha</th><th>Qtd. estimada</th><th>Descrição do item no empenho</th><th>Portal</th></tr></thead><tbody>${emps}</tbody></table></div>`:'<div class="detail-box">Nenhum empenho com item e fornecedor compatíveis.</div>'}</div></div>${candidates.length?`<div class="note"><strong>Não contabilizados:</strong> ${candidates.map(x=>esc(x.numero_empenho)).join(', ')} — sem correspondência suficiente para este item.</div>`:''}`;

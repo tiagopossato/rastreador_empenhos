@@ -294,7 +294,7 @@ def create_app(config: Optional[Dict[str, Any]] = None) -> Flask:
             and (request.path == "/" or request.path.lower().endswith(".html"))
         )
         response.headers["Cache-Control"] = (
-            "public, max-age=60" if is_public_html else "no-store"
+            "no-cache, must-revalidate" if is_public_html else "no-store"
         )
         return response
 
@@ -383,9 +383,10 @@ def create_app(config: Optional[Dict[str, Any]] = None) -> Flask:
         url = request.form.get("url_pncp", "")
         index_path = Path(app.config["INDEX_PATH"])
         lock_path = lock_path_for(index_path)
+        registro = None
         with interprocess_lock(lock_path):
             try:
-                adicionar_registro(url, index_path)
+                registro = adicionar_registro(url, index_path)
             except ValueError as exc:
                 flash(str(exc), "error")
             else:
@@ -395,7 +396,16 @@ def create_app(config: Optional[Dict[str, Any]] = None) -> Flask:
                     Path(app.config["REPORTS_DIR"]),
                     index_path=index_path,
                 )
-                flash("Processo cadastrado. Execute a atualização para gerar o relatório.", "success")
+        if registro is not None:
+            job_id = _start_job(app, "one", registro["url_pncp"])
+            if job_id is None:
+                flash(
+                    "Processo cadastrado, mas já existe uma atualização em andamento. "
+                    "Atualize este processo depois.",
+                    "warning",
+                )
+            else:
+                flash("Processo cadastrado. Atualização iniciada.", "success")
         return redirect(url_for("index"))
 
     @app.post("/processes/<process_id>/delete")

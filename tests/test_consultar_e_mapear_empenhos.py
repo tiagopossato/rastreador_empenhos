@@ -320,6 +320,8 @@ class ConsultarEMapearEmpenhosTests(unittest.TestCase):
                                 "quantidadeHomologada": 15,
                                 "valorUnitarioHomologado": 404.9,
                                 "valorTotalHomologado": 6073.5,
+                                "dataResultado": "2026-02-03",
+                                "urlAta": "https://pncp.gov.br/app/atas/12345678000199/2026/1",
                             }
                         ],
                         "empenhos": [
@@ -344,6 +346,14 @@ class ConsultarEMapearEmpenhosTests(unittest.TestCase):
 
         self.assertEqual(report["valor_empenhado_mapeado"], 2024.5)
         self.assertEqual(report["itens"][0]["quantidade_empenhada_estimada"], 5)
+        self.assertEqual(
+            report["itens"][0]["resultados"][0]["data_homologacao"],
+            "03/02/2026",
+        )
+        self.assertEqual(
+            report["itens"][0]["resultados"][0]["url_ata"],
+            "https://pncp.gov.br/app/atas/12345678000199/2026/1",
+        )
         self.assertEqual(
             report["itens"][0]["empenhos"][0]["unidade_gestora_codigo"],
             "158379",

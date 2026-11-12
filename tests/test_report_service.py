@@ -1,4 +1,5 @@
 import json
+import re
 import tempfile
 import unittest
 from pathlib import Path
@@ -42,12 +43,33 @@ class ReportServiceTests(unittest.TestCase):
         self.temp_dir.cleanup()
 
     def test_update_persists_both_datasets_metadata_html_and_registry_summary(self):
+        resultado_etapa2 = dict(self.result)
+        resultado_etapa2["itens_mapeados"] = [
+            {
+                "numero_item": 1,
+                "descricao": "Item de teste",
+                "valor_total_estimado": 100,
+                "valor_total_homologado": 90,
+                "quantidade_homologada": 1,
+                "resultados": [
+                    {
+                        "nomeRazaoSocialFornecedor": "Fornecedor",
+                        "niFornecedor": "12345678000199",
+                        "dataResultado": "2026-10-19",
+                        "quantidadeHomologada": 1,
+                        "valorUnitarioHomologado": 90,
+                        "valorTotalHomologado": 90,
+                    }
+                ],
+                "empenhos": [],
+            }
+        ]
         with patch(
             "pncp_tracker.report_service.baixar_dados_compra_pncp",
             return_value=self.purchase,
         ), patch(
             "pncp_tracker.report_service.consultar_e_mapear_empenhos",
-            return_value=self.result,
+            return_value=resultado_etapa2,
         ):
             result = atualizar_processo(
                 self.url,
@@ -66,6 +88,19 @@ class ReportServiceTests(unittest.TestCase):
         self.assertEqual(metadata["url_pncp"], self.url)
         self.assertTrue(metadata["criado_em"])
         self.assertTrue(metadata["atualizado_em"])
+        html = result["caminho_relatorio"].read_text(encoding="utf-8")
+        embedded = re.search(
+            r'<script id="report-data" type="application/json">(.*?)</script>',
+            html,
+            re.DOTALL,
+        )
+        self.assertIsNotNone(embedded)
+        report = json.loads(embedded.group(1))
+        self.assertEqual(
+            report["itens"][0]["resultados"][0]["data_homologacao"],
+            "19/10/2026",
+        )
+        self.assertIn("Data da homologação:", html)
 
     def test_update_forwards_progress_messages_from_both_collection_stages(self):
         mensagens = []

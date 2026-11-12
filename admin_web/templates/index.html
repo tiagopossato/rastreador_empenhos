@@ -64,7 +64,7 @@
       </div>
       <button type="submit">Adicionar à lista</button>
     </form>
-    <p class="muted">O cadastro não inicia consultas. Use uma ação de atualização ou aguarde o cron.</p>
+    <p class="muted">Ao cadastrar, a atualização é iniciada automaticamente. Se outra atualização estiver em andamento, será preciso atualizar depois.</p>
   </section>
 
   <section class="panel">
@@ -96,6 +96,9 @@
           <tr>
             <td class="url"><a href="{{ record.url_pncp }}" target="_blank" rel="noopener noreferrer">{{ record.url_pncp }}</a>
               {% if record.objeto %}<div class="muted">{{ record.objeto }}</div>{% endif %}
+              {% if record.pasta and record.arquivo_html %}
+                <div><a href="{{ url_for('public_report', filename=record.pasta ~ '/' ~ record.arquivo_html) }}" target="_blank" rel="noopener noreferrer">Abrir relatório gerado</a></div>
+              {% endif %}
             </td>
             <td>{{ record.status or 'pendente' }}{% if record.erro %}<div class="muted">{{ record.erro }}</div>{% endif %}</td>
             <td>{{ record.atualizado_em or '—' }}</td>

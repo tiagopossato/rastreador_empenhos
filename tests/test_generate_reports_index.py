@@ -140,9 +140,11 @@ class GenerateReportsIndexTests(unittest.TestCase):
                 / "relatorio_compra_90026_2025"
                 / "relatorio_compra_90026_2025.html"
             )
+            report_html = report_path.read_text(encoding="utf-8")
+            self.assertIn('<a href="../">Página inicial</a>', report_html)
             embedded = re.search(
                 r'<script id="report-data" type="application/json">(.*?)</script>',
-                report_path.read_text(encoding="utf-8"),
+                report_html,
                 re.DOTALL,
             )
             self.assertIsNotNone(embedded)
