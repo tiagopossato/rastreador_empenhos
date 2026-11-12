@@ -1,0 +1,151 @@
+{
+  "quantidade_relatorios": 2,
+  "relatorios": [
+    {
+      "pasta": "relatorio_compra_90027_2025",
+      "arquivo_html": "relatorio_compra_90027_2025.html",
+      "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000272",
+      "atualizado_em": "2026-11-12T06:12:13-03:00",
+      "chaves_integracao": {
+        "cnpj_orgao": "10635424000186",
+        "uasg_codigo": "158125",
+        "uasg_nome": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "numero_compra": "90027",
+        "ano_compra": 2025,
+        "numero_controle_pncp": "10635424000186-1-000272/2025"
+      },
+      "objeto": "Eventual aquisição de materiais de construção civil para atender às necessidades dos diversos Campi do Instituto Federal Catarinense.",
+      "resumo_cards": [
+        {
+          "chave": "itens",
+          "rotulo": "Itens",
+          "valor": 239,
+          "exibicao": "239",
+          "descricao": "Itens publicados no edital"
+        },
+        {
+          "chave": "itens_homologados",
+          "rotulo": "Itens homologados",
+          "valor": 149,
+          "exibicao": "149",
+          "descricao": "Itens empenhados + não empenhados"
+        },
+        {
+          "chave": "itens_empenhados",
+          "rotulo": "Itens empenhados",
+          "valor": 82,
+          "exibicao": "82",
+          "descricao": "Execução acima de 0%"
+        },
+        {
+          "chave": "itens_nao_empenhados",
+          "rotulo": "Itens não empenhados",
+          "valor": 67,
+          "exibicao": "67",
+          "descricao": "Execução igual a 0%, excluídos desertos"
+        },
+        {
+          "chave": "itens_desertos",
+          "rotulo": "Itens desertos",
+          "valor": 90,
+          "exibicao": "90",
+          "descricao": "Valor homologado igual a R$ 0,00"
+        },
+        {
+          "chave": "valor_estimado",
+          "rotulo": "Valor estimado",
+          "valor": 2167750.559999999,
+          "exibicao": "R$ 2.167.750,56",
+          "descricao": "Soma dos valores estimados por item"
+        },
+        {
+          "chave": "valor_homologado",
+          "rotulo": "Valor homologado",
+          "valor": 1430574.3400000003,
+          "exibicao": "R$ 1.430.574,34",
+          "descricao": "Soma dos resultados homologados"
+        },
+        {
+          "chave": "empenhado_mapeado",
+          "rotulo": "Empenhado mapeado",
+          "valor": 81310.41,
+          "exibicao": "R$ 81.310,41",
+          "descricao": "71 de 72 registros com detalhamento"
+        }
+      ]
+    },
+    {
+      "pasta": "relatorio_compra_90059_2025",
+      "arquivo_html": "relatorio_compra_90059_2025.html",
+      "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000282",
+      "atualizado_em": "2026-11-12T06:09:10-03:00",
+      "chaves_integracao": {
+        "cnpj_orgao": "10635424000186",
+        "uasg_codigo": "158125",
+        "uasg_nome": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "numero_compra": "90059",
+        "ano_compra": 2025,
+        "numero_controle_pncp": "10635424000186-1-000282/2025"
+      },
+      "objeto": "Registro de preços para eventual aquisição de materiais e equipamentos elétricos e eletrônicos para atender as necessidades do Instituto Federal Catarinense – Campus Avançado Abelardo Luz, Campus Araquari, Campus Blumenau, Campus Brusque, Campus Camboriú, Campus Concórdia, Campus Fraiburgo, Campus Ibirama, Campus Luzerna, Campus Rio do Sul, Campus Santa Rosa do Sul, Campus Sombrio, Campus São Bento do Sul, Campus São Francisco do Sul e Campus Videira, conforme condições do Edital.",
+      "resumo_cards": [
+        {
+          "chave": "itens",
+          "rotulo": "Itens",
+          "valor": 360,
+          "exibicao": "360",
+          "descricao": "Itens publicados no edital"
+        },
+        {
+          "chave": "itens_homologados",
+          "rotulo": "Itens homologados",
+          "valor": 329,
+          "exibicao": "329",
+          "descricao": "Itens empenhados + não empenhados"
+        },
+        {
+          "chave": "itens_empenhados",
+          "rotulo": "Itens empenhados",
+          "valor": 214,
+          "exibicao": "214",
+          "descricao": "Execução acima de 0%"
+        },
+        {
+          "chave": "itens_nao_empenhados",
+          "rotulo": "Itens não empenhados",
+          "valor": 115,
+          "exibicao": "115",
+          "descricao": "Execução igual a 0%, excluídos desertos"
+        },
+        {
+          "chave": "itens_desertos",
+          "rotulo": "Itens desertos",
+          "valor": 31,
+          "exibicao": "31",
+          "descricao": "Valor homologado igual a R$ 0,00"
+        },
+        {
+          "chave": "valor_estimado",
+          "rotulo": "Valor estimado",
+          "valor": 3960004.32,
+          "exibicao": "R$ 3.960.004,32",
+          "descricao": "Soma dos valores estimados por item"
+        },
+        {
+          "chave": "valor_homologado",
+          "rotulo": "Valor homologado",
+          "valor": 2621910.779999997,
+          "exibicao": "R$ 2.621.910,78",
+          "descricao": "Soma dos resultados homologados"
+        },
+        {
+          "chave": "empenhado_mapeado",
+          "rotulo": "Empenhado mapeado",
+          "valor": 215541.03000000003,
+          "exibicao": "R$ 215.541,03",
+          "descricao": "110 de 110 registros com detalhamento"
+        }
+      ]
+    }
+  ]
+}

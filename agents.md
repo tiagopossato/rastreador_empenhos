@@ -23,8 +23,8 @@ Este repositório contém a aplicação Python `rastreador_empenhos`, que coleta
 - `pncp_tracker/empenhos.py`: models e processamento de empenhos.
 - `pncp_tracker/consultar_e_mapear_empenhos.py`: consulta os empenhos, enriquece com os detalhes do Portal da Transparência e mapeia os registros aos itens da compra.
 - `pncp_tracker/report_html.py`: gera o relatório HTML final.
-- `generate_reports_index.py`: gera o índice dos relatórios existentes em `relatorios/`.
-- `relatorios/`: saída dos relatórios HTML publicados no GitHub Pages.
+- `relatorios/gerar_relatorios.py`: regenera os HTMLs individuais e os índices JSON/HTML a partir dos dados persistidos.
+- `relatorios/`: índice e pastas individuais com HTML, JSONs das duas etapas e metadados.
 - `tests/`: testes automatizados.
 
 ## Configuração e requisitos
@@ -55,13 +55,13 @@ python main.py "https://pncp.gov.br/app/editais/10635424000186/2025/187"
 
 A URL pode também ser informada interativamente quando omitida na linha de comando. A aplicação rejeita URLs vazias ou fora do formato `/editais/{cnpj}/{ano}/{sequencial}` antes de iniciar as consultas.
 
-Opções úteis:
+Os JSONs das etapas são preservados na pasta do relatório junto com o HTML e os metadados. Para regenerar os HTMLs e índices sem consultar as APIs:
 
 ```bash
-python main.py "https://pncp.gov.br/app/editais/10635424000186/2025/187" --manter-json
+python relatorios/gerar_relatorios.py
 ```
 
-A flag `--manter-json` (ou `--manterJSON`) preserva os arquivos intermediários `etapa1_dados_compra.json` e `etapa2_empenhos.json`.
+O índice `relatorios/index.html` resume cada processo em uma linha; `relatorios/indice_relatorios.json` contém os mesmos dados em formato estruturado.
 
 ## Testes
 

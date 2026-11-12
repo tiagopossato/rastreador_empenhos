@@ -2,13 +2,13 @@ import argparse
 import json
 import re
 import sys
+from datetime import datetime
 from pathlib import Path
 from typing import Optional, Sequence
 
-from generate_reports_index import gerar_index_relatorios
+from generate_reports_index import gerar_relatorios
 from pncp_tracker.collector import baixar_dados_compra_pncp
 from pncp_tracker.consultar_e_mapear_empenhos import consultar_e_mapear_empenhos
-from pncp_tracker.report_html import gerar_relatorio_html
 from pncp_tracker.url_parser import extrair_parametros_url
 
 
@@ -38,15 +38,10 @@ def _obter_url_pncp(url: Optional[str], input_fn=input) -> str:
     return url
 
 
-def _finalizar_jsons(caminhos_json: Sequence[Path], manter_json: bool) -> None:
-    if manter_json:
-        for caminho in caminhos_json:
-            print(f"JSON mantido: {caminho}")
-        return
-
-    for caminho in caminhos_json:
-        caminho.unlink()
-    print("Arquivos JSON temporários removidos.")
+def _escrever_json(caminho: Path, dados: dict) -> None:
+    with caminho.open("w", encoding="utf-8", newline="\n") as arquivo:
+        json.dump(dados, arquivo, indent=2, ensure_ascii=False)
+        arquivo.write("\n")
 
 
 def main(argv: Optional[Sequence[str]] = None) -> None:
@@ -55,13 +50,6 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
         "url_pncp",
         nargs="?",
         help="Link do edital no PNCP. Se omitido, será solicitado no terminal.",
-    )
-    parser.add_argument(
-        "--manter-json",
-        "--manterJSON",
-        dest="manter_json",
-        action="store_true",
-        help="Preserva os arquivos JSON da coleta após gerar o relatório.",
     )
     args = parser.parse_args(argv)
     try:
@@ -83,29 +71,45 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
             primeiro_item = dados_compra["itens"][0]
             print(f"Exemplo Item 1: {primeiro_item.get('descricao', '')[:80]}...")
 
-        caminho_etapa1 = pasta_projeto / "etapa1_dados_compra.json"
-        caminho_etapa1.write_text(
-            json.dumps(dados_compra, indent=2, ensure_ascii=False),
-            encoding="utf-8",
+        pasta_relatorios = pasta_projeto / "relatorios"
+        nome_arquivo_relatorio = _nome_arquivo_relatorio(
+            dados_compra["chaves_integracao"]
         )
+        pasta_relatorio = pasta_relatorios / Path(nome_arquivo_relatorio).stem
+        pasta_relatorio.mkdir(parents=True, exist_ok=True)
+
+        caminho_etapa1 = pasta_relatorio / "dados_pregao.json"
+        _escrever_json(caminho_etapa1, dados_compra)
         print(f"Dados da etapa 1 salvos em: {caminho_etapa1}")
 
         print("\n=== ETAPA 2: EMPENHOS E RELATÓRIO ===")
         resultado_etapa2 = consultar_e_mapear_empenhos(url_pncp, dados_compra=dados_compra)
-        caminho_etapa2 = pasta_projeto / "etapa2_empenhos.json"
-        caminho_etapa2.write_text(
-            json.dumps(resultado_etapa2, indent=2, ensure_ascii=False),
-            encoding="utf-8",
+        caminho_etapa2 = pasta_relatorio / "dados_empenhos.json"
+        _escrever_json(caminho_etapa2, resultado_etapa2)
+        caminho_metadados = pasta_relatorio / "metadados.json"
+        if caminho_metadados.exists():
+            metadados = json.loads(caminho_metadados.read_text(encoding="utf-8"))
+            if not isinstance(metadados, dict):
+                raise ValueError("Os metadados existentes do relatório são inválidos.")
+        else:
+            metadados = {}
+
+        agora = datetime.now().astimezone().isoformat(timespec="seconds")
+        metadados.update(
+            {
+                "schema_version": 1,
+                "url_pncp": url_pncp,
+                "criado_em": metadados.get("criado_em") or agora,
+                "atualizado_em": agora,
+                "chaves_integracao": resultado_etapa2.get("chaves_integracao")
+                or dados_compra.get("chaves_integracao", {}),
+                "arquivo_html": nome_arquivo_relatorio,
+            }
         )
-        pasta_relatorios = pasta_projeto / "relatorios"
-        pasta_relatorios.mkdir(parents=True, exist_ok=True)
-        caminho_relatorio = gerar_relatorio_html(
-            resultado_etapa2,
-            pasta_relatorios
-            / _nome_arquivo_relatorio(resultado_etapa2["chaves_integracao"]),
-        )
-        caminho_index = gerar_index_relatorios(pasta_relatorios)
-        _finalizar_jsons((caminho_etapa1, caminho_etapa2), args.manter_json)
+        _escrever_json(caminho_metadados, metadados)
+
+        caminho_index = gerar_relatorios(pasta_relatorios)
+        caminho_relatorio = pasta_relatorio / nome_arquivo_relatorio
 
         print(f"Status: {resultado_etapa2['status']}")
         print(resultado_etapa2.get("mensagem", ""))

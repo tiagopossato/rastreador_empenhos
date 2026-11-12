@@ -450,5 +450,6 @@ def gerar_relatorio_html(dados: Dict[str, Any], caminho_saida: Path) -> Path:
     conteudo_json = conteudo_json.replace("</", "<\\/")
     html = _HTML.replace("__REPORT_DATA__", conteudo_json)
     caminho_saida = Path(caminho_saida)
-    caminho_saida.write_text(html, encoding="utf-8")
+    with caminho_saida.open("w", encoding="utf-8", newline="\n") as arquivo:
+        arquivo.write(html)
     return caminho_saida

@@ -5,31 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Relatórios de empenhos</title>
   <style>
-    body { font: 16px/1.5 system-ui, sans-serif; margin: 0 auto; max-width: 960px; padding: 2rem 1rem; color: #172033; background: #f5f7fb; }
+    :root { color-scheme: light; --ink: #172033; --muted: #526078; --line: #dce3ee; --blue: #1456a0; }
+    * { box-sizing: border-box; }
+    body { font: 15px/1.5 system-ui, sans-serif; margin: 0 auto; max-width: 1500px; padding: 2rem 1rem; color: var(--ink); background: #f5f7fb; }
     h1 { margin-bottom: .25rem; }
-    p { color: #526078; }
-    ul { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; list-style: none; padding: 0; }
-    .card { background: white; border: 1px solid #dce3ee; border-radius: .75rem; padding: 1.25rem; }
-    .card a { color: #1456a0; text-decoration: none; }
-    .card a:hover, .card a:focus { text-decoration: underline; }
-    h2 { font-size: 1.1rem; margin: 0 0 .65rem; }
-    .card p { margin: 0; }
-    .empty { color: #526078; padding: 1rem 0; }
+    .intro { color: var(--muted); margin-top: 0; }
+    .table-wrap { overflow-x: auto; }
+    table { border-collapse: separate; border-spacing: 0 .75rem; width: 100%; min-width: 900px; }
+    th { text-align: left; padding: .5rem .75rem; color: var(--muted); font-size: .8rem; }
+    td { vertical-align: top; background: white; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 1rem .75rem; }
+    td:first-child { border-left: 1px solid var(--line); border-radius: .75rem 0 0 .75rem; min-width: 145px; }
+    td:last-child { border-right: 1px solid var(--line); border-radius: 0 .75rem .75rem 0; white-space: nowrap; min-width: 145px; }
+    .report-link { color: var(--blue); font-weight: 700; text-decoration: none; }
+    .report-link:hover, .report-link:focus { text-decoration: underline; }
+    td small { display: block; color: var(--muted); font-size: .75rem; margin-top: .35rem; }
+    .metrics { display: grid; grid-template-columns: repeat(4, minmax(120px, 1fr)); gap: .5rem; }
+    .metric { border: 1px solid #e8edf4; border-radius: .5rem; padding: .5rem; }
+    .metric span, .metric small { display: block; color: var(--muted); font-size: .7rem; }
+    .metric strong { display: block; margin: .15rem 0; }
+    .empty { text-align: center; color: var(--muted); padding: 2rem; }
+    @media (max-width: 900px) { .metrics { grid-template-columns: repeat(2, minmax(110px, 1fr)); } }
+    @media (max-width: 600px) { body { padding: 1rem .5rem; } th, td { padding: .65rem .5rem; } }
   </style>
 </head>
 <body>
   <main>
     <h1>Relatórios de empenhos</h1>
-    <p>Selecione uma compra para consultar o relatório completo.</p>
-    <ul>
-<li class="card"><a href="relatorio_compra_90026_2025.html"><h2>Edital nº 90026/2025</h2></a><p>Eventual aquisição de equipamentos de proteção individual e segurança do trabalho para atender às necessidades dos diversos Campi do Instituto Federal Catarinense</p></li>
-<li class="card"><a href="relatorio_compra_90027_2025.html"><h2>Edital nº 90027/2025</h2></a><p>Eventual aquisição de materiais de construção civil para atender às necessidades dos diversos Campi do Instituto Federal Catarinense.</p></li>
-<li class="card"><a href="relatorio_compra_90059_2025.html"><h2>Edital nº 90059/2025</h2></a><p>Registro de preços para eventual aquisição de materiais e equipamentos elétricos e eletrônicos para atender as necessidades do Instituto Federal Catarinense – Campus Avançado Abelardo Luz, Campus Araquari, Campus Blumenau, Campus Brusque, Campus Camboriú, Campus Concórdia, Campus Fraiburgo, Campus Ibirama, Campus Luzerna, Campus Rio do Sul, Campus Santa Rosa do Sul, Campus Sombrio, Campus São Bento do Sul, Campus São Francisco do Sul e Campus Videira, conforme condições do Edital.</p></li>
-<li class="card"><a href="relatorio_compra_90065_2024.html"><h2>Edital nº 90065/2024</h2></a><p>Eventual aquisição de materiais e construção civil para atender às necessidades da Reitoria e Unidades do instituto Federal Catarinense.</p></li>
-<li class="card"><a href="relatorio_compra_90098_2026.html"><h2>Edital nº 90098/2026</h2></a><p>Eventual aquisição de gêneros alimentícios para atender as necessidades do Instituto Federal Catarinense Campus Abelardo Luz, Campus Araquari, Campus Brusque, Campus Camboriú, Campus Concórdia, Campus Fraiburgo, Campus Luzerna, Campus Rio do Sul, Campus Santa Rosa do Sul,  Campus São Bento do Sul, São Francisco do Sul, Campus Sombrio, e Campus Videira.</p></li>
-<li class="card"><a href="relatorio_compra_90149_2026.html"><h2>Edital nº 90149/2026</h2></a><p>Eventual aquisição de FERTILIZANTES E DEFENSIVOS AGRÍCOLAS para atender as necessidades do IFC – Campus Abelardo Luz, Campus Araquari, Campus Camboriú, Campus Concórdia, Campus Luzerna, Campus Rio do Sul, Campus Santa Rosa do Sul, Campus Videira</p></li>
-<li class="card"><a href="relatorio_compra_90168_2025.html"><h2>Edital nº 90168/2025</h2></a><p>Eventual aquisição de materiais e equipamentos de automação para atender as necessidades dos diversos campi do Instituto Federal Catarinense.</p></li>
-    </ul>
+    <p class="intro">Resumo das compras monitoradas. Selecione um edital para abrir o relatório completo.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Processo</th><th>Objeto</th><th>Resumo do pregão</th><th>Última atualização</th></tr></thead>
+        <tbody>
+<tr><td><a class="report-link" href="relatorio_compra_90027_2025/relatorio_compra_90027_2025.html">Edital nº 90027/2025</a><small><a href="https://pncp.gov.br/app/editais/10635424000186/2025/000272" target="_blank" rel="noopener noreferrer">Abrir PNCP</a></small></td><td>Eventual aquisição de materiais de construção civil para atender às necessidades dos diversos Campi do Instituto Federal Catarinense.</td><td><div class="metrics"><div class="metric"><span>Itens</span><strong>239</strong><small>Itens publicados no edital</small></div><div class="metric"><span>Itens homologados</span><strong>149</strong><small>Itens empenhados + não empenhados</small></div><div class="metric"><span>Itens empenhados</span><strong>82</strong><small>Execução acima de 0%</small></div><div class="metric"><span>Itens não empenhados</span><strong>67</strong><small>Execução igual a 0%, excluídos desertos</small></div><div class="metric"><span>Itens desertos</span><strong>90</strong><small>Valor homologado igual a R$ 0,00</small></div><div class="metric"><span>Valor estimado</span><strong>R$ 2.167.750,56</strong><small>Soma dos valores estimados por item</small></div><div class="metric"><span>Valor homologado</span><strong>R$ 1.430.574,34</strong><small>Soma dos resultados homologados</small></div><div class="metric"><span>Empenhado mapeado</span><strong>R$ 81.310,41</strong><small>71 de 72 registros com detalhamento</small></div></div></td><td>2026-11-12T06:12:13-03:00</td></tr>
+<tr><td><a class="report-link" href="relatorio_compra_90059_2025/relatorio_compra_90059_2025.html">Edital nº 90059/2025</a><small><a href="https://pncp.gov.br/app/editais/10635424000186/2025/000282" target="_blank" rel="noopener noreferrer">Abrir PNCP</a></small></td><td>Registro de preços para eventual aquisição de materiais e equipamentos elétricos e eletrônicos para atender as necessidades do Instituto Federal Catarinense – Campus Avançado Abelardo Luz, Campus Araquari, Campus Blumenau, Campus Brusque, Campus Camboriú, Campus Concórdia, Campus Fraiburgo, Campus Ibirama, Campus Luzerna, Campus Rio do Sul, Campus Santa Rosa do Sul, Campus Sombrio, Campus São Bento do Sul, Campus São Francisco do Sul e Campus Videira, conforme condições do Edital.</td><td><div class="metrics"><div class="metric"><span>Itens</span><strong>360</strong><small>Itens publicados no edital</small></div><div class="metric"><span>Itens homologados</span><strong>329</strong><small>Itens empenhados + não empenhados</small></div><div class="metric"><span>Itens empenhados</span><strong>214</strong><small>Execução acima de 0%</small></div><div class="metric"><span>Itens não empenhados</span><strong>115</strong><small>Execução igual a 0%, excluídos desertos</small></div><div class="metric"><span>Itens desertos</span><strong>31</strong><small>Valor homologado igual a R$ 0,00</small></div><div class="metric"><span>Valor estimado</span><strong>R$ 3.960.004,32</strong><small>Soma dos valores estimados por item</small></div><div class="metric"><span>Valor homologado</span><strong>R$ 2.621.910,78</strong><small>Soma dos resultados homologados</small></div><div class="metric"><span>Empenhado mapeado</span><strong>R$ 215.541,03</strong><small>110 de 110 registros com detalhamento</small></div></div></td><td>2026-11-12T06:09:10-03:00</td></tr>
+        </tbody>
+      </table>
+    </div>
   </main>
 </body>
 </html>

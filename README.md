@@ -32,6 +32,14 @@ rastreador_empenhos/
 │   ├── report_html.py
 │   └── url_parser.py
 ├── relatorios/
+│   ├── index.html
+│   ├── indice_relatorios.json
+│   ├── gerar_relatorios.py
+│   └── relatorio_compra_90026_2025/
+│       ├── relatorio_compra_90026_2025.html
+│       ├── dados_pregao.json
+│       ├── dados_empenhos.json
+│       └── metadados.json
 └── tests/
 ```
 
@@ -43,7 +51,8 @@ rastreador_empenhos/
 - `pncp_tracker/empenho_matcher.py` e `empenhos.py`: relacionam empenhos aos itens e fornecedores homologados.
 - `pncp_tracker/consultar_e_mapear_empenhos.py`: consulta os empenhos, enriquece com detalhes do Portal da Transparência e mapeia os registros aos itens da compra.
 - `pncp_tracker/report_html.py`: prepara os dados e gera o relatório HTML.
-- `generate_reports_index.py`: gera o índice HTML dos relatórios existentes em `relatorios/`.
+- `relatorios/gerar_relatorios.py`: regenera os HTMLs individuais, o índice JSON e o índice HTML a partir dos dados persistidos.
+- `generate_reports_index.py`: atalho compatível para executar o gerador de relatórios.
 - `tests/`: testes automatizados do projeto.
 
 ## Requisitos e configuração
@@ -76,13 +85,7 @@ python main.py "https://pncp.gov.br/app/editais/10635424000186/2025/187"
 
 Se a URL for omitida, o programa a solicitará no terminal. Uma URL vazia ou fora do formato `/editais/{cnpj}/{ano}/{sequencial}` é rejeitada antes das consultas.
 
-Por padrão, depois que o relatório é gerado com sucesso, os arquivos intermediários `etapa1_dados_compra.json` e `etapa2_empenhos.json` são removidos. Para mantê-los:
-
-```bash
-python main.py "https://pncp.gov.br/app/editais/10635424000186/2025/187" --manter-json
-```
-
-O alias `--manterJSON` também é aceito. Se a API de Contratos/Empenhos do PNCP retornar HTTP 404 indicando que não há contratos publicados para a compra, a execução continua e gera o relatório sem esses registros. Outros erros HTTP são reportados.
+Os dados das duas etapas são preservados na pasta individual do relatório, sem opção de remoção automática. Se a API de Contratos/Empenhos do PNCP retornar HTTP 404 indicando que não há contratos publicados para a compra, a execução continua e gera o relatório sem esses registros. Outros erros HTTP são reportados.
 
 ## Relatório HTML
 
@@ -104,15 +107,28 @@ O botão **Baixar CSV completo** exporta todos os itens, independentemente dos f
 
 ## Arquivos gerados e testes
 
-O relatório é salvo em `relatorios/relatorio_compra_{numero_compra}_{ano}.html`, por exemplo, `relatorios/relatorio_compra_90026_2025.html`. Relatórios de compras diferentes são preservados; uma nova execução da mesma compra atualiza o arquivo correspondente. Após gerar o relatório, a aplicação também atualiza `relatorios/index.html` com links para os relatórios existentes.
+Cada compra tem sua própria pasta em `relatorios/relatorio_compra_{numero_compra}_{ano}/`, contendo:
+
+- `relatorio_compra_{numero_compra}_{ano}.html`: relatório autônomo, regenerável sem rede;
+- `dados_pregao.json`: dados coletados do edital e itens na primeira etapa;
+- `dados_empenhos.json`: dados enriquecidos e mapeados da segunda etapa;
+- `metadados.json`: URL PNCP, chaves da compra, datas de criação e atualização e resumo derivado dos cards do relatório.
+
+Na raiz de `relatorios/` ficam `index.html`, `indice_relatorios.json`, `gerar_relatorios.py` e as pastas de cada compra. O índice apresenta uma linha por processo com o objeto e os mesmos indicadores dos cards individuais. Ao executar uma coleta da mesma compra, os dados e a data de atualização são substituídos; a data de criação é preservada.
+
+Para recriar os relatórios individuais e os dois índices, sem consultar as APIs:
+
+```bash
+python relatorios/gerar_relatorios.py
+```
 
 ## Publicação no GitHub Pages
 
-O workflow `.github/workflows/pages.yml` gera `relatorios/index.html` com cards para os relatórios presentes — cada card mostra o número/ano do edital e o objeto completo da compra — e publica o conteúdo de `relatorios/` no GitHub Pages em cada push para `main`. Também é possível iniciar a publicação manualmente pela aba **Actions**.
+O workflow `.github/workflows/pages.yml` regenera os relatórios individuais e os índices a partir dos JSONs versionados, e publica o conteúdo de `relatorios/` no GitHub Pages em cada push para `main`. Também é possível iniciar a publicação manualmente pela aba **Actions**.
 
 Para publicar, configure a fonte do GitHub Pages como **GitHub Actions** em **Settings → Pages**. O workflow publica os relatórios HTML que estão versionados; a coleta de novas compras continua sendo feita localmente. Para incluir um novo relatório no site, gere-o e envie o arquivo para o repositório.
 
-Para gerar ou atualizar o índice localmente:
+O mesmo gerador pode ser executado pelo atalho na raiz do projeto:
 
 ```bash
 python generate_reports_index.py
