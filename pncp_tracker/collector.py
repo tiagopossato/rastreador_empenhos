@@ -1,3 +1,4 @@
+import re
 from typing import Callable, Optional
 
 from .api_client import buscar_dados_compra, buscar_resultados_item, listar_itens
@@ -16,7 +17,16 @@ def baixar_dados_compra_pncp(
     sequencial = params["sequencial"]
 
     dados_compra = buscar_dados_compra(cnpj, ano, sequencial)
+    if not isinstance(dados_compra, dict):
+        raise ValueError("Resposta inválida ao consultar o cabeçalho da compra no PNCP.")
+    numero_compra = str(dados_compra.get("numeroCompra") or "").strip()
+    ano_compra = str(dados_compra.get("anoCompra") or "").strip()
+    if not numero_compra.isdigit() or not re.fullmatch(r"\d{4}", ano_compra):
+        raise ValueError(
+            "Cabeçalho da compra incompleto: número e ano da compra são obrigatórios."
+        )
     itens_completos = []
+    erros_resultados_itens = []
     pagina = 1
 
     while True:
@@ -43,8 +53,20 @@ def baixar_dados_compra_pncp(
                 )
             try:
                 item["resultadosHomologados"] = buscar_resultados_item(cnpj, ano, sequencial, num_item)
-            except Exception:
+            except Exception as exc:
                 item["resultadosHomologados"] = []
+                erro = {
+                    "numero_item": num_item,
+                    "erro": "{}: {}".format(type(exc).__name__, exc),
+                }
+                item["erroResultadosHomologados"] = erro["erro"]
+                erros_resultados_itens.append(erro)
+                if on_progress is not None:
+                    on_progress(
+                        "Falha ao consultar resultados homologados do item {}: {}".format(
+                            num_item, erro["erro"]
+                        )
+                    )
 
             itens_completos.append(item)
 
@@ -77,4 +99,5 @@ def baixar_dados_compra_pncp(
         "valor_total_homologado": dados_compra.get("valorTotalHomologado"),
         "quantidade_itens": len(itens_completos),
         "itens": itens_completos,
+        "erros_resultados_itens": erros_resultados_itens,
     }

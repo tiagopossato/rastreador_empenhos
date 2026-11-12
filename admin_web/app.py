@@ -2,11 +2,13 @@ import logging
 import os
 import secrets
 import threading
+import time
 import uuid
+from collections import defaultdict, deque
 from datetime import datetime
 from functools import wraps
 from pathlib import Path
-from typing import Any, Dict, Optional
+from typing import Any, Deque, Dict, Optional, Tuple
 
 from flask import (
     Flask,
@@ -22,6 +24,7 @@ from flask import (
 )
 
 from admin_web.auth import load_users, validate_users_path, verify_password
+from admin_web.auth import hash_password
 from pncp_tracker.report_registry import (
     INDEX_PATH,
     REPORTS_DIR,
@@ -29,16 +32,111 @@ from pncp_tracker.report_registry import (
     ler_registros,
     remover_registro,
 )
-from pncp_tracker.process_lock import interprocess_lock
+from pncp_tracker.process_lock import interprocess_lock, lock_path_for
 
 
 _PROJECT_ROOT = Path(__file__).resolve().parents[1]
 _DEFAULT_USERS_FILE = _PROJECT_ROOT / ".private" / "usuarios.json"
 _LOGGER = logging.getLogger(__name__)
-_JOB_LOCK = threading.Lock()
-_JOBS: Dict[str, Dict[str, Any]] = {}
-_ACTIVE_JOB: Optional[str] = None
-_LATEST_JOB: Optional[str] = None
+
+
+class LoginAttemptLimiter:
+    def __init__(
+        self,
+        max_attempts: int = 5,
+        window_seconds: int = 600,
+        lockout_seconds: int = 600,
+    ) -> None:
+        self.max_attempts = max_attempts
+        self.window_seconds = window_seconds
+        self.lockout_seconds = lockout_seconds
+        self._lock = threading.Lock()
+        self._attempts: Dict[Tuple[str, str], Deque[float]] = defaultdict(deque)
+        self._blocked_until: Dict[Tuple[str, str], float] = {}
+
+    def is_blocked(self, key: Tuple[str, str]) -> bool:
+        now = time.monotonic()
+        with self._lock:
+            blocked_until = self._blocked_until.get(key, 0)
+            if blocked_until <= now:
+                self._blocked_until.pop(key, None)
+                return False
+            return True
+
+    def record_failure(self, key: Tuple[str, str]) -> bool:
+        now = time.monotonic()
+        cutoff = now - self.window_seconds
+        with self._lock:
+            for existing_key, existing_attempts in list(self._attempts.items()):
+                while existing_attempts and existing_attempts[0] <= cutoff:
+                    existing_attempts.popleft()
+                if not existing_attempts:
+                    self._attempts.pop(existing_key, None)
+            for existing_key, blocked_until in list(self._blocked_until.items()):
+                if blocked_until <= now:
+                    self._blocked_until.pop(existing_key, None)
+            if key not in self._attempts and len(self._attempts) >= 10000:
+                self._attempts.pop(next(iter(self._attempts)))
+            attempts = self._attempts[key]
+            attempts.append(now)
+            if len(attempts) >= self.max_attempts:
+                self._blocked_until[key] = now + self.lockout_seconds
+                attempts.clear()
+                return True
+            return False
+
+    def clear(self, key: Tuple[str, str]) -> None:
+        with self._lock:
+            self._attempts.pop(key, None)
+            self._blocked_until.pop(key, None)
+
+
+class JobRegistry:
+    def __init__(self) -> None:
+        self._lock = threading.Lock()
+        self._jobs: Dict[str, Dict[str, Any]] = {}
+        self._active_job: Optional[str] = None
+        self._latest_job: Optional[str] = None
+
+    def create(self, action: str, url: Optional[str]) -> Optional[str]:
+        with self._lock:
+            if self._active_job is not None:
+                return None
+            job_id = uuid.uuid4().hex
+            self._active_job = job_id
+            self._jobs[job_id] = {
+                "id": job_id,
+                "status": "executando",
+                "acao": action,
+                "iniciado_em": datetime.now().astimezone().isoformat(timespec="seconds"),
+            }
+            self._latest_job = job_id
+            while len(self._jobs) > 20:
+                oldest = next(iter(self._jobs))
+                if oldest == self._active_job:
+                    break
+                self._jobs.pop(oldest)
+            return job_id
+
+    def update(self, job_id: str, values: Dict[str, Any]) -> None:
+        with self._lock:
+            if job_id in self._jobs:
+                self._jobs[job_id].update(values)
+
+    def complete(self, job_id: str) -> None:
+        with self._lock:
+            if self._active_job == job_id:
+                self._active_job = None
+
+    def get(self, job_id: str) -> Optional[Dict[str, Any]]:
+        with self._lock:
+            job = self._jobs.get(job_id)
+            return dict(job) if job is not None else None
+
+    def latest(self) -> Optional[Dict[str, Any]]:
+        with self._lock:
+            job = self._jobs.get(self._latest_job) if self._latest_job else None
+            return dict(job) if job is not None else None
 
 
 def _csrf_token() -> str:
@@ -62,6 +160,8 @@ def login_required(view):
 def _run_job(app: Flask, job_id: str, action: str, url: Optional[str]) -> None:
     from pncp_tracker.report_service import atualizar_processo, atualizar_todos
 
+    registry = app.extensions["pncp_jobs"]
+
     def report_progress(message: str) -> None:
         _LOGGER.info("Atualização %s: %s", job_id, message)
 
@@ -73,6 +173,8 @@ def _run_job(app: Flask, job_id: str, action: str, url: Optional[str]) -> None:
     )
     try:
         if action == "one":
+            if not url:
+                raise ValueError("A atualização individual precisa de uma URL PNCP.")
             result = atualizar_processo(
                 url,
                 reports_dir=Path(app.config["REPORTS_DIR"]),
@@ -91,15 +193,15 @@ def _run_job(app: Flask, job_id: str, action: str, url: Optional[str]) -> None:
             updated = result["atualizados"]
             failures = result["falhas"]
 
-        with _JOB_LOCK:
-            _JOBS[job_id].update(
-                {
-                    "status": "concluido_com_falhas" if failures else "concluido",
-                    "atualizados": len(updated),
-                    "falhas": failures,
-                    "finalizado_em": datetime.now().astimezone().isoformat(timespec="seconds"),
-                }
-            )
+        registry.update(
+            job_id,
+            {
+                "status": "concluido_com_falhas" if failures else "concluido",
+                "atualizados": len(updated),
+                "falhas": failures,
+                "finalizado_em": datetime.now().astimezone().isoformat(timespec="seconds"),
+            },
+        )
         _LOGGER.info(
             "Atualização %s finalizada: %s relatório(s) atualizado(s), %s falha(s).",
             job_id,
@@ -108,46 +210,34 @@ def _run_job(app: Flask, job_id: str, action: str, url: Optional[str]) -> None:
         )
     except Exception as exc:
         _LOGGER.exception("Falha na atualização %s", job_id)
-        with _JOB_LOCK:
-            _JOBS[job_id].update(
-                {
-                    "status": "erro",
-                    "erro": str(exc),
-                    "finalizado_em": datetime.now().astimezone().isoformat(timespec="seconds"),
-                }
-            )
+        registry.update(
+            job_id,
+            {
+                "status": "erro",
+                "erro": str(exc),
+                "finalizado_em": datetime.now().astimezone().isoformat(timespec="seconds"),
+            },
+        )
     finally:
-        global _ACTIVE_JOB
-        with _JOB_LOCK:
-            if _ACTIVE_JOB == job_id:
-                _ACTIVE_JOB = None
+        registry.complete(job_id)
 
 
 def _start_job(app: Flask, action: str, url: Optional[str] = None) -> Optional[str]:
-    global _ACTIVE_JOB, _LATEST_JOB
-    with _JOB_LOCK:
-        if _ACTIVE_JOB is not None:
-            return None
-        job_id = uuid.uuid4().hex
-        _ACTIVE_JOB = job_id
-        _JOBS[job_id] = {
-            "id": job_id,
-            "status": "executando",
-            "acao": action,
-            "iniciado_em": datetime.now().astimezone().isoformat(timespec="seconds"),
-        }
-        _LATEST_JOB = job_id
-        while len(_JOBS) > 20:
-            oldest = next(iter(_JOBS))
-            if oldest == _ACTIVE_JOB:
-                break
-            _JOBS.pop(oldest)
-        thread = threading.Thread(
-            target=_run_job,
-            args=(app, job_id, action, url),
-            daemon=True,
-        )
+    registry = app.extensions["pncp_jobs"]
+    job_id = registry.create(action, url)
+    if job_id is None:
+        return None
+    thread = threading.Thread(
+        target=_run_job,
+        args=(app, job_id, action, url),
+        daemon=True,
+    )
+    try:
         thread.start()
+    except RuntimeError as exc:
+        registry.update(job_id, {"status": "erro", "erro": str(exc)})
+        registry.complete(job_id)
+        raise
     return job_id
 
 
@@ -162,6 +252,9 @@ def create_app(config: Optional[Dict[str, Any]] = None) -> Flask:
         SESSION_COOKIE_SAMESITE="Lax",
         SESSION_COOKIE_SECURE=os.environ.get("PNCP_ADMIN_COOKIE_SECURE", "1") != "0",
         PERMANENT_SESSION_LIFETIME=8 * 60 * 60,
+        LOGIN_MAX_ATTEMPTS=5,
+        LOGIN_WINDOW_SECONDS=600,
+        LOGIN_LOCKOUT_SECONDS=600,
     )
     if config:
         app.config.update(config)
@@ -171,6 +264,15 @@ def create_app(config: Optional[Dict[str, Any]] = None) -> Flask:
     )
     if not app.config.get("SECRET_KEY"):
         raise RuntimeError("Defina PNCP_ADMIN_SESSION_SECRET antes de iniciar a interface.")
+    app.extensions["pncp_jobs"] = JobRegistry()
+    app.extensions["pncp_login_attempts"] = LoginAttemptLimiter(
+        max_attempts=app.config["LOGIN_MAX_ATTEMPTS"],
+        window_seconds=app.config["LOGIN_WINDOW_SECONDS"],
+        lockout_seconds=app.config["LOGIN_LOCKOUT_SECONDS"],
+    )
+    app.extensions["pncp_dummy_password_record"] = hash_password(
+        secrets.token_urlsafe(32)
+    )
 
     @app.before_request
     def protect_post_requests():
@@ -185,8 +287,15 @@ def create_app(config: Optional[Dict[str, Any]] = None) -> Flask:
         return {"csrf_token": _csrf_token}
 
     @app.after_request
-    def disable_admin_page_caching(response):
-        response.headers["Cache-Control"] = "no-store"
+    def set_cache_policy(response):
+        is_public_html = (
+            request.method == "GET"
+            and response.status_code == 200
+            and (request.path == "/" or request.path.lower().endswith(".html"))
+        )
+        response.headers["Cache-Control"] = (
+            "public, max-age=60" if is_public_html else "no-store"
+        )
         return response
 
     @app.get("/login")
@@ -199,11 +308,27 @@ def create_app(config: Optional[Dict[str, Any]] = None) -> Flask:
     def authenticate():
         username = request.form.get("username", "").strip()
         password = request.form.get("password", "")
+        client_ip = request.remote_addr or "unknown"
+        attempt_key = (client_ip, username.casefold())
         users = load_users(Path(app.config["USERS_FILE"]))
         record = users.get(username)
-        if not record or not verify_password(password, record):
+        valid_password = verify_password(
+            password,
+            record if isinstance(record, dict) else app.extensions["pncp_dummy_password_record"],
+        )
+        limiter = app.extensions["pncp_login_attempts"]
+        blocked = limiter.is_blocked(attempt_key)
+        if blocked or not valid_password:
+            newly_blocked = limiter.record_failure(attempt_key) if not blocked else False
+            _LOGGER.warning(
+                "Tentativa de autenticação recusada para usuário %r de %s%s",
+                username,
+                client_ip,
+                " (bloqueado temporariamente)" if blocked or newly_blocked else "",
+            )
             flash("Usuário ou senha inválidos.", "error")
             return redirect(url_for("login"))
+        limiter.clear(attempt_key)
         session.clear()
         session["username"] = username
         session.permanent = True
@@ -244,8 +369,7 @@ def create_app(config: Optional[Dict[str, Any]] = None) -> Flask:
     @login_required
     def index():
         records = ler_registros(Path(app.config["INDEX_PATH"]))
-        with _JOB_LOCK:
-            active_job = dict(_JOBS[_LATEST_JOB]) if _LATEST_JOB in _JOBS else None
+        active_job = app.extensions["pncp_jobs"].latest()
         return render_template(
             "index.html",
             records=records,
@@ -258,7 +382,7 @@ def create_app(config: Optional[Dict[str, Any]] = None) -> Flask:
     def add_process():
         url = request.form.get("url_pncp", "")
         index_path = Path(app.config["INDEX_PATH"])
-        lock_path = index_path.parent.parent / ".private" / "report_update.lock"
+        lock_path = lock_path_for(index_path)
         with interprocess_lock(lock_path):
             try:
                 adicionar_registro(url, index_path)
@@ -278,7 +402,7 @@ def create_app(config: Optional[Dict[str, Any]] = None) -> Flask:
     @login_required
     def delete_process(process_id: str):
         index_path = Path(app.config["INDEX_PATH"])
-        lock_path = index_path.parent.parent / ".private" / "report_update.lock"
+        lock_path = lock_path_for(index_path)
         with interprocess_lock(lock_path):
             try:
                 removido = remover_registro(process_id, index_path)
@@ -324,10 +448,9 @@ def create_app(config: Optional[Dict[str, Any]] = None) -> Flask:
     @app.get("/jobs/<job_id>")
     @login_required
     def job_status(job_id: str):
-        with _JOB_LOCK:
-            job = _JOBS.get(job_id)
-            if job is None:
-                abort(404)
-            return jsonify(job)
+        job = app.extensions["pncp_jobs"].get(job_id)
+        if job is None:
+            abort(404)
+        return jsonify(job)
 
     return app

@@ -6,7 +6,7 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from admin_web.app import _JOB_LOCK, _JOBS, _start_job, create_app
+from admin_web.app import LoginAttemptLimiter, _start_job, create_app
 from admin_web.auth import hash_password, save_users, verify_password
 import criar_usuario_admin
 from pncp_tracker.report_registry import ler_registros, salvar_registros
@@ -73,11 +73,13 @@ class AdminWebTests(unittest.TestCase):
     def test_dashboard_requires_login_and_password_is_verified_from_hash(self):
         public_index = self.client.get("/")
         self.assertEqual(public_index.status_code, 200)
+        self.assertIn("public, max-age=60", public_index.headers["Cache-Control"])
         self.assertIn('href="/login" target="_blank"', public_index.get_data(as_text=True))
         report = self.client.get(
             "/relatorio_compra_90027_2025/relatorio_compra_90027_2025.html"
         )
         self.assertEqual(report.status_code, 200)
+        self.assertIn("public, max-age=60", report.headers["Cache-Control"])
         self.assertIn("Relatório público", report.get_data(as_text=True))
         report.close()
         self.assertEqual(
@@ -89,8 +91,11 @@ class AdminWebTests(unittest.TestCase):
         self.assertEqual(response.status_code, 302)
         self.assertIn("/login", response.location)
 
+        login_page = self.client.get("/login")
+        self.assertEqual(login_page.headers["Cache-Control"], "no-store")
         admin_page = self._login()
         self.assertEqual(admin_page.status_code, 200)
+        self.assertEqual(admin_page.headers["Cache-Control"], "no-store")
         self.assertIn("Processos PNCP", admin_page.get_data(as_text=True))
         self.assertIn(
             'href="/" target="_blank" rel="noopener noreferrer">Página inicial</a>',
@@ -154,18 +159,88 @@ class AdminWebTests(unittest.TestCase):
         ), self.assertLogs("admin_web.app", level="INFO") as captured:
             job_id = _start_job(self.app, "one", _URL)
             self.assertIsNotNone(job_id)
+            jobs = self.app.extensions["pncp_jobs"]
             for _ in range(100):
-                with _JOB_LOCK:
-                    status = _JOBS[job_id]["status"]
+                status = jobs.get(job_id)["status"]
                 if status != "executando":
                     break
                 time.sleep(0.01)
 
-        with _JOB_LOCK:
-            self.assertEqual(_JOBS[job_id]["status"], "concluido")
-            self.assertEqual(_JOBS[job_id]["atualizados"], 1)
+        self.assertEqual(jobs.get(job_id)["status"], "concluido")
+        self.assertEqual(jobs.get(job_id)["atualizados"], 1)
         self.assertTrue(
             any("Coletando itens do PNCP." in line for line in captured.output)
+        )
+
+    def test_login_attempt_limiter_blocks_and_expires_attempt_keys(self):
+        limiter = LoginAttemptLimiter(
+            max_attempts=2,
+            window_seconds=10,
+            lockout_seconds=20,
+        )
+        key = ("127.0.0.1", "admin")
+        with patch("admin_web.app.time.monotonic", return_value=100):
+            self.assertFalse(limiter.record_failure(key))
+            self.assertTrue(limiter.record_failure(key))
+            self.assertTrue(limiter.is_blocked(key))
+        with patch("admin_web.app.time.monotonic", return_value=121):
+            self.assertFalse(limiter.is_blocked(key))
+
+    def test_login_endpoint_temporarily_blocks_after_repeated_failures(self):
+        response = self.client.get("/login")
+        token = self._csrf(response)
+        for _ in range(5):
+            self.client.post(
+                "/login",
+                data={
+                    "csrf_token": token,
+                    "username": "admin",
+                    "password": "wrong-password",
+                },
+            )
+
+        blocked = self.client.post(
+            "/login",
+            data={
+                "csrf_token": token,
+                "username": "admin",
+                "password": "test-password",
+            },
+            follow_redirects=True,
+        )
+        self.assertIn("Usuário ou senha inválidos.", blocked.get_data(as_text=True))
+        self.assertNotIn("Processos PNCP", blocked.get_data(as_text=True))
+
+    def test_job_registries_are_isolated_between_app_instances(self):
+        other_app = create_app(
+            {
+                "TESTING": True,
+                "SECRET_KEY": "test-secret",
+                "USERS_FILE": self.users_path,
+                "REPORTS_DIR": self.reports_dir,
+                "INDEX_PATH": self.index_path,
+                "SESSION_COOKIE_SECURE": False,
+            }
+        )
+        self.assertIsNot(
+            self.app.extensions["pncp_jobs"],
+            other_app.extensions["pncp_jobs"],
+        )
+
+    def test_individual_job_without_url_fails_explicitly(self):
+        jobs = self.app.extensions["pncp_jobs"]
+        with self.assertLogs("admin_web.app", level="ERROR"):
+            job_id = _start_job(self.app, "one")
+            for _ in range(100):
+                job = jobs.get(job_id)
+                if job["status"] != "executando":
+                    break
+                time.sleep(0.01)
+
+        self.assertEqual(job["status"], "erro")
+        self.assertEqual(
+            job["erro"],
+            "A atualização individual precisa de uma URL PNCP.",
         )
 
     def test_hash_uses_a_unique_salt(self):

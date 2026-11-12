@@ -45,8 +45,11 @@ def _formatar_moeda(valor: float) -> str:
 
 
 def _resumo_cards(dados_relatorio: Dict[str, Any]) -> List[Dict[str, Any]]:
-    contagens = {"deserto": 0, "empenhado": 0, "nao_empenhado": 0}
+    contagens = {"deserto": 0, "empenhado": 0, "nao_empenhado": 0, "pendente": 0}
     for item in dados_relatorio.get("itens", []):
+        if item.get("status") == "resultados_homologados_indisponiveis":
+            contagens["pendente"] += 1
+            continue
         homologado = _numero(item.get("valor_total_homologado"))
         empenhado = _numero(item.get("valor_empenhado"))
         situacao = "deserto" if homologado == 0 else (
@@ -66,6 +69,8 @@ def _resumo_cards(dados_relatorio: Dict[str, Any]) -> List[Dict[str, Any]]:
          "quantidade", "Execução igual a 0%, excluídos desertos"),
         ("itens_desertos", "Itens desertos", contagens["deserto"], "quantidade",
          "Valor homologado igual a R$ 0,00"),
+        ("itens_resultados_pendentes", "Resultados pendentes", contagens["pendente"],
+         "quantidade", "Falha ao consultar resultados no PNCP"),
         ("valor_estimado", "Valor estimado", dados_relatorio.get("valor_estimado", 0),
          "moeda", "Soma dos valores estimados por item"),
         ("valor_homologado", "Valor homologado", dados_relatorio.get("valor_homologado", 0),
@@ -261,7 +266,11 @@ def gerar_relatorios(
             raise ValueError("Nome do HTML inválido nos metadados de {}.".format(pasta_relatorio))
 
         caminho_html = pasta_relatorio / arquivo_html
-        gerar_relatorio_html(dados_empenhos, caminho_html)
+        gerar_relatorio_html(
+            dados_empenhos,
+            caminho_html,
+            gerado_em=metadados.get("atualizado_em"),
+        )
 
         report_data = _dados_embutidos(caminho_html)
         resumo_cards = _resumo_cards(report_data)
@@ -269,7 +278,13 @@ def gerar_relatorios(
         _escrever_texto(caminho_metadados, json.dumps(metadados, ensure_ascii=False, indent=2) + "\n")
         relatorio.update(
             {
-                "status": "erro" if relatorio.get("status") == "erro" else "atualizado",
+                "status": (
+                    "erro"
+                    if relatorio.get("status") == "erro"
+                    else "parcial"
+                    if report_data.get("erros_resultados_itens")
+                    else "atualizado"
+                ),
                 "arquivo_html": arquivo_html,
                 "url_pncp": metadados.get("url_pncp") or relatorio.get("url_pncp"),
                 "atualizado_em": metadados.get("atualizado_em"),
@@ -302,8 +317,7 @@ def gerar_index_relatorios(pasta_relatorios: Path) -> Path:
 
 if __name__ == "__main__":
     reports_dir = Path(__file__).resolve().parent
-    lock_path = reports_dir.parent / ".private" / "report_update.lock"
-    from pncp_tracker.process_lock import interprocess_lock
+    from pncp_tracker.process_lock import interprocess_lock, lock_path_for
 
-    with interprocess_lock(lock_path):
+    with interprocess_lock(lock_path_for(reports_dir / "indice_relatorios.json")):
         gerar_relatorios(reports_dir)

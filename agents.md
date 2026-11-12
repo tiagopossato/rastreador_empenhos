@@ -135,26 +135,14 @@ Os testes não acessam a rede; todo acesso HTTP é substituído por `unittest.mo
 
 - O relatório final é autônomo e pode ser aberto localmente sem dependências externas.
 - Registros sem vínculo confirmado a item devem continuar sendo reportados em seção separada.
-- Em caso de erro HTTP 404 na API de Contratos/Empenhos do PNCP, a aplicação deve seguir normalmente e gerar o relatório sem esses registros; outros erros HTTP devem ser reportados. A implementação atual reconhece apenas o 404 com a mensagem textual esperada.
+- Em caso de erro HTTP 404 na API de Contratos/Empenhos do PNCP, a aplicação deve seguir normalmente e gerar o relatório sem esses registros; outros erros HTTP devem ser reportados.
 - A aplicação depende de dados do Portal da Transparência com base em CNPJ do fornecedor, ano do empenho e unidade gestora.
 - O fuso do carimbo de geração do relatório é fixo em UTC−3 (horário de Brasília), independente do fuso do servidor.
 
-## Riscos e problemas conhecidos
+## Limitações operacionais conhecidas
 
-Os itens abaixo estão documentados para orientar correções futuras e evitar regressões. Nenhum deles deve ser "corrigido" silenciosamente: mudanças de comportamento exigem teste e atualização desta lista.
-
-- **Alto — falha silenciosa na coleta de resultados homologados** (`pncp_tracker/collector.py`): erros de `buscar_resultados_item` são convertidos em `resultadosHomologados: []`, sem registro. O item passa a ser contado como "deserto" no relatório, inflando esse indicador.
-- **Alto — cabeçalho de compra vazio gera artefato inválido** (`api_client` + `report_service`): resposta 204 em `buscar_dados_compra` produz `{}`, e a ausência de `numeroCompra`/`anoCompra` gera um HTML chamado `relatorio_compra_None_None.html` em vez de erro.
-- **Médio — tolerância a 404 depende do texto da mensagem** (`pncp_tracker/contratos_empenhos.py`): só é tratado como "sem contratos" quando a mensagem contém o texto em português esperado; outros corpos 404 interrompem a atualização.
-- **Médio — carimbo "Gerado em" muda a cada execução** (`relatorios/gerar_relatorios.py` e workflow do Pages): regenerar o relatório reescreve o horário, então o valor indica a geração do arquivo, não a última coleta de dados. O deploy do GitHub Pages também o atualiza.
-- **Médio — lock sem timeout** (`pncp_tracker/process_lock.py`): a espera é infinita; um processo travado bloqueia CLI, cron e painel.
-- **Médio — atualização em lote não é atômica** (`report_service.atualizar_todos`): o lock é adquirido por processo, permitindo que outra atualização se intercale no meio do lote.
-- **Médio — login sem limitação de tentativas** (`admin_web/app.py`): não há rate limit nem bloqueio progressivo em `/login`.
-- **Baixo — validação de URL duplicada e mais permissiva** (`pncp_tracker/url_parser.py`): usa `re.search` sem ancorar o host, aceitando domínios arbitrários. A validação estrita é `report_registry.validar_url_pncp`; não use `url_parser` como barreira de segurança.
-- **Baixo — `no-store` em todas as respostas** (`admin_web/app.py`): o cabeçalho também é aplicado ao índice público e aos relatórios, impedindo cache do navegador/proxy.
-- **Baixo — duplicação do caminho do lock**: `index_path.parent.parent / ".private"` aparece repetido em `app.py`, `gerar_relatorios.py`, `generate_reports_index.py` e `report_service.py`.
-- **Baixo — código não utilizado** em `portal_transparencia.py`: `consultar_todos_empenhos_licitacao`, `consultar_documentos_despesa`, `numero_licitacao_from_compra` e `codigo_modalidade_portal` não são chamados. `consultar_todos_empenhos_licitacao` também pagina sem limite superior.
-- **Baixo — estado global do painel**: as tarefas em andamento vivem na memória do processo e são compartilhadas entre testes; reiniciar o servidor perde o status.
+- O estado das tarefas administrativas é isolado por instância da aplicação, mas permanece em memória; reiniciar o servidor durante uma tarefa perde o histórico exibido no painel.
+- O limite de tentativas de login também é mantido em memória por instância e é reiniciado quando o servidor reinicia.
 
 ## Checklist para contribuições
 

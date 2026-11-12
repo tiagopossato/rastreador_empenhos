@@ -56,12 +56,13 @@ class BuscarJsonRobustoTests(unittest.TestCase):
                 {"numeroCompra": "90059"},
             )
 
-    def test_no_content_response_is_treated_as_empty_payload(self):
+    def test_no_content_response_is_not_a_valid_purchase_header(self):
         with patch(
             "pncp_tracker.api_client.requests.get",
             return_value=_resposta(status_code=204),
         ):
-            self.assertEqual(_buscar_json_robusto(["https://pncp.gov.br/a"]), {})
+            with self.assertRaises(requests.RequestException):
+                _buscar_json_robusto(["https://pncp.gov.br/a"])
 
     def test_raises_when_no_endpoint_returns_valid_json(self):
         falha = Mock()
@@ -99,15 +100,35 @@ class ConsultasPncpTests(unittest.TestCase):
         ):
             self.assertEqual(listar_itens("10635424000186", "2025", "282"), [])
 
-    def test_item_results_are_empty_when_the_api_does_not_return_200(self):
+    def test_item_results_raise_for_http_errors(self):
+        response = _resposta(status_code=500)
+        response.raise_for_status.side_effect = requests.HTTPError("500 Server Error")
         with patch(
             "pncp_tracker.api_client.requests.get",
-            return_value=_resposta(status_code=404),
+            return_value=response,
+        ):
+            with self.assertRaises(requests.HTTPError):
+                buscar_resultados_item("10635424000186", "2025", "282", 1)
+
+    def test_no_content_item_results_are_valid_empty_results(self):
+        response = _resposta(status_code=204)
+        with patch(
+            "pncp_tracker.api_client.requests.get",
+            return_value=response,
         ):
             self.assertEqual(
                 buscar_resultados_item("10635424000186", "2025", "282", 1),
                 [],
             )
+        response.raise_for_status.assert_not_called()
+
+    def test_item_results_reject_invalid_payload_shape(self):
+        with patch(
+            "pncp_tracker.api_client.requests.get",
+            return_value=_resposta(payload={"error": "bad response"}),
+        ):
+            with self.assertRaisesRegex(ValueError, "deve ser uma lista"):
+                buscar_resultados_item("10635424000186", "2025", "282", 1)
 
     def test_item_results_are_returned_when_the_api_responds_200(self):
         with patch(

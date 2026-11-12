@@ -6,7 +6,7 @@ from typing import Any, Callable, Dict, Optional
 
 from .collector import baixar_dados_compra_pncp
 from .consultar_e_mapear_empenhos import consultar_e_mapear_empenhos
-from .process_lock import interprocess_lock
+from .process_lock import interprocess_lock, lock_path_for
 from .report_registry import (
     INDEX_PATH,
     REPORTS_DIR,
@@ -66,6 +66,15 @@ def _atualizar_processo(
             url_pncp,
             on_progress=on_progress,
         )
+        chaves_compra = dados_compra.get("chaves_integracao")
+        if not isinstance(chaves_compra, dict):
+            raise ValueError("Cabeçalho da compra incompleto: chaves de integração ausentes.")
+        numero_compra = str(chaves_compra.get("numero_compra") or "").strip()
+        ano_compra = str(chaves_compra.get("ano_compra") or "").strip()
+        if not numero_compra.isdigit() or not re.fullmatch(r"\d{4}", ano_compra):
+            raise ValueError(
+                "Cabeçalho da compra incompleto: número e ano da compra são obrigatórios."
+            )
 
         _notificar(on_progress, "Consultando e mapeando contratos e empenhos.")
         resultado_etapa2 = consultar_e_mapear_empenhos(
@@ -73,6 +82,15 @@ def _atualizar_processo(
             dados_compra=dados_compra,
             on_progress=on_progress,
         )
+        chaves_resultado = resultado_etapa2.get("chaves_integracao")
+        if not isinstance(chaves_resultado, dict):
+            raise ValueError("Cabeçalho da compra incompleto: resultado sem chaves de integração.")
+        numero_resultado = str(chaves_resultado.get("numero_compra") or "").strip()
+        ano_resultado = str(chaves_resultado.get("ano_compra") or "").strip()
+        if not numero_resultado.isdigit() or not re.fullmatch(r"\d{4}", ano_resultado):
+            raise ValueError(
+                "Cabeçalho da compra incompleto: número e ano da compra são obrigatórios."
+            )
 
         caminho_metadados = pasta_relatorio / "metadados.json"
         if caminho_metadados.exists():
@@ -87,16 +105,8 @@ def _atualizar_processo(
 
         agora = datetime.now().astimezone().isoformat(timespec="seconds")
         chaves = resultado_etapa2["chaves_integracao"]
-        nome_compra = re.sub(
-            r"[^A-Za-z0-9_-]+",
-            "-",
-            str(chaves["numero_compra"]).strip(),
-        ).strip("-")
-        ano_compra = re.sub(
-            r"[^A-Za-z0-9_-]+",
-            "-",
-            str(chaves["ano_compra"]).strip(),
-        ).strip("-")
+        nome_compra = re.sub(r"[^A-Za-z0-9_-]+", "-", numero_resultado).strip("-")
+        ano_compra = re.sub(r"[^A-Za-z0-9_-]+", "-", ano_resultado).strip("-")
         if not nome_compra or not ano_compra:
             raise ValueError("Número ou ano inválido para nomear o relatório.")
         arquivo_html = "relatorio_compra_{}_{}.html".format(nome_compra, ano_compra)
@@ -155,7 +165,7 @@ def atualizar_processo(
     on_progress: Optional[Callable[[str], None]] = None,
     cadastrar_se_ausente: bool = True,
 ) -> Dict[str, Any]:
-    lock_path = Path(index_path).parent.parent / ".private" / "report_update.lock"
+    lock_path = lock_path_for(index_path)
     with interprocess_lock(lock_path):
         return _atualizar_processo(
             url_pncp,
@@ -172,48 +182,48 @@ def atualizar_todos(
     index_path: Path = INDEX_PATH,
     on_progress: Optional[Callable[[str], None]] = None,
 ) -> Dict[str, Any]:
-    registros = ler_registros(index_path)
-    sucessos = []
-    falhas = []
-    for posicao, registro in enumerate(registros, start=1):
-        url = registro["url_pncp"]
-        _notificar(
-            on_progress,
-            "Atualizando processo {}/{}: {}".format(posicao, len(registros), url),
-        )
-        try:
-            resultado = atualizar_processo(
-                url,
-                reports_dir=reports_dir,
-                index_path=index_path,
-                on_progress=on_progress,
-                cadastrar_se_ausente=False,
-            )
-            sucessos.append(resultado["registro"])
-        except Exception as exc:
-            falhas.append({"url_pncp": url, "erro": str(exc)})
-            try:
-                atualizar_registro(
-                    url,
-                    {
-                        "status": "erro",
-                        "erro": str(exc),
-                        "ultima_tentativa_em": datetime.now()
-                        .astimezone()
-                        .isoformat(timespec="seconds"),
-                    },
-                    index_path,
-                )
-            except KeyError:
-                _notificar(
-                    on_progress,
-                    "O processo foi removido da lista durante a atualização: {}".format(url),
-                )
-            _notificar(on_progress, "Falha ao atualizar {}: {}".format(url, exc))
-
-    from relatorios.gerar_relatorios import gerar_relatorios
-
-    lock_path = Path(index_path).parent.parent / ".private" / "report_update.lock"
+    lock_path = lock_path_for(index_path)
     with interprocess_lock(lock_path):
+        registros = ler_registros(index_path)
+        sucessos = []
+        falhas = []
+        for posicao, registro in enumerate(registros, start=1):
+            url = registro["url_pncp"]
+            _notificar(
+                on_progress,
+                "Atualizando processo {}/{}: {}".format(posicao, len(registros), url),
+            )
+            try:
+                resultado = _atualizar_processo(
+                    url,
+                    reports_dir=reports_dir,
+                    index_path=index_path,
+                    on_progress=on_progress,
+                    cadastrar_se_ausente=False,
+                )
+                sucessos.append(resultado["registro"])
+            except Exception as exc:
+                falhas.append({"url_pncp": url, "erro": str(exc)})
+                try:
+                    atualizar_registro(
+                        url,
+                        {
+                            "status": "erro",
+                            "erro": str(exc),
+                            "ultima_tentativa_em": datetime.now()
+                            .astimezone()
+                            .isoformat(timespec="seconds"),
+                        },
+                        index_path,
+                    )
+                except KeyError:
+                    _notificar(
+                        on_progress,
+                        "O processo foi removido da lista durante a atualização: {}".format(url),
+                    )
+                _notificar(on_progress, "Falha ao atualizar {}: {}".format(url, exc))
+
+        from relatorios.gerar_relatorios import gerar_relatorios
+
         gerar_relatorios(Path(reports_dir), index_path=Path(index_path))
-    return {"atualizados": sucessos, "falhas": falhas}
+        return {"atualizados": sucessos, "falhas": falhas}

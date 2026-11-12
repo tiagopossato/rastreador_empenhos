@@ -73,7 +73,7 @@ rastreador_empenhos/
 
 ## Requisitos e configuração
 
-- Python 3.8 ou superior.
+- Python 3.10 ou superior.
 - Dependências listadas em `requirements.txt` (`requests`, Flask e Waitress).
 - Chave da API do Portal da Transparência para consultar o detalhamento dos documentos de despesa.
 
@@ -117,7 +117,7 @@ Quando não há empenhos vinculados ao item, a quantidade empenhada é zero e o 
 
 As linhas podem ser expandidas para consultar resultados homologados e empenhos vinculados. Em telas largas, os empenhos ocupam aproximadamente 70% da área de detalhes e os resultados homologados, 30%; em telas menores, as seções ficam empilhadas. Registros que não puderam ser vinculados a um item aparecem na seção **Registros sem vínculo confirmado a item**.
 
-Os filtros de situação podem ser combinados com a busca textual. Os cards apresentam as contagens de itens — total, homologados, empenhados, não empenhados e desertos — seguidas dos valores financeiros. As tabelas podem ser ordenadas clicando nos cabeçalhos; também é possível focar um cabeçalho com Tab e alternar a ordenação com Enter ou Espaço. Ao ordenar os itens, suas linhas de detalhes acompanham cada item.
+Os filtros de situação podem ser combinados com a busca textual. Os cards apresentam as contagens de itens — total, homologados, empenhados, não empenhados, desertos e resultados pendentes — seguidas dos valores financeiros. Se o PNCP falhar ao consultar resultados homologados, o item fica marcado como pendente, não como deserto; o relatório exibe um aviso e o índice identifica a atualização como parcial. As tabelas podem ser ordenadas clicando nos cabeçalhos; também é possível focar um cabeçalho com Tab e alternar a ordenação com Enter ou Espaço. Ao ordenar os itens, suas linhas de detalhes acompanham cada item.
 
 O botão **Baixar CSV completo** exporta todos os itens, independentemente dos filtros ativos. O arquivo inclui as colunas da tabela, inclusive o saldo, e os dados adicionais das linhas de empenho. Itens com empenhos vinculados geram uma linha por empenho; itens sem empenho vinculado geram uma linha. O CSV usa ponto e vírgula como separador e codificação UTF-8 com BOM para compatibilidade com planilhas.
 
@@ -174,9 +174,11 @@ python -m admin_web.serve
 
 Na raiz do servidor administrativo (`http://127.0.0.1:8000/`) é exibido o `relatorios/index.html`, com o botão **Administração**. Os links do índice também servem os relatórios HTML individuais no mesmo endereço; os arquivos JSON não são expostos por essas rotas. O botão abre a tela de login em outra aba; após autenticar, essa aba segue para `/admin`. O GitHub Pages continua servindo apenas os relatórios estáticos; para que o botão funcione, acesse o índice pelo servidor administrativo, não pelo GitHub Pages.
 
-O andamento das atualizações iniciadas no painel é exibido no terminal onde o servidor está rodando e gravado em `.private/admin_web.log` (com rotação automática). O log informa etapas da coleta, páginas e itens do PNCP, consulta de empenhos e geração dos relatórios. Configure `PNCP_ADMIN_LOG_FILE` para usar outro caminho de log.
+O andamento das atualizações iniciadas no painel é exibido no terminal onde o servidor está rodando e gravado em `.private/admin_web.log` (com rotação automática). O log informa etapas da coleta, páginas e itens do PNCP, consulta de empenhos e geração dos relatórios. Configure `PNCP_ADMIN_LOG_FILE` para usar outro caminho de log. O login bloqueia temporariamente novas tentativas após cinco falhas do mesmo usuário e IP em dez minutos; esse contador é mantido em memória por instância do servidor.
 
-Por padrão, Waitress escuta em `127.0.0.1:8000`. Publique o servidor somente atrás de um reverse proxy com HTTPS e controle de acesso de rede; não o exponha diretamente à internet. `PNCP_ADMIN_HOST` e `PNCP_ADMIN_PORT` configuram o endereço de escuta. Para teste local sem HTTPS, `PNCP_ADMIN_COOKIE_SECURE=0` desativa a flag Secure do cookie; não use essa opção em produção.
+Por padrão, Waitress escuta em `127.0.0.1:8000`. Publique o servidor somente atrás de um reverse proxy com HTTPS e controle de acesso de rede; não o exponha diretamente à internet. `PNCP_ADMIN_HOST` e `PNCP_ADMIN_PORT` configuram o endereço de escuta. Para teste local sem HTTPS, `PNCP_ADMIN_COOKIE_SECURE=0` desativa a flag Secure do cookie; não use essa opção em produção. O painel, login e status das tarefas usam `Cache-Control: no-store`; o índice e relatórios HTML públicos permitem cache por 60 segundos.
+
+Atualizações concorrentes compartilham um lock em `.private/report_update.lock`. A espera tem limite de 300 segundos; se o lock continuar ocupado, a operação falha explicitamente em vez de aguardar indefinidamente.
 
 Para recriar os relatórios individuais e os dois índices, sem consultar as APIs:
 

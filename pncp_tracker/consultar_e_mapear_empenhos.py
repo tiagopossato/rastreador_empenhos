@@ -57,7 +57,7 @@ def consultar_e_mapear_empenhos(
         )
 
     return {
-        "status": status,
+        "status": "parcial" if dados_compra.get("erros_resultados_itens") else status,
         "mensagem": (
             "Consulta concluída; a API do PNCP não retornou contratos/empenhos para a contratação."
             if not empenhos
@@ -82,6 +82,7 @@ def consultar_e_mapear_empenhos(
         "quantidade_empenhos_com_detalhes": quantidade_com_detalhes,
         "quantidade_empenhos_nao_encontrados": detalhes_nao_encontrados,
         "erros_detalhamento": erros_detalhamento,
+        "erros_resultados_itens": dados_compra.get("erros_resultados_itens", []),
         "empenhos": empenhos_detalhados,
         "itens_mapeados": itens_mapeados,
     }

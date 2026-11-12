@@ -1,12 +1,12 @@
 {
   "schema_version": 2,
-  "quantidade_relatorios": 7,
+  "quantidade_relatorios": 8,
   "relatorios": [
     {
       "pasta": "relatorio_compra_90027_2025",
       "arquivo_html": "relatorio_compra_90027_2025.html",
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000272",
-      "atualizado_em": "2026-11-12T07:12:01-03:00",
+      "atualizado_em": "2026-11-12T08:09:55-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -53,6 +53,13 @@
           "descricao": "Valor homologado igual a R$ 0,00"
         },
         {
+          "chave": "itens_resultados_pendentes",
+          "rotulo": "Resultados pendentes",
+          "valor": 0,
+          "exibicao": "0",
+          "descricao": "Falha ao consultar resultados no PNCP"
+        },
+        {
           "chave": "valor_estimado",
           "rotulo": "Valor estimado",
           "valor": 2167750.559999999,
@@ -82,7 +89,7 @@
       "pasta": "relatorio_compra_90059_2025",
       "arquivo_html": "relatorio_compra_90059_2025.html",
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000282",
-      "atualizado_em": "2026-11-12T07:13:24-03:00",
+      "atualizado_em": "2026-11-12T08:11:45-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -129,6 +136,13 @@
           "descricao": "Valor homologado igual a R$ 0,00"
         },
         {
+          "chave": "itens_resultados_pendentes",
+          "rotulo": "Resultados pendentes",
+          "valor": 0,
+          "exibicao": "0",
+          "descricao": "Falha ao consultar resultados no PNCP"
+        },
+        {
           "chave": "valor_estimado",
           "rotulo": "Valor estimado",
           "valor": 3960004.32,
@@ -159,7 +173,7 @@
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2024/000343",
       "pasta": "processo_10635424000186-2024-343",
       "status": "atualizado",
-      "atualizado_em": "2026-11-12T07:14:31-03:00",
+      "atualizado_em": "2026-11-12T08:13:02-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -206,6 +220,13 @@
           "descricao": "Valor homologado igual a R$ 0,00"
         },
         {
+          "chave": "itens_resultados_pendentes",
+          "rotulo": "Resultados pendentes",
+          "valor": 0,
+          "exibicao": "0",
+          "descricao": "Falha ao consultar resultados no PNCP"
+        },
+        {
           "chave": "valor_estimado",
           "rotulo": "Valor estimado",
           "valor": 1738734.74,
@@ -235,7 +256,7 @@
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000187",
       "pasta": "processo_10635424000186-2025-187",
       "status": "atualizado",
-      "atualizado_em": "2026-11-12T07:15:06-03:00",
+      "atualizado_em": "2026-11-12T08:13:57-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -282,6 +303,13 @@
           "descricao": "Valor homologado igual a R$ 0,00"
         },
         {
+          "chave": "itens_resultados_pendentes",
+          "rotulo": "Resultados pendentes",
+          "valor": 0,
+          "exibicao": "0",
+          "descricao": "Falha ao consultar resultados no PNCP"
+        },
+        {
           "chave": "valor_estimado",
           "rotulo": "Valor estimado",
           "valor": 865730.6699999993,
@@ -311,7 +339,7 @@
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2026/000140",
       "pasta": "processo_10635424000186-2026-140",
       "status": "atualizado",
-      "atualizado_em": "2026-11-12T07:15:28-03:00",
+      "atualizado_em": "2026-11-12T08:14:23-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -358,6 +386,13 @@
           "descricao": "Valor homologado igual a R$ 0,00"
         },
         {
+          "chave": "itens_resultados_pendentes",
+          "rotulo": "Resultados pendentes",
+          "valor": 0,
+          "exibicao": "0",
+          "descricao": "Falha ao consultar resultados no PNCP"
+        },
+        {
           "chave": "valor_estimado",
           "rotulo": "Valor estimado",
           "valor": 974910.5799999994,
@@ -386,8 +421,8 @@
       "id": "10635424000186-2025-168",
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000168",
       "pasta": "processo_10635424000186-2025-168",
-      "status": "atualizado",
-      "atualizado_em": "2026-11-12T07:16:24-03:00",
+      "status": "parcial",
+      "atualizado_em": "2026-11-12T08:15:52-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -408,8 +443,8 @@
         {
           "chave": "itens_homologados",
           "rotulo": "Itens homologados",
-          "valor": 268,
-          "exibicao": "268",
+          "valor": 267,
+          "exibicao": "267",
           "descricao": "Itens empenhados + não empenhados"
         },
         {
@@ -422,8 +457,8 @@
         {
           "chave": "itens_nao_empenhados",
           "rotulo": "Itens não empenhados",
-          "valor": 108,
-          "exibicao": "108",
+          "valor": 107,
+          "exibicao": "107",
           "descricao": "Execução igual a 0%, excluídos desertos"
         },
         {
@@ -432,6 +467,13 @@
           "valor": 32,
           "exibicao": "32",
           "descricao": "Valor homologado igual a R$ 0,00"
+        },
+        {
+          "chave": "itens_resultados_pendentes",
+          "rotulo": "Resultados pendentes",
+          "valor": 1,
+          "exibicao": "1",
+          "descricao": "Falha ao consultar resultados no PNCP"
         },
         {
           "chave": "valor_estimado",
@@ -443,8 +485,8 @@
         {
           "chave": "valor_homologado",
           "rotulo": "Valor homologado",
-          "valor": 793810.8900000002,
-          "exibicao": "R$ 793.810,89",
+          "valor": 793676.7900000003,
+          "exibicao": "R$ 793.676,79",
           "descricao": "Soma dos resultados homologados"
         },
         {
@@ -463,7 +505,7 @@
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2026/000115",
       "pasta": "processo_10635424000186-2026-115",
       "status": "atualizado",
-      "atualizado_em": "2026-11-12T07:20:39-03:00",
+      "atualizado_em": "2026-11-12T08:17:12-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -510,6 +552,13 @@
           "descricao": "Valor homologado igual a R$ 0,00"
         },
         {
+          "chave": "itens_resultados_pendentes",
+          "rotulo": "Resultados pendentes",
+          "valor": 0,
+          "exibicao": "0",
+          "descricao": "Falha ao consultar resultados no PNCP"
+        },
+        {
           "chave": "valor_estimado",
           "rotulo": "Valor estimado",
           "valor": 9327289.600000007,
@@ -533,6 +582,89 @@
       ],
       "erro": null,
       "arquivo_html": "relatorio_compra_90098_2026.html"
+    },
+    {
+      "id": "10635424000186-2025-102",
+      "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000102",
+      "pasta": "processo_10635424000186-2025-102",
+      "status": "atualizado",
+      "atualizado_em": "2026-11-12T08:21:14-03:00",
+      "chaves_integracao": {
+        "cnpj_orgao": "10635424000186",
+        "uasg_codigo": "158125",
+        "uasg_nome": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "numero_compra": "90275",
+        "ano_compra": 2025,
+        "numero_controle_pncp": "10635424000186-1-000102/2025"
+      },
+      "objeto": "O objeto da presente licitação é Registro de preço da proposta mais vantajosa para eventual aquisição de Equipamentos, Insumos Agrícolas e Sementes para atender as necessidades do Instituto Federal Catarinense – Campus Camboriú, Campus Abelardo Luz, Campus Araquari, Campus Concórdia, Campus Luzerna, Campus Rio do Sul, Campus Santa rosa do Sul e Campus Videira e demais órgãos participantes conforme condições, quantidades e exigências estabelecidas neste Edital e seus anexos.",
+      "resumo_cards": [
+        {
+          "chave": "itens",
+          "rotulo": "Itens",
+          "valor": 164,
+          "exibicao": "164",
+          "descricao": "Itens publicados no edital"
+        },
+        {
+          "chave": "itens_homologados",
+          "rotulo": "Itens homologados",
+          "valor": 132,
+          "exibicao": "132",
+          "descricao": "Itens empenhados + não empenhados"
+        },
+        {
+          "chave": "itens_empenhados",
+          "rotulo": "Itens empenhados",
+          "valor": 113,
+          "exibicao": "113",
+          "descricao": "Execução acima de 0%"
+        },
+        {
+          "chave": "itens_nao_empenhados",
+          "rotulo": "Itens não empenhados",
+          "valor": 19,
+          "exibicao": "19",
+          "descricao": "Execução igual a 0%, excluídos desertos"
+        },
+        {
+          "chave": "itens_desertos",
+          "rotulo": "Itens desertos",
+          "valor": 32,
+          "exibicao": "32",
+          "descricao": "Valor homologado igual a R$ 0,00"
+        },
+        {
+          "chave": "itens_resultados_pendentes",
+          "rotulo": "Resultados pendentes",
+          "valor": 0,
+          "exibicao": "0",
+          "descricao": "Falha ao consultar resultados no PNCP"
+        },
+        {
+          "chave": "valor_estimado",
+          "rotulo": "Valor estimado",
+          "valor": 1345524.1000000015,
+          "exibicao": "R$ 1.345.524,10",
+          "descricao": "Soma dos valores estimados por item"
+        },
+        {
+          "chave": "valor_homologado",
+          "rotulo": "Valor homologado",
+          "valor": 1110394.0899999996,
+          "exibicao": "R$ 1.110.394,09",
+          "descricao": "Soma dos resultados homologados"
+        },
+        {
+          "chave": "empenhado_mapeado",
+          "rotulo": "Empenhado mapeado",
+          "valor": 261730.41999999987,
+          "exibicao": "R$ 261.730,42",
+          "descricao": "114 de 114 registros com detalhamento"
+        }
+      ],
+      "erro": null,
+      "arquivo_html": "relatorio_compra_90275_2025.html"
     }
   ]
 }

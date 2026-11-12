@@ -29,7 +29,10 @@ def _quantidade_empenhada(valor: Any, valor_unitario: Optional[float]) -> Option
     return valor_numero / valor_unitario
 
 
-def _preparar_relatorio(dados: Dict[str, Any]) -> Dict[str, Any]:
+def _preparar_relatorio(
+    dados: Dict[str, Any],
+    gerado_em: Optional[str] = None,
+) -> Dict[str, Any]:
     itens: List[Dict[str, Any]] = []
     soma_empenhada = 0.0
     soma_estimada = 0.0
@@ -99,13 +102,14 @@ def _preparar_relatorio(dados: Dict[str, Any]) -> Dict[str, Any]:
             )
 
         valor_estimado = _numero(item.get("valor_total_estimado")) or 0
-        valor_homologado = _numero(item.get("valor_total_homologado")) or 0
+        valor_homologado = _numero(item.get("valor_total_homologado"))
         quantidade_licitada = _numero(item.get("quantidade_licitada"))
         quantidade_homologada = _numero(item.get("quantidade_homologada"))
         unidade = item.get("unidade_medida") or ""
 
         soma_estimada += valor_estimado
-        soma_homologada += valor_homologado
+        if valor_homologado is not None:
+            soma_homologada += valor_homologado
         soma_empenhada += total_empenhado_item
 
         if possui_quantidade_empenhada:
@@ -144,6 +148,7 @@ def _preparar_relatorio(dados: Dict[str, Any]) -> Dict[str, Any]:
                     "empenhos_item_sem_fornecedor_compativel", []
                 ),
                 "status": item.get("status"),
+                "erro_resultados_homologados": item.get("erro_resultados_homologados"),
             }
         )
 
@@ -170,6 +175,17 @@ def _preparar_relatorio(dados: Dict[str, Any]) -> Dict[str, Any]:
     itens.sort(key=lambda linha: (int(linha["numero"]) if str(linha["numero"]).isdigit() else 0))
     empenhos_sem_vinculo.sort(key=lambda linha: str(linha.get("numero") or ""))
 
+    if gerado_em:
+        try:
+            data_geracao = datetime.fromisoformat(gerado_em.replace("Z", "+00:00"))
+        except ValueError as exc:
+            raise ValueError("Data de atualização inválida nos metadados: {}.".format(gerado_em)) from exc
+        if data_geracao.tzinfo is None:
+            data_geracao = data_geracao.replace(tzinfo=_BRAZIL_TIMEZONE)
+        gerado_em_formatado = data_geracao.astimezone(_BRAZIL_TIMEZONE).strftime("%d/%m/%Y %H:%M")
+    else:
+        gerado_em_formatado = datetime.now(_BRAZIL_TIMEZONE).strftime("%d/%m/%Y %H:%M")
+
     return {
         "status": dados.get("status"),
         "mensagem": dados.get("mensagem"),
@@ -181,8 +197,9 @@ def _preparar_relatorio(dados: Dict[str, Any]) -> Dict[str, Any]:
         "valor_homologado": soma_homologada,
         "valor_empenhado_mapeado": soma_empenhada,
         "itens": itens,
+        "erros_resultados_itens": dados.get("erros_resultados_itens", []),
         "registros_sem_vinculo": empenhos_sem_vinculo,
-        "gerado_em": datetime.now(_BRAZIL_TIMEZONE).strftime("%d/%m/%Y %H:%M"),
+        "gerado_em": gerado_em_formatado,
     }
 
 
@@ -217,6 +234,7 @@ _HTML = r"""<!doctype html>
     <div class="meta"><span id="pncp"></span><span id="org"></span><span id="generated"></span></div>
   </header>
   <section class="cards" id="cards"></section>
+  <div class="note" id="collection-warning" hidden></div>
   <div class="note"><strong>Como interpretar:</strong> “Quantidade empenhada (estimada)” é calculada dividindo o valor das linhas de empenho pelo preço unitário homologado. A API publica o valor da linha, mas não a quantidade física empenhada; por isso, a quantidade é uma estimativa. Só são somadas linhas em que o número do item e o CNPJ do fornecedor correspondem ao resultado homologado. Valores/quantidades sem correspondência ficam separados como pendentes.</div>
   <section class="panel">
     <h2>Itens da contratação</h2>
@@ -226,6 +244,7 @@ _HTML = r"""<!doctype html>
       <button type="button" data-item-filter="empenhado" aria-pressed="false">Empenhados</button>
       <button type="button" data-item-filter="nao_empenhado" aria-pressed="false">Não empenhados</button>
       <button type="button" data-item-filter="deserto" aria-pressed="false">Desertos</button>
+      <button type="button" data-item-filter="pendente" aria-pressed="false">Resultados pendentes</button>
     </div>
     <div class="toolbar"><input id="search" type="search" placeholder="Filtrar por item, descrição, fornecedor ou empenho…" aria-label="Filtrar itens"><span class="count" id="count"></span><button type="button" id="download-csv">Baixar CSV completo</button></div>
     <div class="table-wrap"><table id="items-table"><thead><tr>
@@ -252,7 +271,7 @@ const fmtQty=n=>n==null?'—':new Intl.NumberFormat('pt-BR',{maximumFractionDigi
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const number=n=>Number.isFinite(Number(n))?Number(n):0;
 const pct=(a,b)=>b>0?Math.min(100,(a/b)*100):0;
-const itemStatus=i=>number(i.valor_total_homologado)===0?'deserto':pct(number(i.valor_empenhado),number(i.valor_total_homologado))>0?'empenhado':'nao_empenhado';
+const itemStatus=i=>i.status==='resultados_homologados_indisponiveis'?'pendente':number(i.valor_total_homologado)===0?'deserto':pct(number(i.valor_empenhado),number(i.valor_total_homologado))>0?'empenhado':'nao_empenhado';
 function sortableValue(text){
  const value=text.trim().replace(/\s+/g,' ');
  if(!value||value==='—')return {type:'empty',value:''};
@@ -342,14 +361,21 @@ if(pncpMatch){
 }
 document.getElementById('org').textContent=`Unidade: ${D.chaves.uasg_codigo||'—'} ${D.chaves.uasg_nome||''} · CNPJ: ${D.chaves.cnpj_orgao||'—'}`;
 document.getElementById('generated').textContent=`Gerado em ${D.gerado_em}`;
+const collectionErrors=D.erros_resultados_itens||[];
+if(collectionErrors.length){
+ const warning=document.getElementById('collection-warning');
+ warning.hidden=false;
+ warning.textContent=`Aviso: não foi possível consultar os resultados homologados de ${collectionErrors.length} item(ns). Eles estão marcados como pendentes e não são contabilizados como desertos. Itens: ${collectionErrors.map(error=>error.numero_item).join(', ')}.`;
+}
 const committed=D.valor_empenhado_mapeado||0;
-const statusCounts=D.itens.reduce((counts,item)=>{counts[itemStatus(item)]++;return counts;},{deserto:0,empenhado:0,nao_empenhado:0});
+const statusCounts=D.itens.reduce((counts,item)=>{counts[itemStatus(item)]++;return counts;},{deserto:0,empenhado:0,nao_empenhado:0,pendente:0});
 const cards=[
  ['Itens',''+D.quantidade_itens,'Itens publicados no edital'],
  ['Itens homologados',fmtQty(statusCounts.empenhado+statusCounts.nao_empenhado),'Itens empenhados + não empenhados'],
  ['Itens empenhados',fmtQty(statusCounts.empenhado),'Execução acima de 0%'],
  ['Itens não empenhados',fmtQty(statusCounts.nao_empenhado),'Execução igual a 0%, excluídos desertos'],
  ['Itens desertos',fmtQty(statusCounts.deserto),'Valor homologado igual a R$ 0,00'],
+ ['Resultados pendentes',fmtQty(statusCounts.pendente),'Falha ao consultar resultados no PNCP'],
  ['Valor estimado',fmtMoney(D.valor_estimado),'Soma dos valores estimados por item'],
  ['Valor homologado',fmtMoney(D.valor_homologado),'Soma dos resultados homologados'],
  ['Empenhado mapeado',fmtMoney(committed),`${D.quantidade_empenhos_detalhados} de ${D.quantidade_registros} registros com detalhamento`]
@@ -372,7 +398,7 @@ function render(filter=document.getElementById('search').value){
  const rows=D.itens.filter(i=>{
   const status=itemStatus(i);
   const matchesStatus=selectedItemFilter==='todos'
-   ||(selectedItemFilter==='homologado'?status!=='deserto':status===selectedItemFilter);
+   ||(selectedItemFilter==='homologado'?(status==='empenhado'||status==='nao_empenhado'):status===selectedItemFilter);
   return matchesStatus&&(!q||[i.numero,i.descricao,i.unidade,...(i.resultados||[]).flatMap(r=>[r.fornecedor,r.cnpj]),...(i.empenhos||[]).map(e=>e.numero)].join(' ').toLocaleLowerCase('pt-BR').includes(q));
  });
  document.getElementById('count').textContent=`${rows.length} de ${D.itens.length} itens`;
@@ -380,7 +406,7 @@ function render(filter=document.getElementById('search').value){
   const detail=`detail-${n}`, ratio=pct(number(i.valor_empenhado),number(i.valor_total_homologado));
   const saldo=i.quantidade_homologada!=null&&i.quantidade_empenhada_estimada!=null
    ?i.quantidade_homologada-i.quantidade_empenhada_estimada:null;
-  const status={deserto:'Deserto',empenhado:'Empenhado',nao_empenhado:'Não empenhado'}[itemStatus(i)];
+  const status={deserto:'Deserto',empenhado:'Empenhado',nao_empenhado:'Não empenhado',pendente:'Resultados pendentes'}[itemStatus(i)];
   return `<tr class="item-row" data-detail="${detail}" data-item-status="${itemStatus(i)}"><td class="num" data-sort-value="${esc(i.numero)}">${esc(i.numero)}</td><td class="item-name" data-sort-value="${esc(i.descricao)}">${esc(i.descricao)}<small>${esc(i.unidade||'Unidade não informada')} · ${status}</small></td><td class="num" data-sort-value="${esc(i.quantidade_licitada)}">${fmtQty(i.quantidade_licitada)}</td><td class="num" data-sort-value="${esc(i.quantidade_homologada)}">${fmtQty(i.quantidade_homologada)}</td><td class="num" data-sort-value="${esc(i.quantidade_empenhada_estimada)}">${fmtQty(i.quantidade_empenhada_estimada)}</td><td class="num" data-sort-value="${esc(saldo)}">${fmtQty(saldo)}</td><td class="num" data-sort-value="${esc(i.valor_total_estimado)}">${fmtMoney(i.valor_total_estimado)}</td><td class="num" data-sort-value="${esc(i.valor_total_homologado)}">${fmtMoney(i.valor_total_homologado)}</td><td class="num" data-sort-value="${esc(i.valor_empenhado)}">${fmtMoney(i.valor_empenhado)}<div class="bar"><span style="width:${ratio}%"></span></div></td><td class="num" data-sort-value="${i.valor_total_homologado?ratio:''}">${i.valor_total_homologado?fmtQty(ratio)+'%':'—'}</td></tr><tr class="detail-row" id="${detail}"><td colspan="10" class="detail-cell">${detailHtml(i)}</td></tr>`;
  }).join('')||'<tr><td colspan="10" class="empty">Nenhum item corresponde ao filtro.</td></tr>';
  tbody.querySelectorAll('.item-row').forEach(row=>row.addEventListener('click',()=>document.getElementById(row.dataset.detail).classList.toggle('open')));
@@ -401,7 +427,7 @@ function gerarCsv(){
   const status=itemStatus(item);
   const base=[
    item.numero,item.descricao,item.unidade,
-   {deserto:'Deserto',empenhado:'Empenhado',nao_empenhado:'Não empenhado'}[status],
+   {deserto:'Deserto',empenhado:'Empenhado',nao_empenhado:'Não empenhado',pendente:'Resultados pendentes'}[status],
    item.quantidade_licitada,item.quantidade_homologada,item.quantidade_empenhada_estimada,
    item.quantidade_homologada!=null&&item.quantidade_empenhada_estimada!=null
     ?item.quantidade_homologada-item.quantidade_empenhada_estimada:null,
@@ -445,9 +471,13 @@ prepareSortableHeaders();
 </html>"""
 
 
-def gerar_relatorio_html(dados: Dict[str, Any], caminho_saida: Path) -> Path:
+def gerar_relatorio_html(
+    dados: Dict[str, Any],
+    caminho_saida: Path,
+    gerado_em: Optional[str] = None,
+) -> Path:
     """Gera um relatório HTML autônomo, sem arquivos ou bibliotecas externas."""
-    relatorio = _preparar_relatorio(dados)
+    relatorio = _preparar_relatorio(dados, gerado_em=gerado_em)
     relatorio["objeto"] = dados.get("objeto")
     conteudo_json = json.dumps(relatorio, ensure_ascii=False, separators=(",", ":"))
     conteudo_json = conteudo_json.replace("</", "<\\/")

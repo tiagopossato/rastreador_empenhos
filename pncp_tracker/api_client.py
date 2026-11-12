@@ -9,9 +9,12 @@ def _buscar_json_robusto(urls: list[str], timeout: int = DEFAULT_TIMEOUT) -> dic
         try:
             response = requests.get(url, timeout=timeout)
             if response.status_code == 204:
-                return {}
+                raise requests.RequestException("Endpoint PNCP respondeu 204 sem dados de compra.")
             response.raise_for_status()
-            return response.json()
+            payload = response.json()
+            if not isinstance(payload, dict) or not payload:
+                raise ValueError("Endpoint PNCP não retornou um cabeçalho JSON válido.")
+            return payload
         except (requests.RequestException, ValueError):
             continue
 
@@ -49,6 +52,11 @@ def buscar_resultados_item(cnpj: str, ano: str, sequencial: str, numero_item: in
     url = f"{PNCP_API_PNCP}/{cnpj}/compras/{ano}/{sequencial}/itens/{numero_item}/resultados"
     response = requests.get(url, timeout=DEFAULT_TIMEOUT)
 
-    if response.status_code == 200:
-        return response.json()
-    return []
+    if response.status_code == 204:
+        return []
+
+    response.raise_for_status()
+    resultados = response.json()
+    if not isinstance(resultados, list):
+        raise ValueError("A resposta de resultados homologados do PNCP deve ser uma lista.")
+    return resultados

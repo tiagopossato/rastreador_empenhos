@@ -74,6 +74,7 @@ def mapear_empenhos_por_item(dados_compra: Dict[str, Any], empenhos: List[Dict[s
             chave_item = -1
 
         resultados_item = item.get("resultadosHomologados", []) or []
+        erro_resultados = item.get("erroResultadosHomologados")
         cnpjs_vencedores = {
             _normalizar_cnpj(resultado.get("niFornecedor") or resultado.get("cpfCnpjFornecedor"))
             for resultado in resultados_item
@@ -97,11 +98,11 @@ def mapear_empenhos_por_item(dados_compra: Dict[str, Any], empenhos: List[Dict[s
         quantidade_homologada = sum(
             float(resultado.get("quantidadeHomologada") or 0)
             for resultado in resultados_item
-        )
+        ) if not erro_resultados else None
         valor_total_homologado = sum(
             float(resultado.get("valorTotalHomologado") or 0)
             for resultado in resultados_item
-        )
+        ) if not erro_resultados else None
 
         item_match = {
             "numero_item": numero_item,
@@ -121,8 +122,11 @@ def mapear_empenhos_por_item(dados_compra: Dict[str, Any], empenhos: List[Dict[s
             "empenhos": empenhos_vinculados,
             "empenhos_item_sem_fornecedor_compativel": empenhos_fornecedor_divergente,
             "empenhos_fornecedor_sem_item_identificado": empenhos_sem_item,
+            "erro_resultados_homologados": erro_resultados,
             "status": (
-                "mapeado_por_numero_item"
+                "resultados_homologados_indisponiveis"
+                if erro_resultados
+                else "mapeado_por_numero_item"
                 if empenhos_vinculados
                 else "item_identificado_fornecedor_divergente"
                 if empenhos_fornecedor_divergente

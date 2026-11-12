@@ -2,7 +2,7 @@
   "schema_version": 1,
   "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000187",
   "criado_em": "2026-11-12T07:15:06-03:00",
-  "atualizado_em": "2026-11-12T07:15:06-03:00",
+  "atualizado_em": "2026-11-12T08:13:57-03:00",
   "chaves_integracao": {
     "cnpj_orgao": "10635424000186",
     "uasg_codigo": "158125",
@@ -47,6 +47,13 @@
       "valor": 23,
       "exibicao": "23",
       "descricao": "Valor homologado igual a R$ 0,00"
+    },
+    {
+      "chave": "itens_resultados_pendentes",
+      "rotulo": "Resultados pendentes",
+      "valor": 0,
+      "exibicao": "0",
+      "descricao": "Falha ao consultar resultados no PNCP"
     },
     {
       "chave": "valor_estimado",

@@ -24,14 +24,7 @@ def consultar_contratos_empenhos(
             timeout=DEFAULT_TIMEOUT,
         )
         if getattr(response, "status_code", None) == 404:
-            try:
-                erro = response.json()
-            except ValueError:
-                response.raise_for_status()
-                raise
-            mensagem = str(erro.get("message") or "").casefold() if isinstance(erro, dict) else ""
-            if "não há contrato publicado no pncp para esta contratação" in mensagem:
-                return []
+            return []
         response.raise_for_status()
         payload = response.json()
 

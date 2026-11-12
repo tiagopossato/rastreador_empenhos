@@ -73,10 +73,43 @@ class CollectorTests(unittest.TestCase):
             resultados=[{"niFornecedor": "12345678000199", "valorUnitarioHomologado": 10}],
         )
 
+        self.assertEqual(dados["erros_resultados_itens"], [])
         self.assertEqual(
             dados["itens"][0]["resultadosHomologados"],
             [{"niFornecedor": "12345678000199", "valorUnitarioHomologado": 10}],
         )
+
+    def test_result_lookup_error_is_reported_without_marking_item_as_empty_success(self):
+        mensagens = []
+        with patch(
+            "pncp_tracker.collector.buscar_dados_compra",
+            return_value=_PURCHASE,
+        ), patch(
+            "pncp_tracker.collector.listar_itens",
+            return_value=[{"numeroItem": 9}],
+        ), patch(
+            "pncp_tracker.collector.buscar_resultados_item",
+            side_effect=TimeoutError("timeout"),
+        ):
+            dados = baixar_dados_compra_pncp(_URL, on_progress=mensagens.append)
+
+        self.assertEqual(dados["itens"][0]["resultadosHomologados"], [])
+        self.assertIn("TimeoutError: timeout", dados["itens"][0]["erroResultadosHomologados"])
+        self.assertEqual(
+            dados["erros_resultados_itens"],
+            [{"numero_item": 9, "erro": "TimeoutError: timeout"}],
+        )
+        self.assertTrue(any("Falha ao consultar resultados" in msg for msg in mensagens))
+
+    def test_invalid_purchase_header_stops_before_item_collection(self):
+        with patch(
+            "pncp_tracker.collector.buscar_dados_compra",
+            return_value={},
+        ), patch("pncp_tracker.collector.listar_itens") as list_items:
+            with self.assertRaisesRegex(ValueError, "Cabeçalho da compra incompleto"):
+                baixar_dados_compra_pncp(_URL)
+
+        list_items.assert_not_called()
 
 
 if __name__ == "__main__":

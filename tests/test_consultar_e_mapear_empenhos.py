@@ -119,6 +119,38 @@ class ConsultarEMapearEmpenhosTests(unittest.TestCase):
         )
         self.assertEqual(result[1]["status"], "sem_empenho_mapeado")
 
+    def test_failed_result_lookup_is_not_counted_as_a_desert(self):
+        mapped = mapear_empenhos_por_item(
+            {
+                "itens": [
+                    {
+                        "numeroItem": 3,
+                        "descricao": "Material",
+                        "erroResultadosHomologados": "HTTPError: serviço indisponível",
+                        "resultadosHomologados": [],
+                    }
+                ]
+            },
+            [],
+        )
+        self.assertEqual(
+            mapped[0]["status"],
+            "resultados_homologados_indisponiveis",
+        )
+        self.assertIsNone(mapped[0]["valor_total_homologado"])
+        self.assertIsNone(mapped[0]["quantidade_homologada"])
+
+        report = _preparar_relatorio(
+            {
+                "itens_mapeados": mapped,
+                "erros_resultados_itens": [
+                    {"numero_item": 3, "erro": "HTTPError: serviço indisponível"}
+                ],
+            }
+        )
+        self.assertIsNone(report["itens"][0]["valor_total_homologado"])
+        self.assertEqual(report["erros_resultados_itens"][0]["numero_item"], 3)
+
     @patch("pncp_tracker.contratos_empenhos.requests.get")
     def test_contracts_and_empenhos_pagination(self, get):
         class FakeResponse:
@@ -167,7 +199,7 @@ class ConsultarEMapearEmpenhosTests(unittest.TestCase):
         get.assert_called_once()
 
     @patch("pncp_tracker.contratos_empenhos.requests.get")
-    def test_unrelated_contracts_404_is_still_raised(self, get):
+    def test_any_contracts_404_is_treated_as_no_published_contracts(self, get):
         class FakeResponse:
             status_code = 404
 
@@ -178,6 +210,17 @@ class ConsultarEMapearEmpenhosTests(unittest.TestCase):
                 return {"status": "404", "message": "Unexpected endpoint failure"}
 
         get.return_value = FakeResponse()
+
+        self.assertEqual(
+            consultar_contratos_empenhos("10635424000186", "2026", "187"),
+            [],
+        )
+
+    @patch("pncp_tracker.contratos_empenhos.requests.get")
+    def test_contracts_server_error_is_still_raised(self, get):
+        response = unittest.mock.Mock(status_code=500)
+        response.raise_for_status.side_effect = requests.HTTPError("500 Server Error")
+        get.return_value = response
 
         with self.assertRaises(requests.HTTPError):
             consultar_contratos_empenhos("10635424000186", "2026", "187")
@@ -371,6 +414,33 @@ class ConsultarEMapearEmpenhosTests(unittest.TestCase):
         download.assert_not_called()
         get_contracts.assert_called_once_with("10635424000186", "2025", "000272")
         self.assertEqual(result["objeto"], "Compra de teste")
+
+    @patch("pncp_tracker.consultar_e_mapear_empenhos.mapear_empenhos_por_item", return_value=[])
+    @patch("pncp_tracker.consultar_e_mapear_empenhos.enriquecer_empenhos_com_detalhes_portal", return_value=([], []))
+    @patch("pncp_tracker.consultar_e_mapear_empenhos.consultar_contratos_empenhos", return_value=[])
+    def test_failed_stage_one_results_make_mapping_status_partial(
+        self,
+        _get_contracts,
+        _enrich,
+        _map_items,
+    ):
+        errors = [{"numero_item": 3, "erro": "HTTPError: serviço indisponível"}]
+        result = consultar_e_mapear_empenhos(
+            "https://pncp.gov.br/app/editais/10635424000186/2025/000272",
+            dados_compra={
+                "chaves_integracao": {
+                    "cnpj_orgao": "10635424000186",
+                    "ano_compra": 2025,
+                    "numero_compra": "90027",
+                    "numero_controle_pncp": "10635424000186-1-000272/2025",
+                },
+                "itens": [],
+                "erros_resultados_itens": errors,
+            },
+        )
+
+        self.assertEqual(result["status"], "parcial")
+        self.assertEqual(result["erros_resultados_itens"], errors)
 
 
 if __name__ == "__main__":

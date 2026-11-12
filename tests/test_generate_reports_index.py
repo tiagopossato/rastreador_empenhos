@@ -1,4 +1,5 @@
 import json
+import re
 import tempfile
 import unittest
 from pathlib import Path
@@ -127,12 +128,88 @@ class GenerateReportsIndexTests(unittest.TestCase):
                     / "metadados.json"
                 ).read_text(encoding="utf-8")
             )
-            self.assertEqual(len(metadata["resumo_cards"]), 8)
+            self.assertEqual(len(metadata["resumo_cards"]), 9)
             cards_by_key = {
                 card["chave"]: card for card in metadata["resumo_cards"]
             }
             self.assertEqual(cards_by_key["itens_empenhados"]["valor"], 1)
             self.assertEqual(cards_by_key["valor_estimado"]["exibicao"], "R$ 200,00")
+            self.assertEqual(cards_by_key["itens_resultados_pendentes"]["valor"], 0)
+            report_path = (
+                reports_dir
+                / "relatorio_compra_90026_2025"
+                / "relatorio_compra_90026_2025.html"
+            )
+            embedded = re.search(
+                r'<script id="report-data" type="application/json">(.*?)</script>',
+                report_path.read_text(encoding="utf-8"),
+                re.DOTALL,
+            )
+            self.assertIsNotNone(embedded)
+            self.assertEqual(json.loads(embedded.group(1))["gerado_em"], "02/01/2026 10:00")
+
+            gerar_relatorios(reports_dir, index_path=index_path)
+            regenerated = re.search(
+                r'<script id="report-data" type="application/json">(.*?)</script>',
+                report_path.read_text(encoding="utf-8"),
+                re.DOTALL,
+            )
+            self.assertEqual(json.loads(regenerated.group(1))["gerado_em"], "02/01/2026 10:00")
+
+    def test_failed_results_are_shown_as_pending_instead_of_deserted(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            reports_dir = Path(temp_dir)
+            record = self._write_report(
+                reports_dir,
+                "relatorio_pendente",
+                "90031",
+                2025,
+                "Objeto com resultado pendente",
+            )
+            report_path = reports_dir / "relatorio_pendente" / "dados_empenhos.json"
+            report_data = json.loads(report_path.read_text(encoding="utf-8"))
+            report_data["erros_resultados_itens"] = [
+                {"numero_item": 1, "erro": "HTTPError: falha"}
+            ]
+            report_data["itens_mapeados"][0].update(
+                {
+                    "status": "resultados_homologados_indisponiveis",
+                    "erro_resultados_homologados": "HTTPError: falha",
+                    "valor_total_homologado": None,
+                    "quantidade_homologada": None,
+                }
+            )
+            report_path.write_text(
+                json.dumps(report_data, ensure_ascii=False),
+                encoding="utf-8",
+            )
+            index_path = reports_dir / "indice_relatorios.json"
+            salvar_registros([record], index_path)
+
+            gerar_relatorios(reports_dir, index_path=index_path)
+
+            html_path = reports_dir / "relatorio_pendente" / "relatorio_pendente.html"
+            content = html_path.read_text(encoding="utf-8")
+            self.assertIn("Resultados pendentes", content)
+            self.assertIn("não são contabilizados como desertos", content)
+            embedded = re.search(
+                r'<script id="report-data" type="application/json">(.*?)</script>',
+                content,
+                re.DOTALL,
+            )
+            report = json.loads(embedded.group(1))
+            self.assertIsNone(report["itens"][0]["valor_total_homologado"])
+            self.assertEqual(
+                report["itens"][0]["status"],
+                "resultados_homologados_indisponiveis",
+            )
+
+            saved_index = json.loads(index_path.read_text(encoding="utf-8"))
+            saved_record = saved_index["relatorios"][0]
+            self.assertEqual(saved_record["status"], "parcial")
+            cards = {card["chave"]: card for card in saved_record["resumo_cards"]}
+            self.assertEqual(cards["itens_desertos"]["valor"], 0)
+            self.assertEqual(cards["itens_resultados_pendentes"]["valor"], 1)
 
     def test_index_shows_empty_state_when_no_reports_exist(self):
         with tempfile.TemporaryDirectory() as temp_dir:

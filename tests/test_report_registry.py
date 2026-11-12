@@ -51,8 +51,13 @@ class ReportRegistryTests(unittest.TestCase):
         for url in (
             "http://pncp.gov.br/app/editais/10635424000186/2025/282",
             "https://example.com/app/editais/10635424000186/2025/282",
+            "https://pncp.gov.br.evil.example/app/editais/10635424000186/2025/282",
+            "https://user@pncp.gov.br/app/editais/10635424000186/2025/282",
+            "https://pncp.gov.br@app.example/app/editais/10635424000186/2025/282",
             "https://pncp.gov.br/app/editais/10635424000186/2025/282?next=x",
+            "https://pncp.gov.br/app/editais/10635424000186/2025/282#section",
             "https://pncp.gov.br/app/editais/123/2025/282",
+            "https://pncp.gov.br/app/editais/10635424000186/2025/282/extra",
         ):
             with self.subTest(url=url), self.assertRaises(ValueError):
                 validar_url_pncp(url)
