@@ -1,4 +1,5 @@
 import unittest
+from datetime import datetime as RealDateTime, timezone as RealTimezone
 from unittest.mock import patch
 
 import requests
@@ -12,6 +13,14 @@ from pncp_tracker.report_html import _preparar_relatorio
 
 
 class ConsultarEMapearEmpenhosTests(unittest.TestCase):
+    def test_report_generation_time_uses_brazil_utc_minus_three(self):
+        utc_instant = RealDateTime(2026, 11, 12, 10, 22, tzinfo=RealTimezone.utc)
+        with patch("pncp_tracker.report_html.datetime") as report_datetime:
+            report_datetime.now.side_effect = lambda tz: utc_instant.astimezone(tz)
+            report = _preparar_relatorio({})
+
+        self.assertEqual(report["gerado_em"], "12/11/2026 07:22")
+
     @patch("pncp_tracker.portal_transparencia._api_key", return_value="test-key")
     @patch("pncp_tracker.portal_transparencia.requests.get")
     def test_supplier_document_lookup_uses_year_and_management_unit(self, get, api_key):

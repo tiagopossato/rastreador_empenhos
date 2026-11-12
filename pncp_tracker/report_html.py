@@ -1,8 +1,11 @@
 import json
 import re
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional
+
+
+_BRAZIL_TIMEZONE = timezone(timedelta(hours=-3))
 
 
 def _numero(valor: Any) -> Optional[float]:
@@ -179,7 +182,7 @@ def _preparar_relatorio(dados: Dict[str, Any]) -> Dict[str, Any]:
         "valor_empenhado_mapeado": soma_empenhada,
         "itens": itens,
         "registros_sem_vinculo": empenhos_sem_vinculo,
-        "gerado_em": datetime.now().astimezone().strftime("%d/%m/%Y %H:%M"),
+        "gerado_em": datetime.now(_BRAZIL_TIMEZONE).strftime("%d/%m/%Y %H:%M"),
     }
 
 
