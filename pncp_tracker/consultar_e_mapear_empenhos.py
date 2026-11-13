@@ -6,6 +6,7 @@ from .collector import baixar_dados_compra_pncp
 from .contratos_empenhos import consultar_contratos_empenhos
 from .empenho_details import enriquecer_empenhos_com_detalhes_portal
 from .empenho_matcher import mapear_empenhos_por_item
+from .empenho_portal import buscar_empenhos_portal_para_compra
 from .url_parser import extrair_parametros_url
 
 
@@ -34,6 +35,13 @@ def consultar_e_mapear_empenhos(
             )
         )
     empenhos_detalhados, erros_detalhamento = enriquecer_empenhos_com_detalhes_portal(empenhos)
+    fonte_empenhos = "PNCP - aba Contratos/Empenhos"
+    if not empenhos:
+        if on_progress is not None:
+            on_progress("PNCP sem registros; buscando empenhos por fornecedores homologados no Portal.")
+        empenhos_detalhados, erros_fallback = buscar_empenhos_portal_para_compra(dados_compra)
+        erros_detalhamento.extend(erros_fallback)
+        fonte_empenhos = "Portal da Transparência - busca por fornecedores homologados"
 
     if on_progress is not None:
         on_progress("Relacionando empenhos aos itens e fornecedores homologados.")
@@ -46,7 +54,13 @@ def consultar_e_mapear_empenhos(
         empenho.get("detalhesPortalTransparencia", {}).get("status") == "nao_encontrado"
         for empenho in empenhos_detalhados
     )
-    status = "sem_registros" if not empenhos else "parcial" if erros_detalhamento or detalhes_nao_encontrados else "ok"
+    status = (
+        "sem_registros"
+        if not empenhos_detalhados and not erros_detalhamento
+        else "parcial"
+        if erros_detalhamento or detalhes_nao_encontrados
+        else "ok"
+    )
     if on_progress is not None:
         on_progress(
             "Mapeamento concluído: {} empenhos; {} detalhes obtidos; {} itens relacionados.".format(
@@ -59,7 +73,12 @@ def consultar_e_mapear_empenhos(
     return {
         "status": "parcial" if dados_compra.get("erros_resultados_itens") else status,
         "mensagem": (
-            "Consulta concluída; a API do PNCP não retornou contratos/empenhos para a contratação."
+            (
+                "Consulta concluída; o PNCP não retornou registros e o Portal da Transparência "
+                f"localizou {len(empenhos_detalhados)} empenho(s) por fornecedores homologados."
+                if empenhos_detalhados
+                else "Consulta concluída; PNCP e busca alternativa no Portal da Transparência não retornaram empenhos."
+            )
             if not empenhos
             else (
                 f"Registros coletados do PNCP. Detalhes do Portal obtidos para {quantidade_com_detalhes} "
@@ -68,7 +87,7 @@ def consultar_e_mapear_empenhos(
                 else "Registros coletados do PNCP e complementados com o detalhamento e os itens publicados no Portal da Transparência."
             )
         ),
-        "fontes": ["PNCP - aba Contratos/Empenhos", "Portal da Transparência - detalhes e itens do empenho"],
+        "fontes": [fonte_empenhos, "Portal da Transparência - detalhes e itens do empenho"],
         "chaves_integracao": {
             "cnpj_orgao": chaves["cnpj_orgao"],
             "uasg_codigo": chaves.get("uasg_codigo"),

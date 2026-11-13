@@ -23,6 +23,7 @@ Este repositório contém a aplicação Python `rastreador_empenhos`, que coleta
 - `pncp_tracker/contratos_empenhos.py`: consulta registros de contratos/empenhos.
 - `pncp_tracker/portal_transparencia.py`: consulta dados do Portal da Transparência.
 - `pncp_tracker/empenho_details.py`: detalha documentos de empenho.
+- `pncp_tracker/empenho_portal.py`: busca empenhos alternativos no Portal quando o PNCP não retorna registros.
 - `pncp_tracker/empenho_matcher.py`: relaciona empenhos a itens e fornecedores.
 - `pncp_tracker/empenhos.py`: models e processamento de empenhos.
 - `pncp_tracker/consultar_e_mapear_empenhos.py`: consulta os empenhos, enriquece com os detalhes do Portal da Transparência e mapeia os registros aos itens da compra.
@@ -126,6 +127,8 @@ Ordem executada por `atualizar_processo`: as etapas 1–3 pertencem a `baixar_da
    - **Retorno esperado:** lista JSON de `DespesasPorDocumentoDTO`; a paginação para em lista vazia ou com menos de 15 elementos. O vínculo com o empenho usa `documentoResumido`, e `documento` fornece o código usado na etapa 6. A spec documenta também as respostas 400, 401 e 500.
    - **Falhas:** chave ausente ou HTTP 401 geram `PermissionError`; erro em um grupo deixa a lista daquele grupo vazia e entra em `erros_detalhamento`, sem interromper o relatório. Empenho sem documento correspondente recebe `status: nao_encontrado`.
 
+   **Fallback quando o PNCP não retorna nenhum registro:** a aplicação consulta o mesmo endpoint uma vez por CNPJ distinto dos fornecedores homologados, usando `codigoPessoa`, `fase=1`, `ano` da compra e `pagina`, sem enviar `ug`. Só são aceitos documentos com `numeroProcesso` igual ao processo da compra (comparação pelos dígitos); documentos sem processo não são aceitos nesta etapa.
+
 6. **Detalhamento do documento (Portal da Transparência)** — `documentoPorCodigo` em `api-docs-transparencia.json`; para cada empenho cujo documento foi localizado:
    `https://api.portaldatransparencia.gov.br/api-de-dados/despesas/documentos/{codigo}`
    - **Parâmetros:** `codigo` no caminho (código do registro: unidade gestora + gestão + número do documento); sem query string. Usa os mesmos cabeçalhos de autenticação.
@@ -135,6 +138,12 @@ Ordem executada por `atualizar_processo`: as etapas 1–3 pertencem a `baixar_da
    `https://api.portaldatransparencia.gov.br/api-de-dados/despesas/itens-de-empenho`
    - **Parâmetros de query:** `codigoDocumento` (código do empenho: unidade gestora + gestão + número do documento) e `pagina` (começa em 1). Usa os mesmos cabeçalhos de autenticação.
    - **Retorno esperado:** lista JSON de `DetalhamentoDoGastoDTO`, com campos como `descricao`, `valorAtual`, `codigoItemEmpenho` e `sequencial`. A paginação para em lista vazia ou com menos de 15 elementos; a lista agregada é anexada ao documento como `itensEmpenho`. Falha aqui invalida o detalhamento inteiro e resulta em `status: erro` para o empenho.
+
+**Fallback de descoberta (Portal da Transparência):** executado somente se a etapa 4 retornar zero empenhos. Para cada fornecedor homologado distinto, a etapa 5 é repetida sem `ug` para o ano da compra e os dois anos subsequentes; cada documento candidato é então consultado nas etapas 6–7. O detalhe é descartado se declarar processo diferente; se não repetir o número do processo, prevalece a correspondência já validada na resposta da etapa 5. Os registros são deduplicados por `documentoResumido` e recebem a mesma estrutura de detalhes usada pelo matcher (`numeroContratoEmpenho`, `niFornecedor` e `detalhesPortalTransparencia.detalhamento`). A correspondência com itens continua usando `Item compra: NNNNN` e fornecedor, sem alterar a regra do matcher. A busca é limitada a esses três anos e à fase Empenho; não consulta outros anos nem fornecedores não homologados. Erros por fornecedor/ano/documento são incluídos em `erros_detalhamento`. Se o PNCP retornar qualquer registro, o fallback não é executado.
+
+**Limites de acesso do Portal da Transparência:** respeite os limites publicados para cada token: até 700 requisições/minuto entre 00:00–06:00, até 400 requisições/minuto nos demais horários e, para endpoints restritos, até 180 requisições/minuto. O endpoint `despesas/documentos-por-favorecido` usado nas etapas 5 e no fallback é restrito. A lista completa de endpoints restritos também inclui `bolsa-familia-disponivel-por-cpf-ou-nis`, `bolsa-familia-por-municipio`, `bolsa-familia-sacado-por-nis`, `auxilio-emergencial-beneficiario-por-municipio`, `auxilio-emergencial-por-cpf-ou-nis`, `auxilio-emergencial-por-municipio` e `seguro-defeso-codigo`. Excesso suspende o token por 8 horas. `portal_transparencia.py` aplica intervalos mínimos entre chamadas no processo: 180/min para o endpoint restrito e os limites globais informados para os demais. O controle em memória coordena threads desse processo, não processos independentes; não execute instâncias concorrentes com o mesmo token sem um limitador compartilhado.
+
+Se a API retornar HTTP 429 ou uma resposta textual informando bloqueio/limite atingido (inclusive HTTP 200 sem JSON), marque o token como bloqueado e não faça novas chamadas durante as 8 horas de suspensão. Não repita rapidamente para outros fornecedores, anos ou documentos. A execução deve terminar com erro/resultado parcial explicando que o token foi bloqueado; após o prazo, uma nova execução pode retomar as consultas. Não faça retries automáticos que possam prolongar o bloqueio.
 
 As respostas geram `dados_pregao.json` (cabeçalho e itens com resultados) e `dados_empenhos.json` (registros PNCP enriquecidos e mapeados); a geração dos HTMLs não faz chamadas externas. A chave da API nunca deve aparecer em parâmetros de URL, logs ou relatórios.
 

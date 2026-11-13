@@ -8,7 +8,12 @@ from pncp_tracker.consultar_e_mapear_empenhos import consultar_e_mapear_empenhos
 from pncp_tracker.contratos_empenhos import consultar_contratos_empenhos
 from pncp_tracker.empenho_details import enriquecer_empenhos_com_detalhes_portal
 from pncp_tracker.empenho_matcher import mapear_empenhos_por_item
-from pncp_tracker.portal_transparencia import consultar_documentos_despesa_favorecido
+from pncp_tracker.empenho_portal import buscar_empenhos_portal_para_compra
+from pncp_tracker import portal_transparencia
+from pncp_tracker.portal_transparencia import (
+    PortalTransparenciaBlockedError,
+    consultar_documentos_despesa_favorecido,
+)
 from pncp_tracker.report_html import _preparar_relatorio
 
 
@@ -49,6 +54,90 @@ class ConsultarEMapearEmpenhosTests(unittest.TestCase):
             "ug": "158460",
             "pagina": 1,
         })
+
+    @patch("pncp_tracker.portal_transparencia._api_key", return_value="test-key")
+    @patch("pncp_tracker.portal_transparencia.requests.get")
+    def test_supplier_lookup_without_management_unit_omits_ug(self, get, _api_key):
+        response = unittest.mock.Mock(status_code=200)
+        response.json.return_value = []
+        response.raise_for_status.return_value = None
+        get.return_value = response
+
+        consultar_documentos_despesa_favorecido("12345678000199", 2026, None)
+
+        self.assertNotIn("ug", get.call_args.kwargs["params"])
+
+    @patch("pncp_tracker.portal_transparencia.requests.get")
+    def test_request_limiter_waits_before_sending_next_request(self, get):
+        response = unittest.mock.Mock(status_code=200, text="")
+        get.return_value = response
+        with (
+            patch.object(portal_transparencia, "_portal_blocked", False),
+            patch.object(portal_transparencia, "_last_request_at", 9.8),
+            patch.object(portal_transparencia, "_intervalo_minimo", return_value=0.5),
+            patch("pncp_tracker.portal_transparencia.time.monotonic", side_effect=[10, 10.5]),
+            patch("pncp_tracker.portal_transparencia.time.sleep") as sleep,
+        ):
+            portal_transparencia._get("https://example.test/endpoint")
+
+        sleep.assert_called_once()
+        self.assertAlmostEqual(sleep.call_args.args[0], 0.3)
+
+    @patch("pncp_tracker.portal_transparencia._api_key", return_value="test-key")
+    @patch("pncp_tracker.portal_transparencia.requests.get")
+    def test_blocked_token_stops_all_following_portal_requests(self, get, _api_key):
+        response = unittest.mock.Mock(
+            status_code=200,
+            text="Usuário bloqueado, pois o limite de acesso à API de Dados foi atingido!",
+        )
+        get.return_value = response
+        with patch.object(portal_transparencia, "_portal_blocked", False):
+            with self.assertRaises(PortalTransparenciaBlockedError):
+                consultar_documentos_despesa_favorecido("12345678000199", 2026, None)
+            with self.assertRaises(PortalTransparenciaBlockedError):
+                consultar_documentos_despesa_favorecido("12345678000199", 2027, None)
+
+        get.assert_called_once()
+
+    @patch("pncp_tracker.empenho_portal.consultar_detalhes_documento_despesa")
+    @patch("pncp_tracker.empenho_portal.consultar_documentos_despesa_favorecido")
+    def test_portal_fallback_filters_process_and_builds_matchable_empenho(
+        self, search, detail
+    ):
+        search.side_effect = [
+            [{"documentoResumido": "2026NE000236", "documento": "doc-1",
+              "numeroProcesso": "23352.001311/2026-49"}],
+            [],
+            [{"documentoResumido": "2028NE000001", "documento": "doc-3",
+              "numeroProcesso": "23352.001311/2026-49"}],
+        ]
+        detail.return_value = {
+            "numeroProcesso": "23352.001311/2026-49",
+            "codigoFavorecido": "46675900000259",
+            "itensEmpenho": [{"descricao": "Item compra: 00049", "valorAtual": "10.161,88"}],
+        }
+        purchase = {
+            "chaves_integracao": {"processo": "23352.001311/2026-49", "ano_compra": 2026},
+            "itens": [{"numeroItem": 49, "resultadosHomologados": [
+                {"niFornecedor": "46.675.900/0002-59"}
+            ]}],
+        }
+
+        registros, erros = buscar_empenhos_portal_para_compra(purchase)
+
+        self.assertEqual(erros, [])
+        self.assertEqual(
+            [r["numeroContratoEmpenho"] for r in registros],
+            ["2026NE000236", "2028NE000001"],
+        )
+        self.assertEqual(registros[0]["detalhesPortalTransparencia"]["status"], "ok")
+        mapped = mapear_empenhos_por_item(purchase, registros)
+        self.assertEqual(mapped[0]["empenhos"][0]["numero_empenho"], "2026NE000236")
+        self.assertEqual(
+            [call.args[1] for call in search.call_args_list],
+            ["2026", "2027", "2028"],
+        )
+        self.assertTrue(all(call.args[2] is None for call in search.call_args_list))
 
     def test_empenhos_without_item_number_are_only_supplier_candidates(self):
         result = mapear_empenhos_por_item(
@@ -425,6 +514,29 @@ class ConsultarEMapearEmpenhosTests(unittest.TestCase):
         download.assert_not_called()
         get_contracts.assert_called_once_with("10635424000186", "2025", "000272")
         self.assertEqual(result["objeto"], "Compra de teste")
+
+    @patch("pncp_tracker.consultar_e_mapear_empenhos.buscar_empenhos_portal_para_compra")
+    @patch("pncp_tracker.consultar_e_mapear_empenhos.mapear_empenhos_por_item", return_value=[])
+    @patch("pncp_tracker.consultar_e_mapear_empenhos.enriquecer_empenhos_com_detalhes_portal", return_value=([], []))
+    @patch(
+        "pncp_tracker.consultar_e_mapear_empenhos.consultar_contratos_empenhos",
+        return_value=[{"numeroContratoEmpenho": "2026NE000001"}],
+    )
+    def test_portal_fallback_is_not_used_when_pncp_returns_records(
+        self, _contracts, _enrich, _map_items, fallback
+    ):
+        consultar_e_mapear_empenhos(
+            "https://pncp.gov.br/app/editais/10635424000186/2025/000272",
+            dados_compra={
+                "chaves_integracao": {
+                    "cnpj_orgao": "10635424000186", "numero_compra": "90027",
+                    "ano_compra": 2025, "numero_controle_pncp": "controle",
+                },
+                "itens": [],
+            },
+        )
+
+        fallback.assert_not_called()
 
     @patch("pncp_tracker.consultar_e_mapear_empenhos.mapear_empenhos_por_item", return_value=[])
     @patch("pncp_tracker.consultar_e_mapear_empenhos.enriquecer_empenhos_com_detalhes_portal", return_value=([], []))

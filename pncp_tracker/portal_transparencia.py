@@ -1,10 +1,65 @@
 import os
+import threading
+import time
+from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List
 
 import requests
 
 from .constants import DEFAULT_TIMEOUT
+
+PORTAL_BASE_URL = "https://api.portaldatransparencia.gov.br/api-de-dados"
+_PORTAL_RESTRITO = "/despesas/documentos-por-favorecido"
+_rate_limit_lock = threading.Lock()
+_last_request_at = 0.0
+_portal_blocked = False
+_portal_blocked_until = 0.0
+
+
+class PortalTransparenciaBlockedError(PermissionError):
+    """Raised when the Portal suspends or blocks the API token."""
+
+
+def _intervalo_minimo(url: str) -> float:
+    hora = datetime.now().hour
+    limite_geral = 700 if hora < 6 else 400
+    limite = min(limite_geral, 180) if _PORTAL_RESTRITO in url else limite_geral
+    return 60 / limite + 0.01
+
+
+def _get(url: str, **kwargs: Any) -> requests.Response:
+    global _last_request_at, _portal_blocked, _portal_blocked_until
+    with _rate_limit_lock:
+        agora = time.monotonic()
+        if _portal_blocked:
+            if agora < _portal_blocked_until:
+                raise PortalTransparenciaBlockedError(
+                    "O token do Portal da Transparência foi bloqueado; novas chamadas foram interrompidas."
+                )
+            _portal_blocked = False
+        espera = _intervalo_minimo(url) - (agora - _last_request_at)
+        if _last_request_at and espera > 0:
+            time.sleep(espera)
+        _last_request_at = time.monotonic()
+
+    response = requests.get(url, **kwargs)
+    texto = str(getattr(response, "text", "") or "").casefold()
+    mensagem_bloqueio = (
+        "limite de acesso à api de dados foi atingido",
+        "token suspenso",
+        "usuário bloqueado",
+        "usuario bloqueado",
+    )
+    if response.status_code == 429 or any(msg in texto for msg in mensagem_bloqueio):
+        with _rate_limit_lock:
+            _portal_blocked = True
+            _portal_blocked_until = time.monotonic() + 8 * 60 * 60
+        raise PortalTransparenciaBlockedError(
+            "O Portal da Transparência bloqueou o token por limite de acesso. "
+            "As chamadas foram interrompidas para evitar novas requisições."
+        )
+    return response
 
 
 def _carregar_arquivo_env() -> None:
@@ -48,10 +103,10 @@ def _headers() -> Dict[str, str]:
 def consultar_documentos_despesa_favorecido(
     codigo_pessoa: str,
     ano: int | str,
-    unidade_gestora: str,
+    unidade_gestora: str | None,
     fase: int = 1,
 ) -> List[Dict[str, Any]]:
-    """Lista documentos de despesa por favorecido, ano e unidade gestora."""
+    """Lista documentos por favorecido, ano e, opcionalmente, unidade gestora."""
     api_key = _api_key()
     if not api_key:
         raise PermissionError(
@@ -59,20 +114,22 @@ def consultar_documentos_despesa_favorecido(
             "Defina PORTAL_DADOS_API_KEY ou PORTALTRANSPARENCIA_API_KEY."
         )
 
-    url = "https://api.portaldatransparencia.gov.br/api-de-dados/despesas/documentos-por-favorecido"
+    url = f"{PORTAL_BASE_URL}/despesas/documentos-por-favorecido"
     documentos: List[Dict[str, Any]] = []
     pagina = 1
 
     while True:
-        response = requests.get(
+        parametros = {
+            "codigoPessoa": codigo_pessoa,
+            "fase": fase,
+            "ano": ano,
+            "pagina": pagina,
+        }
+        if unidade_gestora:
+            parametros["ug"] = unidade_gestora
+        response = _get(
             url,
-            params={
-                "codigoPessoa": codigo_pessoa,
-                "fase": fase,
-                "ano": ano,
-                "ug": unidade_gestora,
-                "pagina": pagina,
-            },
+            params=parametros,
             headers=_headers(),
             timeout=DEFAULT_TIMEOUT,
         )
@@ -101,9 +158,9 @@ def consultar_detalhes_documento_despesa(codigo_documento: str) -> Dict[str, Any
             "Defina PORTAL_DADOS_API_KEY ou PORTALTRANSPARENCIA_API_KEY."
         )
 
-    base_url = "https://api.portaldatransparencia.gov.br/api-de-dados/despesas"
+    base_url = f"{PORTAL_BASE_URL}/despesas"
     headers = _headers()
-    response = requests.get(
+    response = _get(
         f"{base_url}/documentos/{codigo_documento}",
         headers=headers,
         timeout=DEFAULT_TIMEOUT,
@@ -118,7 +175,7 @@ def consultar_detalhes_documento_despesa(codigo_documento: str) -> Dict[str, Any
     itens: List[Dict[str, Any]] = []
     pagina = 1
     while True:
-        response_itens = requests.get(
+        response_itens = _get(
             f"{base_url}/itens-de-empenho",
             params={"codigoDocumento": codigo_documento, "pagina": pagina},
             headers=headers,
