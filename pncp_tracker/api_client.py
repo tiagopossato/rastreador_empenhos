@@ -4,7 +4,7 @@ from .constants import DEFAULT_TIMEOUT, PNCP_API_CONSULTA, PNCP_API_PNCP
 
 
 def _buscar_json_robusto(urls: list[str], timeout: int = DEFAULT_TIMEOUT) -> dict:
-    """Tenta vários endpoints do PNCP e retorna o primeiro JSON válido."""
+    """Tenta as URLs informadas e retorna o primeiro JSON válido."""
     for url in urls:
         try:
             response = requests.get(url, timeout=timeout)
@@ -22,13 +22,9 @@ def _buscar_json_robusto(urls: list[str], timeout: int = DEFAULT_TIMEOUT) -> dic
 
 
 def buscar_dados_compra(cnpj: str, ano: str, sequencial: str, timeout: int = DEFAULT_TIMEOUT) -> dict:
-    """Busca o cabeçalho da compra em endpoints alternativos do PNCP."""
-    urls = [
-        f"{PNCP_API_CONSULTA}/{cnpj}/compras/{ano}/{sequencial}",
-        f"{PNCP_API_PNCP}/{cnpj}/compras/{ano}/{sequencial}",
-        f"https://pncp.gov.br/api/pncp/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}",
-    ]
-    return _buscar_json_robusto(urls, timeout=timeout)
+    """Busca o cabeçalho da compra no endpoint de consulta do PNCP."""
+    url = f"{PNCP_API_CONSULTA}/{cnpj}/compras/{ano}/{sequencial}"
+    return _buscar_json_robusto([url], timeout=timeout)
 
 
 def listar_itens(cnpj: str, ano: str, sequencial: str, pagina: int = 1, tamanho_pagina: int = 50):

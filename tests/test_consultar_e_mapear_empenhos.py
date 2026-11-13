@@ -172,6 +172,7 @@ class ConsultarEMapearEmpenhosTests(unittest.TestCase):
 
         self.assertEqual([row["numeroContratoEmpenho"] for row in result], ["NE1", "NE2"])
         self.assertEqual(get.call_count, 2)
+        self.assertIn("/api/pncp/v1/", get.call_args.args[0])
 
     @patch("pncp_tracker.contratos_empenhos.requests.get")
     def test_contracts_404_with_no_published_contracts_payload_returns_empty(self, get):
@@ -187,7 +188,7 @@ class ConsultarEMapearEmpenhosTests(unittest.TestCase):
                     "status": "404",
                     "error": "404 NOT_FOUND",
                     "message": "Não há contrato publicado no PNCP para esta contratação.",
-                    "path": "/pncp-api/v1/orgaos/10635424000186/contratos/contratacao/2026/187",
+                    "path": "/api/pncp/v1/orgaos/10635424000186/contratos/contratacao/2026/187",
                 }
 
         get.return_value = FakeResponse()

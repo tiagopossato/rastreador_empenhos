@@ -82,6 +82,17 @@ class ConsultasPncpTests(unittest.TestCase):
 
         primeira_url = get.call_args_list[0].args[0]
         self.assertTrue(primeira_url.endswith("/10635424000186/compras/2025/282"))
+        self.assertTrue(primeira_url.startswith("https://pncp.gov.br/api/consulta/v1/orgaos/"))
+        self.assertEqual(get.call_count, 1)
+
+    def test_purchase_header_does_not_retry_removed_endpoints(self):
+        falha = Mock()
+        falha.raise_for_status.side_effect = requests.RequestException("indisponível")
+        with patch("pncp_tracker.api_client.requests.get", return_value=falha) as get:
+            with self.assertRaises(requests.RequestException):
+                buscar_dados_compra("10635424000186", "2025", "282")
+
+        self.assertEqual(get.call_count, 1)
 
     def test_item_page_sends_pagination_parameters(self):
         with patch(
@@ -91,6 +102,7 @@ class ConsultasPncpTests(unittest.TestCase):
             itens = listar_itens("10635424000186", "2025", "282", pagina=2)
 
         self.assertEqual(itens, [{"numeroItem": 1}])
+        self.assertIn("/api/pncp/v1/", get.call_args.args[0])
         self.assertEqual(get.call_args.kwargs["params"], {"pagina": 2, "tamanhoPagina": 50})
 
     def test_item_page_without_content_returns_empty_list(self):
@@ -134,11 +146,12 @@ class ConsultasPncpTests(unittest.TestCase):
         with patch(
             "pncp_tracker.api_client.requests.get",
             return_value=_resposta(payload=[{"niFornecedor": "12345678000199"}]),
-        ):
+        ) as get:
             self.assertEqual(
                 buscar_resultados_item("10635424000186", "2025", "282", 1),
                 [{"niFornecedor": "12345678000199"}],
             )
+            self.assertIn("/api/pncp/v1/", get.call_args.args[0])
 
 
 if __name__ == "__main__":

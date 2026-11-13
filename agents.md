@@ -32,6 +32,8 @@ Este repositório contém a aplicação Python `rastreador_empenhos`, que coleta
 - `pncp_tracker/process_lock.py`: lock entre processos que serializa atualizações e alterações no índice.
 - `relatorios/gerar_relatorios.py`: regenera os HTMLs individuais e os índices JSON/HTML a partir dos dados persistidos.
 - `relatorios/`: índice (`index.html`, `indice_relatorios.json`) e pastas individuais com HTML, JSONs das duas etapas e metadados.
+- `api-docs-pnpc.json`: especificação OpenAPI 3.0.1 da API PNCP Consulta (12 caminhos e 23 schemas); documenta o cabeçalho da compra, mas não os endpoints de itens, resultados e contratos por contratação usados pelo projeto.
+- `api-docs-transparencia.json`: especificação OpenAPI 3.0.1 da API do Portal da Transparência (109 caminhos e 106 schemas).
 - `.private/`: usuários, log e lock; ignorado pelo Git e nunca publicado.
 - `tests/`: testes automatizados.
 
@@ -75,6 +77,66 @@ python main.py "https://pncp.gov.br/app/editais/10635424000186/2025/187"
 ```
 
 A URL pode também ser informada interativamente quando omitida na linha de comando. A aplicação rejeita URLs vazias ou fora do formato `/editais/{cnpj}/{ano}/{sequencial}` antes de iniciar as consultas.
+
+## APIs externas: sequência, parâmetros e retorno
+
+Todo o fluxo usa HTTP GET, sem corpo de requisição. `{cnpj}`, `{ano}` e `{sequencial}` vêm da URL pública `/app/editais/{cnpj}/{ano}/{sequencial}`, validada por `url_parser` (CNPJ com 14 dígitos, ano com 4 e sequencial numérico). O timeout padrão é 30 s (`DEFAULT_TIMEOUT`) e o tamanho de página do PNCP é 50 (`DEFAULT_PAGE_SIZE`).
+
+As especificações OpenAPI 3.0.1 estão no repositório:
+
+- [api-docs-pnpc.json](./api-docs-pnpc.json): API PNCP Consulta, servidor relativo `/api/consulta` (em produção, `https://pncp.gov.br/api/consulta`), 12 caminhos e 23 schemas. Cobre o cabeçalho da compra (`consultarCompra`); **não cobre** os endpoints de itens, resultados e contratos por contratação usados nas etapas 2–4. A spec declara `bearerAuth` (JWT), mas as chamadas atuais do projeto não enviam autenticação ao PNCP.
+- [api-docs-transparencia.json](./api-docs-transparencia.json): Portal da Transparência, servidor `https://api.portaldatransparencia.gov.br`, 109 caminhos e 106 schemas. Cobre as etapas 5–7; a autenticação é `apiKey` no cabeçalho `chave-api-dados`.
+
+| Etapa | Endpoint usado | Documentado em |
+| --- | --- | --- |
+| 1 | `/api/consulta/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}` | `api-docs-pnpc.json` (`consultarCompra`) |
+| 2 | `/api/pncp/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens` | não |
+| 3 | `/api/pncp/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens/{numeroItem}/resultados` | não |
+| 4 | `/api/pncp/v1/orgaos/{cnpj}/contratos/contratacao/{ano}/{sequencial}` | não |
+| 5–7 | `/api-de-dados/despesas/...` | `api-docs-transparencia.json` |
+
+Ordem executada por `atualizar_processo`: as etapas 1–3 pertencem a `baixar_dados_compra_pncp` (resultado em `dados_pregao.json`); as etapas 4–7 pertencem a `consultar_e_mapear_empenhos` (resultado em `dados_empenhos.json`), que no fluxo principal reaproveita o cabeçalho da etapa 1 e não a repete.
+
+1. **Cabeçalho da compra (PNCP)** — `consultarCompra` em `api-docs-pnpc.json`; o código usa somente o endpoint oficial:
+   - `https://pncp.gov.br/api/consulta/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}` — responde 200; é o único caminho usado para o cabeçalho.
+   - **Parâmetros:** `cnpj` (string), `ano` (inteiro) e `sequencial` (inteiro) no caminho; sem query string. A spec também define as respostas 204, 400, 401, 422 e 500.
+   - **Retorno esperado:** objeto JSON `RecuperarCompraDTO`. `numeroCompra` (somente dígitos) e `anoCompra` (4 dígitos) são obrigatórios; sem eles a coleta para com "Cabeçalho da compra incompleto". Também são aproveitados, quando presentes, `unidadeOrgao.codigoUnidade`, `unidadeOrgao.nomeUnidade`, `modalidadeId`, `modalidadeNome`, `processo`, `numeroControlePNCP`, `srp`, `objetoCompra`, `valorTotalEstimado` e `valorTotalHomologado`.
+   - **Falhas:** como há uma única URL, HTTP 204, erro HTTP, JSON inválido ou corpo que não seja objeto encerram a atualização com `requests.RequestException`. O 204 é convertido em erro por `_buscar_json_robusto`.
+
+2. **Itens da compra (PNCP)** — endpoint não documentado em `api-docs-pnpc.json`, na base `/api/pncp/v1`: `https://pncp.gov.br/api/pncp/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens`
+   - **Parâmetros de query:** `pagina` (começa em 1) e `tamanhoPagina` (50).
+   - **Retorno esperado:** lista JSON de itens, preservada campo a campo. HTTP 204 equivale a lista vazia. A paginação para na primeira página vazia ou com menos de 50 itens; páginas cheias avançam `pagina`. Itens sem `numeroItem` são mantidos sem consulta de resultados. Erro HTTP nesta chamada não é tratado: aborta a atualização.
+
+3. **Resultados homologados (PNCP)** — endpoint não documentado em `api-docs-pnpc.json`, na base `/api/pncp/v1`; uma chamada por item com `numeroItem`, ainda dentro da página corrente: `https://pncp.gov.br/api/pncp/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens/{numeroItem}/resultados`
+   - **Parâmetros:** `numeroItem` no caminho; sem query string.
+   - **Retorno esperado:** lista JSON, anexada ao item em `resultadosHomologados` (fornecedor, quantidade e valores homologados). HTTP 204 equivale a lista vazia; corpo que não seja lista gera `ValueError`. Qualquer erro é registrado em `erros_resultados_itens` e em `erroResultadosHomologados` do item, que segue com `resultadosHomologados = []` sem interromper os demais itens.
+
+4. **Contratos e empenhos da contratação (PNCP)** — endpoint não documentado em `api-docs-pnpc.json`: `https://pncp.gov.br/api/pncp/v1/orgaos/{cnpj}/contratos/contratacao/{ano}/{sequencial}`
+   - **Parâmetros de query:** `pagina` (começa em 1) e `tamanhoPagina` (50).
+   - **Retorno esperado:** objeto JSON com `data` (lista de registros) e `totalPaginas` (inteiro), no formato de `PaginaRetornoRecuperarContratoDTO` da spec (`data`, `totalRegistros`, `totalPaginas`, `numeroPagina`, `paginasRestantes`, `empty`). As páginas são agregadas enquanto `pagina <= totalPaginas`; a leitura para se `data` vier vazia ou `totalPaginas` for zero. Formato diferente disso gera `ValueError`.
+   - **Falhas:** HTTP 404 é tratado como ausência de registros (`[]`); outros erros HTTP abortam a atualização.
+
+**Nota (verificada em 2026-11-13):** o cabeçalho usa `/api/consulta/v1`; itens, resultados e contratos usam `/api/pncp/v1`. Nenhum desses três recursos está documentado em `api-docs-pnpc.json`, e `/api/consulta/v1` responde 404 para eles mesmo quando há dados.
+
+5. **Documentos de despesa por favorecido (Portal da Transparência)** — `documentosPorFavorecido` em `api-docs-transparencia.json`; após a etapa 4, consulta os documentos dos empenhos elegíveis, agrupados por unidade gestora, CNPJ do fornecedor e ano:
+   `https://api.portaldatransparencia.gov.br/api-de-dados/despesas/documentos-por-favorecido`
+   - **Elegibilidade:** o registro precisa conter `NE` em `numeroContratoEmpenho`, ter `unidadeOrgao.codigoUnidade` e `niFornecedor` preenchidos e um ano extraível do número (regex `^(\d{4})NE`). Registros fora disso recebem `status: nao_consultado` e não geram chamada.
+   - **Parâmetros de query (conforme a spec):** `codigoPessoa` (obrigatório; CPF, CNPJ ou código SIAFI), `fase` (obrigatório; 1 = Empenho, 2 = Liquidação, 3 = Pagamento), `ano` (obrigatório; ano de emissão), `ug` (opcional; código da unidade gestora), `gestao` (opcional), `ordenacaoResultado` (opcional; 1 a 4) e `pagina` (obrigatório; começa em 1). O código envia `codigoPessoa`, `fase=1`, `ano`, `ug` e `pagina`; `gestao` e `ordenacaoResultado` não são usados.
+   - **Cabeçalhos:** `chave-api-dados` com a chave lida de `PORTAL_DADOS_API_KEY` ou `PORTALTRANSPARENCIA_API_KEY`, inclusive de `.env`; também envia `Accept: application/json` e `User-Agent`. A spec declara segurança `apiKey` nesse cabeçalho.
+   - **Retorno esperado:** lista JSON de `DespesasPorDocumentoDTO`; a paginação para em lista vazia ou com menos de 15 elementos. O vínculo com o empenho usa `documentoResumido`, e `documento` fornece o código usado na etapa 6. A spec documenta também as respostas 400, 401 e 500.
+   - **Falhas:** chave ausente ou HTTP 401 geram `PermissionError`; erro em um grupo deixa a lista daquele grupo vazia e entra em `erros_detalhamento`, sem interromper o relatório. Empenho sem documento correspondente recebe `status: nao_encontrado`.
+
+6. **Detalhamento do documento (Portal da Transparência)** — `documentoPorCodigo` em `api-docs-transparencia.json`; para cada empenho cujo documento foi localizado:
+   `https://api.portaldatransparencia.gov.br/api-de-dados/despesas/documentos/{codigo}`
+   - **Parâmetros:** `codigo` no caminho (código do registro: unidade gestora + gestão + número do documento); sem query string. Usa os mesmos cabeçalhos de autenticação.
+   - **Retorno esperado:** objeto JSON `DespesasPorDocumentoDTO` (não lista) com os dados usados no relatório, como `data`, `valor`, `codigoUg`, `ug`, `codigoFavorecido` e `nomeFavorecido`. Sucesso grava `status: ok` e o documento em `detalhesPortalTransparencia.detalhamento`; falha grava `status: erro` e o erro em `erros_detalhamento`, sem interromper os demais empenhos.
+
+7. **Itens do empenho (Portal da Transparência)** — `itensDeEmpenho` em `api-docs-transparencia.json`; chamada imediatamente após o detalhamento do mesmo documento:
+   `https://api.portaldatransparencia.gov.br/api-de-dados/despesas/itens-de-empenho`
+   - **Parâmetros de query:** `codigoDocumento` (código do empenho: unidade gestora + gestão + número do documento) e `pagina` (começa em 1). Usa os mesmos cabeçalhos de autenticação.
+   - **Retorno esperado:** lista JSON de `DetalhamentoDoGastoDTO`, com campos como `descricao`, `valorAtual`, `codigoItemEmpenho` e `sequencial`. A paginação para em lista vazia ou com menos de 15 elementos; a lista agregada é anexada ao documento como `itensEmpenho`. Falha aqui invalida o detalhamento inteiro e resulta em `status: erro` para o empenho.
+
+As respostas geram `dados_pregao.json` (cabeçalho e itens com resultados) e `dados_empenhos.json` (registros PNCP enriquecidos e mapeados); a geração dos HTMLs não faz chamadas externas. A chave da API nunca deve aparecer em parâmetros de URL, logs ou relatórios.
 
 Os JSONs das etapas são preservados na pasta do relatório junto com o HTML e os metadados. Para regenerar os HTMLs e índices sem consultar as APIs:
 
@@ -130,6 +192,7 @@ Os testes não acessam a rede; todo acesso HTTP é substituído por `unittest.mo
 - Preserve o marcador `<!-- admin-link -->` no HTML gerado pelo índice; o servidor administrativo depende dele.
 - Use o callback `on_progress` para mensagens de acompanhamento; não introduza `print` no fluxo de coleta.
 - Ao corrigir um item de "Riscos e problemas conhecidos", remova ou atualize a entrada correspondente.
+- Ao alterar chamadas externas, confira caminhos e parâmetros em `api-docs-pnpc.json` e `api-docs-transparencia.json`; os endpoints do PNCP não documentados (itens, resultados e contratos por contratação) usam a base `/api/pncp/v1` e só podem ser validados por chamada real.
 
 ## Observações importantes
 

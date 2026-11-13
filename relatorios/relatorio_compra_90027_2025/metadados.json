@@ -2,7 +2,7 @@
   "schema_version": 1,
   "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000272",
   "criado_em": "2026-11-12T06:12:13-03:00",
-  "atualizado_em": "2026-11-12T08:50:29-03:00",
+  "atualizado_em": "2026-11-13T08:45:11-03:00",
   "chaves_integracao": {
     "cnpj_orgao": "10635424000186",
     "uasg_codigo": "158125",
@@ -30,15 +30,15 @@
     {
       "chave": "itens_empenhados",
       "rotulo": "Itens empenhados",
-      "valor": 82,
-      "exibicao": "82",
+      "valor": 83,
+      "exibicao": "83",
       "descricao": "Execução acima de 0%"
     },
     {
       "chave": "itens_nao_empenhados",
       "rotulo": "Itens não empenhados",
-      "valor": 67,
-      "exibicao": "67",
+      "valor": 66,
+      "exibicao": "66",
       "descricao": "Execução igual a 0%, excluídos desertos"
     },
     {
@@ -72,9 +72,9 @@
     {
       "chave": "empenhado_mapeado",
       "rotulo": "Empenhado mapeado",
-      "valor": 81310.41,
-      "exibicao": "R$ 81.310,41",
-      "descricao": "71 de 72 registros com detalhamento"
+      "valor": 81740.11,
+      "exibicao": "R$ 81.740,11",
+      "descricao": "73 de 74 registros com detalhamento"
     }
   ]
 }
