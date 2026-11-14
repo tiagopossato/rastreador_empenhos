@@ -6,7 +6,7 @@
       "pasta": "relatorio_compra_90027_2025",
       "arquivo_html": "relatorio_compra_90027_2025.html",
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000272",
-      "atualizado_em": "2026-11-13T08:45:11-03:00",
+      "atualizado_em": "2026-11-14T05:52:45-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -78,7 +78,7 @@
           "rotulo": "Empenhado mapeado",
           "valor": 81740.11,
           "exibicao": "R$ 81.740,11",
-          "descricao": "73 de 74 registros com detalhamento"
+          "descricao": "74 de 75 registros com detalhamento"
         }
       ],
       "id": "10635424000186-2025-272",
@@ -89,7 +89,7 @@
       "pasta": "relatorio_compra_90059_2025",
       "arquivo_html": "relatorio_compra_90059_2025.html",
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000282",
-      "atualizado_em": "2026-11-13T08:46:43-03:00",
+      "atualizado_em": "2026-11-14T08:24:29-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -117,15 +117,15 @@
         {
           "chave": "itens_empenhados",
           "rotulo": "Itens empenhados",
-          "valor": 214,
-          "exibicao": "214",
+          "valor": 200,
+          "exibicao": "200",
           "descricao": "Execução acima de 0%"
         },
         {
           "chave": "itens_nao_empenhados",
           "rotulo": "Itens não empenhados",
-          "valor": 115,
-          "exibicao": "115",
+          "valor": 129,
+          "exibicao": "129",
           "descricao": "Execução igual a 0%, excluídos desertos"
         },
         {
@@ -159,9 +159,9 @@
         {
           "chave": "empenhado_mapeado",
           "rotulo": "Empenhado mapeado",
-          "valor": 215541.03000000003,
-          "exibicao": "R$ 215.541,03",
-          "descricao": "110 de 110 registros com detalhamento"
+          "valor": 161754.76000000007,
+          "exibicao": "R$ 161.754,76",
+          "descricao": "103 de 111 registros com detalhamento"
         }
       ],
       "id": "10635424000186-2025-282",
@@ -505,7 +505,7 @@
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2026/000187",
       "pasta": "processo_10635424000186-2026-187",
       "status": "atualizado",
-      "atualizado_em": "2026-11-13T09:45:00-03:00",
+      "atualizado_em": "2026-11-14T05:42:04-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -533,15 +533,15 @@
         {
           "chave": "itens_empenhados",
           "rotulo": "Itens empenhados",
-          "valor": 0,
-          "exibicao": "0",
+          "valor": 1,
+          "exibicao": "1",
           "descricao": "Execução acima de 0%"
         },
         {
           "chave": "itens_nao_empenhados",
           "rotulo": "Itens não empenhados",
-          "valor": 44,
-          "exibicao": "44",
+          "valor": 43,
+          "exibicao": "43",
           "descricao": "Execução igual a 0%, excluídos desertos"
         },
         {
@@ -575,9 +575,9 @@
         {
           "chave": "empenhado_mapeado",
           "rotulo": "Empenhado mapeado",
-          "valor": 0.0,
-          "exibicao": "R$ 0,00",
-          "descricao": "0 de 0 registros com detalhamento"
+          "valor": 10161.88,
+          "exibicao": "R$ 10.161,88",
+          "descricao": "1 de 1 registros com detalhamento"
         }
       ],
       "erro": null,
@@ -588,7 +588,7 @@
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2026/197",
       "pasta": "processo_10635424000186-2026-197",
       "status": "atualizado",
-      "atualizado_em": "2026-11-13T08:51:20-03:00",
+      "atualizado_em": "2026-11-14T09:15:37-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",

@@ -1,8 +1,9 @@
 {
   "status": "ok",
-  "mensagem": "Registros coletados do PNCP e complementados com o detalhamento e os itens publicados no Portal da Transparência.",
+  "mensagem": "Empenhos encontrados: 75 (74 no PNCP, 1 exclusivos do Portal da Transparência). Detalhamento obtido para 74; 0 documento(s) não localizado(s).",
   "fontes": [
     "PNCP - aba Contratos/Empenhos",
+    "Portal da Transparência - descoberta por processo/favorecido",
     "Portal da Transparência - detalhes e itens do empenho"
   ],
   "chaves_integracao": {
@@ -14,8 +15,10 @@
     "numero_controle_pncp": "10635424000186-1-000272/2025"
   },
   "objeto": "Eventual aquisição de materiais de construção civil para atender às necessidades dos diversos Campi do Instituto Federal Catarinense.",
-  "quantidade_empenhos": 74,
-  "quantidade_empenhos_com_detalhes": 73,
+  "quantidade_empenhos": 75,
+  "quantidade_empenhos_pncp": 74,
+  "quantidade_empenhos_portal": 1,
+  "quantidade_empenhos_com_detalhes": 74,
   "quantidade_empenhos_nao_encontrados": 0,
   "erros_detalhamento": [],
   "erros_resultados_itens": [],
@@ -134,7 +137,9 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp",
+      "encontrado_tambem_no_portal": true
     },
     {
       "numeroParcelas": 1,
@@ -250,7 +255,9 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp",
+      "encontrado_tambem_no_portal": true
     },
     {
       "numeroParcelas": 1,
@@ -366,7 +373,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -482,7 +490,9 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp",
+      "encontrado_tambem_no_portal": true
     },
     {
       "numeroParcelas": 1,
@@ -606,7 +616,9 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp",
+      "encontrado_tambem_no_portal": true
     },
     {
       "numeroParcelas": 1,
@@ -722,7 +734,9 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp",
+      "encontrado_tambem_no_portal": true
     },
     {
       "numeroParcelas": 1,
@@ -838,7 +852,9 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp",
+      "encontrado_tambem_no_portal": true
     },
     {
       "numeroParcelas": 1,
@@ -962,7 +978,9 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp",
+      "encontrado_tambem_no_portal": true
     },
     {
       "numeroParcelas": 1,
@@ -1150,7 +1168,9 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp",
+      "encontrado_tambem_no_portal": true
     },
     {
       "numeroParcelas": 1,
@@ -1290,7 +1310,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -1428,7 +1449,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -1544,7 +1566,9 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp",
+      "encontrado_tambem_no_portal": true
     },
     {
       "numeroParcelas": 1,
@@ -1684,7 +1708,9 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp",
+      "encontrado_tambem_no_portal": true
     },
     {
       "numeroParcelas": 1,
@@ -1800,7 +1826,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -1924,7 +1951,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -2048,7 +2076,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -2164,7 +2193,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -2280,7 +2310,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -2404,7 +2435,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -2520,7 +2552,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -2644,7 +2677,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -2768,7 +2802,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -2884,7 +2919,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -3000,7 +3036,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -3116,7 +3153,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -3254,7 +3292,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -3384,7 +3423,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -3514,7 +3554,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -3644,7 +3685,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -3782,7 +3824,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -3928,7 +3971,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -4130,7 +4174,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -4316,7 +4361,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -4446,7 +4492,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -4600,7 +4647,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -4738,7 +4786,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -4868,7 +4917,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -5006,7 +5056,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -5144,7 +5195,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -5274,7 +5326,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -5412,7 +5465,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -5550,7 +5604,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -5688,7 +5743,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -5818,7 +5874,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -5948,7 +6005,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -6078,7 +6136,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -6216,7 +6275,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -6346,7 +6406,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -6484,7 +6545,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "numeroParcelas": 1,
@@ -6614,7 +6676,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "anoContrato": 2026,
@@ -6760,7 +6823,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "anoContrato": 2026,
@@ -6906,7 +6970,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "anoContrato": 2026,
@@ -7044,7 +7109,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "anoContrato": 2026,
@@ -7198,7 +7264,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "anoContrato": 2026,
@@ -7352,7 +7419,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "anoContrato": 2026,
@@ -7482,7 +7550,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "anoContrato": 2026,
@@ -7612,7 +7681,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "anoContrato": 2026,
@@ -7750,7 +7820,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "anoContrato": 2026,
@@ -7904,7 +7975,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "anoContrato": 2026,
@@ -8034,7 +8106,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "anoContrato": 2026,
@@ -8172,7 +8245,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "anoContrato": 2026,
@@ -8242,7 +8316,8 @@
       "detalhesPortalTransparencia": {
         "status": "nao_consultado",
         "motivo": "Registro sem identificador de empenho ou unidade gestora."
-      }
+      },
+      "origem": "pncp"
     },
     {
       "anoContrato": 2026,
@@ -8372,7 +8447,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "anoContrato": 2026,
@@ -8502,7 +8578,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "anoContrato": 2026,
@@ -8632,7 +8709,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "anoContrato": 2026,
@@ -8770,7 +8848,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "anoContrato": 2026,
@@ -8908,7 +8987,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "anoContrato": 2026,
@@ -9038,7 +9118,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "anoContrato": 2026,
@@ -9192,7 +9273,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "anoContrato": 2026,
@@ -9330,7 +9412,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "anoContrato": 2026,
@@ -9500,7 +9583,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "anoContrato": 2026,
@@ -9638,7 +9722,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "anoContrato": 2026,
@@ -9784,7 +9869,8 @@
             }
           ]
         }
-      }
+      },
+      "origem": "pncp"
     },
     {
       "anoContrato": 2026,
@@ -9914,6 +10000,67 @@
             }
           ]
         }
+      },
+      "origem": "pncp"
+    },
+    {
+      "numeroContratoEmpenho": "2026NE000049",
+      "niFornecedor": "58.068.084/0001-85",
+      "nomeRazaoSocialFornecedor": "CONSTRUGOV VENDAS E TRANSPORTADORA GUANAMBI LTDA",
+      "unidadeOrgao": {
+        "codigoUnidade": "158379",
+        "nomeUnidade": "IF CATARINENSE - CAMPUS VIDEIRA"
+      },
+      "origem": "portal_favorecido",
+      "detalhesPortalTransparencia": {
+        "status": "ok",
+        "codigoDocumento": "158379264222026NE000049",
+        "detalhamento": {
+          "data": "01/09/2026",
+          "documento": "158379264222026NE000049",
+          "documentoResumido": "2026NE000049",
+          "observacao": "AQUISICAO DE MATERIAIS DE CONSTRUCAO CIVIL PARA O IFC CAMPUS VIDEIRA, ORIUNDO DO PREGAOELETRONICO N. 90027/2025, CONFORME MEMORANDO ELETRONICO N. 01/2026 CIS/VID E DESPACHO DODAP N. 221/2026 (PROCESSO GERENCIADO PELO IFC CAMPUS VIDEIRA, UASG 158379, PROCESSOORIGINAL N. 23352.001309/2025-99).",
+          "funcao": "12 - Educação",
+          "subfuncao": "363 - Ensino profissional",
+          "programa": "5112 - EDUCACAO PROFISSIONAL E TECNOLOGICA QUE TRANSFORMA",
+          "acao": "20RL - FUNCIONAMENTO DAS INSTITUICOES DA REDE FEDERAL DE EDUCACAO PROFISSIONAL, CIENTIFICA E TECNOLOGICA",
+          "subTitulo": "20RL0042 - FUNCIONAMENTO DAS INSTITUICOES DA RED - NO ESTADO DE SANTA C",
+          "localizadorGasto": "0042 - FUNCIONAMENTO DAS INSTITUICOES DA RED - NO ESTADO DE SANTA C",
+          "fase": "Empenho",
+          "especie": "Não se aplica",
+          "favorecido": "58.068.084/0001-85 - CONSTRUGOV VENDAS E TRANSPORTADORA GUANAMBI LTDA",
+          "codigoFavorecido": "58.068.084/0001-85",
+          "nomeFavorecido": "CONSTRUGOV VENDAS E TRANSPORTADORA GUANAMBI LTDA",
+          "ufFavorecido": "BA",
+          "valor": "0,00",
+          "codigoUg": "158379",
+          "ug": "IF CATARINENSE - CAMPUS VIDEIRA",
+          "codigoUo": "26422",
+          "uo": "INST.FED.DE EDUC.,CIENC.E TEC.CATARINENSE",
+          "codigoOrgao": "26422",
+          "orgao": "Instituto Federal de Educação, Ciência e Tecnologia Catarinense",
+          "codigoOrgaoSuperior": "26000",
+          "orgaoSuperior": "Ministério da Educação",
+          "categoria": "3 - DESPESAS CORRENTES",
+          "grupo": "3 - Outras Despesas Correntes",
+          "elemento": "30 - Material de Consumo",
+          "modalidade": "90 - Aplicações Diretas",
+          "numeroProcesso": "23352.001309/2025-99",
+          "planoOrcamentario": "0000 - FUNCIONAMENTO DAS INSTITUICOES DA REDE FEDERAL DE EDUCACAO PROFISSIONAL, CIENTIFICA E TECNOLOGICA - DESPESAS DIVERSAS",
+          "autor": "0000",
+          "favorecidoIntermediario": false,
+          "favorecidoListaFaturas": false,
+          "itensEmpenho": [
+            {
+              "codigoItemEmpenho": "158379264222026NE000049",
+              "descricao": "Item compra: 00174 - MADEIRA CONSTRUCAO, TIPO MADEIRA PINUS, FORMATO TABUA, COMPRIMENTO 3 M, LARGURA 30 CM, ESPESSURA 2,5 CM, APLICACAO CONSTRUCAO CIVIL",
+              "codigoSubelemento": "24",
+              "descricaoSubelemento": "MATERIAL P/ MANUT.DE BENS IMOVEIS/INSTALACOES",
+              "valorAtual": "0,00",
+              "sequencial": 1
+            }
+          ]
+        }
       }
     }
   ],
@@ -9961,13 +10108,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -10123,16 +10270,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [
@@ -10381,16 +10528,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -10458,16 +10605,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -10535,16 +10682,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -10726,13 +10873,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -10785,16 +10932,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [
@@ -10863,16 +11010,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [
@@ -10941,16 +11088,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [
@@ -11019,16 +11166,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -11140,13 +11287,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -11199,16 +11346,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -11259,16 +11406,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -11320,13 +11467,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -11379,16 +11526,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -11499,16 +11646,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -11698,13 +11845,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -11757,16 +11904,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -11835,16 +11982,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [
@@ -12138,13 +12285,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -12439,16 +12586,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [
@@ -12517,16 +12664,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -12578,13 +12725,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -12638,13 +12785,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -12775,16 +12922,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -12836,13 +12983,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -13111,16 +13258,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [
@@ -13190,13 +13337,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -13268,13 +13415,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -13379,16 +13526,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -13492,13 +13639,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -13551,16 +13698,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [
@@ -13629,16 +13776,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -13949,13 +14096,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -14026,16 +14173,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -14086,16 +14233,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -14182,13 +14329,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -14293,16 +14440,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -14371,13 +14518,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -14430,16 +14577,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -14491,13 +14638,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -14551,13 +14698,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Empresário (Individual)",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2135"
         }
@@ -14815,16 +14962,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -14893,13 +15040,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -15064,16 +15211,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -15289,13 +15436,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -15366,16 +15513,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -15461,16 +15608,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -15557,13 +15704,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -15651,16 +15798,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -15909,16 +16056,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [
@@ -16082,16 +16229,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -16178,13 +16325,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -16297,16 +16444,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -16418,13 +16565,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -16728,13 +16875,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -16822,13 +16969,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Empresário (Individual)",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2135"
         }
@@ -16933,16 +17080,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -17149,16 +17296,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -17209,16 +17356,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
-          "naturezaJuridicaId": "2135",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Empresário (Individual)",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2135"
         }
       ],
       "empenhos": [],
@@ -17450,13 +17597,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -17594,16 +17741,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -17655,13 +17802,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -17783,16 +17930,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -17990,16 +18137,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [
@@ -18085,16 +18232,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -18241,16 +18388,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -18448,16 +18595,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -18544,13 +18691,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -18655,16 +18802,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [
@@ -18810,16 +18957,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -18887,16 +19034,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "Demais",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -18982,16 +19129,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -19042,16 +19189,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -19162,16 +19309,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -19461,16 +19608,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -19633,16 +19780,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [
@@ -19728,16 +19875,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [
@@ -19807,13 +19954,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -19952,16 +20099,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -20031,13 +20178,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -20369,11 +20516,29 @@
           "naturezaJuridicaId": "2062"
         }
       ],
-      "empenhos": [],
+      "empenhos": [
+        {
+          "numero_empenho": "2026NE000049",
+          "data_emissao": "01/09/2026",
+          "valor_empenhado": "0,00",
+          "unidade_gestora_codigo": "158379",
+          "unidade_gestora_nome": "IF CATARINENSE - CAMPUS VIDEIRA",
+          "fornecedor_cnpj": "58068084000185",
+          "nome_fornecedor": "CONSTRUGOV VENDAS E TRANSPORTADORA GUANAMBI LTDA",
+          "item_despesa": {
+            "codigoItemEmpenho": "158379264222026NE000049",
+            "descricao": "Item compra: 00174 - MADEIRA CONSTRUCAO, TIPO MADEIRA PINUS, FORMATO TABUA, COMPRIMENTO 3 M, LARGURA 30 CM, ESPESSURA 2,5 CM, APLICACAO CONSTRUCAO CIVIL",
+            "codigoSubelemento": "24",
+            "descricaoSubelemento": "MATERIAL P/ MANUT.DE BENS IMOVEIS/INSTALACOES",
+            "valorAtual": "0,00",
+            "sequencial": 1
+          }
+        }
+      ],
       "empenhos_item_sem_fornecedor_compativel": [],
       "empenhos_fornecedor_sem_item_identificado": [],
       "erro_resultados_homologados": null,
-      "status": "sem_empenho_mapeado"
+      "status": "mapeado_por_numero_item"
     },
     {
       "numero_item": 175,
@@ -20418,13 +20583,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -20573,13 +20738,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -20693,13 +20858,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -20830,13 +20995,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -21043,16 +21208,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -21122,13 +21287,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -21216,13 +21381,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Empresário (Individual)",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2135"
         }
@@ -21328,13 +21493,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Empresário (Individual)",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2135"
         }
@@ -21393,13 +21558,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": true,
           "naturezaJuridicaId": "2062"
         }
@@ -21488,13 +21653,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Empresário (Individual)",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2135"
         }
@@ -21634,13 +21799,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Empresário (Individual)",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2135"
         }
@@ -21875,13 +22040,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Empresário (Individual)",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2135"
         }
@@ -21956,16 +22121,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
+          "naturezaJuridicaId": "2135",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": true,
+          "aplicacaoCriterioDesempate": true,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Empresário (Individual)",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": true,
-          "naturezaJuridicaId": "2135"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -22017,13 +22182,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -22137,13 +22302,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -22215,13 +22380,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -22370,16 +22535,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [
@@ -22782,16 +22947,16 @@
           "dataResultado": "2026-01-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -23098,13 +23263,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000272/2025",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
