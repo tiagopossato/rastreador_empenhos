@@ -1,0 +1,1 @@
+Pegar as atas de registro de preços da licitação, para verificar os empenhos e saldos da ata.

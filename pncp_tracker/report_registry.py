@@ -40,6 +40,9 @@ def _ler_indice(caminho: Path) -> Dict[str, Any]:
         chaves.add(chave)
         registro["id"] = _id_processo(str(registro["url_pncp"]))
         registro.setdefault("status", "atualizado" if registro.get("pasta") else "pendente")
+        registro["buscar_empenhos_portal"] = bool(
+            registro.get("buscar_empenhos_portal", False)
+        )
         registros.append(registro)
 
     indice["schema_version"] = 2
@@ -75,7 +78,11 @@ def buscar_registro(url: str, caminho: Path = INDEX_PATH) -> Optional[Dict[str, 
     return None
 
 
-def adicionar_registro(url: str, caminho: Path = INDEX_PATH) -> Dict[str, Any]:
+def adicionar_registro(
+    url: str,
+    caminho: Path = INDEX_PATH,
+    buscar_empenhos_portal: bool = False,
+) -> Dict[str, Any]:
     cnpj, ano, sequencial = validar_url_pncp(url)
     url = "https://pncp.gov.br/app/editais/{}/{}/{}".format(cnpj, ano, sequencial)
     registros = ler_registros(caminho)
@@ -92,6 +99,7 @@ def adicionar_registro(url: str, caminho: Path = INDEX_PATH) -> Dict[str, Any]:
         "chaves_integracao": {},
         "objeto": None,
         "resumo_cards": [],
+        "buscar_empenhos_portal": bool(buscar_empenhos_portal),
     }
     registros.append(registro)
     salvar_registros(registros, caminho)

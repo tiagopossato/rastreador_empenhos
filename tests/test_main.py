@@ -46,7 +46,32 @@ class MainTests(unittest.TestCase):
             main_module, "atualizar_processo", return_value=result
         ) as service:
             main_module.main([url])
-        service.assert_called_once_with(url, on_progress=unittest.mock.ANY)
+        service.assert_called_once_with(
+            url,
+            on_progress=unittest.mock.ANY,
+            buscar_empenhos_portal=False,
+        )
+
+    def test_portal_search_flag_is_forwarded_to_the_service(self):
+        url = "https://pncp.gov.br/app/editais/10635424000186/2025/187"
+        result = {
+            "resultado_etapa2": {
+                "status": "ok",
+                "mensagem": "Coleta concluída",
+                "quantidade_empenhos": 2,
+            },
+            "caminho_relatorio": "relatorio.html",
+            "caminho_index": "index.html",
+        }
+        with contextlib.redirect_stdout(io.StringIO()), patch.object(
+            main_module, "atualizar_processo", return_value=result
+        ) as service:
+            main_module.main([url, "--buscar-empenhos-portal"])
+        service.assert_called_once_with(
+            url,
+            on_progress=unittest.mock.ANY,
+            buscar_empenhos_portal=True,
+        )
 
     def test_main_reports_service_error_as_nonzero_exit(self):
         with contextlib.redirect_stderr(io.StringIO()), patch.object(

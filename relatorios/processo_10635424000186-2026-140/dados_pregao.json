@@ -168,13 +168,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -250,13 +250,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -332,13 +332,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -577,16 +577,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -659,16 +659,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -742,13 +742,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -862,16 +862,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ]
     },
@@ -1027,13 +1027,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -1109,13 +1109,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -1190,16 +1190,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ]
     },
@@ -1272,16 +1272,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ]
     },
@@ -1558,13 +1558,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -1639,16 +1639,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ]
     },
@@ -1721,16 +1721,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -2007,13 +2007,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -2088,16 +2088,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -2171,13 +2171,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -2417,13 +2417,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -2498,16 +2498,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -2744,16 +2744,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ]
     },
@@ -3029,16 +3029,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -3112,13 +3112,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -3193,16 +3193,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -3275,16 +3275,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -3357,16 +3357,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -3439,16 +3439,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -3841,16 +3841,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -4088,13 +4088,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -4373,13 +4373,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -4455,13 +4455,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -4537,13 +4537,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -4618,16 +4618,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ]
     },
@@ -4700,16 +4700,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -4985,16 +4985,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -5067,16 +5067,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ]
     },
@@ -5150,13 +5150,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -5555,16 +5555,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -5637,16 +5637,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -5802,13 +5802,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -6168,16 +6168,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ]
     },
@@ -6251,13 +6251,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -6332,16 +6332,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ]
     },
@@ -6414,16 +6414,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ]
     },
@@ -6496,16 +6496,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ]
     },
@@ -6579,13 +6579,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -6907,13 +6907,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -6989,13 +6989,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -7110,13 +7110,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -7355,16 +7355,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -7437,16 +7437,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -7602,13 +7602,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -7847,16 +7847,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ]
     },
@@ -7929,16 +7929,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -8051,13 +8051,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -8132,16 +8132,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -8215,13 +8215,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -8374,16 +8374,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ]
     },
@@ -8456,16 +8456,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ]
     },
@@ -8784,16 +8784,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ]
     },
@@ -8867,13 +8867,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -9026,16 +9026,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ]
     },
@@ -9109,18 +9109,1405 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
       ]
     }
   ],
-  "erros_resultados_itens": []
+  "erros_resultados_itens": [],
+  "data_atualizacao_global": "2026-11-13T19:23:50",
+  "chave_cache": "10635424000186-1-000140/2026|2026-11-13T19:23:50",
+  "cache_reutilizado": true,
+  "empenhos": [
+    {
+      "numeroParcelas": 1,
+      "temRemanejamento": false,
+      "receita": false,
+      "anoContrato": 2026,
+      "tipoContrato": {
+        "id": 7,
+        "nome": "Empenho",
+        "descricao": "Ato emanado de autoridade competente que cria para o Estado obrigação de pagamento pendente ou não de condição futura, podendo substituir o termo de contrato em hipóteses específicas previstos em lei.",
+        "statusAtivo": true
+      },
+      "numeroContratoEmpenho": "2026NE000501",
+      "niFornecedor": "11163447000106",
+      "niFornecedorSubContratado": null,
+      "orgaoEntidade": {
+        "cnpj": "10635424000186",
+        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE",
+        "esferaId": "F",
+        "poderId": "E"
+      },
+      "dataAssinatura": "2026-09-22",
+      "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-09-22",
+      "dataAtualizacao": "2026-09-23T11:28:26",
+      "tipoPessoa": "PJ",
+      "categoriaProcesso": {
+        "id": 2,
+        "nome": "Compras"
+      },
+      "nomeRazaoSocialFornecedor": "TECA TECNOLOGIA E COMERCIO LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "dataPublicacaoPncp": "2026-09-23T11:28:26",
+      "unidadeOrgao": {
+        "codigoUnidade": "158461",
+        "nomeUnidade": "INST.FED.CATARINENSE/CAMPUS CONCORDIA",
+        "municipioNome": "Concórdia",
+        "codigoIbge": "4204301",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "unidadeSubRogada": null,
+      "informacaoComplementar": null,
+      "sequencialContrato": 1443,
+      "processo": "23351.006915/2026-91",
+      "tipoPessoaSubContratada": null,
+      "numeroRetificacao": 0,
+      "urlCipi": null,
+      "dataAtualizacaoGlobal": "2026-09-23T11:28:26",
+      "valorGlobal": 23902.74,
+      "identificadorCipi": null,
+      "objetoContrato": "AQUISIÇÃO DE FERTILIZANTES E DEFENSIVOS AGRÍCOLAS, PARA O INSTITUTO FEDERAL CATARINENSE CAMPUS CONCÓRDIA. PE 90149/2026. SOLICITACAO DE EMPENHO 23351.007117/2026-87. SETOR REQUISITANTE: JARDIM/HORTA. SERVIDORES REQUISITANTES: INÉCIO HEINRICHS/OZAIR DA SILVA.",
+      "numeroControlePNCP": "10635424000186-2-001443/2026",
+      "emendaParlamentar": false,
+      "nomeFornecedorSubContratado": null,
+      "valorInicial": 23902.74,
+      "valorAcumulado": null,
+      "valorParcela": 23902.74,
+      "usuarioNome": "Contratos.gov.br",
+      "codigoPaisFornecedor": null,
+      "numeroControlePncpAta": "10635424000186-1-000140/2026-000006",
+      "numeroControlePncpCompra": "10635424000186-1-000140/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true
+    },
+    {
+      "numeroParcelas": 1,
+      "temRemanejamento": false,
+      "receita": false,
+      "anoContrato": 2026,
+      "tipoContrato": {
+        "id": 7,
+        "nome": "Empenho",
+        "descricao": "Ato emanado de autoridade competente que cria para o Estado obrigação de pagamento pendente ou não de condição futura, podendo substituir o termo de contrato em hipóteses específicas previstos em lei.",
+        "statusAtivo": true
+      },
+      "numeroContratoEmpenho": "2026NE000499",
+      "niFornecedor": "43338044000139",
+      "niFornecedorSubContratado": null,
+      "orgaoEntidade": {
+        "cnpj": "10635424000186",
+        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE",
+        "esferaId": "F",
+        "poderId": "E"
+      },
+      "dataAssinatura": "2026-09-22",
+      "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-09-22",
+      "dataAtualizacao": "2026-09-23T11:26:46",
+      "tipoPessoa": "PJ",
+      "categoriaProcesso": {
+        "id": 2,
+        "nome": "Compras"
+      },
+      "nomeRazaoSocialFornecedor": "JE SUBSTRATOS E FERTILIZANTES LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "dataPublicacaoPncp": "2026-09-23T11:26:45",
+      "unidadeOrgao": {
+        "codigoUnidade": "158461",
+        "nomeUnidade": "INST.FED.CATARINENSE/CAMPUS CONCORDIA",
+        "municipioNome": "Concórdia",
+        "codigoIbge": "4204301",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "unidadeSubRogada": null,
+      "informacaoComplementar": null,
+      "sequencialContrato": 1438,
+      "processo": "23351.006915/2026-91",
+      "tipoPessoaSubContratada": null,
+      "numeroRetificacao": 0,
+      "urlCipi": null,
+      "dataAtualizacaoGlobal": "2026-09-23T11:26:46",
+      "valorGlobal": 1982.2,
+      "identificadorCipi": null,
+      "objetoContrato": "AQUISIÇÃO DE FERTILIZANTES E DEFENSIVOS AGRÍCOLAS, PARA O INSTITUTO FEDERAL CATARINENSE CAMPUS CONCÓRDIA. PE 90149/2026. SOLICITACAO DE EMPENHO 23351.007117/2026-87. SETOR REQUISITANTE: JARDIM/HORTA. SERVIDORES REQUISITANTES: INÉCIO HEINRICHS/OZAIR DA SILVA.",
+      "numeroControlePNCP": "10635424000186-2-001438/2026",
+      "emendaParlamentar": false,
+      "nomeFornecedorSubContratado": null,
+      "valorInicial": 1982.2,
+      "valorAcumulado": null,
+      "valorParcela": 1982.2,
+      "usuarioNome": "Contratos.gov.br",
+      "codigoPaisFornecedor": null,
+      "numeroControlePncpAta": "10635424000186-1-000140/2026-000010",
+      "numeroControlePncpCompra": "10635424000186-1-000140/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true
+    },
+    {
+      "numeroParcelas": 1,
+      "temRemanejamento": false,
+      "receita": false,
+      "anoContrato": 2026,
+      "tipoContrato": {
+        "id": 7,
+        "nome": "Empenho",
+        "descricao": "Ato emanado de autoridade competente que cria para o Estado obrigação de pagamento pendente ou não de condição futura, podendo substituir o termo de contrato em hipóteses específicas previstos em lei.",
+        "statusAtivo": true
+      },
+      "numeroContratoEmpenho": "2026NE000500",
+      "niFornecedor": "94780178000146",
+      "niFornecedorSubContratado": null,
+      "orgaoEntidade": {
+        "cnpj": "10635424000186",
+        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE",
+        "esferaId": "F",
+        "poderId": "E"
+      },
+      "dataAssinatura": "2026-09-22",
+      "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-09-22",
+      "dataAtualizacao": "2026-09-23T11:27:59",
+      "tipoPessoa": "PJ",
+      "categoriaProcesso": {
+        "id": 2,
+        "nome": "Compras"
+      },
+      "nomeRazaoSocialFornecedor": "AGROFORTE COMERCIAL AGROPECUARIA LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "dataPublicacaoPncp": "2026-09-23T11:27:59",
+      "unidadeOrgao": {
+        "codigoUnidade": "158461",
+        "nomeUnidade": "INST.FED.CATARINENSE/CAMPUS CONCORDIA",
+        "municipioNome": "Concórdia",
+        "codigoIbge": "4204301",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "unidadeSubRogada": null,
+      "informacaoComplementar": null,
+      "sequencialContrato": 1440,
+      "processo": "23351.006915/2026-91",
+      "tipoPessoaSubContratada": null,
+      "numeroRetificacao": 0,
+      "urlCipi": null,
+      "dataAtualizacaoGlobal": "2026-09-23T11:27:59",
+      "valorGlobal": 19390.0,
+      "identificadorCipi": null,
+      "objetoContrato": "AQUISIÇÃO DE FERTILIZANTES E DEFENSIVOS AGRÍCOLAS, PARA O INSTITUTO FEDERAL CATARINENSE CAMPUS CONCÓRDIA. PE 90149/2026. SOLICITACAO DE EMPENHO 23351.007117/2026-87. SETOR REQUISITANTE: JARDIM/HORTA. SERVIDORES REQUISITANTES: INÉCIO HEINRICHS/OZAIR DA SILVA.",
+      "numeroControlePNCP": "10635424000186-2-001440/2026",
+      "emendaParlamentar": false,
+      "nomeFornecedorSubContratado": null,
+      "valorInicial": 19390.0,
+      "valorAcumulado": null,
+      "valorParcela": 19390.0,
+      "usuarioNome": "Contratos.gov.br",
+      "codigoPaisFornecedor": null,
+      "numeroControlePncpAta": "10635424000186-1-000140/2026-000005",
+      "numeroControlePncpCompra": "10635424000186-1-000140/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true
+    },
+    {
+      "numeroParcelas": 1,
+      "temRemanejamento": false,
+      "receita": false,
+      "anoContrato": 2026,
+      "tipoContrato": {
+        "id": 7,
+        "nome": "Empenho",
+        "descricao": "Ato emanado de autoridade competente que cria para o Estado obrigação de pagamento pendente ou não de condição futura, podendo substituir o termo de contrato em hipóteses específicas previstos em lei.",
+        "statusAtivo": true
+      },
+      "numeroContratoEmpenho": "2026NE000502",
+      "niFornecedor": "11258338000164",
+      "niFornecedorSubContratado": null,
+      "orgaoEntidade": {
+        "cnpj": "10635424000186",
+        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE",
+        "esferaId": "F",
+        "poderId": "E"
+      },
+      "dataAssinatura": "2026-09-22",
+      "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-09-22",
+      "dataAtualizacao": "2026-09-23T11:28:16",
+      "tipoPessoa": "PJ",
+      "categoriaProcesso": {
+        "id": 2,
+        "nome": "Compras"
+      },
+      "nomeRazaoSocialFornecedor": "MERCOSUL AGRONEGOCIOS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "dataPublicacaoPncp": "2026-09-23T11:28:16",
+      "unidadeOrgao": {
+        "codigoUnidade": "158461",
+        "nomeUnidade": "INST.FED.CATARINENSE/CAMPUS CONCORDIA",
+        "municipioNome": "Concórdia",
+        "codigoIbge": "4204301",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "unidadeSubRogada": null,
+      "informacaoComplementar": null,
+      "sequencialContrato": 1442,
+      "processo": "23351.006915/2026-91",
+      "tipoPessoaSubContratada": null,
+      "numeroRetificacao": 0,
+      "urlCipi": null,
+      "dataAtualizacaoGlobal": "2026-09-23T11:28:16",
+      "valorGlobal": 399.0,
+      "identificadorCipi": null,
+      "objetoContrato": "AQUISIÇÃO DE FERTILIZANTES E DEFENSIVOS AGRÍCOLAS, PARA O INSTITUTO FEDERAL CATARINENSE CAMPUS CONCÓRDIA. PE 90149/2026. SOLICITACAO DE EMPENHO 23351.007117/2026-87. SETOR REQUISITANTE: JARDIM/HORTA. SERVIDORES REQUISITANTES: INÉCIO HEINRICHS/OZAIR DA SILVA.",
+      "numeroControlePNCP": "10635424000186-2-001442/2026",
+      "emendaParlamentar": false,
+      "nomeFornecedorSubContratado": null,
+      "valorInicial": 399.0,
+      "valorAcumulado": null,
+      "valorParcela": 399.0,
+      "usuarioNome": "Contratos.gov.br",
+      "codigoPaisFornecedor": null,
+      "numeroControlePncpAta": "10635424000186-1-000140/2026-000011",
+      "numeroControlePncpCompra": "10635424000186-1-000140/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true
+    },
+    {
+      "numeroParcelas": 1,
+      "temRemanejamento": false,
+      "receita": false,
+      "anoContrato": 2026,
+      "tipoContrato": {
+        "id": 7,
+        "nome": "Empenho",
+        "descricao": "Ato emanado de autoridade competente que cria para o Estado obrigação de pagamento pendente ou não de condição futura, podendo substituir o termo de contrato em hipóteses específicas previstos em lei.",
+        "statusAtivo": true
+      },
+      "numeroContratoEmpenho": "2026NE000296",
+      "niFornecedor": "94780178000146",
+      "niFornecedorSubContratado": null,
+      "orgaoEntidade": {
+        "cnpj": "10635424000186",
+        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE",
+        "esferaId": "F",
+        "poderId": "E"
+      },
+      "dataAssinatura": "2026-09-10",
+      "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-09-10",
+      "dataAtualizacao": "2026-09-25T15:38:44",
+      "tipoPessoa": "PJ",
+      "categoriaProcesso": {
+        "id": 2,
+        "nome": "Compras"
+      },
+      "nomeRazaoSocialFornecedor": "AGROFORTE COMERCIAL AGROPECUARIA LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "dataPublicacaoPncp": "2026-09-25T15:38:21",
+      "unidadeOrgao": {
+        "codigoUnidade": "158462",
+        "nomeUnidade": "INST.FED.CATARINENSE/CAMPUS SANTA ROSA SUL",
+        "municipioNome": "Santa Rosa do Sul",
+        "codigoIbge": "4215653",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "unidadeSubRogada": null,
+      "informacaoComplementar": null,
+      "sequencialContrato": 1467,
+      "processo": "23354.003859/2026-11",
+      "tipoPessoaSubContratada": null,
+      "numeroRetificacao": 0,
+      "urlCipi": null,
+      "dataAtualizacaoGlobal": "2026-09-25T15:38:44",
+      "valorGlobal": 10304.0,
+      "identificadorCipi": null,
+      "objetoContrato": "EMPENHO PARA AQUISIÇÃO DE UREIA CONFORME ADESÃO INTERNA Nº 124/2026 AO PREGÃO Nº 90149/2026 (IFC CAMBORIÚ) PARA ATENDER AS NECESSIDADES DO IFC CAMPUS SANTA ROSA DO SUL",
+      "numeroControlePNCP": "10635424000186-2-001467/2026",
+      "emendaParlamentar": false,
+      "nomeFornecedorSubContratado": null,
+      "valorInicial": 10304.0,
+      "valorAcumulado": null,
+      "valorParcela": 10304.0,
+      "usuarioNome": "Contratos.gov.br",
+      "codigoPaisFornecedor": null,
+      "numeroControlePncpAta": "10635424000186-1-000140/2026-000005",
+      "numeroControlePncpCompra": "10635424000186-1-000140/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true
+    },
+    {
+      "numeroParcelas": 1,
+      "temRemanejamento": false,
+      "receita": false,
+      "anoContrato": 2026,
+      "tipoContrato": {
+        "id": 7,
+        "nome": "Empenho",
+        "descricao": "Ato emanado de autoridade competente que cria para o Estado obrigação de pagamento pendente ou não de condição futura, podendo substituir o termo de contrato em hipóteses específicas previstos em lei.",
+        "statusAtivo": true
+      },
+      "numeroContratoEmpenho": "2026NE000211",
+      "niFornecedor": "94780178000146",
+      "niFornecedorSubContratado": null,
+      "orgaoEntidade": {
+        "cnpj": "10635424000186",
+        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE",
+        "esferaId": "F",
+        "poderId": "E"
+      },
+      "dataAssinatura": "2026-09-23",
+      "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-09-23",
+      "dataAtualizacao": "2026-10-05T14:07:18",
+      "tipoPessoa": "PJ",
+      "categoriaProcesso": {
+        "id": 2,
+        "nome": "Compras"
+      },
+      "nomeRazaoSocialFornecedor": "AGROFORTE COMERCIAL AGROPECUARIA LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "dataPublicacaoPncp": "2026-10-05T14:07:18",
+      "unidadeOrgao": {
+        "codigoUnidade": "158379",
+        "nomeUnidade": "INST.FED.CATARINENSE/CAMPUS VIDEIRA",
+        "municipioNome": "Videira",
+        "codigoIbge": "4219309",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "unidadeSubRogada": null,
+      "informacaoComplementar": null,
+      "sequencialContrato": 1497,
+      "processo": "23352.003623/2026-97",
+      "tipoPessoaSubContratada": null,
+      "numeroRetificacao": 0,
+      "urlCipi": null,
+      "dataAtualizacaoGlobal": "2026-10-05T14:07:18",
+      "valorGlobal": 1402.6,
+      "identificadorCipi": null,
+      "objetoContrato": "AQUISICAO DE INSUMOS AGRICOLAS PARA ATENDER AS NECESSIDADES DO IFC CAMPUS VIDEIRA, CONFORME MEMORANDO ELETRONICO N. 14/2026 - DG/VID E DESPACHO N. 355/2026 DAP/VID (ADESAO INTERNA 133/2026 - PE 90149/2026 UASG 158125 - PROCESSO DE ORIGEM N. 23350.002059/2026-13).",
+      "numeroControlePNCP": "10635424000186-2-001497/2026",
+      "emendaParlamentar": false,
+      "nomeFornecedorSubContratado": null,
+      "valorInicial": 1402.6,
+      "valorAcumulado": null,
+      "valorParcela": 1402.6,
+      "usuarioNome": "Contratos.gov.br",
+      "codigoPaisFornecedor": null,
+      "numeroControlePncpAta": "10635424000186-1-000140/2026-000005",
+      "numeroControlePncpCompra": "10635424000186-1-000140/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true
+    },
+    {
+      "numeroParcelas": 1,
+      "temRemanejamento": false,
+      "receita": false,
+      "anoContrato": 2026,
+      "tipoContrato": {
+        "id": 7,
+        "nome": "Empenho",
+        "descricao": "Ato emanado de autoridade competente que cria para o Estado obrigação de pagamento pendente ou não de condição futura, podendo substituir o termo de contrato em hipóteses específicas previstos em lei.",
+        "statusAtivo": true
+      },
+      "numeroContratoEmpenho": "2026NE000209",
+      "niFornecedor": "46422275000114",
+      "niFornecedorSubContratado": null,
+      "orgaoEntidade": {
+        "cnpj": "10635424000186",
+        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE",
+        "esferaId": "F",
+        "poderId": "E"
+      },
+      "dataAssinatura": "2026-09-23",
+      "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-09-23",
+      "dataAtualizacao": "2026-10-05T14:22:34",
+      "tipoPessoa": "PJ",
+      "categoriaProcesso": {
+        "id": 2,
+        "nome": "Compras"
+      },
+      "nomeRazaoSocialFornecedor": "EBRAPI AGRONEGOCIOS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "dataPublicacaoPncp": "2026-10-05T14:22:34",
+      "unidadeOrgao": {
+        "codigoUnidade": "158379",
+        "nomeUnidade": "INST.FED.CATARINENSE/CAMPUS VIDEIRA",
+        "municipioNome": "Videira",
+        "codigoIbge": "4219309",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "unidadeSubRogada": null,
+      "informacaoComplementar": null,
+      "sequencialContrato": 1499,
+      "processo": "23352.003623/2026-97",
+      "tipoPessoaSubContratada": null,
+      "numeroRetificacao": 0,
+      "urlCipi": null,
+      "dataAtualizacaoGlobal": "2026-10-05T14:22:34",
+      "valorGlobal": 800.0,
+      "identificadorCipi": null,
+      "objetoContrato": "AQUISICAO DE INSUMOS AGRICOLAS PARA ATENDER AS NECESSIDADES DO IFC CAMPUS VIDEIRA, CONFORME MEMORANDO ELETRONICO N. 14/2026 - DG/VID E DESPACHO N. 355/2026 DAP/VID (ADESAO INTERNA 133/2026 - PE 90149/2026 UASG 158125 - PROCESSO DE ORIGEM N. 23350.002059/2026-13).",
+      "numeroControlePNCP": "10635424000186-2-001499/2026",
+      "emendaParlamentar": false,
+      "nomeFornecedorSubContratado": null,
+      "valorInicial": 800.0,
+      "valorAcumulado": null,
+      "valorParcela": 800.0,
+      "usuarioNome": "Contratos.gov.br",
+      "codigoPaisFornecedor": null,
+      "numeroControlePncpAta": "10635424000186-1-000140/2026-000007",
+      "numeroControlePncpCompra": "10635424000186-1-000140/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true
+    },
+    {
+      "numeroParcelas": 1,
+      "temRemanejamento": false,
+      "receita": false,
+      "anoContrato": 2026,
+      "tipoContrato": {
+        "id": 7,
+        "nome": "Empenho",
+        "descricao": "Ato emanado de autoridade competente que cria para o Estado obrigação de pagamento pendente ou não de condição futura, podendo substituir o termo de contrato em hipóteses específicas previstos em lei.",
+        "statusAtivo": true
+      },
+      "numeroContratoEmpenho": "2026NE000208",
+      "niFornecedor": "63339855000161",
+      "niFornecedorSubContratado": null,
+      "orgaoEntidade": {
+        "cnpj": "10635424000186",
+        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE",
+        "esferaId": "F",
+        "poderId": "E"
+      },
+      "dataAssinatura": "2026-09-23",
+      "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-09-23",
+      "dataAtualizacao": "2026-10-09T10:42:21",
+      "tipoPessoa": "PJ",
+      "categoriaProcesso": {
+        "id": 2,
+        "nome": "Compras"
+      },
+      "nomeRazaoSocialFornecedor": "ZAIDAN AGRICOLA LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "dataPublicacaoPncp": "2026-10-09T10:42:21",
+      "unidadeOrgao": {
+        "codigoUnidade": "158379",
+        "nomeUnidade": "INST.FED.CATARINENSE/CAMPUS VIDEIRA",
+        "municipioNome": "Videira",
+        "codigoIbge": "4219309",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "unidadeSubRogada": null,
+      "informacaoComplementar": null,
+      "sequencialContrato": 1525,
+      "processo": "23352.003623/2026-97",
+      "tipoPessoaSubContratada": null,
+      "numeroRetificacao": 0,
+      "urlCipi": null,
+      "dataAtualizacaoGlobal": "2026-10-09T10:42:21",
+      "valorGlobal": 443.5,
+      "identificadorCipi": null,
+      "objetoContrato": "AQUISICAO DE INSUMOS AGRICOLAS PARA ATENDER AS NECESSIDADES DO IFC CAMPUS VIDEIRA, CONFORME MEMORANDO ELETRONICO N. 14/2026 - DG/VID E DESPACHO N. 355/2026 DAP/VID (ADESAO INTERNA 133/2026 - PE 90149/2026 UASG 158125 - PROCESSO DE ORIGEM N. 23350.002059/2026-13).",
+      "numeroControlePNCP": "10635424000186-2-001525/2026",
+      "emendaParlamentar": false,
+      "nomeFornecedorSubContratado": null,
+      "valorInicial": 443.5,
+      "valorAcumulado": null,
+      "valorParcela": 443.5,
+      "usuarioNome": "Contratos.gov.br",
+      "codigoPaisFornecedor": null,
+      "numeroControlePncpAta": "10635424000186-1-000140/2026-000003",
+      "numeroControlePncpCompra": "10635424000186-1-000140/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true
+    },
+    {
+      "numeroParcelas": 1,
+      "temRemanejamento": false,
+      "receita": false,
+      "anoContrato": 2026,
+      "tipoContrato": {
+        "id": 7,
+        "nome": "Empenho",
+        "descricao": "Ato emanado de autoridade competente que cria para o Estado obrigação de pagamento pendente ou não de condição futura, podendo substituir o termo de contrato em hipóteses específicas previstos em lei.",
+        "statusAtivo": true
+      },
+      "numeroContratoEmpenho": "2026NE000298",
+      "niFornecedor": "09590203000150",
+      "niFornecedorSubContratado": null,
+      "orgaoEntidade": {
+        "cnpj": "10635424000186",
+        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE",
+        "esferaId": "F",
+        "poderId": "E"
+      },
+      "dataAssinatura": "2026-09-10",
+      "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-09-10",
+      "dataAtualizacao": "2026-10-06T14:12:08",
+      "tipoPessoa": "PJ",
+      "categoriaProcesso": {
+        "id": 2,
+        "nome": "Compras"
+      },
+      "nomeRazaoSocialFornecedor": "PLANTIUN DISTRIBUIDORA LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "dataPublicacaoPncp": "2026-10-06T14:11:58",
+      "unidadeOrgao": {
+        "codigoUnidade": "158462",
+        "nomeUnidade": "INST.FED.CATARINENSE/CAMPUS SANTA ROSA SUL",
+        "municipioNome": "Santa Rosa do Sul",
+        "codigoIbge": "4215653",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "unidadeSubRogada": null,
+      "informacaoComplementar": null,
+      "sequencialContrato": 1506,
+      "processo": "23354.003859/2026-11",
+      "tipoPessoaSubContratada": null,
+      "numeroRetificacao": 0,
+      "urlCipi": null,
+      "dataAtualizacaoGlobal": "2026-10-06T14:12:08",
+      "valorGlobal": 855.35,
+      "identificadorCipi": null,
+      "objetoContrato": "EMPENHO PARA AQUISIÇÃO DE HERBICIDA CONFORME ADESÃO INTERNA Nº 124/2026 AO PREGÃO Nº 90149/2026 (IFC CAMBORIÚ) PARA ATENDER AS NECESSIDADES DO IFC CAMPUS SANTA ROSA DO SUL",
+      "numeroControlePNCP": "10635424000186-2-001506/2026",
+      "emendaParlamentar": false,
+      "nomeFornecedorSubContratado": null,
+      "valorInicial": 855.35,
+      "valorAcumulado": null,
+      "valorParcela": 855.35,
+      "usuarioNome": "Contratos.gov.br",
+      "codigoPaisFornecedor": null,
+      "numeroControlePncpAta": "10635424000186-1-000140/2026-000008",
+      "numeroControlePncpCompra": "10635424000186-1-000140/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true
+    },
+    {
+      "numeroParcelas": 1,
+      "temRemanejamento": false,
+      "receita": false,
+      "anoContrato": 2026,
+      "tipoContrato": {
+        "id": 7,
+        "nome": "Empenho",
+        "descricao": "Ato emanado de autoridade competente que cria para o Estado obrigação de pagamento pendente ou não de condição futura, podendo substituir o termo de contrato em hipóteses específicas previstos em lei.",
+        "statusAtivo": true
+      },
+      "numeroContratoEmpenho": "2026NE000205",
+      "niFornecedor": "63339855000161",
+      "niFornecedorSubContratado": null,
+      "orgaoEntidade": {
+        "cnpj": "10635424000186",
+        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE",
+        "esferaId": "F",
+        "poderId": "E"
+      },
+      "dataAssinatura": "2026-09-23",
+      "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-09-23",
+      "dataAtualizacao": "2026-10-09T11:07:13",
+      "tipoPessoa": "PJ",
+      "categoriaProcesso": {
+        "id": 2,
+        "nome": "Compras"
+      },
+      "nomeRazaoSocialFornecedor": "ZAIDAN AGRICOLA LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "dataPublicacaoPncp": "2026-10-09T11:07:12",
+      "unidadeOrgao": {
+        "codigoUnidade": "158379",
+        "nomeUnidade": "INST.FED.CATARINENSE/CAMPUS VIDEIRA",
+        "municipioNome": "Videira",
+        "codigoIbge": "4219309",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "unidadeSubRogada": null,
+      "informacaoComplementar": null,
+      "sequencialContrato": 1526,
+      "processo": "23352.003623/2026-97",
+      "tipoPessoaSubContratada": null,
+      "numeroRetificacao": 0,
+      "urlCipi": null,
+      "dataAtualizacaoGlobal": "2026-10-09T11:07:13",
+      "valorGlobal": 107.5,
+      "identificadorCipi": null,
+      "objetoContrato": "AQUISICAO DE INSUMOS AGRICOLAS PARA ATENDER AS NECESSIDADES DO IFC CAMPUS VIDEIRA, CONFORME MEMORANDO ELETRONICO N. 39/2026 - CIS/VID E DESPACHO N. 355/2026 DAP/VID (ADESAO INTERNA 133/2026 - PE 90149/2026 UASG 158125 - PROCESSO DE ORIGEM N. 23350.002059/2026-13).",
+      "numeroControlePNCP": "10635424000186-2-001526/2026",
+      "emendaParlamentar": false,
+      "nomeFornecedorSubContratado": null,
+      "valorInicial": 107.5,
+      "valorAcumulado": null,
+      "valorParcela": 107.5,
+      "usuarioNome": "Contratos.gov.br",
+      "codigoPaisFornecedor": null,
+      "numeroControlePncpAta": "10635424000186-1-000140/2026-000003",
+      "numeroControlePncpCompra": "10635424000186-1-000140/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true
+    },
+    {
+      "numeroParcelas": 1,
+      "temRemanejamento": false,
+      "receita": false,
+      "anoContrato": 2026,
+      "tipoContrato": {
+        "id": 7,
+        "nome": "Empenho",
+        "descricao": "Ato emanado de autoridade competente que cria para o Estado obrigação de pagamento pendente ou não de condição futura, podendo substituir o termo de contrato em hipóteses específicas previstos em lei.",
+        "statusAtivo": true
+      },
+      "numeroContratoEmpenho": "2026NE000212",
+      "niFornecedor": "43338044000139",
+      "niFornecedorSubContratado": null,
+      "orgaoEntidade": {
+        "cnpj": "10635424000186",
+        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE",
+        "esferaId": "F",
+        "poderId": "E"
+      },
+      "dataAssinatura": "2026-09-23",
+      "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-09-23",
+      "dataAtualizacao": "2026-10-19T11:24:43",
+      "tipoPessoa": "PJ",
+      "categoriaProcesso": {
+        "id": 2,
+        "nome": "Compras"
+      },
+      "nomeRazaoSocialFornecedor": "JE SUBSTRATOS E FERTILIZANTES LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "dataPublicacaoPncp": "2026-10-19T11:24:43",
+      "unidadeOrgao": {
+        "codigoUnidade": "158379",
+        "nomeUnidade": "INST.FED.CATARINENSE/CAMPUS VIDEIRA",
+        "municipioNome": "Videira",
+        "codigoIbge": "4219309",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "unidadeSubRogada": null,
+      "informacaoComplementar": null,
+      "sequencialContrato": 1571,
+      "processo": "23352.003623/2026-97",
+      "tipoPessoaSubContratada": null,
+      "numeroRetificacao": 0,
+      "urlCipi": null,
+      "dataAtualizacaoGlobal": "2026-10-19T11:24:43",
+      "valorGlobal": 7216.3,
+      "identificadorCipi": null,
+      "objetoContrato": "AQUISICAO DE INSUMOS AGRICOLAS PARA ATENDER AS NECESSIDADES DO IFC CAMPUS VIDEIRA, CONFORME MEMORANDO ELETRONICO N. 14/2026 - DG/VID E DESPACHO N. 355/2026 DAP/VID (ADESAO INTERNA 133/2026 - PE 90149/2026 UASG 158125 - PROCESSO DE ORIGEM N. 23350.002059/2026-13).",
+      "numeroControlePNCP": "10635424000186-2-001571/2026",
+      "emendaParlamentar": false,
+      "nomeFornecedorSubContratado": null,
+      "valorInicial": 7216.3,
+      "valorAcumulado": null,
+      "valorParcela": 7216.3,
+      "usuarioNome": "Contratos.gov.br",
+      "codigoPaisFornecedor": null,
+      "numeroControlePncpAta": "10635424000186-1-000140/2026-000010",
+      "numeroControlePncpCompra": "10635424000186-1-000140/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true
+    },
+    {
+      "numeroParcelas": 1,
+      "temRemanejamento": false,
+      "receita": false,
+      "anoContrato": 2026,
+      "tipoContrato": {
+        "id": 7,
+        "nome": "Empenho",
+        "descricao": "Ato emanado de autoridade competente que cria para o Estado obrigação de pagamento pendente ou não de condição futura, podendo substituir o termo de contrato em hipóteses específicas previstos em lei.",
+        "statusAtivo": true
+      },
+      "numeroContratoEmpenho": "2026NE000295",
+      "niFornecedor": "11163447000106",
+      "niFornecedorSubContratado": null,
+      "orgaoEntidade": {
+        "cnpj": "10635424000186",
+        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE",
+        "esferaId": "F",
+        "poderId": "E"
+      },
+      "dataAssinatura": "2026-09-10",
+      "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-09-10",
+      "dataAtualizacao": "2026-10-26T14:19:50",
+      "tipoPessoa": "PJ",
+      "categoriaProcesso": {
+        "id": 2,
+        "nome": "Compras"
+      },
+      "nomeRazaoSocialFornecedor": "TECA TECNOLOGIA E COMERCIO LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "dataPublicacaoPncp": "2026-10-26T14:19:49",
+      "unidadeOrgao": {
+        "codigoUnidade": "158462",
+        "nomeUnidade": "INST.FED.CATARINENSE/CAMPUS SANTA ROSA SUL",
+        "municipioNome": "Santa Rosa do Sul",
+        "codigoIbge": "4215653",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "unidadeSubRogada": null,
+      "informacaoComplementar": null,
+      "sequencialContrato": 1602,
+      "processo": "23354.003859/2026-11",
+      "tipoPessoaSubContratada": null,
+      "numeroRetificacao": 0,
+      "urlCipi": null,
+      "dataAtualizacaoGlobal": "2026-10-26T14:19:50",
+      "valorGlobal": 4097.0,
+      "identificadorCipi": null,
+      "objetoContrato": "EMPENHO PARA AQUISIÇÃO DE ADUBOS CONFORME ADESÃO INTERNA Nº 124/2026 AO PREGÃO Nº 90149/2026 (IFC CAMBORIÚ) PARA ATENDER AS NECESSIDADES DO IFC CAMPUS SANTA ROSA DO SUL",
+      "numeroControlePNCP": "10635424000186-2-001602/2026",
+      "emendaParlamentar": false,
+      "nomeFornecedorSubContratado": null,
+      "valorInicial": 4097.0,
+      "valorAcumulado": null,
+      "valorParcela": 4097.0,
+      "usuarioNome": "Contratos.gov.br",
+      "codigoPaisFornecedor": null,
+      "numeroControlePncpAta": "10635424000186-1-000140/2026-000006",
+      "numeroControlePncpCompra": "10635424000186-1-000140/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true
+    },
+    {
+      "numeroParcelas": 1,
+      "temRemanejamento": false,
+      "receita": false,
+      "anoContrato": 2026,
+      "tipoContrato": {
+        "id": 7,
+        "nome": "Empenho",
+        "descricao": "Ato emanado de autoridade competente que cria para o Estado obrigação de pagamento pendente ou não de condição futura, podendo substituir o termo de contrato em hipóteses específicas previstos em lei.",
+        "statusAtivo": true
+      },
+      "numeroContratoEmpenho": "2026NE000297",
+      "niFornecedor": "11258338000164",
+      "niFornecedorSubContratado": null,
+      "orgaoEntidade": {
+        "cnpj": "10635424000186",
+        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE",
+        "esferaId": "F",
+        "poderId": "E"
+      },
+      "dataAssinatura": "2026-09-10",
+      "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-09-10",
+      "dataAtualizacao": "2026-10-26T14:39:37",
+      "tipoPessoa": "PJ",
+      "categoriaProcesso": {
+        "id": 2,
+        "nome": "Compras"
+      },
+      "nomeRazaoSocialFornecedor": "MERCOSUL AGRONEGOCIOS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "dataPublicacaoPncp": "2026-10-26T14:39:37",
+      "unidadeOrgao": {
+        "codigoUnidade": "158462",
+        "nomeUnidade": "INST.FED.CATARINENSE/CAMPUS SANTA ROSA SUL",
+        "municipioNome": "Santa Rosa do Sul",
+        "codigoIbge": "4215653",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "unidadeSubRogada": null,
+      "informacaoComplementar": null,
+      "sequencialContrato": 1604,
+      "processo": "23354.003859/2026-11",
+      "tipoPessoaSubContratada": null,
+      "numeroRetificacao": 0,
+      "urlCipi": null,
+      "dataAtualizacaoGlobal": "2026-10-26T14:39:37",
+      "valorGlobal": 4046.0,
+      "identificadorCipi": null,
+      "objetoContrato": "EMPENHO PARA AQUISIÇÃO DE DEFENSIVOS AGRÍCOLAS CONFORME ADESÃO INTERNA Nº 124/2026 AO PREGÃO Nº 90149/2026 (IFC CAMBORIÚ) PARA ATENDER AS NECESSIDADES DO IFC CAMPUS SANTA ROSA DO SUL",
+      "numeroControlePNCP": "10635424000186-2-001604/2026",
+      "emendaParlamentar": false,
+      "nomeFornecedorSubContratado": null,
+      "valorInicial": 4046.0,
+      "valorAcumulado": null,
+      "valorParcela": 4046.0,
+      "usuarioNome": "Contratos.gov.br",
+      "codigoPaisFornecedor": null,
+      "numeroControlePncpAta": "10635424000186-1-000140/2026-000011",
+      "numeroControlePncpCompra": "10635424000186-1-000140/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true
+    },
+    {
+      "numeroParcelas": 1,
+      "temRemanejamento": false,
+      "receita": false,
+      "anoContrato": 2026,
+      "tipoContrato": {
+        "id": 7,
+        "nome": "Empenho",
+        "descricao": "Ato emanado de autoridade competente que cria para o Estado obrigação de pagamento pendente ou não de condição futura, podendo substituir o termo de contrato em hipóteses específicas previstos em lei.",
+        "statusAtivo": true
+      },
+      "numeroContratoEmpenho": "2026NE000214",
+      "niFornecedor": "11163447000106",
+      "niFornecedorSubContratado": null,
+      "orgaoEntidade": {
+        "cnpj": "10635424000186",
+        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE",
+        "esferaId": "F",
+        "poderId": "E"
+      },
+      "dataAssinatura": "2026-09-23",
+      "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-09-23",
+      "dataAtualizacao": "2026-10-27T08:54:29",
+      "tipoPessoa": "PJ",
+      "categoriaProcesso": {
+        "id": 2,
+        "nome": "Compras"
+      },
+      "nomeRazaoSocialFornecedor": "TECA TECNOLOGIA E COMERCIO LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "dataPublicacaoPncp": "2026-10-27T08:54:29",
+      "unidadeOrgao": {
+        "codigoUnidade": "158379",
+        "nomeUnidade": "INST.FED.CATARINENSE/CAMPUS VIDEIRA",
+        "municipioNome": "Videira",
+        "codigoIbge": "4219309",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "unidadeSubRogada": null,
+      "informacaoComplementar": null,
+      "sequencialContrato": 1607,
+      "processo": "23352.003623/2026-97",
+      "tipoPessoaSubContratada": null,
+      "numeroRetificacao": 0,
+      "urlCipi": null,
+      "dataAtualizacaoGlobal": "2026-10-27T08:54:29",
+      "valorGlobal": 1073.4,
+      "identificadorCipi": null,
+      "objetoContrato": "AQUISICAO DE INSUMOS AGRICOLAS PARA ATENDER AS NECESSIDADES DO IFC CAMPUS VIDEIRA, CONFORME MEMORANDO ELETRONICO N. 14/2026 - DG/VID E DESPACHO N. 355/2026 DAP/VID (ADESAO INTERNA 133/2026 - PE 90149/2026 UASG 158125 - PROCESSO DE ORIGEM N. 23350.002059/2026-13).",
+      "numeroControlePNCP": "10635424000186-2-001607/2026",
+      "emendaParlamentar": false,
+      "nomeFornecedorSubContratado": null,
+      "valorInicial": 1073.4,
+      "valorAcumulado": null,
+      "valorParcela": 1073.4,
+      "usuarioNome": "Contratos.gov.br",
+      "codigoPaisFornecedor": null,
+      "numeroControlePncpAta": "10635424000186-1-000140/2026-000006",
+      "numeroControlePncpCompra": "10635424000186-1-000140/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true
+    },
+    {
+      "numeroParcelas": 1,
+      "temRemanejamento": false,
+      "receita": false,
+      "anoContrato": 2026,
+      "tipoContrato": {
+        "id": 7,
+        "nome": "Empenho",
+        "descricao": "Ato emanado de autoridade competente que cria para o Estado obrigação de pagamento pendente ou não de condição futura, podendo substituir o termo de contrato em hipóteses específicas previstos em lei.",
+        "statusAtivo": true
+      },
+      "numeroContratoEmpenho": "2026NE000294",
+      "niFornecedor": "18694818000117",
+      "niFornecedorSubContratado": null,
+      "orgaoEntidade": {
+        "cnpj": "10635424000186",
+        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE",
+        "esferaId": "F",
+        "poderId": "E"
+      },
+      "dataAssinatura": "2026-09-10",
+      "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-09-10",
+      "dataAtualizacao": "2026-11-13T13:28:33",
+      "tipoPessoa": "PJ",
+      "categoriaProcesso": {
+        "id": 2,
+        "nome": "Compras"
+      },
+      "nomeRazaoSocialFornecedor": "VGD DISTRIBUIDORA LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "dataPublicacaoPncp": "2026-11-13T13:22:45",
+      "unidadeOrgao": {
+        "codigoUnidade": "158462",
+        "nomeUnidade": "INST.FED.CATARINENSE/CAMPUS SANTA ROSA SUL",
+        "municipioNome": "Santa Rosa do Sul",
+        "codigoIbge": "4215653",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "unidadeSubRogada": null,
+      "informacaoComplementar": null,
+      "sequencialContrato": 1686,
+      "processo": "23354.003859/2026-11",
+      "tipoPessoaSubContratada": null,
+      "numeroRetificacao": 0,
+      "urlCipi": null,
+      "dataAtualizacaoGlobal": "2026-11-13T13:28:33",
+      "valorGlobal": 10245.0,
+      "identificadorCipi": null,
+      "objetoContrato": "EMPENHO PARA AQUISIÇÃO DE ADUBOS CONFORME ADESÃO INTERNA Nº 124/2026 AO PREGÃO Nº 90149/2026 (IFC CAMBORIÚ) PARA ATENDER AS NECESSIDADES DO IFC CAMPUS SANTA ROSA DO SUL",
+      "numeroControlePNCP": "10635424000186-2-001686/2026",
+      "emendaParlamentar": false,
+      "nomeFornecedorSubContratado": null,
+      "valorInicial": 10245.0,
+      "valorAcumulado": null,
+      "valorParcela": 10245.0,
+      "usuarioNome": "Contratos.gov.br",
+      "codigoPaisFornecedor": null,
+      "numeroControlePncpAta": "10635424000186-1-000140/2026-000009",
+      "numeroControlePncpCompra": "10635424000186-1-000140/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true
+    },
+    {
+      "numeroParcelas": 1,
+      "temRemanejamento": false,
+      "receita": false,
+      "anoContrato": 2026,
+      "tipoContrato": {
+        "id": 7,
+        "nome": "Empenho",
+        "descricao": "Ato emanado de autoridade competente que cria para o Estado obrigação de pagamento pendente ou não de condição futura, podendo substituir o termo de contrato em hipóteses específicas previstos em lei.",
+        "statusAtivo": true
+      },
+      "numeroContratoEmpenho": "2026NE000213",
+      "niFornecedor": "18694818000117",
+      "niFornecedorSubContratado": null,
+      "orgaoEntidade": {
+        "cnpj": "10635424000186",
+        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE",
+        "esferaId": "F",
+        "poderId": "E"
+      },
+      "dataAssinatura": "2026-09-23",
+      "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-09-23",
+      "dataAtualizacao": "2026-11-13T19:29:45",
+      "tipoPessoa": "PJ",
+      "categoriaProcesso": {
+        "id": 2,
+        "nome": "Compras"
+      },
+      "nomeRazaoSocialFornecedor": "VGD DISTRIBUIDORA LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "dataPublicacaoPncp": "2026-11-13T19:23:50",
+      "unidadeOrgao": {
+        "codigoUnidade": "158379",
+        "nomeUnidade": "INST.FED.CATARINENSE/CAMPUS VIDEIRA",
+        "municipioNome": "Videira",
+        "codigoIbge": "4219309",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "unidadeSubRogada": null,
+      "informacaoComplementar": null,
+      "sequencialContrato": 1689,
+      "processo": "23352.003623/2026-97",
+      "tipoPessoaSubContratada": null,
+      "numeroRetificacao": 0,
+      "urlCipi": null,
+      "dataAtualizacaoGlobal": "2026-11-13T19:29:45",
+      "valorGlobal": 2701.5,
+      "identificadorCipi": null,
+      "objetoContrato": "AQUISICAO DE INSUMOS AGRICOLAS PARA ATENDER AS NECESSIDADES DO IFC CAMPUS VIDEIRA, CONFORME MEMORANDO ELETRONICO N. 14/2026 - DG/VID E DESPACHO N. 355/2026 DAP/VID (ADESAO INTERNA 133/2026 - PE 90149/2026 UASG 158125 - PROCESSO DE ORIGEM N. 23350.002059/2026-13).",
+      "numeroControlePNCP": "10635424000186-2-001689/2026",
+      "emendaParlamentar": false,
+      "nomeFornecedorSubContratado": null,
+      "valorInicial": 2701.5,
+      "valorAcumulado": null,
+      "valorParcela": 2701.5,
+      "usuarioNome": "Contratos.gov.br",
+      "codigoPaisFornecedor": null,
+      "numeroControlePncpAta": "10635424000186-1-000140/2026-000009",
+      "numeroControlePncpCompra": "10635424000186-1-000140/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true
+    }
+  ],
+  "coleta_empenhos": {
+    "busca_portal_realizada": false,
+    "quantidade_empenhos_pncp": 16,
+    "quantidade_empenhos_portal": 0,
+    "erros": []
+  }
 }

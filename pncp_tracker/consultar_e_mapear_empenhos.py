@@ -1,11 +1,15 @@
 from __future__ import annotations
 
 import re
+from collections import Counter
 from typing import Any, Callable, Dict, List, Optional, Tuple
 
 from .collector import baixar_dados_compra_pncp
 from .contratos_empenhos import consultar_contratos_empenhos
-from .empenho_details import enriquecer_empenhos_com_detalhes_portal
+from .empenho_details import (
+    classificar_situacao_empenho,
+    enriquecer_empenhos_com_detalhes_portal,
+)
 from .empenho_matcher import mapear_empenhos_por_item
 from .empenho_portal import (
     ORIGEM_ORGAN_ORIGINAL,
@@ -19,6 +23,17 @@ from .portal_transparencia import limpar_cache as limpar_cache_portal
 from .url_parser import extrair_parametros_url
 
 ORIGEM_PNCP = "pncp"
+
+SITUACOES_EMPENHO = {
+    "normal": "sem alteração",
+    "reforcado": "reforçado(s)",
+    "anulado": "anulado(s) parcialmente",
+    "cancelado": "cancelado(s)",
+    "alterado": "retificado(s)",
+    "nao_localizado": "não localizado(s) no Portal",
+    "nao_aplicavel": "sem nota de empenho",
+    "indeterminado": "não verificado(s)",
+}
 
 
 def _classificar_empenhos_pncp(empenhos: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
@@ -143,56 +158,157 @@ def _unir_empenhos(
     return unidos, adicionados
 
 
-def consultar_e_mapear_empenhos(
+def _descobrir_empenhos_portal(
+    dados_compra: Dict[str, Any],
+    empenhos_pncp: List[Dict[str, Any]],
+    buscar_empenhos_portal: bool,
+    on_progress: Optional[Callable[[str], None]],
+) -> Tuple[List[Dict[str, Any]], List[Dict[str, str]]]:
+    """Procura empenhos fora da aba Contratos/Empenhos do PNCP somente quando solicitado."""
+    if not buscar_empenhos_portal:
+        if on_progress is not None:
+            on_progress(
+                "Busca por empenhos não registrados no PNCP desativada; "
+                "usando a aba Contratos/Empenhos do PNCP."
+            )
+        return [], []
+    return buscar_empenhos_portal_para_compra(
+        dados_compra,
+        on_progress=on_progress,
+        detalhes_conhecidos=_detalhes_conhecidos(empenhos_pncp),
+    )
+
+
+def _notificar(callback: Optional[Callable[[str], None]], mensagem: str) -> None:
+    if callback is not None:
+        callback(mensagem)
+
+
+def coletar_empenhos(
     url_pncp: str,
-    dados_compra: Optional[Dict[str, Any]] = None,
+    dados_compra: Dict[str, Any],
+    *,
+    buscar_empenhos_portal: bool = False,
     on_progress: Optional[Callable[[str], None]] = None,
 ) -> Dict[str, Any]:
-    """Coleta empenhos no PNCP e no Portal da Transparência e cruza com os itens homologados."""
-    if dados_compra is None:
-        dados_compra = baixar_dados_compra_pncp(url_pncp)
-    chaves = dados_compra.get("chaves_integracao", {})
+    """Etapa 1: coleta a aba Contratos/Empenhos do PNCP e, se solicitado, o Portal.
+
+    O resultado é gravado em `dados_pregao.json` junto com o cabeçalho, os itens e os
+    resultados homologados: nada do Portal da Transparência é consultado aqui além da
+    descoberta opcional de empenhos por fornecedor.
+    """
+    chaves = dados_compra.get("chaves_integracao", {}) or {}
     parametros_url = extrair_parametros_url(url_pncp)
     limpar_cache_portal()
 
-    if on_progress is not None:
-        on_progress("Consultando contratos e empenhos no PNCP.")
+    _notificar(on_progress, "Consultando contratos e empenhos no PNCP.")
     empenhos_pncp = consultar_contratos_empenhos(
         chaves["cnpj_orgao"],
         parametros_url["ano"],
         parametros_url["sequencial"],
     )
-    if on_progress is not None:
-        on_progress(
-            "Registros do PNCP recebidos: {}. Consultando detalhes no Portal da Transparência.".format(
-                len(empenhos_pncp)
-            )
-        )
-    empenhos_pncp, erros_detalhamento = enriquecer_empenhos_com_detalhes_portal(empenhos_pncp)
+    _notificar(
+        on_progress,
+        "Registros do PNCP recebidos: {}.".format(len(empenhos_pncp)),
+    )
     empenhos_pncp = _classificar_empenhos_pncp(empenhos_pncp)
 
-    empenhos_portal, erros_busca_portal = buscar_empenhos_portal_para_compra(
+    empenhos_portal, erros_portal = _descobrir_empenhos_portal(
         dados_compra,
-        on_progress=on_progress,
-        detalhes_conhecidos=_detalhes_conhecidos(empenhos_pncp),
+        empenhos_pncp,
+        buscar_empenhos_portal,
+        on_progress,
     )
-    erros_detalhamento.extend(erros_busca_portal)
+    if buscar_empenhos_portal:
+        _notificar(
+            on_progress,
+            "Portal da Transparência retornou {} empenho(s) para a compra.".format(
+                len(empenhos_portal)
+            ),
+        )
+    empenhos, quantidade_portal = _unir_empenhos(empenhos_pncp, empenhos_portal)
+    return {
+        "empenhos": empenhos,
+        "busca_portal_realizada": bool(buscar_empenhos_portal),
+        "quantidade_empenhos_pncp": len(empenhos_pncp),
+        "quantidade_empenhos_portal": quantidade_portal,
+        "erros": erros_portal,
+    }
+
+
+def anexar_coleta_empenhos(
+    dados_compra: Dict[str, Any],
+    coleta: Dict[str, Any],
+) -> Dict[str, Any]:
+    """Anexa ao snapshot da etapa 1 os empenhos coletados (conteúdo de dados_pregao.json)."""
+    dados_compra["empenhos"] = list(coleta.get("empenhos") or [])
+    dados_compra["coleta_empenhos"] = {
+        "busca_portal_realizada": bool(coleta.get("busca_portal_realizada")),
+        "quantidade_empenhos_pncp": int(coleta.get("quantidade_empenhos_pncp") or 0),
+        "quantidade_empenhos_portal": int(coleta.get("quantidade_empenhos_portal") or 0),
+        "erros": list(coleta.get("erros") or []),
+    }
+    return dados_compra
+
+
+def enriquecer_e_mapear_empenhos(
+    dados_compra: Dict[str, Any],
+    on_progress: Optional[Callable[[str], None]] = None,
+) -> Dict[str, Any]:
+    """Etapa 2: detalha cada empenho no Portal, classifica a situação e cruza com os itens."""
+    coleta = dados_compra.get("coleta_empenhos") or {}
+    empenhos_coletados = list(dados_compra.get("empenhos") or [])
+
+    _notificar(
+        on_progress,
+        "Consultando detalhes de {} empenho(s) no Portal da Transparência.".format(
+            len(empenhos_coletados)
+        ),
+    )
+    empenhos_detalhados, erros_detalhamento = enriquecer_empenhos_com_detalhes_portal(
+        empenhos_coletados
+    )
+    erros_detalhamento.extend(coleta.get("erros") or [])
+    return montar_resultado_empenhos(
+        dados_compra,
+        empenhos_detalhados,
+        coleta,
+        erros_detalhamento,
+        on_progress=on_progress,
+    )
+
+
+def montar_resultado_empenhos(
+    dados_compra: Dict[str, Any],
+    empenhos_detalhados: List[Dict[str, Any]],
+    coleta: Optional[Dict[str, Any]] = None,
+    erros_detalhamento: Optional[List[Dict[str, str]]] = None,
+    on_progress: Optional[Callable[[str], None]] = None,
+) -> Dict[str, Any]:
+    """Monta o `dados_empenhos.json` a partir dos registros já detalhados.
+
+    Separado do detalhamento para permitir remontar o resultado sem novas chamadas ao
+    Portal — usado pela nova tentativa de itens pendentes.
+    """
+    coleta = coleta or {}
+    erros_detalhamento = list(erros_detalhamento or [])
+    chaves = dados_compra.get("chaves_integracao", {})
+    quantidade_pncp = int(coleta.get("quantidade_empenhos_pncp") or 0)
+    quantidade_portal_exclusivos = int(coleta.get("quantidade_empenhos_portal") or 0)
+    busca_portal_realizada = bool(coleta.get("busca_portal_realizada"))
     documentos_descartados = [
         erro for erro in erros_detalhamento if erro.get("tipo") == "descartado"
     ]
 
-    if on_progress is not None:
-        on_progress(
-            "Portal da Transparência retornou {} empenho(s) para a compra.".format(
-                len(empenhos_portal)
-            )
-        )
-    empenhos_detalhados, quantidade_portal_exclusivos = _unir_empenhos(
-        empenhos_pncp, empenhos_portal
-    )
+    empenhos_detalhados = [
+        {
+            **empenho,
+            "situacao_empenho": classificar_situacao_empenho(empenho),
+        }
+        for empenho in empenhos_detalhados
+    ]
 
-    if on_progress is not None:
-        on_progress("Relacionando empenhos aos itens e fornecedores homologados.")
+    _notificar(on_progress, "Relacionando empenhos aos itens e fornecedores homologados.")
     itens_mapeados = mapear_empenhos_por_item(dados_compra, empenhos_detalhados)
     quantidade_com_detalhes = sum(
         empenho.get("detalhesPortalTransparencia", {}).get("status") == "ok"
@@ -210,16 +326,9 @@ def consultar_e_mapear_empenhos(
         else "ok"
     )
     fontes = []
-    if empenhos_pncp:
+    if quantidade_pncp:
         fontes.append("PNCP - aba Contratos/Empenhos")
-    origens_portal = sorted(
-        {
-            empenho.get("origem")
-            for empenho in empenhos_portal
-            if empenho.get("origem")
-        }
-    )
-    if origens_portal:
+    if quantidade_portal_exclusivos:
         fontes.append("Portal da Transparência - descoberta por processo/favorecido")
     fontes.append("Portal da Transparência - detalhes e itens do empenho")
     if any(empenho.get("dadosContratosGov") for empenho in empenhos_detalhados):
@@ -252,11 +361,21 @@ def consultar_e_mapear_empenhos(
         for linha in item.get("empenhos", [])
         if linha.get("origem_organ") == "adesao_posterior"
     )
+    situacoes = Counter(
+        (empenho.get("situacao_empenho") or {}).get("situacao") or "indeterminado"
+        for empenho in empenhos_detalhados
+    )
 
     if not empenhos_detalhados:
-        mensagem = (
-            "Consulta concluída; PNCP e Portal da Transparência não retornaram empenhos para a compra."
-        )
+        if busca_portal_realizada:
+            mensagem = (
+                "Consulta concluída; PNCP e Portal da Transparência não retornaram empenhos para a compra."
+            )
+        else:
+            mensagem = (
+                "Consulta concluída; a aba Contratos/Empenhos do PNCP não retornou empenhos "
+                "para a compra."
+            )
     else:
         mensagem = (
             "Empenhos encontrados: {} ({} no PNCP, {} exclusivos do Portal da Transparência). "
@@ -264,13 +383,22 @@ def consultar_e_mapear_empenhos(
             "{} empenho(s) de adesão posterior e {} com origem de órgão indefinida."
         ).format(
             len(empenhos_detalhados),
-            len(empenhos_pncp),
+            quantidade_pncp,
             quantidade_portal_exclusivos,
             quantidade_com_detalhes,
             detalhes_nao_encontrados,
             quantidade_adesao,
             quantidade_indefinidos,
         )
+        if situacoes:
+            mensagem += " Situação dos registros: {}.".format(
+                "; ".join(
+                    "{} {}".format(quantidade, SITUACOES_EMPENHO.get(situacao, situacao))
+                    for situacao, quantidade in sorted(situacoes.items())
+                )
+            )
+    if not busca_portal_realizada:
+        mensagem += " Busca por empenhos não registrados no PNCP não executada."
     if any("BlockedError" in str(erro.get("erro", "")) for erro in erros_detalhamento):
         mensagem += (
             " O Portal da Transparência bloqueou o token por limite de acesso; "
@@ -296,8 +424,10 @@ def consultar_e_mapear_empenhos(
         },
         "objeto": dados_compra.get("objeto"),
         "quantidade_empenhos": len(empenhos_detalhados),
-        "quantidade_empenhos_pncp": len(empenhos_pncp),
+        "quantidade_empenhos_pncp": quantidade_pncp,
         "quantidade_empenhos_portal": quantidade_portal_exclusivos,
+        "busca_portal_realizada": busca_portal_realizada,
+        "situacoes_empenhos": dict(situacoes),
         "quantidade_empenhos_com_detalhes": quantidade_com_detalhes,
         "quantidade_empenhos_nao_encontrados": detalhes_nao_encontrados,
         "quantidade_empenhos_confirmados": sum(
@@ -313,3 +443,30 @@ def consultar_e_mapear_empenhos(
         "empenhos": empenhos_detalhados,
         "itens_mapeados": itens_mapeados,
     }
+
+
+def consultar_e_mapear_empenhos(
+    url_pncp: str,
+    dados_compra: Optional[Dict[str, Any]] = None,
+    on_progress: Optional[Callable[[str], None]] = None,
+    *,
+    buscar_empenhos_portal: bool = False,
+) -> Dict[str, Any]:
+    """Executa a coleta (etapa 1) quando necessário e o detalhamento/mapeamento (etapa 2).
+
+    Quando o snapshot da etapa 1 já traz os empenhos — caso do fluxo do `report_service`,
+    que grava `dados_pregao.json` antes de detalhar — nenhuma coleta é repetida.
+    """
+    if dados_compra is None:
+        dados_compra = baixar_dados_compra_pncp(url_pncp)
+    if not isinstance(dados_compra.get("empenhos"), list) or not isinstance(
+        dados_compra.get("coleta_empenhos"), dict
+    ):
+        coleta = coletar_empenhos(
+            url_pncp,
+            dados_compra,
+            buscar_empenhos_portal=buscar_empenhos_portal,
+            on_progress=on_progress,
+        )
+        anexar_coleta_empenhos(dados_compra, coleta)
+    return enriquecer_e_mapear_empenhos(dados_compra, on_progress=on_progress)

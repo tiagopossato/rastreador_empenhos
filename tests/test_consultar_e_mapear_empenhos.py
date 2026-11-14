@@ -1,6 +1,10 @@
+import os
 import tempfile
+import threading
+import time
 import unittest
 from datetime import datetime as RealDateTime, timezone as RealTimezone
+from decimal import Decimal
 from pathlib import Path
 from unittest.mock import patch
 
@@ -12,7 +16,10 @@ from pncp_tracker.consultar_e_mapear_empenhos import (
     consultar_e_mapear_empenhos,
 )
 from pncp_tracker.contratos_empenhos import consultar_contratos_empenhos
-from pncp_tracker.empenho_details import enriquecer_empenhos_com_detalhes_portal
+from pncp_tracker.empenho_details import (
+    classificar_situacao_empenho,
+    enriquecer_empenhos_com_detalhes_portal,
+)
 from pncp_tracker.empenho_matcher import mapear_empenhos_por_item
 from pncp_tracker.empenho_portal import (
     buscar_empenhos_portal_para_compra,
@@ -65,20 +72,157 @@ class ClassificarOrigemOrganTests(unittest.TestCase):
         self.assertEqual(classificar_origem_organ(None, None, ""), "indefinido")
 
 
+class SituacaoEmpenhoTests(unittest.TestCase):
+    """A situação compara o registro do PNCP com o documento atual do Portal."""
+
+    def test_reinforced_value_is_detected(self):
+        situacao = classificar_situacao_empenho(
+            {
+                "numeroContratoEmpenho": "2026NE000001",
+                "valorGlobal": 100.0,
+                "valorInicial": 100.0,
+                "detalhesPortalTransparencia": {
+                    "status": "ok",
+                    "detalhamento": {"valor": "150,00"},
+                },
+            }
+        )
+        self.assertEqual(situacao["situacao"], "reforcado")
+        self.assertEqual(situacao["diferenca"], 50.0)
+
+    def test_reduced_value_is_detected_as_partial_annulment(self):
+        situacao = classificar_situacao_empenho(
+            {
+                "numeroContratoEmpenho": "2026NE000001",
+                "valorGlobal": 100.0,
+                "detalhesPortalTransparencia": {
+                    "status": "ok",
+                    "detalhamento": {"valor": "40,00"},
+                },
+            }
+        )
+        self.assertEqual(situacao["situacao"], "anulado")
+        self.assertEqual(situacao["diferenca"], -60.0)
+
+    def test_zeroed_document_is_cancelled(self):
+        situacao = classificar_situacao_empenho(
+            {
+                "numeroContratoEmpenho": "2026NE000001",
+                "valorGlobal": 100.0,
+                "detalhesPortalTransparencia": {
+                    "status": "ok",
+                    "detalhamento": {"valor": "0,00"},
+                },
+            }
+        )
+        self.assertEqual(situacao["situacao"], "cancelado")
+
+    def test_retification_without_value_change_is_alteracao(self):
+        situacao = classificar_situacao_empenho(
+            {
+                "numeroContratoEmpenho": "2026NE000001",
+                "valorGlobal": 100.0,
+                "valorInicial": 100.0,
+                "numeroRetificacao": 2,
+                "detalhesPortalTransparencia": {
+                    "status": "ok",
+                    "detalhamento": {"valor": "100,00"},
+                },
+            }
+        )
+        self.assertEqual(situacao["situacao"], "alterado")
+        self.assertEqual(situacao["retificacoes"], 2)
+
+    def test_document_missing_in_portal_is_reported(self):
+        situacao = classificar_situacao_empenho(
+            {
+                "numeroContratoEmpenho": "2026NE000001",
+                "valorGlobal": 100.0,
+                "detalhesPortalTransparencia": {"status": "nao_encontrado"},
+            }
+        )
+        self.assertEqual(situacao["situacao"], "nao_localizado")
+
+    def test_unavailable_details_are_indeterminate(self):
+        situacao = classificar_situacao_empenho(
+            {
+                "numeroContratoEmpenho": "2026NE000001",
+                "valorGlobal": 100.0,
+                "detalhesPortalTransparencia": {"status": "erro"},
+            }
+        )
+        self.assertEqual(situacao["situacao"], "indeterminado")
+
+    def test_non_empenho_record_is_not_applicable(self):
+        situacao = classificar_situacao_empenho(
+            {
+                "numeroContratoEmpenho": "00095",
+                "detalhesPortalTransparencia": {
+                    "status": "nao_consultado",
+                    "motivo": "Registro sem identificador de empenho ou unidade gestora.",
+                },
+            }
+        )
+        self.assertEqual(situacao["situacao"], "nao_aplicavel")
+
+    def test_matching_values_are_normal(self):
+        situacao = classificar_situacao_empenho(
+            {
+                "numeroContratoEmpenho": "2026NE000001",
+                "valorGlobal": 65.0,
+                "valorInicial": 65.0,
+                "detalhesPortalTransparencia": {
+                    "status": "ok",
+                    "detalhamento": {"valor": "65,00"},
+                },
+            }
+        )
+        self.assertEqual(situacao["situacao"], "normal")
+
+
+class CarregamentoEnvTests(unittest.TestCase):
+    def test_chave_do_env_fica_visivel_para_todas_as_threads(self):
+        """Sem o lock, as threads paralelas podiam ver o .env como já carregado e vazio."""
+
+        def ler_com_atraso():
+            time.sleep(0.05)
+            return {"PORTAL_DADOS_API_KEY": "chave-teste"}
+
+        with patch.object(
+            portal_transparencia, "_ler_variaveis_env", side_effect=ler_com_atraso
+        ), patch.object(
+            portal_transparencia, "_env_carregado", False
+        ), patch.dict(os.environ, {}, clear=True):
+            resultados = []
+            barreira = threading.Barrier(4)
+
+            def consultar():
+                barreira.wait()
+                resultados.append(portal_transparencia._api_key())
+
+            threads = [threading.Thread(target=consultar) for _ in range(4)]
+            for thread in threads:
+                thread.start()
+            for thread in threads:
+                thread.join()
+
+        self.assertEqual(resultados, ["chave-teste"] * 4)
+
+
 class QuantidadeEstimadaTests(unittest.TestCase):
-    """A estimativa é sempre inteira e sinaliza quando o preço efetivo diverge do homologado."""
+    """A quantidade estimada é o quociente real, sem arredondamento para inteiro."""
 
-    def test_non_integer_ratio_is_rounded_and_flagged(self):
-        self.assertEqual(quantidade_estimada("3.840,00", 700.0), (5, True))
+    def test_fractional_ratio_is_kept_with_three_decimals(self):
+        self.assertEqual(quantidade_estimada("3.840,00", 700.0), Decimal("5.486"))
 
-    def test_exact_multiple_is_not_flagged(self):
-        self.assertEqual(quantidade_estimada("10.161,88", 5080.94), (2, False))
+    def test_exact_multiple_has_zero_fraction(self):
+        self.assertEqual(quantidade_estimada("10.161,88", 5080.94), Decimal("2.000"))
 
-    def test_float_noise_does_not_produce_extra_unit(self):
-        self.assertEqual(quantidade_estimada("0,9999999", 1.0), (1, False))
+    def test_float_noise_is_absorbed_by_decimal_math(self):
+        self.assertEqual(quantidade_estimada("0,9999999", 1.0), Decimal("1.000"))
 
-    def test_value_below_one_unit_is_not_estimable(self):
-        self.assertIsNone(quantidade_estimada("300,00", 700.0))
+    def test_value_below_one_unit_keeps_the_fraction(self):
+        self.assertEqual(quantidade_estimada("300,00", 700.0), Decimal("0.429"))
 
     def test_missing_unit_price_is_not_estimable(self):
         self.assertIsNone(quantidade_estimada("300,00", None))
@@ -119,6 +263,136 @@ class ConsultarEMapearEmpenhosTests(unittest.TestCase):
         self.assertIn('id="record-origins"', html)
         self.assertIn("Origem dos registros:", html)
         self.assertNotIn("2026NE000567", html)
+
+    def test_pncp_records_remain_visible_when_portal_details_are_missing(self):
+        data = {
+            "quantidade_empenhos": 4,
+            "quantidade_empenhos_pncp": 4,
+            "empenhos": [
+                {
+                    "numeroContratoEmpenho": "2026NE000042",
+                    "origem": "pncp",
+                    "nomeRazaoSocialFornecedor": "Fornecedor PNCP",
+                    "niFornecedor": "12345678000199",
+                    "unidadeOrgao": {
+                        "codigoUnidade": "158460",
+                        "nomeUnidade": "Unidade PNCP",
+                    },
+                    "valorGlobal": 65,
+                    "objetoContrato": "Objeto publicado no PNCP",
+                    "detalhesPortalTransparencia": {
+                        "status": "nao_encontrado",
+                        "mensagem": "Detalhamento não localizado.",
+                    },
+                },
+                {
+                    "numeroContratoEmpenho": "2026NE000043",
+                    "origem": "pncp",
+                    "nomeRazaoSocialFornecedor": "Outro fornecedor",
+                    "valorGlobal": 10,
+                    "detalhesPortalTransparencia": {
+                        "status": "ok",
+                        "detalhamento": {
+                            "itensEmpenho": [
+                                {
+                                    "descricao": "Item compra: 00001 - Areia",
+                                    "valorAtual": "10,00",
+                                }
+                            ]
+                        },
+                    },
+                },
+                {
+                    "numeroContratoEmpenho": "2026NE000044",
+                    "origem": "pncp",
+                    "detalhesPortalTransparencia": {
+                        "detalhamento": {"itensEmpenho": None}
+                    },
+                },
+                {
+                    "numeroContratoEmpenho": "2026NE000045",
+                    "origem": "pncp",
+                    "detalhesPortalTransparencia": None,
+                },
+                {
+                    "numeroContratoEmpenho": "2026NE000999",
+                    "origem": "portal_favorecido",
+                },
+            ],
+        }
+
+        prepared = _preparar_relatorio(data)
+        self.assertEqual(len(prepared["registros_pncp"]), 4)
+        self.assertEqual(prepared["registros_pncp"][0]["portal_status"], "nao_encontrado")
+        self.assertEqual(
+            prepared["registros_pncp"][1]["itens_portal"][0]["descricao"],
+            "Item compra: 00001 - Areia",
+        )
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            output = Path(temp_dir) / "report.html"
+            gerar_relatorio_html(data, output)
+            html = output.read_text(encoding="utf-8")
+
+        self.assertIn("Registros recebidos da aba Contratos/Empenhos do PNCP", html)
+        self.assertIn("2026NE000042", html)
+        self.assertIn("2026NE000043", html)
+        self.assertIn("2026NE000044", html)
+        self.assertIn("2026NE000045", html)
+        self.assertNotIn("2026NE000999", html)
+
+    def test_pncp_records_section_is_collapsed_and_links_each_record(self):
+        data = {
+            "chaves_integracao": {"cnpj_orgao": "10635424000186"},
+            "quantidade_empenhos_pncp": 2,
+            "empenhos": [
+                {
+                    "numeroContratoEmpenho": "2026NE000042",
+                    "origem": "pncp",
+                    "anoContrato": 2026,
+                    "sequencialContrato": 61,
+                    "orgaoEntidade": {"cnpj": "10635424000186"},
+                    "detalhesPortalTransparencia": {
+                        "status": "ok",
+                        "codigoDocumento": "158379264222026NE000042",
+                        "detalhamento": {"valor": "65,00"},
+                    },
+                },
+                {
+                    "numeroContratoEmpenho": "00095",
+                    "origem": "pncp",
+                    "anoContrato": 2026,
+                    "sequencialContrato": 95,
+                    "detalhesPortalTransparencia": {"status": "nao_consultado"},
+                },
+            ],
+        }
+
+        prepared = _preparar_relatorio(data)
+        primeiro, segundo = prepared["registros_pncp"]
+        self.assertEqual(
+            primeiro["pncp_url"],
+            "https://pncp.gov.br/app/contratos/10635424000186/2026/61",
+        )
+        self.assertEqual(
+            primeiro["portal_url"],
+            "https://portaldatransparencia.gov.br/despesas/empenho/158379264222026NE000042",
+        )
+        self.assertEqual(
+            segundo["pncp_url"],
+            "https://pncp.gov.br/app/contratos/10635424000186/2026/95",
+        )
+        self.assertIsNone(segundo["portal_url"])
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            output = Path(temp_dir) / "report.html"
+            gerar_relatorio_html(data, output)
+            html = output.read_text(encoding="utf-8")
+
+        self.assertIn('<details class="panel" id="pncp-records-panel" hidden>', html)
+        self.assertNotIn('<section class="panel" id="pncp-records-panel"', html)
+        self.assertNotIn("id=\"pncp-records-panel\" open", html)
+        self.assertIn("<th>Links</th>", html)
 
     @patch("pncp_tracker.portal_transparencia._api_key", return_value="test-key")
     @patch("pncp_tracker.portal_transparencia._http_get")
@@ -898,7 +1172,7 @@ class ConsultarEMapearEmpenhosTests(unittest.TestCase):
             ),
             patch(
                 "pncp_tracker.consultar_e_mapear_empenhos.enriquecer_empenhos_com_detalhes_portal",
-                return_value=([], []),
+                side_effect=lambda empenhos: ([dict(empenho) for empenho in empenhos], []),
             ),
             patch(
                 "pncp_tracker.consultar_e_mapear_empenhos.buscar_empenhos_portal_para_compra",
@@ -931,6 +1205,7 @@ class ConsultarEMapearEmpenhosTests(unittest.TestCase):
                     },
                     "itens": [],
                 },
+                buscar_empenhos_portal=True,
             )
 
         self.assertIn("Contratos.gov.br - identidade da compra e itens", resultado["fontes"])
@@ -1054,6 +1329,120 @@ class ConsultarEMapearEmpenhosTests(unittest.TestCase):
         self.assertEqual(errors, [])
         self.assertEqual(result[0]["detalhesPortalTransparencia"]["status"], "ok")
         supplier_documents.assert_called_once_with("36091140000160", "2026", "158460", fase=1)
+
+    @patch("pncp_tracker.empenho_details.consultar_detalhes_documento_despesa")
+    @patch("pncp_tracker.empenho_details.consultar_documentos_despesa_favorecido")
+    def test_pncp_empenho_gets_portal_items_when_ug_lookup_misses(
+        self, supplier_documents, get_detail
+    ):
+        supplier_documents.side_effect = [
+            [
+                {
+                    "documentoResumido": "2026NE000999",
+                    "documento": "other-document",
+                    "codigoUg": "158460",
+                }
+            ],
+            [
+                {
+                    "documentoResumido": "2026 NE-000129",
+                    "documento": "pncp-document",
+                    "codigoUg": "158460",
+                },
+                {
+                    "documentoResumido": "2026NE000999",
+                    "documento": "other-document",
+                    "codigoUg": "158460",
+                },
+            ],
+        ]
+        get_detail.return_value = {
+            "codigoUg": "158460",
+            "codigoFavorecido": "36091140000160",
+            "itensEmpenho": [
+                {
+                    "descricao": "Item compra: 00001 - Areia",
+                    "valorAtual": "10,00",
+                }
+            ],
+        }
+        empenhos, errors = enriquecer_empenhos_com_detalhes_portal(
+            [
+                {
+                    "numeroContratoEmpenho": "2026NE000129",
+                    "unidadeOrgao": {"codigoUnidade": "158460"},
+                    "niFornecedor": "36091140000160",
+                }
+            ]
+        )
+        purchase = {
+            "itens": [
+                {
+                    "numeroItem": 1,
+                    "descricao": "Areia",
+                    "resultadosHomologados": [
+                        {
+                            "niFornecedor": "36091140000160",
+                            "quantidadeHomologada": 1,
+                            "valorTotalHomologado": 10,
+                        }
+                    ],
+                }
+            ]
+        }
+        mapped = mapear_empenhos_por_item(purchase, empenhos)
+
+        self.assertEqual(errors, [])
+        self.assertEqual(
+            [call.args for call in supplier_documents.call_args_list],
+            [
+                ("36091140000160", "2026", "158460"),
+                ("36091140000160", "2026", None),
+            ],
+        )
+        get_detail.assert_called_once_with("pncp-document")
+        self.assertEqual(empenhos[0]["detalhesPortalTransparencia"]["status"], "ok")
+        self.assertEqual(
+            [linha["numero_empenho"] for linha in mapped[0]["empenhos"]],
+            ["2026NE000129"],
+        )
+
+    @patch("pncp_tracker.empenho_details.consultar_detalhes_documento_despesa")
+    @patch("pncp_tracker.empenho_details.consultar_documentos_despesa_favorecido")
+    def test_blocked_token_stops_targeted_pncp_lookups(
+        self, supplier_documents, get_detail
+    ):
+        def consultar_documentos(fornecedor, _ano, unidade, fase=1):
+            if unidade is None:
+                raise PortalTransparenciaBlockedError("token bloqueado")
+            return []
+
+        supplier_documents.side_effect = consultar_documentos
+        empenhos, errors = enriquecer_empenhos_com_detalhes_portal(
+            [
+                {
+                    "numeroContratoEmpenho": "2026NE000129",
+                    "unidadeOrgao": {"codigoUnidade": "158460"},
+                    "niFornecedor": "36091140000160",
+                },
+                {
+                    "numeroContratoEmpenho": "2026NE000130",
+                    "unidadeOrgao": {"codigoUnidade": "158461"},
+                    "niFornecedor": "12345678000199",
+                },
+            ]
+        )
+
+        self.assertEqual(len(errors), 1)
+        self.assertEqual(
+            sum(call.args[2] is None for call in supplier_documents.call_args_list),
+            1,
+        )
+        get_detail.assert_not_called()
+        self.assertEqual(
+            [empenho["detalhesPortalTransparencia"]["status"] for empenho in empenhos],
+            ["nao_consultado", "nao_consultado"],
+        )
 
     def test_transient_connection_error_is_retried_once(self):
         response = unittest.mock.Mock(status_code=200, text="")
@@ -1417,7 +1806,7 @@ class ConsultarEMapearEmpenhosTests(unittest.TestCase):
         )
 
         self.assertEqual(report["valor_empenhado_mapeado"], 2024.5)
-        self.assertEqual(report["itens"][0]["quantidade_empenhada_estimada"], 5)
+        self.assertEqual(report["itens"][0]["quantidade_empenhada_estimada"], 5.0)
         self.assertEqual(
             report["itens"][0]["resultados"][0]["data_homologacao"],
             "03/02/2026",
@@ -1435,7 +1824,7 @@ class ConsultarEMapearEmpenhosTests(unittest.TestCase):
             "IF CATARINENSE - CAMPUS CAMBORIU",
         )
 
-    def test_report_rounds_estimated_quantity_and_flags_divergence(self):
+    def test_report_keeps_the_fractional_estimated_quantity(self):
         report = _preparar_relatorio(
             {
                 "status": "ok",
@@ -1480,12 +1869,12 @@ class ConsultarEMapearEmpenhosTests(unittest.TestCase):
         )
 
         linhas = report["itens"][0]["empenhos"]
-        self.assertEqual(linhas[0]["quantidade_estimada"], 5)
-        self.assertIsInstance(linhas[0]["quantidade_estimada"], int)
-        self.assertTrue(linhas[0]["quantidade_divergente"])
-        self.assertEqual(linhas[1]["quantidade_estimada"], 2)
-        self.assertFalse(linhas[1]["quantidade_divergente"])
-        self.assertEqual(report["itens"][0]["quantidade_empenhada_estimada"], 7)
+        self.assertAlmostEqual(linhas[0]["quantidade_estimada"], 5.486, places=3)
+        self.assertNotIn("quantidade_divergente", linhas[0])
+        self.assertEqual(linhas[1]["quantidade_estimada"], 2.0)
+        self.assertAlmostEqual(
+            report["itens"][0]["quantidade_empenhada_estimada"], 7.486, places=3
+        )
 
     @patch("pncp_tracker.consultar_e_mapear_empenhos.mapear_empenhos_por_item", return_value=[])
     @patch("pncp_tracker.consultar_e_mapear_empenhos.enriquecer_empenhos_com_detalhes_portal", return_value=([], []))
@@ -1514,6 +1903,7 @@ class ConsultarEMapearEmpenhosTests(unittest.TestCase):
                 },
                 "itens": [],
             },
+            buscar_empenhos_portal=True,
         )
 
         self.assertEqual(result["quantidade_documentos_descartados"], 1)
@@ -1629,6 +2019,7 @@ class ConsultarEMapearEmpenhosTests(unittest.TestCase):
                 },
                 "itens": [],
             },
+            buscar_empenhos_portal=True,
         )
 
         self.assertEqual(result["status"], "parcial")
@@ -1654,6 +2045,7 @@ class ConsultarEMapearEmpenhosTests(unittest.TestCase):
         result = consultar_e_mapear_empenhos(
             "https://pncp.gov.br/app/editais/10635424000186/2025/000272",
             dados_compra=purchase,
+            buscar_empenhos_portal=True,
         )
 
         download.assert_not_called()
@@ -1728,6 +2120,7 @@ class ConsultarEMapearEmpenhosTests(unittest.TestCase):
                 },
                 "itens": [],
             },
+            buscar_empenhos_portal=True,
         )
 
         self.assertEqual(result["quantidade_empenhos"], 3)
@@ -1742,6 +2135,139 @@ class ConsultarEMapearEmpenhosTests(unittest.TestCase):
         self.assertTrue(result["empenhos"][1]["encontrado_tambem_no_portal"])
         self.assertNotIn("encontrado_tambem_no_portal", result["empenhos"][2])
         self.assertEqual(result["empenhos"][2]["origem"], "portal_contrato")
+
+    @patch("pncp_tracker.consultar_e_mapear_empenhos.mapear_empenhos_por_item", return_value=[])
+    @patch("pncp_tracker.consultar_e_mapear_empenhos.enriquecer_empenhos_com_detalhes_portal", return_value=([], []))
+    @patch("pncp_tracker.consultar_e_mapear_empenhos.consultar_contratos_empenhos", return_value=[])
+    @patch("pncp_tracker.consultar_e_mapear_empenhos.buscar_empenhos_portal_para_compra")
+    def test_portal_discovery_is_skipped_unless_requested(
+        self, portal, _contracts, _enrich, _map_items
+    ):
+        mensagens = []
+        result = consultar_e_mapear_empenhos(
+            "https://pncp.gov.br/app/editais/10635424000186/2026/000187",
+            dados_compra={
+                "chaves_integracao": {
+                    "cnpj_orgao": "10635424000186",
+                    "ano_compra": 2026,
+                    "numero_compra": "404",
+                    "numero_controle_pncp": "controle",
+                },
+                "itens": [],
+            },
+            on_progress=mensagens.append,
+        )
+
+        portal.assert_not_called()
+        self.assertFalse(result["busca_portal_realizada"])
+        self.assertEqual(result["quantidade_empenhos_portal"], 0)
+        self.assertEqual(result["empenhos_nao_confirmados"], [])
+        self.assertIn("não executada", result["mensagem"])
+        self.assertNotIn(
+            "Portal da Transparência - descoberta por processo/favorecido", result["fontes"]
+        )
+        self.assertTrue(any("desativada" in mensagem for mensagem in mensagens))
+
+    def test_result_without_portal_search_matches_when_nothing_extra_is_found(self):
+        purchase = {
+            "chaves_integracao": {
+                "cnpj_orgao": "10635424000186",
+                "ano_compra": 2026,
+                "numero_compra": "404",
+                "numero_controle_pncp": "controle",
+            },
+            "itens": [
+                {
+                    "numeroItem": 1,
+                    "descricao": "Parafuso",
+                    "unidadeMedida": "UN",
+                    "resultadosHomologados": [
+                        {
+                            "niFornecedor": "46675900000259",
+                            "quantidadeHomologada": 2,
+                            "valorTotalHomologado": 20,
+                        }
+                    ],
+                }
+            ],
+        }
+        empenhos_pncp = [
+            {
+                "numeroContratoEmpenho": "2026NE000001",
+                "niFornecedor": "46675900000259",
+                "unidadeOrgao": {"codigoUnidade": "158379"},
+            }
+        ]
+
+        def enriquecer(empenhos):
+            detalhados = []
+            for empenho in empenhos:
+                registro = dict(empenho)
+                registro["detalhesPortalTransparencia"] = {
+                    "status": "ok",
+                    "codigoDocumento": "158379264222026NE000001",
+                    "detalhamento": {
+                        "data": "05/11/2026",
+                        "codigoUg": "158379",
+                        "ug": "UG TESTE",
+                        "codigoFavorecido": "46.675.900/0002-59",
+                        "nomeFavorecido": "APL CIENTIFICA LTDA",
+                        "itensEmpenho": [
+                            {
+                                "codigoItemEmpenho": "158379264222026NE000001",
+                                "descricao": "Item compra: 00001 - Parafuso",
+                                "valorAtual": "10,00",
+                                "sequencial": 1,
+                            }
+                        ],
+                    },
+                }
+                detalhados.append(registro)
+            return detalhados, []
+
+        def executar(procurar_no_portal):
+            snapshot = {
+                **purchase,
+                "itens": [dict(item) for item in purchase["itens"]],
+            }
+            with (
+                patch(
+                    "pncp_tracker.consultar_e_mapear_empenhos.consultar_contratos_empenhos",
+                    return_value=[dict(empenho) for empenho in empenhos_pncp],
+                ),
+                patch(
+                    "pncp_tracker.consultar_e_mapear_empenhos.enriquecer_empenhos_com_detalhes_portal",
+                    side_effect=enriquecer,
+                ),
+                patch(
+                    "pncp_tracker.consultar_e_mapear_empenhos.buscar_empenhos_portal_para_compra",
+                    return_value=([], []),
+                ),
+            ):
+                return consultar_e_mapear_empenhos(
+                    "https://pncp.gov.br/app/editais/10635424000186/2026/000187",
+                    dados_compra=snapshot,
+                    buscar_empenhos_portal=procurar_no_portal,
+                )
+
+        sem_portal = executar(False)
+        com_portal = executar(True)
+
+        self.assertFalse(sem_portal["busca_portal_realizada"])
+        self.assertTrue(com_portal["busca_portal_realizada"])
+        for campo in (
+            "quantidade_empenhos",
+            "quantidade_empenhos_pncp",
+            "quantidade_empenhos_portal",
+            "quantidade_empenhos_com_detalhes",
+            "empenhos",
+            "itens_mapeados",
+            "fontes",
+        ):
+            self.assertEqual(sem_portal[campo], com_portal[campo], campo)
+        linhas = sem_portal["itens_mapeados"][0]["empenhos"]
+        self.assertEqual([linha["numero_empenho"] for linha in linhas], ["2026NE000001"])
+        self.assertEqual(linhas[0]["item_despesa"]["valorAtual"], "10,00")
 
     @patch("pncp_tracker.consultar_e_mapear_empenhos.mapear_empenhos_por_item", return_value=[])
     @patch("pncp_tracker.consultar_e_mapear_empenhos.enriquecer_empenhos_com_detalhes_portal", return_value=([], []))

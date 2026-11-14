@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "mensagem": "Registros coletados do PNCP e complementados com o detalhamento e os itens publicados no Portal da Transparência.",
+  "mensagem": "Empenhos encontrados: 16 (16 no PNCP, 0 exclusivos do Portal da Transparência). Detalhamento obtido para 16; 0 documento(s) não localizado(s). 0 empenho(s) de adesão posterior e 0 com origem de órgão indefinida. Situação dos registros: 16 sem alteração. Busca por empenhos não registrados no PNCP não executada.",
   "fontes": [
     "PNCP - aba Contratos/Empenhos",
     "Portal da Transparência - detalhes e itens do empenho"
@@ -14,13 +14,28 @@
     "numero_controle_pncp": "10635424000186-1-000140/2026"
   },
   "objeto": "Eventual aquisição de FERTILIZANTES E DEFENSIVOS AGRÍCOLAS para atender as necessidades do IFC – Campus Abelardo Luz, Campus Araquari, Campus Camboriú, Campus Concórdia, Campus Luzerna, Campus Rio do Sul, Campus Santa Rosa do Sul, Campus Videira",
-  "quantidade_empenhos": 14,
-  "quantidade_empenhos_com_detalhes": 14,
+  "quantidade_empenhos": 16,
+  "quantidade_empenhos_pncp": 16,
+  "quantidade_empenhos_portal": 0,
+  "busca_portal_realizada": false,
+  "situacoes_empenhos": {
+    "normal": 16
+  },
+  "quantidade_empenhos_com_detalhes": 16,
   "quantidade_empenhos_nao_encontrados": 0,
+  "quantidade_empenhos_confirmados": 16,
+  "quantidade_empenhos_adesao": 0,
+  "quantidade_empenhos_indefinidos": 0,
+  "valor_empenhado_adesao": 0,
+  "quantidade_documentos_descartados": 0,
+  "empenhos_nao_confirmados": [],
   "erros_detalhamento": [],
   "erros_resultados_itens": [],
   "empenhos": [
     {
+      "numeroParcelas": 1,
+      "temRemanejamento": false,
+      "receita": false,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -81,24 +96,27 @@
       "processo": "23351.006915/2026-91",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "urlCipi": null,
+      "dataAtualizacaoGlobal": "2026-09-23T11:28:26",
+      "valorGlobal": 23902.74,
+      "identificadorCipi": null,
+      "objetoContrato": "AQUISIÇÃO DE FERTILIZANTES E DEFENSIVOS AGRÍCOLAS, PARA O INSTITUTO FEDERAL CATARINENSE CAMPUS CONCÓRDIA. PE 90149/2026. SOLICITACAO DE EMPENHO 23351.007117/2026-87. SETOR REQUISITANTE: JARDIM/HORTA. SERVIDORES REQUISITANTES: INÉCIO HEINRICHS/OZAIR DA SILVA.",
       "numeroControlePNCP": "10635424000186-2-001443/2026",
-      "receita": false,
-      "numeroParcelas": 1,
-      "temRemanejamento": false,
       "emendaParlamentar": false,
       "nomeFornecedorSubContratado": null,
-      "objetoContrato": "AQUISIÇÃO DE FERTILIZANTES E DEFENSIVOS AGRÍCOLAS, PARA O INSTITUTO FEDERAL CATARINENSE CAMPUS CONCÓRDIA. PE 90149/2026. SOLICITACAO DE EMPENHO 23351.007117/2026-87. SETOR REQUISITANTE: JARDIM/HORTA. SERVIDORES REQUISITANTES: INÉCIO HEINRICHS/OZAIR DA SILVA.",
       "valorInicial": 23902.74,
-      "valorParcela": 23902.74,
-      "valorGlobal": 23902.74,
       "valorAcumulado": null,
-      "dataAtualizacaoGlobal": "2026-09-23T11:28:26",
-      "identificadorCipi": null,
-      "urlCipi": null,
+      "valorParcela": 23902.74,
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000140/2026-000006",
       "numeroControlePncpCompra": "10635424000186-1-000140/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158461264222026NE000501",
@@ -172,9 +190,21 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 23902.74,
+        "valor_pncp": 23902.74,
+        "valor_portal": 23902.74,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
+      "numeroParcelas": 1,
+      "temRemanejamento": false,
+      "receita": false,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -235,24 +265,27 @@
       "processo": "23351.006915/2026-91",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "urlCipi": null,
+      "dataAtualizacaoGlobal": "2026-09-23T11:26:46",
+      "valorGlobal": 1982.2,
+      "identificadorCipi": null,
+      "objetoContrato": "AQUISIÇÃO DE FERTILIZANTES E DEFENSIVOS AGRÍCOLAS, PARA O INSTITUTO FEDERAL CATARINENSE CAMPUS CONCÓRDIA. PE 90149/2026. SOLICITACAO DE EMPENHO 23351.007117/2026-87. SETOR REQUISITANTE: JARDIM/HORTA. SERVIDORES REQUISITANTES: INÉCIO HEINRICHS/OZAIR DA SILVA.",
       "numeroControlePNCP": "10635424000186-2-001438/2026",
-      "receita": false,
-      "numeroParcelas": 1,
-      "temRemanejamento": false,
       "emendaParlamentar": false,
       "nomeFornecedorSubContratado": null,
-      "objetoContrato": "AQUISIÇÃO DE FERTILIZANTES E DEFENSIVOS AGRÍCOLAS, PARA O INSTITUTO FEDERAL CATARINENSE CAMPUS CONCÓRDIA. PE 90149/2026. SOLICITACAO DE EMPENHO 23351.007117/2026-87. SETOR REQUISITANTE: JARDIM/HORTA. SERVIDORES REQUISITANTES: INÉCIO HEINRICHS/OZAIR DA SILVA.",
       "valorInicial": 1982.2,
-      "valorParcela": 1982.2,
-      "valorGlobal": 1982.2,
       "valorAcumulado": null,
-      "dataAtualizacaoGlobal": "2026-09-23T11:26:46",
-      "identificadorCipi": null,
-      "urlCipi": null,
+      "valorParcela": 1982.2,
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000140/2026-000010",
       "numeroControlePncpCompra": "10635424000186-1-000140/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158461264222026NE000499",
@@ -310,9 +343,21 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 1982.2,
+        "valor_pncp": 1982.2,
+        "valor_portal": 1982.2,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
+      "numeroParcelas": 1,
+      "temRemanejamento": false,
+      "receita": false,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -373,24 +418,27 @@
       "processo": "23351.006915/2026-91",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "urlCipi": null,
+      "dataAtualizacaoGlobal": "2026-09-23T11:27:59",
+      "valorGlobal": 19390.0,
+      "identificadorCipi": null,
+      "objetoContrato": "AQUISIÇÃO DE FERTILIZANTES E DEFENSIVOS AGRÍCOLAS, PARA O INSTITUTO FEDERAL CATARINENSE CAMPUS CONCÓRDIA. PE 90149/2026. SOLICITACAO DE EMPENHO 23351.007117/2026-87. SETOR REQUISITANTE: JARDIM/HORTA. SERVIDORES REQUISITANTES: INÉCIO HEINRICHS/OZAIR DA SILVA.",
       "numeroControlePNCP": "10635424000186-2-001440/2026",
-      "receita": false,
-      "numeroParcelas": 1,
-      "temRemanejamento": false,
       "emendaParlamentar": false,
       "nomeFornecedorSubContratado": null,
-      "objetoContrato": "AQUISIÇÃO DE FERTILIZANTES E DEFENSIVOS AGRÍCOLAS, PARA O INSTITUTO FEDERAL CATARINENSE CAMPUS CONCÓRDIA. PE 90149/2026. SOLICITACAO DE EMPENHO 23351.007117/2026-87. SETOR REQUISITANTE: JARDIM/HORTA. SERVIDORES REQUISITANTES: INÉCIO HEINRICHS/OZAIR DA SILVA.",
       "valorInicial": 19390.0,
-      "valorParcela": 19390.0,
-      "valorGlobal": 19390.0,
       "valorAcumulado": null,
-      "dataAtualizacaoGlobal": "2026-09-23T11:27:59",
-      "identificadorCipi": null,
-      "urlCipi": null,
+      "valorParcela": 19390.0,
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000140/2026-000005",
       "numeroControlePncpCompra": "10635424000186-1-000140/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158461264222026NE000500",
@@ -448,9 +496,21 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 19390.0,
+        "valor_pncp": 19390.0,
+        "valor_portal": 19390.0,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
+      "numeroParcelas": 1,
+      "temRemanejamento": false,
+      "receita": false,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -511,24 +571,27 @@
       "processo": "23351.006915/2026-91",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "urlCipi": null,
+      "dataAtualizacaoGlobal": "2026-09-23T11:28:16",
+      "valorGlobal": 399.0,
+      "identificadorCipi": null,
+      "objetoContrato": "AQUISIÇÃO DE FERTILIZANTES E DEFENSIVOS AGRÍCOLAS, PARA O INSTITUTO FEDERAL CATARINENSE CAMPUS CONCÓRDIA. PE 90149/2026. SOLICITACAO DE EMPENHO 23351.007117/2026-87. SETOR REQUISITANTE: JARDIM/HORTA. SERVIDORES REQUISITANTES: INÉCIO HEINRICHS/OZAIR DA SILVA.",
       "numeroControlePNCP": "10635424000186-2-001442/2026",
-      "receita": false,
-      "numeroParcelas": 1,
-      "temRemanejamento": false,
       "emendaParlamentar": false,
       "nomeFornecedorSubContratado": null,
-      "objetoContrato": "AQUISIÇÃO DE FERTILIZANTES E DEFENSIVOS AGRÍCOLAS, PARA O INSTITUTO FEDERAL CATARINENSE CAMPUS CONCÓRDIA. PE 90149/2026. SOLICITACAO DE EMPENHO 23351.007117/2026-87. SETOR REQUISITANTE: JARDIM/HORTA. SERVIDORES REQUISITANTES: INÉCIO HEINRICHS/OZAIR DA SILVA.",
       "valorInicial": 399.0,
-      "valorParcela": 399.0,
-      "valorGlobal": 399.0,
       "valorAcumulado": null,
-      "dataAtualizacaoGlobal": "2026-09-23T11:28:16",
-      "identificadorCipi": null,
-      "urlCipi": null,
+      "valorParcela": 399.0,
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000140/2026-000011",
       "numeroControlePncpCompra": "10635424000186-1-000140/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158461264222026NE000502",
@@ -578,9 +641,21 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 399.0,
+        "valor_pncp": 399.0,
+        "valor_portal": 399.0,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
+      "numeroParcelas": 1,
+      "temRemanejamento": false,
+      "receita": false,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -641,24 +716,27 @@
       "processo": "23354.003859/2026-11",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "urlCipi": null,
+      "dataAtualizacaoGlobal": "2026-09-25T15:38:44",
+      "valorGlobal": 10304.0,
+      "identificadorCipi": null,
+      "objetoContrato": "EMPENHO PARA AQUISIÇÃO DE UREIA CONFORME ADESÃO INTERNA Nº 124/2026 AO PREGÃO Nº 90149/2026 (IFC CAMBORIÚ) PARA ATENDER AS NECESSIDADES DO IFC CAMPUS SANTA ROSA DO SUL",
       "numeroControlePNCP": "10635424000186-2-001467/2026",
-      "receita": false,
-      "numeroParcelas": 1,
-      "temRemanejamento": false,
       "emendaParlamentar": false,
       "nomeFornecedorSubContratado": null,
-      "objetoContrato": "EMPENHO PARA AQUISIÇÃO DE UREIA CONFORME ADESÃO INTERNA Nº 124/2026 AO PREGÃO Nº 90149/2026 (IFC CAMBORIÚ) PARA ATENDER AS NECESSIDADES DO IFC CAMPUS SANTA ROSA DO SUL",
       "valorInicial": 10304.0,
-      "valorParcela": 10304.0,
-      "valorGlobal": 10304.0,
       "valorAcumulado": null,
-      "dataAtualizacaoGlobal": "2026-09-25T15:38:44",
-      "identificadorCipi": null,
-      "urlCipi": null,
+      "valorParcela": 10304.0,
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000140/2026-000005",
       "numeroControlePncpCompra": "10635424000186-1-000140/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158462264222026NE000296",
@@ -708,9 +786,21 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 10304.0,
+        "valor_pncp": 10304.0,
+        "valor_portal": 10304.0,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
+      "numeroParcelas": 1,
+      "temRemanejamento": false,
+      "receita": false,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -771,24 +861,27 @@
       "processo": "23352.003623/2026-97",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "urlCipi": null,
+      "dataAtualizacaoGlobal": "2026-10-05T14:07:18",
+      "valorGlobal": 1402.6,
+      "identificadorCipi": null,
+      "objetoContrato": "AQUISICAO DE INSUMOS AGRICOLAS PARA ATENDER AS NECESSIDADES DO IFC CAMPUS VIDEIRA, CONFORME MEMORANDO ELETRONICO N. 14/2026 - DG/VID E DESPACHO N. 355/2026 DAP/VID (ADESAO INTERNA 133/2026 - PE 90149/2026 UASG 158125 - PROCESSO DE ORIGEM N. 23350.002059/2026-13).",
       "numeroControlePNCP": "10635424000186-2-001497/2026",
-      "receita": false,
-      "numeroParcelas": 1,
-      "temRemanejamento": false,
       "emendaParlamentar": false,
       "nomeFornecedorSubContratado": null,
-      "objetoContrato": "AQUISICAO DE INSUMOS AGRICOLAS PARA ATENDER AS NECESSIDADES DO IFC CAMPUS VIDEIRA, CONFORME MEMORANDO ELETRONICO N. 14/2026 - DG/VID E DESPACHO N. 355/2026 DAP/VID (ADESAO INTERNA 133/2026 - PE 90149/2026 UASG 158125 - PROCESSO DE ORIGEM N. 23350.002059/2026-13).",
       "valorInicial": 1402.6,
-      "valorParcela": 1402.6,
-      "valorGlobal": 1402.6,
       "valorAcumulado": null,
-      "dataAtualizacaoGlobal": "2026-10-05T14:07:18",
-      "identificadorCipi": null,
-      "urlCipi": null,
+      "valorParcela": 1402.6,
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000140/2026-000005",
       "numeroControlePncpCompra": "10635424000186-1-000140/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158379264222026NE000211",
@@ -854,9 +947,21 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 1402.6,
+        "valor_pncp": 1402.6,
+        "valor_portal": 1402.6,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
+      "numeroParcelas": 1,
+      "temRemanejamento": false,
+      "receita": false,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -917,24 +1022,27 @@
       "processo": "23352.003623/2026-97",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "urlCipi": null,
+      "dataAtualizacaoGlobal": "2026-10-05T14:22:34",
+      "valorGlobal": 800.0,
+      "identificadorCipi": null,
+      "objetoContrato": "AQUISICAO DE INSUMOS AGRICOLAS PARA ATENDER AS NECESSIDADES DO IFC CAMPUS VIDEIRA, CONFORME MEMORANDO ELETRONICO N. 14/2026 - DG/VID E DESPACHO N. 355/2026 DAP/VID (ADESAO INTERNA 133/2026 - PE 90149/2026 UASG 158125 - PROCESSO DE ORIGEM N. 23350.002059/2026-13).",
       "numeroControlePNCP": "10635424000186-2-001499/2026",
-      "receita": false,
-      "numeroParcelas": 1,
-      "temRemanejamento": false,
       "emendaParlamentar": false,
       "nomeFornecedorSubContratado": null,
-      "objetoContrato": "AQUISICAO DE INSUMOS AGRICOLAS PARA ATENDER AS NECESSIDADES DO IFC CAMPUS VIDEIRA, CONFORME MEMORANDO ELETRONICO N. 14/2026 - DG/VID E DESPACHO N. 355/2026 DAP/VID (ADESAO INTERNA 133/2026 - PE 90149/2026 UASG 158125 - PROCESSO DE ORIGEM N. 23350.002059/2026-13).",
       "valorInicial": 800.0,
-      "valorParcela": 800.0,
-      "valorGlobal": 800.0,
       "valorAcumulado": null,
-      "dataAtualizacaoGlobal": "2026-10-05T14:22:34",
-      "identificadorCipi": null,
-      "urlCipi": null,
+      "valorParcela": 800.0,
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000140/2026-000007",
       "numeroControlePncpCompra": "10635424000186-1-000140/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158379264222026NE000209",
@@ -992,9 +1100,21 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 800.0,
+        "valor_pncp": 800.0,
+        "valor_portal": 800.0,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
+      "numeroParcelas": 1,
+      "temRemanejamento": false,
+      "receita": false,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -1055,24 +1175,27 @@
       "processo": "23352.003623/2026-97",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "urlCipi": null,
+      "dataAtualizacaoGlobal": "2026-10-09T10:42:21",
+      "valorGlobal": 443.5,
+      "identificadorCipi": null,
+      "objetoContrato": "AQUISICAO DE INSUMOS AGRICOLAS PARA ATENDER AS NECESSIDADES DO IFC CAMPUS VIDEIRA, CONFORME MEMORANDO ELETRONICO N. 14/2026 - DG/VID E DESPACHO N. 355/2026 DAP/VID (ADESAO INTERNA 133/2026 - PE 90149/2026 UASG 158125 - PROCESSO DE ORIGEM N. 23350.002059/2026-13).",
       "numeroControlePNCP": "10635424000186-2-001525/2026",
-      "receita": false,
-      "numeroParcelas": 1,
-      "temRemanejamento": false,
       "emendaParlamentar": false,
       "nomeFornecedorSubContratado": null,
-      "objetoContrato": "AQUISICAO DE INSUMOS AGRICOLAS PARA ATENDER AS NECESSIDADES DO IFC CAMPUS VIDEIRA, CONFORME MEMORANDO ELETRONICO N. 14/2026 - DG/VID E DESPACHO N. 355/2026 DAP/VID (ADESAO INTERNA 133/2026 - PE 90149/2026 UASG 158125 - PROCESSO DE ORIGEM N. 23350.002059/2026-13).",
       "valorInicial": 443.5,
-      "valorParcela": 443.5,
-      "valorGlobal": 443.5,
       "valorAcumulado": null,
-      "dataAtualizacaoGlobal": "2026-10-09T10:42:21",
-      "identificadorCipi": null,
-      "urlCipi": null,
+      "valorParcela": 443.5,
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000140/2026-000003",
       "numeroControlePncpCompra": "10635424000186-1-000140/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158379264222026NE000208",
@@ -1130,9 +1253,21 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 443.5,
+        "valor_pncp": 443.5,
+        "valor_portal": 443.5,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
+      "numeroParcelas": 1,
+      "temRemanejamento": false,
+      "receita": false,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -1193,24 +1328,27 @@
       "processo": "23354.003859/2026-11",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "urlCipi": null,
+      "dataAtualizacaoGlobal": "2026-10-06T14:12:08",
+      "valorGlobal": 855.35,
+      "identificadorCipi": null,
+      "objetoContrato": "EMPENHO PARA AQUISIÇÃO DE HERBICIDA CONFORME ADESÃO INTERNA Nº 124/2026 AO PREGÃO Nº 90149/2026 (IFC CAMBORIÚ) PARA ATENDER AS NECESSIDADES DO IFC CAMPUS SANTA ROSA DO SUL",
       "numeroControlePNCP": "10635424000186-2-001506/2026",
-      "receita": false,
-      "numeroParcelas": 1,
-      "temRemanejamento": false,
       "emendaParlamentar": false,
       "nomeFornecedorSubContratado": null,
-      "objetoContrato": "EMPENHO PARA AQUISIÇÃO DE HERBICIDA CONFORME ADESÃO INTERNA Nº 124/2026 AO PREGÃO Nº 90149/2026 (IFC CAMBORIÚ) PARA ATENDER AS NECESSIDADES DO IFC CAMPUS SANTA ROSA DO SUL",
       "valorInicial": 855.35,
-      "valorParcela": 855.35,
-      "valorGlobal": 855.35,
       "valorAcumulado": null,
-      "dataAtualizacaoGlobal": "2026-10-06T14:12:08",
-      "identificadorCipi": null,
-      "urlCipi": null,
+      "valorParcela": 855.35,
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000140/2026-000008",
       "numeroControlePncpCompra": "10635424000186-1-000140/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158462264222026NE000298",
@@ -1260,9 +1398,21 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 855.35,
+        "valor_pncp": 855.35,
+        "valor_portal": 855.35,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
+      "numeroParcelas": 1,
+      "temRemanejamento": false,
+      "receita": false,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -1323,24 +1473,27 @@
       "processo": "23352.003623/2026-97",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "urlCipi": null,
+      "dataAtualizacaoGlobal": "2026-10-09T11:07:13",
+      "valorGlobal": 107.5,
+      "identificadorCipi": null,
+      "objetoContrato": "AQUISICAO DE INSUMOS AGRICOLAS PARA ATENDER AS NECESSIDADES DO IFC CAMPUS VIDEIRA, CONFORME MEMORANDO ELETRONICO N. 39/2026 - CIS/VID E DESPACHO N. 355/2026 DAP/VID (ADESAO INTERNA 133/2026 - PE 90149/2026 UASG 158125 - PROCESSO DE ORIGEM N. 23350.002059/2026-13).",
       "numeroControlePNCP": "10635424000186-2-001526/2026",
-      "receita": false,
-      "numeroParcelas": 1,
-      "temRemanejamento": false,
       "emendaParlamentar": false,
       "nomeFornecedorSubContratado": null,
-      "objetoContrato": "AQUISICAO DE INSUMOS AGRICOLAS PARA ATENDER AS NECESSIDADES DO IFC CAMPUS VIDEIRA, CONFORME MEMORANDO ELETRONICO N. 39/2026 - CIS/VID E DESPACHO N. 355/2026 DAP/VID (ADESAO INTERNA 133/2026 - PE 90149/2026 UASG 158125 - PROCESSO DE ORIGEM N. 23350.002059/2026-13).",
       "valorInicial": 107.5,
-      "valorParcela": 107.5,
-      "valorGlobal": 107.5,
       "valorAcumulado": null,
-      "dataAtualizacaoGlobal": "2026-10-09T11:07:13",
-      "identificadorCipi": null,
-      "urlCipi": null,
+      "valorParcela": 107.5,
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000140/2026-000003",
       "numeroControlePncpCompra": "10635424000186-1-000140/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158379264222026NE000205",
@@ -1390,9 +1543,21 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 107.5,
+        "valor_pncp": 107.5,
+        "valor_portal": 107.5,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
+      "numeroParcelas": 1,
+      "temRemanejamento": false,
+      "receita": false,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -1453,24 +1618,27 @@
       "processo": "23352.003623/2026-97",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "urlCipi": null,
+      "dataAtualizacaoGlobal": "2026-10-19T11:24:43",
+      "valorGlobal": 7216.3,
+      "identificadorCipi": null,
+      "objetoContrato": "AQUISICAO DE INSUMOS AGRICOLAS PARA ATENDER AS NECESSIDADES DO IFC CAMPUS VIDEIRA, CONFORME MEMORANDO ELETRONICO N. 14/2026 - DG/VID E DESPACHO N. 355/2026 DAP/VID (ADESAO INTERNA 133/2026 - PE 90149/2026 UASG 158125 - PROCESSO DE ORIGEM N. 23350.002059/2026-13).",
       "numeroControlePNCP": "10635424000186-2-001571/2026",
-      "receita": false,
-      "numeroParcelas": 1,
-      "temRemanejamento": false,
       "emendaParlamentar": false,
       "nomeFornecedorSubContratado": null,
-      "objetoContrato": "AQUISICAO DE INSUMOS AGRICOLAS PARA ATENDER AS NECESSIDADES DO IFC CAMPUS VIDEIRA, CONFORME MEMORANDO ELETRONICO N. 14/2026 - DG/VID E DESPACHO N. 355/2026 DAP/VID (ADESAO INTERNA 133/2026 - PE 90149/2026 UASG 158125 - PROCESSO DE ORIGEM N. 23350.002059/2026-13).",
       "valorInicial": 7216.3,
-      "valorParcela": 7216.3,
-      "valorGlobal": 7216.3,
       "valorAcumulado": null,
-      "dataAtualizacaoGlobal": "2026-10-19T11:24:43",
-      "identificadorCipi": null,
-      "urlCipi": null,
+      "valorParcela": 7216.3,
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000140/2026-000010",
       "numeroControlePncpCompra": "10635424000186-1-000140/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158379264222026NE000212",
@@ -1536,9 +1704,21 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 7216.3,
+        "valor_pncp": 7216.3,
+        "valor_portal": 7216.3,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
+      "numeroParcelas": 1,
+      "temRemanejamento": false,
+      "receita": false,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -1599,24 +1779,27 @@
       "processo": "23354.003859/2026-11",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "urlCipi": null,
+      "dataAtualizacaoGlobal": "2026-10-26T14:19:50",
+      "valorGlobal": 4097.0,
+      "identificadorCipi": null,
+      "objetoContrato": "EMPENHO PARA AQUISIÇÃO DE ADUBOS CONFORME ADESÃO INTERNA Nº 124/2026 AO PREGÃO Nº 90149/2026 (IFC CAMBORIÚ) PARA ATENDER AS NECESSIDADES DO IFC CAMPUS SANTA ROSA DO SUL",
       "numeroControlePNCP": "10635424000186-2-001602/2026",
-      "receita": false,
-      "numeroParcelas": 1,
-      "temRemanejamento": false,
       "emendaParlamentar": false,
       "nomeFornecedorSubContratado": null,
-      "objetoContrato": "EMPENHO PARA AQUISIÇÃO DE ADUBOS CONFORME ADESÃO INTERNA Nº 124/2026 AO PREGÃO Nº 90149/2026 (IFC CAMBORIÚ) PARA ATENDER AS NECESSIDADES DO IFC CAMPUS SANTA ROSA DO SUL",
       "valorInicial": 4097.0,
-      "valorParcela": 4097.0,
-      "valorGlobal": 4097.0,
       "valorAcumulado": null,
-      "dataAtualizacaoGlobal": "2026-10-26T14:19:50",
-      "identificadorCipi": null,
-      "urlCipi": null,
+      "valorParcela": 4097.0,
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000140/2026-000006",
       "numeroControlePncpCompra": "10635424000186-1-000140/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158462264222026NE000295",
@@ -1674,9 +1857,21 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 4097.0,
+        "valor_pncp": 4097.0,
+        "valor_portal": 4097.0,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
+      "numeroParcelas": 1,
+      "temRemanejamento": false,
+      "receita": false,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -1737,24 +1932,27 @@
       "processo": "23354.003859/2026-11",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "urlCipi": null,
+      "dataAtualizacaoGlobal": "2026-10-26T14:39:37",
+      "valorGlobal": 4046.0,
+      "identificadorCipi": null,
+      "objetoContrato": "EMPENHO PARA AQUISIÇÃO DE DEFENSIVOS AGRÍCOLAS CONFORME ADESÃO INTERNA Nº 124/2026 AO PREGÃO Nº 90149/2026 (IFC CAMBORIÚ) PARA ATENDER AS NECESSIDADES DO IFC CAMPUS SANTA ROSA DO SUL",
       "numeroControlePNCP": "10635424000186-2-001604/2026",
-      "receita": false,
-      "numeroParcelas": 1,
-      "temRemanejamento": false,
       "emendaParlamentar": false,
       "nomeFornecedorSubContratado": null,
-      "objetoContrato": "EMPENHO PARA AQUISIÇÃO DE DEFENSIVOS AGRÍCOLAS CONFORME ADESÃO INTERNA Nº 124/2026 AO PREGÃO Nº 90149/2026 (IFC CAMBORIÚ) PARA ATENDER AS NECESSIDADES DO IFC CAMPUS SANTA ROSA DO SUL",
       "valorInicial": 4046.0,
-      "valorParcela": 4046.0,
-      "valorGlobal": 4046.0,
       "valorAcumulado": null,
-      "dataAtualizacaoGlobal": "2026-10-26T14:39:37",
-      "identificadorCipi": null,
-      "urlCipi": null,
+      "valorParcela": 4046.0,
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000140/2026-000011",
       "numeroControlePncpCompra": "10635424000186-1-000140/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158462264222026NE000297",
@@ -1804,9 +2002,21 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 4046.0,
+        "valor_pncp": 4046.0,
+        "valor_portal": 4046.0,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
+      "numeroParcelas": 1,
+      "temRemanejamento": false,
+      "receita": false,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -1867,24 +2077,27 @@
       "processo": "23352.003623/2026-97",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "urlCipi": null,
+      "dataAtualizacaoGlobal": "2026-10-27T08:54:29",
+      "valorGlobal": 1073.4,
+      "identificadorCipi": null,
+      "objetoContrato": "AQUISICAO DE INSUMOS AGRICOLAS PARA ATENDER AS NECESSIDADES DO IFC CAMPUS VIDEIRA, CONFORME MEMORANDO ELETRONICO N. 14/2026 - DG/VID E DESPACHO N. 355/2026 DAP/VID (ADESAO INTERNA 133/2026 - PE 90149/2026 UASG 158125 - PROCESSO DE ORIGEM N. 23350.002059/2026-13).",
       "numeroControlePNCP": "10635424000186-2-001607/2026",
-      "receita": false,
-      "numeroParcelas": 1,
-      "temRemanejamento": false,
       "emendaParlamentar": false,
       "nomeFornecedorSubContratado": null,
-      "objetoContrato": "AQUISICAO DE INSUMOS AGRICOLAS PARA ATENDER AS NECESSIDADES DO IFC CAMPUS VIDEIRA, CONFORME MEMORANDO ELETRONICO N. 14/2026 - DG/VID E DESPACHO N. 355/2026 DAP/VID (ADESAO INTERNA 133/2026 - PE 90149/2026 UASG 158125 - PROCESSO DE ORIGEM N. 23350.002059/2026-13).",
       "valorInicial": 1073.4,
-      "valorParcela": 1073.4,
-      "valorGlobal": 1073.4,
       "valorAcumulado": null,
-      "dataAtualizacaoGlobal": "2026-10-27T08:54:29",
-      "identificadorCipi": null,
-      "urlCipi": null,
+      "valorParcela": 1073.4,
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000140/2026-000006",
       "numeroControlePncpCompra": "10635424000186-1-000140/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158379264222026NE000214",
@@ -1942,6 +2155,329 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 1073.4,
+        "valor_pncp": 1073.4,
+        "valor_portal": 1073.4,
+        "diferenca": 0.0,
+        "retificacoes": 0
+      }
+    },
+    {
+      "numeroParcelas": 1,
+      "temRemanejamento": false,
+      "receita": false,
+      "anoContrato": 2026,
+      "tipoContrato": {
+        "id": 7,
+        "nome": "Empenho",
+        "descricao": "Ato emanado de autoridade competente que cria para o Estado obrigação de pagamento pendente ou não de condição futura, podendo substituir o termo de contrato em hipóteses específicas previstos em lei.",
+        "statusAtivo": true
+      },
+      "numeroContratoEmpenho": "2026NE000294",
+      "niFornecedor": "18694818000117",
+      "niFornecedorSubContratado": null,
+      "orgaoEntidade": {
+        "cnpj": "10635424000186",
+        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE",
+        "esferaId": "F",
+        "poderId": "E"
+      },
+      "dataAssinatura": "2026-09-10",
+      "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-09-10",
+      "dataAtualizacao": "2026-11-13T13:28:33",
+      "tipoPessoa": "PJ",
+      "categoriaProcesso": {
+        "id": 2,
+        "nome": "Compras"
+      },
+      "nomeRazaoSocialFornecedor": "VGD DISTRIBUIDORA LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "dataPublicacaoPncp": "2026-11-13T13:22:45",
+      "unidadeOrgao": {
+        "codigoUnidade": "158462",
+        "nomeUnidade": "INST.FED.CATARINENSE/CAMPUS SANTA ROSA SUL",
+        "municipioNome": "Santa Rosa do Sul",
+        "codigoIbge": "4215653",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "unidadeSubRogada": null,
+      "informacaoComplementar": null,
+      "sequencialContrato": 1686,
+      "processo": "23354.003859/2026-11",
+      "tipoPessoaSubContratada": null,
+      "numeroRetificacao": 0,
+      "urlCipi": null,
+      "dataAtualizacaoGlobal": "2026-11-13T13:28:33",
+      "valorGlobal": 10245.0,
+      "identificadorCipi": null,
+      "objetoContrato": "EMPENHO PARA AQUISIÇÃO DE ADUBOS CONFORME ADESÃO INTERNA Nº 124/2026 AO PREGÃO Nº 90149/2026 (IFC CAMBORIÚ) PARA ATENDER AS NECESSIDADES DO IFC CAMPUS SANTA ROSA DO SUL",
+      "numeroControlePNCP": "10635424000186-2-001686/2026",
+      "emendaParlamentar": false,
+      "nomeFornecedorSubContratado": null,
+      "valorInicial": 10245.0,
+      "valorAcumulado": null,
+      "valorParcela": 10245.0,
+      "usuarioNome": "Contratos.gov.br",
+      "codigoPaisFornecedor": null,
+      "numeroControlePncpAta": "10635424000186-1-000140/2026-000009",
+      "numeroControlePncpCompra": "10635424000186-1-000140/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
+      "detalhesPortalTransparencia": {
+        "status": "ok",
+        "codigoDocumento": "158462264222026NE000294",
+        "detalhamento": {
+          "data": "10/09/2026",
+          "documento": "158462264222026NE000294",
+          "documentoResumido": "2026NE000294",
+          "observacao": "EMPENHO PARA AQUISICAO DE ADUBOS CONFORME ADESAO INTERNA Nº 124/2026 AO PREGAO Nº 90149/2026 (IFC CAMBORIU) PARA ATENDER AS NECESSIDADES DO IFC CAMPUS SANTA ROSA DO SUL",
+          "funcao": "12 - Educação",
+          "subfuncao": "363 - Ensino profissional",
+          "programa": "5112 - EDUCACAO PROFISSIONAL E TECNOLOGICA QUE TRANSFORMA",
+          "acao": "20RL - FUNCIONAMENTO DAS INSTITUICOES DA REDE FEDERAL DE EDUCACAO PROFISSIONAL, CIENTIFICA E TECNOLOGICA",
+          "subTitulo": "20RL0042 - FUNCIONAMENTO DAS INSTITUICOES DA RED - NO ESTADO DE SANTA C",
+          "localizadorGasto": "0042 - FUNCIONAMENTO DAS INSTITUICOES DA RED - NO ESTADO DE SANTA C",
+          "fase": "Empenho",
+          "especie": "Não se aplica",
+          "favorecido": "18.694.818/0001-17 - VGD DISTRIBUIDORA LTDA",
+          "codigoFavorecido": "18.694.818/0001-17",
+          "nomeFavorecido": "VGD DISTRIBUIDORA LTDA",
+          "ufFavorecido": "SC",
+          "valor": "10.245,00",
+          "codigoUg": "158462",
+          "ug": "IF CATARINENSE - CAMPUS SANTA ROSA DO SUL",
+          "codigoUo": "26422",
+          "uo": "INST.FED.DE EDUC.,CIENC.E TEC.CATARINENSE",
+          "codigoOrgao": "26422",
+          "orgao": "Instituto Federal de Educação, Ciência e Tecnologia Catarinense",
+          "codigoOrgaoSuperior": "26000",
+          "orgaoSuperior": "Ministério da Educação",
+          "categoria": "3 - DESPESAS CORRENTES",
+          "grupo": "3 - Outras Despesas Correntes",
+          "elemento": "30 - Material de Consumo",
+          "modalidade": "90 - Aplicações Diretas",
+          "numeroProcesso": "23354.003859/2026-11",
+          "planoOrcamentario": "0000 - FUNCIONAMENTO DAS INSTITUICOES DA REDE FEDERAL DE EDUCACAO PROFISSIONAL, CIENTIFICA E TECNOLOGICA - DESPESAS DIVERSAS",
+          "autor": "0000",
+          "favorecidoIntermediario": false,
+          "favorecidoListaFaturas": false,
+          "itensEmpenho": [
+            {
+              "codigoItemEmpenho": "158462264222026NE000294",
+              "descricao": "Item compra: 00003 - ADUBO QUIMICO, ASPECTO FISICO PO/GRANULADO, COR BRANCA, COMPOSICAO BASICA 1 NPK (08.28.18) + 5% S",
+              "codigoSubelemento": "31",
+              "descricaoSubelemento": "SEMENTES, MUDAS DE PLANTAS E INSUMOS",
+              "valorAtual": "10.245,00",
+              "sequencial": 1
+            }
+          ]
+        }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 10245.0,
+        "valor_pncp": 10245.0,
+        "valor_portal": 10245.0,
+        "diferenca": 0.0,
+        "retificacoes": 0
+      }
+    },
+    {
+      "numeroParcelas": 1,
+      "temRemanejamento": false,
+      "receita": false,
+      "anoContrato": 2026,
+      "tipoContrato": {
+        "id": 7,
+        "nome": "Empenho",
+        "descricao": "Ato emanado de autoridade competente que cria para o Estado obrigação de pagamento pendente ou não de condição futura, podendo substituir o termo de contrato em hipóteses específicas previstos em lei.",
+        "statusAtivo": true
+      },
+      "numeroContratoEmpenho": "2026NE000213",
+      "niFornecedor": "18694818000117",
+      "niFornecedorSubContratado": null,
+      "orgaoEntidade": {
+        "cnpj": "10635424000186",
+        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE",
+        "esferaId": "F",
+        "poderId": "E"
+      },
+      "dataAssinatura": "2026-09-23",
+      "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-09-23",
+      "dataAtualizacao": "2026-11-13T19:29:45",
+      "tipoPessoa": "PJ",
+      "categoriaProcesso": {
+        "id": 2,
+        "nome": "Compras"
+      },
+      "nomeRazaoSocialFornecedor": "VGD DISTRIBUIDORA LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "dataPublicacaoPncp": "2026-11-13T19:23:50",
+      "unidadeOrgao": {
+        "codigoUnidade": "158379",
+        "nomeUnidade": "INST.FED.CATARINENSE/CAMPUS VIDEIRA",
+        "municipioNome": "Videira",
+        "codigoIbge": "4219309",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
+      "unidadeSubRogada": null,
+      "informacaoComplementar": null,
+      "sequencialContrato": 1689,
+      "processo": "23352.003623/2026-97",
+      "tipoPessoaSubContratada": null,
+      "numeroRetificacao": 0,
+      "urlCipi": null,
+      "dataAtualizacaoGlobal": "2026-11-13T19:29:45",
+      "valorGlobal": 2701.5,
+      "identificadorCipi": null,
+      "objetoContrato": "AQUISICAO DE INSUMOS AGRICOLAS PARA ATENDER AS NECESSIDADES DO IFC CAMPUS VIDEIRA, CONFORME MEMORANDO ELETRONICO N. 14/2026 - DG/VID E DESPACHO N. 355/2026 DAP/VID (ADESAO INTERNA 133/2026 - PE 90149/2026 UASG 158125 - PROCESSO DE ORIGEM N. 23350.002059/2026-13).",
+      "numeroControlePNCP": "10635424000186-2-001689/2026",
+      "emendaParlamentar": false,
+      "nomeFornecedorSubContratado": null,
+      "valorInicial": 2701.5,
+      "valorAcumulado": null,
+      "valorParcela": 2701.5,
+      "usuarioNome": "Contratos.gov.br",
+      "codigoPaisFornecedor": null,
+      "numeroControlePncpAta": "10635424000186-1-000140/2026-000009",
+      "numeroControlePncpCompra": "10635424000186-1-000140/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
+      "detalhesPortalTransparencia": {
+        "status": "ok",
+        "codigoDocumento": "158379264222026NE000213",
+        "detalhamento": {
+          "data": "23/09/2026",
+          "documento": "158379264222026NE000213",
+          "documentoResumido": "2026NE000213",
+          "observacao": "AQUISICAO DE INSUMOS AGRICOLAS PARA ATENDER AS NECESSIDADES DO IFC CAMPUS VIDEIRA, CONFORME MEMORANDO ELETRONICO N. 14/2026 - DG/VID E DESPACHO N. 355/2026 DAP/VID (ADESAO INTERNA 133/2026 - PE 90149/2026 UASG 158125 - PROCESSO DE ORIGEM N. 23350.002059/2026-13).",
+          "funcao": "12 - Educação",
+          "subfuncao": "363 - Ensino profissional",
+          "programa": "5112 - EDUCACAO PROFISSIONAL E TECNOLOGICA QUE TRANSFORMA",
+          "acao": "20RL - FUNCIONAMENTO DAS INSTITUICOES DA REDE FEDERAL DE EDUCACAO PROFISSIONAL, CIENTIFICA E TECNOLOGICA",
+          "subTitulo": "20RL0042 - FUNCIONAMENTO DAS INSTITUICOES DA RED - NO ESTADO DE SANTA C",
+          "localizadorGasto": "0042 - FUNCIONAMENTO DAS INSTITUICOES DA RED - NO ESTADO DE SANTA C",
+          "fase": "Empenho",
+          "especie": "Não se aplica",
+          "favorecido": "18.694.818/0001-17 - VGD DISTRIBUIDORA LTDA",
+          "codigoFavorecido": "18.694.818/0001-17",
+          "nomeFavorecido": "VGD DISTRIBUIDORA LTDA",
+          "ufFavorecido": "SC",
+          "valor": "2.701,50",
+          "codigoUg": "158379",
+          "ug": "IF CATARINENSE - CAMPUS VIDEIRA",
+          "codigoUo": "26422",
+          "uo": "INST.FED.DE EDUC.,CIENC.E TEC.CATARINENSE",
+          "codigoOrgao": "26422",
+          "orgao": "Instituto Federal de Educação, Ciência e Tecnologia Catarinense",
+          "codigoOrgaoSuperior": "26000",
+          "orgaoSuperior": "Ministério da Educação",
+          "categoria": "3 - DESPESAS CORRENTES",
+          "grupo": "3 - Outras Despesas Correntes",
+          "elemento": "30 - Material de Consumo",
+          "modalidade": "90 - Aplicações Diretas",
+          "numeroProcesso": "23352.003623/2026-97",
+          "planoOrcamentario": "0000 - FUNCIONAMENTO DAS INSTITUICOES DA REDE FEDERAL DE EDUCACAO PROFISSIONAL, CIENTIFICA E TECNOLOGICA - DESPESAS DIVERSAS",
+          "autor": "0000",
+          "favorecidoIntermediario": false,
+          "favorecidoListaFaturas": false,
+          "itensEmpenho": [
+            {
+              "codigoItemEmpenho": "158379264222026NE000213",
+              "descricao": "Item compra: 00009 - CALCARIO DOLOMITICO, ASPECTO FISICO PO, COMPOSICAO PRNT MINIMO DE 90%",
+              "codigoSubelemento": "31",
+              "descricaoSubelemento": "SEMENTES, MUDAS DE PLANTAS E INSUMOS",
+              "valorAtual": "189,50",
+              "sequencial": 4
+            },
+            {
+              "codigoItemEmpenho": "158379264222026NE000213",
+              "descricao": "Item compra: 00005 - ADUBO QUIMICO, ASPECTO FISICO GRANULADO, COMPOSICAO BASICA NITRATO DE CALCIO A 15% DE N E 19% DE CA, CARACTERISTICAS ADICIONAIS ENSACADO",
+              "codigoSubelemento": "31",
+              "descricaoSubelemento": "SEMENTES, MUDAS DE PLANTAS E INSUMOS",
+              "valorAtual": "1.229,70",
+              "sequencial": 2
+            },
+            {
+              "codigoItemEmpenho": "158379264222026NE000213",
+              "descricao": "Item compra: 00003 - ADUBO QUIMICO, ASPECTO FISICO PO/GRANULADO, COR BRANCA, COMPOSICAO BASICA 1 NPK (08.28.18) + 5% S",
+              "codigoSubelemento": "31",
+              "descricaoSubelemento": "SEMENTES, MUDAS DE PLANTAS E INSUMOS",
+              "valorAtual": "614,70",
+              "sequencial": 1
+            },
+            {
+              "codigoItemEmpenho": "158379264222026NE000213",
+              "descricao": "Item compra: 00008 - CAL VIVA, MATERIAL OXIDO CALCIO, COR BRANCA, APRESENTACAO PO, APLICACAO CONSTRUCAO EM GERAL",
+              "codigoSubelemento": "31",
+              "descricaoSubelemento": "SEMENTES, MUDAS DE PLANTAS E INSUMOS",
+              "valorAtual": "667,60",
+              "sequencial": 3
+            }
+          ]
+        }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 2701.5,
+        "valor_pncp": 2701.5,
+        "valor_portal": 2701.5,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     }
   ],
@@ -2016,7 +2552,18 @@
             "descricaoSubelemento": "MATERIAL QUIMICO",
             "valorAtual": "13.189,00",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158461264222026NE000501",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000140/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000140/2026-000006"
         },
         {
           "numero_empenho": "2026NE000295",
@@ -2033,7 +2580,18 @@
             "descricaoSubelemento": "SEMENTES, MUDAS DE PLANTAS E INSUMOS",
             "valorAtual": "2.398,00",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158462264222026NE000295",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000140/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000140/2026-000006"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -2084,13 +2642,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -2144,22 +2702,79 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
       ],
-      "empenhos": [],
+      "empenhos": [
+        {
+          "numero_empenho": "2026NE000294",
+          "data_emissao": "10/09/2026",
+          "valor_empenhado": "10.245,00",
+          "unidade_gestora_codigo": "158462",
+          "unidade_gestora_nome": "IF CATARINENSE - CAMPUS SANTA ROSA DO SUL",
+          "fornecedor_cnpj": "18694818000117",
+          "nome_fornecedor": "VGD DISTRIBUIDORA LTDA",
+          "item_despesa": {
+            "codigoItemEmpenho": "158462264222026NE000294",
+            "descricao": "Item compra: 00003 - ADUBO QUIMICO, ASPECTO FISICO PO/GRANULADO, COR BRANCA, COMPOSICAO BASICA 1 NPK (08.28.18) + 5% S",
+            "codigoSubelemento": "31",
+            "descricaoSubelemento": "SEMENTES, MUDAS DE PLANTAS E INSUMOS",
+            "valorAtual": "10.245,00",
+            "sequencial": 1
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158462264222026NE000294",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000140/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000140/2026-000009"
+        },
+        {
+          "numero_empenho": "2026NE000213",
+          "data_emissao": "23/09/2026",
+          "valor_empenhado": "614,70",
+          "unidade_gestora_codigo": "158379",
+          "unidade_gestora_nome": "IF CATARINENSE - CAMPUS VIDEIRA",
+          "fornecedor_cnpj": "18694818000117",
+          "nome_fornecedor": "VGD DISTRIBUIDORA LTDA",
+          "item_despesa": {
+            "codigoItemEmpenho": "158379264222026NE000213",
+            "descricao": "Item compra: 00003 - ADUBO QUIMICO, ASPECTO FISICO PO/GRANULADO, COR BRANCA, COMPOSICAO BASICA 1 NPK (08.28.18) + 5% S",
+            "codigoSubelemento": "31",
+            "descricaoSubelemento": "SEMENTES, MUDAS DE PLANTAS E INSUMOS",
+            "valorAtual": "614,70",
+            "sequencial": 1
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158379264222026NE000213",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000140/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000140/2026-000009"
+        }
+      ],
       "empenhos_item_sem_fornecedor_compativel": [],
       "empenhos_fornecedor_sem_item_identificado": [],
       "erro_resultados_homologados": null,
-      "status": "sem_empenho_mapeado"
+      "status": "mapeado_por_numero_item"
     },
     {
       "numero_item": 4,
@@ -2204,13 +2819,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -2231,7 +2846,18 @@
             "descricaoSubelemento": "MATERIAL QUIMICO",
             "valorAtual": "8.495,00",
             "sequencial": 2
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158461264222026NE000501",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000140/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000140/2026-000006"
         },
         {
           "numero_empenho": "2026NE000295",
@@ -2248,7 +2874,18 @@
             "descricaoSubelemento": "SEMENTES, MUDAS DE PLANTAS E INSUMOS",
             "valorAtual": "1.699,00",
             "sequencial": 2
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158462264222026NE000295",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000140/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000140/2026-000006"
         },
         {
           "numero_empenho": "2026NE000214",
@@ -2265,7 +2902,18 @@
             "descricaoSubelemento": "SEMENTES, MUDAS DE PLANTAS E INSUMOS",
             "valorAtual": "509,70",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158379264222026NE000214",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000140/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000140/2026-000006"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -2327,11 +2975,40 @@
           "naturezaJuridicaId": "2062"
         }
       ],
-      "empenhos": [],
+      "empenhos": [
+        {
+          "numero_empenho": "2026NE000213",
+          "data_emissao": "23/09/2026",
+          "valor_empenhado": "1.229,70",
+          "unidade_gestora_codigo": "158379",
+          "unidade_gestora_nome": "IF CATARINENSE - CAMPUS VIDEIRA",
+          "fornecedor_cnpj": "18694818000117",
+          "nome_fornecedor": "VGD DISTRIBUIDORA LTDA",
+          "item_despesa": {
+            "codigoItemEmpenho": "158379264222026NE000213",
+            "descricao": "Item compra: 00005 - ADUBO QUIMICO, ASPECTO FISICO GRANULADO, COMPOSICAO BASICA NITRATO DE CALCIO A 15% DE N E 19% DE CA, CARACTERISTICAS ADICIONAIS ENSACADO",
+            "codigoSubelemento": "31",
+            "descricaoSubelemento": "SEMENTES, MUDAS DE PLANTAS E INSUMOS",
+            "valorAtual": "1.229,70",
+            "sequencial": 2
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158379264222026NE000213",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000140/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000140/2026-000009"
+        }
+      ],
       "empenhos_item_sem_fornecedor_compativel": [],
       "empenhos_fornecedor_sem_item_identificado": [],
       "erro_resultados_homologados": null,
-      "status": "sem_empenho_mapeado"
+      "status": "mapeado_por_numero_item"
     },
     {
       "numero_item": 6,
@@ -2403,7 +3080,18 @@
             "descricaoSubelemento": "SEMENTES, MUDAS DE PLANTAS E INSUMOS",
             "valorAtual": "563,70",
             "sequencial": 2
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158379264222026NE000214",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000140/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000140/2026-000006"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -2453,16 +3141,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -2513,23 +3201,52 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
-      "empenhos": [],
+      "empenhos": [
+        {
+          "numero_empenho": "2026NE000213",
+          "data_emissao": "23/09/2026",
+          "valor_empenhado": "667,60",
+          "unidade_gestora_codigo": "158379",
+          "unidade_gestora_nome": "IF CATARINENSE - CAMPUS VIDEIRA",
+          "fornecedor_cnpj": "18694818000117",
+          "nome_fornecedor": "VGD DISTRIBUIDORA LTDA",
+          "item_despesa": {
+            "codigoItemEmpenho": "158379264222026NE000213",
+            "descricao": "Item compra: 00008 - CAL VIVA, MATERIAL OXIDO CALCIO, COR BRANCA, APRESENTACAO PO, APLICACAO CONSTRUCAO EM GERAL",
+            "codigoSubelemento": "31",
+            "descricaoSubelemento": "SEMENTES, MUDAS DE PLANTAS E INSUMOS",
+            "valorAtual": "667,60",
+            "sequencial": 3
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158379264222026NE000213",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000140/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000140/2026-000009"
+        }
+      ],
       "empenhos_item_sem_fornecedor_compativel": [],
       "empenhos_fornecedor_sem_item_identificado": [],
       "erro_resultados_homologados": null,
-      "status": "sem_empenho_mapeado"
+      "status": "mapeado_por_numero_item"
     },
     {
       "numero_item": 9,
@@ -2574,22 +3291,51 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
       ],
-      "empenhos": [],
+      "empenhos": [
+        {
+          "numero_empenho": "2026NE000213",
+          "data_emissao": "23/09/2026",
+          "valor_empenhado": "189,50",
+          "unidade_gestora_codigo": "158379",
+          "unidade_gestora_nome": "IF CATARINENSE - CAMPUS VIDEIRA",
+          "fornecedor_cnpj": "18694818000117",
+          "nome_fornecedor": "VGD DISTRIBUIDORA LTDA",
+          "item_despesa": {
+            "codigoItemEmpenho": "158379264222026NE000213",
+            "descricao": "Item compra: 00009 - CALCARIO DOLOMITICO, ASPECTO FISICO PO, COMPOSICAO PRNT MINIMO DE 90%",
+            "codigoSubelemento": "31",
+            "descricaoSubelemento": "SEMENTES, MUDAS DE PLANTAS E INSUMOS",
+            "valorAtual": "189,50",
+            "sequencial": 4
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158379264222026NE000213",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000140/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000140/2026-000009"
+        }
+      ],
       "empenhos_item_sem_fornecedor_compativel": [],
       "empenhos_fornecedor_sem_item_identificado": [],
       "erro_resultados_homologados": null,
-      "status": "sem_empenho_mapeado"
+      "status": "mapeado_por_numero_item"
     },
     {
       "numero_item": 10,
@@ -2650,16 +3396,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -2771,13 +3517,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -2831,13 +3577,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -2890,16 +3636,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -2950,16 +3696,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [
@@ -2978,7 +3724,18 @@
             "descricaoSubelemento": "SEMENTES, MUDAS DE PLANTAS E INSUMOS",
             "valorAtual": "19.320,00",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158461264222026NE000500",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000140/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000140/2026-000005"
         },
         {
           "numero_empenho": "2026NE000296",
@@ -2995,7 +3752,18 @@
             "descricaoSubelemento": "SEMENTES, MUDAS DE PLANTAS E INSUMOS",
             "valorAtual": "10.304,00",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158462264222026NE000296",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000140/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000140/2026-000005"
         },
         {
           "numero_empenho": "2026NE000211",
@@ -3012,7 +3780,18 @@
             "descricaoSubelemento": "SEMENTES, MUDAS DE PLANTAS E INSUMOS",
             "valorAtual": "1.288,00",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158379264222026NE000211",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000140/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000140/2026-000005"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -3107,7 +3886,18 @@
             "descricaoSubelemento": "MATERIAL QUIMICO",
             "valorAtual": "1.797,84",
             "sequencial": 3
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158461264222026NE000501",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000140/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000140/2026-000006"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -3185,7 +3975,18 @@
             "descricaoSubelemento": "MATERIAL QUIMICO",
             "valorAtual": "420,90",
             "sequencial": 4
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158461264222026NE000501",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000140/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000140/2026-000006"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -3236,13 +4037,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -3295,16 +4096,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [
@@ -3323,7 +4124,18 @@
             "descricaoSubelemento": "SEMENTES, MUDAS DE PLANTAS E INSUMOS",
             "valorAtual": "1.338,00",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158379264222026NE000212",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000140/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000140/2026-000010"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -3373,16 +4185,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -3401,7 +4213,18 @@
             "descricaoSubelemento": "SEMENTES, MUDAS DE PLANTAS E INSUMOS",
             "valorAtual": "830,00",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158461264222026NE000499",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000140/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000140/2026-000010"
         },
         {
           "numero_empenho": "2026NE000212",
@@ -3418,7 +4241,18 @@
             "descricaoSubelemento": "SEMENTES, MUDAS DE PLANTAS E INSUMOS",
             "valorAtual": "4.150,00",
             "sequencial": 2
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158379264222026NE000212",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000140/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000140/2026-000010"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -3496,7 +4330,18 @@
             "descricaoSubelemento": "SEMENTES, MUDAS DE PLANTAS E INSUMOS",
             "valorAtual": "1.152,20",
             "sequencial": 2
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158461264222026NE000499",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000140/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000140/2026-000010"
         },
         {
           "numero_empenho": "2026NE000212",
@@ -3513,7 +4358,18 @@
             "descricaoSubelemento": "SEMENTES, MUDAS DE PLANTAS E INSUMOS",
             "valorAtual": "1.728,30",
             "sequencial": 3
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158379264222026NE000212",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000140/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000140/2026-000010"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -3641,13 +4497,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -3700,16 +4556,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -3761,13 +4617,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -3908,7 +4764,18 @@
             "descricaoSubelemento": "MATERIAL QUIMICO",
             "valorAtual": "399,00",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158461264222026NE000502",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000140/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000140/2026-000011"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -3959,13 +4826,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -4018,16 +4885,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -4046,7 +4913,18 @@
             "descricaoSubelemento": "SEMENTES, MUDAS DE PLANTAS E INSUMOS",
             "valorAtual": "107,60",
             "sequencial": 2
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158379264222026NE000211",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000140/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000140/2026-000005"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -4216,16 +5094,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -4321,7 +5199,18 @@
             "descricaoSubelemento": "MATERIAL QUIMICO",
             "valorAtual": "70,00",
             "sequencial": 2
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158461264222026NE000500",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000140/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000140/2026-000005"
         },
         {
           "numero_empenho": "2026NE000211",
@@ -4338,7 +5227,18 @@
             "descricaoSubelemento": "SEMENTES, MUDAS DE PLANTAS E INSUMOS",
             "valorAtual": "7,00",
             "sequencial": 3
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158379264222026NE000211",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000140/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000140/2026-000005"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -4448,16 +5348,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -4509,13 +5409,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -4568,16 +5468,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -4628,16 +5528,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -4688,16 +5588,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -4748,16 +5648,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -4996,16 +5896,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -5177,13 +6077,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -5374,13 +6274,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -5434,13 +6334,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -5461,7 +6361,18 @@
             "descricaoSubelemento": "SEMENTES, MUDAS DE PLANTAS E INSUMOS",
             "valorAtual": "336,00",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158379264222026NE000208",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000140/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000140/2026-000003"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -5512,13 +6423,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -5539,7 +6450,18 @@
             "descricaoSubelemento": "SEMENTES, MUDAS DE PLANTAS E INSUMOS",
             "valorAtual": "107,50",
             "sequencial": 2
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158379264222026NE000208",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000140/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000140/2026-000003"
         },
         {
           "numero_empenho": "2026NE000205",
@@ -5556,7 +6478,18 @@
             "descricaoSubelemento": "SEMENTES, MUDAS DE PLANTAS E INSUMOS",
             "valorAtual": "107,50",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158379264222026NE000205",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000140/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000140/2026-000003"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -5606,16 +6539,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [
@@ -5634,7 +6567,18 @@
             "descricaoSubelemento": "MATERIAL QUIMICO",
             "valorAtual": "4.046,00",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158462264222026NE000297",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000140/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000140/2026-000011"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -5684,16 +6628,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -5881,16 +6825,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -5941,16 +6885,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -6002,13 +6946,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -6275,16 +7219,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -6335,16 +7279,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -6456,13 +7400,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -6712,16 +7656,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [
@@ -6740,7 +7684,18 @@
             "descricaoSubelemento": "MATERIAL QUIMICO",
             "valorAtual": "855,35",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158462264222026NE000298",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000140/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000140/2026-000008"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -6791,13 +7746,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -6850,16 +7805,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -6910,16 +7865,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [
@@ -6938,7 +7893,18 @@
             "descricaoSubelemento": "SEMENTES, MUDAS DE PLANTAS E INSUMOS",
             "valorAtual": "400,00",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158379264222026NE000209",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000140/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000140/2026-000007"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -6988,16 +7954,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -7049,13 +8015,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -7289,13 +8255,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -7349,13 +8315,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -7426,13 +8392,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -7513,7 +8479,18 @@
             "descricaoSubelemento": "SEMENTES, MUDAS DE PLANTAS E INSUMOS",
             "valorAtual": "400,00",
             "sequencial": 2
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158379264222026NE000209",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000140/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000140/2026-000007"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -7623,16 +8600,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -7683,16 +8660,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -7804,13 +8781,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -7983,16 +8960,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -8043,16 +9020,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -8121,13 +9098,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -8180,16 +9157,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -8241,13 +9218,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -8334,16 +9311,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -8394,16 +9371,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -8634,16 +9611,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -8695,13 +9672,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -8788,16 +9765,16 @@
           "dataResultado": "2026-08-26",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -8849,13 +9826,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000140/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }

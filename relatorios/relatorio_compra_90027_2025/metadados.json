@@ -2,7 +2,7 @@
   "schema_version": 1,
   "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000272",
   "criado_em": "2026-11-12T06:12:13-03:00",
-  "atualizado_em": "2026-11-14T05:52:45-03:00",
+  "atualizado_em": "2026-11-14T11:52:44-03:00",
   "chaves_integracao": {
     "cnpj_orgao": "10635424000186",
     "uasg_codigo": "158125",
@@ -74,7 +74,9 @@
       "rotulo": "Empenhado mapeado",
       "valor": 81740.11,
       "exibicao": "R$ 81.740,11",
-      "descricao": "74 de 75 registros com detalhamento"
+      "descricao": "73 de 74 registros com detalhamento"
     }
-  ]
+  ],
+  "ultima_duracao_segundos": 45.9,
+  "buscar_empenhos_portal": false
 }

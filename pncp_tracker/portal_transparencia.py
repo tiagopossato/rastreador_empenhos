@@ -25,6 +25,8 @@ _cache_favorecido: Dict[tuple, tuple] = {}
 _TENTATIVAS_HTTP = 2
 _session = requests.Session()
 _session.mount("https://", requests.adapters.HTTPAdapter(pool_connections=8, pool_maxsize=8))
+_ENV_FILE = Path(__file__).resolve().parent.parent / ".env"
+_env_lock = threading.Lock()
 _env_carregado = False
 
 
@@ -97,17 +99,13 @@ def _get(url: str, **kwargs: Any) -> requests.Response:
     return response
 
 
-def _carregar_arquivo_env() -> None:
-    """Carrega variáveis ausentes do arquivo .env na raiz do projeto (uma vez por processo)."""
-    global _env_carregado
-    if _env_carregado:
-        return
-    _env_carregado = True
-    caminho_env = Path(__file__).resolve().parent.parent / ".env"
-    if not caminho_env.exists():
-        return
+def _ler_variaveis_env() -> Dict[str, str]:
+    """Lê as variáveis do arquivo .env da raiz do projeto (sem tocar no ambiente)."""
+    if not _ENV_FILE.exists():
+        return {}
 
-    for linha in caminho_env.read_text(encoding="utf-8").splitlines():
+    variaveis: Dict[str, str] = {}
+    for linha in _ENV_FILE.read_text(encoding="utf-8").splitlines():
         linha = linha.strip()
         if not linha or linha.startswith("#") or "=" not in linha:
             continue
@@ -118,7 +116,26 @@ def _carregar_arquivo_env() -> None:
         if len(valor) >= 2 and valor[0] == valor[-1] and valor[0] in {"'", '"'}:
             valor = valor[1:-1]
         if nome:
+            variaveis[nome] = valor
+    return variaveis
+
+
+def _carregar_arquivo_env() -> None:
+    """Carrega variáveis ausentes do .env uma vez, com segurança entre threads.
+
+    O carregamento é preguiçoso e disparado na primeira consulta. Sem o lock, duas threads
+    do enriquecimento paralelo podiam ver `_env_carregado` já marcado antes de o ambiente
+    ser preenchido e concluir que a chave não existia.
+    """
+    global _env_carregado
+    if _env_carregado:
+        return
+    with _env_lock:
+        if _env_carregado:
+            return
+        for nome, valor in _ler_variaveis_env().items():
             os.environ.setdefault(nome, valor)
+        _env_carregado = True
 
 
 def _api_key() -> str:

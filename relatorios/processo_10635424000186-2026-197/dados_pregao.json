@@ -4132,5 +4132,12 @@
   "erros_resultados_itens": [],
   "data_atualizacao_global": "2026-10-19T11:44:47",
   "chave_cache": "10635424000186-1-000197/2026|2026-10-19T11:44:47",
-  "cache_reutilizado": true
+  "cache_reutilizado": true,
+  "empenhos": [],
+  "coleta_empenhos": {
+    "busca_portal_realizada": false,
+    "quantidade_empenhos_pncp": 0,
+    "quantidade_empenhos_portal": 0,
+    "erros": []
+  }
 }

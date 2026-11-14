@@ -1,6 +1,6 @@
 {
-  "status": "parcial",
-  "mensagem": "Registros coletados do PNCP e complementados com o detalhamento e os itens publicados no Portal da Transparência.",
+  "status": "ok",
+  "mensagem": "Empenhos encontrados: 32 (32 no PNCP, 0 exclusivos do Portal da Transparência). Detalhamento obtido para 32; 0 documento(s) não localizado(s). 0 empenho(s) de adesão posterior e 0 com origem de órgão indefinida. Situação dos registros: 1 anulado(s) parcialmente; 31 sem alteração. Busca por empenhos não registrados no PNCP não executada.",
   "fontes": [
     "PNCP - aba Contratos/Empenhos",
     "Portal da Transparência - detalhes e itens do empenho"
@@ -15,15 +15,23 @@
   },
   "objeto": "Eventual aquisição de gêneros alimentícios para atender as necessidades do Instituto Federal Catarinense Campus Abelardo Luz, Campus Araquari, Campus Brusque, Campus Camboriú, Campus Concórdia, Campus Fraiburgo, Campus Luzerna, Campus Rio do Sul, Campus Santa Rosa do Sul,  Campus São Bento do Sul, São Francisco do Sul, Campus Sombrio, e Campus Videira.",
   "quantidade_empenhos": 32,
+  "quantidade_empenhos_pncp": 32,
+  "quantidade_empenhos_portal": 0,
+  "busca_portal_realizada": false,
+  "situacoes_empenhos": {
+    "normal": 31,
+    "anulado": 1
+  },
   "quantidade_empenhos_com_detalhes": 32,
   "quantidade_empenhos_nao_encontrados": 0,
+  "quantidade_empenhos_confirmados": 32,
+  "quantidade_empenhos_adesao": 0,
+  "quantidade_empenhos_indefinidos": 0,
+  "valor_empenhado_adesao": 0,
+  "quantidade_documentos_descartados": 0,
+  "empenhos_nao_confirmados": [],
   "erros_detalhamento": [],
-  "erros_resultados_itens": [
-    {
-      "numero_item": 2,
-      "erro": "ConnectTimeout: HTTPSConnectionPool(host='pncp.gov.br', port=443): Max retries exceeded with url: /api/pncp/v1/orgaos/10635424000186/compras/2026/000115/itens/2/resultados (Caused by ConnectTimeoutError(<HTTPSConnection(host='pncp.gov.br', port=443) at 0x2633244fed0>, 'Connection to pncp.gov.br timed out. (connect timeout=30)'))"
-    }
-  ],
+  "erros_resultados_itens": [],
   "empenhos": [
     {
       "numeroRetificacao": 0,
@@ -104,6 +112,12 @@
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000014",
       "numeroControlePncpCompra": "10635424000186-1-000115/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "152290264222026NE000076",
@@ -153,6 +167,15 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 5998.77,
+        "valor_pncp": 5998.77,
+        "valor_portal": 5998.77,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
@@ -234,6 +257,12 @@
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000006",
       "numeroControlePncpCompra": "10635424000186-1-000115/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158461264222026NE000456",
@@ -315,6 +344,15 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 50104.0,
+        "valor_pncp": 50104.0,
+        "valor_portal": 50104.0,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
@@ -396,6 +434,12 @@
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000010",
       "numeroControlePncpCompra": "10635424000186-1-000115/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158461264222026NE000457",
@@ -445,6 +489,15 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 2240.0,
+        "valor_pncp": 2240.0,
+        "valor_portal": 2240.0,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
@@ -526,6 +579,12 @@
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000006",
       "numeroControlePncpCompra": "10635424000186-1-000115/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158461264222026NE000459",
@@ -575,6 +634,15 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 28000.0,
+        "valor_pncp": 28000.0,
+        "valor_portal": 28000.0,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
@@ -656,6 +724,12 @@
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000015",
       "numeroControlePncpCompra": "10635424000186-1-000115/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158461264222026NE000472",
@@ -705,6 +779,15 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 3480.0,
+        "valor_pncp": 3480.0,
+        "valor_portal": 3480.0,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
@@ -786,6 +869,12 @@
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000012",
       "numeroControlePncpCompra": "10635424000186-1-000115/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158460264222026NE000244",
@@ -867,6 +956,15 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 724.1,
+        "valor_pncp": 724.1,
+        "valor_portal": 724.1,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
@@ -948,6 +1046,12 @@
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000014",
       "numeroControlePncpCompra": "10635424000186-1-000115/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158460264222026NE000242",
@@ -1021,6 +1125,15 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 5415.71,
+        "valor_pncp": 5415.71,
+        "valor_portal": 5415.71,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
@@ -1102,6 +1215,12 @@
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000006",
       "numeroControlePncpCompra": "10635424000186-1-000115/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158458264222026NE000290",
@@ -1175,6 +1294,15 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 61300.0,
+        "valor_pncp": 61300.0,
+        "valor_portal": 61300.0,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
@@ -1256,6 +1384,12 @@
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000006",
       "numeroControlePncpCompra": "10635424000186-1-000115/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158461264222026NE000482",
@@ -1305,6 +1439,15 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 39000.0,
+        "valor_pncp": 39000.0,
+        "valor_portal": 39000.0,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
@@ -1386,6 +1529,12 @@
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000010",
       "numeroControlePncpCompra": "10635424000186-1-000115/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158458264222026NE000300",
@@ -1435,6 +1584,15 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 511.8,
+        "valor_pncp": 511.8,
+        "valor_portal": 511.8,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
@@ -1516,6 +1674,12 @@
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000008",
       "numeroControlePncpCompra": "10635424000186-1-000115/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158458264222026NE000302",
@@ -1565,6 +1729,15 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 704.16,
+        "valor_pncp": 704.16,
+        "valor_portal": 704.16,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
@@ -1646,6 +1819,12 @@
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000006",
       "numeroControlePncpCompra": "10635424000186-1-000115/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158461264222026NE000496",
@@ -1735,6 +1914,15 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 71110.0,
+        "valor_pncp": 71110.0,
+        "valor_portal": 71110.0,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
@@ -1816,6 +2004,12 @@
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000008",
       "numeroControlePncpCompra": "10635424000186-1-000115/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158461264222026NE000497",
@@ -1865,6 +2059,15 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 2550.0,
+        "valor_pncp": 2550.0,
+        "valor_portal": 2550.0,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
@@ -1946,6 +2149,12 @@
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000014",
       "numeroControlePncpCompra": "10635424000186-1-000115/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158458264222026NE000304",
@@ -2019,6 +2228,15 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 1097.68,
+        "valor_pncp": 1097.68,
+        "valor_portal": 1097.68,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
@@ -2100,6 +2318,12 @@
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000005",
       "numeroControlePncpCompra": "10635424000186-1-000115/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158458264222026NE000297",
@@ -2149,6 +2373,15 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 95.04,
+        "valor_pncp": 95.04,
+        "valor_portal": 95.04,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
@@ -2230,6 +2463,12 @@
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000012",
       "numeroControlePncpCompra": "10635424000186-1-000115/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158458264222026NE000306",
@@ -2311,6 +2550,15 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 5441.2,
+        "valor_pncp": 5441.2,
+        "valor_portal": 5441.2,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
@@ -2392,6 +2640,12 @@
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000007",
       "numeroControlePncpCompra": "10635424000186-1-000115/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158460264222026NE000243",
@@ -2441,6 +2695,15 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 668.0,
+        "valor_pncp": 668.0,
+        "valor_portal": 668.0,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
@@ -2522,6 +2785,12 @@
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000012",
       "numeroControlePncpCompra": "10635424000186-1-000115/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158462264222026NE000292",
@@ -2595,6 +2864,15 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 15639.0,
+        "valor_pncp": 15639.0,
+        "valor_portal": 15639.0,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
@@ -2628,7 +2906,7 @@
       },
       "frutoAdesao": false,
       "dataVigenciaInicio": "2026-09-08",
-      "dataAtualizacao": "2026-10-05T17:35:46",
+      "dataAtualizacao": "2026-11-13T13:57:48",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
@@ -2667,7 +2945,7 @@
       "valorParcela": 68130.0,
       "valorGlobal": 68130.0,
       "valorAcumulado": null,
-      "dataAtualizacaoGlobal": "2026-10-05T17:35:46",
+      "dataAtualizacaoGlobal": "2026-11-13T13:57:48",
       "identificadorCipi": null,
       "urlCipi": null,
       "tipoPessoaSubContratada": null,
@@ -2676,6 +2954,12 @@
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000006",
       "numeroControlePncpCompra": "10635424000186-1-000115/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158462264222026NE000291",
@@ -2749,6 +3033,15 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 68130.0,
+        "valor_pncp": 68130.0,
+        "valor_portal": 68130.0,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
@@ -2830,6 +3123,12 @@
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000010",
       "numeroControlePncpCompra": "10635424000186-1-000115/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158458264222026NE000347",
@@ -2879,6 +3178,15 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 511.8,
+        "valor_pncp": 511.8,
+        "valor_portal": 511.8,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
@@ -2960,6 +3268,12 @@
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000006",
       "numeroControlePncpCompra": "10635424000186-1-000115/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158458264222026NE000296",
@@ -3065,6 +3379,15 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "anulado",
+        "motivo": "Valor do Portal menor que o valor global publicado no PNCP.",
+        "valor_inicial_pncp": 38815.0,
+        "valor_pncp": 38815.0,
+        "valor_portal": 37084.2,
+        "diferenca": -1730.8,
+        "retificacoes": 0
       }
     },
     {
@@ -3146,6 +3469,12 @@
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000007",
       "numeroControlePncpCompra": "10635424000186-1-000115/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158458264222026NE000301",
@@ -3203,6 +3532,15 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 9528.0,
+        "valor_pncp": 9528.0,
+        "valor_portal": 9528.0,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
@@ -3284,6 +3622,12 @@
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000009",
       "numeroControlePncpCompra": "10635424000186-1-000115/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158458264222026NE000299",
@@ -3333,6 +3677,15 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 19194.0,
+        "valor_pncp": 19194.0,
+        "valor_portal": 19194.0,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
@@ -3414,6 +3767,12 @@
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000012",
       "numeroControlePncpCompra": "10635424000186-1-000115/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158459264222026NE000252",
@@ -3463,6 +3822,15 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 210.0,
+        "valor_pncp": 210.0,
+        "valor_portal": 210.0,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
@@ -3544,6 +3912,12 @@
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000010",
       "numeroControlePncpCompra": "10635424000186-1-000115/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158460264222026NE000269",
@@ -3593,6 +3967,15 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 5444.1,
+        "valor_pncp": 5444.1,
+        "valor_portal": 5444.1,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
@@ -3674,6 +4057,12 @@
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000012",
       "numeroControlePncpCompra": "10635424000186-1-000115/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158458264222026NE000348",
@@ -3771,6 +4160,15 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 13788.4,
+        "valor_pncp": 13788.4,
+        "valor_portal": 13788.4,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
@@ -3852,6 +4250,12 @@
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000008",
       "numeroControlePncpCompra": "10635424000186-1-000115/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158460264222026NE000268",
@@ -3901,6 +4305,15 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 2158.2,
+        "valor_pncp": 2158.2,
+        "valor_portal": 2158.2,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
@@ -3982,6 +4395,12 @@
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000014",
       "numeroControlePncpCompra": "10635424000186-1-000115/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158458264222026NE000349",
@@ -4031,6 +4450,15 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 2999.0,
+        "valor_pncp": 2999.0,
+        "valor_portal": 2999.0,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
@@ -4112,6 +4540,12 @@
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000014",
       "numeroControlePncpCompra": "10635424000186-1-000115/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158379264222026NE000225",
@@ -4161,6 +4595,15 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 2879.04,
+        "valor_pncp": 2879.04,
+        "valor_portal": 2879.04,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
@@ -4242,6 +4685,12 @@
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000003",
       "numeroControlePncpCompra": "10635424000186-1-000115/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158458264222026NE000298",
@@ -4291,6 +4740,15 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 1485.0,
+        "valor_pncp": 1485.0,
+        "valor_portal": 1485.0,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
@@ -4372,6 +4830,12 @@
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000004",
       "numeroControlePncpCompra": "10635424000186-1-000115/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158460264222026NE000233",
@@ -4421,6 +4885,15 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 4950.0,
+        "valor_pncp": 4950.0,
+        "valor_portal": 4950.0,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     },
     {
@@ -4502,6 +4975,12 @@
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000012",
       "numeroControlePncpCompra": "10635424000186-1-000115/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158459264222026NE000266",
@@ -4551,6 +5030,15 @@
             }
           ]
         }
+      },
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 4041.0,
+        "valor_pncp": 4041.0,
+        "valor_portal": 4041.0,
+        "diferenca": 0.0,
+        "retificacoes": 0
       }
     }
   ],
@@ -4598,13 +5086,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -4625,7 +5113,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "14.280,00",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158461264222026NE000456",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000006"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -4638,14 +5137,56 @@
       "descricao": "Carne bovina in natura",
       "unidade_medida": "Quilograma",
       "quantidade_licitada": 2800.0,
-      "quantidade_homologada": null,
+      "quantidade_homologada": 2800.0,
       "valor_unitario_estimado": 42.62,
       "valor_total_estimado": 119336.0,
-      "valor_unitario_homologado": null,
-      "valor_total_homologado": null,
-      "resultados": [],
-      "empenhos": [],
-      "empenhos_item_sem_fornecedor_compativel": [
+      "valor_unitario_homologado": 23.71,
+      "valor_total_homologado": 66388.0,
+      "resultados": [
+        {
+          "indicadorSubcontratacao": false,
+          "niFornecedor": "23047140000110",
+          "dataCancelamento": null,
+          "dataAtualizacao": "2026-08-06T13:21:28",
+          "tipoPessoa": "PJ",
+          "nomeRazaoSocialFornecedor": "DIALTA DISTRIBUIDORA DE ALIMENTOS LTDA",
+          "dataInclusao": "2026-08-06T13:21:28",
+          "numeroItem": 2,
+          "valorTotalHomologado": 66388.0,
+          "reservaRemanescente": {
+            "codigo": 1,
+            "nome": "Não se aplica"
+          },
+          "timezoneCotacaoMoedaEstrangeira": null,
+          "moedaEstrangeira": null,
+          "valorNominalMoedaEstrangeira": null,
+          "dataCotacaoMoedaEstrangeira": null,
+          "codigoPais": "BRA",
+          "porteFornecedorId": 1,
+          "quantidadeHomologada": 2800.0,
+          "valorUnitarioHomologado": 23.71,
+          "percentualDesconto": 0.0,
+          "amparoLegalMargemPreferencia": null,
+          "amparoLegalCriterioDesempate": null,
+          "paisOrigemProdutoServico": null,
+          "localidadeExterior": null,
+          "ordemClassificacaoSrp": 1,
+          "dataResultado": "2026-08-06",
+          "motivoCancelamento": null,
+          "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
+          "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "situacaoCompraItemResultadoId": 1,
+          "porteFornecedorNome": "ME",
+          "situacaoCompraItemResultadoNome": "Informado",
+          "sequencialResultado": 1,
+          "naturezaJuridicaNome": "Sociedade Empresária Limitada",
+          "localidadeFornecedor": null
+        }
+      ],
+      "empenhos": [
         {
           "numero_empenho": "2026NE000456",
           "data_emissao": "24/08/2026",
@@ -4661,12 +5202,24 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "9.484,00",
             "sequencial": 2
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158461264222026NE000456",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000006"
         }
       ],
+      "empenhos_item_sem_fornecedor_compativel": [],
       "empenhos_fornecedor_sem_item_identificado": [],
-      "erro_resultados_homologados": "ConnectTimeout: HTTPSConnectionPool(host='pncp.gov.br', port=443): Max retries exceeded with url: /api/pncp/v1/orgaos/10635424000186/compras/2026/000115/itens/2/resultados (Caused by ConnectTimeoutError(<HTTPSConnection(host='pncp.gov.br', port=443) at 0x2633244fed0>, 'Connection to pncp.gov.br timed out. (connect timeout=30)'))",
-      "status": "resultados_homologados_indisponiveis"
+      "erro_resultados_homologados": null,
+      "status": "mapeado_por_numero_item"
     },
     {
       "numero_item": 3,
@@ -4711,13 +5264,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -4738,7 +5291,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "12.600,00",
             "sequencial": 3
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158461264222026NE000456",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000006"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -4833,7 +5397,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "3.480,00",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158461264222026NE000472",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000015"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -4884,13 +5459,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -4911,7 +5486,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "5.840,00",
             "sequencial": 4
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158461264222026NE000456",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000006"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -4962,13 +5548,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -4989,7 +5575,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "7.900,00",
             "sequencial": 5
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158461264222026NE000456",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000006"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -5116,16 +5713,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -5236,16 +5833,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [
@@ -5264,7 +5861,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "25.000,00",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158462264222026NE000291",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000006"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -5342,7 +5950,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "18.400,00",
             "sequencial": 2
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158462264222026NE000291",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000006"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -5392,16 +6011,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -5453,13 +6072,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -5632,16 +6251,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -5660,7 +6279,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "10.500,00",
             "sequencial": 3
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158462264222026NE000291",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000006"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -5710,16 +6340,16 @@
           "dataResultado": "2026-08-19",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -5775,16 +6405,16 @@
           "dataResultado": "2026-08-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": true,
+          "aplicacaoCriterioDesempate": true,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": true,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [
@@ -5803,7 +6433,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "14.230,00",
             "sequencial": 4
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158462264222026NE000291",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000006"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -5854,13 +6495,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -5913,16 +6554,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -6007,16 +6648,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [
@@ -6035,7 +6676,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "4.300,00",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000296",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000006"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -6085,16 +6737,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -6113,7 +6765,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "18.750,00",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000290",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000006"
         },
         {
           "numero_empenho": "2026NE000296",
@@ -6130,7 +6793,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "9.375,00",
             "sequencial": 2
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000296",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000006"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -6208,7 +6882,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "3.750,00",
             "sequencial": 3
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000296",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000006"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -6258,16 +6943,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -6286,7 +6971,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "3.850,00",
             "sequencial": 4
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000296",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000006"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -6336,16 +7032,16 @@
           "dataResultado": "2026-08-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -6396,16 +7092,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -6424,7 +7120,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "14.250,00",
             "sequencial": 2
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000290",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000006"
         },
         {
           "numero_empenho": "2026NE000296",
@@ -6441,7 +7148,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "3.969,20",
             "sequencial": 5
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000296",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000006"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -6519,7 +7237,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "18.500,00",
             "sequencial": 3
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000290",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000006"
         },
         {
           "numero_empenho": "2026NE000296",
@@ -6536,7 +7265,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "5.550,00",
             "sequencial": 6
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000296",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000006"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -6586,16 +7326,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -6614,7 +7354,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "3.350,00",
             "sequencial": 7
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000296",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000006"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -6664,16 +7415,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "Demais",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -6692,7 +7443,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "3.960,00",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000301",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000007"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -6742,16 +7504,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "Demais",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -6770,7 +7532,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "5.568,00",
             "sequencial": 2
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000301",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000007"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -6848,7 +7621,18 @@
             "descricaoSubelemento": "MATERIAL DESTINADO A ASSISTENCIA SOCIAL",
             "valorAtual": "668,00",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158460264222026NE000243",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000007"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -6898,16 +7682,16 @@
           "dataResultado": "2026-08-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [
@@ -6926,7 +7710,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "9.800,00",
             "sequencial": 4
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000290",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000006"
         },
         {
           "numero_empenho": "2026NE000296",
@@ -6943,7 +7738,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "2.940,00",
             "sequencial": 8
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000296",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000006"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -7021,7 +7827,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "19.194,00",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000299",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000009"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -7071,16 +7888,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -7099,7 +7916,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "7.900,00",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158461264222026NE000496",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000006"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -7177,7 +8005,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "39.000,00",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158461264222026NE000482",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000006"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -7232,16 +8071,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": true,
+          "aplicacaoCriterioDesempate": true,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": true,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -7320,7 +8159,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "27.360,00",
             "sequencial": 2
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158461264222026NE000496",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000006"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -7398,7 +8248,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "11.200,00",
             "sequencial": 3
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158461264222026NE000496",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000006"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -7476,7 +8337,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "10.400,00",
             "sequencial": 4
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158461264222026NE000496",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000006"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -7554,7 +8426,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "28.000,00",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158461264222026NE000459",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000006"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -7610,13 +8493,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": true,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": true,
           "aplicacaoCriterioDesempate": true,
           "naturezaJuridicaId": "2062"
         }
@@ -7669,16 +8552,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -7730,13 +8613,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -7757,7 +8640,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "9.300,00",
             "sequencial": 5
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158461264222026NE000496",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000006"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -7824,16 +8718,16 @@
           "dataResultado": "2026-08-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -7884,16 +8778,16 @@
           "dataResultado": "2026-08-07",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -7912,7 +8806,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "4.950,00",
             "sequencial": 6
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158461264222026NE000496",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000006"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -8014,13 +8919,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -8073,16 +8978,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [
@@ -8101,7 +9006,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "2.240,00",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158461264222026NE000457",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000010"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -8245,16 +9161,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -8306,13 +9222,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -8366,13 +9282,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -8425,16 +9341,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -8503,13 +9419,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -8613,16 +9529,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -8751,13 +9667,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -8929,16 +9845,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -8989,16 +9905,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -9304,16 +10220,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -9458,16 +10374,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -9646,16 +10562,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -9862,7 +10778,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "210,00",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158459264222026NE000252",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000012"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -9913,13 +10840,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -10007,13 +10934,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -10071,16 +10998,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": true,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": true,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -10137,13 +11064,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": true,
           "naturezaJuridicaId": "2062"
         }
@@ -10196,16 +11123,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -10224,7 +11151,18 @@
             "descricaoSubelemento": "MATERIAL DESTINADO A ASSISTENCIA SOCIAL",
             "valorAtual": "4.041,00",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158459264222026NE000266",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000012"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -10454,13 +11392,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -10590,16 +11528,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -10650,16 +11588,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -10678,7 +11616,18 @@
             "descricaoSubelemento": "MATERIAL DESTINADO A ASSISTENCIA SOCIAL",
             "valorAtual": "5.998,77",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "152290264222026NE000076",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000014"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -10745,16 +11694,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -10805,16 +11754,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -10968,13 +11917,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -11044,16 +11993,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -11072,7 +12021,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "5.400,00",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158462264222026NE000292",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000012"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -11123,13 +12083,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -11182,16 +12142,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -11302,16 +12262,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -11362,16 +12322,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -11423,13 +12383,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -11543,13 +12503,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -11653,16 +12613,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -11953,16 +12913,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -12073,16 +13033,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -12167,16 +13127,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [
@@ -12195,7 +13155,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "1.179,00",
             "sequencial": 2
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158462264222026NE000292",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000012"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -12357,13 +13328,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -12511,13 +13482,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -12538,7 +13509,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "760,00",
             "sequencial": 3
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158462264222026NE000292",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000012"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -12734,13 +13716,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -12854,13 +13836,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -13067,13 +14049,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -13203,16 +14185,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -13231,7 +14213,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "8.300,00",
             "sequencial": 4
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158462264222026NE000292",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000012"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -13359,13 +14352,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -13436,13 +14429,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -13556,13 +14549,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -13710,13 +14703,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -13923,16 +14916,16 @@
           "dataResultado": "2026-08-05",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -14113,7 +15106,18 @@
             "descricaoSubelemento": "MATERIAL DESTINADO A ASSISTENCIA SOCIAL",
             "valorAtual": "102,70",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158460264222026NE000242",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000014"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -14164,13 +15168,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -14191,7 +15195,18 @@
             "descricaoSubelemento": "MATERIAL DESTINADO A ASSISTENCIA SOCIAL",
             "valorAtual": "420,00",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158460264222026NE000244",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000012"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -14336,13 +15351,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -14363,7 +15378,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "173,56",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000304",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000014"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -14413,16 +15439,16 @@
           "dataResultado": "2026-08-05",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -14473,16 +15499,16 @@
           "dataResultado": "2026-08-05",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -14550,16 +15576,16 @@
           "dataResultado": "2026-08-05",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [
@@ -14578,7 +15604,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "5.702,40",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000348",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000012"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -14628,16 +15665,16 @@
           "dataResultado": "2026-08-05",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -14688,16 +15725,16 @@
           "dataResultado": "2026-08-05",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [
@@ -14716,7 +15753,18 @@
             "descricaoSubelemento": "MATERIAL DESTINADO A ASSISTENCIA SOCIAL",
             "valorAtual": "30,00",
             "sequencial": 2
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158460264222026NE000244",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000012"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -14767,13 +15815,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -14826,16 +15874,16 @@
           "dataResultado": "2026-08-05",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -14951,16 +15999,16 @@
           "dataResultado": "2026-08-05",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": true,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": true,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -15077,13 +16125,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -15104,7 +16152,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "320,00",
             "sequencial": 2
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000348",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000012"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -15154,16 +16213,16 @@
           "dataResultado": "2026-08-05",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -15214,16 +16273,16 @@
           "dataResultado": "2026-08-05",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [
@@ -15242,7 +16301,18 @@
             "descricaoSubelemento": "MATERIAL DESTINADO A ASSISTENCIA SOCIAL",
             "valorAtual": "3.598,80",
             "sequencial": 2
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158460264222026NE000242",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000014"
         },
         {
           "numero_empenho": "2026NE000349",
@@ -15259,7 +16329,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "2.999,00",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000349",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000014"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -15386,16 +16467,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -15524,13 +16605,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -15711,16 +16792,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -15831,16 +16912,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [
@@ -15859,7 +16940,18 @@
             "descricaoSubelemento": "MATERIAL DESTINADO A ASSISTENCIA SOCIAL",
             "valorAtual": "34,55",
             "sequencial": 3
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158460264222026NE000242",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000014"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -15910,13 +17002,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -15937,7 +17029,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "95,04",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000297",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000005"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -16048,13 +17151,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -16075,7 +17178,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "800,00",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000306",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000012"
         },
         {
           "numero_empenho": "2026NE000348",
@@ -16092,7 +17206,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "800,00",
             "sequencial": 3
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000348",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000012"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -16142,16 +17267,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [
@@ -16170,7 +17295,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "417,60",
             "sequencial": 2
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000306",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000012"
         },
         {
           "numero_empenho": "2026NE000348",
@@ -16187,7 +17323,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "556,80",
             "sequencial": 4
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000348",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000012"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -16265,7 +17412,18 @@
             "descricaoSubelemento": "MATERIAL DESTINADO A ASSISTENCIA SOCIAL",
             "valorAtual": "262,80",
             "sequencial": 3
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158460264222026NE000244",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000012"
         },
         {
           "numero_empenho": "2026NE000306",
@@ -16282,7 +17440,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "525,60",
             "sequencial": 3
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000306",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000012"
         },
         {
           "numero_empenho": "2026NE000348",
@@ -16299,7 +17468,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "1.051,20",
             "sequencial": 5
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000348",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000012"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -16417,16 +17597,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -16528,16 +17708,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [
@@ -16556,7 +17736,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "378,00",
             "sequencial": 4
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000306",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000012"
         },
         {
           "numero_empenho": "2026NE000348",
@@ -16573,7 +17764,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "378,00",
             "sequencial": 6
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000348",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000012"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -16828,13 +18030,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -16922,13 +18124,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -16949,7 +18151,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "333,16",
             "sequencial": 2
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000304",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000014"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -17102,13 +18315,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -17129,7 +18342,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "395,96",
             "sequencial": 3
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000304",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000014"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -17207,7 +18431,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "1.485,00",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000298",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000003"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -17257,16 +18492,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -17345,7 +18580,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "195,00",
             "sequencial": 4
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000304",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000014"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -17576,7 +18822,18 @@
             "descricaoSubelemento": "MATERIAL DESTINADO A ASSISTENCIA SOCIAL",
             "valorAtual": "2.158,20",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158460264222026NE000268",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000008"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -17677,16 +18934,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -17788,16 +19045,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -17816,7 +19073,18 @@
             "descricaoSubelemento": "MATERIAL DESTINADO A ASSISTENCIA SOCIAL",
             "valorAtual": "8,30",
             "sequencial": 4
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158460264222026NE000244",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000012"
         },
         {
           "numero_empenho": "2026NE000306",
@@ -17833,7 +19101,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "3.320,00",
             "sequencial": 5
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000306",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000012"
         },
         {
           "numero_empenho": "2026NE000348",
@@ -17850,7 +19129,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "4.980,00",
             "sequencial": 7
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000348",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000012"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -17900,16 +19190,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -17978,13 +19268,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -18005,7 +19295,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "704,16",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000302",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000008"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -18073,13 +19374,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -18209,16 +19510,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -18237,7 +19538,18 @@
             "descricaoSubelemento": "MATERIAL DESTINADO A ASSISTENCIA SOCIAL",
             "valorAtual": "4.950,00",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158460264222026NE000233",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000004"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -18287,16 +19599,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -18347,16 +19659,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -18476,13 +19788,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -18552,16 +19864,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [
@@ -18580,7 +19892,18 @@
             "descricaoSubelemento": "MATERIAL DESTINADO A ASSISTENCIA SOCIAL",
             "valorAtual": "3,00",
             "sequencial": 5
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158460264222026NE000244",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000012"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -18647,16 +19970,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -18675,7 +19998,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "511,80",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000300",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000010"
         },
         {
           "numero_empenho": "2026NE000347",
@@ -18692,7 +20026,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "511,80",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158458264222026NE000347",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000010"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -18742,16 +20087,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -18819,16 +20164,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [
@@ -18847,7 +20192,18 @@
             "descricaoSubelemento": "MATERIAL DESTINADO A ASSISTENCIA SOCIAL",
             "valorAtual": "5.444,10",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158460264222026NE000269",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000010"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -18925,7 +20281,18 @@
             "descricaoSubelemento": "MATERIAL DESTINADO A ASSISTENCIA SOCIAL",
             "valorAtual": "1.679,66",
             "sequencial": 4
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158460264222026NE000242",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000014"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -19027,13 +20394,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -19189,13 +20556,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -19266,13 +20633,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -19386,13 +20753,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -19582,13 +20949,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -19609,7 +20976,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "2.879,04",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158379264222026NE000225",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000014"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -19677,13 +21055,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -19737,13 +21115,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -19797,13 +21175,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -19873,16 +21251,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -19933,16 +21311,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -19993,16 +21371,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -20454,13 +21832,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -20558,7 +21936,18 @@
             "descricaoSubelemento": "GENEROS DE ALIMENTACAO",
             "valorAtual": "2.550,00",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158461264222026NE000497",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000115/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000115/2026-000008"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -20660,13 +22049,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -20814,13 +22203,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -21018,16 +22407,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -21078,16 +22467,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -21198,16 +22587,16 @@
           "dataResultado": "2026-08-06",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -21259,13 +22648,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000115/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }

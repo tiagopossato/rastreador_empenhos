@@ -25,6 +25,14 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
         nargs="?",
         help="Link do edital no PNCP. Se omitido, será solicitado no terminal.",
     )
+    parser.add_argument(
+        "--buscar-empenhos-portal",
+        action="store_true",
+        help=(
+            "Procura no Portal da Transparência empenhos não registrados no PNCP. "
+            "Aumenta o tempo de execução e o consumo de requisições."
+        ),
+    )
     try:
         args = parser.parse_args(argv)
         url_pncp = _obter_url_pncp(args.url_pncp)
@@ -32,7 +40,11 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
         parser.error(str(exc))
 
     try:
-        resultado = atualizar_processo(url_pncp, on_progress=print)
+        resultado = atualizar_processo(
+            url_pncp,
+            on_progress=print,
+            buscar_empenhos_portal=args.buscar_empenhos_portal,
+        )
     except Exception as exc:
         print("Erro ao atualizar o processo: {}".format(exc), file=sys.stderr)
         sys.exit(1)

@@ -72,29 +72,34 @@ def _decimal(valor: Any) -> Optional[Decimal]:
 
 
 TOLERANCIA_QUANTIDADE = Decimal("0.01")
+CASAS_DECIMAIS_QUANTIDADE = Decimal("0.001")
 LIMIAR_DESCRICAO = 0.6
 
 
-def quantidade_estimada(valor: Any, valor_unitario: Any) -> Optional[Tuple[int, bool]]:
+def quantidade_estimada(valor: Any, valor_unitario: Any) -> Optional[Decimal]:
     """Quantidade derivada do valor da linha dividido pelo preço unitário homologado.
 
-    A estimativa nunca tem precisão real, então é arredondada para inteiro com Decimal
-    (evita artefatos de ponto flutuante como 2,999999). O segundo elemento indica que a
-    divisão não é múltipla inteira do preço unitário — sinal de que o preço efetivo difere
-    do homologado e de que a quantidade é apenas aproximada.
+    O resultado é o quociente real, com três casas decimais e sem arredondamento para
+    inteiro: a parte fracionária mostra quanto o preço efetivo da linha se afasta do
+    preço unitário homologado. O cálculo usa `Decimal` para evitar artefatos de ponto
+    flutuante (2,999999).
     """
     valor_dec = _decimal(valor)
     unitario_dec = _decimal(valor_unitario)
     if valor_dec is None or unitario_dec is None or unitario_dec <= 0 or valor_dec < 0:
         return None
     razao = valor_dec / unitario_dec
-    quantidade = int(razao.quantize(Decimal("1"), rounding=ROUND_HALF_UP))
-    if quantidade < 1:
+    if razao <= 0:
         return None
-    divergente = abs(razao - quantidade) > max(
-        Decimal("0.05"), quantidade * TOLERANCIA_QUANTIDADE
+    return razao.quantize(CASAS_DECIMAIS_QUANTIDADE, rounding=ROUND_HALF_UP)
+
+
+def _multiplo_inteiro(quantidade: Decimal) -> bool:
+    """Indica se a quantidade é (quase) um múltiplo inteiro do preço unitário."""
+    inteiro = quantidade.quantize(Decimal("1"), rounding=ROUND_HALF_UP)
+    return abs(quantidade - inteiro) <= max(
+        Decimal("0.05"), abs(inteiro) * TOLERANCIA_QUANTIDADE
     )
-    return quantidade, divergente
 
 
 def _norm_texto(valor: Any) -> str:
@@ -273,7 +278,7 @@ def _evidencias(
             return "item_e_fornecedor", "alta"
         valor_unitario = referencia["por_cnpj"].get(favorecido)
         estimativa = quantidade_estimada(item.get("valor"), valor_unitario)
-        if estimativa and not estimativa[1]:
+        if estimativa is not None and _multiplo_inteiro(estimativa):
             return "item_e_valor", "media"
     return None, None
 

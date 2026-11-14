@@ -25,8 +25,12 @@
     button.danger { background: #a12a26; }
     button:hover { filter: brightness(.92); }
     .actions { display: flex; gap: .45rem; flex-wrap: wrap; }
+    .portal-search { display: flex; gap: .6rem; flex-wrap: wrap; }
+    label.radio { display: inline-flex; align-items: center; gap: .3rem; font-weight: 400; font-size: .85rem; margin: 0; white-space: nowrap; }
+    input[type="radio"] { flex: 0 0 auto; min-width: 0; width: auto; margin: 0; padding: 0; border: 0; }
+    .footer-note { max-width: 90ch; margin-top: 1.25rem; }
     .table-wrap { overflow-x: auto; }
-    table { border-collapse: collapse; width: 100%; min-width: 760px; }
+    table { border-collapse: collapse; width: 100%; min-width: 900px; }
     th, td { padding: .7rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
     th { color: var(--muted); font-size: .8rem; }
     .url { overflow-wrap: anywhere; max-width: 310px; }
@@ -42,7 +46,8 @@
     .stats strong { color: var(--ink); }
     body.job-running form[action$="/refresh"] button,
     body.job-running form[action$="/refresh-all"] button,
-    body.job-running form[action$="/processes"] button { opacity: .5; cursor: not-allowed; }
+    body.job-running form[action$="/processes"] button,
+    body.job-running input[type="radio"] { opacity: .5; cursor: not-allowed; }
     @media (max-width: 600px) { main { padding: .8rem .5rem 2rem; } .panel { padding: .8rem; } header { align-items: flex-start; } }
   </style>
 </head>
@@ -71,6 +76,11 @@
       <div>
         <label for="url_pncp">URL pública do edital no PNCP</label>
         <input id="url_pncp" name="url_pncp" type="url" placeholder="https://pncp.gov.br/app/editais/..." required>
+      </div>
+      <div>
+        <label>Procurar empenhos não registrados no PNCP</label>
+        <label class="radio"><input type="radio" name="buscar_empenhos_portal" value="nao" checked> Não</label>
+        <label class="radio"><input type="radio" name="buscar_empenhos_portal" value="sim"> Sim</label>
       </div>
       <button type="submit">Adicionar à lista</button>
     </form>
@@ -122,7 +132,7 @@
     {% endif %}
     <div class="table-wrap">
       <table>
-        <thead><tr><th>PNCP</th><th>Status</th><th>Última atualização</th><th>Ações</th></tr></thead>
+        <thead><tr><th>PNCP</th><th>Status</th><th>Última atualização</th><th>Procurar empenhos não registrados no PNCP</th><th>Ações</th></tr></thead>
         <tbody>
         {% for record in records %}
           <tr>
@@ -134,6 +144,13 @@
             </td>
             <td>{{ record.status or 'pendente' }}{% if record.erro %}<div class="muted">{{ record.erro }}</div>{% endif %}</td>
             <td>{{ record.atualizado_em or '—' }}</td>
+            <td>
+              <form class="portal-search" method="post" action="{{ url_for('set_portal_search', process_id=record.id) }}">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                <label class="radio"><input type="radio" name="buscar_empenhos_portal" value="nao" {% if not record.buscar_empenhos_portal %}checked{% endif %} onchange="this.form.submit()" {% if active_job and active_job.status == 'executando' %}disabled{% endif %}> Não</label>
+                <label class="radio"><input type="radio" name="buscar_empenhos_portal" value="sim" {% if record.buscar_empenhos_portal %}checked{% endif %} onchange="this.form.submit()" {% if active_job and active_job.status == 'executando' %}disabled{% endif %}> Sim</label>
+              </form>
+            </td>
             <td><div class="actions">
               <form method="post" action="{{ url_for('refresh_process', process_id=record.id) }}">
                 <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
@@ -146,12 +163,22 @@
             </div></td>
           </tr>
         {% else %}
-          <tr><td colspan="4" class="muted">Nenhum processo cadastrado.</td></tr>
+          <tr><td colspan="5" class="muted">Nenhum processo cadastrado.</td></tr>
         {% endfor %}
         </tbody>
       </table>
     </div>
   </section>
+
+  <p class="muted footer-note">
+    <strong>Procurar empenhos não registrados no PNCP:</strong> quando marcado como <em>Sim</em>, a atualização
+    também consulta o Portal da Transparência por contrato, licitação e fornecedores homologados para localizar
+    empenhos que não aparecem na aba Contratos/Empenhos do PNCP. Quando marcado como <em>Não</em>, a atualização usa
+    apenas a aba Contratos/Empenhos do PNCP: é mais rápida e não consome o limite do endpoint restrito
+    (180 requisições por minuto; exceder o limite suspende o token por 8 horas). Em ambos os casos, os empenhos
+    publicados no PNCP continuam sendo detalhados no Portal para identificar os itens. A escolha fica gravada no
+    processo e vale para as próximas atualizações, inclusive as automáticas do cron.
+  </p>
 </main>
 <script>
 const jobStatus = document.getElementById('job-status');
@@ -168,7 +195,7 @@ const fmtPrevisao = iso => {
 };
 function bloquearAtualizacoes(bloquear) {
   document.body.classList.toggle('job-running', bloquear);
-  document.querySelectorAll('form[action$="/refresh"] button, form[action$="/refresh-all"] button, form[action$="/processes"] button')
+  document.querySelectorAll('form[action$="/refresh"] button, form[action$="/refresh-all"] button, form[action$="/processes"] button, form[action$="/processes"] input[type="radio"], form[action$="/portal-search"] input[type="radio"]')
     .forEach(botao => { botao.disabled = bloquear; });
 }
 function renderJob(job) {

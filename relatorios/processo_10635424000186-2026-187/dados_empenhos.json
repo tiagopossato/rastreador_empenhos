@@ -1,9 +1,8 @@
 {
-  "status": "ok",
-  "mensagem": "Empenhos encontrados: 1 (1 no PNCP, 0 exclusivos do Portal da Transparência). Detalhamento obtido para 1; 0 documento(s) não localizado(s).",
+  "status": "parcial",
+  "mensagem": "Empenhos encontrados: 1 (1 no PNCP, 0 exclusivos do Portal da Transparência). Detalhamento obtido para 1; 0 documento(s) não localizado(s). 0 empenho(s) de adesão posterior e 0 com origem de órgão indefinida. Situação dos registros: 1 sem alteração. 59 documento(s) do(s) fornecedor(es) homologado(s) descartado(s) por falta de vínculo com a compra.",
   "fontes": [
     "PNCP - aba Contratos/Empenhos",
-    "Portal da Transparência - descoberta por processo/favorecido",
     "Portal da Transparência - detalhes e itens do empenho"
   ],
   "chaves_integracao": {
@@ -18,15 +17,1209 @@
   "quantidade_empenhos": 1,
   "quantidade_empenhos_pncp": 1,
   "quantidade_empenhos_portal": 0,
+  "busca_portal_realizada": true,
+  "situacoes_empenhos": {
+    "normal": 1
+  },
   "quantidade_empenhos_com_detalhes": 1,
   "quantidade_empenhos_nao_encontrados": 0,
-  "erros_detalhamento": [],
+  "quantidade_empenhos_confirmados": 1,
+  "quantidade_empenhos_adesao": 0,
+  "quantidade_empenhos_indefinidos": 0,
+  "valor_empenhado_adesao": 0,
+  "quantidade_documentos_descartados": 59,
+  "empenhos_nao_confirmados": [
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE003857",
+      "numero": "2026NE003857",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 2614.21,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155908264432026NE002047",
+      "numero": "2026NE002047",
+      "unidade": "155908",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 7580.0,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155908264432026NE002005",
+      "numero": "2026NE002005",
+      "unidade": "155908",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 1049.76,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE003912",
+      "numero": "2026NE003912",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 891.0,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE003917",
+      "numero": "2026NE003917",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 1558.9,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE003919",
+      "numero": "2026NE003919",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 4103.66,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "158459264222024NE000246",
+      "numero": "2024NE000246",
+      "unidade": "158459",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 1254.84,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "167359000012026NE000063",
+      "numero": "2026NE000063",
+      "unidade": "167359",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 600.0,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155908264432026NE000242",
+      "numero": "2026NE000242",
+      "unidade": "155908",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 425.6,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155125264432026NE000259",
+      "numero": "2026NE000259",
+      "unidade": "155125",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 414.3,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155908264432026NE001077",
+      "numero": "2026NE001077",
+      "unidade": "155908",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 974.88,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE001338",
+      "numero": "2026NE001338",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 704.1,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE003632",
+      "numero": "2026NE003632",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 49.12,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "167423000012026NE000219",
+      "numero": "2026NE000219",
+      "unidade": "167423",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 1838.6,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155908264432026NE001740",
+      "numero": "2026NE001740",
+      "unidade": "155908",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 325.89,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "167223000012026NE000139",
+      "numero": "2026NE000139",
+      "unidade": "167223",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 117.0,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155902264432026NE000178",
+      "numero": "2026NE000178",
+      "unidade": "155902",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 84000.0,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155908264432026NE000143",
+      "numero": "2026NE000143",
+      "unidade": "155908",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 434.4,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "167359000012026NE000436",
+      "numero": "2026NE000436",
+      "unidade": "167359",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 104.0,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE000529",
+      "numero": "2026NE000529",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 2141.34,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155902264432026NE000306",
+      "numero": "2026NE000306",
+      "unidade": "155902",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 5879.4,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155902264432026NE000305",
+      "numero": "2026NE000305",
+      "unidade": "155902",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 112.4,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155908264432026NE002131",
+      "numero": "2026NE002131",
+      "unidade": "155908",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 204.48,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155908264432026NE000470",
+      "numero": "2026NE000470",
+      "unidade": "155908",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 120.0,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155902264432026NE004044",
+      "numero": "2026NE004044",
+      "unidade": "155902",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 1341.55,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE001339",
+      "numero": "2026NE001339",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 301.92,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "167223000012026NE001000",
+      "numero": "2026NE001000",
+      "unidade": "167223",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 161.46,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "167359000012026NE000215",
+      "numero": "2026NE000215",
+      "unidade": "167359",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 597.6,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155908264432026NE000016",
+      "numero": "2026NE000016",
+      "unidade": "155908",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 282.0,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "167211000012026NE000016",
+      "numero": "2026NE000016",
+      "unidade": "167211",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 116.1,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE000133",
+      "numero": "2026NE000133",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 0.0,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE000167",
+      "numero": "2026NE000167",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 902.81,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE001340",
+      "numero": "2026NE001340",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 45.7,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155125264432026NE002426",
+      "numero": "2026NE002426",
+      "unidade": "155125",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 3360.0,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE002169",
+      "numero": "2026NE002169",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 642.71,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE000531",
+      "numero": "2026NE000531",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 873.53,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155901264432025NE002652",
+      "numero": "2025NE002652",
+      "unidade": "155901",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 2228.2,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE000678",
+      "numero": "2026NE000678",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 680.98,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155902264432026NE001174",
+      "numero": "2026NE001174",
+      "unidade": "155902",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 19.0,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "167223000012026NE001520",
+      "numero": "2026NE001520",
+      "unidade": "167223",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 161.46,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE003654",
+      "numero": "2026NE003654",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 4.49,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155125264432026NE001993",
+      "numero": "2026NE001993",
+      "unidade": "155125",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 276.2,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155902264432025NE005104",
+      "numero": "2025NE005104",
+      "unidade": "155902",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 75.82,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE001792",
+      "numero": "2026NE001792",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 590.04,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155902264432026NE000163",
+      "numero": "2026NE000163",
+      "unidade": "155902",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 29.15,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "167077000012026NE000077",
+      "numero": "2026NE000077",
+      "unidade": "167077",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 160.2,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "167433000012026NE000172",
+      "numero": "2026NE000172",
+      "unidade": "167433",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 1400.0,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "167358000012026NE000024",
+      "numero": "2026NE000024",
+      "unidade": "167358",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 281.9,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE000527",
+      "numero": "2026NE000527",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 167.94,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155901264432026NE000405",
+      "numero": "2026NE000405",
+      "unidade": "155901",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 1440.0,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE003069",
+      "numero": "2026NE003069",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 53.0,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155902264432026NE001693",
+      "numero": "2026NE001693",
+      "unidade": "155902",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 828.4,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155908264432026NE002132",
+      "numero": "2026NE002132",
+      "unidade": "155908",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 47.5,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155908264432026NE000033",
+      "numero": "2026NE000033",
+      "unidade": "155908",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 42.92,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "167077000012026NE000001",
+      "numero": "2026NE000001",
+      "unidade": "167077",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 99.0,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155908264432026NE000038",
+      "numero": "2026NE000038",
+      "unidade": "155908",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 82.5,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155001152752026NE003751",
+      "numero": "2026NE003751",
+      "unidade": "155001",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 750.0,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155125264432026NE000488",
+      "numero": "2026NE000488",
+      "unidade": "155125",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 667.64,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE000532",
+      "numero": "2026NE000532",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 467.8,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    }
+  ],
+  "erros_detalhamento": [
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE003857",
+      "numero": "2026NE003857",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 2614.21,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155908264432026NE002047",
+      "numero": "2026NE002047",
+      "unidade": "155908",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 7580.0,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155908264432026NE002005",
+      "numero": "2026NE002005",
+      "unidade": "155908",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 1049.76,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE003912",
+      "numero": "2026NE003912",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 891.0,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE003917",
+      "numero": "2026NE003917",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 1558.9,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE003919",
+      "numero": "2026NE003919",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 4103.66,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "158459264222024NE000246",
+      "numero": "2024NE000246",
+      "unidade": "158459",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 1254.84,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "167359000012026NE000063",
+      "numero": "2026NE000063",
+      "unidade": "167359",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 600.0,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155908264432026NE000242",
+      "numero": "2026NE000242",
+      "unidade": "155908",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 425.6,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155125264432026NE000259",
+      "numero": "2026NE000259",
+      "unidade": "155125",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 414.3,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155908264432026NE001077",
+      "numero": "2026NE001077",
+      "unidade": "155908",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 974.88,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE001338",
+      "numero": "2026NE001338",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 704.1,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE003632",
+      "numero": "2026NE003632",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 49.12,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "167423000012026NE000219",
+      "numero": "2026NE000219",
+      "unidade": "167423",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 1838.6,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155908264432026NE001740",
+      "numero": "2026NE001740",
+      "unidade": "155908",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 325.89,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "167223000012026NE000139",
+      "numero": "2026NE000139",
+      "unidade": "167223",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 117.0,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155902264432026NE000178",
+      "numero": "2026NE000178",
+      "unidade": "155902",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 84000.0,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155908264432026NE000143",
+      "numero": "2026NE000143",
+      "unidade": "155908",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 434.4,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "167359000012026NE000436",
+      "numero": "2026NE000436",
+      "unidade": "167359",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 104.0,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE000529",
+      "numero": "2026NE000529",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 2141.34,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155902264432026NE000306",
+      "numero": "2026NE000306",
+      "unidade": "155902",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 5879.4,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155902264432026NE000305",
+      "numero": "2026NE000305",
+      "unidade": "155902",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 112.4,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155908264432026NE002131",
+      "numero": "2026NE002131",
+      "unidade": "155908",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 204.48,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155908264432026NE000470",
+      "numero": "2026NE000470",
+      "unidade": "155908",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 120.0,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155902264432026NE004044",
+      "numero": "2026NE004044",
+      "unidade": "155902",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 1341.55,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE001339",
+      "numero": "2026NE001339",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 301.92,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "167223000012026NE001000",
+      "numero": "2026NE001000",
+      "unidade": "167223",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 161.46,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "167359000012026NE000215",
+      "numero": "2026NE000215",
+      "unidade": "167359",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 597.6,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155908264432026NE000016",
+      "numero": "2026NE000016",
+      "unidade": "155908",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 282.0,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "167211000012026NE000016",
+      "numero": "2026NE000016",
+      "unidade": "167211",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 116.1,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE000133",
+      "numero": "2026NE000133",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 0.0,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE000167",
+      "numero": "2026NE000167",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 902.81,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE001340",
+      "numero": "2026NE001340",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 45.7,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155125264432026NE002426",
+      "numero": "2026NE002426",
+      "unidade": "155125",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 3360.0,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE002169",
+      "numero": "2026NE002169",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 642.71,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE000531",
+      "numero": "2026NE000531",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 873.53,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155901264432025NE002652",
+      "numero": "2025NE002652",
+      "unidade": "155901",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 2228.2,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE000678",
+      "numero": "2026NE000678",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 680.98,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155902264432026NE001174",
+      "numero": "2026NE001174",
+      "unidade": "155902",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 19.0,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "167223000012026NE001520",
+      "numero": "2026NE001520",
+      "unidade": "167223",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 161.46,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE003654",
+      "numero": "2026NE003654",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 4.49,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155125264432026NE001993",
+      "numero": "2026NE001993",
+      "unidade": "155125",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 276.2,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155902264432025NE005104",
+      "numero": "2025NE005104",
+      "unidade": "155902",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 75.82,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE001792",
+      "numero": "2026NE001792",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 590.04,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155902264432026NE000163",
+      "numero": "2026NE000163",
+      "unidade": "155902",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 29.15,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "167077000012026NE000077",
+      "numero": "2026NE000077",
+      "unidade": "167077",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 160.2,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "167433000012026NE000172",
+      "numero": "2026NE000172",
+      "unidade": "167433",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 1400.0,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "167358000012026NE000024",
+      "numero": "2026NE000024",
+      "unidade": "167358",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 281.9,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE000527",
+      "numero": "2026NE000527",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 167.94,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155901264432026NE000405",
+      "numero": "2026NE000405",
+      "unidade": "155901",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 1440.0,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE003069",
+      "numero": "2026NE003069",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 53.0,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155902264432026NE001693",
+      "numero": "2026NE001693",
+      "unidade": "155902",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 828.4,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155908264432026NE002132",
+      "numero": "2026NE002132",
+      "unidade": "155908",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 47.5,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155908264432026NE000033",
+      "numero": "2026NE000033",
+      "unidade": "155908",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 42.92,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "167077000012026NE000001",
+      "numero": "2026NE000001",
+      "unidade": "167077",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 99.0,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155908264432026NE000038",
+      "numero": "2026NE000038",
+      "unidade": "155908",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 82.5,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155001152752026NE003751",
+      "numero": "2026NE003751",
+      "unidade": "155001",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 750.0,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155125264432026NE000488",
+      "numero": "2026NE000488",
+      "unidade": "155125",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 667.64,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "tipo": "descartado",
+      "origem": "portal_favorecido",
+      "documento": "155913264432026NE000532",
+      "numero": "2026NE000532",
+      "unidade": "155913",
+      "fornecedor": "00.802.002/0001-02",
+      "valor": 467.8,
+      "motivo": "Documento descartado: nenhuma evidência de vínculo com a compra."
+    },
+    {
+      "motivo": "Orçamento de detalhamentos atingido; candidatos restantes não consultados.",
+      "consultados": "60"
+    }
+  ],
   "erros_resultados_itens": [],
   "empenhos": [
     {
-      "numeroParcelas": 1,
-      "temRemanejamento": false,
-      "receita": false,
+      "numeroRetificacao": 0,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -85,23 +1278,32 @@
       "informacaoComplementar": null,
       "sequencialContrato": 1694,
       "processo": "23352.001311/2026-49",
-      "tipoPessoaSubContratada": null,
-      "numeroRetificacao": 0,
-      "urlCipi": null,
-      "dataAtualizacaoGlobal": "2026-11-13T21:16:57",
-      "valorGlobal": 10161.88,
-      "identificadorCipi": null,
-      "objetoContrato": "AQUISIÇÃO DE  DE EQUIPAMENTOS GERAIS E MATERIAIS PARA O IFC CAMPUS VIDEIRA (MANEQUIM SIMULADOR BEBÊ PARA TREINO DE RCP ELETRÔNICO), CONFORME DESPACHO Nº 368/2026 - DAP/VID.",
-      "numeroControlePNCP": "10635424000186-2-001694/2026",
+      "receita": false,
+      "numeroParcelas": 1,
+      "temRemanejamento": false,
       "emendaParlamentar": false,
       "nomeFornecedorSubContratado": null,
+      "objetoContrato": "AQUISIÇÃO DE  DE EQUIPAMENTOS GERAIS E MATERIAIS PARA O IFC CAMPUS VIDEIRA (MANEQUIM SIMULADOR BEBÊ PARA TREINO DE RCP ELETRÔNICO), CONFORME DESPACHO Nº 368/2026 - DAP/VID.",
       "valorInicial": 10161.88,
-      "valorAcumulado": null,
       "valorParcela": 10161.88,
+      "valorGlobal": 10161.88,
+      "valorAcumulado": null,
+      "dataAtualizacaoGlobal": "2026-11-13T21:16:57",
+      "identificadorCipi": null,
+      "urlCipi": null,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-001694/2026",
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000187/2026-000016",
       "numeroControlePncpCompra": "10635424000186-1-000187/2026",
+      "origem": "pncp",
+      "vinculo": "pncp",
+      "confianca": "alta",
+      "fruto_adesao": false,
+      "origem_organ": "original",
+      "consome_saldo": true,
+      "encontrado_tambem_no_portal": true,
       "detalhesPortalTransparencia": {
         "status": "ok",
         "codigoDocumento": "158379264222026NE000236",
@@ -152,8 +1354,15 @@
           ]
         }
       },
-      "origem": "pncp",
-      "encontrado_tambem_no_portal": true
+      "situacao_empenho": {
+        "situacao": "normal",
+        "motivo": "Valores do PNCP e do Portal coincidem.",
+        "valor_inicial_pncp": 10161.88,
+        "valor_pncp": 10161.88,
+        "valor_portal": 10161.88,
+        "diferenca": 0.0,
+        "retificacoes": 0
+      }
     }
   ],
   "itens_mapeados": [
@@ -199,16 +1408,16 @@
           "dataResultado": "2026-09-24",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000187/2026",
+          "naturezaJuridicaId": "2135",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Empresário (Individual)",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2135"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -260,13 +1469,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000187/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -320,13 +1529,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000187/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -379,16 +1588,16 @@
           "dataResultado": "2026-09-24",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000187/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -499,16 +1708,16 @@
           "dataResultado": "2026-09-24",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000187/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -559,16 +1768,16 @@
           "dataResultado": "2026-09-24",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000187/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "Demais",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -619,16 +1828,16 @@
           "dataResultado": "2026-09-24",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000187/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -696,16 +1905,16 @@
           "dataResultado": "2026-09-24",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000187/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -834,13 +2043,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000187/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -910,16 +2119,16 @@
           "dataResultado": "2026-09-24",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000187/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -1408,13 +2617,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000187/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Empresário (Individual)",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2135"
         }
@@ -1467,16 +2676,16 @@
           "dataResultado": "2026-09-24",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000187/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -1638,16 +2847,16 @@
           "dataResultado": "2026-09-24",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000187/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "Demais",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -1759,13 +2968,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000187/2026",
           "aplicacaoMargemPreferencia": false,
-          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "Demais",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
+          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -1835,16 +3044,16 @@
           "dataResultado": "2026-09-24",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000187/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -2160,16 +3369,16 @@
           "dataResultado": "2026-09-24",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000187/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "Demais",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -2220,16 +3429,16 @@
           "dataResultado": "2026-09-24",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000187/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "Demais",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -2358,13 +3567,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000187/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }
@@ -2418,13 +3627,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000187/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Empresário (Individual)",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2135"
         }
@@ -2505,7 +3714,18 @@
             "descricaoSubelemento": "APAR.EQUIP.UTENS.MED.,ODONT,LABOR.HOSPIT.",
             "valorAtual": "10.161,88",
             "sequencial": 1
-          }
+          },
+          "quantidade": null,
+          "quantidade_origem": "estimada",
+          "chave_empenho": "158379264222026NE000236",
+          "fruto_adesao": false,
+          "origem_organ": "original",
+          "consome_saldo": true,
+          "flag_adesao_ausente": null,
+          "confianca": "alta",
+          "vinculo": "pncp",
+          "numero_controle_pncp_compra": "10635424000186-1-000187/2026",
+          "numero_controle_pncp_ata": "10635424000186-1-000187/2026-000016"
         }
       ],
       "empenhos_item_sem_fornecedor_compativel": [],
@@ -2555,16 +3775,16 @@
           "dataResultado": "2026-09-24",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000187/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "Demais",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -2632,16 +3852,16 @@
           "dataResultado": "2026-09-24",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000187/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -2863,16 +4083,16 @@
           "dataResultado": "2026-09-24",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000187/2026",
+          "naturezaJuridicaId": "2135",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Empresário (Individual)",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2135"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -2957,16 +4177,16 @@
           "dataResultado": "2026-09-24",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000187/2026",
+          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
+          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null,
-          "aplicacaoCriterioDesempate": false,
-          "naturezaJuridicaId": "2062"
+          "localidadeFornecedor": null
         }
       ],
       "empenhos": [],
@@ -3017,16 +4237,16 @@
           "dataResultado": "2026-09-24",
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000187/2026",
-          "naturezaJuridicaId": "2062",
           "aplicacaoMargemPreferencia": false,
           "aplicacaoBeneficioMeEpp": false,
-          "aplicacaoCriterioDesempate": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
-          "localidadeFornecedor": null
+          "localidadeFornecedor": null,
+          "aplicacaoCriterioDesempate": false,
+          "naturezaJuridicaId": "2062"
         }
       ],
       "empenhos": [],
@@ -3078,13 +4298,13 @@
           "motivoCancelamento": null,
           "numeroControlePNCPCompra": "10635424000186-1-000187/2026",
           "aplicacaoMargemPreferencia": false,
+          "aplicacaoBeneficioMeEpp": false,
           "situacaoCompraItemResultadoId": 1,
           "porteFornecedorNome": "ME",
           "situacaoCompraItemResultadoNome": "Informado",
           "sequencialResultado": 1,
           "naturezaJuridicaNome": "Sociedade Empresária Limitada",
           "localidadeFornecedor": null,
-          "aplicacaoBeneficioMeEpp": false,
           "aplicacaoCriterioDesempate": false,
           "naturezaJuridicaId": "2062"
         }

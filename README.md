@@ -6,11 +6,11 @@ Aplicação Python que coleta dados de compras no Portal Nacional de Contrataç�
 
 ## Como funciona
 
-1. **Coleta da compra:** consulta no PNCP os dados do edital, seus itens e resultados homologados.
-2. **Consulta de empenhos:** busca contratos/empenhos publicados para a compra no PNCP, descobre empenhos também no Portal da Transparência (inclusive de adesões e compras compartilhadas, cujo processo e unidade gestora podem ser diferentes) e complementa os documentos com detalhes e itens da despesa.
+1. **Coleta da compra e dos empenhos:** consulta no PNCP os dados do edital, seus itens, os resultados homologados e a lista de empenhos da aba Contratos/Empenhos. Opcionalmente — e somente quando solicitado — também descobre no Portal da Transparência empenhos que não constam dessa aba, inclusive de adesões e compras compartilhadas, cujo processo e unidade gestora podem ser diferentes. Todo esse conjunto é salvo em `dados_pregao.json`.
+2. **Detalhamento e verificação:** consulta cada empenho em `/despesas/documentos-por-favorecido`, obtém o documento e seus itens e compara os valores com o registro do PNCP para identificar empenho cancelado, anulado, reforçado ou retificado. O resultado é salvo em `dados_empenhos.json`.
 3. **Mapeamento e relatório:** relaciona as linhas de empenho aos itens por número do item e fornecedor homologado e gera o relatório HTML.
 
-O PNCP fornece valores de empenho, mas não necessariamente a quantidade física empenhada. Quando a API pública Contratos.gov.br identifica o empenho, a quantidade real do item é usada; caso contrário, e havendo preço unitário homologado, a quantidade é estimada dividindo o valor da linha pelo preço unitário (sempre arredondada para inteiro).
+O PNCP fornece valores de empenho, mas não necessariamente a quantidade física empenhada. Quando a API pública Contratos.gov.br identifica o empenho, a quantidade real do item é usada; caso contrário, e havendo preço unitário homologado, a quantidade é estimada dividindo o valor da linha pelo preço unitário, mantendo as casas decimais reais do resultado (até três casas).
 
 Empenhos decorrentes de adesão posterior — ou, quando vindos apenas do Portal, com origem de órgão não determinada — não consomem a quantidade homologada e aparecem em colunas e cards próprios; apenas empenhos originais, inclusive de órgãos participantes na origem, entram no saldo e na execução do item. Se o PNCP não enviar o campo `frutoAdesao`, o empenho é tratado como **não adesão** e segue o fluxo normal; a ausência fica sinalizada para auditoria.
 
@@ -107,6 +107,18 @@ python main.py "https://pncp.gov.br/app/editais/10635424000186/2025/187"
 
 Se a URL for omitida, o programa a solicitará no terminal. Uma URL vazia ou fora do formato `/editais/{cnpj}/{ano}/{sequencial}` é rejeitada antes das consultas.
 
+Por padrão, a atualização usa apenas a aba Contratos/Empenhos do PNCP, considerando que ela traz os empenhos daquela licitação. Para também procurar no Portal da Transparência empenhos que não estejam registrados no PNCP, use a flag:
+
+```bash
+python main.py "https://pncp.gov.br/app/editais/10635424000186/2025/187" --buscar-empenhos-portal
+```
+
+A busca adicional consulta o Portal por contrato, licitação e fornecedores homologados, o que aumenta o tempo de execução e o consumo de requisições (o endpoint por favorecido é restrito a 180 requisições por minuto; exceder o limite suspende o token por 8 horas). A flag vale apenas para a execução corrente e não altera o modo gravado no cadastro do processo. Em qualquer modo, os empenhos publicados no PNCP continuam sendo detalhados no Portal para identificar os itens da despesa.
+
+Todos os registros retornados pela aba Contratos/Empenhos do PNCP permanecem no relatório, em uma seção recolhida com situação verificada e links para o PNCP e para o Portal da Transparência de cada empenho, mesmo quando o Portal não localiza o detalhamento. Nesses casos, o registro é exibido na seção de registros PNCP, mas não é atribuído a um item nem incluído nos totais por item sem os dados correspondentes do Portal.
+
+Quando a consulta dos resultados homologados de um item falha (por exemplo, timeout no PNCP), o item fica como **resultado pendente** e, ao abrir o relatório pelo servidor administrativo autenticado, aparece o botão **Tentar novamente N item(ns) pendente(s)**. Ele refaz apenas os itens que falharam, reaproveita os empenhos já detalhados e regenera o relatório — sem repetir a coleta inteira nem consultar novamente o Portal da Transparência. No GitHub Pages o botão não aparece.
+
 Os dados das duas etapas são preservados na pasta individual do relatório, sem opção de remoção automática. Se a API de Contratos/Empenhos do PNCP retornar HTTP 404 indicando que não há contratos publicados para a compra, a execução continua e gera o relatório sem esses registros. Outros erros HTTP são reportados.
 
 ## Relatório HTML
@@ -152,7 +164,7 @@ O comando tenta todos os processos mesmo se algum falhar e retorna código de sa
 0 3 * * * cd /opt/rastreador_empenhos && /opt/rastreador_empenhos/.venv/bin/python atualizar_relatorios.py >> /var/log/rastreador-empenhos.log 2>&1
 ```
 
-A interface administrativa permite cadastrar URLs PNCP, remover processos da lista ativa sem apagar os dados históricos e iniciar a atualização de um processo ou de todos. As tarefas iniciadas pela interface rodam em segundo plano; o painel exibe seu resultado enquanto o serviço estiver ativo. Um lock local serializa atualizações iniciadas pela interface, pela CLI e pelo cron. Execute uma única instância Waitress para manter o painel de tarefas consistente; o status em memória é perdido se o serviço reiniciar durante uma tarefa.
+A interface administrativa permite cadastrar URLs PNCP, remover processos da lista ativa sem apagar os dados históricos, definir por processo se a atualização deve procurar empenhos não registrados no PNCP e iniciar a atualização de um processo ou de todos. A coluna **Procurar empenhos não registrados no PNCP** guarda essa escolha em `indice_relatorios.json`; o modo selecionado é aplicado nas próximas atualizações do processo, inclusive nas disparadas pelo cron, e fica registrado em `metadados.json`. As tarefas iniciadas pela interface rodam em segundo plano; o painel exibe seu resultado enquanto o serviço estiver ativo. Um lock local serializa atualizações iniciadas pela interface, pela CLI e pelo cron. Execute uma única instância Waitress para manter o painel de tarefas consistente; o status em memória é perdido se o serviço reiniciar durante uma tarefa.
 
 O arquivo privado de usuários fica por padrão em `.private/usuarios.json` (ignorado pelo Git e fora da pasta publicada). Crie a primeira conta de forma interativa:
 

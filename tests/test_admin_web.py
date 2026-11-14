@@ -178,6 +178,87 @@ class AdminWebTests(unittest.TestCase):
         self.assertEqual(page.status_code, 200)
         self.assertIn('id="stat-restante">—</strong>', page.get_data(as_text=True))
 
+    def test_admin_shows_portal_search_column_with_the_stored_state(self):
+        salvar_registros(
+            [
+                {
+                    "id": "processo-teste",
+                    "url_pncp": _URL,
+                    "pasta": "relatorio_compra_90027_2025",
+                    "arquivo_html": "relatorio_compra_90027_2025.html",
+                    "status": "atualizado",
+                    "buscar_empenhos_portal": True,
+                }
+            ],
+            self.index_path,
+        )
+
+        html = self._login().get_data(as_text=True)
+
+        self.assertIn("Procurar empenhos não registrados no PNCP", html)
+        self.assertIn('name="buscar_empenhos_portal" value="sim" checked', html)
+        self.assertIn("Procurar empenhos não registrados no PNCP:</strong>", html)
+
+    def test_portal_search_toggle_persists_in_the_index(self):
+        token = self._csrf(self._login())
+        with patch("admin_web.app._start_job", return_value="job-add"):
+            self.client.post(
+                "/processes",
+                data={"csrf_token": token, "url_pncp": _URL},
+            )
+        record = ler_registros(self.index_path)[0]
+        self.assertFalse(record["buscar_empenhos_portal"])
+
+        response = self.client.post(
+            "/processes/{}/portal-search".format(record["id"]),
+            data={"csrf_token": token, "buscar_empenhos_portal": "sim"},
+            follow_redirects=True,
+        )
+        self.assertIn("ativada", response.get_data(as_text=True))
+        self.assertTrue(ler_registros(self.index_path)[0]["buscar_empenhos_portal"])
+
+        self.client.post(
+            "/processes/{}/portal-search".format(record["id"]),
+            data={"csrf_token": token, "buscar_empenhos_portal": "nao"},
+        )
+        self.assertFalse(ler_registros(self.index_path)[0]["buscar_empenhos_portal"])
+
+    def test_portal_search_rejects_invalid_values_and_requires_csrf(self):
+        token = self._csrf(self._login())
+        with patch("admin_web.app._start_job", return_value="job-add"):
+            self.client.post(
+                "/processes",
+                data={"csrf_token": token, "url_pncp": _URL},
+            )
+        record = ler_registros(self.index_path)[0]
+
+        invalido = self.client.post(
+            "/processes/{}/portal-search".format(record["id"]),
+            data={"csrf_token": token, "buscar_empenhos_portal": "talvez"},
+        )
+        sem_csrf = self.client.post(
+            "/processes/{}/portal-search".format(record["id"]),
+            data={"buscar_empenhos_portal": "sim"},
+        )
+
+        self.assertEqual(invalido.status_code, 400)
+        self.assertEqual(sem_csrf.status_code, 400)
+        self.assertFalse(ler_registros(self.index_path)[0]["buscar_empenhos_portal"])
+
+    def test_new_process_keeps_the_portal_search_choice(self):
+        token = self._csrf(self._login())
+        with patch("admin_web.app._start_job", return_value="job-add"):
+            self.client.post(
+                "/processes",
+                data={
+                    "csrf_token": token,
+                    "url_pncp": _URL,
+                    "buscar_empenhos_portal": "sim",
+                },
+            )
+
+        self.assertTrue(ler_registros(self.index_path)[0]["buscar_empenhos_portal"])
+
     def test_refresh_action_starts_a_background_update(self):
         response = self._login()
         token = self._csrf(response)
@@ -266,7 +347,100 @@ class AdminWebTests(unittest.TestCase):
         with patch("admin_web.app.time.monotonic", return_value=121):
             self.assertFalse(limiter.is_blocked(key))
 
+    def _preparar_relatorio_com_pendencia(self):
+        report_dir = self.reports_dir / "relatorio_compra_90027_2025"
+        (report_dir / "relatorio_compra_90027_2025.html").write_text(
+            '<html><body><div class="toolbar"><!-- admin-retry --></div></body></html>',
+            encoding="utf-8",
+        )
+        (report_dir / "dados_empenhos.json").write_text(
+            json.dumps(
+                {
+                    "erros_resultados_itens": [
+                        {"numero_item": 199, "erro": "Timeout"},
+                        {"numero_item": 200, "erro": "Timeout"},
+                    ]
+                }
+            ),
+            encoding="utf-8",
+        )
+        salvar_registros(
+            [
+                {
+                    "id": "proc-1",
+                    "url_pncp": _URL,
+                    "pasta": "relatorio_compra_90027_2025",
+                    "status": "parcial",
+                }
+            ],
+            self.index_path,
+        )
+        return ler_registros(self.index_path)[0]["id"]
+
+    def test_retry_button_is_injected_only_for_authenticated_users(self):
+        process_id = self._preparar_relatorio_com_pendencia()
+        caminho = "/relatorio_compra_90027_2025/relatorio_compra_90027_2025.html"
+
+        publico = self.client.get(caminho).get_data(as_text=True)
+        self.assertNotIn("<!-- admin-retry -->", publico)
+        self.assertNotIn("retry-form", publico)
+
+        self._login()
+        autenticado = self.client.get(caminho).get_data(as_text=True)
+        self.assertNotIn("<!-- admin-retry -->", autenticado)
+        self.assertIn(
+            'action="/processes/{}/retry-pending-items"'.format(process_id),
+            autenticado,
+        )
+        self.assertIn("Tentar novamente 2 item(ns) pendente(s)", autenticado)
+
+    def test_retry_button_is_hidden_when_nothing_is_pending(self):
+        self._preparar_relatorio_com_pendencia()
+        (
+            self.reports_dir
+            / "relatorio_compra_90027_2025"
+            / "dados_empenhos.json"
+        ).write_text(json.dumps({"erros_resultados_itens": []}), encoding="utf-8")
+
+        self._login()
+        html = self.client.get(
+            "/relatorio_compra_90027_2025/relatorio_compra_90027_2025.html"
+        ).get_data(as_text=True)
+        self.assertNotIn("retry-form", html)
+
+    def test_retry_pending_items_route_runs_the_service_and_reports_the_result(self):
+        process_id = self._preparar_relatorio_com_pendencia()
+        token = self._csrf(self._login())
+
+        with patch(
+            "admin_web.app.reprocessar_itens_pendentes",
+            return_value={
+                "pendentes": 2,
+                "recuperados": 2,
+                "falhas": 0,
+                "atualizado": True,
+                "mensagem": "",
+            },
+        ) as servico:
+            resposta = self.client.post(
+                "/processes/{}/retry-pending-items".format(process_id),
+                data={"csrf_token": token},
+                follow_redirects=True,
+            )
+
+        self.assertEqual(resposta.status_code, 200)
+        servico.assert_called_once()
+        self.assertIn("2 de 2 item(ns) recuperado(s)", resposta.get_data(as_text=True))
+
+    def test_retry_pending_items_requires_csrf_token(self):
+        process_id = self._preparar_relatorio_com_pendencia()
+        resposta = self.client.post(
+            "/processes/{}/retry-pending-items".format(process_id), data={}
+        )
+        self.assertEqual(resposta.status_code, 400)
+
     def test_login_endpoint_temporarily_blocks_after_repeated_failures(self):
+
         response = self.client.get("/login")
         token = self._csrf(response)
         for _ in range(5):

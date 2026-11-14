@@ -2,7 +2,7 @@
   "schema_version": 1,
   "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000102",
   "criado_em": "2026-11-12T08:21:14-03:00",
-  "atualizado_em": "2026-11-12T08:58:22-03:00",
+  "atualizado_em": "2026-11-14T12:26:18-03:00",
   "chaves_integracao": {
     "cnpj_orgao": "10635424000186",
     "uasg_codigo": "158125",
@@ -76,5 +76,7 @@
       "exibicao": "R$ 261.730,42",
       "descricao": "114 de 114 registros com detalhamento"
     }
-  ]
+  ],
+  "ultima_duracao_segundos": 90.0,
+  "buscar_empenhos_portal": false
 }

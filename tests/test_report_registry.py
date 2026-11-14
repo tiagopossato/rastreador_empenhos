@@ -79,6 +79,50 @@ class ReportRegistryTests(unittest.TestCase):
                     index_path,
                 )
 
+    def test_portal_search_flag_defaults_to_off_and_is_persisted(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            index_path = Path(temp_dir) / "indice_relatorios.json"
+            url = "https://pncp.gov.br/app/editais/10635424000186/2025/000282"
+
+            registro = adicionar_registro(url, index_path)
+            self.assertFalse(registro["buscar_empenhos_portal"])
+            self.assertFalse(ler_registros(index_path)[0]["buscar_empenhos_portal"])
+
+            atualizar_registro(url, {"buscar_empenhos_portal": True}, index_path)
+            self.assertTrue(ler_registros(index_path)[0]["buscar_empenhos_portal"])
+
+            outro = adicionar_registro(
+                "https://pncp.gov.br/app/editais/10635424000186/2025/000283",
+                index_path,
+                buscar_empenhos_portal=True,
+            )
+            self.assertTrue(outro["buscar_empenhos_portal"])
+
+    def test_legacy_index_without_the_flag_reads_it_as_off(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            index_path = Path(temp_dir) / "indice_relatorios.json"
+            index_path.write_text(
+                json.dumps(
+                    {
+                        "schema_version": 2,
+                        "quantidade_relatorios": 1,
+                        "relatorios": [
+                            {
+                                "id": "10635424000186-2025-282",
+                                "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/282",
+                                "status": "atualizado",
+                            }
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            registros = ler_registros(index_path)
+
+        self.assertFalse(registros[0]["buscar_empenhos_portal"])
+        self.assertIs(registros[0]["buscar_empenhos_portal"], False)
+
     def test_updating_a_registered_process_persists_the_change(self):
         with tempfile.TemporaryDirectory() as temp_dir:
             index_path = Path(temp_dir) / "indice_relatorios.json"

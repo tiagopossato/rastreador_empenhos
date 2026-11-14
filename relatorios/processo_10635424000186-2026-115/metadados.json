@@ -2,7 +2,7 @@
   "schema_version": 1,
   "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2026/000115",
   "criado_em": "2026-11-12T07:18:20-03:00",
-  "atualizado_em": "2026-11-13T08:50:47-03:00",
+  "atualizado_em": "2026-11-14T11:56:04-03:00",
   "chaves_integracao": {
     "cnpj_orgao": "10635424000186",
     "uasg_codigo": "158125",
@@ -23,15 +23,15 @@
     {
       "chave": "itens_homologados",
       "rotulo": "Itens homologados",
-      "valor": 199,
-      "exibicao": "199",
+      "valor": 200,
+      "exibicao": "200",
       "descricao": "Itens empenhados + não empenhados"
     },
     {
       "chave": "itens_empenhados",
       "rotulo": "Itens empenhados",
-      "valor": 64,
-      "exibicao": "64",
+      "valor": 65,
+      "exibicao": "65",
       "descricao": "Execução acima de 0%"
     },
     {
@@ -51,8 +51,8 @@
     {
       "chave": "itens_resultados_pendentes",
       "rotulo": "Resultados pendentes",
-      "valor": 1,
-      "exibicao": "1",
+      "valor": 0,
+      "exibicao": "0",
       "descricao": "Falha ao consultar resultados no PNCP"
     },
     {
@@ -65,16 +65,18 @@
     {
       "chave": "valor_homologado",
       "rotulo": "Valor homologado",
-      "valor": 6465121.422799999,
-      "exibicao": "R$ 6.465.121,42",
+      "valor": 6531509.422799999,
+      "exibicao": "R$ 6.531.509,42",
       "descricao": "Soma dos resultados homologados"
     },
     {
       "chave": "empenhado_mapeado",
       "rotulo": "Empenhado mapeado",
-      "valor": 456998.1999999999,
-      "exibicao": "R$ 456.998,20",
+      "valor": 466482.1999999999,
+      "exibicao": "R$ 466.482,20",
       "descricao": "32 de 32 registros com detalhamento"
     }
-  ]
+  ],
+  "ultima_duracao_segundos": 18.5,
+  "buscar_empenhos_portal": false
 }

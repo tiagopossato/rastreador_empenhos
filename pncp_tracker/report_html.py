@@ -2,7 +2,7 @@ import json
 import re
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional
 from urllib.parse import urlsplit
 
 from .empenho_portal import quantidade_estimada
@@ -28,12 +28,10 @@ def _numero(valor: Any) -> Optional[float]:
 def _quantidade_empenhada(
     valor: Any,
     valor_unitario: Optional[float],
-) -> Tuple[Optional[int], bool]:
-    """Quantidade estimada (sempre inteira) e indicação de que ela é apenas aproximada."""
+) -> Optional[float]:
+    """Quantidade estimada da linha (valor ÷ preço unitário), com as casas decimais reais."""
     estimativa = quantidade_estimada(valor, valor_unitario)
-    if estimativa is None:
-        return None, False
-    return estimativa
+    return None if estimativa is None else float(estimativa)
 
 
 def _data_homologacao(valor: Any) -> Optional[str]:
@@ -63,15 +61,97 @@ def _url_ata(resultado: Dict[str, Any]) -> Optional[str]:
     return url
 
 
+def _como_dict(valor: Any) -> Dict[str, Any]:
+    return valor if isinstance(valor, dict) else {}
+
+
 def _chave_registro(registro: Dict[str, Any]) -> str:
     """Chave do empenho por documento completo; o número isolado se repete entre UGs."""
-    detalhes = registro.get("detalhesPortalTransparencia") or {}
+    detalhes = _como_dict(registro.get("detalhesPortalTransparencia"))
     codigo = re.sub(r"[^A-Za-z0-9]", "", str(detalhes.get("codigoDocumento") or ""))
     if codigo:
         return codigo
-    unidade = re.sub(r"[^A-Za-z0-9]", "", str((registro.get("unidadeOrgao") or {}).get("codigoUnidade") or ""))
+    unidade = re.sub(
+        r"[^A-Za-z0-9]",
+        "",
+        str(_como_dict(registro.get("unidadeOrgao")).get("codigoUnidade") or ""),
+    )
     numero = re.sub(r"[^A-Za-z0-9]", "", str(registro.get("numeroContratoEmpenho") or "")).upper()
     return f"{unidade}{numero}"
+
+
+def _url_empenho_pncp(registro: Dict[str, Any], cnpj_orgao: Any) -> Optional[str]:
+    """Página pública do contrato/empenho no PNCP (cnpj + ano + sequencial do contrato)."""
+    cnpj = _como_dict(registro.get("orgaoEntidade")).get("cnpj") or cnpj_orgao
+    ano = registro.get("anoContrato")
+    sequencial = registro.get("sequencialContrato")
+    cnpj_digitos = re.sub(r"\D", "", str(cnpj or ""))
+    if not cnpj_digitos or not ano or sequencial is None:
+        return None
+    try:
+        sequencial_numero = int(sequencial)
+        ano_numero = int(ano)
+    except (TypeError, ValueError):
+        return None
+    return "https://pncp.gov.br/app/contratos/{}/{}/{}".format(
+        cnpj_digitos, ano_numero, sequencial_numero
+    )
+
+
+def _url_empenho_portal(codigo_documento: Any) -> Optional[str]:
+    """Página do documento de despesa no Portal da Transparência."""
+    codigo = re.sub(r"[^A-Za-z0-9]", "", str(codigo_documento or ""))
+    if not codigo:
+        return None
+    return "https://portaldatransparencia.gov.br/despesas/empenho/{}".format(codigo)
+
+
+def _resumir_registro_pncp(
+    registro: Dict[str, Any],
+    cnpj_orgao: Any = None,
+) -> Dict[str, Any]:
+    detalhes = _como_dict(registro.get("detalhesPortalTransparencia"))
+    detalhamento = _como_dict(detalhes.get("detalhamento"))
+    unidade = _como_dict(registro.get("unidadeOrgao"))
+    itens_empenho = detalhamento.get("itensEmpenho") or []
+    if not isinstance(itens_empenho, list):
+        itens_empenho = []
+    valor = _numero(detalhamento.get("valor"))
+    if valor is None:
+        valor = _numero(registro.get("valorGlobal"))
+    if valor is None:
+        valor = _numero(registro.get("valorInicial"))
+
+    return {
+        "numero": registro.get("numeroContratoEmpenho"),
+        "tipo": _como_dict(registro.get("tipoContrato")).get("nome"),
+        "fornecedor": detalhamento.get("nomeFavorecido")
+        or registro.get("nomeRazaoSocialFornecedor"),
+        "cnpj": detalhamento.get("codigoFavorecido") or registro.get("niFornecedor"),
+        "unidade_codigo": detalhamento.get("codigoUg") or unidade.get("codigoUnidade"),
+        "unidade_nome": detalhamento.get("ug") or unidade.get("nomeUnidade"),
+        "objeto": registro.get("objetoContrato"),
+        "valor": valor,
+        "pncp_url": _url_empenho_pncp(registro, cnpj_orgao),
+        "portal_url": _url_empenho_portal(detalhes.get("codigoDocumento")),
+        "situacao": _como_dict(registro.get("situacao_empenho")).get("situacao"),
+        "situacao_motivo": _como_dict(registro.get("situacao_empenho")).get("motivo"),
+        "situacao_diferenca": _numero(
+            _como_dict(registro.get("situacao_empenho")).get("diferenca")
+        ),
+        "portal_status": detalhes.get("status") or "nao_consultado",
+        "portal_motivo": detalhes.get("mensagem")
+        or detalhes.get("motivo")
+        or detalhes.get("erro"),
+        "itens_portal": [
+            {
+                "descricao": item.get("descricao"),
+                "valor": _numero(item.get("valorAtual")),
+            }
+            for item in itens_empenho
+            if isinstance(item, dict)
+        ],
+    }
 
 
 def _preparar_relatorio(
@@ -87,8 +167,9 @@ def _preparar_relatorio(
     origem_organ_por_empenho = {}
     consome_saldo_por_empenho = {}
     for registro in dados.get("empenhos", []):
-        detalhes = registro.get("detalhesPortalTransparencia", {}).get("detalhamento", {})
-        unidade_pncp = registro.get("unidadeOrgao") or {}
+        detalhes_portal = _como_dict(registro.get("detalhesPortalTransparencia"))
+        detalhes = _como_dict(detalhes_portal.get("detalhamento"))
+        unidade_pncp = _como_dict(registro.get("unidadeOrgao"))
         chave = _chave_registro(registro)
         unidades_gestoras_por_empenho[chave] = {
             "codigo": detalhes.get("codigoUg") or unidade_pncp.get("codigoUnidade"),
@@ -134,11 +215,8 @@ def _preparar_relatorio(
             quantidade_publicada = _numero(empenho_item.get("quantidade"))
             if quantidade_publicada is not None:
                 quantidade = quantidade_publicada
-                quantidade_divergente = False
             else:
-                quantidade, quantidade_divergente = _quantidade_empenhada(
-                    valor_empenhado, valor_unitario
-                )
+                quantidade = _quantidade_empenhada(valor_empenhado, valor_unitario)
             consome = consome_saldo_por_empenho.get(chave_empenho, True)
             origem_organ = origem_organ_por_empenho.get(chave_empenho, "original")
 
@@ -169,7 +247,6 @@ def _preparar_relatorio(
                     "fornecedor": empenho_item.get("nome_fornecedor"),
                     "valor": valor_empenhado,
                     "quantidade_estimada": quantidade,
-                    "quantidade_divergente": quantidade_divergente,
                     "quantidade_origem": (
                         "contratos_gov"
                         if quantidade_publicada is not None
@@ -198,7 +275,7 @@ def _preparar_relatorio(
         soma_empenhada += total_empenhado_item
 
         if possui_quantidade_empenhada:
-            quantidade_empenhada_estimada = quantidade_empenhada_item
+            quantidade_empenhada_estimada = round(quantidade_empenhada_item, 3)
         elif not linhas_que_consomem_saldo:
             quantidade_empenhada_estimada = 0
         else:
@@ -219,7 +296,7 @@ def _preparar_relatorio(
                 "valor_empenhado": total_empenhado_item,
                 "valor_empenhado_adesao": valor_empenhado_adesao,
                 "valor_empenhado_indefinido": valor_empenhado_indefinido,
-                "quantidade_empenhada_adesao": quantidade_empenhada_adesao,
+                "quantidade_empenhada_adesao": round(quantidade_empenhada_adesao, 3),
                 "resultados": [
                     {
                         "fornecedor": resultado.get("nomeRazaoSocialFornecedor"),
@@ -260,6 +337,14 @@ def _preparar_relatorio(
         quantidade_registros_portal = sum(
             1 for origem in registros_por_origem if origem != "pncp"
         )
+    registros_pncp = [
+        _resumir_registro_pncp(
+            registro,
+            (dados.get("chaves_integracao") or {}).get("cnpj_orgao"),
+        )
+        for registro in dados.get("empenhos", [])
+        if (registro.get("origem") or "pncp") == "pncp"
+    ]
 
     if gerado_em:
         try:
@@ -279,6 +364,8 @@ def _preparar_relatorio(
         "quantidade_registros": dados.get("quantidade_empenhos", 0),
         "quantidade_registros_pncp": quantidade_registros_pncp,
         "quantidade_registros_portal": quantidade_registros_portal,
+        "registros_pncp": registros_pncp,
+        "situacoes_empenhos": dados.get("situacoes_empenhos") or {},
         "quantidade_documentos_descartados": len(
             dados.get("empenhos_nao_confirmados", [])
         ),
@@ -309,9 +396,9 @@ _HTML = r"""<!doctype html>
 .cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:18px 0}.card,.panel{background:var(--white);border:1px solid var(--line);border-radius:12px;box-shadow:0 2px 8px #18345608}.card{padding:16px 18px}.card .label{font-size:12px;color:var(--muted)}.card .value{font-size:22px;font-weight:700;margin:4px 0}.card .sub{font-size:11px;color:var(--muted)}
 .panel{padding:18px;margin:16px 0}.panel h2{margin:0 0 12px;font-size:18px}.note{border-left:4px solid #e6a23c;background:#fff8e9;padding:12px 14px;border-radius:4px;color:#614819;margin:14px 0}
 .status-filters{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.status-filters button{border:1px solid var(--line);border-radius:20px;background:white;color:var(--ink);padding:7px 12px;font:inherit;font-size:12px;cursor:pointer}.status-filters button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:white}.status-filters button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
-.toolbar{display:flex;gap:12px;align-items:center;margin:10px 0 14px;flex-wrap:wrap}.toolbar input{flex:1;min-width:220px;padding:10px 12px;border:1px solid #c9d4e2;border-radius:8px;font:inherit}.toolbar button{border:0;border-radius:8px;background:var(--blue);color:white;padding:10px 14px;font:inherit;cursor:pointer}.toolbar button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}.count{color:var(--muted);font-size:12px}
+.toolbar{display:flex;gap:12px;align-items:center;margin:10px 0 14px;flex-wrap:wrap}.toolbar input{flex:1;min-width:220px;padding:10px 12px;border:1px solid #c9d4e2;border-radius:8px;font:inherit}.toolbar button{border:0;border-radius:8px;background:var(--blue);color:white;padding:10px 14px;font:inherit;cursor:pointer}.toolbar button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}.retry-form{display:inline-flex;margin:0}.retry-form button{background:var(--amber)}.count{color:var(--muted);font-size:12px}
 .table-wrap{overflow:auto;border:1px solid var(--line);border-radius:9px}table{border-collapse:collapse;width:100%;min-width:1120px;background:white}th{position:sticky;top:0;background:#edf3fa;color:#314963;text-align:right;font-size:11px;text-transform:uppercase;letter-spacing:.04em;padding:11px 10px;border-bottom:1px solid var(--line);white-space:nowrap;cursor:pointer;user-select:none}th:first-child,td:first-child,th:nth-child(2),td:nth-child(2){text-align:left}th:focus-visible{outline:2px solid var(--blue);outline-offset:-2px}th[aria-sort="ascending"]::after{content:" ▲";color:var(--blue)}th[aria-sort="descending"]::after{content:" ▼";color:var(--blue)}td{padding:10px;border-bottom:1px solid #e9eef4;text-align:right;vertical-align:top}tr.item-row{cursor:pointer}tr.item-row:hover{background:#f7fbff}.item-name{font-weight:600;min-width:230px}.item-name small{display:block;color:var(--muted);font-weight:400;margin-top:3px}.num{font-variant-numeric:tabular-nums;white-space:nowrap}.detail-row{display:none;background:#f8fafc}.detail-row.open{display:table-row}.detail-cell{text-align:left!important;padding:16px 20px!important}.detail-grid{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,7fr);gap:16px}.detail-box{border:1px solid var(--line);background:white;border-radius:8px;padding:12px}.detail-box h3{margin:0 0 8px;font-size:13px}.detail-box p{margin:4px 0}.detail-table{min-width:600px;font-size:12px}.detail-table th,.detail-table td{text-align:left;padding:7px}.badge{display:inline-block;border-radius:20px;padding:2px 8px;background:#e6f4f1;color:#12695e;font-size:11px}.badge.pending{background:#fff0d6;color:var(--amber)}.badge.no{background:#fbe9e8;color:var(--red)}.bar{height:5px;background:#e7edf5;border-radius:5px;margin-top:5px;overflow:hidden}.bar span{display:block;height:100%;background:var(--teal)}
-.foot{color:var(--muted);font-size:11px;margin:16px 2px}.empty{text-align:center;color:var(--muted);padding:26px}.source-list{display:flex;gap:8px;flex-wrap:wrap}.source-list span{background:#edf3fa;border-radius:5px;padding:4px 8px;font-size:11px}
+.foot{color:var(--muted);font-size:11px;margin:16px 2px}.empty{text-align:center;color:var(--muted);padding:26px}.source-list{display:flex;gap:8px;flex-wrap:wrap}.source-list span{background:#edf3fa;border-radius:5px;padding:4px 8px;font-size:11px}#pncp-records-table th,#pncp-records-table td{text-align:left}#pncp-records-table td:nth-child(4){min-width:280px;overflow-wrap:anywhere}.muted{color:var(--muted);font-size:11px;margin-top:2px}details.panel>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:18px;font-weight:700}details.panel>summary::-webkit-details-marker{display:none}details.panel>summary::before{content:"▸";color:var(--blue);font-size:14px}details.panel[open]>summary::before{content:"▾"}details.panel>summary:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:4px}details.panel[open]>summary{margin-bottom:12px}.summary-count{font-size:12px;font-weight:400;color:var(--muted)}.link-cell{white-space:nowrap}.link-cell a{display:inline-block;margin:0 6px 2px 0;font-size:11px}.link-cell span{color:var(--muted);font-size:11px}
 .report-footer{display:flex;flex-wrap:wrap;gap:6px 24px;margin:16px 2px;color:var(--muted);font-size:12px}
 @media(max-width:900px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.detail-grid{grid-template-columns:1fr}}
 @media(max-width:520px){.wrap{padding:14px 10px 30px}.hero{padding:21px 18px}.cards{grid-template-columns:1fr 1fr;gap:8px}.card{padding:12px}.card .value{font-size:17px}.panel{padding:12px}.meta{display:grid;gap:4px}}
@@ -328,7 +415,7 @@ _HTML = r"""<!doctype html>
   </header>
   <section class="cards" id="cards"></section>
   <div class="note" id="collection-warning" hidden></div>
-  <div class="note"><strong>Como interpretar:</strong> “Quantidade empenhada (estimada)” usa a quantidade publicada na Contratos.gov.br quando disponível; caso contrário, é calculada dividindo o valor das linhas de empenho pelo preço unitário homologado e <strong>arredondada para um número inteiro</strong> (a estimativa não tem precisão real). Quando a divisão não resulta em múltiplo inteiro do preço unitário, a quantidade aparece com “≈” e indica que o preço efetivo difere do homologado. Só são somadas linhas em que o número do item e o CNPJ do fornecedor correspondem ao resultado homologado. Valores/quantidades sem correspondência ficam separados como pendentes.</div>
+  <div class="note"><strong>Como interpretar:</strong> “Quantidade empenhada (estimada)” usa a quantidade publicada na Contratos.gov.br quando disponível; caso contrário, é calculada dividindo o valor das linhas de empenho pelo preço unitário homologado, com as casas decimais reais do resultado. Só são somadas linhas em que o número do item e o CNPJ do fornecedor correspondem ao resultado homologado. Valores/quantidades sem correspondência ficam separados como pendentes.</div>
     <div class="note"><strong>Adesão e compra compartilhada:</strong> em compras compartilhadas ou com adesão, o empenho pode ter processo e unidade gestora diferentes dos da compra. Empenhos marcados como <em>adesão posterior</em> — ou com origem de órgão <em>indefinida</em> — <strong>não</strong> reduzem a quantidade homologada nem entram na execução; eles aparecem em separado. Empenhos classificados como <em>original</em> (participante na origem) consomem o saldo normalmente.</div>
   <section class="panel">
     <h2>Itens da contratação</h2>
@@ -342,15 +429,23 @@ _HTML = r"""<!doctype html>
       <button type="button" data-item-filter="empenhado_origem_indefinida" aria-pressed="false">Origem indefinida</button>
       <button type="button" data-item-filter="pendente" aria-pressed="false">Resultados pendentes</button>
     </div>
-    <div class="toolbar"><input id="search" type="search" placeholder="Filtrar por item, descrição, fornecedor ou empenho…" aria-label="Filtrar itens"><span class="count" id="count"></span><button type="button" id="download-csv">Baixar CSV completo</button></div>
+    <div class="toolbar"><input id="search" type="search" placeholder="Filtrar por item, descrição, fornecedor ou empenho…" aria-label="Filtrar itens"><span class="count" id="count"></span><!-- admin-retry --><button type="button" id="download-csv">Baixar CSV completo</button></div>
     <div class="table-wrap"><table id="items-table"><thead><tr>
       <th>Item</th><th>Descrição / unidade</th><th>Qtd. licitada</th><th>Qtd. homologada</th><th>Qtd. empenhada*</th><th>Saldo do item</th><th>Estimado</th><th>Homologado</th><th>Empenhado mapeado</th><th>Execução</th>
     </tr></thead><tbody id="items"></tbody></table></div>
     <p class="foot">Clique em uma linha para abrir fornecedores e empenhos. Quantidades de unidades diferentes não são somadas em um único total.</p>
   </section>
+  <details class="panel" id="pncp-records-panel" hidden>
+    <summary><span class="summary-title">Registros recebidos da aba Contratos/Empenhos do PNCP</span> <span class="summary-count" id="pncp-records-count"></span></summary>
+    <p class="foot">Todos os registros retornados pelo PNCP são preservados aqui. O Portal da Transparência apenas complementa os itens; a falta desse detalhamento não remove o registro PNCP nem o associa artificialmente a um item. Cada linha traz o atalho para o registro no PNCP e, quando houver, para o documento de despesa no Portal da Transparência.</p>
+    <div class="table-wrap"><table id="pncp-records-table"><thead><tr>
+      <th>Registro PNCP</th><th>Fornecedor</th><th>UG</th><th>Objeto publicado</th><th>Valor publicado</th><th>Situação verificada</th><th>Itens / detalhamento no Portal</th><th>Links</th>
+    </tr></thead><tbody id="pncp-records"></tbody></table></div>
+  </details>
   <footer class="report-footer" aria-label="Resumo dos registros">
     <span>Documentos descartados: <strong id="discarded-count"></strong></span>
     <span>Origem dos registros: <strong id="record-origins"></strong></span>
+    <span>Situação dos registros: <strong id="record-situations"></strong></span>
   </footer>
   <section class="panel">
     <h2>Fontes e critérios</h2>
@@ -366,9 +461,9 @@ const fmtQty=n=>n==null?'—':new Intl.NumberFormat('pt-BR',{maximumFractionDigi
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const origemLabels={pncp:'PNCP',portal_contrato:'Portal (contrato)',portal_licitacao:'Portal (licitação)',portal_favorecido:'Portal (favorecido)'};
 const origemLabel=valor=>origemLabels[valor]||(valor?String(valor):'—');
-const adesaoLabels={original:'Não (original)',propria_ug:'Não (própria UG)',adesao_posterior:'Sim (adesão posterior)',indefinido:'Indefinido'};
+const adesaoLabels={original:'Não',propria_ug:'Não (própria UG)',adesao_posterior:'Sim (adesão posterior)',indefinido:'Indefinido'};
 const adesaoLabel=e=>{
- if(e.origem_organ==='original'&&e.flag_adesao_ausente)return 'Não (sem flag no PNCP)';
+ if(e.origem_organ==='original'&&e.flag_adesao_ausente)return 'Não';
  return adesaoLabels[e.origem_organ]||(e.consome_saldo===false?'Indefinido':'—');
 };
 const number=n=>Number.isFinite(Number(n))?Number(n):0;
@@ -497,11 +592,32 @@ const cards=[
 document.getElementById('cards').innerHTML=cards.map(c=>`<div class="card"><div class="label">${esc(c[0])}</div><div class="value">${esc(c[1])}</div><div class="sub">${esc(c[2])}</div></div>`).join('');
 document.getElementById('discarded-count').textContent=fmtQty(D.quantidade_documentos_descartados||0);
 document.getElementById('record-origins').textContent=`${fmtQty(D.quantidade_registros_pncp||0)} PNCP · ${fmtQty(D.quantidade_registros_portal||0)} Portal`;
+const pncpRecords=D.registros_pncp||[];
+document.getElementById('pncp-records-panel').hidden=!pncpRecords.length;
+document.getElementById('pncp-records-count').textContent=`(${fmtQty(pncpRecords.length)} registro(s))`;
+const situacaoEmpenhoLabels={normal:'Sem alteração',reforcado:'Reforçado',anulado:'Anulado parcialmente',cancelado:'Cancelado',alterado:'Retificado',nao_localizado:'Não localizado no Portal',nao_aplicavel:'Sem nota de empenho',indeterminado:'Não verificado'};
+document.getElementById('pncp-records').innerHTML=pncpRecords.map(record=>{
+ const items=(record.itens_portal||[]).map(item=>`<div>${esc(item.descricao||'Item sem descrição')} · ${fmtMoney(item.valor)}</div>`).join('');
+ const statusLabels={ok:'Detalhamento obtido',nao_encontrado:'Detalhamento não localizado',nao_consultado:'Não consultado',erro:'Erro no detalhamento'};
+ const detail=items||`<span class="muted">${esc(statusLabels[record.portal_status]||record.portal_status||'Sem detalhamento')}</span>`;
+ const reason=record.portal_motivo?`<div class="muted">${esc(record.portal_motivo)}</div>`:'';
+ const situacao=record.situacao||'indeterminado';
+ const classeSituacao=situacao==='normal'?'':situacao==='nao_localizado'||situacao==='cancelado'||situacao==='anulado'?' badge no':' badge pending';
+ const diferenca=number(record.situacao_diferenca)?`<div class="muted">Diferença: ${fmtMoney(record.situacao_diferenca)}</div>`:'';
+ const situacaoHtml=`<span class="badge${classeSituacao}">${esc(situacaoEmpenhoLabels[situacao]||situacao)}</span>${record.situacao_motivo?`<div class="muted">${esc(record.situacao_motivo)}</div>`:''}${diferenca}`;
+ const links=[];if(record.pncp_url)links.push(`<a href="${esc(record.pncp_url)}" target="_blank" rel="noopener noreferrer">PNCP</a>`);if(record.portal_url)links.push(`<a href="${esc(record.portal_url)}" target="_blank" rel="noopener noreferrer">Portal</a>`);const linksHtml=links.length?links.join(''):'<span>—</span>';
+ return `<tr><td>${esc(record.numero||'—')}${record.tipo?`<div class="muted">${esc(record.tipo)}</div>`:''}</td><td>${esc(record.fornecedor||'—')}<div class="muted">${esc(record.cnpj||'')}</div></td><td>${esc(record.unidade_codigo||'—')}<div class="muted">${esc(record.unidade_nome||'')}</div></td><td>${esc(record.objeto||'—')}</td><td>${fmtMoney(record.valor)}</td><td>${situacaoHtml}</td><td>${detail}${reason}</td><td class="link-cell">${linksHtml}</td></tr>`;
+}).join('');
+window.addEventListener('beforeprint',()=>{const painel=document.getElementById('pncp-records-panel');if(painel&&!painel.hidden)painel.open=true;});
+const situacoesRegistros=D.situacoes_empenhos||{};
+document.getElementById('record-situations').textContent=Object.keys(situacoesRegistros).length
+ ?Object.entries(situacoesRegistros).map(([chave,valor])=>`${fmtQty(valor)} ${(situacaoEmpenhoLabels[chave]||chave).toLowerCase()}`).join(' · ')
+ :'—';
 const tbody=document.getElementById('items');
 let selectedItemFilter='todos';
 function detailHtml(i){
  const suppliers=(i.resultados||[]).map(r=>`<div class="detail-box"><h3>${esc(r.fornecedor||'Fornecedor não informado')}</h3><p>CNPJ: ${esc(r.cnpj||'—')}</p><p>Data da homologação: ${esc(r.data_homologacao||'—')}</p><p>Quantidade homologada: ${fmtQty(r.quantidade)} ${esc(i.unidade)}</p><p>Preço unitário: ${fmtMoney(r.valor_unitario)} · Total: ${fmtMoney(r.valor_total)}</p>${r.url_ata?`<p><a href="${esc(r.url_ata)}" target="_blank" rel="noopener noreferrer">Ata de registro de preços</a></p>`:''}</div>`).join('')||'<div class="detail-box">Sem resultado homologado publicado.</div>';
- const emps=(i.empenhos||[]).map(e=>`<tr><td>${esc(e.numero)}</td><td>${esc(e.unidade_gestora_codigo||'—')}</td><td>${esc(e.unidade_gestora_nome||'—')}</td><td>${esc(e.data||'—')}</td><td>${esc(e.fornecedor||'—')}</td><td data-sort-value="${esc(e.valor)}">${fmtMoney(e.valor)}</td><td data-sort-value="${esc(e.quantidade_estimada)}">${fmtQty(e.quantidade_estimada)}${e.quantidade_divergente?' ≈':''} ${esc(i.unidade)}</td><td>${esc(e.descricao||'—')}</td><td>${esc(origemLabel(e.origem))}</td><td>${esc(adesaoLabel(e))}</td><td>${e.codigo_documento?`<a href="https://portaldatransparencia.gov.br/despesas/empenho/${encodeURIComponent(e.codigo_documento)}" target="_blank" rel="noopener noreferrer">Abrir</a>`:'—'}</td></tr>`).join('');
+ const emps=(i.empenhos||[]).map(e=>`<tr><td>${esc(e.numero)}</td><td>${esc(e.unidade_gestora_codigo||'—')}</td><td>${esc(e.unidade_gestora_nome||'—')}</td><td>${esc(e.data||'—')}</td><td>${esc(e.fornecedor||'—')}</td><td data-sort-value="${esc(e.valor)}">${fmtMoney(e.valor)}</td><td data-sort-value="${esc(e.quantidade_estimada)}">${fmtQty(e.quantidade_estimada)} ${esc(i.unidade)}</td><td>${esc(e.descricao||'—')}</td><td>${esc(origemLabel(e.origem))}</td><td>${esc(adesaoLabel(e))}</td><td>${e.codigo_documento?`<a href="https://portaldatransparencia.gov.br/despesas/empenho/${encodeURIComponent(e.codigo_documento)}" target="_blank" rel="noopener noreferrer">Abrir</a>`:'—'}</td></tr>`).join('');
  const candidates=[...(i.candidatos_sem_item||[]),...(i.candidatos_fornecedor_divergente||[])];
  return `<div class="detail-grid"><div><h3>Resultado(s) homologado(s)</h3>${suppliers}</div><div><h3>Empenhos vinculados ao item</h3>${emps?`<div class="table-wrap"><table class="detail-table"><thead><tr><th>Empenho</th><th>UASG</th><th>Unidade</th><th>Emissão</th><th>Fornecedor</th><th>Valor da linha</th><th>Qtd. estimada</th><th>Descrição do item no empenho</th><th>Origem</th><th>Adesão</th><th>Portal</th></tr></thead><tbody>${emps}</tbody></table></div>`:'<div class="detail-box">Nenhum empenho com item e fornecedor compatíveis.</div>'}</div></div>${candidates.length?`<div class="note"><strong>Não contabilizados:</strong> ${candidates.map(x=>esc(x.numero_empenho)).join(', ')} — sem correspondência suficiente para este item.</div>`:''}`;
 }
@@ -552,7 +668,7 @@ function gerarCsv(){
   ];
  const empenhos=(status==='empenhado'||status==='empenhado_por_adesao'||status==='empenhado_origem_indefinida')&&item.empenhos.length?item.empenhos:[null];
   empenhos.forEach(empenho=>{
-   const origemQuantidade=empenho?`${empenho.quantidade_origem||'estimada'}${empenho.quantidade_divergente?' (aprox.)':''}`:null;
+   const origemQuantidade=empenho?(empenho.quantidade_origem||'estimada'):null;
    linhas.push([...base,
     empenho?.numero,empenho?.unidade_gestora_codigo,empenho?.unidade_gestora_nome,
     empenho?.data,empenho?.fornecedor,empenho?.valor,

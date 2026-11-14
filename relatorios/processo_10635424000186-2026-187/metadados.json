@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2026/000187",
+  "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2026/187",
   "criado_em": "2026-11-12T09:32:53-03:00",
-  "atualizado_em": "2026-11-14T05:42:04-03:00",
+  "atualizado_em": "2026-11-14T12:46:32-03:00",
   "chaves_integracao": {
     "cnpj_orgao": "10635424000186",
     "uasg_codigo": "158125",
@@ -76,5 +76,7 @@
       "exibicao": "R$ 10.161,88",
       "descricao": "1 de 1 registros com detalhamento"
     }
-  ]
+  ],
+  "ultima_duracao_segundos": 138.1,
+  "buscar_empenhos_portal": true
 }

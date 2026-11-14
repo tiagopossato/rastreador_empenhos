@@ -1,12 +1,12 @@
 {
   "schema_version": 2,
-  "quantidade_relatorios": 8,
+  "quantidade_relatorios": 11,
   "relatorios": [
     {
       "pasta": "relatorio_compra_90027_2025",
       "arquivo_html": "relatorio_compra_90027_2025.html",
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000272",
-      "atualizado_em": "2026-11-14T05:52:45-03:00",
+      "atualizado_em": "2026-11-14T11:52:44-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -78,18 +78,19 @@
           "rotulo": "Empenhado mapeado",
           "valor": 81740.11,
           "exibicao": "R$ 81.740,11",
-          "descricao": "74 de 75 registros com detalhamento"
+          "descricao": "73 de 74 registros com detalhamento"
         }
       ],
       "id": "10635424000186-2025-272",
       "status": "atualizado",
-      "erro": null
+      "erro": null,
+      "buscar_empenhos_portal": false
     },
     {
       "pasta": "relatorio_compra_90059_2025",
       "arquivo_html": "relatorio_compra_90059_2025.html",
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000282",
-      "atualizado_em": "2026-11-14T08:24:29-03:00",
+      "atualizado_em": "2026-11-14T11:53:50-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -117,15 +118,15 @@
         {
           "chave": "itens_empenhados",
           "rotulo": "Itens empenhados",
-          "valor": 200,
-          "exibicao": "200",
+          "valor": 209,
+          "exibicao": "209",
           "descricao": "Execução acima de 0%"
         },
         {
           "chave": "itens_nao_empenhados",
           "rotulo": "Itens não empenhados",
-          "valor": 129,
-          "exibicao": "129",
+          "valor": 120,
+          "exibicao": "120",
           "descricao": "Execução igual a 0%, excluídos desertos"
         },
         {
@@ -159,21 +160,22 @@
         {
           "chave": "empenhado_mapeado",
           "rotulo": "Empenhado mapeado",
-          "valor": 161754.76000000007,
-          "exibicao": "R$ 161.754,76",
-          "descricao": "103 de 111 registros com detalhamento"
+          "valor": 174460.43000000005,
+          "exibicao": "R$ 174.460,43",
+          "descricao": "110 de 110 registros com detalhamento"
         }
       ],
       "id": "10635424000186-2025-282",
       "status": "atualizado",
-      "erro": null
+      "erro": null,
+      "buscar_empenhos_portal": false
     },
     {
       "id": "10635424000186-2024-343",
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2024/000343",
       "pasta": "processo_10635424000186-2024-343",
       "status": "atualizado",
-      "atualizado_em": "2026-11-13T08:48:00-03:00",
+      "atualizado_em": "2026-11-14T12:27:41-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -249,14 +251,15 @@
         }
       ],
       "erro": null,
-      "arquivo_html": "relatorio_compra_90065_2024.html"
+      "arquivo_html": "relatorio_compra_90065_2024.html",
+      "buscar_empenhos_portal": false
     },
     {
       "id": "10635424000186-2025-187",
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000187",
       "pasta": "processo_10635424000186-2025-187",
       "status": "atualizado",
-      "atualizado_em": "2026-11-13T08:48:42-03:00",
+      "atualizado_em": "2026-11-14T11:55:34-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -284,15 +287,15 @@
         {
           "chave": "itens_empenhados",
           "rotulo": "Itens empenhados",
-          "valor": 51,
-          "exibicao": "51",
+          "valor": 52,
+          "exibicao": "52",
           "descricao": "Execução acima de 0%"
         },
         {
           "chave": "itens_nao_empenhados",
           "rotulo": "Itens não empenhados",
-          "valor": 73,
-          "exibicao": "73",
+          "valor": 72,
+          "exibicao": "72",
           "descricao": "Execução igual a 0%, excluídos desertos"
         },
         {
@@ -326,20 +329,21 @@
         {
           "chave": "empenhado_mapeado",
           "rotulo": "Empenhado mapeado",
-          "valor": 67886.68000000001,
-          "exibicao": "R$ 67.886,68",
-          "descricao": "48 de 48 registros com detalhamento"
+          "valor": 71214.68000000001,
+          "exibicao": "R$ 71.214,68",
+          "descricao": "49 de 49 registros com detalhamento"
         }
       ],
       "erro": null,
-      "arquivo_html": "relatorio_compra_90026_2025.html"
+      "arquivo_html": "relatorio_compra_90026_2025.html",
+      "buscar_empenhos_portal": false
     },
     {
       "id": "10635424000186-2026-140",
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2026/000140",
       "pasta": "processo_10635424000186-2026-140",
       "status": "atualizado",
-      "atualizado_em": "2026-11-13T08:49:12-03:00",
+      "atualizado_em": "2026-11-14T11:55:45-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -367,15 +371,15 @@
         {
           "chave": "itens_empenhados",
           "rotulo": "Itens empenhados",
-          "valor": 18,
-          "exibicao": "18",
+          "valor": 22,
+          "exibicao": "22",
           "descricao": "Execução acima de 0%"
         },
         {
           "chave": "itens_nao_empenhados",
           "rotulo": "Itens não empenhados",
-          "valor": 84,
-          "exibicao": "84",
+          "valor": 80,
+          "exibicao": "80",
           "descricao": "Execução igual a 0%, excluídos desertos"
         },
         {
@@ -409,20 +413,21 @@
         {
           "chave": "empenhado_mapeado",
           "rotulo": "Empenhado mapeado",
-          "valor": 76019.59000000001,
-          "exibicao": "R$ 76.019,59",
-          "descricao": "14 de 14 registros com detalhamento"
+          "valor": 88966.09,
+          "exibicao": "R$ 88.966,09",
+          "descricao": "16 de 16 registros com detalhamento"
         }
       ],
       "erro": null,
-      "arquivo_html": "relatorio_compra_90149_2026.html"
+      "arquivo_html": "relatorio_compra_90149_2026.html",
+      "buscar_empenhos_portal": false
     },
     {
       "id": "10635424000186-2026-115",
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2026/000115",
       "pasta": "processo_10635424000186-2026-115",
-      "status": "parcial",
-      "atualizado_em": "2026-11-13T08:50:47-03:00",
+      "status": "atualizado",
+      "atualizado_em": "2026-11-14T11:56:04-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -443,15 +448,15 @@
         {
           "chave": "itens_homologados",
           "rotulo": "Itens homologados",
-          "valor": 199,
-          "exibicao": "199",
+          "valor": 200,
+          "exibicao": "200",
           "descricao": "Itens empenhados + não empenhados"
         },
         {
           "chave": "itens_empenhados",
           "rotulo": "Itens empenhados",
-          "valor": 64,
-          "exibicao": "64",
+          "valor": 65,
+          "exibicao": "65",
           "descricao": "Execução acima de 0%"
         },
         {
@@ -471,8 +476,8 @@
         {
           "chave": "itens_resultados_pendentes",
           "rotulo": "Resultados pendentes",
-          "valor": 1,
-          "exibicao": "1",
+          "valor": 0,
+          "exibicao": "0",
           "descricao": "Falha ao consultar resultados no PNCP"
         },
         {
@@ -485,27 +490,28 @@
         {
           "chave": "valor_homologado",
           "rotulo": "Valor homologado",
-          "valor": 6465121.422799999,
-          "exibicao": "R$ 6.465.121,42",
+          "valor": 6531509.422799999,
+          "exibicao": "R$ 6.531.509,42",
           "descricao": "Soma dos resultados homologados"
         },
         {
           "chave": "empenhado_mapeado",
           "rotulo": "Empenhado mapeado",
-          "valor": 456998.1999999999,
-          "exibicao": "R$ 456.998,20",
+          "valor": 466482.1999999999,
+          "exibicao": "R$ 466.482,20",
           "descricao": "32 de 32 registros com detalhamento"
         }
       ],
       "erro": null,
-      "arquivo_html": "relatorio_compra_90098_2026.html"
+      "arquivo_html": "relatorio_compra_90098_2026.html",
+      "buscar_empenhos_portal": false
     },
     {
       "id": "10635424000186-2026-187",
-      "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2026/000187",
+      "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2026/187",
       "pasta": "processo_10635424000186-2026-187",
       "status": "atualizado",
-      "atualizado_em": "2026-11-14T05:42:04-03:00",
+      "atualizado_em": "2026-11-14T12:46:32-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -581,14 +587,15 @@
         }
       ],
       "erro": null,
-      "arquivo_html": "relatorio_compra_404_2026.html"
+      "arquivo_html": "relatorio_compra_404_2026.html",
+      "buscar_empenhos_portal": false
     },
     {
       "id": "10635424000186-2026-197",
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2026/197",
       "pasta": "processo_10635424000186-2026-197",
       "status": "atualizado",
-      "atualizado_em": "2026-11-14T09:15:37-03:00",
+      "atualizado_em": "2026-11-14T11:56:08-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -664,7 +671,260 @@
         }
       ],
       "erro": null,
-      "arquivo_html": "relatorio_compra_418_2026.html"
+      "arquivo_html": "relatorio_compra_418_2026.html",
+      "buscar_empenhos_portal": false
+    },
+    {
+      "id": "10635424000186-2025-102",
+      "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000102",
+      "pasta": "processo_10635424000186-2025-102",
+      "status": "atualizado",
+      "atualizado_em": "2026-11-14T12:26:18-03:00",
+      "chaves_integracao": {
+        "cnpj_orgao": "10635424000186",
+        "uasg_codigo": "158125",
+        "uasg_nome": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "numero_compra": "90275",
+        "ano_compra": 2025,
+        "numero_controle_pncp": "10635424000186-1-000102/2025"
+      },
+      "objeto": "O objeto da presente licitação é Registro de preço da proposta mais vantajosa para eventual aquisição de Equipamentos, Insumos Agrícolas e Sementes para atender as necessidades do Instituto Federal Catarinense – Campus Camboriú, Campus Abelardo Luz, Campus Araquari, Campus Concórdia, Campus Luzerna, Campus Rio do Sul, Campus Santa rosa do Sul e Campus Videira e demais órgãos participantes conforme condições, quantidades e exigências estabelecidas neste Edital e seus anexos.",
+      "resumo_cards": [
+        {
+          "chave": "itens",
+          "rotulo": "Itens",
+          "valor": 164,
+          "exibicao": "164",
+          "descricao": "Itens publicados no edital"
+        },
+        {
+          "chave": "itens_homologados",
+          "rotulo": "Itens homologados",
+          "valor": 132,
+          "exibicao": "132",
+          "descricao": "Itens empenhados + não empenhados"
+        },
+        {
+          "chave": "itens_empenhados",
+          "rotulo": "Itens empenhados",
+          "valor": 113,
+          "exibicao": "113",
+          "descricao": "Execução acima de 0%"
+        },
+        {
+          "chave": "itens_nao_empenhados",
+          "rotulo": "Itens não empenhados",
+          "valor": 19,
+          "exibicao": "19",
+          "descricao": "Execução igual a 0%, excluídos desertos"
+        },
+        {
+          "chave": "itens_desertos",
+          "rotulo": "Itens desertos",
+          "valor": 32,
+          "exibicao": "32",
+          "descricao": "Valor homologado igual a R$ 0,00"
+        },
+        {
+          "chave": "itens_resultados_pendentes",
+          "rotulo": "Resultados pendentes",
+          "valor": 0,
+          "exibicao": "0",
+          "descricao": "Falha ao consultar resultados no PNCP"
+        },
+        {
+          "chave": "valor_estimado",
+          "rotulo": "Valor estimado",
+          "valor": 1345524.1000000015,
+          "exibicao": "R$ 1.345.524,10",
+          "descricao": "Soma dos valores estimados por item"
+        },
+        {
+          "chave": "valor_homologado",
+          "rotulo": "Valor homologado",
+          "valor": 1110394.0899999996,
+          "exibicao": "R$ 1.110.394,09",
+          "descricao": "Soma dos resultados homologados"
+        },
+        {
+          "chave": "empenhado_mapeado",
+          "rotulo": "Empenhado mapeado",
+          "valor": 261730.41999999987,
+          "exibicao": "R$ 261.730,42",
+          "descricao": "114 de 114 registros com detalhamento"
+        }
+      ],
+      "buscar_empenhos_portal": false,
+      "erro": null,
+      "arquivo_html": "relatorio_compra_90275_2025.html"
+    },
+    {
+      "id": "10635424000186-2025-168",
+      "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000168",
+      "pasta": "processo_10635424000186-2025-168",
+      "status": "atualizado",
+      "atualizado_em": "2026-11-14T12:27:20-03:00",
+      "chaves_integracao": {
+        "cnpj_orgao": "10635424000186",
+        "uasg_codigo": "158125",
+        "uasg_nome": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "numero_compra": "90168",
+        "ano_compra": 2025,
+        "numero_controle_pncp": "10635424000186-1-000168/2025"
+      },
+      "objeto": "Eventual aquisição de materiais e equipamentos de automação para atender as necessidades dos diversos campi do Instituto Federal Catarinense.",
+      "resumo_cards": [
+        {
+          "chave": "itens",
+          "rotulo": "Itens",
+          "valor": 300,
+          "exibicao": "300",
+          "descricao": "Itens publicados no edital"
+        },
+        {
+          "chave": "itens_homologados",
+          "rotulo": "Itens homologados",
+          "valor": 268,
+          "exibicao": "268",
+          "descricao": "Itens empenhados + não empenhados"
+        },
+        {
+          "chave": "itens_empenhados",
+          "rotulo": "Itens empenhados",
+          "valor": 160,
+          "exibicao": "160",
+          "descricao": "Execução acima de 0%"
+        },
+        {
+          "chave": "itens_nao_empenhados",
+          "rotulo": "Itens não empenhados",
+          "valor": 108,
+          "exibicao": "108",
+          "descricao": "Execução igual a 0%, excluídos desertos"
+        },
+        {
+          "chave": "itens_desertos",
+          "rotulo": "Itens desertos",
+          "valor": 32,
+          "exibicao": "32",
+          "descricao": "Valor homologado igual a R$ 0,00"
+        },
+        {
+          "chave": "itens_resultados_pendentes",
+          "rotulo": "Resultados pendentes",
+          "valor": 0,
+          "exibicao": "0",
+          "descricao": "Falha ao consultar resultados no PNCP"
+        },
+        {
+          "chave": "valor_estimado",
+          "rotulo": "Valor estimado",
+          "valor": 1244736.1599999997,
+          "exibicao": "R$ 1.244.736,16",
+          "descricao": "Soma dos valores estimados por item"
+        },
+        {
+          "chave": "valor_homologado",
+          "rotulo": "Valor homologado",
+          "valor": 793810.8900000002,
+          "exibicao": "R$ 793.810,89",
+          "descricao": "Soma dos resultados homologados"
+        },
+        {
+          "chave": "empenhado_mapeado",
+          "rotulo": "Empenhado mapeado",
+          "valor": 116776.61000000004,
+          "exibicao": "R$ 116.776,61",
+          "descricao": "38 de 38 registros com detalhamento"
+        }
+      ],
+      "buscar_empenhos_portal": false,
+      "erro": null,
+      "arquivo_html": "relatorio_compra_90168_2025.html"
+    },
+    {
+      "id": "10635424000186-2026-100",
+      "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2026/100",
+      "pasta": "processo_10635424000186-2026-100",
+      "status": "atualizado",
+      "atualizado_em": "2026-11-14T12:59:59-03:00",
+      "chaves_integracao": {
+        "cnpj_orgao": "10635424000186",
+        "uasg_codigo": "158125",
+        "uasg_nome": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "numero_compra": "91050",
+        "ano_compra": 2026,
+        "numero_controle_pncp": "10635424000186-1-000100/2026"
+      },
+      "objeto": "Aquisição de materiais de consumo para o Institutto Federal Catarinense Campus Videira",
+      "resumo_cards": [
+        {
+          "chave": "itens",
+          "rotulo": "Itens",
+          "valor": 54,
+          "exibicao": "54",
+          "descricao": "Itens publicados no edital"
+        },
+        {
+          "chave": "itens_homologados",
+          "rotulo": "Itens homologados",
+          "valor": 44,
+          "exibicao": "44",
+          "descricao": "Itens empenhados + não empenhados"
+        },
+        {
+          "chave": "itens_empenhados",
+          "rotulo": "Itens empenhados",
+          "valor": 44,
+          "exibicao": "44",
+          "descricao": "Execução acima de 0%"
+        },
+        {
+          "chave": "itens_nao_empenhados",
+          "rotulo": "Itens não empenhados",
+          "valor": 0,
+          "exibicao": "0",
+          "descricao": "Execução igual a 0%, excluídos desertos"
+        },
+        {
+          "chave": "itens_desertos",
+          "rotulo": "Itens desertos",
+          "valor": 10,
+          "exibicao": "10",
+          "descricao": "Valor homologado igual a R$ 0,00"
+        },
+        {
+          "chave": "itens_resultados_pendentes",
+          "rotulo": "Resultados pendentes",
+          "valor": 0,
+          "exibicao": "0",
+          "descricao": "Falha ao consultar resultados no PNCP"
+        },
+        {
+          "chave": "valor_estimado",
+          "rotulo": "Valor estimado",
+          "valor": 32954.99999999999,
+          "exibicao": "R$ 32.955,00",
+          "descricao": "Soma dos valores estimados por item"
+        },
+        {
+          "chave": "valor_homologado",
+          "rotulo": "Valor homologado",
+          "valor": 16918.86,
+          "exibicao": "R$ 16.918,86",
+          "descricao": "Soma dos resultados homologados"
+        },
+        {
+          "chave": "empenhado_mapeado",
+          "rotulo": "Empenhado mapeado",
+          "valor": 16918.86,
+          "exibicao": "R$ 16.918,86",
+          "descricao": "9 de 9 registros com detalhamento"
+        }
+      ],
+      "buscar_empenhos_portal": false,
+      "erro": null,
+      "arquivo_html": "relatorio_compra_91050_2026.html"
     }
   ]
 }
