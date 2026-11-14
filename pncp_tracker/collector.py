@@ -1,14 +1,50 @@
 import re
-from typing import Callable, Optional
+from concurrent.futures import ThreadPoolExecutor
+from typing import Any, Callable, Dict, List, Optional
 
 from .api_client import buscar_dados_compra, buscar_resultados_item, listar_itens
 from .constants import DEFAULT_PAGE_SIZE
 from .url_parser import extrair_parametros_url
 
+MAX_WORKERS_RESULTADOS = 6
+
+
+def _chave_cache(controle: Any, atualizacao: Any) -> str:
+    """Identifica o snapshot da compra para reutilizar a coleta quando nada mudou."""
+    if not controle or not atualizacao:
+        return ""
+    return f"{controle}|{atualizacao}"
+
+
+def _buscar_resultados(
+    cnpj: str,
+    ano: str,
+    sequencial: str,
+    itens: List[Dict[str, Any]],
+) -> List[Dict[str, Any]]:
+    """Consulta os resultados homologados em paralelo, preservando a ordem dos itens."""
+    itens_com_numero = [item for item in itens if item.get("numeroItem") is not None]
+
+    def consultar(item: Dict[str, Any]) -> Dict[str, Any]:
+        numero = item.get("numeroItem")
+        try:
+            item["resultadosHomologados"] = buscar_resultados_item(cnpj, ano, sequencial, numero)
+        except Exception as exc:
+            item["resultadosHomologados"] = []
+            item["erroResultadosHomologados"] = "{}: {}".format(type(exc).__name__, exc)
+        return item
+
+    if not itens_com_numero:
+        return itens
+    with ThreadPoolExecutor(max_workers=MAX_WORKERS_RESULTADOS) as pool:
+        list(pool.map(consultar, itens_com_numero))
+    return itens
+
 
 def baixar_dados_compra_pncp(
     url_pncp: str,
     on_progress: Optional[Callable[[str], None]] = None,
+    dados_anteriores: Optional[Dict[str, Any]] = None,
 ) -> dict:
     """Consulta os dados gerais da compra, os itens e os resultados homologados."""
     params = extrair_parametros_url(url_pncp)
@@ -25,6 +61,24 @@ def baixar_dados_compra_pncp(
         raise ValueError(
             "Cabeçalho da compra incompleto: número e ano da compra são obrigatórios."
         )
+
+    controle = dados_compra.get("numeroControlePNCP")
+    atualizacao = dados_compra.get("dataAtualizacaoGlobal")
+    chave_cache = _chave_cache(controle, atualizacao)
+    if (
+        dados_anteriores
+        and chave_cache
+        and dados_anteriores.get("chave_cache") == chave_cache
+        and isinstance(dados_anteriores.get("itens"), list)
+    ):
+        if on_progress is not None:
+            on_progress(
+                "PNCP sem alteração desde a última execução; reutilizando itens e resultados já coletados."
+            )
+        reutilizado = dict(dados_anteriores)
+        reutilizado["cache_reutilizado"] = True
+        return reutilizado
+
     itens_completos = []
     erros_resultados_itens = []
     pagina = 1
@@ -39,35 +93,30 @@ def baixar_dados_compra_pncp(
                 on_progress("O PNCP não retornou itens para esta compra.")
             break
 
-        for indice, item in enumerate(lote_itens, start=1):
-            num_item = item.get("numeroItem")
-            if num_item is None:
-                itens_completos.append(item)
-                continue
-
-            if on_progress is not None and (indice == 1 or indice % 10 == 0 or indice == len(lote_itens)):
-                on_progress(
-                    "Página {}: consultando resultados homologados do item {} de {}.".format(
-                        pagina, indice, len(lote_itens)
-                    )
+        quantidade_com_numero = sum(
+            1 for item in lote_itens if item.get("numeroItem") is not None
+        )
+        if on_progress is not None:
+            on_progress(
+                "Página {}: consultando resultados homologados de {} item(ns) em paralelo.".format(
+                    pagina, quantidade_com_numero
                 )
-            try:
-                item["resultadosHomologados"] = buscar_resultados_item(cnpj, ano, sequencial, num_item)
-            except Exception as exc:
-                item["resultadosHomologados"] = []
+            )
+        _buscar_resultados(cnpj, ano, sequencial, lote_itens)
+
+        for item in lote_itens:
+            if item.get("erroResultadosHomologados"):
                 erro = {
-                    "numero_item": num_item,
-                    "erro": "{}: {}".format(type(exc).__name__, exc),
+                    "numero_item": item.get("numeroItem"),
+                    "erro": item["erroResultadosHomologados"],
                 }
-                item["erroResultadosHomologados"] = erro["erro"]
                 erros_resultados_itens.append(erro)
                 if on_progress is not None:
                     on_progress(
                         "Falha ao consultar resultados homologados do item {}: {}".format(
-                            num_item, erro["erro"]
+                            erro["numero_item"], erro["erro"]
                         )
                     )
-
             itens_completos.append(item)
 
         if on_progress is not None:
@@ -100,4 +149,6 @@ def baixar_dados_compra_pncp(
         "quantidade_itens": len(itens_completos),
         "itens": itens_completos,
         "erros_resultados_itens": erros_resultados_itens,
+        "data_atualizacao_global": atualizacao,
+        "chave_cache": chave_cache,
     }

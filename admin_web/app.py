@@ -1,3 +1,4 @@
+import json
 import logging
 import os
 import secrets
@@ -109,6 +110,20 @@ class JobRegistry:
                 "status": "executando",
                 "acao": action,
                 "iniciado_em": datetime.now().astimezone().isoformat(timespec="seconds"),
+                "etapa": "coleta",
+                "percentual": 0.0,
+                "mensagem": "Preparando a atualização.",
+                "segundos_decorridos": 0.0,
+                "segundos_restantes": None,
+                "previsao_conclusao": None,
+                "estatisticas": {
+                    "paginas_coletadas": 0,
+                    "itens_coletados": 0,
+                    "empenhos_pncp": None,
+                    "empenhos_portal": None,
+                    "processo_indice": None,
+                    "processos_total": None,
+                },
             }
             self._latest_job = job_id
             while len(self._jobs) > 20:
@@ -157,13 +172,57 @@ def login_required(view):
     return wrapped
 
 
+def _duracao_referencia(app: Flask, action: str, url: Optional[str]) -> Optional[float]:
+    """Estimativa de duração baseada na última execução de cada processo."""
+    reports_dir = Path(app.config["REPORTS_DIR"])
+    index_path = Path(app.config["INDEX_PATH"])
+    try:
+        registros = ler_registros(index_path)
+    except Exception:
+        registros = []
+
+    def duracao_de(registro: Dict[str, Any]) -> Optional[float]:
+        pasta = registro.get("pasta")
+        if not pasta:
+            return None
+        caminho = reports_dir / str(pasta) / "metadados.json"
+        if not caminho.is_file():
+            return None
+        try:
+            metadados = json.loads(caminho.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            return None
+        if not isinstance(metadados, dict):
+            return None
+        valor = metadados.get("ultima_duracao_segundos")
+        try:
+            return float(valor) if valor else None
+        except (TypeError, ValueError):
+            return None
+
+    alvo = registros
+    if action == "one":
+        alvo = [registro for registro in registros if registro.get("url_pncp") == url]
+    duracoes = [duracao_de(registro) for registro in alvo]
+    conhecidas = [duracao for duracao in duracoes if duracao]
+    if not conhecidas:
+        return None
+    if action == "one":
+        return conhecidas[0]
+    return sum(conhecidas) + 15 * max(0, len(alvo) - len(conhecidas))
+
+
 def _run_job(app: Flask, job_id: str, action: str, url: Optional[str]) -> None:
+    from pncp_tracker.report_progress import ProgressoTracker
     from pncp_tracker.report_service import atualizar_processo, atualizar_todos
 
     registry = app.extensions["pncp_jobs"]
+    tracker = ProgressoTracker(acao=action, duracao_referencia=_duracao_referencia(app, action, url))
+    registry.update(job_id, tracker.estado())
 
     def report_progress(message: str) -> None:
         _LOGGER.info("Atualização %s: %s", job_id, message)
+        registry.update(job_id, tracker.atualizar(message))
 
     _LOGGER.info(
         "Iniciando atualização %s (%s)%s",
@@ -200,6 +259,7 @@ def _run_job(app: Flask, job_id: str, action: str, url: Optional[str]) -> None:
                 "atualizados": len(updated),
                 "falhas": failures,
                 "finalizado_em": datetime.now().astimezone().isoformat(timespec="seconds"),
+                **tracker.concluir(sucesso=True),
             },
         )
         _LOGGER.info(
@@ -216,6 +276,7 @@ def _run_job(app: Flask, job_id: str, action: str, url: Optional[str]) -> None:
                 "status": "erro",
                 "erro": str(exc),
                 "finalizado_em": datetime.now().astimezone().isoformat(timespec="seconds"),
+                **tracker.concluir(sucesso=False),
             },
         )
     finally:

@@ -1,4 +1,5 @@
 import re
+from concurrent.futures import ThreadPoolExecutor
 from typing import Any, Dict, List, Tuple
 
 from .portal_transparencia import (
@@ -6,6 +7,7 @@ from .portal_transparencia import (
     consultar_documentos_despesa_favorecido,
 )
 
+PORTAL_WORKERS = 4
 
 def enriquecer_empenhos_com_detalhes_portal(
     empenhos_pncp: List[Dict[str, Any]],
@@ -43,26 +45,32 @@ def enriquecer_empenhos_com_detalhes_portal(
         grupos.setdefault((unidade, fornecedor, ano), []).append(empenho)
 
     documentos_por_grupo: Dict[Tuple[str, str, str], List[Dict[str, Any]]] = {}
-    for grupo in grupos:
+
+    def consultar_grupo(grupo: Tuple[str, str, str]):
         unidade, fornecedor, ano = grupo
         try:
-            documentos_por_grupo[grupo] = consultar_documentos_despesa_favorecido(
-                fornecedor,
-                ano,
-                unidade,
-                fase=1,
-            )
+            return grupo, consultar_documentos_despesa_favorecido(
+                fornecedor, ano, unidade, fase=1
+            ), None
         except Exception as exc:
-            documentos_por_grupo[grupo] = []
-            erros.append(
-                {
-                    "unidade_gestora": unidade,
-                    "fornecedor": fornecedor,
-                    "ano": ano,
-                    "erro": f"{type(exc).__name__}: {exc}",
-                }
-            )
+            return grupo, [], exc
 
+    if grupos:
+        with ThreadPoolExecutor(max_workers=PORTAL_WORKERS) as pool:
+            for grupo, documentos, exc in pool.map(consultar_grupo, list(grupos)):
+                documentos_por_grupo[grupo] = documentos
+                if exc is not None:
+                    unidade, fornecedor, ano = grupo
+                    erros.append(
+                        {
+                            "unidade_gestora": unidade,
+                            "fornecedor": fornecedor,
+                            "ano": ano,
+                            "erro": f"{type(exc).__name__}: {exc}",
+                        }
+                    )
+
+    pendentes: List[Tuple[Dict[str, Any], str, str]] = []
     for grupo, registros in grupos.items():
         documentos = documentos_por_grupo[grupo]
         por_numero = {
@@ -78,15 +86,27 @@ def enriquecer_empenhos_com_detalhes_portal(
                     "mensagem": "Documento não localizado para o favorecido, ano e UG informados.",
                 }
                 continue
+            pendentes.append((empenho, numero, str(documento["documento"])))
 
-            codigo_documento = str(documento["documento"])
-            try:
-                empenho["detalhesPortalTransparencia"] = {
-                    "status": "ok",
-                    "codigoDocumento": codigo_documento,
-                    "detalhamento": consultar_detalhes_documento_despesa(codigo_documento),
-                }
-            except Exception as exc:
+    def detalhar(item: Tuple[Dict[str, Any], str, str]):
+        empenho, numero, codigo_documento = item
+        try:
+            return item, consultar_detalhes_documento_despesa(codigo_documento), None
+        except Exception as exc:
+            return item, None, exc
+
+    if pendentes:
+        with ThreadPoolExecutor(max_workers=PORTAL_WORKERS) as pool:
+            for (empenho, numero, codigo_documento), detalhamento, exc in pool.map(
+                detalhar, pendentes
+            ):
+                if exc is None:
+                    empenho["detalhesPortalTransparencia"] = {
+                        "status": "ok",
+                        "codigoDocumento": codigo_documento,
+                        "detalhamento": detalhamento,
+                    }
+                    continue
                 empenho["detalhesPortalTransparencia"] = {
                     "status": "erro",
                     "codigoDocumento": codigo_documento,

@@ -7,10 +7,12 @@ Aplicação Python que coleta dados de compras no Portal Nacional de Contrataç�
 ## Como funciona
 
 1. **Coleta da compra:** consulta no PNCP os dados do edital, seus itens e resultados homologados.
-2. **Consulta de empenhos:** busca contratos/empenhos publicados para a compra no PNCP e complementa os documentos com detalhes e itens da despesa no Portal da Transparência.
+2. **Consulta de empenhos:** busca contratos/empenhos publicados para a compra no PNCP, descobre empenhos também no Portal da Transparência (inclusive de adesões e compras compartilhadas, cujo processo e unidade gestora podem ser diferentes) e complementa os documentos com detalhes e itens da despesa.
 3. **Mapeamento e relatório:** relaciona as linhas de empenho aos itens por número do item e fornecedor homologado e gera o relatório HTML.
 
-O PNCP fornece valores de empenho, mas não necessariamente a quantidade física empenhada. Quando há preço unitário homologado, a quantidade empenhada é estimada dividindo o valor da linha pelo preço unitário. O relatório identifica essa estimativa e mantém registros sem correspondência confirmada em uma seção separada.
+O PNCP fornece valores de empenho, mas não necessariamente a quantidade física empenhada. Quando a API pública Contratos.gov.br identifica o empenho, a quantidade real do item é usada; caso contrário, e havendo preço unitário homologado, a quantidade é estimada dividindo o valor da linha pelo preço unitário (sempre arredondada para inteiro).
+
+Empenhos decorrentes de adesão posterior — ou, quando vindos apenas do Portal, com origem de órgão não determinada — não consomem a quantidade homologada e aparecem em colunas e cards próprios; apenas empenhos originais, inclusive de órgãos participantes na origem, entram no saldo e na execução do item. Se o PNCP não enviar o campo `frutoAdesao`, o empenho é tratado como **não adesão** e segue o fluxo normal; a ausência fica sinalizada para auditoria.
 
 ## Estrutura do projeto
 
@@ -32,8 +34,10 @@ rastreador_empenhos/
 │   ├── collector.py
 │   ├── constants.py
 │   ├── contratos_empenhos.py
+│   ├── contratos_gov.py
 │   ├── empenho_details.py
 │   ├── empenho_matcher.py
+│   ├── empenho_portal.py
 │   ├── empenhos.py
 │   ├── consultar_e_mapear_empenhos.py
 │   ├── portal_transparencia.py
@@ -62,6 +66,8 @@ rastreador_empenhos/
 - `pncp_tracker/api_client.py` e `collector.py`: consultam e organizam os dados da compra, itens e resultados no PNCP.
 - `pncp_tracker/contratos_empenhos.py`: consulta os registros da aba Contratos/Empenhos do PNCP.
 - `pncp_tracker/portal_transparencia.py` e `empenho_details.py`: consultam e enriquecem os empenhos com detalhes do Portal da Transparência.
+- `pncp_tracker/empenho_portal.py`: descobre empenhos no Portal da Transparência por contrato, licitação ou fornecedor homologado, aceitando processo/UG divergentes quando há evidência de vínculo.
+- `pncp_tracker/contratos_gov.py`: cliente público da API Contratos.gov.br para confirmar a compra de cada empenho e obter a quantidade real dos itens.
 - `pncp_tracker/empenho_matcher.py` e `empenhos.py`: relacionam empenhos aos itens e fornecedores homologados.
 - `pncp_tracker/consultar_e_mapear_empenhos.py`: consulta os empenhos, enriquece com detalhes do Portal da Transparência e mapeia os registros aos itens da compra.
 - `pncp_tracker/report_html.py`: prepara os dados e gera o relatório HTML.
@@ -115,7 +121,7 @@ saldo = quantidade homologada - quantidade empenhada estimada
 
 Quando não há empenhos vinculados ao item, a quantidade empenhada é zero e o saldo corresponde à quantidade homologada. Se houver empenho, mas não for possível estimar sua quantidade, o saldo aparece como `—`. As quantidades são exibidas na unidade do item e não são somadas entre unidades diferentes.
 
-As linhas podem ser expandidas para consultar resultados homologados e empenhos vinculados. Em telas largas, os empenhos ocupam aproximadamente 70% da área de detalhes e os resultados homologados, 30%; em telas menores, as seções ficam empilhadas. Registros que não puderam ser vinculados a um item aparecem na seção **Registros sem vínculo confirmado a item**.
+As linhas podem ser expandidas para consultar resultados homologados e empenhos vinculados. Em telas largas, os empenhos ocupam aproximadamente 70% da área de detalhes e os resultados homologados, 30%; em telas menores, as seções ficam empilhadas. Documentos do fornecedor sem vínculo comprovado não são exibidos no HTML nem incluídos nos totais; permanecem em `dados_empenhos.json` para auditoria.
 
 Os filtros de situação podem ser combinados com a busca textual. Os cards apresentam as contagens de itens — total, homologados, empenhados, não empenhados, desertos e resultados pendentes — seguidas dos valores financeiros. Se o PNCP falhar ao consultar resultados homologados, o item fica marcado como pendente, não como deserto; o relatório exibe um aviso e o índice identifica a atualização como parcial. As tabelas podem ser ordenadas clicando nos cabeçalhos; também é possível focar um cabeçalho com Tab e alternar a ordenação com Enter ou Espaço. Ao ordenar os itens, suas linhas de detalhes acompanham cada item.
 

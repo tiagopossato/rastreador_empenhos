@@ -19,6 +19,30 @@ def _numero_item_empenho(descricao: Any) -> Optional[int]:
     return int(match.group(1)) if match else None
 
 
+def _quantidade_contratos_gov(empenho: Dict[str, Any], numero_item: Optional[int]) -> Optional[float]:
+    """Quantidade real publicada na Contratos.gov.br para o item do empenho."""
+    dados = empenho.get("dadosContratosGov") or {}
+    for item in dados.get("itens") or []:
+        referencia = str(item.get("numero_item_compra") or "")
+        digitos = re.sub(r"\D", "", referencia)
+        if not digitos:
+            continue
+        if int(digitos) == numero_item:
+            return item.get("quantidade")
+    return None
+
+
+def _chave_empenho_unica(empenho: Dict[str, Any]) -> str:
+    """Chave do empenho por documento completo; o número isolado não é único entre UGs."""
+    detalhes = empenho.get("detalhesPortalTransparencia") or {}
+    codigo = re.sub(r"[^A-Za-z0-9]", "", str(detalhes.get("codigoDocumento") or ""))
+    if codigo:
+        return codigo
+    unidade = re.sub(r"[^A-Za-z0-9]", "", str((empenho.get("unidadeOrgao") or {}).get("codigoUnidade") or ""))
+    numero = re.sub(r"[^A-Za-z0-9]", "", str(empenho.get("numeroContratoEmpenho") or "")).upper()
+    return f"{unidade}{numero}"
+
+
 def mapear_empenhos_por_item(dados_compra: Dict[str, Any], empenhos: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     """Relaciona empenhos ao item PNCP pelo número de item indicado no documento de despesa."""
     itens = dados_compra.get("itens", [])
@@ -34,6 +58,17 @@ def mapear_empenhos_por_item(dados_compra: Dict[str, Any], empenhos: List[Dict[s
         fornecedor = _normalizar_cnpj(
             detalhes.get("codigoFavorecido") or empenho.get("niFornecedor")
         )
+        adesao = {
+            "chave_empenho": _chave_empenho_unica(empenho),
+            "fruto_adesao": empenho.get("fruto_adesao"),
+            "origem_organ": empenho.get("origem_organ"),
+            "consome_saldo": empenho.get("consome_saldo", True),
+            "flag_adesao_ausente": empenho.get("flag_adesao_ausente"),
+            "confianca": empenho.get("confianca"),
+            "vinculo": empenho.get("vinculo"),
+            "numero_controle_pncp_compra": empenho.get("numeroControlePncpCompra"),
+            "numero_controle_pncp_ata": empenho.get("numeroControlePncpAta"),
+        }
         possui_item_identificado = False
 
         for item_despesa in itens_despesa:
@@ -41,6 +76,7 @@ def mapear_empenhos_por_item(dados_compra: Dict[str, Any], empenhos: List[Dict[s
             if numero_item is None:
                 continue
             possui_item_identificado = True
+            quantidade = _quantidade_contratos_gov(empenho, numero_item)
             empenhos_por_item.setdefault(numero_item, []).append(
                 {
                     "numero_empenho": numero_empenho,
@@ -53,6 +89,9 @@ def mapear_empenhos_por_item(dados_compra: Dict[str, Any], empenhos: List[Dict[s
                     "fornecedor_cnpj": fornecedor,
                     "nome_fornecedor": detalhes.get("nomeFavorecido") or empenho.get("nomeRazaoSocialFornecedor"),
                     "item_despesa": item_despesa,
+                    "quantidade": quantidade,
+                    "quantidade_origem": "contratos_gov" if quantidade is not None else "estimada",
+                    **adesao,
                 }
             )
 
@@ -62,6 +101,7 @@ def mapear_empenhos_por_item(dados_compra: Dict[str, Any], empenhos: List[Dict[s
                     "numero_empenho": numero_empenho,
                     "data_emissao": detalhes.get("data"),
                     "valor_empenhado": detalhes.get("valor"),
+                    **adesao,
                 }
             )
 

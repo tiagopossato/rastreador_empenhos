@@ -105,7 +105,7 @@ class ReportServiceTests(unittest.TestCase):
     def test_update_forwards_progress_messages_from_both_collection_stages(self):
         mensagens = []
 
-        def fake_collection(_url, on_progress):
+        def fake_collection(_url, on_progress, dados_anteriores=None):
             on_progress("Itens coletados")
             return self.purchase
 

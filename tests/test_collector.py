@@ -3,6 +3,10 @@ from unittest.mock import patch
 
 from pncp_tracker.collector import baixar_dados_compra_pncp
 from pncp_tracker.constants import DEFAULT_PAGE_SIZE
+from pncp_tracker.rate_limit import CONTRATOS_GOV_LIMITER, PNCP_LIMITER
+
+PNCP_LIMITER.desativar()
+CONTRATOS_GOV_LIMITER.desativar()
 
 
 _URL = "https://pncp.gov.br/app/editais/10635424000186/2025/000282"
@@ -100,6 +104,71 @@ class CollectorTests(unittest.TestCase):
             [{"numero_item": 9, "erro": "TimeoutError: timeout"}],
         )
         self.assertTrue(any("Falha ao consultar resultados" in msg for msg in mensagens))
+
+    def test_snapshot_is_reused_when_pncp_did_not_change(self):
+        dados_anteriores = {
+            "chave_cache": "10635424000186-1-000282/2025|2026-01-02T10:00:00",
+            "itens": [{"numeroItem": 1, "resultadosHomologados": [{"niFornecedor": "1"}]}],
+            "chaves_integracao": {"numero_compra": "90059"},
+        }
+        compra = dict(
+            _PURCHASE,
+            dataAtualizacaoGlobal="2026-01-02T10:00:00",
+        )
+        mensagens = []
+        with patch(
+            "pncp_tracker.collector.buscar_dados_compra", return_value=compra
+        ), patch("pncp_tracker.collector.listar_itens") as listar, patch(
+            "pncp_tracker.collector.buscar_resultados_item"
+        ) as resultados:
+            dados = baixar_dados_compra_pncp(
+                _URL, on_progress=mensagens.append, dados_anteriores=dados_anteriores
+            )
+
+        listar.assert_not_called()
+        resultados.assert_not_called()
+        self.assertTrue(dados["cache_reutilizado"])
+        self.assertEqual(dados["itens"], dados_anteriores["itens"])
+        self.assertTrue(any("reutilizando" in m for m in mensagens))
+
+    def test_snapshot_is_discarded_when_pncp_changed(self):
+        dados_anteriores = {
+            "chave_cache": "10635424000186-1-000282/2025|2026-01-01T00:00:00",
+            "itens": [{"numeroItem": 99}],
+        }
+        compra = dict(_PURCHASE, dataAtualizacaoGlobal="2026-02-02T00:00:00")
+        with patch(
+            "pncp_tracker.collector.buscar_dados_compra", return_value=compra
+        ), patch(
+            "pncp_tracker.collector.listar_itens", side_effect=[[{"numeroItem": 1}]]
+        ), patch(
+            "pncp_tracker.collector.buscar_resultados_item", return_value=[]
+        ):
+            dados = baixar_dados_compra_pncp(_URL, dados_anteriores=dados_anteriores)
+
+        self.assertNotIn("cache_reutilizado", dados)
+        self.assertEqual([i["numeroItem"] for i in dados["itens"]], [1])
+        self.assertEqual(dados["chave_cache"], "10635424000186-1-000282/2025|2026-02-02T00:00:00")
+
+    def test_parallel_result_lookup_preserves_item_order(self):
+        pagina = [{"numeroItem": numero} for numero in range(1, 21)]
+        with patch(
+            "pncp_tracker.collector.buscar_dados_compra",
+            return_value=dict(_PURCHASE, dataAtualizacaoGlobal="2026-03-03T00:00:00"),
+        ), patch("pncp_tracker.collector.listar_itens", side_effect=[pagina]), patch(
+            "pncp_tracker.collector.buscar_resultados_item",
+            side_effect=lambda _c, _a, _s, numero: [{"niFornecedor": str(numero)}],
+        ):
+            dados = baixar_dados_compra_pncp(_URL)
+
+        self.assertEqual(
+            [item["numeroItem"] for item in dados["itens"]],
+            list(range(1, 21)),
+        )
+        self.assertEqual(
+            [item["resultadosHomologados"][0]["niFornecedor"] for item in dados["itens"]],
+            [str(numero) for numero in range(1, 21)],
+        )
 
     def test_invalid_purchase_header_stops_before_item_collection(self):
         with patch(

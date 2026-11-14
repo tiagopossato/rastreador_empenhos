@@ -31,8 +31,18 @@
     th { color: var(--muted); font-size: .8rem; }
     .url { overflow-wrap: anywhere; max-width: 310px; }
     .muted { color: var(--muted); font-size: .85rem; }
-    #job-status { border-left: 4px solid var(--blue); padding: .5rem .75rem; background: #edf4fd; }
+    #job-status { border-left: 4px solid var(--blue); padding: .75rem .9rem; background: #edf4fd; border-radius: 6px; }
     #job-status[hidden] { display: none; }
+    .job-head { display: flex; gap: .5rem; flex-wrap: wrap; align-items: baseline; }
+    .progress { height: 10px; background: #d7e3f4; border-radius: 6px; overflow: hidden; margin: .6rem 0 .35rem; }
+    .progress span { display: block; height: 100%; background: var(--blue); transition: width .4s ease; }
+    .job-line { display: flex; gap: 1rem; flex-wrap: wrap; font-size: .85rem; color: var(--muted); }
+    #job-percent { font-weight: 700; color: var(--ink); }
+    .stats { display: flex; gap: .35rem 1.1rem; flex-wrap: wrap; font-size: .82rem; color: var(--muted); margin-top: .35rem; }
+    .stats strong { color: var(--ink); }
+    body.job-running form[action$="/refresh"] button,
+    body.job-running form[action$="/refresh-all"] button,
+    body.job-running form[action$="/processes"] button { opacity: .5; cursor: not-allowed; }
     @media (max-width: 600px) { main { padding: .8rem .5rem 2rem; } .panel { padding: .8rem; } header { align-items: flex-start; } }
   </style>
 </head>
@@ -72,14 +82,36 @@
       <h2>Lista ativa ({{ records|length }})</h2>
       <form method="post" action="{{ url_for('refresh_all') }}">
         <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-        <button type="submit" {% if not records %}disabled{% endif %}>Atualizar todos</button>
+        <button type="submit" {% if not records or active_job and active_job.status == 'executando' %}disabled{% endif %}>Atualizar todos</button>
       </form>
     </div>
     {% if active_job %}
-      <div id="job-status" data-job-id="{{ active_job.id }}" data-url="{{ url_for('job_status', job_id=active_job.id) }}">
-        <strong>Atualização {{ active_job.status }}.</strong>
-        <span>{{ active_job.acao }}{% if active_job.iniciado_em %} · iniciada em {{ active_job.iniciado_em }}{% endif %}</span>
-        {% if active_job.status != 'executando' %}
+      <div id="job-status" data-job-id="{{ active_job.id }}" data-url="{{ url_for('job_status', job_id=active_job.id) }}" data-status="{{ active_job.status }}">
+        <div class="job-head">
+          <strong>Atualização {{ active_job.status }}</strong>
+          <span>{{ 'todos os processos' if active_job.acao == 'all' else 'processo individual' }}{% if active_job.iniciado_em %} · iniciada em {{ active_job.iniciado_em }}{% endif %}</span>
+      </div>
+        {% if active_job.status == 'executando' %}
+          <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{ active_job.percentual or 0 }}">
+            <span id="job-progress-bar" style="width: {{ active_job.percentual or 0 }}%"></span>
+          </div>
+          <div class="job-line">
+            <span id="job-percent">{{ active_job.percentual or 0 }}%</span>
+            <span id="job-stage">{{ active_job.etapa or 'coleta' }}</span>
+            <span id="job-eta">{% if active_job.previsao_conclusao %}previsão: {{ active_job.previsao_conclusao }}{% else %}estimando…{% endif %}</span>
+          </div>
+          <p class="muted" id="job-message">{{ active_job.mensagem or '' }}</p>
+          <div class="stats" id="job-stats">
+            <span>Itens coletados: <strong id="stat-itens">{{ (active_job.estatisticas or {}).get('itens_coletados', 0) }}</strong></span>
+            <span>Páginas: <strong id="stat-paginas">{{ (active_job.estatisticas or {}).get('paginas_coletadas', 0) }}</strong></span>
+            <span>Empenhos PNCP: <strong id="stat-pncp">{{ (active_job.estatisticas or {}).get('empenhos_pncp') or '—' }}</strong></span>
+            <span>Empenhos Portal: <strong id="stat-portal">{{ (active_job.estatisticas or {}).get('empenhos_portal') or '—' }}</strong></span>
+            <span>Decorrido: <strong id="stat-decorrido">{{ active_job.segundos_decorridos or 0 }}s</strong></span>
+            <span>Restante: <strong id="stat-restante">{% if active_job.segundos_restantes is not none %}{{ active_job.segundos_restantes|int }}s{% else %}—{% endif %}</strong></span>
+          </div>
+          <p class="muted">Uma atualização por vez: os botões de atualização ficam bloqueados até o término.</p>
+        <script id="job-data" type="application/json">{{ active_job|tojson }}</script>
+        {% else %}
           <div>{{ active_job.atualizados or 0 }} atualizados · {{ active_job.falhas|length if active_job.falhas else 0 }} falhas</div>
           {% for failure in active_job.falhas or [] %}
             <div class="muted">{{ failure.url_pncp }}: {{ failure.erro }}</div>
@@ -105,7 +137,7 @@
             <td><div class="actions">
               <form method="post" action="{{ url_for('refresh_process', process_id=record.id) }}">
                 <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-                <button type="submit">Atualizar</button>
+                <button type="submit" {% if active_job and active_job.status == 'executando' %}disabled{% endif %}>Atualizar</button>
               </form>
               <form method="post" action="{{ url_for('delete_process', process_id=record.id) }}" onsubmit="return confirm('Remover da lista ativa? Os arquivos do relatório serão preservados.')">
                 <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
@@ -123,24 +155,72 @@
 </main>
 <script>
 const jobStatus = document.getElementById('job-status');
+const fmtSegundos = valor => {
+  if (valor == null) return '—';
+  const total = Math.max(0, Math.round(valor));
+  const minutos = Math.floor(total / 60);
+  return minutos ? `${minutos}min ${total % 60}s` : `${total}s`;
+};
+const fmtPrevisao = iso => {
+  if (!iso) return 'estimando…';
+  const data = new Date(iso);
+  return Number.isNaN(data.getTime()) ? 'estimando…' : `previsão: ${data.toLocaleTimeString('pt-BR', {hour: '2-digit', minute: '2-digit'})}`;
+};
+function bloquearAtualizacoes(bloquear) {
+  document.body.classList.toggle('job-running', bloquear);
+  document.querySelectorAll('form[action$="/refresh"] button, form[action$="/refresh-all"] button, form[action$="/processes"] button')
+    .forEach(botao => { botao.disabled = bloquear; });
+}
+function renderJob(job) {
+  const barra = document.getElementById('job-progress-bar');
+  if (barra) barra.style.width = `${job.percentual || 0}%`;
+  const percentual = document.getElementById('job-percent');
+  if (percentual) percentual.textContent = `${job.percentual || 0}%`;
+  const etapa = document.getElementById('job-stage');
+  if (etapa) etapa.textContent = job.etapa || 'coleta';
+  const eta = document.getElementById('job-eta');
+  if (eta) eta.textContent = fmtPrevisao(job.previsao_conclusao);
+  const mensagem = document.getElementById('job-message');
+  if (mensagem) mensagem.textContent = job.mensagem || '';
+  const stats = job.estatisticas || {};
+  const campos = {
+    'stat-itens': stats.itens_coletados ?? 0,
+    'stat-paginas': stats.paginas_coletadas ?? 0,
+    'stat-pncp': stats.empenhos_pncp ?? '—',
+    'stat-portal': stats.empenhos_portal ?? '—',
+    'stat-decorrido': fmtSegundos(job.segundos_decorridos),
+    'stat-restante': fmtSegundos(job.segundos_restantes),
+  };
+  Object.entries(campos).forEach(([id, valor]) => {
+    const campo = document.getElementById(id);
+    if (campo) campo.textContent = valor;
+  });
+}
 if (jobStatus?.dataset.url) {
-  const timer = setInterval(async () => {
-    try {
-      const response = await fetch(jobStatus.dataset.url, {credentials: 'same-origin'});
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      const job = await response.json();
-      if (job.status !== 'executando') {
+  const emExecucao = jobStatus.dataset.status === 'executando';
+  bloquearAtualizacoes(emExecucao);
+  if (emExecucao) {
+    renderJob(JSON.parse(document.getElementById('job-data')?.textContent || '{}'));
+    const timer = setInterval(async () => {
+      try {
+        const response = await fetch(jobStatus.dataset.url, {credentials: 'same-origin'});
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const job = await response.json();
+        renderJob(job);
+        if (job.status !== 'executando') {
+          clearInterval(timer);
+          bloquearAtualizacoes(false);
+          window.location.reload();
+        }
+      } catch (error) {
         clearInterval(timer);
-        window.location.reload();
+        const notice = document.createElement('div');
+        notice.className = 'muted';
+        notice.textContent = `Falha ao consultar o progresso: ${String(error.message)}`;
+        jobStatus.appendChild(notice);
       }
-    } catch (error) {
-      clearInterval(timer);
-      const notice = document.createElement('div');
-      notice.className = 'muted';
-      notice.textContent = `Falha ao consultar o progresso: ${String(error.message)}`;
-      jobStatus.appendChild(notice);
-    }
-  }, 2000);
+    }, 2000);
+  }
 }
 </script>
 </body>

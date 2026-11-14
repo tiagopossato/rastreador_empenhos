@@ -1,13 +1,20 @@
 import requests
 
 from .constants import DEFAULT_TIMEOUT, PNCP_API_CONSULTA, PNCP_API_PNCP
+from .rate_limit import PNCP_LIMITER
+
+
+def get_pncp(url: str, **kwargs):
+    """GET ao PNCP respeitando o limite compartilhado entre threads."""
+    PNCP_LIMITER.aguardar()
+    return requests.get(url, **kwargs)
 
 
 def _buscar_json_robusto(urls: list[str], timeout: int = DEFAULT_TIMEOUT) -> dict:
     """Tenta as URLs informadas e retorna o primeiro JSON válido."""
     for url in urls:
         try:
-            response = requests.get(url, timeout=timeout)
+            response = get_pncp(url, timeout=timeout)
             if response.status_code == 204:
                 raise requests.RequestException("Endpoint PNCP respondeu 204 sem dados de compra.")
             response.raise_for_status()
@@ -30,7 +37,7 @@ def buscar_dados_compra(cnpj: str, ano: str, sequencial: str, timeout: int = DEF
 def listar_itens(cnpj: str, ano: str, sequencial: str, pagina: int = 1, tamanho_pagina: int = 50):
     """Busca um lote de itens da compra."""
     url = f"{PNCP_API_PNCP}/{cnpj}/compras/{ano}/{sequencial}/itens"
-    response = requests.get(
+    response = get_pncp(
         url,
         params={"pagina": pagina, "tamanhoPagina": tamanho_pagina},
         timeout=DEFAULT_TIMEOUT,
@@ -46,7 +53,7 @@ def listar_itens(cnpj: str, ano: str, sequencial: str, pagina: int = 1, tamanho_
 def buscar_resultados_item(cnpj: str, ano: str, sequencial: str, numero_item: int):
     """Busca os vencedores e valores homologados de um item."""
     url = f"{PNCP_API_PNCP}/{cnpj}/compras/{ano}/{sequencial}/itens/{numero_item}/resultados"
-    response = requests.get(url, timeout=DEFAULT_TIMEOUT)
+    response = get_pncp(url, timeout=DEFAULT_TIMEOUT)
 
     if response.status_code == 204:
         return []

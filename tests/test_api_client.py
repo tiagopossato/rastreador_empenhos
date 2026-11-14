@@ -3,6 +3,11 @@ from unittest.mock import Mock, patch
 
 import requests
 
+from pncp_tracker.rate_limit import CONTRATOS_GOV_LIMITER, PNCP_LIMITER
+
+PNCP_LIMITER.desativar()
+CONTRATOS_GOV_LIMITER.desativar()
+
 from pncp_tracker.api_client import (
     _buscar_json_robusto,
     buscar_dados_compra,

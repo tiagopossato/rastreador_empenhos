@@ -1,5 +1,6 @@
 import json
 import re
+import time
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Callable, Dict, Optional
@@ -32,6 +33,18 @@ def _notificar(callback: Optional[Callable[[str], None]], mensagem: str) -> None
         callback(mensagem)
 
 
+def _ler_snapshot_anterior(pasta_relatorio: Path) -> Optional[Dict[str, Any]]:
+    """Lê o dados_pregao.json existente para permitir reutilizar a coleta quando nada mudou."""
+    caminho = Path(pasta_relatorio) / "dados_pregao.json"
+    if not caminho.is_file():
+        return None
+    try:
+        dados = json.loads(caminho.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return None
+    return dados if isinstance(dados, dict) else None
+
+
 def _atualizar_processo(
     url_pncp: str,
     *,
@@ -40,6 +53,7 @@ def _atualizar_processo(
     on_progress: Optional[Callable[[str], None]] = None,
     cadastrar_se_ausente: bool = True,
 ) -> Dict[str, Any]:
+    inicio = time.monotonic()
     cnpj, ano, sequencial = validar_url_pncp(url_pncp)
     url_pncp = "https://pncp.gov.br/app/editais/{}/{}/{}".format(cnpj, ano, sequencial)
     registro = buscar_registro(url_pncp, index_path)
@@ -65,6 +79,7 @@ def _atualizar_processo(
         dados_compra = baixar_dados_compra_pncp(
             url_pncp,
             on_progress=on_progress,
+            dados_anteriores=_ler_snapshot_anterior(pasta_relatorio),
         )
         chaves_compra = dados_compra.get("chaves_integracao")
         if not isinstance(chaves_compra, dict):
@@ -121,6 +136,7 @@ def _atualizar_processo(
                 "chaves_integracao": resultado_etapa2.get("chaves_integracao")
                 or dados_compra.get("chaves_integracao", {}),
                 "arquivo_html": arquivo_html,
+                "ultima_duracao_segundos": round(time.monotonic() - inicio, 1),
             }
         )
         _escrever_json(caminho_metadados, metadados)

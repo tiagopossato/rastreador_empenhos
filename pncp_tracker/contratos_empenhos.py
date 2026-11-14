@@ -2,6 +2,7 @@ from typing import Any, Dict, List
 
 import requests
 
+from .api_client import get_pncp
 from .constants import DEFAULT_PAGE_SIZE, DEFAULT_TIMEOUT, PNCP_API_CONTRATOS
 
 
@@ -18,7 +19,7 @@ def consultar_contratos_empenhos(
     registros: List[Dict[str, Any]] = []
 
     while pagina <= total_paginas:
-        response = requests.get(
+        response = get_pncp(
             url,
             params={"pagina": pagina, "tamanhoPagina": tamanho_pagina},
             timeout=DEFAULT_TIMEOUT,

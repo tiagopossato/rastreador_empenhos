@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import os
 import threading
 import time
@@ -16,6 +18,26 @@ _last_request_at = 0.0
 _portal_blocked = False
 _portal_blocked_until = 0.0
 
+_CACHE_TTL = 1800.0
+_cache_lock = threading.Lock()
+_cache_favorecido: Dict[tuple, tuple] = {}
+
+_TENTATIVAS_HTTP = 2
+_session = requests.Session()
+_session.mount("https://", requests.adapters.HTTPAdapter(pool_connections=8, pool_maxsize=8))
+_env_carregado = False
+
+
+def _http_get(url: str, **kwargs: Any) -> requests.Response:
+    """Ponto único de HTTP do Portal: sessão com pool de conexões (e alvo dos testes)."""
+    return _session.get(url, **kwargs)
+
+
+def limpar_cache() -> None:
+    """Zera o cache de consultas por favorecido (chamado no início de cada coleta)."""
+    with _cache_lock:
+        _cache_favorecido.clear()
+
 
 class PortalTransparenciaBlockedError(PermissionError):
     """Raised when the Portal suspends or blocks the API token."""
@@ -28,7 +50,8 @@ def _intervalo_minimo(url: str) -> float:
     return 60 / limite + 0.01
 
 
-def _get(url: str, **kwargs: Any) -> requests.Response:
+def _aguardar_intervalo(url: str) -> None:
+    """Respeita o limite de taxa, compartilhado entre todas as threads do processo."""
     global _last_request_at, _portal_blocked, _portal_blocked_until
     with _rate_limit_lock:
         agora = time.monotonic()
@@ -43,7 +66,19 @@ def _get(url: str, **kwargs: Any) -> requests.Response:
             time.sleep(espera)
         _last_request_at = time.monotonic()
 
-    response = requests.get(url, **kwargs)
+
+def _get(url: str, **kwargs: Any) -> requests.Response:
+    global _portal_blocked, _portal_blocked_until
+    response = None
+    for tentativa in range(1, _TENTATIVAS_HTTP + 1):
+        _aguardar_intervalo(url)
+        try:
+            response = _http_get(url, **kwargs)
+            break
+        except (requests.exceptions.ConnectionError, requests.exceptions.Timeout):
+            if tentativa == _TENTATIVAS_HTTP:
+                raise
+
     texto = str(getattr(response, "text", "") or "").casefold()
     mensagem_bloqueio = (
         "limite de acesso à api de dados foi atingido",
@@ -63,7 +98,11 @@ def _get(url: str, **kwargs: Any) -> requests.Response:
 
 
 def _carregar_arquivo_env() -> None:
-    """Carrega variáveis ausentes do arquivo .env na raiz do projeto."""
+    """Carrega variáveis ausentes do arquivo .env na raiz do projeto (uma vez por processo)."""
+    global _env_carregado
+    if _env_carregado:
+        return
+    _env_carregado = True
     caminho_env = Path(__file__).resolve().parent.parent / ".env"
     if not caminho_env.exists():
         return
@@ -100,99 +139,151 @@ def _headers() -> Dict[str, str]:
     return headers
 
 
+def _exigir_chave() -> None:
+    if not _api_key():
+        raise PermissionError(
+            "Chave da API do Portal da Transparência não configurada. "
+            "Defina PORTAL_DADOS_API_KEY ou PORTALTRANSPARENCIA_API_KEY."
+        )
+
+
+def _json(response: requests.Response, esperado: type, mensagem: str) -> Any:
+    if response.status_code == 401:
+        raise PermissionError("API do Portal da Transparência recusou a chave de autenticação.")
+    response.raise_for_status()
+    try:
+        dados = response.json()
+    except ValueError as exc:
+        raise ValueError(f"{mensagem}: resposta não é JSON válido.") from exc
+    if not isinstance(dados, esperado):
+        raise ValueError(mensagem)
+    return dados
+
+
+def _consultar_paginado(
+    url: str,
+    parametros: Dict[str, Any],
+    *,
+    tamanho_minimo_pagina: int = 15,
+) -> List[Dict[str, Any]]:
+    """Agrega as páginas de um endpoint do Portal até a primeira página curta.
+
+    A paginação é sequencial de propósito: o endpoint restrito está limitado a 180 req/min,
+    então paralelizar páginas só adiciona requisições sem reduzir o tempo (a taxa é o teto).
+    """
+    _exigir_chave()
+    headers = _headers()
+    resultados: List[Dict[str, Any]] = []
+    pagina = 1
+
+    while True:
+        response = _get(
+            url,
+            params={**parametros, "pagina": pagina},
+            headers=headers,
+            timeout=DEFAULT_TIMEOUT,
+        )
+        lote = _json(response, list, f"Resposta inesperada ao consultar {url}")
+        resultados.extend(lote)
+        if len(lote) < tamanho_minimo_pagina:
+            break
+        pagina += 1
+
+    return resultados
+
+
 def consultar_documentos_despesa_favorecido(
     codigo_pessoa: str,
     ano: int | str,
     unidade_gestora: str | None,
     fase: int = 1,
 ) -> List[Dict[str, Any]]:
-    """Lista documentos por favorecido, ano e, opcionalmente, unidade gestora."""
-    api_key = _api_key()
-    if not api_key:
-        raise PermissionError(
-            "Chave da API do Portal da Transparência não configurada. "
-            "Defina PORTAL_DADOS_API_KEY ou PORTALTRANSPARENCIA_API_KEY."
-        )
+    """Lista documentos por favorecido, ano e, opcionalmente, unidade gestora.
 
-    url = f"{PORTAL_BASE_URL}/despesas/documentos-por-favorecido"
-    documentos: List[Dict[str, Any]] = []
-    pagina = 1
+    O resultado é cacheado por (favorecido, ano, UG, fase) durante a coleta, porque o mesmo
+    fornecedor costuma ser consultado pelo enriquecimento e pela varredura de fornecedores.
+    """
+    chave = (str(codigo_pessoa), str(ano), str(unidade_gestora or ""), int(fase))
+    with _cache_lock:
+        entrada = _cache_favorecido.get(chave)
+        if entrada and (time.monotonic() - entrada[0]) < _CACHE_TTL:
+            return [dict(documento) for documento in entrada[1]]
 
-    while True:
-        parametros = {
-            "codigoPessoa": codigo_pessoa,
-            "fase": fase,
-            "ano": ano,
-            "pagina": pagina,
-        }
-        if unidade_gestora:
-            parametros["ug"] = unidade_gestora
-        response = _get(
-            url,
-            params=parametros,
-            headers=_headers(),
-            timeout=DEFAULT_TIMEOUT,
-        )
-        if response.status_code == 401:
-            raise PermissionError("API do Portal da Transparência recusou a chave de autenticação.")
-        response.raise_for_status()
-        lote = response.json()
-        if not isinstance(lote, list):
-            raise ValueError("Resposta inesperada ao consultar documentos por favorecido.")
-        if not lote:
-            break
-        documentos.extend(lote)
-        if len(lote) < 15:
-            break
-        pagina += 1
+    parametros: Dict[str, Any] = {
+        "codigoPessoa": codigo_pessoa,
+        "fase": fase,
+        "ano": ano,
+    }
+    if unidade_gestora:
+        parametros["ug"] = unidade_gestora
+    documentos = _consultar_paginado(
+        f"{PORTAL_BASE_URL}/despesas/documentos-por-favorecido",
+        parametros,
+    )
 
-    return documentos
+    with _cache_lock:
+        _cache_favorecido[chave] = (time.monotonic(), documentos)
+    return [dict(documento) for documento in documentos]
+
+
+def consultar_contratos_por_processo(processo: str) -> List[Dict[str, Any]]:
+    """Lista os contratos federais registrados com o número de processo informado."""
+    return _consultar_paginado(
+        f"{PORTAL_BASE_URL}/contratos/processo",
+        {"processo": processo},
+    )
+
+
+def consultar_empenhos_de_contrato(id_contrato: Any) -> List[Dict[str, Any]]:
+    """Lista os empenhos relacionados a um contrato do Portal."""
+    return _consultar_paginado(
+        f"{PORTAL_BASE_URL}/contratos/documentos-relacionados",
+        {"id": id_contrato},
+    )
+
+
+def consultar_licitacoes_por_processo(processo: str) -> List[Dict[str, Any]]:
+    """Lista as licitações federais registradas com o número de processo informado."""
+    return _consultar_paginado(
+        f"{PORTAL_BASE_URL}/licitacoes/por-processo",
+        {"processo": processo},
+    )
+
+
+def consultar_empenhos_de_licitacao(
+    codigo_ug: str,
+    numero: str,
+    codigo_modalidade: Any,
+) -> List[Dict[str, Any]]:
+    """Lista os empenhos de uma licitação identificada por UG, número e modalidade."""
+    return _consultar_paginado(
+        f"{PORTAL_BASE_URL}/licitacoes/empenhos",
+        {
+            "codigoUG": codigo_ug,
+            "numero": numero,
+            "codigoModalidade": codigo_modalidade,
+        },
+    )
 
 
 def consultar_detalhes_documento_despesa(codigo_documento: str) -> Dict[str, Any]:
-    """Busca o detalhamento do documento de despesa no Portal da Transparência."""
-    api_key = _api_key()
-    if not api_key:
-        raise PermissionError(
-            "Chave da API do Portal da Transparência não configurada. "
-            "Defina PORTAL_DADOS_API_KEY ou PORTALTRANSPARENCIA_API_KEY."
-        )
-
+    """Busca o detalhamento do documento de despesa e seus itens no Portal."""
+    _exigir_chave()
     base_url = f"{PORTAL_BASE_URL}/despesas"
     headers = _headers()
+
     response = _get(
         f"{base_url}/documentos/{codigo_documento}",
         headers=headers,
         timeout=DEFAULT_TIMEOUT,
     )
-    if response.status_code == 401:
-        raise PermissionError("API do Portal da Transparência recusou a chave de autenticação.")
-    response.raise_for_status()
-    documento = response.json()
-    if not isinstance(documento, dict):
-        raise ValueError("Resposta inesperada ao consultar o documento de despesa.")
-
-    itens: List[Dict[str, Any]] = []
-    pagina = 1
-    while True:
-        response_itens = _get(
-            f"{base_url}/itens-de-empenho",
-            params={"codigoDocumento": codigo_documento, "pagina": pagina},
-            headers=headers,
-            timeout=DEFAULT_TIMEOUT,
-        )
-        if response_itens.status_code == 401:
-            raise PermissionError("API do Portal da Transparência recusou a chave de autenticação.")
-        response_itens.raise_for_status()
-        lote = response_itens.json()
-        if not isinstance(lote, list):
-            raise ValueError("Resposta inesperada ao consultar itens do empenho.")
-        if not lote:
-            break
-        itens.extend(lote)
-        if len(lote) < 15:
-            break
-        pagina += 1
-
-    documento["itensEmpenho"] = itens
+    documento = _json(
+        response,
+        dict,
+        "Resposta inesperada ao consultar o documento de despesa.",
+    )
+    documento["itensEmpenho"] = _consultar_paginado(
+        f"{base_url}/itens-de-empenho",
+        {"codigoDocumento": codigo_documento},
+    )
     return documento

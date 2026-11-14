@@ -22,8 +22,9 @@ Este repositório contém a aplicação Python `rastreador_empenhos`, que coleta
 - `pncp_tracker/collector.py`: coleta e organiza dados da compra e itens.
 - `pncp_tracker/contratos_empenhos.py`: consulta registros de contratos/empenhos.
 - `pncp_tracker/portal_transparencia.py`: consulta dados do Portal da Transparência.
+- `pncp_tracker/contratos_gov.py`: cliente público da API Contratos.gov.br; resolve a identidade da compra de um empenho e a quantidade real dos itens.
 - `pncp_tracker/empenho_details.py`: detalha documentos de empenho.
-- `pncp_tracker/empenho_portal.py`: busca empenhos alternativos no Portal quando o PNCP não retorna registros.
+- `pncp_tracker/empenho_portal.py`: descobre empenhos no Portal da Transparência (contrato, licitação e favorecido) quando o PNCP não os lista.
 - `pncp_tracker/empenho_matcher.py`: relaciona empenhos a itens e fornecedores.
 - `pncp_tracker/empenhos.py`: models e processamento de empenhos.
 - `pncp_tracker/consultar_e_mapear_empenhos.py`: consulta os empenhos, enriquece com os detalhes do Portal da Transparência e mapeia os registros aos itens da compra.
@@ -35,6 +36,7 @@ Este repositório contém a aplicação Python `rastreador_empenhos`, que coleta
 - `relatorios/`: índice (`index.html`, `indice_relatorios.json`) e pastas individuais com HTML, JSONs das duas etapas e metadados.
 - `api-docs-pnpc.json`: especificação OpenAPI 3.0.1 da API PNCP Consulta (12 caminhos e 23 schemas); documenta o cabeçalho da compra, mas não os endpoints de itens, resultados e contratos por contratação usados pelo projeto.
 - `api-docs-transparencia.json`: especificação OpenAPI 3.0.1 da API do Portal da Transparência (109 caminhos e 106 schemas).
+- `api-docs-contratos.json`: especificação OpenAPI 3.0.1 da API Contratos.gov.br (servidor `https://contratos.comprasnet.gov.br`, 75 caminhos). Usada apenas nos endpoints **públicos** descritos mais adiante; os que exigem `bearerAuth` (JWT), como `POST /api/v1/comprasnet/compras/impedimentos` e `GET /api/v1/contrato/empenho/consultar/{id}`, **não** são usados pelo projeto.
 - `.private/`: usuários, log e lock; ignorado pelo Git e nunca publicado.
 - `tests/`: testes automatizados.
 
@@ -94,9 +96,11 @@ As especificações OpenAPI 3.0.1 estão no repositório:
 | 2 | `/api/pncp/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens` | não |
 | 3 | `/api/pncp/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}/itens/{numeroItem}/resultados` | não |
 | 4 | `/api/pncp/v1/orgaos/{cnpj}/contratos/contratacao/{ano}/{sequencial}` | não |
+| 4b | `/api-de-dados/contratos/processo` + `/api-de-dados/contratos/documentos-relacionados` | `api-docs-transparencia.json` |
+| 4c | `/api-de-dados/licitacoes/por-processo` + `/api-de-dados/licitacoes/empenhos` | `api-docs-transparencia.json` |
 | 5–7 | `/api-de-dados/despesas/...` | `api-docs-transparencia.json` |
 
-Ordem executada por `atualizar_processo`: as etapas 1–3 pertencem a `baixar_dados_compra_pncp` (resultado em `dados_pregao.json`); as etapas 4–7 pertencem a `consultar_e_mapear_empenhos` (resultado em `dados_empenhos.json`), que no fluxo principal reaproveita o cabeçalho da etapa 1 e não a repete.
+Ordem executada por `atualizar_processo`: as etapas 1–3 pertencem a `baixar_dados_compra_pncp` (resultado em `dados_pregao.json`); as etapas 4, 4b/4c e 5–7 pertencem a `consultar_e_mapear_empenhos` (resultado em `dados_empenhos.json`), que no fluxo principal reaproveita o cabeçalho da etapa 1 e não a repete.
 
 1. **Cabeçalho da compra (PNCP)** — `consultarCompra` em `api-docs-pnpc.json`; o código usa somente o endpoint oficial:
    - `https://pncp.gov.br/api/consulta/v1/orgaos/{cnpj}/compras/{ano}/{sequencial}` — responde 200; é o único caminho usado para o cabeçalho.
@@ -127,7 +131,7 @@ Ordem executada por `atualizar_processo`: as etapas 1–3 pertencem a `baixar_da
    - **Retorno esperado:** lista JSON de `DespesasPorDocumentoDTO`; a paginação para em lista vazia ou com menos de 15 elementos. O vínculo com o empenho usa `documentoResumido`, e `documento` fornece o código usado na etapa 6. A spec documenta também as respostas 400, 401 e 500.
    - **Falhas:** chave ausente ou HTTP 401 geram `PermissionError`; erro em um grupo deixa a lista daquele grupo vazia e entra em `erros_detalhamento`, sem interromper o relatório. Empenho sem documento correspondente recebe `status: nao_encontrado`.
 
-   **Fallback quando o PNCP não retorna nenhum registro:** a aplicação consulta o mesmo endpoint uma vez por CNPJ distinto dos fornecedores homologados, usando `codigoPessoa`, `fase=1`, `ano` da compra e `pagina`, sem enviar `ug`. Só são aceitos documentos com `numeroProcesso` igual ao processo da compra (comparação pelos dígitos); documentos sem processo não são aceitos nesta etapa.
+   **Uso na descoberta (estratégia C):** quando as estratégias A e B não retornam empenhos, a aplicação consulta o mesmo endpoint uma vez por CNPJ distinto dos fornecedores homologados, usando `codigoPessoa`, `fase=1`, `ano` da compra (e os dois anos seguintes) e `pagina`, sem enviar `ug`. Só são aceitos documentos com `numeroProcesso` igual ao processo da compra (comparação pelos dígitos).
 
 6. **Detalhamento do documento (Portal da Transparência)** — `documentoPorCodigo` em `api-docs-transparencia.json`; para cada empenho cujo documento foi localizado:
    `https://api.portaldatransparencia.gov.br/api-de-dados/despesas/documentos/{codigo}`
@@ -139,7 +143,63 @@ Ordem executada por `atualizar_processo`: as etapas 1–3 pertencem a `baixar_da
    - **Parâmetros de query:** `codigoDocumento` (código do empenho: unidade gestora + gestão + número do documento) e `pagina` (começa em 1). Usa os mesmos cabeçalhos de autenticação.
    - **Retorno esperado:** lista JSON de `DetalhamentoDoGastoDTO`, com campos como `descricao`, `valorAtual`, `codigoItemEmpenho` e `sequencial`. A paginação para em lista vazia ou com menos de 15 elementos; a lista agregada é anexada ao documento como `itensEmpenho`. Falha aqui invalida o detalhamento inteiro e resulta em `status: erro` para o empenho.
 
-**Fallback de descoberta (Portal da Transparência):** executado somente se a etapa 4 retornar zero empenhos. Para cada fornecedor homologado distinto, a etapa 5 é repetida sem `ug` para o ano da compra e os dois anos subsequentes; cada documento candidato é então consultado nas etapas 6–7. O detalhe é descartado se declarar processo diferente; se não repetir o número do processo, prevalece a correspondência já validada na resposta da etapa 5. Os registros são deduplicados por `documentoResumido` e recebem a mesma estrutura de detalhes usada pelo matcher (`numeroContratoEmpenho`, `niFornecedor` e `detalhesPortalTransparencia.detalhamento`). A correspondência com itens continua usando `Item compra: NNNNN` e fornecedor, sem alterar a regra do matcher. A busca é limitada a esses três anos e à fase Empenho; não consulta outros anos nem fornecedores não homologados. Erros por fornecedor/ano/documento são incluídos em `erros_detalhamento`. Se o PNCP retornar qualquer registro, o fallback não é executado.
+**Descoberta de empenhos no Portal da Transparência (cascata A → B → C):** o PNCP continua sendo a fonte primária, mas a descoberta no Portal roda **sempre**, não apenas quando o PNCP vem vazio. Isso garante que um empenho ausente do PNCP apareça no relatório mesmo que outros já tenham sido retornados. A busca segue uma cascata do caminho mais barato para o mais abrangente. O processo da compra **não** é filtro obrigatório: em compras compartilhadas e adesões o empenho tem processo e UG próprios.
+
+- **A — contrato do processo:** `GET /contratos/processo?processo=` → para cada contrato, `GET /contratos/documentos-relacionados?id=`. Retorna `ContratoDTO[]` e depois `EmpenhoComprasDTO[]` (`empenho`, `empenhoResumido`, `dataEmissao`, `observacao`, `valor`).
+- **B — licitação do processo:** `GET /licitacoes/por-processo?processo=` → `GET /licitacoes/empenhos?codigoUG&numero&codigoModalidade`. Usa `unidadeGestora.codigo`, `licitacao.numero` e `codigoModalidade` (ou `modalidade_id` da compra) e retorna `EmpenhoComprasDTO[]`. Licitação sem esses campos é apenas registrada em `erros_detalhamento`.
+- **C — fornecedores homologados:** executada somente se A e B não retornarem empenhos. Repete a etapa 5 sem `ug` para cada CNPJ homologado distinto, no ano da compra e nos dois anos subsequentes. Documentos cujo `numeroProcesso` coincide com o da compra entram na faixa de prioridade alta e são detalhados primeiro. O fornecedor é apenas **semente de descoberta**: cada documento só entra no relatório se comprovar uma das evidências objetivas descritas adiante; os demais são descartados e listados em `empenhos_nao_confirmados`.
+
+Cada estratégia pode falhar isoladamente sem interromper as seguintes; o bloqueio do token interrompe a cascata e o resultado fica parcial. Cada documento é detalhado uma única vez (etapas 6–7) e o detalhe é reaproveitado entre estratégias e entre registros do PNCP via cache da execução. Há orçamento de 60 detalhamentos por execução (`ORCAMENTO_DETALHAMENTOS`); o excedente é registrado em `erros_detalhamento`.
+
+**Deduplicação e reaproveitamento de consultas:** fornecedores são deduplicados por CNPJ (um fornecedor que vence vários itens é consultado uma vez por ano, não por item) e o enriquecimento agrupa por (UG, fornecedor, ano). Medição em 2025/282: 330 resultados homologados → 45 fornecedores distintos → 135 combinações na varredura; 111 empenhos → 83 consultas no enriquecimento. As consultas por favorecido são cacheadas por (favorecido, ano, UG, fase) durante a execução (TTL de 30 min, cache limpo no início de cada coleta), evitando repetição entre estratégias.
+
+O enriquecimento continua consultando **com `ug`**: a mesma consulta sem `ug` retorna de 25 a 77 documentos contra 1 a 3 com `ug`, então ampliar o escopo para tentar reaproveitar o cache piora o tempo total. O cache só aproveita chamadas idênticas.
+
+**Limite de taxa domina a varredura:** na compra 2025/282 a estratégia C gerou **719 requisições** e levou **247 s** — praticamente 719 × 0,343 s, ou seja, o teto de 180 req/min do endpoint restrito. Como o tempo é limitado pela taxa, paralelizar fornecedores já está aplicado e não reduz o total; paralelizar páginas piorou o resultado (833 requisições e 286 s), por isso a paginação permanece sequencial. Para reduzir o tempo é necessário reduzir requisições (cache persistente entre execuções ou menos anos/fornecedores), não aumentar concorrência.
+
+**Identidade da compra na Contratos.gov.br (evidência primária de vínculo):** para cada documento candidato, `contratos_gov.coletar_dados_empenho(ug_emitente, numero_empenho)` consulta dois endpoints **públicos** da API Contratos.gov.br:
+
+- `GET /api/contrato/ugorigem/{codigo_uasg}/numeroano/{numero}` — resolve o empenho pela UG emitente e número e devolve `unidade_compra`, `licitacao_numero`, `codigo_modalidade`, `processo`, `informacao_complementar` e `id`. A UG emitente é obrigatória: com a UG errada a resposta é uma lista vazia.
+- `GET /api/contrato/{id}/itens` — devolve `numero_item_compra`, `quantidade`, `valorunitario` e `valortotal` do empenho, permitindo usar a **quantidade real** em vez da estimativa por divisão.
+
+A compra é identificada por `unidade_compra` + `licitacao_numero` + `codigo_modalidade` (ou pelo formato compacto de `informacao_complementar`, `UG(6)+modalidade(2)+número(5)+ano(4)`). Quando essa identidade coincide com `uasg_codigo`, `numero_compra` e `ano_compra` da compra, o vínculo é `compra_identidade` com confiança alta; quando aponta para outra licitação, o documento é descartado como “pertence a outra compra”. Se a API não responder, o fluxo cai nas evidências por item/fornecedor/valor, sem interromper o relatório.
+
+**Evidências de vínculo (em ordem de força):** o fornecedor homologado é apenas a **semente** da busca — o mesmo CNPJ empenha em muitas compras, então nenhum documento é aceito só por isso. Um documento é aceito apenas com uma destas evidências objetivas:
+
+| Evidência (`vinculo`) | Regra | Confiança |
+| --- | --- | --- |
+| `contrato_do_processo` | veio da estratégia A (contratos do processo) | alta |
+| `licitacao_do_processo` | veio da estratégia B (licitação do processo) | alta |
+| `compra_identidade` | Contratos.gov.br: `unidade_compra` + `licitacao_numero` + `codigo_modalidade` + ano iguais aos da compra | alta |
+| `processo` | `numeroProcesso` do documento igual ao processo da compra | alta |
+| `item_e_fornecedor` | `Item compra: NNNNN` cujo item PNCP tem resultado do mesmo CNPJ **e** cuja descrição é compatível com a do item da compra (≥ 60% de tokens em comum) | alta |
+| `item_e_valor` | item do mesmo CNPJ **e** `valor ÷ preço unitário homologado` é múltiplo inteiro (tolerância de 1%) | média |
+
+Sem qualquer evidência o documento é **descartado** e registrado em `erros_detalhamento` com `tipo: "descartado"`, além de `numero`, `unidade`, `fornecedor`, `valor` e `motivo`. A antiga evidência `fornecedor_e_valor` (apenas o CNPJ ser vencedor de algum item) foi **removida**: na compra 2026/197 ela aceitou 40 documentos de outros órgãos e zerou a confiabilidade do relatório.
+
+**Decisão de projeto registrada:** o campo `observacao` do Portal da Transparência **não** é usado como parâmetro em nenhuma decisão — é texto livre, opcional e subjetivo. Toda evidência vem de campo estruturado (identidade da compra, processo, número do item, descrição de catálogo e preço unitário homologado).
+
+**Calibração da compatibilidade de descrição:** a descrição do item do empenho é a descrição de catálogo do PNCP (`Item compra: 00019 - ÁCIDO INDOL-3-BUTÍRICO, …`), que contém a descrição curta do edital. Comparando tokens (≥ 3 caracteres, normalizados sem acento) em 1.446 linhas de empenho dos relatórios existentes, todos os casos legítimos ficaram em 1,0 e as 37 linhas do caso falso de 2026/197 ficaram entre 0,00 e 0,27 — por isso o limiar de 0,6 (`LIMIAR_DESCRICAO`).
+
+**Quantidade estimada é sempre inteira:** quando a Contratos.gov.br não publica a quantidade, ela é calculada como `valor ÷ preço unitário homologado` e **arredondada para inteiro** com `Decimal` (evita artefatos como `2,999999`), por `empenho_portal.quantidade_estimada`. A função devolve também um indicador de divergência quando a divisão não é múltipla inteira do preço unitário (`|razão − inteiro| > max(0,05; 1% × inteiro)`); nesse caso a linha aparece com “≈” e `quantidade_divergente = true`. Quantidades publicadas na Contratos.gov.br continuam como vieram.
+
+**Adesão e consumo de saldo:** o cabeçalho da compra **não** traz flag de adesão (apenas `srp`), e a Contratos.gov.br também não distingue participante de adesão posterior — nos dois casos `unidade_compra` difere da UG emitente. A única fonte exata é `frutoAdesao` do PNCP (`RecuperarContratoDTO`). Cada registro recebe `origem_organ`:
+
+| Situação | `origem_organ` | `consome_saldo` |
+| --- | --- | --- |
+| `frutoAdesao = true` no PNCP | `adesao_posterior` | não |
+| `frutoAdesao = false` no PNCP (inclui participante na origem) | `original` | sim |
+| `frutoAdesao` ausente no PNCP | `original` (com `flag_adesao_ausente = true`) | sim |
+| Empenho só do Portal, `unidade_compra == UG emitente` | `propria_ug` | sim |
+| Empenho só do Portal, `unidade_compra != UG emitente` ou sem dados | `indefinido` | não |
+
+**Decisão de projeto registrada:** a ausência de `frutoAdesao` em um empenho **vindo do PNCP** é tratada como **não adesão**. O empenho segue o fluxo normal, consome a quantidade homologada e **não** é classificado como origem indefinida; a ausência fica registrada em `flag_adesao_ausente` apenas para auditoria. O estado indefinido permanece restrito a empenhos descobertos **somente** no Portal da Transparência, cuja origem não pode ser conhecida.
+
+Adesão posterior e indefinido **não** reduzem a quantidade homologada: vão para `valor_empenhado_adesao` / `valor_empenhado_indefinido` e não entram na execução. O relatório ganha os estados `empenhado_por_adesao` e `empenhado_origem_indefinida` para itens cujo único empenho é, respectivamente, de adesão posterior ou de origem não determinada. Essa regra evita execução acima de 100% por carona, ao custo de subestimar a execução quando a origem é desconhecida — por isso os valores ficam em colunas e cards separados.
+
+**Limitação conhecida do PNCP:** o campo `frutoAdesao` não vem em todos os registros. Na compra 2025/282, 71 empenhos vieram com `false`, 5 com `true` e 35 **sem o campo**, todos do mesmo tipo (`Empenho`), categoria e ano — a omissão depende do sistema publicador do órgão. Por decisão de projeto, esses 35 são tratados como **não adesão** (`original`, com `flag_adesao_ausente`), e não como origem indefinida.
+
+Os registros recebem também `origem` (`pncp`, `portal_contrato`, `portal_licitacao`, `portal_favorecido`), `vinculo` e `confianca`, e o resultado é unido e deduplicado por número resumido do empenho (`AAAANE999999`): os campos do PNCP são preservados e, quando o mesmo empenho também aparece no Portal, ele recebe `encontrado_tambem_no_portal`. A correspondência com itens continua usando `Item compra: NNNNN` e fornecedor, sem alterar a regra do matcher. `dados_empenhos.json` expõe `quantidade_empenhos_pncp`, `quantidade_empenhos_portal`, `quantidade_empenhos_confirmados`, `quantidade_empenhos_adesao`, `quantidade_empenhos_indefinidos`, `valor_empenhado_adesao`, `quantidade_documentos_descartados` e `empenhos_nao_confirmados` (documentos do fornecedor sem vínculo com a compra, com motivo, para auditoria).
 
 **Limites de acesso do Portal da Transparência:** respeite os limites publicados para cada token: até 700 requisições/minuto entre 00:00–06:00, até 400 requisições/minuto nos demais horários e, para endpoints restritos, até 180 requisições/minuto. O endpoint `despesas/documentos-por-favorecido` usado nas etapas 5 e no fallback é restrito. A lista completa de endpoints restritos também inclui `bolsa-familia-disponivel-por-cpf-ou-nis`, `bolsa-familia-por-municipio`, `bolsa-familia-sacado-por-nis`, `auxilio-emergencial-beneficiario-por-municipio`, `auxilio-emergencial-por-cpf-ou-nis`, `auxilio-emergencial-por-municipio` e `seguro-defeso-codigo`. Excesso suspende o token por 8 horas. `portal_transparencia.py` aplica intervalos mínimos entre chamadas no processo: 180/min para o endpoint restrito e os limites globais informados para os demais. O controle em memória coordena threads desse processo, não processos independentes; não execute instâncias concorrentes com o mesmo token sem um limitador compartilhado.
 
@@ -174,6 +234,10 @@ Rotas da interface:
 
 O andamento das atualizações do painel é enviado ao log via `on_progress`. `report_service` repassa as mensagens ao coletor e ao mapeador, que devem informar páginas, itens e totais. Ao criar uma nova etapa de coleta, chame `on_progress` em vez de imprimir diretamente, para que CLI, cron e servidor compartilhem o mesmo canal.
 
+**Painel de progresso:** `pncp_tracker/report_progress.py` (`ProgressoTracker`) interpreta as mensagens de `on_progress` e expõe etapa, percentual com pisos por fase (coleta 0,05; empenhos 0,45; relatório 0,90; concluído 1,0), estatísticas (páginas, itens, empenhos do PNCP, exclusivos do Portal, mapeados, processo *i* de *n*), tempo decorrido, segundos restantes e previsão de conclusão em UTC−3. A previsão usa `ultima_duracao_segundos` do `metadados.json` do processo quando existe; sem histórico, extrapola pelo percentual (só a partir de 8%). O painel consulta `/processes/jobs/<id>` a cada 2 s e desabilita os botões de atualização enquanto houver job ativo; `JobRegistry.create` recusa um segundo job na mesma instância e as rotas exibem “Já existe uma atualização em andamento.”. A trava entre processos continua sendo `process_lock`.
+
+**Relatório HTML — documentos descartados:** documentos sem vínculo comprovado com a compra não são exibidos no HTML e não entram em totais, itens, saldo ou CSV. Permanecem somente em `empenhos_nao_confirmados` no `dados_empenhos.json` para auditoria.
+
 ## Testes
 
 Para validar alterações:
@@ -185,9 +249,9 @@ python -m unittest discover -s tests -v
 - `test_api_client.py`, `test_collector.py`: cliente PNCP e paginação da coleta.
 - `test_admin_web.py`, `test_admin_auth.py`: rotas, CSRF, hashing e criação de usuários.
 - `test_report_service.py`, `test_report_registry.py`, `test_process_lock.py`: atualização, índice e concorrência.
-- `test_generate_reports_index.py`, `test_consultar_e_mapear_empenhos.py`: geração dos HTMLs e regras de matching.
+- `test_generate_reports_index.py`, `test_consultar_e_mapear_empenhos.py`: geração dos HTMLs, regras de matching, evidências de vínculo e classificação de adesão.
 
-Os testes não acessam a rede; todo acesso HTTP é substituído por `unittest.mock`. Ao tocar em `collector`, `api_client` ou `report_service`, mantenha essa regra.
+Os testes não acessam a rede; todo acesso HTTP é substituído por `unittest.mock`. Ao tocar em `collector`, `api_client`, `contratos_gov` ou `report_service`, mantenha essa regra.
 
 ## Regras para alterações
 
@@ -201,12 +265,20 @@ Os testes não acessam a rede; todo acesso HTTP é substituído por `unittest.mo
 - Preserve o marcador `<!-- admin-link -->` no HTML gerado pelo índice; o servidor administrativo depende dele.
 - Use o callback `on_progress` para mensagens de acompanhamento; não introduza `print` no fluxo de coleta.
 - Ao corrigir um item de "Riscos e problemas conhecidos", remova ou atualize a entrada correspondente.
-- Ao alterar chamadas externas, confira caminhos e parâmetros em `api-docs-pnpc.json` e `api-docs-transparencia.json`; os endpoints do PNCP não documentados (itens, resultados e contratos por contratação) usam a base `/api/pncp/v1` e só podem ser validados por chamada real.
+- Ao alterar chamadas externas, confira caminhos e parâmetros em `api-docs-pnpc.json`, `api-docs-transparencia.json` e `api-docs-contratos.json`; os endpoints do PNCP não documentados (itens, resultados e contratos por contratação) usam a base `/api/pncp/v1` e só podem ser validados por chamada real.
+- A API Contratos.gov.br só deve ser usada nos endpoints públicos; não introduza credenciais JWT no projeto para contornar isso.
+- Preserve a regra de saldo: apenas `original` e `propria_ug` consomem a quantidade homologada.
+- Nunca use o campo `observacao` do Portal da Transparência como evidência de vínculo ou como parâmetro de decisão: é texto livre, opcional e subjetivo. Use identidade da compra, processo, número do item, descrição de catálogo e preço unitário homologado.
+- A quantidade empenhada estimada deve ser sempre inteira, calculada com `Decimal` (`empenho_portal.quantidade_estimada`), e marcada como divergente quando a divisão pelo preço unitário não for múltipla inteira.
 
 ## Observações importantes
 
 - O relatório final é autônomo e pode ser aberto localmente sem dependências externas.
-- Registros sem vínculo confirmado a item devem continuar sendo reportados em seção separada.
+- O PNCP é a fonte primária, mas a descoberta no Portal da Transparência roda sempre, para incluir empenhos que o PNCP não lista.
+- A Contratos.gov.br é consultada sem autenticação apenas para identidade da compra e quantidade dos itens; falha nela não interrompe a atualização.
+- Adesão posterior e empenho de origem indefinida não consomem a quantidade homologada e são exibidos separadamente.
+- Decisão de projeto: empenho vindo do PNCP sem `frutoAdesao` é tratado como não adesão (fluxo normal), nunca como origem indefinida.
+- Registros sem vínculo confirmado a item **não** são exibidos em seção própria no HTML (decisão de projeto: a seção "Registros sem vínculo confirmado a item" foi removida); eles continuam nos JSONs da pasta do processo.
 - Em caso de erro HTTP 404 na API de Contratos/Empenhos do PNCP, a aplicação deve seguir normalmente e gerar o relatório sem esses registros; outros erros HTTP devem ser reportados.
 - A aplicação depende de dados do Portal da Transparência com base em CNPJ do fornecedor, ano do empenho e unidade gestora.
 - O fuso do carimbo de geração do relatório é fixo em UTC−3 (horário de Brasília), independente do fuso do servidor.

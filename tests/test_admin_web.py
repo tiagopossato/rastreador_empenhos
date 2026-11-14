@@ -1,6 +1,7 @@
 import json
 import re
 import tempfile
+import threading
 import time
 import unittest
 from pathlib import Path
@@ -167,6 +168,16 @@ class AdminWebTests(unittest.TestCase):
         )
         self.assertIn("Abrir relatório gerado", page.get_data(as_text=True))
 
+    def test_admin_renders_job_before_progress_tracker_is_initialized(self):
+        jobs = self.app.extensions["pncp_jobs"]
+        job_id = jobs.create("one", _URL)
+        self.assertIsNotNone(job_id)
+
+        page = self._login()
+
+        self.assertEqual(page.status_code, 200)
+        self.assertIn('id="stat-restante">—</strong>', page.get_data(as_text=True))
+
     def test_refresh_action_starts_a_background_update(self):
         response = self._login()
         token = self._csrf(response)
@@ -203,9 +214,43 @@ class AdminWebTests(unittest.TestCase):
 
         self.assertEqual(jobs.get(job_id)["status"], "concluido")
         self.assertEqual(jobs.get(job_id)["atualizados"], 1)
+        job = jobs.get(job_id)
+        self.assertEqual(job["etapa"], "concluido")
+        self.assertEqual(job["percentual"], 100.0)
+        self.assertEqual(job["segundos_restantes"], 0)
+        self.assertIn("itens_coletados", job["estatisticas"])
         self.assertTrue(
             any("Coletando itens do PNCP." in line for line in captured.output)
         )
+
+    def test_refresh_is_refused_while_a_job_is_running(self):
+        liberar = threading.Event()
+
+        def _lento(*args, **kwargs):
+            liberar.wait(10)
+            return {"registro": {"url_pncp": _URL}}
+
+        with patch("pncp_tracker.report_service.atualizar_processo", side_effect=_lento):
+            primeiro = _start_job(self.app, "one", _URL)
+            self.assertIsNotNone(primeiro)
+            token = self._csrf(self._login())
+            resposta = self.client.post(
+                "/processes/refresh-all",
+                data={"csrf_token": token},
+                follow_redirects=True,
+            )
+            pagina = resposta.get_data(as_text=True).lower()
+            self.assertIn("já existe uma atualização em andamento", pagina)
+            self.assertIsNone(_start_job(self.app, "all"))
+
+            jobs = self.app.extensions["pncp_jobs"]
+            liberar.set()
+            for _ in range(200):
+                if jobs.get(primeiro)["status"] != "executando":
+                    break
+                time.sleep(0.01)
+            self.assertEqual(jobs.get(primeiro)["status"], "concluido")
+            self.assertIn("percentual", jobs.latest() or {})
 
     def test_login_attempt_limiter_blocks_and_expires_attempt_keys(self):
         limiter = LoginAttemptLimiter(
