@@ -11088,6 +11088,7 @@
   "cache_reutilizado": true,
   "empenhos": [
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -11148,7 +11149,6 @@
       "dataAtualizacaoGlobal": "2026-02-18T12:51:49",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -11161,6 +11161,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -11221,7 +11222,6 @@
       "dataAtualizacaoGlobal": "2026-02-18T15:19:15",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -11234,6 +11234,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -11308,7 +11309,6 @@
       "dataAtualizacaoGlobal": "2026-11-13T10:04:20",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000187/2025-000023",
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -11320,6 +11320,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -11380,7 +11381,6 @@
       "dataAtualizacaoGlobal": "2026-02-23T12:18:48",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -11393,6 +11393,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -11453,7 +11454,6 @@
       "dataAtualizacaoGlobal": "2026-02-23T12:18:52",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -11466,6 +11466,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -11526,7 +11527,6 @@
       "dataAtualizacaoGlobal": "2026-02-26T12:35:14",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -11539,6 +11539,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -11599,7 +11600,6 @@
       "dataAtualizacaoGlobal": "2026-02-26T12:35:15",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -11612,6 +11612,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -11672,7 +11673,6 @@
       "dataAtualizacaoGlobal": "2026-02-26T12:35:16",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -11685,6 +11685,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -11745,7 +11746,6 @@
       "dataAtualizacaoGlobal": "2026-02-25T13:17:11",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -11758,6 +11758,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -11818,7 +11819,6 @@
       "dataAtualizacaoGlobal": "2026-03-02T14:52:48",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -11831,6 +11831,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -11891,7 +11892,6 @@
       "dataAtualizacaoGlobal": "2026-03-05T09:15:40",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -11904,6 +11904,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -11964,7 +11965,6 @@
       "dataAtualizacaoGlobal": "2026-03-05T10:18:40",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -11977,6 +11977,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -12037,7 +12038,6 @@
       "dataAtualizacaoGlobal": "2025-11-26T16:41:58",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -12050,6 +12050,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -12110,7 +12111,6 @@
       "dataAtualizacaoGlobal": "2026-02-10T11:44:38",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -12123,6 +12123,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -12183,7 +12184,6 @@
       "dataAtualizacaoGlobal": "2026-02-23T14:14:11",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -12196,6 +12196,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -12256,7 +12257,6 @@
       "dataAtualizacaoGlobal": "2026-02-23T14:12:27",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -12269,6 +12269,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -12329,7 +12330,6 @@
       "dataAtualizacaoGlobal": "2026-05-14T10:12:20",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -12342,6 +12342,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -12402,7 +12403,6 @@
       "dataAtualizacaoGlobal": "2026-04-13T10:55:31",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -12415,6 +12415,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -12475,7 +12476,6 @@
       "dataAtualizacaoGlobal": "2026-01-16T15:39:32",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -12488,6 +12488,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -12548,7 +12549,6 @@
       "dataAtualizacaoGlobal": "2026-01-20T15:54:55",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -12561,6 +12561,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -12621,7 +12622,6 @@
       "dataAtualizacaoGlobal": "2026-01-22T15:35:13",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -12634,6 +12634,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -12694,7 +12695,6 @@
       "dataAtualizacaoGlobal": "2026-01-29T08:47:33",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -12707,6 +12707,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -12767,7 +12768,6 @@
       "dataAtualizacaoGlobal": "2026-01-30T10:50:24",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -12780,6 +12780,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -12840,7 +12841,6 @@
       "dataAtualizacaoGlobal": "2026-02-03T14:03:40",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -12853,6 +12853,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -12913,7 +12914,6 @@
       "dataAtualizacaoGlobal": "2026-02-03T14:12:12",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -12926,6 +12926,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -12986,7 +12987,6 @@
       "dataAtualizacaoGlobal": "2026-02-03T15:33:20",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -12999,6 +12999,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -13059,7 +13060,6 @@
       "dataAtualizacaoGlobal": "2026-02-03T15:33:05",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -13072,6 +13072,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -13132,7 +13133,6 @@
       "dataAtualizacaoGlobal": "2026-02-13T11:25:04",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -13145,6 +13145,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -13219,7 +13220,6 @@
       "dataAtualizacaoGlobal": "2026-06-18T12:49:32",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000187/2025-000023",
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -13231,6 +13231,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -13305,7 +13306,6 @@
       "dataAtualizacaoGlobal": "2026-06-18T12:58:05",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000187/2025-000019",
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -13317,6 +13317,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -13391,7 +13392,6 @@
       "dataAtualizacaoGlobal": "2026-06-18T13:06:02",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000187/2025-000009",
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -13403,6 +13403,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -13477,7 +13478,6 @@
       "dataAtualizacaoGlobal": "2026-06-18T13:06:04",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000187/2025-000019",
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -13489,6 +13489,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -13563,7 +13564,6 @@
       "dataAtualizacaoGlobal": "2026-06-18T13:06:04",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000187/2025-000011",
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -13575,6 +13575,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -13649,7 +13650,6 @@
       "dataAtualizacaoGlobal": "2026-06-18T13:06:09",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000187/2025-000009",
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -13661,6 +13661,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -13735,7 +13736,6 @@
       "dataAtualizacaoGlobal": "2026-06-19T08:59:04",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000187/2025-000008",
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -13747,6 +13747,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -13821,7 +13822,6 @@
       "dataAtualizacaoGlobal": "2026-06-19T09:06:42",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000187/2025-000003",
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -13833,6 +13833,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -13907,7 +13908,6 @@
       "dataAtualizacaoGlobal": "2026-09-16T11:00:35",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000187/2025-000009",
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -13919,6 +13919,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -13993,7 +13994,6 @@
       "dataAtualizacaoGlobal": "2026-07-09T17:18:16",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000187/2025-000009",
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -14005,6 +14005,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -14079,7 +14080,6 @@
       "dataAtualizacaoGlobal": "2026-07-22T12:17:48",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000187/2025-000011",
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -14091,6 +14091,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -14165,7 +14166,6 @@
       "dataAtualizacaoGlobal": "2026-07-22T12:17:59",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000187/2025-000011",
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -14177,6 +14177,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -14251,7 +14252,6 @@
       "dataAtualizacaoGlobal": "2026-07-31T11:25:17",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000187/2025-000019",
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -14263,6 +14263,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -14337,7 +14338,6 @@
       "dataAtualizacaoGlobal": "2026-07-31T11:23:05",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000187/2025-000013",
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -14349,6 +14349,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -14423,7 +14424,6 @@
       "dataAtualizacaoGlobal": "2026-07-31T11:24:17",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000187/2025-000029",
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -14435,6 +14435,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -14509,7 +14510,6 @@
       "dataAtualizacaoGlobal": "2026-08-07T15:21:50",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000187/2025-000009",
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -14521,6 +14521,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -14581,7 +14582,6 @@
       "dataAtualizacaoGlobal": "2026-08-11T10:42:38",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -14594,6 +14594,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -14654,7 +14655,6 @@
       "dataAtualizacaoGlobal": "2026-10-21T12:35:13",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000187/2025-000005",
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -14666,6 +14666,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -14740,7 +14741,6 @@
       "dataAtualizacaoGlobal": "2026-11-13T09:42:55",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000187/2025-000009",
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -14752,6 +14752,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -14826,7 +14827,6 @@
       "dataAtualizacaoGlobal": "2026-11-11T13:01:43",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000187/2025-000019",
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
@@ -14838,6 +14838,7 @@
       "consome_saldo": true
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -14912,7 +14913,6 @@
       "dataAtualizacaoGlobal": "2026-10-28T15:31:35",
       "identificadorCipi": null,
       "urlCipi": null,
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000187/2025-000009",
       "numeroControlePncpCompra": "10635424000186-1-000187/2025",
