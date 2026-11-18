@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2026/89",
+  "criado_em": "2026-11-18T06:55:57-03:00",
+  "atualizado_em": "2026-11-18T06:55:57-03:00",
+  "chaves_integracao": {
+    "cnpj_orgao": "10635424000186",
+    "uasg_codigo": "158125",
+    "uasg_nome": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+    "numero_compra": "90002",
+    "ano_compra": 2026,
+    "numero_controle_pncp": "10635424000186-1-000089/2026"
+  },
+  "arquivo_html": "relatorio_compra_90002_2026.html",
+  "ultima_duracao_segundos": 12.2,
+  "buscar_empenhos_portal": false,
+  "resumo_cards": [
+    {
+      "chave": "itens",
+      "rotulo": "Itens",
+      "valor": 86,
+      "exibicao": "86",
+      "descricao": "Itens publicados no edital"
+    },
+    {
+      "chave": "itens_homologados",
+      "rotulo": "Itens homologados",
+      "valor": 80,
+      "exibicao": "80",
+      "descricao": "Itens empenhados + não empenhados"
+    },
+    {
+      "chave": "itens_empenhados",
+      "rotulo": "Itens empenhados",
+      "valor": 3,
+      "exibicao": "3",
+      "descricao": "Execução acima de 0%"
+    },
+    {
+      "chave": "itens_nao_empenhados",
+      "rotulo": "Itens não empenhados",
+      "valor": 77,
+      "exibicao": "77",
+      "descricao": "Execução igual a 0%, excluídos desertos"
+    },
+    {
+      "chave": "itens_desertos",
+      "rotulo": "Itens desertos",
+      "valor": 6,
+      "exibicao": "6",
+      "descricao": "Valor homologado igual a R$ 0,00"
+    },
+    {
+      "chave": "itens_resultados_pendentes",
+      "rotulo": "Resultados pendentes",
+      "valor": 0,
+      "exibicao": "0",
+      "descricao": "Falha ao consultar resultados no PNCP"
+    },
+    {
+      "chave": "valor_estimado",
+      "rotulo": "Valor estimado",
+      "valor": 2650513.23,
+      "exibicao": "R$ 2.650.513,23",
+      "descricao": "Soma dos valores estimados por item"
+    },
+    {
+      "chave": "valor_homologado",
+      "rotulo": "Valor homologado",
+      "valor": 1903052.3899999992,
+      "exibicao": "R$ 1.903.052,39",
+      "descricao": "Soma dos resultados homologados"
+    },
+    {
+      "chave": "empenhado_mapeado",
+      "rotulo": "Empenhado mapeado",
+      "valor": 6466.9,
+      "exibicao": "R$ 6.466,90",
+      "descricao": "4 de 4 registros com detalhamento"
+    }
+  ]
+}
