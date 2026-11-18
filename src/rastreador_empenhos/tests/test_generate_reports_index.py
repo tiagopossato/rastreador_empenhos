@@ -1,0 +1,346 @@
+import json
+import re
+import tempfile
+import unittest
+from pathlib import Path
+
+from rastreador_empenhos.gerar_relatorios import gerar_relatorios
+from rastreador_empenhos.pncp_tracker.report_registry import salvar_registros
+
+
+class GenerateReportsIndexTests(unittest.TestCase):
+    def _write_report(self, reports_dir, folder, number, year, object_text):
+        report_dir = reports_dir / folder
+        report_dir.mkdir()
+        (report_dir / "dados_pregao.json").write_text(
+            json.dumps({"quantidade_itens": 1}),
+            encoding="utf-8",
+        )
+        report_data = {
+            "chaves_integracao": {"numero_compra": number, "ano_compra": year},
+            "objeto": object_text,
+            "itens_mapeados": [
+                {
+                    "numero_item": 1,
+                    "descricao": "Item de teste",
+                    "valor_total_estimado": 200,
+                    "valor_total_homologado": 100,
+                    "resultados": [],
+                    "empenhos": [
+                        {
+                            "numero_empenho": "2026NE000001",
+                            "item_despesa": {"valorAtual": 25},
+                        }
+                    ],
+                }
+            ],
+            "empenhos": [],
+            "status": "ok",
+            "quantidade_empenhos": 1,
+            "quantidade_empenhos_com_detalhes": 1,
+        }
+        (report_dir / "dados_empenhos.json").write_text(
+            json.dumps(report_data, ensure_ascii=False),
+            encoding="utf-8",
+        )
+        metadata = {
+            "url_pncp": "https://pncp.gov.br/app/editais/12345678000199/{}/{:06}".format(
+                year, int(number)
+            ),
+            "criado_em": "2026-01-01T10:00:00-03:00",
+            "atualizado_em": "2026-01-02T10:00:00-03:00",
+            "chaves_integracao": report_data["chaves_integracao"],
+            "arquivo_html": "{}.html".format(folder),
+        }
+        (report_dir / "metadados.json").write_text(
+            json.dumps(metadata, ensure_ascii=False),
+            encoding="utf-8",
+        )
+        return {
+            "id": "12345678000199-{}-{}".format(year, int(number)),
+            "url_pncp": metadata["url_pncp"],
+            "pasta": folder,
+            "status": "atualizado",
+            "arquivo_html": metadata["arquivo_html"],
+        }
+
+    def test_generates_report_html_metadata_and_sorted_index(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            reports_dir = Path(temp_dir)
+            entries = [
+                self._write_report(
+                    reports_dir,
+                    "relatorio_compra_90026_2025",
+                    "90026",
+                    2025,
+                    "Aquisição de equipamentos de proteção individual",
+                ),
+                self._write_report(
+                    reports_dir,
+                    "relatorio_compra_90027_2025",
+                    "90027",
+                    2025,
+                    "Objeto do segundo edital",
+                ),
+            ]
+            index_path = reports_dir / "indice_relatorios.json"
+            salvar_registros(entries, index_path)
+            (reports_dir / "outro_arquivo.html").write_text(
+                "<html></html>", encoding="utf-8"
+            )
+            (reports_dir / "index.html").write_text("stale", encoding="utf-8")
+
+            index = gerar_relatorios(reports_dir, index_path=index_path)
+            conteudo = index.read_text(encoding="utf-8")
+
+            self.assertIn(
+                'href="relatorio_compra_90026_2025/relatorio_compra_90026_2025.html"',
+                conteudo,
+            )
+            self.assertIn(
+                'href="relatorio_compra_90027_2025/relatorio_compra_90027_2025.html"',
+                conteudo,
+            )
+            self.assertIn("Edital nº 90026/2025", conteudo)
+            self.assertIn("Aquisição de equipamentos de proteção individual", conteudo)
+            self.assertIn("<!-- admin-link -->", conteudo)
+            self.assertNotIn("stale", conteudo)
+            self.assertLess(
+                conteudo.index("Edital nº 90026/2025"),
+                conteudo.index("Edital nº 90027/2025"),
+            )
+            self.assertTrue(
+                (reports_dir / "relatorio_compra_90026_2025" / "relatorio_compra_90026_2025.html").exists()
+            )
+
+            index_data = json.loads(
+                (reports_dir / "indice_relatorios.json").read_text(encoding="utf-8")
+            )
+            self.assertEqual(index_data["quantidade_relatorios"], 2)
+            self.assertEqual(
+                index_data["relatorios"][0]["pasta"],
+                "relatorio_compra_90026_2025",
+            )
+            metadata = json.loads(
+                (
+                    reports_dir
+                    / "relatorio_compra_90026_2025"
+                    / "metadados.json"
+                ).read_text(encoding="utf-8")
+            )
+            self.assertEqual(len(metadata["resumo_cards"]), 9)
+            cards_by_key = {
+                card["chave"]: card for card in metadata["resumo_cards"]
+            }
+            self.assertEqual(cards_by_key["itens_empenhados"]["valor"], 1)
+            self.assertEqual(cards_by_key["valor_estimado"]["exibicao"], "R$ 200,00")
+            self.assertEqual(cards_by_key["itens_resultados_pendentes"]["valor"], 0)
+            report_path = (
+                reports_dir
+                / "relatorio_compra_90026_2025"
+                / "relatorio_compra_90026_2025.html"
+            )
+            report_html = report_path.read_text(encoding="utf-8")
+            self.assertIn('<a href="../">Página inicial</a>', report_html)
+            for page in (conteudo, report_html):
+                disclaimer = re.search(
+                    r'<aside class="disclaimer"[^>]*>.*?</aside>',
+                    page,
+                    re.DOTALL,
+                )
+                self.assertIsNotNone(disclaimer)
+                disclaimer_html = disclaimer.group(0) if disclaimer else ""
+                self.assertIn("Aviso importante", disclaimer_html)
+                self.assertIn("por sua conta e risco", disclaimer_html)
+                self.assertIn("Contratos.gov.br", disclaimer_html)
+                self.assertIn("SIAFI", disclaimer_html)
+                self.assertIn("PNCP", disclaimer_html)
+                self.assertIn("não são atualizadas em tempo real", disclaimer_html)
+                self.assertIn("administrador", disclaimer_html)
+                self.assertIn("última atualização", disclaimer_html)
+                self.assertIn("decisões importantes", disclaimer_html)
+                self.assertIn("fontes oficiais", disclaimer_html)
+                self.assertIn("tiago.possato@ifc.edu.br", disclaimer_html)
+                self.assertIn("correções e melhorias", disclaimer_html)
+                self.assertNotRegex(
+                    disclaimer_html.lower(),
+                    r"<details\b|<button\b|\shidden(?:\s|=|>)",
+                )
+                disclaimer_position = page.index(disclaimer_html)
+                self.assertGreaterEqual(
+                    page.rfind("</table>", 0, disclaimer_position),
+                    0,
+                )
+                self.assertLess(disclaimer_position, page.index("</main>"))
+            embedded = re.search(
+                r'<script id="report-data" type="application/json">(.*?)</script>',
+                report_html,
+                re.DOTALL,
+            )
+            self.assertIsNotNone(embedded)
+            self.assertEqual(json.loads(embedded.group(1))["gerado_em"], "02/01/2026 10:00")
+
+            gerar_relatorios(reports_dir, index_path=index_path)
+            regenerated = re.search(
+                r'<script id="report-data" type="application/json">(.*?)</script>',
+                report_path.read_text(encoding="utf-8"),
+                re.DOTALL,
+            )
+            self.assertEqual(json.loads(regenerated.group(1))["gerado_em"], "02/01/2026 10:00")
+
+    def test_failed_results_are_shown_as_pending_instead_of_deserted(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            reports_dir = Path(temp_dir)
+            record = self._write_report(
+                reports_dir,
+                "relatorio_pendente",
+                "90031",
+                2025,
+                "Objeto com resultado pendente",
+            )
+            report_path = reports_dir / "relatorio_pendente" / "dados_empenhos.json"
+            report_data = json.loads(report_path.read_text(encoding="utf-8"))
+            report_data["erros_resultados_itens"] = [
+                {"numero_item": 1, "erro": "HTTPError: falha"}
+            ]
+            report_data["itens_mapeados"][0].update(
+                {
+                    "status": "resultados_homologados_indisponiveis",
+                    "erro_resultados_homologados": "HTTPError: falha",
+                    "valor_total_homologado": None,
+                    "quantidade_homologada": None,
+                }
+            )
+            report_path.write_text(
+                json.dumps(report_data, ensure_ascii=False),
+                encoding="utf-8",
+            )
+            index_path = reports_dir / "indice_relatorios.json"
+            salvar_registros([record], index_path)
+
+            gerar_relatorios(reports_dir, index_path=index_path)
+
+            html_path = reports_dir / "relatorio_pendente" / "relatorio_pendente.html"
+            content = html_path.read_text(encoding="utf-8")
+            self.assertIn("Resultados pendentes", content)
+            self.assertIn("não são contabilizados como desertos", content)
+            embedded = re.search(
+                r'<script id="report-data" type="application/json">(.*?)</script>',
+                content,
+                re.DOTALL,
+            )
+            report = json.loads(embedded.group(1))
+            self.assertIsNone(report["itens"][0]["valor_total_homologado"])
+            self.assertEqual(
+                report["itens"][0]["status"],
+                "resultados_homologados_indisponiveis",
+            )
+
+            saved_index = json.loads(index_path.read_text(encoding="utf-8"))
+            saved_record = saved_index["relatorios"][0]
+            self.assertEqual(saved_record["status"], "parcial")
+            cards = {card["chave"]: card for card in saved_record["resumo_cards"]}
+            self.assertEqual(cards["itens_desertos"]["valor"], 0)
+            self.assertEqual(cards["itens_resultados_pendentes"]["valor"], 1)
+
+    def test_index_shows_empty_state_when_no_reports_exist(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            reports_dir = Path(temp_dir)
+            index_path = reports_dir / "indice_relatorios.json"
+            index = gerar_relatorios(reports_dir, index_path=index_path)
+
+            self.assertIn(
+                "Nenhum relatório disponível.",
+                index.read_text(encoding="utf-8"),
+            )
+            self.assertEqual(
+                json.loads(
+                    (reports_dir / "indice_relatorios.json").read_text(encoding="utf-8")
+                )["relatorios"],
+                [],
+            )
+
+    def test_report_and_object_values_are_html_escaped(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            reports_dir = Path(temp_dir)
+            record = self._write_report(
+                reports_dir,
+                "relatorio_teste",
+                "90028",
+                2025,
+                "Objeto com & e aspas '",
+            )
+            report_data_path = reports_dir / "relatorio_teste" / "dados_empenhos.json"
+            report_data = json.loads(report_data_path.read_text(encoding="utf-8"))
+            report_data["objeto"] = "Objeto com & e aspas '"
+            report_data_path.write_text(json.dumps(report_data), encoding="utf-8")
+            index_path = reports_dir / "indice_relatorios.json"
+            salvar_registros([record], index_path)
+
+            content = gerar_relatorios(reports_dir, index_path=index_path).read_text(encoding="utf-8")
+
+            self.assertIn("Objeto com &amp; e aspas &#x27;", content)
+
+    def test_pending_record_is_retained_until_data_is_available(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            reports_dir = Path(temp_dir)
+            index_path = reports_dir / "indice_relatorios.json"
+            record = {
+                "id": "12345678000199-2025-282",
+                "url_pncp": "https://pncp.gov.br/app/editais/12345678000199/2025/000282",
+                "status": "pendente",
+                "pasta": None,
+                "resumo_cards": [],
+            }
+            salvar_registros([record], index_path)
+
+            index = gerar_relatorios(reports_dir, index_path=index_path)
+
+            self.assertIn("Processo aguardando atualização", index.read_text(encoding="utf-8"))
+            saved = json.loads(index_path.read_text(encoding="utf-8"))
+            self.assertEqual(saved["relatorios"][0]["status"], "pendente")
+
+    def test_index_regeneration_does_not_hide_a_failed_update(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            reports_dir = Path(temp_dir)
+            record = self._write_report(
+                reports_dir,
+                "relatorio_existente",
+                "90029",
+                2025,
+                "Objeto existente",
+            )
+            record["status"] = "erro"
+            record["erro"] = "falha temporária"
+            index_path = reports_dir / "indice_relatorios.json"
+            salvar_registros([record], index_path)
+
+            gerar_relatorios(reports_dir, index_path=index_path)
+
+            saved = json.loads(index_path.read_text(encoding="utf-8"))["relatorios"][0]
+            self.assertEqual(saved["status"], "erro")
+            self.assertEqual(saved["erro"], "falha temporária")
+
+    def test_incomplete_report_data_is_marked_as_error(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            reports_dir = Path(temp_dir)
+            record = self._write_report(
+                reports_dir,
+                "relatorio_incompleto",
+                "90030",
+                2025,
+                "Objeto incompleto",
+            )
+            (reports_dir / "relatorio_incompleto" / "dados_pregao.json").unlink()
+            index_path = reports_dir / "indice_relatorios.json"
+            salvar_registros([record], index_path)
+
+            gerar_relatorios(reports_dir, index_path=index_path)
+
+            saved = json.loads(index_path.read_text(encoding="utf-8"))["relatorios"][0]
+            self.assertEqual(saved["status"], "erro")
+            self.assertIn("Dados incompletos", saved["erro"])
+
+
+if __name__ == "__main__":
+    unittest.main()

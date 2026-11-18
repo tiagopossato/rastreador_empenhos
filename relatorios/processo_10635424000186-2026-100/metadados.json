@@ -2,7 +2,7 @@
   "schema_version": 1,
   "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2026/100",
   "criado_em": "2026-11-14T12:59:59-03:00",
-  "atualizado_em": "2026-11-17T21:34:36-03:00",
+  "atualizado_em": "2026-11-17T22:20:50-03:00",
   "chaves_integracao": {
     "cnpj_orgao": "10635424000186",
     "uasg_codigo": "158125",
@@ -12,7 +12,7 @@
     "numero_controle_pncp": "10635424000186-1-000100/2026"
   },
   "arquivo_html": "relatorio_compra_91050_2026.html",
-  "ultima_duracao_segundos": 6.7,
+  "ultima_duracao_segundos": 6.8,
   "buscar_empenhos_portal": false,
   "resumo_cards": [
     {

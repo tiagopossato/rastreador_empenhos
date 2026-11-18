@@ -2,7 +2,7 @@
   "schema_version": 1,
   "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000102",
   "criado_em": "2026-11-12T08:21:14-03:00",
-  "atualizado_em": "2026-11-17T21:29:25-03:00",
+  "atualizado_em": "2026-11-17T22:20:15-03:00",
   "chaves_integracao": {
     "cnpj_orgao": "10635424000186",
     "uasg_codigo": "158125",
@@ -77,6 +77,6 @@
       "descricao": "114 de 114 registros com detalhamento"
     }
   ],
-  "ultima_duracao_segundos": 68.2,
+  "ultima_duracao_segundos": 71.6,
   "buscar_empenhos_portal": false
 }

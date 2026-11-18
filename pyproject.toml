@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rastreador-empenhos"
+dynamic = ["version"]
+description = "Rastreia empenhos de compras públicas federais no PNCP e gera relatórios HTML."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "LicenseRef-Proprietary"
+dependencies = [
+    "requests",
+    "Flask>=2.3,<3.0",
+    "waitress>=2.1,<3.0",
+]
+classifiers = [
+    "Environment :: Console",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Office/Business :: Financial :: Accounting",
+]
+
+[project.scripts]
+rastreador-empenhos = "rastreador_empenhos.cli:main"
+rastreador-empenhos-atualizar = "rastreador_empenhos.atualizar_relatorios:main"
+rastreador-empenhos-criar-usuario = "rastreador_empenhos.criar_usuario_admin:main"
+rastreador-empenhos-gerar-indice = "rastreador_empenhos.generate_reports_index:main"
+rastreador-empenhos-admin = "rastreador_empenhos.admin_web.serve:main"
+
+[project.urls]
+Homepage = "https://tiagopossato.github.io/rastreador_empenhos/"
+
+[tool.setuptools.dynamic]
+version = { attr = "rastreador_empenhos.__version__" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"rastreador_empenhos.admin_web" = ["templates/*.html"]

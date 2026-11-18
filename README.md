@@ -18,76 +18,117 @@ Empenhos decorrentes de adesão posterior — ou, quando vindos apenas do Portal
 
 ```text
 rastreador_empenhos/
-├── main.py
-├── atualizar_relatorios.py
-├── criar_usuario_admin.py
+├── pyproject.toml
 ├── README.md
-├── generate_reports_index.py
 ├── requirements.txt
-├── admin_web/
-│   ├── app.py
-│   ├── auth.py
-│   ├── serve.py
-│   └── templates/
-├── pncp_tracker/
-│   ├── api_client.py
-│   ├── collector.py
-│   ├── constants.py
-│   ├── contratos_empenhos.py
-│   ├── contratos_gov.py
-│   ├── empenho_details.py
-│   ├── empenho_matcher.py
-│   ├── empenho_portal.py
-│   ├── empenhos.py
-│   ├── consultar_e_mapear_empenhos.py
-│   ├── portal_transparencia.py
-│   ├── report_html.py
-│   ├── process_lock.py
-│   ├── report_registry.py
-│   ├── report_service.py
-│   └── url_parser.py
-├── relatorios/
-│   ├── index.html
-│   ├── indice_relatorios.json
-│   ├── gerar_relatorios.py
-│   └── <id_do_processo>/
-│       ├── relatorio_compra_<numero>_<ano>.html
-│       ├── dados_pregao.json
-│       ├── dados_empenhos.json
-│       └── metadados.json
-└── tests/
+├── src/
+│   └── rastreador_empenhos/
+│       ├── __init__.py
+│       ├── project_root.py
+│       ├── cli.py
+│       ├── atualizar_relatorios.py
+│       ├── criar_usuario_admin.py
+│       ├── generate_reports_index.py
+│       ├── gerar_relatorios.py
+│       ├── admin_web/
+│       │   ├── app.py
+│       │   ├── auth.py
+│       │   ├── serve.py
+│       │   └── templates/
+│       ├── pncp_tracker/
+│       │   ├── api_client.py
+│       │   ├── collector.py
+│       │   ├── constants.py
+│       │   ├── contratos_empenhos.py
+│       │   ├── contratos_gov.py
+│       │   ├── empenho_details.py
+│       │   ├── empenho_matcher.py
+│       │   ├── empenho_portal.py
+│       │   ├── empenhos.py
+│       │   ├── consultar_e_mapear_empenhos.py
+│       │   ├── portal_transparencia.py
+│       │   ├── report_html.py
+│       │   ├── process_lock.py
+│       │   ├── report_registry.py
+│       │   ├── report_service.py
+│       │   └── url_parser.py
+│       └── tests/
+└── relatorios/
+    ├── index.html
+    ├── indice_relatorios.json
+    └── <id_do_processo>/
+        ├── relatorio_compra_<numero>_<ano>.html
+        ├── dados_pregao.json
+        ├── dados_empenhos.json
+        └── metadados.json
 ```
 
-- `main.py`: ponto de entrada da CLI; delega coleta e persistência ao serviço compartilhado.
-- `atualizar_relatorios.py`: atualiza todos os processos ativos do índice, para uso manual ou por cron.
-- `criar_usuario_admin.py`: cria credenciais locais para a interface administrativa.
-- `admin_web/`: aplicação privada Flask servida por Waitress.
-- `pncp_tracker/url_parser.py`: valida e extrai os parâmetros da URL pública do edital.
-- `pncp_tracker/api_client.py` e `collector.py`: consultam e organizam os dados da compra, itens e resultados no PNCP.
-- `pncp_tracker/contratos_empenhos.py`: consulta os registros da aba Contratos/Empenhos do PNCP.
-- `pncp_tracker/portal_transparencia.py` e `empenho_details.py`: consultam e enriquecem os empenhos com detalhes do Portal da Transparência.
-- `pncp_tracker/empenho_portal.py`: descobre empenhos no Portal da Transparência por contrato, licitação ou fornecedor homologado, aceitando processo/UG divergentes quando há evidência de vínculo.
-- `pncp_tracker/contratos_gov.py`: cliente público da API Contratos.gov.br para confirmar a compra de cada empenho e obter a quantidade real dos itens.
-- `pncp_tracker/empenho_matcher.py` e `empenhos.py`: relacionam empenhos aos itens e fornecedores homologados.
-- `pncp_tracker/consultar_e_mapear_empenhos.py`: consulta os empenhos, enriquece com detalhes do Portal da Transparência e mapeia os registros aos itens da compra.
-- `pncp_tracker/report_html.py`: prepara os dados e gera o relatório HTML.
-- `pncp_tracker/report_service.py`: executa e persiste uma atualização individual ou em lote.
-- `pncp_tracker/report_registry.py`: valida URLs e mantém a lista ativa no índice JSON.
-- `relatorios/gerar_relatorios.py`: regenera os HTMLs individuais, o índice JSON e o índice HTML a partir dos dados persistidos.
-- `generate_reports_index.py`: atalho compatível para executar o gerador de relatórios.
-- `tests/`: testes automatizados do projeto.
+- `rastreador_empenhos/cli.py`: comando `rastreador-empenhos`; delega coleta e persistência ao serviço compartilhado.
+- `rastreador_empenhos/atualizar_relatorios.py`: comando `rastreador-empenhos-atualizar`; atualiza todos os processos ativos do índice, para uso manual ou por cron.
+- `rastreador_empenhos/criar_usuario_admin.py`: comando `rastreador-empenhos-criar-usuario`; cria credenciais locais para a interface administrativa.
+- `rastreador_empenhos/admin_web/`: comando `rastreador-empenhos-admin`; aplicação privada Flask servida por Waitress.
+- `rastreador_empenhos/gerar_relatorios.py` e `generate_reports_index.py`: comando `rastreador-empenhos-gerar-indice`; regenera os HTMLs individuais e os índices sem consultar as APIs.
+- `rastreador_empenhos/project_root.py`: localiza a raiz do projeto (`.env`, `.private/` e `relatorios/`) quando o pacote é executado a partir de uma instalação.
+- `rastreador_empenhos/pncp_tracker/url_parser.py`: valida e extrai os parâmetros da URL pública do edital.
+- `rastreador_empenhos/pncp_tracker/api_client.py` e `collector.py`: consultam e organizam os dados da compra, itens e resultados no PNCP.
+- `rastreador_empenhos/pncp_tracker/contratos_empenhos.py`: consulta os registros da aba Contratos/Empenhos do PNCP.
+- `rastreador_empenhos/pncp_tracker/portal_transparencia.py` e `empenho_details.py`: consultam e enriquecem os empenhos com detalhes do Portal da Transparência.
+- `rastreador_empenhos/pncp_tracker/empenho_portal.py`: descobre empenhos no Portal da Transparência por contrato, licitação ou fornecedor homologado, aceitando processo/UG divergentes quando há evidência de vínculo.
+- `rastreador_empenhos/pncp_tracker/contratos_gov.py`: cliente público da API Contratos.gov.br para confirmar a compra de cada empenho e obter a quantidade real dos itens.
+- `rastreador_empenhos/pncp_tracker/empenho_matcher.py` e `empenhos.py`: relacionam empenhos aos itens e fornecedores homologados.
+- `rastreador_empenhos/pncp_tracker/consultar_e_mapear_empenhos.py`: consulta os empenhos, enriquece com detalhes do Portal da Transparência e mapeia os registros aos itens da compra.
+- `rastreador_empenhos/pncp_tracker/report_html.py`: prepara os dados e gera o relatório HTML.
+- `rastreador_empenhos/pncp_tracker/report_service.py`: executa e persiste uma atualização individual ou em lote.
+- `rastreador_empenhos/pncp_tracker/report_registry.py`: valida URLs e mantém a lista ativa no índice JSON.
+- `rastreador_empenhos/tests/`: testes automatizados do projeto.
 
-## Requisitos e configuração
+## Instalação
 
-- Python 3.10 ou superior.
-- Dependências listadas em `requirements.txt` (`requests`, Flask e Waitress).
-- Chave da API do Portal da Transparência para consultar o detalhamento dos documentos de despesa.
-
-Instale a dependência:
+O projeto segue o layout `src/` e declara as dependências, os pacotes e os comandos em `pyproject.toml` (PEP 621, backend `setuptools`).
 
 ```bash
 python -m pip install -r requirements.txt
 ```
+
+Para instalar como ferramenta CLI isolada, sem alterar o ambiente global:
+
+```bash
+pipx install .
+```
+
+```powershell
+pipx install -e .
+```
+
+Os cinco comandos abaixo passam a ficar disponíveis no `PATH`:
+
+```text
+rastreador-empenhos                 # CLI principal
+rastreador-empenhos-atualizar       # atualização em lote (cron)
+rastreador-empenhos-criar-usuario   # criação de usuário da interface administrativa
+rastreador-empenhos-gerar-indice    # regenera os relatórios e índices a partir dos JSONs
+rastreador-empenhos-admin           # servidor administrativo Waitress
+```
+
+## Requisitos e configuração
+
+- Python 3.10 ou superior.
+- Dependências declaradas em `pyproject.toml` (`requests`, Flask e Waitress), replicadas em `requirements.txt`.
+- Chave da API do Portal da Transparência para consultar o detalhamento dos documentos de despesa.
+
+Instale as dependências:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+Ou instale o próprio projeto (que já resolve as dependências):
+
+```bash
+pipx install .
+```
+
+O `.env`, `.private/` e `relatorios/` são procurados na **raiz do projeto**: a variável `RASTREADOR_EMPENHOS_ROOT` tem prioridade; sem ela, a raiz é detectada a partir do diretório atual (subindo até encontrar `relatorios/indice_relatorios.json`, `README.md` ou `.env.example`). Execute os comandos dentro do repositório — `cd rastreador_empenhos && rastreador-empenhos ...` — ou defina `RASTREADOR_EMPENHOS_ROOT` antes de chamar os comandos de outro diretório.
 
 Configure a chave em um arquivo `.env` na raiz do projeto:
 
@@ -102,15 +143,17 @@ Também são aceitas as variáveis `PORTAL_DADOS_API_KEY` e `PORTALTRANSPARENCIA
 Passe a URL pública do edital como argumento:
 
 ```bash
-python main.py "https://pncp.gov.br/app/editais/10635424000186/2025/187"
+rastreador-empenhos "https://pncp.gov.br/app/editais/10635424000186/2025/187"
 ```
+
+Sem `pipx`, a forma equivalente é `python -m rastreador_empenhos.cli "https://..."`.
 
 Se a URL for omitida, o programa a solicitará no terminal. Uma URL vazia ou fora do formato `/editais/{cnpj}/{ano}/{sequencial}` é rejeitada antes das consultas.
 
 Por padrão, a atualização usa apenas a aba Contratos/Empenhos do PNCP, considerando que ela traz os empenhos daquela licitação. Para também procurar no Portal da Transparência empenhos que não estejam registrados no PNCP, use a flag:
 
 ```bash
-python main.py "https://pncp.gov.br/app/editais/10635424000186/2025/187" --buscar-empenhos-portal
+rastreador-empenhos "https://pncp.gov.br/app/editais/10635424000186/2025/187" --buscar-empenhos-portal
 ```
 
 A busca adicional consulta o Portal por contrato, licitação e fornecedores homologados, o que aumenta o tempo de execução e o consumo de requisições (o endpoint por favorecido é restrito a 180 requisições por minuto; exceder o limite suspende o token por 8 horas). A flag vale apenas para a execução corrente e não altera o modo gravado no cadastro do processo. Em qualquer modo, os empenhos publicados no PNCP continuam sendo detalhados no Portal para identificar os itens da despesa.
@@ -157,13 +200,13 @@ O índice e cada relatório individual exibem, ao final da página, um aviso sem
 Atualize manualmente todos os processos ativos:
 
 ```bash
-python atualizar_relatorios.py
+rastreador-empenhos-atualizar
 ```
 
 O comando tenta todos os processos mesmo se algum falhar e retorna código de saída diferente de zero se houver falhas, para que o cron possa registrá-las. Exemplo de crontab (ajuste os caminhos e a frequência):
 
 ```cron
-0 3 * * * cd /opt/rastreador_empenhos && /opt/rastreador_empenhos/.venv/bin/python atualizar_relatorios.py >> /var/log/rastreador-empenhos.log 2>&1
+0 3 * * * cd /opt/rastreador_empenhos && /home/usuario/.local/bin/rastreador-empenhos-atualizar >> /var/log/rastreador-empenhos.log 2>&1
 ```
 
 A interface administrativa permite cadastrar URLs PNCP, remover processos da lista ativa sem apagar os dados históricos, definir por processo se a atualização deve procurar empenhos não registrados no PNCP e iniciar a atualização de um processo ou de todos. A coluna **Procurar empenhos não registrados no PNCP** guarda essa escolha em `indice_relatorios.json`; o modo selecionado é aplicado nas próximas atualizações do processo, inclusive nas disparadas pelo cron, e fica registrado em `metadados.json`. As tarefas iniciadas pela interface rodam em segundo plano; o painel exibe seu resultado enquanto o serviço estiver ativo. Um lock local serializa atualizações iniciadas pela interface, pela CLI e pelo cron. Execute uma única instância Waitress para manter o painel de tarefas consistente; o status em memória é perdido se o serviço reiniciar durante uma tarefa.
@@ -171,7 +214,7 @@ A interface administrativa permite cadastrar URLs PNCP, remover processos da lis
 O arquivo privado de usuários fica por padrão em `.private/usuarios.json` (ignorado pelo Git e fora da pasta publicada). Crie a primeira conta de forma interativa (o próprio servidor administrativo também solicita essa conta quando ainda não existe nenhuma):
 
 ```bash
-python criar_usuario_admin.py
+rastreador-empenhos-criar-usuario
 ```
 
 As senhas são armazenadas apenas como hashes PBKDF2 salgados. Defina uma chave de sessão forte no ambiente do serviço; não a versione. No PowerShell (Windows), execute:
@@ -189,7 +232,7 @@ export PNCP_ADMIN_SESSION_SECRET="$(python -c 'import secrets; print(secrets.tok
 Opcionalmente, configure `PNCP_ADMIN_USERS_FILE` para apontar o arquivo privado de usuários. Inicie o servidor WSGI na máquina privada, na mesma sessão em que definiu a chave:
 
 ```bash
-python -m admin_web.serve
+rastreador-empenhos-admin
 ```
 
 Se o arquivo de usuários estiver vazio ou não existir, o servidor solicita antes da inicialização os dados da primeira conta — nome de usuário, senha e confirmação — e só sobe depois que ela é criada. Cancelar a criação (nome de usuário vazio, `Ctrl+C` ou entrada indisponível) encerra a execução sem iniciar a interface.
@@ -205,25 +248,25 @@ Atualizações concorrentes compartilham um lock em `.private/report_update.lock
 Para recriar os relatórios individuais e os dois índices, sem consultar as APIs:
 
 ```bash
-python relatorios/gerar_relatorios.py
+rastreador-empenhos-gerar-indice
 ```
 
 ## Publicação no GitHub Pages
 
-O workflow `.github/workflows/pages.yml` regenera os relatórios individuais e os índices a partir do cadastro e dos JSONs versionados, e publica o conteúdo de `relatorios/` no GitHub Pages em cada push para `main`. Também é possível iniciar a publicação manualmente pela aba **Actions**.
+O workflow `.github/workflows/pages.yml` regenera os relatórios individuais e os índices a partir do cadastro e dos JSONs versionados (`python -m pip install .` seguido de `rastreador-empenhos-gerar-indice`), e publica o conteúdo de `relatorios/` no GitHub Pages em cada push para `main`. Também é possível iniciar a publicação manualmente pela aba **Actions**.
 
 Para publicar, configure a fonte do GitHub Pages como **GitHub Actions** em **Settings → Pages**. O workflow publica os relatórios HTML que estão versionados; a coleta de novas compras continua sendo feita localmente. Para incluir um novo relatório no site, gere-o e envie o arquivo para o repositório.
 
 O mesmo gerador pode ser executado pelo atalho na raiz do projeto:
 
 ```bash
-python generate_reports_index.py
+rastreador-empenhos-gerar-indice
 ```
 
-Para executar os testes:
+Para executar os testes, instale o projeto em modo editável (`pipx install -e .` ou `python -m pip install -e .`) e rode:
 
 ```bash
-python -m unittest discover -s tests -v
+python -m unittest rastreador_empenhos.tests.suite -v
 ```
 
 ## Fontes e limitações

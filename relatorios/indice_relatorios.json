@@ -1,12 +1,12 @@
 {
   "schema_version": 2,
-  "quantidade_relatorios": 11,
+  "quantidade_relatorios": 12,
   "relatorios": [
     {
       "pasta": "relatorio_compra_90027_2025",
       "arquivo_html": "relatorio_compra_90027_2025.html",
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000272",
-      "atualizado_em": "2026-11-17T21:24:44-03:00",
+      "atualizado_em": "2026-11-17T22:15:25-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -90,7 +90,7 @@
       "pasta": "relatorio_compra_90059_2025",
       "arquivo_html": "relatorio_compra_90059_2025.html",
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000282",
-      "atualizado_em": "2026-11-17T21:25:51-03:00",
+      "atualizado_em": "2026-11-17T22:16:34-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -175,7 +175,7 @@
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2024/000343",
       "pasta": "processo_10635424000186-2024-343",
       "status": "atualizado",
-      "atualizado_em": "2026-11-17T21:27:12-03:00",
+      "atualizado_em": "2026-11-17T22:17:55-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -259,7 +259,7 @@
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000187",
       "pasta": "processo_10635424000186-2025-187",
       "status": "atualizado",
-      "atualizado_em": "2026-11-17T21:27:41-03:00",
+      "atualizado_em": "2026-11-17T22:18:26-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -343,7 +343,7 @@
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2026/000140",
       "pasta": "processo_10635424000186-2026-140",
       "status": "atualizado",
-      "atualizado_em": "2026-11-17T21:27:53-03:00",
+      "atualizado_em": "2026-11-17T22:18:38-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -427,7 +427,7 @@
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2026/000115",
       "pasta": "processo_10635424000186-2026-115",
       "status": "atualizado",
-      "atualizado_em": "2026-11-17T21:28:12-03:00",
+      "atualizado_em": "2026-11-17T22:18:59-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -511,7 +511,7 @@
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2026/187",
       "pasta": "processo_10635424000186-2026-187",
       "status": "atualizado",
-      "atualizado_em": "2026-11-17T21:28:15-03:00",
+      "atualizado_em": "2026-11-17T22:19:01-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -595,7 +595,7 @@
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2026/197",
       "pasta": "processo_10635424000186-2026-197",
       "status": "atualizado",
-      "atualizado_em": "2026-11-17T21:28:16-03:00",
+      "atualizado_em": "2026-11-17T22:19:03-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -679,7 +679,7 @@
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000102",
       "pasta": "processo_10635424000186-2025-102",
       "status": "atualizado",
-      "atualizado_em": "2026-11-17T21:29:25-03:00",
+      "atualizado_em": "2026-11-17T22:20:15-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -763,7 +763,7 @@
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000168",
       "pasta": "processo_10635424000186-2025-168",
       "status": "atualizado",
-      "atualizado_em": "2026-11-17T21:29:51-03:00",
+      "atualizado_em": "2026-11-17T22:20:42-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -847,7 +847,7 @@
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2026/100",
       "pasta": "processo_10635424000186-2026-100",
       "status": "atualizado",
-      "atualizado_em": "2026-11-17T21:34:36-03:00",
+      "atualizado_em": "2026-11-17T22:20:50-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -926,6 +926,90 @@
       "erro": null,
       "arquivo_html": "relatorio_compra_91050_2026.html",
       "ultima_tentativa_em": "2026-11-17T21:29:59-03:00"
+    },
+    {
+      "id": "42414284000102-2026-161",
+      "url_pncp": "https://pncp.gov.br/app/editais/42414284000102/2026/000161",
+      "pasta": "processo_42414284000102-2026-161",
+      "status": "atualizado",
+      "atualizado_em": "2026-11-17T22:20:54-03:00",
+      "chaves_integracao": {
+        "cnpj_orgao": "42414284000102",
+        "uasg_codigo": "153167",
+        "uasg_nome": "COLEGIO PEDRO II/REITORIA",
+        "numero_compra": "308",
+        "ano_compra": 2026,
+        "numero_controle_pncp": "42414284000102-1-000161/2026"
+      },
+      "objeto": "Aquisição de aparelhos, equipamentos e eletrodomésticos para os Campis, Reitoria do Colégio Pedro II e Órgãos participantes,\n\nA presente contratação tem como objetivo, a realização do pregão pelo Sistema de Registro de Preços para futuras aquisições de aparelhos, equipamentos e eletrodomésticos, que visam, em parte, a substituição dos equipamentos que, atualmente, estão desgastados devido o tempo de utilização e manutenção de reserva técnica. Importante considerar, que parte desses equipamentos a serem substituídos, por serem antigos, eleva significativamente o custo de manutenção/conserto e de consumo de energia para a Administração Pública",
+      "resumo_cards": [
+        {
+          "chave": "itens",
+          "rotulo": "Itens",
+          "valor": 57,
+          "exibicao": "57",
+          "descricao": "Itens publicados no edital"
+        },
+        {
+          "chave": "itens_homologados",
+          "rotulo": "Itens homologados",
+          "valor": 57,
+          "exibicao": "57",
+          "descricao": "Itens empenhados + não empenhados"
+        },
+        {
+          "chave": "itens_empenhados",
+          "rotulo": "Itens empenhados",
+          "valor": 0,
+          "exibicao": "0",
+          "descricao": "Execução acima de 0%"
+        },
+        {
+          "chave": "itens_nao_empenhados",
+          "rotulo": "Itens não empenhados",
+          "valor": 57,
+          "exibicao": "57",
+          "descricao": "Execução igual a 0%, excluídos desertos"
+        },
+        {
+          "chave": "itens_desertos",
+          "rotulo": "Itens desertos",
+          "valor": 0,
+          "exibicao": "0",
+          "descricao": "Valor homologado igual a R$ 0,00"
+        },
+        {
+          "chave": "itens_resultados_pendentes",
+          "rotulo": "Resultados pendentes",
+          "valor": 0,
+          "exibicao": "0",
+          "descricao": "Falha ao consultar resultados no PNCP"
+        },
+        {
+          "chave": "valor_estimado",
+          "rotulo": "Valor estimado",
+          "valor": 3554592.4600000004,
+          "exibicao": "R$ 3.554.592,46",
+          "descricao": "Soma dos valores estimados por item"
+        },
+        {
+          "chave": "valor_homologado",
+          "rotulo": "Valor homologado",
+          "valor": 2204532.3573000003,
+          "exibicao": "R$ 2.204.532,36",
+          "descricao": "Soma dos resultados homologados"
+        },
+        {
+          "chave": "empenhado_mapeado",
+          "rotulo": "Empenhado mapeado",
+          "valor": 0.0,
+          "exibicao": "R$ 0,00",
+          "descricao": "0 de 0 registros com detalhamento"
+        }
+      ],
+      "buscar_empenhos_portal": false,
+      "erro": null,
+      "arquivo_html": "relatorio_compra_308_2026.html"
     }
   ]
 }
