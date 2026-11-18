@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "quantidade_relatorios": 12,
+  "quantidade_relatorios": 13,
   "relatorios": [
     {
       "pasta": "relatorio_compra_90027_2025",
@@ -1010,6 +1010,90 @@
       "buscar_empenhos_portal": false,
       "erro": null,
       "arquivo_html": "relatorio_compra_308_2026.html"
+    },
+    {
+      "id": "10635424000186-2025-216",
+      "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/216",
+      "pasta": "processo_10635424000186-2025-216",
+      "status": "atualizado",
+      "atualizado_em": "2026-11-18T06:53:07-03:00",
+      "chaves_integracao": {
+        "cnpj_orgao": "10635424000186",
+        "uasg_codigo": "158125",
+        "uasg_nome": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "numero_compra": "90145",
+        "ano_compra": 2025,
+        "numero_controle_pncp": "10635424000186-1-000216/2025"
+      },
+      "objeto": "Aquisição de materiais e equipamentos de mecânica para atender as necessidades do  Instituto Federal Catarinense Campus Abelardo Luz, Campus Araquari, Campus Blumenau, Campus Concórdia, Campus Luzerna, Campus Rio do Sul, Campus São Bento do Sul, Campus Santa Rosa do Sul e Campus Videira",
+      "resumo_cards": [
+        {
+          "chave": "itens",
+          "rotulo": "Itens",
+          "valor": 263,
+          "exibicao": "263",
+          "descricao": "Itens publicados no edital"
+        },
+        {
+          "chave": "itens_homologados",
+          "rotulo": "Itens homologados",
+          "valor": 223,
+          "exibicao": "223",
+          "descricao": "Itens empenhados + não empenhados"
+        },
+        {
+          "chave": "itens_empenhados",
+          "rotulo": "Itens empenhados",
+          "valor": 108,
+          "exibicao": "108",
+          "descricao": "Execução acima de 0%"
+        },
+        {
+          "chave": "itens_nao_empenhados",
+          "rotulo": "Itens não empenhados",
+          "valor": 115,
+          "exibicao": "115",
+          "descricao": "Execução igual a 0%, excluídos desertos"
+        },
+        {
+          "chave": "itens_desertos",
+          "rotulo": "Itens desertos",
+          "valor": 40,
+          "exibicao": "40",
+          "descricao": "Valor homologado igual a R$ 0,00"
+        },
+        {
+          "chave": "itens_resultados_pendentes",
+          "rotulo": "Resultados pendentes",
+          "valor": 0,
+          "exibicao": "0",
+          "descricao": "Falha ao consultar resultados no PNCP"
+        },
+        {
+          "chave": "valor_estimado",
+          "rotulo": "Valor estimado",
+          "valor": 572321.3199999996,
+          "exibicao": "R$ 572.321,32",
+          "descricao": "Soma dos valores estimados por item"
+        },
+        {
+          "chave": "valor_homologado",
+          "rotulo": "Valor homologado",
+          "valor": 370355.7199999997,
+          "exibicao": "R$ 370.355,72",
+          "descricao": "Soma dos resultados homologados"
+        },
+        {
+          "chave": "empenhado_mapeado",
+          "rotulo": "Empenhado mapeado",
+          "valor": 43549.40000000001,
+          "exibicao": "R$ 43.549,40",
+          "descricao": "38 de 39 registros com detalhamento"
+        }
+      ],
+      "buscar_empenhos_portal": false,
+      "erro": null,
+      "arquivo_html": "relatorio_compra_90145_2025.html"
     }
   ]
 }
