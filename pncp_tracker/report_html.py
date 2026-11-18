@@ -1,3 +1,4 @@
+import html as html_lib
 import json
 import re
 from datetime import datetime, timedelta, timezone
@@ -9,7 +10,31 @@ from .empenho_portal import quantidade_estimada
 
 
 _BRAZIL_TIMEZONE = timezone(timedelta(hours=-3))
+AVISO_USO_DADOS = (
+    "Este é um relatório auxiliar, elaborado com dados publicados no "
+    "Portal Nacional de Contratações Públicas (PNCP) e complementado, quando "
+    "disponíveis, por informações do Portal da Transparência e do Contratos.gov.br. "
+    "As informações exibidas nesta página não são atualizadas em tempo real: para "
+    "que mudanças nas fontes apareçam, é necessária uma nova atualização do "
+    "processo, feita pelo administrador ou pela rotina de atualização configurada. "
+    "Observe sempre a data e o horário da última atualização exibidos para o "
+    "processo. Podem ocorrer atrasos, omissões, "
+    "divergências ou falhas na integração e publicação de dados entre o "
+    "Contratos.gov.br — integrado ao SIAFI para emissão de notas de empenho — e o PNCP, além "
+    "de limitações na coleta e no cruzamento automatizado das informações. Os "
+    "resultados podem estar incompletos ou desatualizados e não substituem a "
+    "consulta e conferência dos registros originais. Utilize estas informações "
+    "por sua conta e risco; antes de tomar decisões importantes, confirme os dados "
+    "diretamente nos sistemas e fontes oficiais pertinentes, como PNCP, "
+    "Contratos.gov.br, SIAFI e Portal da Transparência. Inconsistências "
+    "identificadas podem ser comunicadas para o e-mail tiago.possato@ifc.edu.br "
+    "para avaliação e possíveis correções e melhorias do relatório."
+)
 
+AVISO_USO_DADOS = html_lib.escape(AVISO_USO_DADOS).replace(
+    "tiago.possato@ifc.edu.br",
+    '<a href="mailto:tiago.possato@ifc.edu.br">tiago.possato@ifc.edu.br</a>',
+    )
 
 def _numero(valor: Any) -> Optional[float]:
     if valor is None or valor == "":
@@ -400,6 +425,7 @@ _HTML = r"""<!doctype html>
 .table-wrap{overflow:auto;border:1px solid var(--line);border-radius:9px}table{border-collapse:collapse;width:100%;min-width:1120px;background:white}th{position:sticky;top:0;background:#edf3fa;color:#314963;text-align:right;font-size:11px;text-transform:uppercase;letter-spacing:.04em;padding:11px 10px;border-bottom:1px solid var(--line);white-space:nowrap;cursor:pointer;user-select:none}th:first-child,td:first-child,th:nth-child(2),td:nth-child(2){text-align:left}th:focus-visible{outline:2px solid var(--blue);outline-offset:-2px}th[aria-sort="ascending"]::after{content:" ▲";color:var(--blue)}th[aria-sort="descending"]::after{content:" ▼";color:var(--blue)}td{padding:10px;border-bottom:1px solid #e9eef4;text-align:right;vertical-align:top}tr.item-row{cursor:pointer}tr.item-row:hover{background:#f7fbff}.item-name{font-weight:600;min-width:230px}.item-name small{display:block;color:var(--muted);font-weight:400;margin-top:3px}.num{font-variant-numeric:tabular-nums;white-space:nowrap}.detail-row{display:none;background:#f8fafc}.detail-row.open{display:table-row}.detail-cell{text-align:left!important;padding:16px 20px!important}.detail-grid{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,7fr);gap:16px}.detail-box{border:1px solid var(--line);background:white;border-radius:8px;padding:12px}.detail-box h3{margin:0 0 8px;font-size:13px}.detail-box p{margin:4px 0}.detail-table{min-width:600px;font-size:12px}.detail-table th,.detail-table td{text-align:left;padding:7px}.badge{display:inline-block;border-radius:20px;padding:2px 8px;background:#e6f4f1;color:#12695e;font-size:11px}.badge.pending{background:#fff0d6;color:var(--amber)}.badge.no{background:#fbe9e8;color:var(--red)}.bar{height:5px;background:#e7edf5;border-radius:5px;margin-top:5px;overflow:hidden}.bar span{display:block;height:100%;background:var(--teal)}
 .foot{color:var(--muted);font-size:11px;margin:16px 2px}.empty{text-align:center;color:var(--muted);padding:26px}.source-list{display:flex;gap:8px;flex-wrap:wrap}.source-list span{background:#edf3fa;border-radius:5px;padding:4px 8px;font-size:11px}#pncp-records-table th,#pncp-records-table td{text-align:left}#pncp-records-table td:nth-child(4){min-width:280px;overflow-wrap:anywhere}.muted{color:var(--muted);font-size:11px;margin-top:2px}details.panel>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:18px;font-weight:700}details.panel>summary::-webkit-details-marker{display:none}details.panel>summary::before{content:"▸";color:var(--blue);font-size:14px}details.panel[open]>summary::before{content:"▾"}details.panel>summary:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:4px}details.panel[open]>summary{margin-bottom:12px}.summary-count{font-size:12px;font-weight:400;color:var(--muted)}.link-cell{white-space:nowrap}.link-cell a{display:inline-block;margin:0 6px 2px 0;font-size:11px}.link-cell span{color:var(--muted);font-size:11px}
 .report-footer{display:flex;flex-wrap:wrap;gap:6px 24px;margin:16px 2px;color:var(--muted);font-size:12px}
+.disclaimer{background:#fff3e0;border:1px solid #e8c98e;border-left:5px solid #a56300;border-radius:8px;color:#513500;margin:24px 0 0;padding:16px 20px}.disclaimer h2{font-size:16px;margin:0 0 6px}.disclaimer p{margin:0}
 @media(max-width:900px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.detail-grid{grid-template-columns:1fr}}
 @media(max-width:520px){.wrap{padding:14px 10px 30px}.hero{padding:21px 18px}.cards{grid-template-columns:1fr 1fr;gap:8px}.card{padding:12px}.card .value{font-size:17px}.panel{padding:12px}.meta{display:grid;gap:4px}}
 @media print{body{background:white}.wrap{max-width:none;padding:0}.hero{box-shadow:none;border-radius:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}.card,.panel{box-shadow:none;break-inside:avoid}.toolbar{display:none}table{min-width:0;font-size:10px}th,td{padding:5px}.detail-row{display:table-row!important}.item-row{break-after:avoid}.panel{margin:9px 0}}
@@ -452,6 +478,10 @@ _HTML = r"""<!doctype html>
     <div class="source-list"><span>PNCP — dados do edital e aba Contratos/Empenhos</span><span>Portal da Transparência — detalhes e itens das notas de empenho</span><span>Contratos.gov.br — identidade da compra e quantidade dos itens</span></div>
     <p class="foot">Valores empenhados por item são calculados a partir das linhas do documento de despesa. O valor consolidado por item conta somente correspondências de número do item e fornecedor homologado.</p>
   </section>
+  <aside class="disclaimer" role="note" aria-labelledby="disclaimer-title">
+    <h2 id="disclaimer-title">Aviso importante</h2>
+    <p>__DISCLAIMER_TEXT__</p>
+  </aside>
 </main>
 <script id="report-data" type="application/json">__REPORT_DATA__</script>
 <script>
@@ -715,7 +745,13 @@ def gerar_relatorio_html(
     relatorio["objeto"] = dados.get("objeto")
     conteudo_json = json.dumps(relatorio, ensure_ascii=False, separators=(",", ":"))
     conteudo_json = conteudo_json.replace("</", "<\\/")
-    html = _HTML.replace("__REPORT_DATA__", conteudo_json)
+    # disclaimer_html = html_lib.escape(AVISO_USO_DADOS).replace(
+    # "tiago.possato@ifc.edu.br",
+    # '<a href="mailto:tiago.possato@ifc.edu.br">tiago.possato@ifc.edu.br</a>',
+    # )
+    html = _HTML.replace("__REPORT_DATA__", conteudo_json).replace(
+        "__DISCLAIMER_TEXT__", AVISO_USO_DADOS
+    )
     caminho_saida = Path(caminho_saida)
     with caminho_saida.open("w", encoding="utf-8", newline="\n") as arquivo:
         arquivo.write(html)

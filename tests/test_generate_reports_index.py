@@ -142,6 +142,36 @@ class GenerateReportsIndexTests(unittest.TestCase):
             )
             report_html = report_path.read_text(encoding="utf-8")
             self.assertIn('<a href="../">Página inicial</a>', report_html)
+            for page in (conteudo, report_html):
+                disclaimer = re.search(
+                    r'<aside class="disclaimer"[^>]*>.*?</aside>',
+                    page,
+                    re.DOTALL,
+                )
+                self.assertIsNotNone(disclaimer)
+                disclaimer_html = disclaimer.group(0) if disclaimer else ""
+                self.assertIn("Aviso importante", disclaimer_html)
+                self.assertIn("por sua conta e risco", disclaimer_html)
+                self.assertIn("Contratos.gov.br", disclaimer_html)
+                self.assertIn("SIAFI", disclaimer_html)
+                self.assertIn("PNCP", disclaimer_html)
+                self.assertIn("não são atualizadas em tempo real", disclaimer_html)
+                self.assertIn("administrador", disclaimer_html)
+                self.assertIn("última atualização", disclaimer_html)
+                self.assertIn("decisões importantes", disclaimer_html)
+                self.assertIn("fontes oficiais", disclaimer_html)
+                self.assertIn("tiago.possato@ifc.edu.br", disclaimer_html)
+                self.assertIn("correções e melhorias", disclaimer_html)
+                self.assertNotRegex(
+                    disclaimer_html.lower(),
+                    r"<details\b|<button\b|\shidden(?:\s|=|>)",
+                )
+                disclaimer_position = page.index(disclaimer_html)
+                self.assertGreaterEqual(
+                    page.rfind("</table>", 0, disclaimer_position),
+                    0,
+                )
+                self.assertLess(disclaimer_position, page.index("</main>"))
             embedded = re.search(
                 r'<script id="report-data" type="application/json">(.*?)</script>',
                 report_html,

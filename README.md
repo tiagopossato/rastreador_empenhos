@@ -150,6 +150,8 @@ Cada processo tem sua própria pasta em `relatorios/<id_do_processo>/` (pastas p
 
 Na raiz de `relatorios/` ficam `index.html`, `indice_relatorios.json`, `gerar_relatorios.py` e as pastas de cada compra. `indice_relatorios.json` é também o cadastro dos processos ativos: cada URL PNCP é única, e processos recém-cadastrados ficam pendentes até a primeira atualização. Remover da lista ativa preserva os arquivos históricos da pasta. O índice HTML apresenta uma linha por processo, com o objeto e os indicadores dos cards individuais.
 
+O índice e cada relatório individual exibem, ao final da página, um aviso sempre visível sobre responsabilidade de uso, fontes e limitações de integração. Os dados não são atualizados em tempo real: é necessária uma nova atualização do processo pelo administrador ou pela rotina configurada, e a data exibida deve ser observada. O aviso também orienta a conferência nos sistemas oficiais antes de decisões importantes e permite comunicar inconsistências a `tiago.possato@ifc.edu.br`.
+
 ## Atualização automática e interface administrativa
 
 Atualize manualmente todos os processos ativos:
@@ -166,7 +168,7 @@ O comando tenta todos os processos mesmo se algum falhar e retorna código de sa
 
 A interface administrativa permite cadastrar URLs PNCP, remover processos da lista ativa sem apagar os dados históricos, definir por processo se a atualização deve procurar empenhos não registrados no PNCP e iniciar a atualização de um processo ou de todos. A coluna **Procurar empenhos não registrados no PNCP** guarda essa escolha em `indice_relatorios.json`; o modo selecionado é aplicado nas próximas atualizações do processo, inclusive nas disparadas pelo cron, e fica registrado em `metadados.json`. As tarefas iniciadas pela interface rodam em segundo plano; o painel exibe seu resultado enquanto o serviço estiver ativo. Um lock local serializa atualizações iniciadas pela interface, pela CLI e pelo cron. Execute uma única instância Waitress para manter o painel de tarefas consistente; o status em memória é perdido se o serviço reiniciar durante uma tarefa.
 
-O arquivo privado de usuários fica por padrão em `.private/usuarios.json` (ignorado pelo Git e fora da pasta publicada). Crie a primeira conta de forma interativa:
+O arquivo privado de usuários fica por padrão em `.private/usuarios.json` (ignorado pelo Git e fora da pasta publicada). Crie a primeira conta de forma interativa (o próprio servidor administrativo também solicita essa conta quando ainda não existe nenhuma):
 
 ```bash
 python criar_usuario_admin.py
@@ -189,6 +191,8 @@ Opcionalmente, configure `PNCP_ADMIN_USERS_FILE` para apontar o arquivo privado 
 ```bash
 python -m admin_web.serve
 ```
+
+Se o arquivo de usuários estiver vazio ou não existir, o servidor solicita antes da inicialização os dados da primeira conta — nome de usuário, senha e confirmação — e só sobe depois que ela é criada. Cancelar a criação (nome de usuário vazio, `Ctrl+C` ou entrada indisponível) encerra a execução sem iniciar a interface.
 
 Na raiz do servidor administrativo (`http://127.0.0.1:8000/`) é exibido o `relatorios/index.html`, com o botão **Administração**. Os links do índice também servem os relatórios HTML individuais no mesmo endereço; os arquivos JSON não são expostos por essas rotas. O botão abre a tela de login em outra aba; após autenticar, essa aba segue para `/admin`. O GitHub Pages continua servindo apenas os relatórios estáticos; para que o botão funcione, acesse o índice pelo servidor administrativo, não pelo GitHub Pages.
 

@@ -225,6 +225,8 @@ O índice `relatorios/index.html` resume cada processo em uma linha; `relatorios
 
 O índice JSON é o cadastro ativo. Use `python atualizar_relatorios.py` para atualizar todos os processos via cron. A interface em `admin_web/` permite cadastrar URLs, remover processos sem apagar arquivos históricos e iniciar atualizações; usuários são criados com `python criar_usuario_admin.py`. Não versione o arquivo `.private/usuarios.json` nem `PNCP_ADMIN_SESSION_SECRET`; mantenha a interface atrás de HTTPS e acesso de rede restrito.
 
+`python -m admin_web.serve` chama `admin_web.serve.garantir_usuario_inicial` antes de iniciar o Waitress: quando o arquivo de usuários está vazio ou ausente, o terminal solicita a criação da primeira conta (nome e senha com confirmação, reaproveitando `criar_usuario_admin.solicitar_criacao_usuario`) e a inicialização só prossegue depois que a conta é gravada. Cancelar a criação (nome vazio, `Ctrl+C` ou entrada indisponível) encerra o processo sem subir o servidor. O caminho verificado é o mesmo usado pela aplicação: `PNCP_ADMIN_USERS_FILE` ou o padrão `.private/usuarios.json`.
+
 Inicie a interface com:
 
 ```bash
@@ -256,7 +258,7 @@ python -m unittest discover -s tests -v
 ```
 
 - `test_api_client.py`, `test_collector.py`: cliente PNCP e paginação da coleta.
-- `test_admin_web.py`, `test_admin_auth.py`: rotas, CSRF, hashing e criação de usuários.
+- `test_admin_web.py`, `test_admin_auth.py`, `test_admin_serve.py`: rotas, CSRF, hashing, criação de usuários e verificação do primeiro usuário na inicialização do servidor.
 - `test_report_service.py`, `test_report_registry.py`, `test_process_lock.py`: atualização, índice e concorrência.
 - `test_generate_reports_index.py`, `test_consultar_e_mapear_empenhos.py`: geração dos HTMLs, regras de matching, evidências de vínculo e classificação de adesão.
 
