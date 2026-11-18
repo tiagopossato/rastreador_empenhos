@@ -11,7 +11,7 @@ if str(_PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(_PROJECT_ROOT))
 
 from pncp_tracker.report_registry import INDEX_PATH, ler_registros, salvar_registros
-from pncp_tracker.report_html import gerar_relatorio_html
+from pncp_tracker.report_html import AVISO_USO_DADOS, gerar_relatorio_html
 
 
 def _ler_json(caminho: Path) -> Dict[str, Any]:
@@ -187,6 +187,9 @@ def _gerar_index_html(pasta_relatorios: Path, relatorios: List[Dict[str, Any]]) 
     .metric span, .metric small {{ display: block; color: var(--muted); font-size: .7rem; }}
     .metric strong {{ display: block; margin: .15rem 0; }}
     .empty {{ text-align: center; color: var(--muted); padding: 2rem; }}
+    .disclaimer {{ background: #fff3e0; border: 1px solid #e8c98e; border-left: 5px solid #a56300; border-radius: .75rem; color: #513500; margin: 2rem 0 0; padding: 1rem 1.25rem; }}
+    .disclaimer h2 {{ font-size: 1rem; margin: 0 0 .4rem; }}
+    .disclaimer p {{ margin: 0; }}
     .page-header {{ display: flex; justify-content: space-between; align-items: center; gap: 1rem; }}
     .admin-link {{ display: inline-block; padding: .55rem .85rem; border-radius: .5rem; background: var(--blue); color: white; font-weight: 600; text-decoration: none; white-space: nowrap; }}
     .admin-link:hover, .admin-link:focus {{ filter: brightness(.9); }}
@@ -210,10 +213,14 @@ def _gerar_index_html(pasta_relatorios: Path, relatorios: List[Dict[str, Any]]) 
         </tbody>
       </table>
     </div>
+    <aside class="disclaimer" role="note" aria-labelledby="disclaimer-title">
+      <h2 id="disclaimer-title">Aviso importante</h2>
+      <p>{aviso}</p>
+    </aside>
   </main>
 </body>
 </html>
-""".format(linhas=corpo_tabela)
+""".format(linhas=corpo_tabela, aviso=AVISO_USO_DADOS)
     caminho = pasta_relatorios / "index.html"
     _escrever_texto(caminho, conteudo)
     return caminho

@@ -4411,7 +4411,6 @@
   "cache_reutilizado": true,
   "empenhos": [
     {
-      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -4486,6 +4485,7 @@
       "dataAtualizacaoGlobal": "2026-11-13T21:16:57",
       "identificadorCipi": null,
       "urlCipi": null,
+      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000187/2026-000016",
       "numeroControlePncpCompra": "10635424000186-1-000187/2026",
