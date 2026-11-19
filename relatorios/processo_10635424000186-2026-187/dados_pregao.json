@@ -4411,6 +4411,27 @@
   "cache_reutilizado": true,
   "empenhos": [
     {
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-11-05",
+      "dataAtualizacao": "2026-11-13T21:16:57",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -4429,33 +4450,12 @@
       },
       "dataAssinatura": "2026-11-05",
       "dataVigenciaFim": "2026-12-31",
-      "tipoParteEnvolvida": {
-        "id": 1,
-        "nome": "Gerenciadora",
-        "descricao": null
-      },
-      "orgaoParteEnvolvida": {
-        "cnpj": "10635424000186",
-        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
-      },
-      "frutoAdesao": false,
-      "dataVigenciaInicio": "2026-11-05",
-      "dataAtualizacao": "2026-11-13T21:16:57",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "APL CIENTIFICA LTDA",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": {
-        "codigoUnidade": "158125",
-        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
-        "municipioNome": "Blumenau",
-        "codigoIbge": "4202404",
-        "ufSigla": "SC",
-        "ufNome": "Santa Catarina"
-      },
       "dataPublicacaoPncp": "2026-11-13T21:12:11",
       "unidadeOrgao": {
         "codigoUnidade": "158379",
@@ -4471,7 +4471,6 @@
       "processo": "23352.001311/2026-49",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
-      "numeroControlePNCP": "10635424000186-2-001694/2026",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -4485,6 +4484,7 @@
       "dataAtualizacaoGlobal": "2026-11-13T21:16:57",
       "identificadorCipi": null,
       "urlCipi": null,
+      "numeroControlePNCP": "10635424000186-2-001694/2026",
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000187/2026-000016",

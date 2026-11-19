@@ -2,7 +2,7 @@
   "schema_version": 1,
   "url_pncp": "https://pncp.gov.br/app/editais/42414284000102/2026/000161",
   "criado_em": "2026-11-17T22:12:36-03:00",
-  "atualizado_em": "2026-11-17T22:20:54-03:00",
+  "atualizado_em": "2026-11-19T07:27:09-03:00",
   "chaves_integracao": {
     "cnpj_orgao": "42414284000102",
     "uasg_codigo": "153167",
@@ -12,7 +12,7 @@
     "numero_controle_pncp": "42414284000102-1-000161/2026"
   },
   "arquivo_html": "relatorio_compra_308_2026.html",
-  "ultima_duracao_segundos": 3.0,
+  "ultima_duracao_segundos": 0.6,
   "buscar_empenhos_portal": false,
   "resumo_cards": [
     {

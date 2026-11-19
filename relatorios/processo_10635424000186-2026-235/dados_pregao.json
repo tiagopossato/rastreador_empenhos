@@ -5539,5 +5539,6 @@
     "quantidade_empenhos_pncp": 0,
     "quantidade_empenhos_portal": 0,
     "erros": []
-  }
+  },
+  "cache_reutilizado": true
 }
