@@ -2,7 +2,7 @@
   "schema_version": 1,
   "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2026/000140",
   "criado_em": "2026-11-12T07:15:28-03:00",
-  "atualizado_em": "2026-11-19T07:24:58-03:00",
+  "atualizado_em": "2026-11-20T15:27:25-03:00",
   "chaves_integracao": {
     "cnpj_orgao": "10635424000186",
     "uasg_codigo": "158125",
@@ -30,15 +30,15 @@
     {
       "chave": "itens_empenhados",
       "rotulo": "Itens empenhados",
-      "valor": 22,
-      "exibicao": "22",
+      "valor": 24,
+      "exibicao": "24",
       "descricao": "Execução acima de 0%"
     },
     {
       "chave": "itens_nao_empenhados",
       "rotulo": "Itens não empenhados",
-      "valor": 80,
-      "exibicao": "80",
+      "valor": 78,
+      "exibicao": "78",
       "descricao": "Execução igual a 0%, excluídos desertos"
     },
     {
@@ -72,11 +72,11 @@
     {
       "chave": "empenhado_mapeado",
       "rotulo": "Empenhado mapeado",
-      "valor": 88966.09,
-      "exibicao": "R$ 88.966,09",
-      "descricao": "16 de 16 registros com detalhamento"
+      "valor": 89810.31,
+      "exibicao": "R$ 89.810,31",
+      "descricao": "17 de 17 registros com detalhamento"
     }
   ],
-  "ultima_duracao_segundos": 11.0,
+  "ultima_duracao_segundos": 24.8,
   "buscar_empenhos_portal": false
 }

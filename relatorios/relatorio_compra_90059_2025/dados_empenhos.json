@@ -33,27 +33,6 @@
   "erros_resultados_itens": [],
   "empenhos": [
     {
-      "tipoParteEnvolvida": {
-        "id": 1,
-        "nome": "Gerenciadora",
-        "descricao": null
-      },
-      "orgaoParteEnvolvida": {
-        "cnpj": "10635424000186",
-        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
-      },
-      "frutoAdesao": false,
-      "dataVigenciaInicio": "2026-06-03",
-      "dataAtualizacao": "2026-06-19T15:38:18",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": {
-        "codigoUnidade": "158125",
-        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
-        "municipioNome": "Blumenau",
-        "codigoIbge": "4202404",
-        "ufSigla": "SC",
-        "ufNome": "Santa Catarina"
-      },
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -72,12 +51,33 @@
       },
       "dataAssinatura": "2026-06-03",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-06-03",
+      "dataAtualizacao": "2026-06-19T15:38:18",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "FNK IMPORTADORA LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
       "dataPublicacaoPncp": "2026-06-19T15:38:18",
       "unidadeOrgao": {
         "codigoUnidade": "158462",
@@ -218,13 +218,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-02-03",
-      "dataAtualizacao": "2026-02-20T09:02:59",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -243,12 +236,19 @@
       },
       "dataAssinatura": "2026-02-03",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-02-03",
+      "dataAtualizacao": "2026-02-20T09:02:59",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "FNK IMPORTADORA LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-02-20T09:02:59",
       "unidadeOrgao": {
         "codigoUnidade": "158379",
@@ -350,13 +350,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-02-03",
-      "dataAtualizacao": "2026-02-20T09:04:28",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -375,12 +368,19 @@
       },
       "dataAssinatura": "2026-02-03",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-02-03",
+      "dataAtualizacao": "2026-02-20T09:04:28",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "FNK IMPORTADORA LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-02-20T09:04:28",
       "unidadeOrgao": {
         "codigoUnidade": "158379",
@@ -490,13 +490,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-02-03",
-      "dataAtualizacao": "2026-02-20T14:06:23",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -515,12 +508,19 @@
       },
       "dataAssinatura": "2026-02-03",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-02-03",
+      "dataAtualizacao": "2026-02-20T14:06:23",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "VOLTCOM DO BRASIL LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-02-20T14:06:23",
       "unidadeOrgao": {
         "codigoUnidade": "158379",
@@ -622,13 +622,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-02-03",
-      "dataAtualizacao": "2026-02-20T14:07:46",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -647,12 +640,19 @@
       },
       "dataAssinatura": "2026-02-03",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-02-03",
+      "dataAtualizacao": "2026-02-20T14:07:46",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "ROHS ELETRONICA LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-02-20T14:07:46",
       "unidadeOrgao": {
         "codigoUnidade": "158379",
@@ -778,13 +778,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-02-03",
-      "dataAtualizacao": "2026-02-20T14:09:14",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -803,12 +796,19 @@
       },
       "dataAssinatura": "2026-02-03",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-02-03",
+      "dataAtualizacao": "2026-02-20T14:09:14",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "C.K. COMERCIO DE FERRAGENS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-02-20T14:09:14",
       "unidadeOrgao": {
         "codigoUnidade": "158379",
@@ -934,13 +934,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-02-04",
-      "dataAtualizacao": "2026-02-26T16:12:52",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -959,12 +952,19 @@
       },
       "dataAssinatura": "2026-02-04",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-02-04",
+      "dataAtualizacao": "2026-02-26T16:12:52",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "C.K. COMERCIO DE FERRAGENS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-02-26T16:12:52",
       "unidadeOrgao": {
         "codigoUnidade": "152254",
@@ -1066,13 +1066,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-02-03",
-      "dataAtualizacao": "2026-02-26T13:50:10",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -1091,12 +1084,19 @@
       },
       "dataAssinatura": "2026-02-03",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-02-03",
+      "dataAtualizacao": "2026-02-26T13:50:10",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "R. BUSETTO & F. KRUGER LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-02-26T13:50:10",
       "unidadeOrgao": {
         "codigoUnidade": "158379",
@@ -1222,13 +1222,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-02-03",
-      "dataAtualizacao": "2026-02-26T13:57:41",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -1247,12 +1240,19 @@
       },
       "dataAssinatura": "2026-02-03",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-02-03",
+      "dataAtualizacao": "2026-02-26T13:57:41",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "R. BUSETTO & F. KRUGER LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-02-26T13:57:41",
       "unidadeOrgao": {
         "codigoUnidade": "158379",
@@ -1402,13 +1402,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-02-03",
-      "dataAtualizacao": "2026-02-26T14:03:50",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -1427,12 +1420,19 @@
       },
       "dataAssinatura": "2026-02-03",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-02-03",
+      "dataAtualizacao": "2026-02-26T14:03:50",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "ELETROQUIP COMERCIO E LICITACOES LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-02-26T14:03:50",
       "unidadeOrgao": {
         "codigoUnidade": "158379",
@@ -1542,13 +1542,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-02-04",
-      "dataAtualizacao": "2026-02-27T16:18:15",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -1567,12 +1560,19 @@
       },
       "dataAssinatura": "2026-02-04",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-02-04",
+      "dataAtualizacao": "2026-02-27T16:18:15",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "ECOWSOLAR ENERGIAS SUSTENTAVEIS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-02-27T16:18:15",
       "unidadeOrgao": {
         "codigoUnidade": "152254",
@@ -1674,13 +1674,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-02-03",
-      "dataAtualizacao": "2026-03-06T10:38:29",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -1699,12 +1692,19 @@
       },
       "dataAssinatura": "2026-02-03",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-02-03",
+      "dataAtualizacao": "2026-03-06T10:38:29",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "ECOWSOLAR ENERGIAS SUSTENTAVEIS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-03-06T10:38:29",
       "unidadeOrgao": {
         "codigoUnidade": "158379",
@@ -1846,13 +1846,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-02-12",
-      "dataAtualizacao": "2026-03-05T14:56:01",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -1871,12 +1864,19 @@
       },
       "dataAssinatura": "2026-02-12",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-02-12",
+      "dataAtualizacao": "2026-03-05T14:56:01",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "RAVESI ENGENHARIA E COMERCIO LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-03-05T14:56:01",
       "unidadeOrgao": {
         "codigoUnidade": "158379",
@@ -1986,13 +1986,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-02-13",
-      "dataAtualizacao": "2026-03-05T16:44:51",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -2011,12 +2004,19 @@
       },
       "dataAssinatura": "2026-02-13",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-02-13",
+      "dataAtualizacao": "2026-03-05T16:44:51",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "CLODOALDO GUEDES DE SOUZA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-03-05T16:44:51",
       "unidadeOrgao": {
         "codigoUnidade": "158379",
@@ -2126,27 +2126,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": {
-        "id": 1,
-        "nome": "Gerenciadora",
-        "descricao": null
-      },
-      "orgaoParteEnvolvida": {
-        "cnpj": "10635424000186",
-        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
-      },
-      "frutoAdesao": false,
-      "dataVigenciaInicio": "2026-06-02",
-      "dataAtualizacao": "2026-06-26T15:18:05",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": {
-        "codigoUnidade": "158125",
-        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
-        "municipioNome": "Blumenau",
-        "codigoIbge": "4202404",
-        "ufSigla": "SC",
-        "ufNome": "Santa Catarina"
-      },
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -2165,12 +2144,33 @@
       },
       "dataAssinatura": "2026-06-02",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-06-02",
+      "dataAtualizacao": "2026-06-26T15:18:05",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "R. BUSETTO & F. KRUGER LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
       "dataPublicacaoPncp": "2026-06-26T15:18:05",
       "unidadeOrgao": {
         "codigoUnidade": "152253",
@@ -2287,13 +2287,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-02-03",
-      "dataAtualizacao": "2026-03-16T09:50:59",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -2312,12 +2305,19 @@
       },
       "dataAssinatura": "2026-02-03",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-02-03",
+      "dataAtualizacao": "2026-03-16T09:50:59",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "I.R. COMERCIO E MATERIAIS ELETRICOS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-03-16T09:50:59",
       "unidadeOrgao": {
         "codigoUnidade": "158379",
@@ -2419,13 +2419,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-02-03",
-      "dataAtualizacao": "2026-03-16T09:55:55",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -2444,12 +2437,19 @@
       },
       "dataAssinatura": "2026-02-03",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-02-03",
+      "dataAtualizacao": "2026-03-16T09:55:55",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "I.R. COMERCIO E MATERIAIS ELETRICOS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-03-16T09:55:55",
       "unidadeOrgao": {
         "codigoUnidade": "158379",
@@ -2583,13 +2583,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-03-13",
-      "dataAtualizacao": "2026-03-19T15:42:04",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -2608,12 +2601,19 @@
       },
       "dataAssinatura": "2026-03-13",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-03-13",
+      "dataAtualizacao": "2026-03-19T15:42:04",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "LUMINORTE INSTALACAO, MANUTENCAO E COMERCIO DE MATERIAIS ELETRICOS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-03-19T15:42:04",
       "unidadeOrgao": {
         "codigoUnidade": "158459",
@@ -2779,13 +2779,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-03-13",
-      "dataAtualizacao": "2026-03-19T15:42:06",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -2804,12 +2797,19 @@
       },
       "dataAssinatura": "2026-03-13",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-03-13",
+      "dataAtualizacao": "2026-03-19T15:42:06",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "ECOWSOLAR ENERGIAS SUSTENTAVEIS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-03-19T15:42:06",
       "unidadeOrgao": {
         "codigoUnidade": "158459",
@@ -2951,13 +2951,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-03-13",
-      "dataAtualizacao": "2026-03-19T15:42:13",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -2976,12 +2969,19 @@
       },
       "dataAssinatura": "2026-03-13",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-03-13",
+      "dataAtualizacao": "2026-03-19T15:42:13",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "LD ASTEN COMERCIO LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-03-19T15:42:13",
       "unidadeOrgao": {
         "codigoUnidade": "158459",
@@ -3091,13 +3091,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-03-13",
-      "dataAtualizacao": "2026-03-19T15:42:07",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -3116,12 +3109,19 @@
       },
       "dataAssinatura": "2026-03-13",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-03-13",
+      "dataAtualizacao": "2026-03-19T15:42:07",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "FNK IMPORTADORA LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-03-19T15:42:07",
       "unidadeOrgao": {
         "codigoUnidade": "158459",
@@ -3263,13 +3263,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-03-13",
-      "dataAtualizacao": "2026-03-19T15:42:11",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -3288,12 +3281,19 @@
       },
       "dataAssinatura": "2026-03-13",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-03-13",
+      "dataAtualizacao": "2026-03-19T15:42:11",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "JLG COMERCIAL LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-03-19T15:42:11",
       "unidadeOrgao": {
         "codigoUnidade": "158459",
@@ -3395,13 +3395,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-03-13",
-      "dataAtualizacao": "2026-03-19T15:42:12",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -3420,12 +3413,19 @@
       },
       "dataAssinatura": "2026-03-13",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-03-13",
+      "dataAtualizacao": "2026-03-19T15:42:12",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "ELETROQUIP COMERCIO E LICITACOES LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-03-19T15:42:12",
       "unidadeOrgao": {
         "codigoUnidade": "158459",
@@ -3527,13 +3527,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-03-13",
-      "dataAtualizacao": "2026-03-19T15:42:08",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -3552,12 +3545,19 @@
       },
       "dataAssinatura": "2026-03-13",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-03-13",
+      "dataAtualizacao": "2026-03-19T15:42:08",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "CASAMIR MATERIAIS ELETRICOS LTDA.",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-03-19T15:42:08",
       "unidadeOrgao": {
         "codigoUnidade": "158459",
@@ -3659,13 +3659,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-03-13",
-      "dataAtualizacao": "2026-03-27T11:05:09",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -3684,12 +3677,19 @@
       },
       "dataAssinatura": "2026-03-13",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-03-13",
+      "dataAtualizacao": "2026-03-27T11:05:09",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "CONSTRURENOVA CASA DE JAU LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-03-27T11:05:09",
       "unidadeOrgao": {
         "codigoUnidade": "158459",
@@ -3791,13 +3791,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-03-12",
-      "dataAtualizacao": "2026-03-18T10:11:52",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -3816,12 +3809,19 @@
       },
       "dataAssinatura": "2026-03-12",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-03-12",
+      "dataAtualizacao": "2026-03-18T10:11:52",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "OGT DISTRIBUIDORA LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-03-18T10:11:52",
       "unidadeOrgao": {
         "codigoUnidade": "158459",
@@ -3939,13 +3939,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-03-13",
-      "dataAtualizacao": "2026-03-19T15:42:15",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -3964,12 +3957,19 @@
       },
       "dataAssinatura": "2026-03-13",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-03-13",
+      "dataAtualizacao": "2026-03-19T15:42:15",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "CAIAN LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-03-19T15:42:15",
       "unidadeOrgao": {
         "codigoUnidade": "158459",
@@ -4071,13 +4071,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-03-13",
-      "dataAtualizacao": "2026-04-02T11:20:02",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -4096,12 +4089,19 @@
       },
       "dataAssinatura": "2026-03-13",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-03-13",
+      "dataAtualizacao": "2026-04-02T11:20:02",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "R. BUSETTO & F. KRUGER LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-04-02T11:20:02",
       "unidadeOrgao": {
         "codigoUnidade": "158459",
@@ -4203,13 +4203,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-03-13",
-      "dataAtualizacao": "2026-04-02T11:29:19",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -4228,12 +4221,19 @@
       },
       "dataAssinatura": "2026-03-13",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-03-13",
+      "dataAtualizacao": "2026-04-02T11:29:19",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "INOVABRAS PRODUTOS INTELIGENTES LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-04-02T11:29:19",
       "unidadeOrgao": {
         "codigoUnidade": "158459",
@@ -4335,27 +4335,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": {
-        "id": 1,
-        "nome": "Gerenciadora",
-        "descricao": null
-      },
-      "orgaoParteEnvolvida": {
-        "cnpj": "10635424000186",
-        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
-      },
-      "frutoAdesao": false,
-      "dataVigenciaInicio": "2026-06-03",
-      "dataAtualizacao": "2026-08-28T15:04:48",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": {
-        "codigoUnidade": "158125",
-        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
-        "municipioNome": "Blumenau",
-        "codigoIbge": "4202404",
-        "ufSigla": "SC",
-        "ufNome": "Santa Catarina"
-      },
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -4374,12 +4353,33 @@
       },
       "dataAssinatura": "2026-06-03",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-06-03",
+      "dataAtualizacao": "2026-08-28T15:04:48",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "I.R. COMERCIO E MATERIAIS ELETRICOS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
       "dataPublicacaoPncp": "2026-08-28T15:04:48",
       "unidadeOrgao": {
         "codigoUnidade": "158462",
@@ -4528,13 +4528,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-03-13",
-      "dataAtualizacao": "2026-03-19T15:42:10",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -4553,12 +4546,19 @@
       },
       "dataAssinatura": "2026-03-13",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-03-13",
+      "dataAtualizacao": "2026-03-19T15:42:10",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "I.R. COMERCIO E MATERIAIS ELETRICOS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-03-19T15:42:10",
       "unidadeOrgao": {
         "codigoUnidade": "158459",
@@ -4708,27 +4708,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": {
-        "id": 1,
-        "nome": "Gerenciadora",
-        "descricao": null
-      },
-      "orgaoParteEnvolvida": {
-        "cnpj": "10635424000186",
-        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
-      },
-      "frutoAdesao": false,
-      "dataVigenciaInicio": "2026-08-18",
-      "dataAtualizacao": "2026-08-28T17:58:58",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": {
-        "codigoUnidade": "158125",
-        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
-        "municipioNome": "Blumenau",
-        "codigoIbge": "4202404",
-        "ufSigla": "SC",
-        "ufNome": "Santa Catarina"
-      },
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -4747,12 +4726,33 @@
       },
       "dataAssinatura": "2026-08-18",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-08-18",
+      "dataAtualizacao": "2026-08-28T17:58:58",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "R. BUSETTO & F. KRUGER LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
       "dataPublicacaoPncp": "2026-08-28T17:58:58",
       "unidadeOrgao": {
         "codigoUnidade": "152254",
@@ -4869,13 +4869,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-03-31",
-      "dataAtualizacao": "2026-04-16T10:16:33",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -4894,12 +4887,19 @@
       },
       "dataAssinatura": "2026-03-31",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-03-31",
+      "dataAtualizacao": "2026-04-16T10:16:33",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "R. BUSETTO & F. KRUGER LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-04-16T10:16:33",
       "unidadeOrgao": {
         "codigoUnidade": "158461",
@@ -5009,13 +5009,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-03-12",
-      "dataAtualizacao": "2026-04-22T15:23:08",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -5034,12 +5027,19 @@
       },
       "dataAssinatura": "2026-03-12",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-03-12",
+      "dataAtualizacao": "2026-04-22T15:23:08",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "INOVABRAS PRODUTOS INTELIGENTES LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-04-22T15:23:08",
       "unidadeOrgao": {
         "codigoUnidade": "152662",
@@ -5141,13 +5141,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-03-12",
-      "dataAtualizacao": "2026-04-22T15:22:45",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -5166,12 +5159,19 @@
       },
       "dataAssinatura": "2026-03-12",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-03-12",
+      "dataAtualizacao": "2026-04-22T15:22:45",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "BLUSAFE EQUIPAMENTOS DE PROTECAO INDIVIDUAL LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-04-22T15:22:45",
       "unidadeOrgao": {
         "codigoUnidade": "152662",
@@ -5281,27 +5281,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": {
-        "id": 1,
-        "nome": "Gerenciadora",
-        "descricao": null
-      },
-      "orgaoParteEnvolvida": {
-        "cnpj": "10635424000186",
-        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
-      },
-      "frutoAdesao": false,
-      "dataVigenciaInicio": "2026-08-18",
-      "dataAtualizacao": "2026-08-31T14:32:31",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": {
-        "codigoUnidade": "158125",
-        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
-        "municipioNome": "Blumenau",
-        "codigoIbge": "4202404",
-        "ufSigla": "SC",
-        "ufNome": "Santa Catarina"
-      },
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -5320,12 +5299,33 @@
       },
       "dataAssinatura": "2026-08-18",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-08-18",
+      "dataAtualizacao": "2026-08-31T14:32:31",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "RPF COMERCIAL LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
       "dataPublicacaoPncp": "2026-08-31T14:32:31",
       "unidadeOrgao": {
         "codigoUnidade": "152254",
@@ -5426,27 +5426,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": {
-        "id": 1,
-        "nome": "Gerenciadora",
-        "descricao": null
-      },
-      "orgaoParteEnvolvida": {
-        "cnpj": "10635424000186",
-        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
-      },
-      "frutoAdesao": false,
-      "dataVigenciaInicio": "2026-06-03",
-      "dataAtualizacao": "2026-06-26T09:45:57",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": {
-        "codigoUnidade": "158125",
-        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
-        "municipioNome": "Blumenau",
-        "codigoIbge": "4202404",
-        "ufSigla": "SC",
-        "ufNome": "Santa Catarina"
-      },
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -5465,12 +5444,33 @@
       },
       "dataAssinatura": "2026-06-03",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-06-03",
+      "dataAtualizacao": "2026-06-26T09:45:57",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "OGT DISTRIBUIDORA LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
       "dataPublicacaoPncp": "2026-06-26T09:45:57",
       "unidadeOrgao": {
         "codigoUnidade": "158462",
@@ -5595,27 +5595,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": {
-        "id": 1,
-        "nome": "Gerenciadora",
-        "descricao": null
-      },
-      "orgaoParteEnvolvida": {
-        "cnpj": "10635424000186",
-        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
-      },
-      "frutoAdesao": false,
-      "dataVigenciaInicio": "2026-06-03",
-      "dataAtualizacao": "2026-06-26T09:45:58",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": {
-        "codigoUnidade": "158125",
-        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
-        "municipioNome": "Blumenau",
-        "codigoIbge": "4202404",
-        "ufSigla": "SC",
-        "ufNome": "Santa Catarina"
-      },
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -5634,12 +5613,33 @@
       },
       "dataAssinatura": "2026-06-03",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-06-03",
+      "dataAtualizacao": "2026-06-26T09:45:58",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "TREND ENERGY SOLUCOES INDUSTRIAIS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
       "dataPublicacaoPncp": "2026-06-26T09:45:58",
       "unidadeOrgao": {
         "codigoUnidade": "158462",
@@ -5740,13 +5740,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-03-13",
-      "dataAtualizacao": "2026-04-02T11:29:20",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -5765,12 +5758,19 @@
       },
       "dataAssinatura": "2026-03-13",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-03-13",
+      "dataAtualizacao": "2026-04-02T11:29:20",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "TREND ENERGY SOLUCOES INDUSTRIAIS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-04-02T11:29:20",
       "unidadeOrgao": {
         "codigoUnidade": "158459",
@@ -5872,13 +5872,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-04-08",
-      "dataAtualizacao": "2026-05-11T10:43:47",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -5897,12 +5890,19 @@
       },
       "dataAssinatura": "2026-04-08",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-04-08",
+      "dataAtualizacao": "2026-05-11T10:43:47",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "R. BUSETTO & F. KRUGER LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-05-11T10:43:47",
       "unidadeOrgao": {
         "codigoUnidade": "155152",
@@ -6044,13 +6044,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-03-13",
-      "dataAtualizacao": "2026-04-02T11:20:04",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -6069,12 +6062,19 @@
       },
       "dataAssinatura": "2026-03-13",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-03-13",
+      "dataAtualizacao": "2026-04-02T11:20:04",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "SOUZA & RICETTI ESTRATEGIA PUBLICA LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-04-02T11:20:04",
       "unidadeOrgao": {
         "codigoUnidade": "158459",
@@ -6176,27 +6176,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": {
-        "id": 1,
-        "nome": "Gerenciadora",
-        "descricao": null
-      },
-      "orgaoParteEnvolvida": {
-        "cnpj": "10635424000186",
-        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
-      },
-      "frutoAdesao": false,
-      "dataVigenciaInicio": "2026-02-03",
-      "dataAtualizacao": "2026-06-18T12:39:11",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": {
-        "codigoUnidade": "158125",
-        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
-        "municipioNome": "Blumenau",
-        "codigoIbge": "4202404",
-        "ufSigla": "SC",
-        "ufNome": "Santa Catarina"
-      },
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -6215,12 +6194,33 @@
       },
       "dataAssinatura": "2026-02-03",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-02-03",
+      "dataAtualizacao": "2026-06-18T12:39:11",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "LUMINORTE INSTALACAO, MANUTENCAO E COMERCIO DE MATERIAIS ELETRICOS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
       "dataPublicacaoPncp": "2026-06-18T12:39:11",
       "unidadeOrgao": {
         "codigoUnidade": "158379",
@@ -6329,27 +6329,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": {
-        "id": 1,
-        "nome": "Gerenciadora",
-        "descricao": null
-      },
-      "orgaoParteEnvolvida": {
-        "cnpj": "10635424000186",
-        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
-      },
-      "frutoAdesao": false,
-      "dataVigenciaInicio": "2026-02-03",
-      "dataAtualizacao": "2026-06-18T12:41:15",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": {
-        "codigoUnidade": "158125",
-        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
-        "municipioNome": "Blumenau",
-        "codigoIbge": "4202404",
-        "ufSigla": "SC",
-        "ufNome": "Santa Catarina"
-      },
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -6368,12 +6347,33 @@
       },
       "dataAssinatura": "2026-02-03",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-02-03",
+      "dataAtualizacao": "2026-06-18T12:41:15",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "LUMINORTE INSTALACAO, MANUTENCAO E COMERCIO DE MATERIAIS ELETRICOS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
       "dataPublicacaoPncp": "2026-06-18T12:41:15",
       "unidadeOrgao": {
         "codigoUnidade": "158379",
@@ -6482,27 +6482,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": {
-        "id": 1,
-        "nome": "Gerenciadora",
-        "descricao": null
-      },
-      "orgaoParteEnvolvida": {
-        "cnpj": "10635424000186",
-        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
-      },
-      "frutoAdesao": false,
-      "dataVigenciaInicio": "2026-05-14",
-      "dataAtualizacao": "2026-06-18T12:58:49",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": {
-        "codigoUnidade": "158125",
-        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
-        "municipioNome": "Blumenau",
-        "codigoIbge": "4202404",
-        "ufSigla": "SC",
-        "ufNome": "Santa Catarina"
-      },
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -6521,12 +6500,33 @@
       },
       "dataAssinatura": "2026-05-14",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-05-14",
+      "dataAtualizacao": "2026-06-18T12:58:49",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "ECOWSOLAR ENERGIAS SUSTENTAVEIS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
       "dataPublicacaoPncp": "2026-06-18T12:58:49",
       "unidadeOrgao": {
         "codigoUnidade": "158461",
@@ -6739,27 +6739,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": {
-        "id": 1,
-        "nome": "Gerenciadora",
-        "descricao": null
-      },
-      "orgaoParteEnvolvida": {
-        "cnpj": "10635424000186",
-        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
-      },
-      "frutoAdesao": false,
-      "dataVigenciaInicio": "2026-05-14",
-      "dataAtualizacao": "2026-06-18T12:58:50",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": {
-        "codigoUnidade": "158125",
-        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
-        "municipioNome": "Blumenau",
-        "codigoIbge": "4202404",
-        "ufSigla": "SC",
-        "ufNome": "Santa Catarina"
-      },
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -6778,12 +6757,33 @@
       },
       "dataAssinatura": "2026-05-14",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-05-14",
+      "dataAtualizacao": "2026-06-18T12:58:50",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "LUMINORTE INSTALACAO, MANUTENCAO E COMERCIO DE MATERIAIS ELETRICOS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
       "dataPublicacaoPncp": "2026-06-18T12:58:50",
       "unidadeOrgao": {
         "codigoUnidade": "158461",
@@ -7004,27 +7004,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": {
-        "id": 1,
-        "nome": "Gerenciadora",
-        "descricao": null
-      },
-      "orgaoParteEnvolvida": {
-        "cnpj": "10635424000186",
-        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
-      },
-      "frutoAdesao": false,
-      "dataVigenciaInicio": "2026-05-14",
-      "dataAtualizacao": "2026-06-18T12:58:48",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": {
-        "codigoUnidade": "158125",
-        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
-        "municipioNome": "Blumenau",
-        "codigoIbge": "4202404",
-        "ufSigla": "SC",
-        "ufNome": "Santa Catarina"
-      },
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -7043,12 +7022,33 @@
       },
       "dataAssinatura": "2026-05-14",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-05-14",
+      "dataAtualizacao": "2026-06-18T12:58:48",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "ELETROQUIP COMERCIO E LICITACOES LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
       "dataPublicacaoPncp": "2026-06-18T12:58:48",
       "unidadeOrgao": {
         "codigoUnidade": "158461",
@@ -7165,27 +7165,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": {
-        "id": 1,
-        "nome": "Gerenciadora",
-        "descricao": null
-      },
-      "orgaoParteEnvolvida": {
-        "cnpj": "10635424000186",
-        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
-      },
-      "frutoAdesao": false,
-      "dataVigenciaInicio": "2026-05-14",
-      "dataAtualizacao": "2026-06-18T12:58:58",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": {
-        "codigoUnidade": "158125",
-        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
-        "municipioNome": "Blumenau",
-        "codigoIbge": "4202404",
-        "ufSigla": "SC",
-        "ufNome": "Santa Catarina"
-      },
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -7204,12 +7183,33 @@
       },
       "dataAssinatura": "2026-05-14",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-05-14",
+      "dataAtualizacao": "2026-06-18T12:58:58",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "SOUZA & RICETTI ESTRATEGIA PUBLICA LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
       "dataPublicacaoPncp": "2026-06-18T12:58:58",
       "unidadeOrgao": {
         "codigoUnidade": "158461",
@@ -7310,27 +7310,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": {
-        "id": 1,
-        "nome": "Gerenciadora",
-        "descricao": null
-      },
-      "orgaoParteEnvolvida": {
-        "cnpj": "10635424000186",
-        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
-      },
-      "frutoAdesao": false,
-      "dataVigenciaInicio": "2026-05-14",
-      "dataAtualizacao": "2026-06-18T12:59:02",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": {
-        "codigoUnidade": "158125",
-        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
-        "municipioNome": "Blumenau",
-        "codigoIbge": "4202404",
-        "ufSigla": "SC",
-        "ufNome": "Santa Catarina"
-      },
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -7349,12 +7328,33 @@
       },
       "dataAssinatura": "2026-05-14",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-05-14",
+      "dataAtualizacao": "2026-06-18T12:59:02",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "FNK IMPORTADORA LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
       "dataPublicacaoPncp": "2026-06-18T12:59:02",
       "unidadeOrgao": {
         "codigoUnidade": "158461",
@@ -7559,27 +7559,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": {
-        "id": 1,
-        "nome": "Gerenciadora",
-        "descricao": null
-      },
-      "orgaoParteEnvolvida": {
-        "cnpj": "10635424000186",
-        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
-      },
-      "frutoAdesao": false,
-      "dataVigenciaInicio": "2026-05-14",
-      "dataAtualizacao": "2026-06-18T12:58:51",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": {
-        "codigoUnidade": "158125",
-        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
-        "municipioNome": "Blumenau",
-        "codigoIbge": "4202404",
-        "ufSigla": "SC",
-        "ufNome": "Santa Catarina"
-      },
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -7598,12 +7577,33 @@
       },
       "dataAssinatura": "2026-05-14",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-05-14",
+      "dataAtualizacao": "2026-06-18T12:58:51",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "LD ASTEN COMERCIO LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
       "dataPublicacaoPncp": "2026-06-18T12:58:51",
       "unidadeOrgao": {
         "codigoUnidade": "158461",
@@ -7712,27 +7712,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": {
-        "id": 1,
-        "nome": "Gerenciadora",
-        "descricao": null
-      },
-      "orgaoParteEnvolvida": {
-        "cnpj": "10635424000186",
-        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
-      },
-      "frutoAdesao": false,
-      "dataVigenciaInicio": "2026-05-14",
-      "dataAtualizacao": "2026-06-18T12:56:39",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": {
-        "codigoUnidade": "158125",
-        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
-        "municipioNome": "Blumenau",
-        "codigoIbge": "4202404",
-        "ufSigla": "SC",
-        "ufNome": "Santa Catarina"
-      },
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -7751,12 +7730,33 @@
       },
       "dataAssinatura": "2026-05-14",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-05-14",
+      "dataAtualizacao": "2026-06-18T12:56:39",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "LICITARE PRODUTOS, MATERIAIS E SERVICOS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
       "dataPublicacaoPncp": "2026-06-18T12:56:39",
       "unidadeOrgao": {
         "codigoUnidade": "158461",
@@ -7934,7 +7934,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-000648/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -7947,10 +7946,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-06-18T12:58:46",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000006",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -8079,7 +8079,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-000660/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -8092,10 +8091,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-06-18T12:58:56",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000016",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -8328,7 +8328,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-000661/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -8341,10 +8340,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-06-18T12:58:57",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000017",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -8473,7 +8473,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-000664/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -8486,10 +8485,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-06-18T12:58:59",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000005",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -8618,7 +8618,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-000665/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -8631,10 +8630,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-06-18T12:59:00",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000025",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -8803,7 +8803,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-000666/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -8816,10 +8815,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-06-18T12:59:00",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000026",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -9028,7 +9028,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-000669/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -9041,10 +9040,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-06-18T12:59:03",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000012",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -9173,7 +9173,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-000802/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -9186,10 +9185,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-06-26T09:45:56",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000026",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -9318,7 +9318,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-000810/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -9331,10 +9330,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-06-26T11:18:55",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000013",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -9495,7 +9495,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-000812/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -9508,10 +9507,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-06-26T11:19:23",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000026",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -9648,7 +9648,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-000816/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -9661,10 +9660,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-06-26T15:18:04",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000019",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -9793,7 +9793,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-000818/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -9806,10 +9805,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-06-26T15:33:34",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000013",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -9938,7 +9938,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-001329/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -9951,10 +9950,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-09-02T15:06:37",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000042",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -10069,7 +10069,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10626896000172-2-000467/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -10082,10 +10081,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-09-10T11:03:33",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000040",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -10214,7 +10214,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-001358/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -10227,10 +10226,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-09-09T00:27:13",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000022",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -10383,7 +10383,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-001357/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -10396,10 +10395,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-09-09T00:27:34",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000025",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -10528,7 +10528,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-001359/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -10541,10 +10540,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-09-09T14:20:22",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000010",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -10713,7 +10713,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-000851/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -10726,10 +10725,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-07-03T22:16:28",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000040",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -10858,7 +10858,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-000853/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -10871,10 +10870,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-07-06T09:23:53",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000025",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -11003,7 +11003,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-000854/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -11016,10 +11015,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-07-06T09:23:55",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000004",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -11148,7 +11148,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-000855/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -11161,10 +11160,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-07-06T09:23:58",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000029",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -11293,7 +11293,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-001419/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -11306,10 +11305,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-09-18T13:56:33",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000025",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -11470,7 +11470,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-000887/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -11483,10 +11482,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-07-10T14:00:44",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000004",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -11623,7 +11623,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-000888/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -11636,10 +11635,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-07-10T14:19:39",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000017",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -11768,7 +11768,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-001405/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -11781,10 +11780,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-09-16T14:58:26",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000026",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -11929,7 +11929,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-001428/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -11942,10 +11941,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-09-21T13:01:47",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000013",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -12082,7 +12082,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-000913/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -12095,10 +12094,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-07-22T12:17:22",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000025",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -12235,7 +12235,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-000914/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -12248,10 +12247,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-07-22T12:17:23",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000004",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -12380,7 +12380,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-000923/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -12393,10 +12392,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-07-22T12:20:52",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000004",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -12533,7 +12533,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-000991/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -12546,10 +12545,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-07-22T12:28:20",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000009",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -12678,7 +12678,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-000994/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -12691,10 +12690,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-07-22T12:28:32",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000010",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -12823,7 +12823,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-000992/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -12836,10 +12835,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-07-22T12:28:31",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000016",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -13024,7 +13024,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-000989/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -13037,10 +13036,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-07-22T12:28:08",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000009",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -13155,7 +13155,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "00394494010441-2-000778/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -13168,10 +13167,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-07-23T16:16:46",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000025",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -13308,7 +13308,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-001027/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -13321,10 +13320,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-07-24T10:18:03",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000006",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -13453,7 +13453,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-001042/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -13466,10 +13465,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-07-30T10:47:07",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000013",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -13606,7 +13606,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-001516/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -13619,10 +13618,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-10-07T11:01:18",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000022",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -13767,7 +13767,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-001079/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -13780,10 +13779,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-11-12T17:05:01",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000022",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -13920,7 +13920,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-001088/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -13933,10 +13932,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-08-03T16:23:23",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000026",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -14121,7 +14121,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-001094/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -14134,10 +14133,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-08-03T16:23:44",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000010",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -14290,7 +14290,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-001096/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -14303,10 +14302,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-08-03T16:23:51",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000025",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -14451,7 +14451,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-001095/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -14464,10 +14463,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-08-11T16:05:20",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000029",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -14596,7 +14596,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-001528/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -14609,10 +14608,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-10-13T08:51:24",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000004",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -14727,7 +14727,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10825373000155-2-000595/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -14740,10 +14739,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-10-19T11:18:49",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000040",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -14872,7 +14872,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-001565/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -14885,10 +14884,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-10-16T16:55:05",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000010",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -15027,7 +15027,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10825373000155-2-000592/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -15040,10 +15039,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-10-16T18:04:26",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000040",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -15180,7 +15180,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-001152/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -15193,10 +15192,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-08-10T15:19:38",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000033",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -15325,7 +15325,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-001157/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -15338,10 +15337,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-08-10T21:46:55",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000038",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -15542,7 +15542,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-001158/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -15555,10 +15554,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-08-10T21:57:24",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000038",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -15743,7 +15743,6 @@
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
       "numeroControlePNCP": "10635424000186-2-001595/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -15756,10 +15755,11 @@
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-10-23T10:41:43",
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "urlCipi": null,
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000015",
       "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -15827,7 +15827,6 @@
       }
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000282/2025",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -15874,6 +15873,7 @@
       "processo": "23359.015173/2026-21",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "numeroControlePNCP": "10767239000145-2-000322/2026",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -15887,10 +15887,10 @@
       "dataAtualizacaoGlobal": "2026-11-04T14:56:16",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10767239000145-2-000322/2026",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000032",
+      "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -15958,7 +15958,6 @@
       }
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000282/2025",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -16019,6 +16018,7 @@
       "processo": "23476.000627/2026-17",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "numeroControlePNCP": "10635424000186-2-001219/2026",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -16032,10 +16032,10 @@
       "dataAtualizacaoGlobal": "2026-08-19T10:19:41",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-001219/2026",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000025",
+      "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -16127,7 +16127,6 @@
       }
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000282/2025",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -16188,6 +16187,7 @@
       "processo": "23349.000862/2026-44",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "numeroControlePNCP": "10635424000186-2-001232/2026",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -16201,10 +16201,10 @@
       "dataAtualizacaoGlobal": "2026-08-20T10:42:58",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-001232/2026",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000016",
+      "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -16272,7 +16272,6 @@
       }
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000282/2025",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -16333,6 +16332,7 @@
       "processo": "23473.001538/2025-37",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "numeroControlePNCP": "10635424000186-2-001239/2026",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -16346,10 +16346,10 @@
       "dataAtualizacaoGlobal": "2026-08-21T11:13:19",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-001239/2026",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": "BRA",
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000008",
+      "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -16489,7 +16489,6 @@
       }
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000282/2025",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -16550,6 +16549,7 @@
       "processo": "23473.001538/2025-37",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "numeroControlePNCP": "10635424000186-2-001241/2026",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -16563,10 +16563,10 @@
       "dataAtualizacaoGlobal": "2026-08-21T11:28:23",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-001241/2026",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": "BRA",
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000008",
+      "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -16706,7 +16706,6 @@
       }
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000282/2025",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -16767,6 +16766,7 @@
       "processo": "23473.001538/2025-37",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "numeroControlePNCP": "10635424000186-2-001242/2026",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -16780,10 +16780,10 @@
       "dataAtualizacaoGlobal": "2026-08-21T11:37:31",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-001242/2026",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": "BRA",
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000008",
+      "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -16851,7 +16851,6 @@
       }
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000282/2025",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -16912,6 +16911,7 @@
       "processo": "23473.001538/2025-37",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "numeroControlePNCP": "10635424000186-2-001243/2026",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -16925,10 +16925,10 @@
       "dataAtualizacaoGlobal": "2026-08-21T11:47:18",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-001243/2026",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": "BRA",
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000008",
+      "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -17060,7 +17060,6 @@
       }
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000282/2025",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -17121,6 +17120,7 @@
       "processo": "23473.001538/2025-37",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "numeroControlePNCP": "10635424000186-2-001244/2026",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -17134,10 +17134,10 @@
       "dataAtualizacaoGlobal": "2026-08-21T12:02:59",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-001244/2026",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": "BRA",
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000008",
+      "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -17221,7 +17221,6 @@
       }
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000282/2025",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -17282,6 +17281,7 @@
       "processo": "23473.001538/2025-37",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "numeroControlePNCP": "10635424000186-2-001245/2026",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -17295,10 +17295,10 @@
       "dataAtualizacaoGlobal": "2026-08-21T12:12:20",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-001245/2026",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": "BRA",
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000008",
+      "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -17382,7 +17382,6 @@
       }
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000282/2025",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -17443,6 +17442,7 @@
       "processo": "23473.001538/2025-37",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "numeroControlePNCP": "10635424000186-2-001269/2026",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -17456,10 +17456,10 @@
       "dataAtualizacaoGlobal": "2026-08-21T17:03:32",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-001269/2026",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000282/2025-000028",
+      "numeroControlePncpCompra": "10635424000186-1-000282/2025",
+      "usuarioNome": "Contratos.gov.br",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",

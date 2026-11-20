@@ -6,7 +6,7 @@
       "pasta": "relatorio_compra_90027_2025",
       "arquivo_html": "relatorio_compra_90027_2025.html",
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000272",
-      "atualizado_em": "2026-11-19T07:21:52-03:00",
+      "atualizado_em": "2026-11-20T15:24:01-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -90,7 +90,7 @@
       "pasta": "relatorio_compra_90059_2025",
       "arquivo_html": "relatorio_compra_90059_2025.html",
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000282",
-      "atualizado_em": "2026-11-19T07:23:00-03:00",
+      "atualizado_em": "2026-11-20T15:25:10-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -175,7 +175,7 @@
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2024/000343",
       "pasta": "processo_10635424000186-2024-343",
       "status": "atualizado",
-      "atualizado_em": "2026-11-19T07:24:16-03:00",
+      "atualizado_em": "2026-11-20T15:26:26-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -259,7 +259,7 @@
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000187",
       "pasta": "processo_10635424000186-2025-187",
       "status": "atualizado",
-      "atualizado_em": "2026-11-19T07:24:47-03:00",
+      "atualizado_em": "2026-11-20T15:26:58-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -343,7 +343,7 @@
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2026/000140",
       "pasta": "processo_10635424000186-2026-140",
       "status": "atualizado",
-      "atualizado_em": "2026-11-19T07:24:58-03:00",
+      "atualizado_em": "2026-11-20T15:27:25-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -371,15 +371,15 @@
         {
           "chave": "itens_empenhados",
           "rotulo": "Itens empenhados",
-          "valor": 22,
-          "exibicao": "22",
+          "valor": 24,
+          "exibicao": "24",
           "descricao": "Execução acima de 0%"
         },
         {
           "chave": "itens_nao_empenhados",
           "rotulo": "Itens não empenhados",
-          "valor": 80,
-          "exibicao": "80",
+          "valor": 78,
+          "exibicao": "78",
           "descricao": "Execução igual a 0%, excluídos desertos"
         },
         {
@@ -413,9 +413,9 @@
         {
           "chave": "empenhado_mapeado",
           "rotulo": "Empenhado mapeado",
-          "valor": 88966.09,
-          "exibicao": "R$ 88.966,09",
-          "descricao": "16 de 16 registros com detalhamento"
+          "valor": 89810.31,
+          "exibicao": "R$ 89.810,31",
+          "descricao": "17 de 17 registros com detalhamento"
         }
       ],
       "erro": null,
@@ -427,7 +427,7 @@
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2026/000115",
       "pasta": "processo_10635424000186-2026-115",
       "status": "atualizado",
-      "atualizado_em": "2026-11-19T07:25:18-03:00",
+      "atualizado_em": "2026-11-20T15:27:45-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -511,7 +511,7 @@
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2026/187",
       "pasta": "processo_10635424000186-2026-187",
       "status": "atualizado",
-      "atualizado_em": "2026-11-19T07:25:20-03:00",
+      "atualizado_em": "2026-11-20T15:27:48-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -595,7 +595,7 @@
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2026/197",
       "pasta": "processo_10635424000186-2026-197",
       "status": "atualizado",
-      "atualizado_em": "2026-11-19T07:25:22-03:00",
+      "atualizado_em": "2026-11-20T15:27:57-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -679,7 +679,7 @@
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000102",
       "pasta": "processo_10635424000186-2025-102",
       "status": "atualizado",
-      "atualizado_em": "2026-11-19T07:26:34-03:00",
+      "atualizado_em": "2026-11-20T15:29:09-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -763,7 +763,7 @@
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/000168",
       "pasta": "processo_10635424000186-2025-168",
       "status": "atualizado",
-      "atualizado_em": "2026-11-19T07:27:00-03:00",
+      "atualizado_em": "2026-11-20T15:29:37-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -847,7 +847,7 @@
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2026/100",
       "pasta": "processo_10635424000186-2026-100",
       "status": "atualizado",
-      "atualizado_em": "2026-11-19T07:27:07-03:00",
+      "atualizado_em": "2026-11-20T15:29:45-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -932,7 +932,7 @@
       "url_pncp": "https://pncp.gov.br/app/editais/42414284000102/2026/000161",
       "pasta": "processo_42414284000102-2026-161",
       "status": "atualizado",
-      "atualizado_em": "2026-11-19T07:27:09-03:00",
+      "atualizado_em": "2026-11-20T15:29:48-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "42414284000102",
         "uasg_codigo": "153167",
@@ -1016,7 +1016,7 @@
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2025/216",
       "pasta": "processo_10635424000186-2025-216",
       "status": "atualizado",
-      "atualizado_em": "2026-11-19T07:27:36-03:00",
+      "atualizado_em": "2026-11-20T15:30:16-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -1100,7 +1100,7 @@
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2026/89",
       "pasta": "processo_10635424000186-2026-89",
       "status": "atualizado",
-      "atualizado_em": "2026-11-19T07:27:50-03:00",
+      "atualizado_em": "2026-11-20T15:30:23-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",
@@ -1184,7 +1184,7 @@
       "url_pncp": "https://pncp.gov.br/app/editais/10635424000186/2026/235",
       "pasta": "processo_10635424000186-2026-235",
       "status": "atualizado",
-      "atualizado_em": "2026-11-19T07:27:52-03:00",
+      "atualizado_em": "2026-11-20T15:30:28-03:00",
       "chaves_integracao": {
         "cnpj_orgao": "10635424000186",
         "uasg_codigo": "158125",

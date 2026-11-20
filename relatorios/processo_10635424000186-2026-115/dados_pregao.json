@@ -25116,7 +25116,6 @@
   "cache_reutilizado": true,
   "empenhos": [
     {
-      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -25194,6 +25193,7 @@
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000014",
+      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -25202,7 +25202,6 @@
       "consome_saldo": true
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -25280,6 +25279,7 @@
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000006",
+      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -25288,7 +25288,6 @@
       "consome_saldo": true
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -25366,6 +25365,7 @@
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000010",
+      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -25374,7 +25374,6 @@
       "consome_saldo": true
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -25452,6 +25451,7 @@
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000006",
+      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -25460,7 +25460,6 @@
       "consome_saldo": true
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -25538,6 +25537,7 @@
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000015",
+      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -25546,7 +25546,6 @@
       "consome_saldo": true
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -25624,6 +25623,7 @@
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000012",
+      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -25632,7 +25632,6 @@
       "consome_saldo": true
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -25710,6 +25709,7 @@
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000014",
+      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -25718,7 +25718,6 @@
       "consome_saldo": true
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -25796,6 +25795,7 @@
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000006",
+      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -25804,7 +25804,6 @@
       "consome_saldo": true
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -25882,6 +25881,7 @@
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000006",
+      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -25890,7 +25890,6 @@
       "consome_saldo": true
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -25968,6 +25967,7 @@
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000010",
+      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -25976,7 +25976,6 @@
       "consome_saldo": true
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -26054,6 +26053,7 @@
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000008",
+      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -26062,7 +26062,6 @@
       "consome_saldo": true
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -26140,6 +26139,7 @@
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000006",
+      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -26148,7 +26148,6 @@
       "consome_saldo": true
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -26226,6 +26225,7 @@
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000008",
+      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -26234,7 +26234,6 @@
       "consome_saldo": true
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -26312,6 +26311,7 @@
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000014",
+      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -26320,7 +26320,6 @@
       "consome_saldo": true
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -26398,6 +26397,7 @@
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000005",
+      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -26406,7 +26406,6 @@
       "consome_saldo": true
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -26484,6 +26483,7 @@
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000012",
+      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -26492,7 +26492,6 @@
       "consome_saldo": true
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -26570,6 +26569,7 @@
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000007",
+      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -26578,7 +26578,6 @@
       "consome_saldo": true
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -26656,6 +26655,7 @@
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000012",
+      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -26664,7 +26664,6 @@
       "consome_saldo": true
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -26742,6 +26741,7 @@
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000006",
+      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -26750,7 +26750,6 @@
       "consome_saldo": true
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -26828,6 +26827,7 @@
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000010",
+      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -26836,7 +26836,6 @@
       "consome_saldo": true
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -26914,6 +26913,7 @@
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000006",
+      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -26922,7 +26922,6 @@
       "consome_saldo": true
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -27000,6 +26999,7 @@
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000007",
+      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -27008,7 +27008,6 @@
       "consome_saldo": true
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -27086,6 +27085,7 @@
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000009",
+      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -27094,7 +27094,6 @@
       "consome_saldo": true
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -27172,6 +27171,7 @@
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000012",
+      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -27180,7 +27180,6 @@
       "consome_saldo": true
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -27258,6 +27257,7 @@
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000010",
+      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -27266,7 +27266,6 @@
       "consome_saldo": true
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -27344,6 +27343,7 @@
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000012",
+      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -27352,7 +27352,6 @@
       "consome_saldo": true
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -27430,6 +27429,7 @@
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000008",
+      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -27438,7 +27438,6 @@
       "consome_saldo": true
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -27516,6 +27515,7 @@
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000014",
+      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -27524,7 +27524,6 @@
       "consome_saldo": true
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -27602,6 +27601,7 @@
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000014",
+      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -27610,7 +27610,6 @@
       "consome_saldo": true
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -27688,6 +27687,7 @@
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000003",
+      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -27696,7 +27696,6 @@
       "consome_saldo": true
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -27774,6 +27773,7 @@
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000004",
+      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",
@@ -27782,7 +27782,6 @@
       "consome_saldo": true
     },
     {
-      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -27860,6 +27859,7 @@
       "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000115/2026-000012",
+      "numeroControlePncpCompra": "10635424000186-1-000115/2026",
       "origem": "pncp",
       "vinculo": "pncp",
       "confianca": "alta",

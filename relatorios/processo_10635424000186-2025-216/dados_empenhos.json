@@ -34,6 +34,7 @@
   "erros_resultados_itens": [],
   "empenhos": [
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -78,8 +79,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2056,
       "processo": "23475.001350/2025-79",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002056/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -93,8 +95,6 @@
       "dataAtualizacaoGlobal": "2026-02-19T12:43:33",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002056/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": "BRA",
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -120,6 +120,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -164,8 +165,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2059,
       "processo": "23475.001350/2025-79",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002059/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -179,8 +181,6 @@
       "dataAtualizacaoGlobal": "2026-02-19T12:48:48",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002059/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -252,6 +252,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -296,8 +297,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2065,
       "processo": "23352.005031/2025-29",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002065/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -311,8 +313,6 @@
       "dataAtualizacaoGlobal": "2026-02-20T08:52:57",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002065/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": "BRA",
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -400,6 +400,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -444,8 +445,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2081,
       "processo": "23821.002623/2025-15",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002081/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -459,8 +461,6 @@
       "dataAtualizacaoGlobal": "2026-02-23T14:50:30",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002081/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -572,6 +572,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -616,8 +617,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2136,
       "processo": "23475.001350/2025-79",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002136/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -631,8 +633,6 @@
       "dataAtualizacaoGlobal": "2026-03-02T09:36:23",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002136/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": "BRA",
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -720,6 +720,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -764,8 +765,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2213,
       "processo": "23475.001350/2025-79",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002213/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -779,8 +781,6 @@
       "dataAtualizacaoGlobal": "2026-03-18T11:17:46",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002213/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -876,6 +876,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -920,8 +921,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2217,
       "processo": "23475.001350/2025-79",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002217/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -935,8 +937,6 @@
       "dataAtualizacaoGlobal": "2026-03-18T15:49:06",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002217/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -1072,6 +1072,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -1116,8 +1117,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2229,
       "processo": "23475.001350/2025-79",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002229/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -1131,8 +1133,6 @@
       "dataAtualizacaoGlobal": "2026-03-19T16:33:04",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002229/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -1204,6 +1204,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -1248,8 +1249,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2242,
       "processo": "23821.002623/2025-15",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002242/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -1263,8 +1265,6 @@
       "dataAtualizacaoGlobal": "2026-03-25T14:54:52",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002242/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -1344,6 +1344,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -1388,8 +1389,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 301,
       "processo": "23349.001179/2026-24",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-000301/2026",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -1403,8 +1405,6 @@
       "dataAtualizacaoGlobal": "2026-04-02T11:34:41",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-000301/2026",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": "BRA",
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -1476,6 +1476,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -1520,8 +1521,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 304,
       "processo": "23349.001179/2026-24",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-000304/2026",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -1535,8 +1537,6 @@
       "dataAtualizacaoGlobal": "2026-05-11T15:03:02",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-000304/2026",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -1608,6 +1608,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -1652,8 +1653,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 306,
       "processo": "23349.001179/2026-24",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-000306/2026",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -1667,8 +1669,6 @@
       "dataAtualizacaoGlobal": "2026-05-12T10:21:19",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-000306/2026",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -1740,6 +1740,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -1784,8 +1785,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 307,
       "processo": "23349.001179/2026-24",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-000307/2026",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -1799,8 +1801,6 @@
       "dataAtualizacaoGlobal": "2026-04-13T14:46:26",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-000307/2026",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -1880,6 +1880,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -1924,8 +1925,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 308,
       "processo": "23349.001179/2026-24",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-000308/2026",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -1939,8 +1941,6 @@
       "dataAtualizacaoGlobal": "2026-04-02T11:34:52",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-000308/2026",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -2044,6 +2044,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -2088,8 +2089,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 299,
       "processo": "23349.001179/2026-24",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-000299/2026",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -2103,8 +2105,6 @@
       "dataAtualizacaoGlobal": "2026-04-02T11:29:29",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-000299/2026",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -2208,6 +2208,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -2252,8 +2253,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 300,
       "processo": "23349.001179/2026-24",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-000300/2026",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -2267,8 +2269,6 @@
       "dataAtualizacaoGlobal": "2026-04-02T11:29:30",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-000300/2026",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": "BRA",
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -2380,6 +2380,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -2424,8 +2425,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2272,
       "processo": "23821.002623/2025-15",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002272/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -2439,8 +2441,6 @@
       "dataAtualizacaoGlobal": "2026-04-08T12:40:24",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002272/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -2512,6 +2512,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -2556,8 +2557,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2273,
       "processo": "23821.002623/2025-15",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002273/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -2571,8 +2573,6 @@
       "dataAtualizacaoGlobal": "2026-04-08T12:44:05",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002273/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -2644,6 +2644,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -2688,8 +2689,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2274,
       "processo": "23475.001350/2025-79",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002274/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -2703,8 +2705,6 @@
       "dataAtualizacaoGlobal": "2026-04-08T16:42:38",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002274/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -2776,6 +2776,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -2820,8 +2821,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2281,
       "processo": "23821.002623/2025-15",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002281/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -2835,8 +2837,6 @@
       "dataAtualizacaoGlobal": "2026-04-10T13:52:31",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002281/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -2924,6 +2924,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -2968,8 +2969,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2282,
       "processo": "23821.002623/2025-15",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002282/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -2983,8 +2985,6 @@
       "dataAtualizacaoGlobal": "2026-04-10T13:55:33",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002282/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -3088,6 +3088,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -3132,8 +3133,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2287,
       "processo": "23475.001350/2025-79",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002287/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -3147,8 +3149,6 @@
       "dataAtualizacaoGlobal": "2026-04-13T15:14:20",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002287/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -3236,6 +3236,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -3280,8 +3281,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 1840,
       "processo": "23821.002623/2025-15",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-001840/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -3295,8 +3297,6 @@
       "dataAtualizacaoGlobal": "2026-01-16T15:17:33",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-001840/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -3368,6 +3368,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -3412,8 +3413,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 1842,
       "processo": "23821.002623/2025-15",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-001842/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -3427,8 +3429,6 @@
       "dataAtualizacaoGlobal": "2026-01-16T15:14:08",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-001842/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -3532,6 +3532,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -3576,8 +3577,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 1893,
       "processo": "23352.005031/2025-29",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-001893/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -3591,8 +3593,6 @@
       "dataAtualizacaoGlobal": "2026-01-27T16:29:05",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-001893/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -3664,6 +3664,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -3708,8 +3709,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 297,
       "processo": "23349.001179/2026-24",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-000297/2026",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -3723,8 +3725,6 @@
       "dataAtualizacaoGlobal": "2026-05-08T14:07:19",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-000297/2026",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -3828,6 +3828,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -3872,8 +3873,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 1983,
       "processo": "23475.001350/2025-79",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-001983/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -3887,8 +3889,6 @@
       "dataAtualizacaoGlobal": "2026-02-09T14:39:33",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-001983/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": "BRA",
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -3976,6 +3976,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -4020,8 +4021,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 1987,
       "processo": "23475.001350/2025-79",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-001987/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -4035,8 +4037,6 @@
       "dataAtualizacaoGlobal": "2026-02-09T15:44:12",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-001987/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": "BRA",
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -4196,6 +4196,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -4240,8 +4241,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2000,
       "processo": "23821.002623/2025-15",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002000/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -4255,8 +4257,6 @@
       "dataAtualizacaoGlobal": "2026-02-11T14:45:33",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002000/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -4352,6 +4352,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -4396,8 +4397,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2002,
       "processo": "23821.002623/2025-15",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002002/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -4411,8 +4413,6 @@
       "dataAtualizacaoGlobal": "2026-02-11T14:38:39",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002002/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -4484,6 +4484,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -4528,8 +4529,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2006,
       "processo": "23821.002623/2025-15",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002006/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -4543,8 +4545,6 @@
       "dataAtualizacaoGlobal": "2026-02-11T14:42:42",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002006/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": "BRA",
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -4776,6 +4776,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -4834,8 +4835,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 1456,
       "processo": "23349.001179/2026-24",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-001456/2026",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -4849,8 +4851,6 @@
       "dataAtualizacaoGlobal": "2026-09-24T18:58:26",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-001456/2026",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000216/2025-000024",
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -4937,6 +4937,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -4995,8 +4996,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2368,
       "processo": "23821.002623/2025-15",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002368/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -5010,8 +5012,6 @@
       "dataAtualizacaoGlobal": "2026-09-28T11:26:52",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002368/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000216/2025-000024",
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -5130,6 +5130,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -5188,8 +5189,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 1069,
       "processo": "23351.007917/2025-17",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-001069/2026",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -5203,8 +5205,6 @@
       "dataAtualizacaoGlobal": "2026-07-31T11:34:15",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-001069/2026",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": "BRA",
       "numeroControlePncpAta": "10635424000186-1-000216/2025-000001",
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -5443,6 +5443,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -5501,8 +5502,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 1067,
       "processo": "23351.007917/2025-17",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-001067/2026",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -5516,8 +5518,6 @@
       "dataAtualizacaoGlobal": "2026-08-13T16:10:05",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-001067/2026",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000216/2025-000016",
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -5604,6 +5604,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -5662,8 +5663,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 1068,
       "processo": "23351.007917/2025-17",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-001068/2026",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -5677,8 +5679,6 @@
       "dataAtualizacaoGlobal": "2026-07-31T11:32:17",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-001068/2026",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000216/2025-000023",
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -5765,6 +5765,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -5823,8 +5824,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 1070,
       "processo": "23351.007917/2025-17",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-001070/2026",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -5838,8 +5840,6 @@
       "dataAtualizacaoGlobal": "2026-07-31T11:35:48",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-001070/2026",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000216/2025-000017",
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -5942,6 +5942,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -6000,8 +6001,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 1071,
       "processo": "23351.007917/2025-17",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-001071/2026",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -6015,8 +6017,6 @@
       "dataAtualizacaoGlobal": "2026-07-31T11:36:52",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-001071/2026",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": "BRA",
       "numeroControlePncpAta": "10635424000186-1-000216/2025-000018",
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",
@@ -6087,6 +6087,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -6145,8 +6146,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 1072,
       "processo": "23351.007917/2025-17",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-001072/2026",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -6160,8 +6162,6 @@
       "dataAtualizacaoGlobal": "2026-07-31T11:37:53",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-001072/2026",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000216/2025-000011",
       "numeroControlePncpCompra": "10635424000186-1-000216/2025",

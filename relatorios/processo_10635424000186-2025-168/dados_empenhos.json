@@ -33,13 +33,7 @@
   "erros_resultados_itens": [],
   "empenhos": [
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-12-23",
-      "dataAtualizacao": "2026-02-18T16:46:24",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -58,12 +52,19 @@
       },
       "dataAssinatura": "2025-12-23",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-12-23",
+      "dataAtualizacao": "2026-02-18T16:46:24",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "IDFLUX TECHNOLOGIES E INFORMATICA BRASIL LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-02-18T16:46:24",
       "unidadeOrgao": {
         "codigoUnidade": "154706",
@@ -77,8 +78,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2051,
       "processo": "23514.001613/2025-36",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002051/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -92,8 +94,6 @@
       "dataAtualizacaoGlobal": "2026-02-18T16:46:24",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002051/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -165,13 +165,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-11-24",
-      "dataAtualizacao": "2026-02-19T10:54:43",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -190,12 +184,19 @@
       },
       "dataAssinatura": "2025-11-24",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-11-24",
+      "dataAtualizacao": "2026-02-19T10:54:43",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "TI COMPONENTES ELETRONICOS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-02-19T10:54:43",
       "unidadeOrgao": {
         "codigoUnidade": "152663",
@@ -209,8 +210,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2054,
       "processo": "23475.001762/2025-17",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002054/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -224,8 +226,6 @@
       "dataAtualizacaoGlobal": "2026-02-19T10:54:43",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002054/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -305,13 +305,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-09-30",
-      "dataAtualizacao": "2025-10-24T11:14:30",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -330,12 +324,19 @@
       },
       "dataAssinatura": "2025-09-30",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-09-30",
+      "dataAtualizacao": "2025-10-24T11:14:30",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "IDFLUX TECHNOLOGIES E INFORMATICA BRASIL LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-10-24T11:14:30",
       "unidadeOrgao": {
         "codigoUnidade": "158379",
@@ -349,8 +350,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 1249,
       "processo": "23352.003014/2025-57",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-001249/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -364,8 +366,6 @@
       "dataAtualizacaoGlobal": "2025-10-24T11:14:30",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-001249/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -437,13 +437,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-11-24",
-      "dataAtualizacao": "2026-02-23T10:47:43",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -462,12 +456,19 @@
       },
       "dataAssinatura": "2025-11-24",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-11-24",
+      "dataAtualizacao": "2026-02-23T10:47:43",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "TROPICAL MOVEIS E FERRAGENS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-02-23T10:47:43",
       "unidadeOrgao": {
         "codigoUnidade": "152663",
@@ -481,8 +482,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2071,
       "processo": "23475.001762/2025-17",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002071/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -496,8 +498,6 @@
       "dataAtualizacaoGlobal": "2026-02-23T10:47:43",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002071/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -577,13 +577,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-11-24",
-      "dataAtualizacao": "2026-02-23T10:47:45",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -602,12 +596,19 @@
       },
       "dataAssinatura": "2025-11-24",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-11-24",
+      "dataAtualizacao": "2026-02-23T10:47:45",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "TROPICAL MOVEIS E FERRAGENS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-02-23T10:47:45",
       "unidadeOrgao": {
         "codigoUnidade": "152663",
@@ -621,8 +622,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2072,
       "processo": "23475.001762/2025-17",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002072/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -636,8 +638,6 @@
       "dataAtualizacaoGlobal": "2026-02-23T10:47:45",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002072/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -717,13 +717,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-11-24",
-      "dataAtualizacao": "2026-02-23T10:47:47",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -742,12 +736,19 @@
       },
       "dataAssinatura": "2025-11-24",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-11-24",
+      "dataAtualizacao": "2026-02-23T10:47:47",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "TROPICAL MOVEIS E FERRAGENS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-02-23T10:47:47",
       "unidadeOrgao": {
         "codigoUnidade": "152663",
@@ -761,8 +762,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2073,
       "processo": "23475.001762/2025-17",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002073/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -776,8 +778,6 @@
       "dataAtualizacaoGlobal": "2026-02-23T10:47:47",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002073/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -865,13 +865,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-12-17",
-      "dataAtualizacao": "2026-02-23T14:45:42",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -890,12 +884,19 @@
       },
       "dataAssinatura": "2025-12-17",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-12-17",
+      "dataAtualizacao": "2026-02-23T14:45:42",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "ASAP COMERCIO E IMPORTACAO DE COMPONENTES ELETRONICOS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-02-23T14:45:42",
       "unidadeOrgao": {
         "codigoUnidade": "158631",
@@ -909,8 +910,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2082,
       "processo": "23821.001079/2025-94",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002082/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -924,8 +926,6 @@
       "dataAtualizacaoGlobal": "2026-02-23T14:48:07",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002082/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -997,27 +997,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": {
-        "id": 1,
-        "nome": "Gerenciadora",
-        "descricao": null
-      },
-      "orgaoParteEnvolvida": {
-        "cnpj": "10635424000186",
-        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
-      },
-      "frutoAdesao": false,
-      "dataVigenciaInicio": "2025-11-21",
-      "dataAtualizacao": "2026-06-22T16:52:19",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": {
-        "codigoUnidade": "158125",
-        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
-        "municipioNome": "Blumenau",
-        "codigoIbge": "4202404",
-        "ufSigla": "SC",
-        "ufNome": "Santa Catarina"
-      },
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -1036,12 +1016,33 @@
       },
       "dataAssinatura": "2025-11-21",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2025-11-21",
+      "dataAtualizacao": "2026-06-22T16:52:19",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "IDFLUX TECHNOLOGIES E INFORMATICA BRASIL LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
       "dataPublicacaoPncp": "2026-06-22T16:52:19",
       "unidadeOrgao": {
         "codigoUnidade": "152663",
@@ -1055,8 +1056,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2333,
       "processo": "23475.001762/2025-17",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002333/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -1070,8 +1072,6 @@
       "dataAtualizacaoGlobal": "2026-06-22T16:52:19",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002333/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000168/2025-000013",
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -1142,13 +1142,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-09-30",
-      "dataAtualizacao": "2025-10-09T13:45:11",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -1167,12 +1161,19 @@
       },
       "dataAssinatura": "2025-09-30",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-09-30",
+      "dataAtualizacao": "2025-10-09T13:45:11",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "TI COMPONENTES ELETRONICOS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-10-09T13:45:11",
       "unidadeOrgao": {
         "codigoUnidade": "158379",
@@ -1186,8 +1187,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 1149,
       "processo": "23352.003014/2025-57",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-001149/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -1201,8 +1203,6 @@
       "dataAtualizacaoGlobal": "2025-10-09T13:45:11",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-001149/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -1282,13 +1282,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-09-30",
-      "dataAtualizacao": "2025-10-10T19:38:06",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -1307,12 +1301,19 @@
       },
       "dataAssinatura": "2025-09-30",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-09-30",
+      "dataAtualizacao": "2025-10-10T19:38:06",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "T T A COMERCIO COMPONENTES ELETRICOS E SERVICOS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-10-10T19:38:06",
       "unidadeOrgao": {
         "codigoUnidade": "158379",
@@ -1326,8 +1327,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 1159,
       "processo": "23352.003014/2025-57",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-001159/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -1341,8 +1343,6 @@
       "dataAtualizacaoGlobal": "2025-10-10T19:38:06",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-001159/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": "BRA",
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -1414,13 +1414,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-09-30",
-      "dataAtualizacao": "2025-10-15T10:18:10",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -1439,12 +1433,19 @@
       },
       "dataAssinatura": "2025-09-30",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-09-30",
+      "dataAtualizacao": "2025-10-15T10:18:10",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "NATALIA DE FATIMA SIQUEIRA DE MELO",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-10-15T10:18:10",
       "unidadeOrgao": {
         "codigoUnidade": "158379",
@@ -1458,8 +1459,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 1203,
       "processo": "23352.003014/2025-57",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-001203/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -1473,8 +1475,6 @@
       "dataAtualizacaoGlobal": "2025-10-15T10:18:10",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-001203/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -1570,13 +1570,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-01-16",
-      "dataAtualizacao": "2026-02-27T09:36:02",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -1595,12 +1589,19 @@
       },
       "dataAssinatura": "2026-01-16",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-01-16",
+      "dataAtualizacao": "2026-02-27T09:36:02",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "IDFLUX TECHNOLOGIES E INFORMATICA BRASIL LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-02-27T09:36:02",
       "unidadeOrgao": {
         "codigoUnidade": "152662",
@@ -1614,8 +1615,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 86,
       "processo": "23352.003547/2025-39",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-000086/2026",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -1629,8 +1631,6 @@
       "dataAtualizacaoGlobal": "2026-02-27T09:36:02",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-000086/2026",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -1718,13 +1718,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-11-10",
-      "dataAtualizacao": "2025-11-11T16:12:02",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -1743,12 +1737,19 @@
       },
       "dataAssinatura": "2025-11-10",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-11-10",
+      "dataAtualizacao": "2025-11-11T16:12:02",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "IDFLUX TECHNOLOGIES E INFORMATICA BRASIL LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-11-11T16:12:02",
       "unidadeOrgao": {
         "codigoUnidade": "158461",
@@ -1762,8 +1763,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 1373,
       "processo": "23351.006208/2025-14",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-001373/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -1777,8 +1779,6 @@
       "dataAtualizacaoGlobal": "2026-02-19T15:43:44",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-001373/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -1850,13 +1850,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-11-27",
-      "dataAtualizacao": "2026-03-02T17:39:00",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -1875,12 +1869,19 @@
       },
       "dataAssinatura": "2025-11-27",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-11-27",
+      "dataAtualizacao": "2026-03-02T17:39:00",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "A2 ROBOTICS COMERCIO IMPORTACAO E EXPORTACAO LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-03-02T17:39:00",
       "unidadeOrgao": {
         "codigoUnidade": "153015",
@@ -1894,8 +1895,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 338,
       "processo": "23062.060936/2025-27",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "17220203000196-2-000338/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -1909,8 +1911,6 @@
       "dataAtualizacaoGlobal": "2026-03-02T18:08:02",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "17220203000196-2-000338/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -2038,13 +2038,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-09-30",
-      "dataAtualizacao": "2025-11-24T10:57:37",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -2063,12 +2057,19 @@
       },
       "dataAssinatura": "2025-09-30",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-09-30",
+      "dataAtualizacao": "2025-11-24T10:57:37",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "TROPICAL MOVEIS E FERRAGENS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-11-24T10:57:37",
       "unidadeOrgao": {
         "codigoUnidade": "158379",
@@ -2082,8 +2083,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 1464,
       "processo": "23352.003014/2025-57",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-001464/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -2097,8 +2099,6 @@
       "dataAtualizacaoGlobal": "2025-11-24T10:57:37",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-001464/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -2186,13 +2186,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-12-23",
-      "dataAtualizacao": "2026-03-09T14:36:21",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -2211,12 +2205,19 @@
       },
       "dataAssinatura": "2025-12-23",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-12-23",
+      "dataAtualizacao": "2026-03-09T14:36:21",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "TI COMPONENTES ELETRONICOS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-03-09T14:36:21",
       "unidadeOrgao": {
         "codigoUnidade": "154706",
@@ -2230,8 +2231,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2171,
       "processo": "23514.001613/2025-36",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002171/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -2245,8 +2247,6 @@
       "dataAtualizacaoGlobal": "2026-03-09T14:36:21",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002171/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -2318,13 +2318,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-09-30",
-      "dataAtualizacao": "2026-03-13T13:43:09",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -2343,12 +2337,19 @@
       },
       "dataAssinatura": "2025-09-30",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-09-30",
+      "dataAtualizacao": "2026-03-13T13:43:09",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "A2 ROBOTICS COMERCIO IMPORTACAO E EXPORTACAO LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-03-13T13:43:09",
       "unidadeOrgao": {
         "codigoUnidade": "158379",
@@ -2362,8 +2363,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2188,
       "processo": "23352.003014/2025-57",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002188/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -2377,8 +2379,6 @@
       "dataAtualizacaoGlobal": "2026-03-13T13:43:09",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002188/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -2498,13 +2498,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-11-25",
-      "dataAtualizacao": "2026-03-19T13:36:31",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -2523,12 +2517,19 @@
       },
       "dataAssinatura": "2025-11-25",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-11-25",
+      "dataAtualizacao": "2026-03-19T13:36:31",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "NATALIA DE FATIMA SIQUEIRA DE MELO",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-03-19T13:36:31",
       "unidadeOrgao": {
         "codigoUnidade": "152663",
@@ -2542,8 +2543,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2220,
       "processo": "23475.001762/2025-17",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002220/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -2557,8 +2559,6 @@
       "dataAtualizacaoGlobal": "2026-03-19T13:36:31",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002220/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -2646,13 +2646,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-11-25",
-      "dataAtualizacao": "2026-03-19T14:34:03",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -2671,12 +2665,19 @@
       },
       "dataAssinatura": "2025-11-25",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-11-25",
+      "dataAtualizacao": "2026-03-19T14:34:03",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "NATALIA DE FATIMA SIQUEIRA DE MELO",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-03-19T14:34:03",
       "unidadeOrgao": {
         "codigoUnidade": "152663",
@@ -2690,8 +2691,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2223,
       "processo": "23475.001762/2025-17",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002223/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -2705,8 +2707,6 @@
       "dataAtualizacaoGlobal": "2026-03-19T14:34:03",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002223/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -2778,13 +2778,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-12-17",
-      "dataAtualizacao": "2026-03-25T14:39:01",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -2803,12 +2797,19 @@
       },
       "dataAssinatura": "2025-12-17",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-12-17",
+      "dataAtualizacao": "2026-03-25T14:39:01",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "A2 ROBOTICS COMERCIO IMPORTACAO E EXPORTACAO LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-03-25T14:39:01",
       "unidadeOrgao": {
         "codigoUnidade": "158631",
@@ -2822,8 +2823,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2244,
       "processo": "23821.001079/2025-94",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002244/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -2837,8 +2839,6 @@
       "dataAtualizacaoGlobal": "2026-03-25T14:51:41",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002244/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -3118,13 +3118,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-11-24",
-      "dataAtualizacao": "2026-03-27T14:56:48",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -3143,12 +3137,19 @@
       },
       "dataAssinatura": "2025-11-24",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-11-24",
+      "dataAtualizacao": "2026-03-27T14:56:48",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "A2 ROBOTICS COMERCIO IMPORTACAO E EXPORTACAO LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-03-27T14:56:48",
       "unidadeOrgao": {
         "codigoUnidade": "152663",
@@ -3162,8 +3163,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2255,
       "processo": "23475.001762/2025-17",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002255/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -3177,8 +3179,6 @@
       "dataAtualizacaoGlobal": "2026-03-27T14:56:48",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002255/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -3250,13 +3250,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-11-24",
-      "dataAtualizacao": "2026-03-27T15:10:58",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -3275,12 +3269,19 @@
       },
       "dataAssinatura": "2025-11-24",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-11-24",
+      "dataAtualizacao": "2026-03-27T15:10:58",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "A2 ROBOTICS COMERCIO IMPORTACAO E EXPORTACAO LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-03-27T15:10:58",
       "unidadeOrgao": {
         "codigoUnidade": "152663",
@@ -3294,8 +3295,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2256,
       "processo": "23475.001762/2025-17",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002256/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -3309,8 +3311,6 @@
       "dataAtualizacaoGlobal": "2026-03-27T15:10:58",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002256/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -3382,13 +3382,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-11-24",
-      "dataAtualizacao": "2026-03-27T15:16:21",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -3407,12 +3401,19 @@
       },
       "dataAssinatura": "2025-11-24",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-11-24",
+      "dataAtualizacao": "2026-03-27T15:16:21",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "A2 ROBOTICS COMERCIO IMPORTACAO E EXPORTACAO LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-03-27T15:16:21",
       "unidadeOrgao": {
         "codigoUnidade": "152663",
@@ -3426,8 +3427,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2257,
       "processo": "23475.001762/2025-17",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002257/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -3441,8 +3443,6 @@
       "dataAtualizacaoGlobal": "2026-03-27T15:16:21",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002257/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -3514,13 +3514,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-12-17",
-      "dataAtualizacao": "2026-04-07T09:30:39",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -3539,12 +3533,19 @@
       },
       "dataAssinatura": "2025-12-17",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-12-17",
+      "dataAtualizacao": "2026-04-07T09:30:39",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "NATALIA DE FATIMA SIQUEIRA DE MELO",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-04-07T09:30:39",
       "unidadeOrgao": {
         "codigoUnidade": "158631",
@@ -3558,8 +3559,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2267,
       "processo": "23821.001079/2025-94",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002267/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -3573,8 +3575,6 @@
       "dataAtualizacaoGlobal": "2026-04-07T09:35:40",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002267/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -3798,13 +3798,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-01-16",
-      "dataAtualizacao": "2026-04-10T11:22:20",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -3823,12 +3817,19 @@
       },
       "dataAssinatura": "2026-01-16",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-01-16",
+      "dataAtualizacao": "2026-04-10T11:22:20",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "TI COMPONENTES ELETRONICOS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-04-10T11:22:20",
       "unidadeOrgao": {
         "codigoUnidade": "152662",
@@ -3842,8 +3843,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 332,
       "processo": "23352.3547/2025-39",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-000332/2026",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -3857,8 +3859,6 @@
       "dataAtualizacaoGlobal": "2026-04-10T21:43:58",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-000332/2026",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -4010,13 +4010,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-11-24",
-      "dataAtualizacao": "2026-04-14T15:56:01",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -4035,12 +4029,19 @@
       },
       "dataAssinatura": "2025-11-24",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-11-24",
+      "dataAtualizacao": "2026-04-14T15:56:01",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "J2R AUTOMACAO LTDA LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-04-14T15:56:01",
       "unidadeOrgao": {
         "codigoUnidade": "152663",
@@ -4054,8 +4055,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2291,
       "processo": "23475.001762/2025-17",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002291/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -4069,8 +4071,6 @@
       "dataAtualizacaoGlobal": "2026-04-14T16:10:04",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002291/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -4150,13 +4150,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-12-01",
-      "dataAtualizacao": "2026-01-08T13:37:00",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -4175,12 +4169,19 @@
       },
       "dataAssinatura": "2025-12-01",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-12-01",
+      "dataAtualizacao": "2026-01-08T13:37:00",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "TI COMPONENTES ELETRONICOS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-01-08T13:37:00",
       "unidadeOrgao": {
         "codigoUnidade": "153015",
@@ -4194,8 +4195,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 260,
       "processo": "23062.061844/2025-64",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "17220203000196-2-000260/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -4209,8 +4211,6 @@
       "dataAtualizacaoGlobal": "2026-01-08T13:46:09",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "17220203000196-2-000260/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -4322,13 +4322,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-12-17",
-      "dataAtualizacao": "2026-01-16T15:02:48",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -4347,12 +4341,19 @@
       },
       "dataAssinatura": "2025-12-17",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-12-17",
+      "dataAtualizacao": "2026-01-16T15:02:48",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "P2B SOLUCOES EM FORNECIMENTOS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-01-16T15:02:48",
       "unidadeOrgao": {
         "codigoUnidade": "158631",
@@ -4366,8 +4367,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 1845,
       "processo": "23821.001079/2025-94",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-001845/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -4381,8 +4383,6 @@
       "dataAtualizacaoGlobal": "2026-01-16T15:07:04",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-001845/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -4462,13 +4462,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-12-17",
-      "dataAtualizacao": "2026-01-16T15:02:46",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -4487,12 +4481,19 @@
       },
       "dataAssinatura": "2025-12-17",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-12-17",
+      "dataAtualizacao": "2026-01-16T15:02:46",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "TROPICAL MOVEIS E FERRAGENS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-01-16T15:02:46",
       "unidadeOrgao": {
         "codigoUnidade": "158631",
@@ -4506,8 +4507,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 1844,
       "processo": "23821.001079/2025-94",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-001844/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -4521,8 +4523,6 @@
       "dataAtualizacaoGlobal": "2026-02-11T15:30:51",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-001844/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -4658,13 +4658,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-12-17",
-      "dataAtualizacao": "2026-02-11T14:24:03",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -4683,12 +4677,19 @@
       },
       "dataAssinatura": "2025-12-17",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-12-17",
+      "dataAtualizacao": "2026-02-11T14:24:03",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "TI COMPONENTES ELETRONICOS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-02-11T14:24:03",
       "unidadeOrgao": {
         "codigoUnidade": "158631",
@@ -4702,8 +4703,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2010,
       "processo": "23821.001079/2025-94",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002010/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -4717,8 +4719,6 @@
       "dataAtualizacaoGlobal": "2026-04-14T09:13:57",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002010/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -5190,13 +5190,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-12-17",
-      "dataAtualizacao": "2026-02-11T14:23:59",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -5215,12 +5209,19 @@
       },
       "dataAssinatura": "2025-12-17",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-12-17",
+      "dataAtualizacao": "2026-02-11T14:23:59",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "IDFLUX TECHNOLOGIES E INFORMATICA BRASIL LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-02-11T14:23:59",
       "unidadeOrgao": {
         "codigoUnidade": "158631",
@@ -5234,8 +5235,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2008,
       "processo": "23821.001079/2025-94",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002008/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -5249,8 +5251,6 @@
       "dataAtualizacaoGlobal": "2026-02-11T14:49:16",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002008/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -5322,13 +5322,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-12-17",
-      "dataAtualizacao": "2026-02-11T14:24:01",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -5347,12 +5341,19 @@
       },
       "dataAssinatura": "2025-12-17",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-12-17",
+      "dataAtualizacao": "2026-02-11T14:24:01",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "AMILTON GUIMARAES E CIA LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-02-11T14:24:01",
       "unidadeOrgao": {
         "codigoUnidade": "158631",
@@ -5366,8 +5367,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 2009,
       "processo": "23821.001079/2025-94",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-002009/2025",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": null,
@@ -5381,8 +5383,6 @@
       "dataAtualizacaoGlobal": "2026-02-11T14:34:53",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-002009/2025",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -5462,27 +5462,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": {
-        "id": 1,
-        "nome": "Gerenciadora",
-        "descricao": null
-      },
-      "orgaoParteEnvolvida": {
-        "cnpj": "10635424000186",
-        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
-      },
-      "frutoAdesao": false,
-      "dataVigenciaInicio": "2026-01-16",
-      "dataAtualizacao": "2026-06-18T12:39:55",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": {
-        "codigoUnidade": "158125",
-        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
-        "municipioNome": "Blumenau",
-        "codigoIbge": "4202404",
-        "ufSigla": "SC",
-        "ufNome": "Santa Catarina"
-      },
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -5501,12 +5481,33 @@
       },
       "dataAssinatura": "2026-01-16",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-01-16",
+      "dataAtualizacao": "2026-06-18T12:39:55",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "A2 ROBOTICS COMERCIO IMPORTACAO E EXPORTACAO LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
       "dataPublicacaoPncp": "2026-06-18T12:39:55",
       "unidadeOrgao": {
         "codigoUnidade": "152662",
@@ -5520,8 +5521,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 554,
       "processo": "23352.003547/2025-39",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-000554/2026",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -5535,8 +5537,6 @@
       "dataAtualizacaoGlobal": "2026-06-18T12:39:55",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-000554/2026",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000168/2025-000002",
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -5719,27 +5719,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": {
-        "id": 1,
-        "nome": "Gerenciadora",
-        "descricao": null
-      },
-      "orgaoParteEnvolvida": {
-        "cnpj": "10635424000186",
-        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
-      },
-      "frutoAdesao": false,
-      "dataVigenciaInicio": "2026-07-23",
-      "dataAtualizacao": "2026-09-16T11:07:29",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": {
-        "codigoUnidade": "158125",
-        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
-        "municipioNome": "Blumenau",
-        "codigoIbge": "4202404",
-        "ufSigla": "SC",
-        "ufNome": "Santa Catarina"
-      },
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -5758,12 +5738,33 @@
       },
       "dataAssinatura": "2026-07-23",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-07-23",
+      "dataAtualizacao": "2026-09-16T11:07:29",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "IDFLUX TECHNOLOGIES E INFORMATICA BRASIL LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
       "dataPublicacaoPncp": "2026-09-16T11:07:26",
       "unidadeOrgao": {
         "codigoUnidade": "152290",
@@ -5777,8 +5778,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 1396,
       "processo": "23476.000950/2025-18",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-001396/2026",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -5792,8 +5794,6 @@
       "dataAtualizacaoGlobal": "2026-09-16T11:07:29",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-001396/2026",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000168/2025-000013",
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -5872,27 +5872,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": {
-        "id": 1,
-        "nome": "Gerenciadora",
-        "descricao": null
-      },
-      "orgaoParteEnvolvida": {
-        "cnpj": "10635424000186",
-        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
-      },
-      "frutoAdesao": false,
-      "dataVigenciaInicio": "2026-07-23",
-      "dataAtualizacao": "2026-10-26T14:43:38",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": {
-        "codigoUnidade": "158125",
-        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
-        "municipioNome": "Blumenau",
-        "codigoIbge": "4202404",
-        "ufSigla": "SC",
-        "ufNome": "Santa Catarina"
-      },
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -5911,12 +5891,33 @@
       },
       "dataAssinatura": "2026-07-23",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-07-23",
+      "dataAtualizacao": "2026-10-26T14:43:38",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "J2R AUTOMACAO LTDA LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
       "dataPublicacaoPncp": "2026-10-26T14:25:18",
       "unidadeOrgao": {
         "codigoUnidade": "152290",
@@ -5930,8 +5931,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 1603,
       "processo": "23476.000950/2025-18",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-001603/2026",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -5945,8 +5947,6 @@
       "dataAtualizacaoGlobal": "2026-10-26T14:43:38",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-001603/2026",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000168/2025-000006",
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -6025,27 +6025,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": {
-        "id": 1,
-        "nome": "Gerenciadora",
-        "descricao": null
-      },
-      "orgaoParteEnvolvida": {
-        "cnpj": "10635424000186",
-        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
-      },
-      "frutoAdesao": false,
-      "dataVigenciaInicio": "2026-07-23",
-      "dataAtualizacao": "2026-08-13T10:10:40",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": {
-        "codigoUnidade": "158125",
-        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
-        "municipioNome": "Blumenau",
-        "codigoIbge": "4202404",
-        "ufSigla": "SC",
-        "ufNome": "Santa Catarina"
-      },
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -6064,12 +6044,33 @@
       },
       "dataAssinatura": "2026-07-23",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-07-23",
+      "dataAtualizacao": "2026-08-13T10:10:40",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "TROPICAL MOVEIS E FERRAGENS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
       "dataPublicacaoPncp": "2026-08-13T10:10:39",
       "unidadeOrgao": {
         "codigoUnidade": "152290",
@@ -6083,8 +6084,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 1187,
       "processo": "23476.000950/2025-18",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-001187/2026",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -6098,8 +6100,6 @@
       "dataAtualizacaoGlobal": "2026-08-13T10:10:40",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-001187/2026",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000168/2025-000001",
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -6194,27 +6194,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": {
-        "id": 1,
-        "nome": "Gerenciadora",
-        "descricao": null
-      },
-      "orgaoParteEnvolvida": {
-        "cnpj": "10635424000186",
-        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
-      },
-      "frutoAdesao": false,
-      "dataVigenciaInicio": "2026-07-23",
-      "dataAtualizacao": "2026-10-26T11:25:22",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": {
-        "codigoUnidade": "158125",
-        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
-        "municipioNome": "Blumenau",
-        "codigoIbge": "4202404",
-        "ufSigla": "SC",
-        "ufNome": "Santa Catarina"
-      },
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -6233,12 +6213,33 @@
       },
       "dataAssinatura": "2026-07-23",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-07-23",
+      "dataAtualizacao": "2026-10-26T11:25:22",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "A2 ROBOTICS COMERCIO IMPORTACAO E EXPORTACAO LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
       "dataPublicacaoPncp": "2026-10-26T11:25:22",
       "unidadeOrgao": {
         "codigoUnidade": "152290",
@@ -6252,8 +6253,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 1599,
       "processo": "23476.000950/2025-18",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-001599/2026",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -6267,8 +6269,6 @@
       "dataAtualizacaoGlobal": "2026-10-26T11:25:22",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-001599/2026",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000168/2025-000002",
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",
@@ -6451,27 +6451,7 @@
       }
     },
     {
-      "tipoParteEnvolvida": {
-        "id": 1,
-        "nome": "Gerenciadora",
-        "descricao": null
-      },
-      "orgaoParteEnvolvida": {
-        "cnpj": "10635424000186",
-        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
-      },
-      "frutoAdesao": false,
-      "dataVigenciaInicio": "2026-07-23",
-      "dataAtualizacao": "2026-08-19T12:14:09",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": {
-        "codigoUnidade": "158125",
-        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
-        "municipioNome": "Blumenau",
-        "codigoIbge": "4202404",
-        "ufSigla": "SC",
-        "ufNome": "Santa Catarina"
-      },
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -6490,12 +6470,33 @@
       },
       "dataAssinatura": "2026-07-23",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": {
+        "id": 1,
+        "nome": "Gerenciadora",
+        "descricao": null
+      },
+      "orgaoParteEnvolvida": {
+        "cnpj": "10635424000186",
+        "nome": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE"
+      },
+      "frutoAdesao": false,
+      "dataVigenciaInicio": "2026-07-23",
+      "dataAtualizacao": "2026-08-19T12:14:09",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "TI COMPONENTES ELETRONICOS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": {
+        "codigoUnidade": "158125",
+        "nomeUnidade": "INST.FED.DE EDUC., CIENC. E TEC. CATARINENSE",
+        "municipioNome": "Blumenau",
+        "codigoIbge": "4202404",
+        "ufSigla": "SC",
+        "ufNome": "Santa Catarina"
+      },
       "dataPublicacaoPncp": "2026-08-19T12:14:09",
       "unidadeOrgao": {
         "codigoUnidade": "152290",
@@ -6509,8 +6510,9 @@
       "informacaoComplementar": null,
       "sequencialContrato": 1220,
       "processo": "23476.000950/2025-18",
-      "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
+      "tipoPessoaSubContratada": null,
+      "numeroControlePNCP": "10635424000186-2-001220/2026",
       "receita": false,
       "numeroParcelas": 1,
       "temRemanejamento": false,
@@ -6524,8 +6526,6 @@
       "dataAtualizacaoGlobal": "2026-08-19T12:14:09",
       "identificadorCipi": null,
       "urlCipi": null,
-      "numeroControlePNCP": "10635424000186-2-001220/2026",
-      "usuarioNome": "Contratos.gov.br",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000168/2025-000008",
       "numeroControlePncpCompra": "10635424000186-1-000168/2025",

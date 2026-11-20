@@ -37,6 +37,7 @@
   "erros_resultados_itens": [],
   "empenhos": [
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -95,21 +96,20 @@
       "processo": "23350.000105/2025-51",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 1,
-      "numeroControlePNCP": "10635424000186-2-000107/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "EMPENHO PARA ATENDER DESPESA COM AQUISIÇÃO DE MATERIAIS DE CONSTRUÇÃO PARA MANUTENÇÃO DAS INSTALAÇÕES DO CAMPUS .",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 8613.2,
       "valorParcela": 8613.2,
       "valorGlobal": 8613.2,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-03-12T11:53:07",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000107/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -197,6 +197,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -255,21 +256,20 @@
       "processo": "23350.000105/2025-51",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 1,
-      "numeroControlePNCP": "10635424000186-2-000103/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "EMPENHO PARA ATENDER DESPESA COM AQUISIÇÃO DE MATERIAIS DE CONSTRUÇÃO PARA MANUTENÇÃO DAS INSTALAÇÕES DO CAMPUS .",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 294.96,
       "valorParcela": 294.96,
       "valorGlobal": 294.96,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-03-12T11:53:05",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000103/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -357,6 +357,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -415,21 +416,20 @@
       "processo": "23350.000105/2025-51",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 1,
-      "numeroControlePNCP": "10635424000186-2-000104/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "EMPENHO PARA ATENDER DESPESA COM AQUISIÇÃO DE MATERIAIS DE CONSTRUÇÃO PARA MANUTENÇÃO DAS INSTALAÇÕES DO CAMPUS .",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 3171.55,
       "valorParcela": 3171.55,
       "valorGlobal": 3171.55,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-03-12T11:53:04",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000104/2025",
       "codigoPaisFornecedor": "BRA",
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -597,6 +597,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -655,21 +656,20 @@
       "processo": "23350.000105/2025-51",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 1,
-      "numeroControlePNCP": "10635424000186-2-000105/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "EMPENHO PARA ATENDER DESPESA COM AQUISIÇÃO DE MATERIAIS DE CONSTRUÇÃO PARA MANUTENÇÃO DAS INSTALAÇÕES DO CAMPUS *ITEM 191 - 20 LATAS DA COR CINZA CHUMBO. *ITEM 197 - 05 LATAS DA COR BRANCA E 05 LATAS DA COR CINZA. *ITEM 200- 10 LATAS DA COR CINZA CHUMBO.",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 5486.0,
       "valorParcela": 5486.0,
       "valorGlobal": 5486.0,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-03-12T11:53:05",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000105/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -757,6 +757,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -815,21 +816,20 @@
       "processo": "23351.001542/2025-81",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 1,
-      "numeroControlePNCP": "10635424000186-2-000133/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "AQUISIÇÃO DE MATERIAIS PARA MANUTENÇÃO DE BENS MÓVEIS E IMÓVEIS PARA O IFC CAMPUS CONCORDIA. PE 90065/2024. SOLICITAÇÃO DE EMPENHO 23351.001717/2025-51. SETOR REQUISITANTE: INFRAESTRUTURA. SERVIDOR REQUISITANTE: GIOVANI BAPTISTA GIODA.",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 3596.0,
       "valorParcela": 3596.0,
       "valorGlobal": 3596.0,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-03-14T16:13:34",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000133/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -909,6 +909,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -969,21 +970,20 @@
       "processo": "23473.000712/2025-24",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
-      "numeroControlePNCP": "10635424000186-2-000786/2026",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": false,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "EMPENHO PARA AQUISIÇÃO DE MATERIAIS PARA A INFRAESTRUTURA DO IFC-CAMPUS BLUMENAU. PE 90065/2024. SOLICITANTE: VINÍCIUS FERNANDES BOLZAN.ADESÃO 024/2025.",
+      "temRemanejamento": false,
+      "emendaParlamentar": null,
       "valorInicial": 845.6,
       "valorParcela": 845.6,
       "valorGlobal": 845.6,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-06-24T06:56:40",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000786/2026",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000343/2024-000025",
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -1078,6 +1078,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -1136,21 +1137,20 @@
       "processo": "23350.000105/2025-51",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 1,
-      "numeroControlePNCP": "10635424000186-2-000215/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "EMPENHO PARA ATENDER DESPESA COM AQUISIÇÃO DE MATERIAIS DE CONSTRUÇÃO PARA MANUTENÇÃO DAS INSTALAÇÕES DO CAMPUS .",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 5297.5,
       "valorParcela": 5297.5,
       "valorGlobal": 5297.5,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-04-07T09:44:24",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000215/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -1230,6 +1230,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -1288,21 +1289,20 @@
       "processo": "23351.001542/2025-81",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 1,
-      "numeroControlePNCP": "10635424000186-2-000137/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "AQUISIÇÃO DE MATERIAIS PARA MANUTENÇÃO DE BENS MÓVEIS E IMÓVEIS PARA O IFC CAMPUS CONCORDIA. PE 90065/2024. SOLICITAÇÃO DE EMPENHO 23351.001717/2025-51. SETOR REQUISITANTE: INFRAESTRUTURA. SERVIDOR REQUISITANTE: GIOVANI BAPTISTA GIODA.",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 140.1,
       "valorParcela": 140.1,
       "valorGlobal": 140.1,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-04-01T14:41:54",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000137/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -1382,6 +1382,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -1440,21 +1441,20 @@
       "processo": "23351.001542/2025-81",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 1,
-      "numeroControlePNCP": "10635424000186-2-000136/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "AQUISIÇÃO DE MATERIAIS PARA MANUTENÇÃO DE BENS MÓVEIS E IMÓVEIS PARA O IFC CAMPUS CONCORDIA. PE 90065/2024. SOLICITAÇÃO DE EMPENHO 23351.001717/2025-51. SETOR REQUISITANTE: INFRAESTRUTURA. SERVIDOR REQUISITANTE: GIOVANI BAPTISTA GIODA.",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 305.1,
       "valorParcela": 305.1,
       "valorGlobal": 305.1,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-04-01T14:43:37",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000136/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -1534,6 +1534,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -1592,21 +1593,20 @@
       "processo": "23350.000105/2025-51",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 1,
-      "numeroControlePNCP": "10635424000186-2-000217/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "EMPENHO PARA ATENDER DESPESA COM AQUISIÇÃO DE MATERIAIS DE CONSTRUÇÃO PARA MANUTENÇÃO DAS INSTALAÇÕES DO CAMPUS",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 4650.0,
       "valorParcela": 4650.0,
       "valorGlobal": 4650.0,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-04-07T13:13:12",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000217/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -1678,6 +1678,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -1724,21 +1725,20 @@
       "processo": "23352.002444/2024-71",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
-      "numeroControlePNCP": "10635424000186-2-000229/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "AQUISIÇÃO DE MATERIAIS DE CONSTRUÇÃO CIVIL PARA O IFC CAMPUS VIDEIRA, ORIUNDO DO PREGÃO ELETRÔNICO Nº 90065/2024, CONFORME MEMORANDO ELETRÔNICO Nº 23/2025 - CIS/VID E DESPACHO DO DAP DE 28/03/2025 (PROCESSO GERENCIADO PELO IFC CAMPUS VIDEIRA,UASG 158379, PROCESSO ORIGINAL Nº 23352.002444/2024-71) .",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 1650.0,
       "valorParcela": 1650.0,
       "valorGlobal": 1650.0,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-04-10T09:50:47",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000229/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -1810,6 +1810,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -1856,21 +1857,20 @@
       "processo": "23352.002444/2024-71",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
-      "numeroControlePNCP": "10635424000186-2-000334/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "AQUISIÇÃO DE MATERIAIS DE CONSTRUÇÃO CIVIL PARA O IFC CAMPUS VIDEIRA, ORIUNDO DO PREGÃO ELETRÔNICO Nº 90065/2024, CONFORME MEMORANDO ELETRÔNICO Nº 23/2025 - CIS/VID E DESPACHO DO DAP DE 28/03/2025 (PROCESSO GERENCIADO PELO IFC CAMPUS VIDEIRA,UASG 158379, PROCESSO ORIGINAL Nº 23352.002444/2024-71) .",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 652.5,
       "valorParcela": 652.5,
       "valorGlobal": 652.5,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-05-05T10:35:49",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000334/2025",
       "codigoPaisFornecedor": "BRA",
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -1974,6 +1974,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -2020,21 +2021,20 @@
       "processo": "23352.002444/2024-71",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
-      "numeroControlePNCP": "10635424000186-2-000233/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "AQUISIÇÃO DE MATERIAIS DE CONSTRUÇÃO CIVIL PARA O IFC CAMPUS VIDEIRA, ORIUNDO DO PREGÃO ELETRÔNICO Nº 90065/2024, CONFORME MEMORANDO ELETRÔNICO Nº 23/2025 - CIS/VID E DESPACHO DO DAP DE 28/03/2025 (PROCESSO GERENCIADO PELO IFC CAMPUS VIDEIRA,UASG 158379, PROCESSO ORIGINAL Nº 23352.002444/2024-71) .",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 1126.0,
       "valorParcela": 1126.0,
       "valorGlobal": 1126.0,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-04-14T09:07:03",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000233/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -2114,6 +2114,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -2160,21 +2161,20 @@
       "processo": "23476.000180/2025-03",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
-      "numeroControlePNCP": "10635424000186-2-000226/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "EMPENHO PARA AQUISIÇÃO DE 10 CAIXAS DE FORRO FIBRA MINERAL, PERFIL RETANGULAR, MEDINDO 625 MM X 625MM X 15MM BRANCO, ADESÃO INTERNA 16/2025 - AQUISIÇÃO DE MATERIAIS DE CONSTRUÇÃO CIVIL, PARA ATENDER ÀS NECESSIDADES DO IFC CAMPUS SÃO FRANCISCO DO SUL - PE 90065/2024, FISCAL DIOGO STUMM .",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 7349.0,
       "valorParcela": 7349.0,
       "valorGlobal": 7349.0,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-04-09T12:39:10",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000226/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -2246,6 +2246,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -2292,21 +2293,20 @@
       "processo": "23352.002444/2024-71",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
-      "numeroControlePNCP": "10635424000186-2-000235/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "AQUISIÇÃO DE MATERIAIS DE CONSTRUÇÃO CIVIL PARA O IFC CAMPUS VIDEIRA, ORIUNDO DO PREGÃO ELETRÔNICO Nº 90065/2024, CONFORME MEMORANDO ELETRÔNICO Nº 23/2025 - CIS/VID E DESPACHO DO DAP DE 28/03/2025 (PROCESSO GERENCIADO PELO IFC CAMPUS VIDEIRA,UASG 158379, PROCESSO ORIGINAL Nº 23352.002444/2024-71) .",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 1344.0,
       "valorParcela": 1344.0,
       "valorGlobal": 1344.0,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-04-14T09:24:59",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000235/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -2378,6 +2378,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -2436,21 +2437,20 @@
       "processo": "23351.001542/2025-81",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 1,
-      "numeroControlePNCP": "10635424000186-2-000134/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "AQUISIÇÃO DE TINTA PARA O IFC CAMPUS CONCORDIA. PE 90065/2024. SOLICITAÇÃO DE EMPENHO 23351.001717/2025-51. SETOR REQUISITANTE: INFRAESTRUTURA. SERVIDOR REQUISITANTE: GIOVANI BAPTISTA GIODA. \r\nAS TINTAS DEVERÃO SER ENVIADAS NAS SEGUINTES CORES: ITEM 196, COR BRANCA, E ITEM 199, COR CINZA CLARO.",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 2055.0,
       "valorParcela": 2055.0,
       "valorGlobal": 2055.0,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-04-14T13:11:11",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000134/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -2530,6 +2530,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -2588,21 +2589,20 @@
       "processo": "23350.000105/2025-51",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 1,
-      "numeroControlePNCP": "10635424000186-2-000106/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "EMPENHO PARA ATENDER DESPESA COM AQUISIÇÃO DE MATERIAIS DE CONSTRUÇÃO PARA MANUTENÇÃO DAS INSTALAÇÕES DO CAMPUS *ITEM 190 - 15 LATAS DA COR CONCRETO E 15 LATAS DA COR AMARELO. *ITEM 201 - 05 LATAS DA COR CINZA.",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 5297.5,
       "valorParcela": 5297.5,
       "valorGlobal": 5297.5,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-04-15T08:22:09",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000106/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -2682,6 +2682,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -2728,21 +2729,20 @@
       "processo": "23352.002444/2024-71",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
-      "numeroControlePNCP": "10635424000186-2-000299/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "AQUISIÇÃO DE MATERIAIS DE CONSTRUÇÃO CIVIL PARA O IFC CAMPUS VIDEIRA, ORIUNDO DO PREGÃO ELETRÔNICO Nº 90065/2024, CONFORME MEMORANDO ELETRÔNICO Nº 23/2025 - CIS/VID E DESPACHO DO DAP DE 28/03/2025 (PROCESSO GERENCIADO PELO IFC CAMPUS VIDEIRA,UASG 158379, PROCESSO ORIGINAL Nº 23352.002444/2024-71) .",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 201.0,
       "valorParcela": 201.0,
       "valorGlobal": 201.0,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-04-24T08:42:35",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000299/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -2814,6 +2814,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -2860,21 +2861,20 @@
       "processo": "23352.002444/2024-71",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
-      "numeroControlePNCP": "10635424000186-2-000300/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "AQUISIÇÃO DE MATERIAIS DE CONSTRUÇÃO CIVIL PARA O IFC CAMPUS VIDEIRA, ORIUNDO DO PREGÃO ELETRÔNICO Nº 90065/2024, CONFORME MEMORANDO ELETRÔNICO Nº 23/2025 - CIS/VID E DESPACHO DO DAP DE 28/03/2025 (PROCESSO GERENCIADO PELO IFC CAMPUS VIDEIRA,UASG 158379, PROCESSO ORIGINAL Nº 23352.002444/2024-71) .",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 1989.5,
       "valorParcela": 1989.5,
       "valorGlobal": 1989.5,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-04-24T08:42:35",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000300/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -2954,6 +2954,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -3012,21 +3013,20 @@
       "processo": "23351.001542/2025-81",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 1,
-      "numeroControlePNCP": "10635424000186-2-000132/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "AQUISIÇÃO DE MATERIAIS PARA MANUTENÇÃO DE BENS MÓVEIS E IMÓVEIS PARA O IFC CAMPUS CONCORDIA. PE 90065/2024. SOLICITAÇÃO DE EMPENHO 23351.001717/2025-51. SETOR REQUISITANTE: INFRAESTRUTURA. SERVIDOR REQUISITANTE: GIOVANI BAPTISTA GIODA.",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 446.35,
       "valorParcela": 446.35,
       "valorGlobal": 446.35,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-04-29T10:13:17",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000132/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -3130,6 +3130,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -3188,21 +3189,20 @@
       "processo": "23351.001542/2025-81",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 1,
-      "numeroControlePNCP": "10635424000186-2-000139/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "AQUISIÇÃO DE TINTA  PARA O IFC CAMPUS CONCORDIA. PE 90065/2024. SOLICITAÇÃO DE EMPENHO 23351.001717/2025-51. SETOR REQUISITANTE: INFRAESTRUTURA. SERVIDOR REQUISITANTE: GIOVANI BAPTISTA GIODA. \r\nAS TINTAS DEVERÃO SER ENVIADAS CONFORME A SEGUIR: ITEM 193: 03 UN NA COR BRANCO NEVE, 02 NA COR VERDE PANTONE 362C. ITEM 200: 03 UN NA COR VERDE PANTONE 362C E 02 NA COR BRANCA.",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 2799.5,
       "valorParcela": 2799.5,
       "valorGlobal": 2799.5,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-04-29T10:16:44",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000139/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -3282,6 +3282,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -3340,21 +3341,20 @@
       "processo": "23351.001542/2025-81",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 1,
-      "numeroControlePNCP": "10635424000186-2-000138/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "AQUISIÇÃO DE MATERIAIS PARA MANUTENÇÃO DE BENS MÓVEIS E IMÓVEIS PARA O IFC CAMPUS CONCORDIA. PE 90065/2024. SOLICITAÇÃO DE EMPENHO 23351.001717/2025-51. SETOR REQUISITANTE: INFRAESTRUTURA. SERVIDOR REQUISITANTE: GIOVANI BAPTISTA GIODA.",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 3194.25,
       "valorParcela": 3194.25,
       "valorGlobal": 3194.25,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-04-29T10:19:54",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000138/2025",
       "codigoPaisFornecedor": "BRA",
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -3490,6 +3490,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -3548,21 +3549,20 @@
       "processo": "23351.001542/2025-81",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 1,
-      "numeroControlePNCP": "10635424000186-2-000123/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "AQUISIÇÃO DE TINTA PARA O IFC CAMPUS CONCORDIA. PE 90065/2024. SOLICITAÇÃO DE EMPENHO 23351.001717/2025-51. SETOR REQUISITANTE: INFRAESTRUTURA. SERVIDOR REQUISITANTE: GIOVANI BAPTISTA GIODA. \r\nA COR DA TINTA DEVERÁ SER VERDE PANTONE 362C",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 1499.0,
       "valorParcela": 1499.0,
       "valorGlobal": 1499.0,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-04-28T15:45:58",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000123/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -3634,6 +3634,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -3680,21 +3681,20 @@
       "processo": "23352.002444/2024-71",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
-      "numeroControlePNCP": "10635424000186-2-000315/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "AQUISIÇÃO DE MATERIAIS DE CONSTRUÇÃO CIVIL PARA O IFC CAMPUS VIDEIRA, ORIUNDO DO PREGÃO ELETRÔNICO Nº 90065/2024, CONFORME MEMORANDO ELETRÔNICO Nº 23/2025 - CIS/VID E DESPACHO DO DAP DE 28/03/2025 (PROCESSO GERENCIADO PELO IFC CAMPUS VIDEIRA,UASG 158379, PROCESSO ORIGINAL Nº 23352.002444/2024-71) .",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 1550.0,
       "valorParcela": 1550.0,
       "valorGlobal": 1550.0,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-04-25T15:31:53",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000315/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -3766,6 +3766,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -3824,21 +3825,20 @@
       "processo": "23351.001542/2025-81",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 1,
-      "numeroControlePNCP": "10635424000186-2-000140/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "AQUISIÇÃO DE TINTA PARA O IFC CAMPUS CONCORDIA. PE 90065/2024. SOLICITAÇÃO DE EMPENHO 23351.001717/2025-51. SETOR REQUISITANTE: INFRAESTRUTURA. SERVIDOR REQUISITANTE: GIOVANI BAPTISTA GIODA. \r\nAS TINTAS DEVERÃO SER ENVIADAS NAS SEGUINTES DESCRIÇÕES: ITEM 190: 07 LATAS NA COR CINZA, 03 NA COR AZUL, 03 NA COR BRANCA E 02 NA COR AMARELA. ITEM 201: 02 LATAS NA COR CINZA CLARO.",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 2584.0,
       "valorParcela": 2584.0,
       "valorGlobal": 2584.0,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-05-08T11:36:02",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000140/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -3918,6 +3918,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -3964,21 +3965,20 @@
       "processo": "23352.002444/2024-71",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
-      "numeroControlePNCP": "10635424000186-2-000339/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "AQUISIÇÃO DE MATERIAIS DE CONSTRUÇÃO CIVIL PARA O IFC CAMPUS VIDEIRA, ORIUNDO DO PREGÃO ELETRÔNICO Nº 90065/2024, CONFORME MEMORANDO ELETRÔNICO Nº 23/2025 - CIS/VID E DESPACHO DO DAP DE 28/03/2025 (PROCESSO GERENCIADO PELO IFC CAMPUS VIDEIRA,UASG 158379, PROCESSO ORIGINAL Nº 23352.002444/2024-71) .",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 132.76,
       "valorParcela": 132.76,
       "valorGlobal": 132.76,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-05-06T16:04:17",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000339/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -4050,6 +4050,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -4096,21 +4097,20 @@
       "processo": "23352.002444/2024-71",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
-      "numeroControlePNCP": "10635424000186-2-000338/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "AQUISIÇÃO DE MATERIAIS DE CONSTRUÇÃO CIVIL PARA O IFC CAMPUS VIDEIRA, ORIUNDO DO PREGÃO ELETRÔNICO Nº 90065/2024, CONFORME MEMORANDO ELETRÔNICO Nº 23/2025 - CIS/VID E DESPACHO DO DAP DE 28/03/2025 (PROCESSO GERENCIADO PELO IFC CAMPUS VIDEIRA,UASG 158379, PROCESSO ORIGINAL Nº 23352.002444/2024-71) .",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 173.5,
       "valorParcela": 173.5,
       "valorGlobal": 173.5,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-05-06T16:04:17",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000338/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -4206,6 +4206,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -4252,21 +4253,20 @@
       "processo": "23351.001542/2025-81",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
-      "numeroControlePNCP": "10635424000186-2-000296/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "AQUISIÇÃO DE TINTA ACRÍLICA PARA O IFC CAMPUS ABELARDO LUZ. PE 90065/2024. SOLICITAÇÃO DE EMPENHO 23351.002590/2025-97. SETOR REQUISITANTE: CADMIN. SERVIDORA REQUISITANTE: ANA LÚCIA RIBEIRO ESTEVES.",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 1290.0,
       "valorParcela": 1290.0,
       "valorGlobal": 1290.0,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-05-08T15:17:40",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000296/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -4338,6 +4338,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -4398,21 +4399,20 @@
       "processo": "23354.002736/2024-93",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
-      "numeroControlePNCP": "10635424000186-2-002335/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": false,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "EMPENHO PARA AQUISIÇÃO DE MATERIAIS DE CONSTRUÇÃO CIVIL CONFORME ADESÃO INTERNA Nº 62/2024 AO PREGÃO Nº 65/2024 (IFC VIDEIRA) - COMPRA Nº 90065/2024 PARA O CAMPUS SANTA ROSA DO SUL",
+      "temRemanejamento": false,
+      "emendaParlamentar": null,
       "valorInicial": 10464.4,
       "valorParcela": 10464.4,
       "valorGlobal": 10464.4,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-06-24T07:05:28",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-002335/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": "10635424000186-1-000343/2024-000007",
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -4491,6 +4491,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -4537,21 +4538,20 @@
       "processo": "23354.002736/2024-93",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
-      "numeroControlePNCP": "10635424000186-2-002061/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "EMPENHO PARA AQUISIÇÃO DE MATERIAIS DE CONSTRUÇÃO (TINTAS) CONFORME ADESÃO INTERNA Nº 62/2024 AO PREGÃO Nº 65/2024 (IFC VIDEIRA) - COMPRA Nº 90065/2024 PARA O CAMPUS SANTA ROSA DO SUL",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 7561.2,
       "valorParcela": 7561.2,
       "valorGlobal": 7561.2,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2026-02-19T13:38:55",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-002061/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -4631,6 +4631,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -4677,21 +4678,20 @@
       "processo": "23349.001650/2025-01",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
-      "numeroControlePNCP": "10635424000186-2-001242/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "EMPENHO AQUISIÇÃO DE MATERIAIS DE CONSTRUÇÃO CIVIL PARA ATENDER AS NECESSIDADES DO INSTITUTO FEDERAL CATARINENSE CAMPUS ARAQUARI. ADESAO INTERNA N. 54/2025. PREGAO N. 90065/2024. PROCESSO N. 23349.001650/2025-01. SETOR REQUISITANTE: COORD. DE INFRAESTRUTURA E COTRATOS. FISCAIS: JOVERCI A. P. E TIAGO J. B.",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 3267.0,
       "valorParcela": 3267.0,
       "valorGlobal": 3267.0,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-10-23T15:01:00",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-001242/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -4771,6 +4771,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -4817,21 +4818,20 @@
       "processo": "23351.001542/2025-81",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
-      "numeroControlePNCP": "10635424000186-2-000743/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "AQUISIÇÃO DE MATERIAIS PARA MANUTENÇÃO PARA O IFC CAMPUS CONCÓRDIA. PE 90065/2024. SOLICITAÇÃO DE EMPENHO 23351.004886/2025-42. SETOR REQUISITANTE: INFRAESTRUTURA. SERVIDOR SOLICITANTE: GIOVANI BAPTISTA GIODA.",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 4828.0,
       "valorParcela": 4828.0,
       "valorGlobal": 4828.0,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-10-24T09:14:38",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000743/2025",
       "codigoPaisFornecedor": "BRA",
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -4927,6 +4927,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -4973,21 +4974,20 @@
       "processo": "23352.002444/2024-71",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
-      "numeroControlePNCP": "10635424000186-2-000372/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "AQUISIÇÃO DE MATERIAIS DE CONSTRUÇÃO CIVIL PARA O IFC CAMPUS VIDEIRA, ORIUNDO DO PREGÃO ELETRÔNICO Nº 90065/2024, CONFORME MEMORANDO ELETRÔNICO Nº 23/2025 - CIS/VID E DESPACHO DO DAP DE 28/03/2025 (PROCESSO GERENCIADO PELO IFC CAMPUS VIDEIRA,UASG 158379, PROCESSO ORIGINAL Nº 23352.002444/2024-71) .",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 640.0,
       "valorParcela": 640.0,
       "valorGlobal": 640.0,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-05-12T15:09:43",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000372/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -5059,6 +5059,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -5105,21 +5106,20 @@
       "processo": "23352.002444/2024-71",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
-      "numeroControlePNCP": "10635424000186-2-000371/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "AQUISIÇÃO DE MATERIAIS DE CONSTRUÇÃO CIVIL PARA O IFC CAMPUS VIDEIRA, ORIUNDO DO PREGÃO ELETRÔNICO Nº 90065/2024, CONFORME MEMORANDO ELETRÔNICO Nº 23/2025 - CIS/VID E DESPACHO DO DAP DE 28/03/2025 (PROCESSO GERENCIADO PELO IFC CAMPUS VIDEIRA,UASG 158379, PROCESSO ORIGINAL Nº 23352.002444/2024-71) .",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 69.96,
       "valorParcela": 69.96,
       "valorGlobal": 69.96,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-05-12T15:09:43",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000371/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -5191,6 +5191,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -5237,21 +5238,20 @@
       "processo": "23352.002444/2024-71",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
-      "numeroControlePNCP": "10635424000186-2-000420/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "AQUISIÇÃO DE MATERIAIS DE CONSTRUÇÃO CIVIL PARA O IFC CAMPUS VIDEIRA, ORIUNDO DO PREGÃO ELETRÔNICO Nº 90065/2024, CONFORME MEMORANDO ELETRÔNICO Nº 23/2025 - CIS/VID E DESPACHO DO DAP DE 28/03/2025 (PROCESSO GERENCIADO PELO IFC CAMPUS VIDEIRA,UASG 158379, PROCESSO ORIGINAL Nº 23352.002444/2024-71) .",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 552.0,
       "valorParcela": 552.0,
       "valorGlobal": 552.0,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-05-27T09:27:00",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000420/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -5323,6 +5323,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -5369,21 +5370,20 @@
       "processo": "23354.002736/2024-93",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
-      "numeroControlePNCP": "10635424000186-2-000423/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "EMPENHO PARA AQUISIÇÃO DE MATERIAIS DE CONSTRUÇÃO CONFORME ADESÃO Nº 62/2024 AO PREGÃO Nº 65/2024 (IFC VIDEIRA) - COMPRA 90065/2024 PARA O CAMPUS SANTA ROSA DO SUL",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 835.7,
       "valorParcela": 835.7,
       "valorGlobal": 835.7,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-05-27T20:08:10",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000423/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -5463,6 +5463,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -5509,21 +5510,20 @@
       "processo": "23352.002444/2024-71",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
-      "numeroControlePNCP": "10635424000186-2-000442/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "AQUISIÇÃO DE MATERIAIS DE CONSTRUÇÃO CIVIL PARA O IFC CAMPUS VIDEIRA, ORIUNDO DO PREGÃO ELETRÔNICO Nº 90065/2024, CONFORME MEMORANDO ELETRÔNICO Nº 23/2025 - CIS/VID E DESPACHO DO DAP DE 28/03/2025 (PROCESSO GERENCIADO PELO IFC CAMPUS VIDEIRA,UASG 158379, PROCESSO ORIGINAL Nº 23352.002444/2024-71) .",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 223.0,
       "valorParcela": 223.0,
       "valorGlobal": 223.0,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-05-30T08:33:19",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000442/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -5595,6 +5595,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -5641,21 +5642,20 @@
       "processo": "23473.000712-2025-24",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
-      "numeroControlePNCP": "10635424000186-2-000386/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "AQUISIÇÃO  DE MATERIAIS DE CONSTRUÇÃO CIVIL PARA ATENDER AS NECESSIDADES DO INSTITUTO FEDERAL CATARINENSE CAMPUS BLUMENAU. ADESÃO 024/2025. SOLICITANTE INFRAESTRUTURA",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 1389.0,
       "valorParcela": 1389.0,
       "valorGlobal": 1389.0,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-05-16T13:33:12",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000386/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -5727,6 +5727,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -5773,21 +5774,20 @@
       "processo": "23473.000712-2025-24",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
-      "numeroControlePNCP": "10635424000186-2-000394/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "AQUISIÇÃO  DE MATERIAIS DE CONSTRUÇÃO CIVIL PARA ATENDER AS NECESSIDADES DO INSTITUTO FEDERAL CATARINENSE CAMPUS BLUMENAU. ADESÃO 024/2025. SOLICITANTE INFRAESTRUTURA",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 34.98,
       "valorParcela": 34.98,
       "valorGlobal": 34.98,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-05-19T10:38:08",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000394/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -5859,6 +5859,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -5905,21 +5906,20 @@
       "processo": "23352.002444/2024-71",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
-      "numeroControlePNCP": "10635424000186-2-000395/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "AQUISIÇÃO DE MATERIAIS DE CONSTRUÇÃO CIVIL PARA O IFC CAMPUS VIDEIRA, ORIUNDO DO PREGÃO ELETRÔNICO Nº 90065/2024, CONFORME MEMORANDO ELETRÔNICO Nº 23/2025 - CIS/VID E DESPACHO DO DAP DE 28/03/2025 (PROCESSO GERENCIADO PELO IFC CAMPUS VIDEIRA,UASG 158379, PROCESSO ORIGINAL Nº 23352.002444/2024-71) .",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 1806.0,
       "valorParcela": 1806.0,
       "valorGlobal": 1806.0,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-05-20T08:59:15",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000395/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -5999,6 +5999,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -6045,21 +6046,20 @@
       "processo": "23352.002444/2024-71",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
-      "numeroControlePNCP": "10635424000186-2-000396/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "AQUISIÇÃO DE MATERIAIS DE CONSTRUÇÃO CIVIL PARA O IFC CAMPUS VIDEIRA, ORIUNDO DO PREGÃO ELETRÔNICO Nº 90065/2024, CONFORME MEMORANDO ELETRÔNICO Nº 23/2025 - CIS/VID E DESPACHO DO DAP DE 28/03/2025 (PROCESSO GERENCIADO PELO IFC CAMPUS VIDEIRA,UASG 158379, PROCESSO ORIGINAL Nº 23352.002444/2024-71) .",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 106.5,
       "valorParcela": 106.5,
       "valorGlobal": 106.5,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-05-20T08:59:15",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000396/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -6131,6 +6131,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -6177,21 +6178,20 @@
       "processo": "23354.002736/2024-93",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
-      "numeroControlePNCP": "10635424000186-2-000408/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "EMPENHO PARA  AQUISIÇÃO DE TINTAS CONFORME ADESÃO INTERNA Nº 62/2024 AO PREGÃO Nº 65/2024 - COMPRA 90065/2024 (CAMPUS GERENCIADOR VIDEIRA) PARA O CAMPUS SANTA ROSA DO SUL.",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 1693.4,
       "valorParcela": 1693.4,
       "valorGlobal": 1693.4,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-05-22T11:16:14",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000408/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -6271,6 +6271,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -6317,21 +6318,20 @@
       "processo": "23354.002736/2024-93",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
-      "numeroControlePNCP": "10635424000186-2-000409/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "EMPENHO PARA AQUISIÇÃO DE MATERIAIS DE CONSTRUÇÃO CONFORME ADESÃO Nº 62/2024 AO PREGÃO Nº 65/2024 (IFC VIDEIRA) COMPRA 90064/2024 PARA O CAMPUS SANTA ROSA DO SUL",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 10677.2,
       "valorParcela": 10677.2,
       "valorGlobal": 10677.2,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-06-09T14:27:09",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000409/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -6427,6 +6427,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -6473,21 +6474,20 @@
       "processo": "23354.002736/2024-93",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
-      "numeroControlePNCP": "10635424000186-2-000899/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "EMPENHO PARA AQUISIÇÃO DE MATERIAIS DE CONSTRUÇÃO CIVIL CONFORME ADESÃO INTERNA Nº 62/2024 AO PREGÃO Nº 65/2024 (IFC VIDEIRA) - COMPRA 90065/2024 PARA O CAMPUS SOMBRIO.",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 150.93,
       "valorParcela": 150.93,
       "valorGlobal": 150.93,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-08-26T14:28:19",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000899/2025",
       "codigoPaisFornecedor": "BRA",
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -6575,6 +6575,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -6621,21 +6622,20 @@
       "processo": "23352.002444/2024-71",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
-      "numeroControlePNCP": "10635424000186-2-000515/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "AQUISIÇÃO DE MATERIAIS DE CONSTRUÇÃO CIVIL PARA O IFC CAMPUS VIDEIRA, ORIUNDO DO PREGÃO ELETRÔNICO Nº 90065/2024, CONFORME MEMORANDO ELETRÔNICO Nº 23/2025 - CIS/VID E DESPACHO DO DAP DE 28/03/2025 (PROCESSO GERENCIADO PELO IFC CAMPUS VIDEIRA,UASG 158379, PROCESSO ORIGINAL Nº 23352.002444/2024-71) .",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 353.0,
       "valorParcela": 353.0,
       "valorGlobal": 353.0,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-06-13T16:52:06",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000515/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -6707,6 +6707,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -6753,21 +6754,20 @@
       "processo": "23354.002736/2024-93",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
-      "numeroControlePNCP": "10635424000186-2-000922/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "EMPENHO PARA AQUISIÇÃO DE MATERIAIS DE CONSTRUÇÃO (MADEIRAS - TÁBUA) CONFORME ADESÃO INTERNA Nº 62/2024 AO PREGÃO Nº 65/2024 - COMPRA 90065/2024 PARA O CAMPUS SANTA ROSA DO SUL.",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 1617.0,
       "valorParcela": 1617.0,
       "valorGlobal": 1617.0,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-08-28T13:46:19",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000922/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -6839,6 +6839,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -6885,21 +6886,20 @@
       "processo": "23352.002444/2024-71",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
-      "numeroControlePNCP": "10635424000186-2-000518/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "AQUISIÇÃO DE MATERIAIS DE CONSTRUÇÃO CIVIL PARA O IFC CAMPUS VIDEIRA, ORIUNDO DO PREGÃO ELETRÔNICO N 90065/2024, CONFORME MEMORANDO ELETRÔNICO NO 23/2025 - CIS/VID E DESPACHO DO\r\nDAP DE 28/03/2025 (PROCESSO GERENCIADO PELO IFC CAMPUS VIDEIRA,UASG 158379, PROCESSO\r\nORIGINAL NO 23352.002444/2024-71) .",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 151.4,
       "valorParcela": 151.4,
       "valorGlobal": 151.4,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-06-17T08:52:06",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000518/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -6979,6 +6979,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -7025,21 +7026,20 @@
       "processo": "23354.002736/2024-93",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
-      "numeroControlePNCP": "10635424000186-2-000947/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "EMPENHO PARA AQUISIÇÃO DE MATERIAS DE CONSTRUÇÃO CIVIL CONFORME ADESÃO INTERNA Nº 62/2024 AO PREGÃO Nº 65/2024 (IFC VIDEIRA) - COMPRA 90065/2024 PARA O CAMPUS SOMBRIO.",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 222.95,
       "valorParcela": 222.95,
       "valorGlobal": 222.95,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-09-04T13:49:42",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000947/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -7111,6 +7111,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -7157,21 +7158,20 @@
       "processo": "23473.000712-2025-24",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
-      "numeroControlePNCP": "10635424000186-2-000552/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "AQUISIÇÃO  DE MATERIAIS DE CONSTRUÇÃO CIVIL PARA ATENDER AS NECESSIDADES DO INSTITUTO FEDERAL CATARINENSE CAMPUS BLUMENAU. ADESÃO 024/2025. SOLICITANTE INFRAESTRUTURA",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 4946.0,
       "valorParcela": 4946.0,
       "valorGlobal": 4946.0,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-06-26T08:54:45",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000552/2025",
       "codigoPaisFornecedor": "BRA",
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -7267,6 +7267,7 @@
       }
     },
     {
+      "usuarioNome": "Contratos.gov.br",
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -7313,21 +7314,20 @@
       "processo": "23354.002736/2024-93",
       "tipoPessoaSubContratada": null,
       "numeroRetificacao": 0,
-      "numeroControlePNCP": "10635424000186-2-000564/2025",
-      "urlCipi": null,
       "receita": false,
       "numeroParcelas": 1,
-      "temRemanejamento": null,
-      "emendaParlamentar": null,
       "nomeFornecedorSubContratado": null,
       "objetoContrato": "EMPENHO PARA AQUISIÇÃO DE MATERIAIS DE CONSTRUÇÃO (CILINDRO) CONFORME ADESÃO Nº 62/2024 AO PREGÃO Nº 65/2024 (IFC VIDEIRA) - COMPRA Nº 90065/2024 PARA O CAMPUS SANTA ROSA DO SUL",
+      "temRemanejamento": null,
+      "emendaParlamentar": null,
       "valorInicial": 676.0,
       "valorParcela": 676.0,
       "valorGlobal": 676.0,
       "valorAcumulado": null,
       "dataAtualizacaoGlobal": "2025-06-27T15:41:03",
+      "urlCipi": null,
       "identificadorCipi": null,
-      "usuarioNome": "Contratos.gov.br",
+      "numeroControlePNCP": "10635424000186-2-000564/2025",
       "codigoPaisFornecedor": null,
       "numeroControlePncpAta": null,
       "numeroControlePncpCompra": "10635424000186-1-000343/2024",
@@ -7399,13 +7399,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-10-06",
-      "dataAtualizacao": "2025-10-28T09:32:57",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -7424,12 +7417,19 @@
       },
       "dataAssinatura": "2025-10-06",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-10-06",
+      "dataAtualizacao": "2025-10-28T09:32:57",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "ELIZANE DA ROSA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-10-28T09:32:57",
       "unidadeOrgao": {
         "codigoUnidade": "152663",
@@ -7531,13 +7531,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-10-22",
-      "dataAtualizacao": "2025-10-28T10:03:21",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -7556,12 +7549,19 @@
       },
       "dataAssinatura": "2025-10-22",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-10-22",
+      "dataAtualizacao": "2025-10-28T10:03:21",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "JV COMERCIO DE MATERIAIS ELETRICOS E DECORACOES LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-10-28T10:03:21",
       "unidadeOrgao": {
         "codigoUnidade": "158461",
@@ -7671,13 +7671,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-07-23",
-      "dataAtualizacao": "2025-09-09T16:22:30",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -7696,12 +7689,19 @@
       },
       "dataAssinatura": "2025-07-23",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-07-23",
+      "dataAtualizacao": "2025-09-09T16:22:30",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "SENTINELA DO VALE COMERCIAL LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-09-09T16:22:30",
       "unidadeOrgao": {
         "codigoUnidade": "158462",
@@ -7811,13 +7811,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-06-11",
-      "dataAtualizacao": "2025-07-01T14:28:13",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -7836,12 +7829,19 @@
       },
       "dataAssinatura": "2025-06-11",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-06-11",
+      "dataAtualizacao": "2025-07-01T14:28:13",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "ELIZANE DA ROSA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-07-01T14:28:13",
       "unidadeOrgao": {
         "codigoUnidade": "158459",
@@ -7943,13 +7943,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-10-06",
-      "dataAtualizacao": "2025-10-28T10:36:46",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -7968,12 +7961,19 @@
       },
       "dataAssinatura": "2025-10-06",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-10-06",
+      "dataAtualizacao": "2025-10-28T10:36:46",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "CINCA COMERCIO VAREJISTA E ATACADISTA DE FERRAMENTAS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-10-28T10:36:46",
       "unidadeOrgao": {
         "codigoUnidade": "152663",
@@ -8075,13 +8075,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-03-28",
-      "dataAtualizacao": "2025-07-02T14:07:49",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -8100,12 +8093,19 @@
       },
       "dataAssinatura": "2025-03-28",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-03-28",
+      "dataAtualizacao": "2025-07-02T14:07:49",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "G3 COMERCIAL LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-07-02T14:07:49",
       "unidadeOrgao": {
         "codigoUnidade": "158379",
@@ -8231,13 +8231,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-06-12",
-      "dataAtualizacao": "2025-07-02T14:17:29",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -8256,12 +8249,19 @@
       },
       "dataAssinatura": "2025-06-12",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-06-12",
+      "dataAtualizacao": "2025-07-02T14:17:29",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "G3 COMERCIAL LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-07-02T14:17:29",
       "unidadeOrgao": {
         "codigoUnidade": "158379",
@@ -8363,13 +8363,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-07-23",
-      "dataAtualizacao": "2025-09-15T18:15:33",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -8388,12 +8381,19 @@
       },
       "dataAssinatura": "2025-07-23",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-07-23",
+      "dataAtualizacao": "2025-09-15T18:15:33",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "VIDOR & HEINECKE REPRESENTACOES COMERCIAIS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-09-15T18:15:33",
       "unidadeOrgao": {
         "codigoUnidade": "158462",
@@ -8495,13 +8495,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-06-11",
-      "dataAtualizacao": "2025-07-03T09:24:32",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -8520,12 +8513,19 @@
       },
       "dataAssinatura": "2025-06-11",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-06-11",
+      "dataAtualizacao": "2025-07-03T09:24:32",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "CORREA COMERCIO E REPRESENTACOES LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-07-03T09:24:32",
       "unidadeOrgao": {
         "codigoUnidade": "158459",
@@ -8627,13 +8627,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-07-23",
-      "dataAtualizacao": "2025-09-11T09:53:36",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -8652,12 +8645,19 @@
       },
       "dataAssinatura": "2025-07-23",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-07-23",
+      "dataAtualizacao": "2025-09-11T09:53:36",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "IMPERMEABILIZA COMERCIO DE TINTAS LTDA.",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-09-11T09:53:36",
       "unidadeOrgao": {
         "codigoUnidade": "158462",
@@ -8759,18 +8759,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-03-12",
-      "dataAtualizacao": "2025-03-14T16:13:51",
-      "orgaoSubRogado": {
-        "cnpj": "10635424000186",
-        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE",
-        "esferaId": "F",
-        "poderId": "E"
-      },
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -8789,12 +8777,24 @@
       },
       "dataAssinatura": "2025-03-12",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-03-12",
+      "dataAtualizacao": "2025-03-14T16:13:51",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "G3 REVESTIMENTOS E ACABAMENTOS PARA CONSTRUCAO CIVIL LTDA",
+      "orgaoSubRogado": {
+        "cnpj": "10635424000186",
+        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE",
+        "esferaId": "F",
+        "poderId": "E"
+      },
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-03-14T16:04:13",
       "unidadeOrgao": {
         "codigoUnidade": "158461",
@@ -8943,13 +8943,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-07-23",
-      "dataAtualizacao": "2025-09-11T10:44:03",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -8968,12 +8961,19 @@
       },
       "dataAssinatura": "2025-07-23",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-07-23",
+      "dataAtualizacao": "2025-09-11T10:44:03",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "ELIZANE DA ROSA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-09-11T10:44:03",
       "unidadeOrgao": {
         "codigoUnidade": "158462",
@@ -9075,13 +9075,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-04-10",
-      "dataAtualizacao": "2025-07-10T10:45:09",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -9100,12 +9093,19 @@
       },
       "dataAssinatura": "2025-04-10",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-04-10",
+      "dataAtualizacao": "2025-07-10T10:45:09",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "MARCELO SOUSA GONCALVES",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-07-10T10:45:09",
       "unidadeOrgao": {
         "codigoUnidade": "158462",
@@ -9231,13 +9231,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-06-11",
-      "dataAtualizacao": "2025-07-10T17:09:28",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -9256,12 +9249,19 @@
       },
       "dataAssinatura": "2025-06-11",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-06-11",
+      "dataAtualizacao": "2025-07-10T17:09:28",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "LS ELETRICA E AUTOMACAO LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-07-10T17:09:28",
       "unidadeOrgao": {
         "codigoUnidade": "158459",
@@ -9363,13 +9363,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-06-11",
-      "dataAtualizacao": "2025-07-10T17:39:05",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -9388,12 +9381,19 @@
       },
       "dataAssinatura": "2025-06-11",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-06-11",
+      "dataAtualizacao": "2025-07-10T17:39:05",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "G3 COMERCIAL LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-07-10T17:39:05",
       "unidadeOrgao": {
         "codigoUnidade": "158459",
@@ -9495,13 +9495,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-06-11",
-      "dataAtualizacao": "2025-07-14T10:03:26",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -9520,12 +9513,19 @@
       },
       "dataAssinatura": "2025-06-11",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-06-11",
+      "dataAtualizacao": "2025-07-14T10:03:26",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "TECA TECNOLOGIA E COMERCIO LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-07-14T10:03:26",
       "unidadeOrgao": {
         "codigoUnidade": "158459",
@@ -9627,13 +9627,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-06-11",
-      "dataAtualizacao": "2025-07-17T14:46:22",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -9652,12 +9645,19 @@
       },
       "dataAssinatura": "2025-06-11",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-06-11",
+      "dataAtualizacao": "2025-07-17T14:46:22",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "VIDOR & HEINECKE REPRESENTACOES COMERCIAIS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-07-17T14:46:22",
       "unidadeOrgao": {
         "codigoUnidade": "158459",
@@ -9767,13 +9767,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-06-11",
-      "dataAtualizacao": "2025-07-17T15:53:14",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -9792,12 +9785,19 @@
       },
       "dataAssinatura": "2025-06-11",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-06-11",
+      "dataAtualizacao": "2025-07-17T15:53:14",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "RAQUEL KUSTER DE OLIVEIRA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-07-17T15:53:14",
       "unidadeOrgao": {
         "codigoUnidade": "158459",
@@ -9939,13 +9939,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-06-11",
-      "dataAtualizacao": "2025-07-18T15:35:50",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -9964,12 +9957,19 @@
       },
       "dataAssinatura": "2025-06-11",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-06-11",
+      "dataAtualizacao": "2025-07-18T15:35:50",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "MARCELO SOUSA GONCALVES",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-07-18T15:35:50",
       "unidadeOrgao": {
         "codigoUnidade": "158459",
@@ -10095,13 +10095,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-06-11",
-      "dataAtualizacao": "2025-07-21T09:41:07",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -10120,12 +10113,19 @@
       },
       "dataAssinatura": "2025-06-11",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-06-11",
+      "dataAtualizacao": "2025-07-21T09:41:07",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "45.697.163 FABIANO LUIZ PINHEIRO JUNIOR",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-07-21T09:41:07",
       "unidadeOrgao": {
         "codigoUnidade": "158459",
@@ -10227,13 +10227,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-07-23",
-      "dataAtualizacao": "2025-09-26T15:55:07",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -10252,12 +10245,19 @@
       },
       "dataAssinatura": "2025-07-23",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-07-23",
+      "dataAtualizacao": "2025-09-26T15:55:07",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "LS MATERIAIS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-09-26T15:55:07",
       "unidadeOrgao": {
         "codigoUnidade": "158462",
@@ -10375,13 +10375,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-09-22",
-      "dataAtualizacao": "2025-10-06T15:21:23",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -10400,12 +10393,19 @@
       },
       "dataAssinatura": "2025-09-22",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-09-22",
+      "dataAtualizacao": "2025-10-06T15:21:23",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "JV COMERCIO DE MATERIAIS ELETRICOS E DECORACOES LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-10-06T15:21:23",
       "unidadeOrgao": {
         "codigoUnidade": "158379",
@@ -10507,13 +10507,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-07-23",
-      "dataAtualizacao": "2025-10-07T15:52:05",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -10532,12 +10525,19 @@
       },
       "dataAssinatura": "2025-07-23",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-07-23",
+      "dataAtualizacao": "2025-10-07T15:52:05",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "RAQUEL KUSTER DE OLIVEIRA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-10-07T15:52:05",
       "unidadeOrgao": {
         "codigoUnidade": "158462",
@@ -10663,13 +10663,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-12-15",
-      "dataAtualizacao": "2026-02-24T10:30:53",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -10688,12 +10681,19 @@
       },
       "dataAssinatura": "2025-12-15",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-12-15",
+      "dataAtualizacao": "2026-02-24T10:30:53",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "IMPERMEABILIZA COMERCIO DE TINTAS LTDA.",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-02-24T10:30:53",
       "unidadeOrgao": {
         "codigoUnidade": "158462",
@@ -10811,13 +10811,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-07-23",
-      "dataAtualizacao": "2025-10-07T16:36:54",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -10836,12 +10829,19 @@
       },
       "dataAssinatura": "2025-07-23",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-07-23",
+      "dataAtualizacao": "2025-10-07T16:36:54",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "45.697.163 FABIANO LUIZ PINHEIRO JUNIOR",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-10-07T16:36:54",
       "unidadeOrgao": {
         "codigoUnidade": "158462",
@@ -10943,13 +10943,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-06-11",
-      "dataAtualizacao": "2025-07-30T14:38:15",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -10968,12 +10961,19 @@
       },
       "dataAssinatura": "2025-06-11",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-06-11",
+      "dataAtualizacao": "2025-07-30T14:38:15",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "FOCO MATERIAIS ELETRICOS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-07-30T14:38:15",
       "unidadeOrgao": {
         "codigoUnidade": "158459",
@@ -11083,13 +11083,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-06-11",
-      "dataAtualizacao": "2025-07-30T17:41:06",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -11108,12 +11101,19 @@
       },
       "dataAssinatura": "2025-06-11",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-06-11",
+      "dataAtualizacao": "2025-07-30T17:41:06",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "48.156.453 MICHELE NUNES DE SOUZA ALMEIDA ANDRADE",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-07-30T17:41:06",
       "unidadeOrgao": {
         "codigoUnidade": "158459",
@@ -11231,13 +11231,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-09-17",
-      "dataAtualizacao": "2025-10-13T16:41:17",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -11256,12 +11249,19 @@
       },
       "dataAssinatura": "2025-09-17",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-09-17",
+      "dataAtualizacao": "2025-10-13T16:41:17",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "CINCA COMERCIO VAREJISTA E ATACADISTA DE FERRAMENTAS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-10-13T16:41:17",
       "unidadeOrgao": {
         "codigoUnidade": "158459",
@@ -11403,13 +11403,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-09-17",
-      "dataAtualizacao": "2025-10-13T11:00:57",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -11428,12 +11421,19 @@
       },
       "dataAssinatura": "2025-09-17",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-09-17",
+      "dataAtualizacao": "2025-10-13T11:00:57",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "ABREU, MARTINS & CIA LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-10-13T11:00:57",
       "unidadeOrgao": {
         "codigoUnidade": "158459",
@@ -11543,13 +11543,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-09-17",
-      "dataAtualizacao": "2025-10-13T11:23:25",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -11568,12 +11561,19 @@
       },
       "dataAssinatura": "2025-09-17",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-09-17",
+      "dataAtualizacao": "2025-10-13T11:23:25",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "ABREU, MARTINS & CIA LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-10-13T11:23:25",
       "unidadeOrgao": {
         "codigoUnidade": "158459",
@@ -11675,13 +11675,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-03-31",
-      "dataAtualizacao": "2025-08-04T13:52:25",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -11700,12 +11693,19 @@
       },
       "dataAssinatura": "2025-03-31",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-03-31",
+      "dataAtualizacao": "2025-08-04T13:52:25",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "ROBERTO LEMOS VAZ COMERCIO E SERVICOS",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-08-04T13:52:25",
       "unidadeOrgao": {
         "codigoUnidade": "158379",
@@ -11807,13 +11807,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-07-03",
-      "dataAtualizacao": "2025-10-13T13:45:10",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -11832,12 +11825,19 @@
       },
       "dataAssinatura": "2025-07-03",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-07-03",
+      "dataAtualizacao": "2025-10-13T13:45:10",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "CORTINAS MANCHESTER DECORACOES E COMERCIO EM GERAL LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-10-13T13:45:10",
       "unidadeOrgao": {
         "codigoUnidade": "158459",
@@ -11939,13 +11939,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-09-17",
-      "dataAtualizacao": "2025-10-13T13:45:13",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -11964,12 +11957,19 @@
       },
       "dataAssinatura": "2025-09-17",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-09-17",
+      "dataAtualizacao": "2025-10-13T13:45:13",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "DANIELA TENFEN DISTRIBUIDORA LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-10-13T13:45:13",
       "unidadeOrgao": {
         "codigoUnidade": "158459",
@@ -12071,13 +12071,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-06-11",
-      "dataAtualizacao": "2025-10-13T13:45:08",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -12096,12 +12089,19 @@
       },
       "dataAssinatura": "2025-06-11",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-06-11",
+      "dataAtualizacao": "2025-10-13T13:45:08",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "DF MAQUINAS E FERRAMENTAS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-10-13T13:45:08",
       "unidadeOrgao": {
         "codigoUnidade": "158459",
@@ -12251,13 +12251,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-08-05",
-      "dataAtualizacao": "2025-08-07T14:24:00",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -12276,12 +12269,19 @@
       },
       "dataAssinatura": "2025-08-05",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-08-05",
+      "dataAtualizacao": "2025-08-07T14:24:00",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "FOCO MATERIAIS ELETRICOS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-08-07T14:24:00",
       "unidadeOrgao": {
         "codigoUnidade": "158461",
@@ -12391,13 +12391,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-08-05",
-      "dataAtualizacao": "2025-08-07T14:24:02",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -12416,12 +12409,19 @@
       },
       "dataAssinatura": "2025-08-05",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-08-05",
+      "dataAtualizacao": "2025-08-07T14:24:02",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "G3 COMERCIAL LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-08-07T14:24:02",
       "unidadeOrgao": {
         "codigoUnidade": "158461",
@@ -12571,13 +12571,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-08-05",
-      "dataAtualizacao": "2025-08-07T14:24:07",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -12596,12 +12589,19 @@
       },
       "dataAssinatura": "2025-08-05",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-08-05",
+      "dataAtualizacao": "2025-08-07T14:24:07",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "LS ELETRICA E AUTOMACAO LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-08-07T14:24:07",
       "unidadeOrgao": {
         "codigoUnidade": "158461",
@@ -12711,13 +12711,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-08-05",
-      "dataAtualizacao": "2025-08-07T14:24:09",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -12736,12 +12729,19 @@
       },
       "dataAssinatura": "2025-08-05",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-08-05",
+      "dataAtualizacao": "2025-08-07T14:24:09",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "ELIZANE DA ROSA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-08-07T14:24:09",
       "unidadeOrgao": {
         "codigoUnidade": "158461",
@@ -12843,13 +12843,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-08-05",
-      "dataAtualizacao": "2025-08-07T14:24:12",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -12868,12 +12861,19 @@
       },
       "dataAssinatura": "2025-08-05",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-08-05",
+      "dataAtualizacao": "2025-08-07T14:24:12",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "DANIELA TENFEN DISTRIBUIDORA LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-08-07T14:24:12",
       "unidadeOrgao": {
         "codigoUnidade": "158461",
@@ -12983,18 +12983,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-03-12",
-      "dataAtualizacao": "2025-03-14T16:13:35",
-      "orgaoSubRogado": {
-        "cnpj": "10635424000186",
-        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE",
-        "esferaId": "F",
-        "poderId": "E"
-      },
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -13013,12 +13001,24 @@
       },
       "dataAssinatura": "2025-03-12",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-03-12",
+      "dataAtualizacao": "2025-03-14T16:13:35",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "DANIELA TENFEN DISTRIBUIDORA LTDA",
+      "orgaoSubRogado": {
+        "cnpj": "10635424000186",
+        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE",
+        "esferaId": "F",
+        "poderId": "E"
+      },
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-03-14T16:04:27",
       "unidadeOrgao": {
         "codigoUnidade": "158461",
@@ -13127,13 +13127,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-11-04",
-      "dataAtualizacao": "2025-11-07T09:14:19",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -13152,12 +13145,19 @@
       },
       "dataAssinatura": "2025-11-04",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-11-04",
+      "dataAtualizacao": "2025-11-07T09:14:19",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "A. DONIZETE DA SILVA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-11-07T09:14:19",
       "unidadeOrgao": {
         "codigoUnidade": "158461",
@@ -13267,13 +13267,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-10-24",
-      "dataAtualizacao": "2025-11-07T09:13:52",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -13292,12 +13285,19 @@
       },
       "dataAssinatura": "2025-10-24",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-10-24",
+      "dataAtualizacao": "2025-11-07T09:13:52",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "SENTINELA DO VALE COMERCIAL LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-11-07T09:13:52",
       "unidadeOrgao": {
         "codigoUnidade": "158461",
@@ -13407,13 +13407,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-11-04",
-      "dataAtualizacao": "2025-11-07T09:14:22",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -13432,12 +13425,19 @@
       },
       "dataAssinatura": "2025-11-04",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-11-04",
+      "dataAtualizacao": "2025-11-07T09:14:22",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "ELIZANE DA ROSA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-11-07T09:14:22",
       "unidadeOrgao": {
         "codigoUnidade": "158461",
@@ -13555,13 +13555,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-12-12",
-      "dataAtualizacao": "2026-02-27T08:38:52",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -13580,12 +13573,19 @@
       },
       "dataAssinatura": "2025-12-12",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-12-12",
+      "dataAtualizacao": "2026-02-27T08:38:52",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "SENTINELA DO VALE COMERCIAL LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-02-27T08:38:52",
       "unidadeOrgao": {
         "codigoUnidade": "158462",
@@ -13703,13 +13703,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-12-12",
-      "dataAtualizacao": "2026-02-26T10:19:35",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -13728,12 +13721,19 @@
       },
       "dataAssinatura": "2025-12-12",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-12-12",
+      "dataAtualizacao": "2026-02-26T10:19:35",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "CASA DE TINTAS V.W. LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-02-26T10:19:35",
       "unidadeOrgao": {
         "codigoUnidade": "158462",
@@ -13835,13 +13835,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-12-15",
-      "dataAtualizacao": "2026-02-26T14:50:08",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -13860,12 +13853,19 @@
       },
       "dataAssinatura": "2025-12-15",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-12-15",
+      "dataAtualizacao": "2026-02-26T14:50:08",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "ABREU, MARTINS & CIA LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-02-26T14:50:08",
       "unidadeOrgao": {
         "codigoUnidade": "158462",
@@ -13983,13 +13983,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-10-10",
-      "dataAtualizacao": "2025-11-12T15:55:55",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -14008,12 +14001,19 @@
       },
       "dataAssinatura": "2025-10-10",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-10-10",
+      "dataAtualizacao": "2025-11-12T15:55:55",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "ELIZANE DA ROSA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-11-12T15:55:55",
       "unidadeOrgao": {
         "codigoUnidade": "158462",
@@ -14115,13 +14115,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-12-15",
-      "dataAtualizacao": "2026-03-03T16:23:14",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -14140,12 +14133,19 @@
       },
       "dataAssinatura": "2025-12-15",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-12-15",
+      "dataAtualizacao": "2026-03-03T16:23:14",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "LS MATERIAIS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-03-03T16:23:14",
       "unidadeOrgao": {
         "codigoUnidade": "158462",
@@ -14263,13 +14263,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-02-04",
-      "dataAtualizacao": "2026-03-05T16:17:24",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -14288,12 +14281,19 @@
       },
       "dataAssinatura": "2026-02-04",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-02-04",
+      "dataAtualizacao": "2026-03-05T16:17:24",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "SENTINELA DO VALE COMERCIAL LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-03-05T16:17:24",
       "unidadeOrgao": {
         "codigoUnidade": "152254",
@@ -14395,13 +14395,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-02-04",
-      "dataAtualizacao": "2026-03-06T18:54:05",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -14420,12 +14413,19 @@
       },
       "dataAssinatura": "2026-02-04",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-02-04",
+      "dataAtualizacao": "2026-03-06T18:54:05",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "LS MATERIAIS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-03-06T18:54:05",
       "unidadeOrgao": {
         "codigoUnidade": "152254",
@@ -14535,13 +14535,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-11-04",
-      "dataAtualizacao": "2025-11-07T09:14:24",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -14560,12 +14553,19 @@
       },
       "dataAssinatura": "2025-11-04",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-11-04",
+      "dataAtualizacao": "2025-11-07T09:14:24",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "CINCA COMERCIO VAREJISTA E ATACADISTA DE FERRAMENTAS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-11-07T09:14:24",
       "unidadeOrgao": {
         "codigoUnidade": "158461",
@@ -14675,13 +14675,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-10-10",
-      "dataAtualizacao": "2025-11-21T09:57:16",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -14700,12 +14693,19 @@
       },
       "dataAssinatura": "2025-10-10",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-10-10",
+      "dataAtualizacao": "2025-11-21T09:57:16",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "ABREU, MARTINS & CIA LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-11-21T09:57:16",
       "unidadeOrgao": {
         "codigoUnidade": "158462",
@@ -14815,13 +14815,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-10-10",
-      "dataAtualizacao": "2025-11-24T08:58:04",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -14840,12 +14833,19 @@
       },
       "dataAssinatura": "2025-10-10",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-10-10",
+      "dataAtualizacao": "2025-11-24T08:58:04",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "CINCA COMERCIO VAREJISTA E ATACADISTA DE FERRAMENTAS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-11-24T08:58:04",
       "unidadeOrgao": {
         "codigoUnidade": "158462",
@@ -14979,13 +14979,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-08-29",
-      "dataAtualizacao": "2025-11-25T09:10:21",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -15004,12 +14997,19 @@
       },
       "dataAssinatura": "2025-08-29",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-08-29",
+      "dataAtualizacao": "2025-11-25T09:10:21",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "DANIELA TENFEN DISTRIBUIDORA LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-11-25T09:10:21",
       "unidadeOrgao": {
         "codigoUnidade": "158462",
@@ -15111,13 +15111,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-10-10",
-      "dataAtualizacao": "2025-11-25T09:47:19",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -15136,12 +15129,19 @@
       },
       "dataAssinatura": "2025-10-10",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-10-10",
+      "dataAtualizacao": "2025-11-25T09:47:19",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "DANIELA TENFEN DISTRIBUIDORA LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-11-25T09:47:19",
       "unidadeOrgao": {
         "codigoUnidade": "158462",
@@ -15243,13 +15243,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-10-24",
-      "dataAtualizacao": "2025-11-07T09:13:50",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -15268,12 +15261,19 @@
       },
       "dataAssinatura": "2025-10-24",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-10-24",
+      "dataAtualizacao": "2025-11-07T09:13:50",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "VIDOR & HEINECKE REPRESENTACOES COMERCIAIS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-11-07T09:13:50",
       "unidadeOrgao": {
         "codigoUnidade": "158461",
@@ -15407,13 +15407,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-10-24",
-      "dataAtualizacao": "2025-11-07T09:13:46",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -15432,12 +15425,19 @@
       },
       "dataAssinatura": "2025-10-24",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-10-24",
+      "dataAtualizacao": "2025-11-07T09:13:46",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "RAQUEL KUSTER DE OLIVEIRA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-11-07T09:13:46",
       "unidadeOrgao": {
         "codigoUnidade": "158461",
@@ -15587,13 +15587,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-12-15",
-      "dataAtualizacao": "2026-03-12T09:30:13",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -15612,12 +15605,19 @@
       },
       "dataAssinatura": "2025-12-15",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-12-15",
+      "dataAtualizacao": "2026-03-12T09:30:13",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "FLORESCER SERVICOS DE ENGENHARIA LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-03-12T09:30:13",
       "unidadeOrgao": {
         "codigoUnidade": "158462",
@@ -15719,13 +15719,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-11-25",
-      "dataAtualizacao": "2025-11-28T08:14:48",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -15744,12 +15737,19 @@
       },
       "dataAssinatura": "2025-11-25",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-11-25",
+      "dataAtualizacao": "2025-11-28T08:14:48",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "G3 COMERCIAL LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-11-28T08:14:48",
       "unidadeOrgao": {
         "codigoUnidade": "152253",
@@ -15851,13 +15851,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-10-10",
-      "dataAtualizacao": "2026-03-18T09:53:48",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -15876,12 +15869,19 @@
       },
       "dataAssinatura": "2025-10-10",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-10-10",
+      "dataAtualizacao": "2026-03-18T09:53:48",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "ROBERTO LEMOS VAZ COMERCIO E SERVICOS",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-03-18T09:53:48",
       "unidadeOrgao": {
         "codigoUnidade": "158462",
@@ -15983,13 +15983,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-11-19",
-      "dataAtualizacao": "2025-12-02T10:12:12",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -16008,12 +16001,19 @@
       },
       "dataAssinatura": "2025-11-19",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-11-19",
+      "dataAtualizacao": "2025-12-02T10:12:12",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "DANIELA TENFEN DISTRIBUIDORA LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-12-02T10:12:12",
       "unidadeOrgao": {
         "codigoUnidade": "158461",
@@ -16123,13 +16123,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-11-19",
-      "dataAtualizacao": "2025-12-02T10:12:21",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -16148,12 +16141,19 @@
       },
       "dataAssinatura": "2025-11-19",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-11-19",
+      "dataAtualizacao": "2025-12-02T10:12:21",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "G3 COMERCIAL LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-12-02T10:12:21",
       "unidadeOrgao": {
         "codigoUnidade": "158461",
@@ -16255,13 +16255,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-11-19",
-      "dataAtualizacao": "2025-12-02T10:12:25",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -16280,12 +16273,19 @@
       },
       "dataAssinatura": "2025-11-19",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-11-19",
+      "dataAtualizacao": "2025-12-02T10:12:25",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "DF MAQUINAS E FERRAMENTAS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-12-02T10:12:25",
       "unidadeOrgao": {
         "codigoUnidade": "158461",
@@ -16387,13 +16387,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-12-15",
-      "dataAtualizacao": "2026-03-18T09:38:03",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -16412,12 +16405,19 @@
       },
       "dataAssinatura": "2025-12-15",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-12-15",
+      "dataAtualizacao": "2026-03-18T09:38:03",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "MARCELO SOUSA GONCALVES",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-03-18T09:38:03",
       "unidadeOrgao": {
         "codigoUnidade": "158462",
@@ -16527,13 +16527,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-02-04",
-      "dataAtualizacao": "2026-03-20T10:45:31",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -16552,12 +16545,19 @@
       },
       "dataAssinatura": "2026-02-04",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-02-04",
+      "dataAtualizacao": "2026-03-20T10:45:31",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "G3 COMERCIAL LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-03-20T10:45:31",
       "unidadeOrgao": {
         "codigoUnidade": "152254",
@@ -16659,13 +16659,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2026-02-04",
-      "dataAtualizacao": "2026-03-20T10:57:49",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2026,
       "tipoContrato": {
         "id": 7,
@@ -16684,12 +16677,19 @@
       },
       "dataAssinatura": "2026-02-04",
       "dataVigenciaFim": "2026-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2026-02-04",
+      "dataAtualizacao": "2026-03-20T10:57:49",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "MARCELO SOUSA GONCALVES",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-03-20T10:57:49",
       "unidadeOrgao": {
         "codigoUnidade": "152254",
@@ -16807,13 +16807,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-10-10",
-      "dataAtualizacao": "2025-12-05T10:53:55",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -16832,12 +16825,19 @@
       },
       "dataAssinatura": "2025-10-10",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-10-10",
+      "dataAtualizacao": "2025-12-05T10:53:55",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "MARCELO SOUSA GONCALVES",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-12-05T10:53:55",
       "unidadeOrgao": {
         "codigoUnidade": "158462",
@@ -16947,13 +16947,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-12-12",
-      "dataAtualizacao": "2026-03-20T15:08:38",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -16972,12 +16965,19 @@
       },
       "dataAssinatura": "2025-12-12",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-12-12",
+      "dataAtualizacao": "2026-03-20T15:08:38",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "G3 COMERCIAL LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-03-20T15:08:38",
       "unidadeOrgao": {
         "codigoUnidade": "158462",
@@ -17095,13 +17095,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-12-19",
-      "dataAtualizacao": "2026-03-20T10:10:12",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -17120,12 +17113,19 @@
       },
       "dataAssinatura": "2025-12-19",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-12-19",
+      "dataAtualizacao": "2026-03-20T10:10:12",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "DANIELA TENFEN DISTRIBUIDORA LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-03-20T10:10:12",
       "unidadeOrgao": {
         "codigoUnidade": "158462",
@@ -17235,18 +17235,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-03-25",
-      "dataAtualizacao": "2025-03-25T11:24:15",
-      "orgaoSubRogado": {
-        "cnpj": "10635424000186",
-        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE",
-        "esferaId": "F",
-        "poderId": "E"
-      },
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -17265,12 +17253,24 @@
       },
       "dataAssinatura": "2025-03-25",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-03-25",
+      "dataAtualizacao": "2025-03-25T11:24:15",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "DF MAQUINAS E FERRAMENTAS LTDA",
+      "orgaoSubRogado": {
+        "cnpj": "10635424000186",
+        "razaoSocial": "INSTITUTO FEDERAL DE EDUCACAO CIENCIA E TECNOLOGIA CATARINENSE",
+        "esferaId": "F",
+        "poderId": "E"
+      },
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-03-25T11:18:02",
       "unidadeOrgao": {
         "codigoUnidade": "158461",
@@ -17419,13 +17419,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-10-10",
-      "dataAtualizacao": "2025-12-12T15:31:58",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -17444,12 +17437,19 @@
       },
       "dataAssinatura": "2025-10-10",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-10-10",
+      "dataAtualizacao": "2025-12-12T15:31:58",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "IMPERMEABILIZA COMERCIO DE TINTAS LTDA.",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-12-12T15:31:58",
       "unidadeOrgao": {
         "codigoUnidade": "158462",
@@ -17551,13 +17551,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-11-04",
-      "dataAtualizacao": "2025-11-07T09:14:17",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -17576,12 +17569,19 @@
       },
       "dataAssinatura": "2025-11-04",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-11-04",
+      "dataAtualizacao": "2025-11-07T09:14:17",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "45.697.163 FABIANO LUIZ PINHEIRO JUNIOR",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-11-07T09:14:17",
       "unidadeOrgao": {
         "codigoUnidade": "158461",
@@ -17683,13 +17683,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-08-05",
-      "dataAtualizacao": "2025-08-07T14:24:05",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -17708,12 +17701,19 @@
       },
       "dataAssinatura": "2025-08-05",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-08-05",
+      "dataAtualizacao": "2025-08-07T14:24:05",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "DF MAQUINAS E FERRAMENTAS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2025-08-07T14:24:05",
       "unidadeOrgao": {
         "codigoUnidade": "158461",
@@ -17863,13 +17863,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-12-10",
-      "dataAtualizacao": "2026-01-09T11:50:28",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -17888,12 +17881,19 @@
       },
       "dataAssinatura": "2025-12-10",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-12-10",
+      "dataAtualizacao": "2026-01-09T11:50:28",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "ELIZANE DA ROSA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-01-09T11:50:28",
       "unidadeOrgao": {
         "codigoUnidade": "158461",
@@ -17995,13 +17995,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-10-10",
-      "dataAtualizacao": "2026-01-15T11:57:52",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -18020,12 +18013,19 @@
       },
       "dataAssinatura": "2025-10-10",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-10-10",
+      "dataAtualizacao": "2026-01-15T11:57:52",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "DF MAQUINAS E FERRAMENTAS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-01-15T11:57:52",
       "unidadeOrgao": {
         "codigoUnidade": "158462",
@@ -18135,13 +18135,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-11-19",
-      "dataAtualizacao": "2026-01-21T16:32:44",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -18160,12 +18153,19 @@
       },
       "dataAssinatura": "2025-11-19",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-11-19",
+      "dataAtualizacao": "2026-01-21T16:32:44",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "G3 COMERCIAL LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-01-21T16:32:44",
       "unidadeOrgao": {
         "codigoUnidade": "152663",
@@ -18267,13 +18267,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-11-21",
-      "dataAtualizacao": "2026-01-22T10:11:58",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -18292,12 +18285,19 @@
       },
       "dataAssinatura": "2025-11-21",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-11-21",
+      "dataAtualizacao": "2026-01-22T10:11:58",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "CINCA COMERCIO VAREJISTA E ATACADISTA DE FERRAMENTAS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-01-22T10:11:58",
       "unidadeOrgao": {
         "codigoUnidade": "152663",
@@ -18399,13 +18399,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-10-10",
-      "dataAtualizacao": "2026-05-08T14:59:36",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -18424,12 +18417,19 @@
       },
       "dataAssinatura": "2025-10-10",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-10-10",
+      "dataAtualizacao": "2026-05-08T14:59:36",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "RAQUEL KUSTER DE OLIVEIRA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-05-08T14:59:36",
       "unidadeOrgao": {
         "codigoUnidade": "158462",
@@ -18547,13 +18547,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-12-12",
-      "dataAtualizacao": "2026-02-05T10:48:59",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -18572,12 +18565,19 @@
       },
       "dataAssinatura": "2025-12-12",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-12-12",
+      "dataAtualizacao": "2026-02-05T10:48:59",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "CINCA COMERCIO VAREJISTA E ATACADISTA DE FERRAMENTAS LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-02-05T10:48:59",
       "unidadeOrgao": {
         "codigoUnidade": "158462",
@@ -18703,13 +18703,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-12-23",
-      "dataAtualizacao": "2026-02-06T09:17:46",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -18728,12 +18721,19 @@
       },
       "dataAssinatura": "2025-12-23",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-12-23",
+      "dataAtualizacao": "2026-02-06T09:17:46",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "G3 COMERCIAL LTDA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-02-06T09:17:46",
       "unidadeOrgao": {
         "codigoUnidade": "158461",
@@ -18835,13 +18835,6 @@
       }
     },
     {
-      "tipoParteEnvolvida": null,
-      "orgaoParteEnvolvida": null,
-      "frutoAdesao": null,
-      "dataVigenciaInicio": "2025-12-12",
-      "dataAtualizacao": "2026-02-09T14:41:03",
-      "orgaoSubRogado": null,
-      "unidadeOrgaoParteEnvolvida": null,
       "anoContrato": 2025,
       "tipoContrato": {
         "id": 7,
@@ -18860,12 +18853,19 @@
       },
       "dataAssinatura": "2025-12-12",
       "dataVigenciaFim": "2025-12-31",
+      "tipoParteEnvolvida": null,
+      "orgaoParteEnvolvida": null,
+      "frutoAdesao": null,
+      "dataVigenciaInicio": "2025-12-12",
+      "dataAtualizacao": "2026-02-09T14:41:03",
       "tipoPessoa": "PJ",
       "categoriaProcesso": {
         "id": 2,
         "nome": "Compras"
       },
       "nomeRazaoSocialFornecedor": "RAQUEL KUSTER DE OLIVEIRA",
+      "orgaoSubRogado": null,
+      "unidadeOrgaoParteEnvolvida": null,
       "dataPublicacaoPncp": "2026-02-09T14:41:03",
       "unidadeOrgao": {
         "codigoUnidade": "158462",
