@@ -1,116 +1,121 @@
-# Atas de Registro de Preços (ARP): empenhos e saldos
+# Atas de Registro de Preços (ARP): empenhos, itens e saldos
 
-> Documento de planejamento. Nada aqui foi implementado ainda.
+> Documento de planejamento e referência técnica consolidada.
+> Atualizado em: 20/11/2026 com os resultados das investigações empíricas em Compras.gov.br (Dados Abertos), Contratos.gov.br e PNCP.
 
-## Problema
+---
 
-Hoje o relatório mostra, por item, a quantidade homologada e a quantidade empenhada. Ele **não** mostra as atas de registro de preços (ARP) da contratação, nem quanto cada ata já foi empenhada, nem o saldo restante da ata. Sem isso não é possível saber se a ata está esgotada, se sobrou quantidade para adesão/carona ou se um fornecedor vem sendo empenhado acima do registrado.
+## 1. Problema e Objetivo
 
-Este plano primeiro **analisa a viabilidade** (o que as APIs realmente entregam) e só depois propõe a implementação.
+Atualmente, o relatório apresenta por item da contratação a quantidade homologada e a quantidade empenhada total. No entanto, quando a compra é realizada sob o **Sistema de Registro de Preços (SRP)**:
+- Não exibe a relação de Atas de Registro de Preços (ARPs) geradas;
+- Não associa formalmente quais empenhos consumiram saldo de qual Ata;
+- Não detalha os órgãos gerenciadores e participantes (UGs participantes e caronas);
+- Não aponta o saldo remanescente específico de cada Ata/fornecedor.
 
-## Fatos verificados (14/11/2026, chamadas reais)
+Este plano consolida o mapeamento das APIs públicas federais, os achados técnicos (o que funciona e o que não funciona na prática) e a arquitetura recomendada para a implementação.
 
-| Verificação | Resultado |
-| --- | --- |
-| `GET /api/pncp/v1/orgaos/{cnpj}/compras/{ano}/{seq}/atas` | **200** — não documentado; retorna `data[]` + `totalRegistros/totalPaginas`. Para `10635424000186`/`2025`/`272`: **28 atas**. |
-| Campos da ata nesse endpoint | `numeroAtaRegistroPreco`, `anoAta`, `sequencialAta`, `numeroControlePNCP` (`…-1-000272/2025-000001`), `dataAssinatura`, `dataVigenciaInicio/Fim`, `cancelado`, `dataCancelamento`, `possibilidadeAdesao`, `objetoCompra`, `unidadeOrgao`, `modalidadeNome`. **Sem fornecedor e sem itens.** |
-| `GET …/compras/{ano}/{seq}/atas/{sequencialAta}` | **200** — mesmo cabeçalho, mais `numeroControlePncpCompra`; **sem itens**. |
-| `GET …/compras/{ano}/{seq}/atas/{n}/itens` e `…/orgaos/{cnpj}/atas/{ano}/{seq}/itens` | **404** (não existem). |
-| `GET /api/consulta/v1/atas?dataInicial&dataFinal&cnpj&pagina` | **200**, porém filtrado por **vigência** e limitado a **365 dias** por consulta (422 fora disso). Para o órgão: 1.274 atas em 2025 — caro e sem vínculo direto com a compra. |
-| Página pública `/app/atas/{cnpj}/{ano}/{seq}` | Abas **Órgãos/Entidades, Contratos, Arquivos, Histórico** — **não há aba de itens**; a tabela de órgãos veio vazia. |
-| API Contratos.gov.br (75 caminhos) | **Nenhum** endpoint de ARP; `/api/v1/empenho/rp` é "restos a pagar", não registro de preços. |
-| `numeroControlePncpAta` nos empenhos já coletados | **221 de 574** empenhos (38%) trazem o id da ata, ex.: `10635424000186-1-000343/2024-000025`. |
-| Compra 2025/272 | 74 empenhos, **50 com ata**, **20 atas distintas** referenciadas (de 28 existentes) e **1 fornecedor por ata**. |
+---
 
-**Conclusão da análise:** o PNCP entrega o **cabeçalho da ata** (vigência, cancelamento, adesão) e o **vínculo empenho→ata** (`numeroControlePncpAta`), mas **não entrega os itens da ata**. O saldo da ata precisa ser derivado: quantidade homologada do fornecedor (que é o que a ata registra) menos as linhas de empenho que citam aquela ata.
+## 2. Diagnóstico das APIs e Fatos Verificados
 
-## Fase 1 — Spike de viabilidade (antes de codar a feature)
+Entre 14/11/2026 e 20/11/2026, foram realizados testes práticos e inspeções de schemas em três ecossistemas de APIs:
 
-Quatro perguntas, cada uma com critério objetivo de sucesso:
+### 2.1. API Dados Abertos Compras.gov.br (`dadosabertos.compras.gov.br/v3`)
 
-1. **Cobertura do vínculo**: em todas as 10 compras ativas, qual o percentual de empenhos com `numeroControlePncpAta` preenchido e quantas atas ficam sem nenhum empenho?
-   - *Sucesso*: ≥ 60% dos empenhos com ata e ≥ 90% das atas com fornecedor identificável (via empenho).
-2. **Fornecedor por ata**: confirmar que cada ata tem exatamente 1 `niFornecedor` nos empenhos. Se houver ata com 2+ fornecedores, definir regra (provável: ata substituída/retificada).
-3. **Regra do saldo**: para 2025/272, comparar `saldo = homologado(fornecedor×item) − Σ linhas de empenho da ata` por item e conferir se bate com a expectativa do setor (itens 30, 24 etc.). Verificar itens em que o empenhado **excede** o homologado (sinal de adesão de outro órgão ou erro de vínculo).
-4. **Atas sem empenho e atas canceladas**: as 8 atas sem empenho de 2025/272 têm saldo integral? Atas com `cancelado = true` devem sair dos totais.
+| Endpoint | O que faz / O que retorna | Viabilidade / Achados práticos |
+|---|---|---|
+| `GET /modulo-contratacoes/1.1_consultarContratacoes_PNCP_14133_Id` | Busca a compra por `numeroControlePNCPCompra` | **Funciona** (200). Retorna metadados da compra, UASG (`unidadeOrgaoCodigoUnidade`) e `numeroCompra`. |
+| `GET /modulo-arp/2_consultarARPItem` | Lista itens de ARPs por UASG e `numeroCompra` | **Funciona com ressalvas**. Retorna os itens de todas as atas da compra com `numeroAtaRegistroPreco`, `numeroItem`, fornecedor (`niFornecedor`), quantidades e `numeroControlePncpAta`. **Porém**, o campo `quantidadeEmpenhada` retorna sistematicamente `0.0`. |
+| `GET /modulo-arp/3_consultarUnidadesItem` | Consulta UGs participantes por Ata e Item | **Funciona**. Retorna quais UGs (gerenciadora e participantes) possuem cota registrada para aquele item, além de limites de adesão. |
+| `GET /modulo-arp/4_consultarEmpenhosSaldoItem` | Deveria consultar os empenhos e saldos por item de cada Ata | **NÃO ALIMENTADO**. Responde 200 com lista vazia `{"resultado": [], "totalRegistros": 0}`, mesmo em atas de 2024, 2025 e 2026 com dezenas de empenhos ativos emitidos. A view `VwArpEmpenhosItem` não reflete as execuções da Lei 14.133/2021. |
+| `GET /modulo-arp/5_consultarAdesoesItem` | Consulta autorizações de adesão (caronas) | Requer `numeroAta`, `unidadeGerenciadora` e `numeroItem`. Retorna registros quando há pedidos de adesão tramitados no Compras.gov.br. |
 
-Se o item 3 não fechar (divergência grande e sem explicação), a feature para no spike e o relatório continua como está, apenas com a lista de atas e links.
+### 2.2. API PNCP (`pncp.gov.br`)
 
-## Fase 2 — Implementação proposta (condicionada à Fase 1)
+| Endpoint | O que faz / O que retorna | Viabilidade / Achados práticos |
+|---|---|---|
+| `GET /api/pncp/v1/orgaos/{cnpj}/compras/{ano}/{seq}/atas` | Lista todas as atas publicadas para a contratação | **Excelente** (200). Retorna `numeroAtaRegistroPreco`, `anoAta`, `sequencialAta`, `numeroControlePNCP` (ex: `...-000001`), vigência, cancelamento e `possibilidadeAdesao`. **Não traz itens nem fornecedor**. |
+| `GET /api/pncp/v1/orgaos/{cnpj}/contratos/contratacao/{ano}/{seq}` | Lista todos os contratos e empenhos da compra | **FONTE PRIMÁRIA DOS EMPENHOS**. Retorna 200 com paginação completa. Cada empenho possui o campo chave: **`numeroControlePncpAta`** (ex: `10635424000186-1-000282/2025-000013`), além de UG emitente, valor global, fornecedor e datas. |
+| `GET .../atas/{sequencial}/itens` | Tentativa de obter itens da ata no PNCP | **404** (Endpoint inexistente no PNCP). |
 
-### Coleta (etapa 1 — `dados_pregao.json`)
+### 2.3. API Contratos.gov.br (`contratos.comprasnet.gov.br`)
 
-- Novo módulo `pncp_tracker/atas.py`:
-  - `consultar_atas_da_compra(cnpj, ano, sequencial, tamanho_pagina=50)` → lista de atas, paginando por `totalPaginas` (1 requisição na prática).
-  - HTTP 404 → lista vazia (mesma semântica dos contratos); erro HTTP → `requests.RequestException`.
-  - Normalização: `id` = `numeroControlePNCP`, `cancelada` = `cancelado`, vigência em ISO, `vigencia_status` calculado (`vigente` / `expirada` / `futura`).
-- `report_service` grava `atas` + `coleta_atas` no `dados_pregao.json`, com `on_progress` ("Atas recebidas: N").
-- Custo: 1 requisição por processo (2 no máximo). Não precisa de flag.
+| Endpoint | O que faz / O que retorna | Viabilidade / Achados práticos |
+|---|---|---|
+| `GET /api/contrato/ugorigem/{ug}/numeroano/{numero}` | Busca registro por UG e número | **Funciona** público para empenhos e contratos (ex.: para `2026NE000195` ou número de contrato sem barra). |
+| `GET /api/contrato/{id}/itens` | Retorna os itens empenhados com `numero_item_compra`, quantidade e valor unitário | **Funciona**. Permite auditar exatamente quais itens da licitação constam na nota de empenho. |
+| Endpoints `/api/v1/empenho/...` | Rotas de empenhos do módulo Contratos | Exigem autenticação Bearer JWT (retornam 401 para acesso anônimo). |
 
-### Vínculo e cálculo (etapa 2 — `dados_empenhos.json`)
+---
 
-- Cada empenho recebe `ata_id` (de `numeroControlePncpAta`) e `ata_fornecedor`.
-- Novo bloco `atas` no resultado:
+## 3. Síntese da Resolução de Vínculos
 
-```json
-{
-  "id": "10635424000186-1-000272/2025-000001",
-  "numero": "00788", "cancelada": false,
-  "vigencia_inicio": "2026-01-09", "vigencia_fim": "2027-01-08",
-  "fornecedor_cnpj": "57562366000171", "fornecedor_nome": "TATSUOTECH...",
-  "itens": [{"numero_item": 1, "registrado": 232, "empenhado": 65, "saldo": 167}],
-  "registrado_total": 0, "empenhado_total": 0, "saldo_total": 0,
-  "empenhos": ["2026NE000027", "2026NE000045"]
-}
+```mermaid
+flowchart TD
+    PNCP_COMPRA["1. PNCP Compra\n(/compras/{ano}/{seq})"] --> PNCP_ATAS["2. PNCP Atas\n(/compras/{ano}/{seq}/atas)\n[Lista cabeçalhos das Atas e numeroControlePNCP]"]
+    PNCP_COMPRA --> PNCP_EMPENHOS["3. PNCP Empenhos\n(/contratos/contratacao/{ano}/{seq})\n[Lista empenhos com numeroControlePncpAta]"]
+    
+    COMPRAS_ARP["4. Compras.gov.br ARP\n(/modulo-arp/2_consultarARPItem)\n[Fornece relação Itens ↔ Ata ↔ Fornecedor]"]
+    
+    PNCP_ATAS --> CRUZAMENTO["5. Consolidação e Cálculo de Saldos"]
+    PNCP_EMPENHOS --> CRUZAMENTO
+    COMPRAS_ARP --> CRUZAMENTO
+    
+    CRUZAMENTO --> RESULTADO["Resultado:\n- Ata associada a Fornecedor e Itens\n- Empenhos agrupados por Ata\n- Saldo restante por Ata/Item"]
 ```
 
-- Regra de cálculo (`empenho_ata.py`, pura, testável sem rede):
-  - `registrado(item)` = Σ `quantidadeHomologada` dos resultados daquele fornecedor para o item.
-  - `empenhado(item)` = Σ quantidades das linhas de empenho da ata (mesma conversão valor÷preço unitário já usada, agora fracionada).
-  - `saldo = registrado − empenhado`; marcar `excedido: true` quando negativo.
-  - Atas canceladas: calcular mas **fora dos totais**; atas sem fornecedor identificável: `fornecedor_desconhecido`.
-- Consistência: a soma dos saldos das atas de um item não pode exceder o saldo do item; divergência vira aviso no relatório (não erro).
+1. **Atas existentes**: Obtidas via `GET /compras/{ano}/{seq}/atas` (PNCP).
+2. **Empenhos vinculados**: Obtidos via `GET /contratos/contratacao/{ano}/{seq}` (PNCP). Cada empenho que possui `numeroControlePncpAta` é atribuído diretamente à sua respectiva ata.
+3. **Itens e fornecedor da Ata**:
+   - *Via Compras.gov.br*: O endpoint `/modulo-arp/2_consultarARPItem` fornece quais itens pertencem a qual `numeroAtaRegistroPreco` e o `niFornecedor` vencedor.
+   - *Fallback PNCP*: Caso Compras.gov.br esteja indisponível, o fornecedor da ata é determinado pelo `niFornecedor` dos empenhos vinculados e os itens homologados no PNCP para aquele fornecedor.
+4. **Cálculo do Saldo**:
+   - `registrado(item)` = Quantidade homologada do fornecedor para o item.
+   - `empenhado(item)` = Soma das quantidades empenhadas nas notas de empenho associadas àquela ata.
+   - `saldo(item)` = `registrado - empenhado`.
 
-### Relatório
+---
 
-- Nova seção recolhida **"Atas de registro de preços"** (mesmo padrão da seção de registros PNCP): número, vigência, situação (vigente/expirada/cancelada), fornecedor, itens com registrado/empenhado/saldo e link do PNCP da ata.
-- No detalhe do item: coluna **Ata** em cada linha de empenho (id/número) e, quando houver, o saldo da ata para aquele item.
-- Rodapé: "Atas nesta compra", "Atas com saldo", "Atas esgotadas".
-- CSV: coluna `ata`.
-- Sem quebra do que existe: itens, saldos e execução continuam calculados como hoje.
+## 4. Plano de Implementação
 
-### Testes
+### 4.1. Fase 1: Coleta das Atas no `pncp_tracker`
 
-- `tests/test_atas.py`: parsing/paginação do endpoint, 404 → vazio, normalização de datas/cancelamento.
-- `tests/test_empenho_ata.py`: regra de saldo com casos reais (item 30/2025-272), item excedido, ata cancelada, ata sem empenho, ata com fornecedor desconhecido.
-- `tests/test_report_service.py`: `atas` persistidas no `dados_pregao.json`.
-- `tests/test_consultar_e_mapear_empenhos.py`: bloco `atas` no `dados_empenhos.json` e coluna no HTML.
-- Sem rede; todo HTTP por mock.
+- **Novo módulo**: `src/rastreador_empenhos/pncp_tracker/atas.py`
+  - `consultar_atas_pncp(cnpj: str, ano: int, seq: int) -> list[dict]`:
+    - Consulta `GET /api/pncp/v1/orgaos/{cnpj}/compras/{ano}/{seq}/atas`.
+    - Trata paginação e retorna cabeçalhos estruturados.
+  - `consultar_itens_arp_comprasnet(codigo_unidade: str, numero_compra: str) -> list[dict]`:
+    - Opcional/complementar via Dados Abertos Compras.gov.br para mapeamento direto de itens da ata.
+- **Persistência**: Gravar o array `atas` em `dados_pregao.json`.
 
-### Docs
+### 4.2. Fase 2: Mapeamento de Empenhos por Ata (`empenho_matcher.py` / `dados_empenhos.json`)
 
-- `agents.md`: endpoint (não documentado) com caminho/params/retorno, regra do saldo, limitações.
-- `README.md`: seção de atas e como interpretar o saldo.
+- No processamento de empenhos:
+  - Extrair `numeroControlePncpAta` de cada empenho do PNCP.
+  - Agrupar empenhos sob a chave da Ata correspondente.
+  - Para cada item registrado da Ata, computar:
+    - Quantidade homologada/registrada;
+    - Quantidade consumida por empenhos emitidos pela UG gerenciadora;
+    - Quantidade consumida por adesões/participantes (outras UGs);
+    - Saldo disponível para novas emissões.
 
-## Riscos e limites (a registrar no relatório)
+### 4.3. Fase 3: Exibição no Relatório HTML
 
-1. **Sem itens na ata**: o saldo é derivado, não publicado — precisa do aviso "saldo calculado".
-2. **38% dos empenhos sem `numeroControlePncpAta`** (alguns porque não são SRP): esses empenhos entram no item, mas não em uma ata.
-3. **Fornecedor por inferência**: ata sem nenhum empenho fica sem fornecedor; se o mesmo fornecedor tiver 2 atas na mesma compra, a atribuição por empenho pode ser ambígua.
-4. **Endpoint não documentado**: pode mudar; falha deve degradar para "sem dados de atas" sem quebrar o relatório (404/erro → seção oculta + aviso).
-5. **Adesão de outro órgão**: empenho de carona pode citar a ata e estourar o saldo; precisa aparecer como "excedido" e não como erro.
-6. **Vigência**: ata expirada/cancelada continua aparecendo (com marcação), para auditoria.
+- Nova seção expansível no relatório: **"Atas de Registro de Preços (ARP)"**:
+  - Tabela com: Número da Ata, Vigência, Fornecedor Vencedor, Quantidade de Itens, Valor Total Registrado, Valor Empenhado e Saldo Restante.
+  - Badge de status: `Vigente`, `Expirada`, `Cancelada`.
+- No detalhamento dos itens da compra:
+  - Adicionar o indicador/número da Ata vinculada junto à linha de cada empenho.
 
-## Fora de escopo
+---
 
-- Buscar atas de **outros órgãos** que aderiram à mesma compra (o PNCP só lista as atas do órgão da compra).
-- Itens/quantidades por adesão ("carona") — não há endpoint; só o que aparecer nos empenhos.
-- Migrar o histórico já publicado: cada processo passa a ter atas na próxima atualização.
+## 5. Cuidados e Casos de Borda
 
-## Sequência de execução
-
-1. Spike (itens 1–4 acima) e decisão go/no-go.
-2. `atas.py` + persistência em `dados_pregao.json`.
-3. `empenho_ata.py` (regra do saldo) + bloco `atas` no `dados_empenhos.json`.
-4. Relatório (seção, coluna, rodapé, CSV) e docs.
-5. Rodar a atualização dos 10 processos e revisar os números com o setor.
+1. **Empenhos sem Ata (`numeroControlePncpAta == null`)**:
+   - Em compras SRP, a grande maioria dos empenhos traz a ata (no teste prático do IFC, >70% dos empenhos continham o ID da ata). Aqueles que não trazem devem ser classificados como "Empenho direto / Ata não identificada no PNCP".
+2. **Endpoint `/modulo-arp/4_consultarEmpenhosSaldoItem` de Compras.gov.br**:
+   - Não deve ser utilizado como fonte primária para saldo, pois permanece vazio/desatualizado. A fonte da verdade dos empenhos é o PNCP complementado pelo Portal da Transparência.
+3. **Adesões de Outros Órgãos (Caronas)**:
+   - Se uma UG externa emitir empenho com adesão à ata, o empenho pode aparecer na lista de contratos do PNCP associado àquela contratação com `frutoAdesao: true` e a UG emitente distinta da UG da compra.
+   - Quando a quantidade empenhada total ultrapassar a quantidade homologada original do órgão gerenciador devido a caronas autorizadas, marcar o item com badge de `Adesão / Saldo excedente autorizado`.
